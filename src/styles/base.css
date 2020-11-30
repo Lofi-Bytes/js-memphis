@@ -1,0 +1,255 @@
+@tailwind base;
+@tailwind components;
+
+@font-face {
+  font-family: 'stay_classy_sldtregular';
+  src: url('../fonts/stay_classy_sldt-webfont.woff2') format('woff2'), url('../fonts/stay_classy_sldt-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  font-size: 18px
+}
+
+#canvas {
+  @apply bg-gradient-to-b from-indigo-400 via-red-200 to-indigo-700;
+}
+
+.js {
+  font-family: 'stay_classy_sldtregular';
+}
+
+/*!
+* Create the canvas to draw on (is *not* HTML Canvas)
+*/
+#canvas {
+  overflow: hidden;
+  /* position: absolute;
+  top: 0;
+  left: 0; */
+  /* background-color: transparent; */
+  z-index: -30;
+}
+/*!
+* Create the solid squares
+*/
+.outer-square-solid {
+  animation: animate-outer-squares-solid 120s ease-in-out infinite;
+  position: absolute;
+  z-index: -25;
+  display: block;
+  pointer-events: none;
+  border-radius: .25rem;
+}
+@keyframes animate-outer-squares-solid {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(-25deg);
+  }
+  75% {
+    transform: rotate(25deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.inner-square-solid {
+  /* animation: animate-inner-squares-solid 120s ease-in-out infinite; */
+  position: absolute;
+  pointer-events: none;
+  border-radius: .25rem;
+  display: block;
+  z-index: -25;
+}
+/* @keyframes animate-inner-squares-solid {
+  0% {
+    transform: translateX(0%) translateY(0%);
+  }
+  25% {
+    transform: translateX(-5%) translateY(-5%);
+  }
+  50% {
+    transform: translateX(-10%) translateY(-10%);
+  }
+  75% {
+    transform: translateX(-5%) translateY(-5%);
+  }
+  100% {
+    transform: translateX(0%) translateY(0%);
+  }
+} */
+/*!
+* Create the outline squares
+*/
+.outer-square-outline {
+  animation: animate-outer-squares-outline 120s ease-in-out infinite;
+  position: absolute;
+  z-index: -20;
+  display: block;
+  pointer-events: none;
+  border-radius: .25rem;
+  animation-direction: alternate-reverse;
+}
+@keyframes animate-outer-squares-outline {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(15deg);
+  }
+  75% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.inner-square-outline {
+  animation: animate-inner-squares-outline 120s ease-in-out infinite;
+  position: absolute;
+  pointer-events: none;
+  border-radius: .25rem;
+  border-width: 4px;
+  border-style: solid;
+  display: block;
+  z-index: -20;
+  animation-direction: alternate-reverse;
+}
+@keyframes animate-inner-squares-outline {
+  0% {
+    transform: translateX(0%) translateY(0%) rotate(0deg);
+  }
+  50% {
+    transform: translateX(-10%) translateY(-10%) rotate(180deg);
+  }
+  100% {
+    transform: translateX(0%) translateY(0%) rotate(360deg);
+  }
+}
+/*!
+* Create the triangles
+*/
+.outer-triangle {
+  animation: animate-outer-triangles 90s ease-in-out infinite;
+  position: absolute;
+  z-index: -15;
+  display: block;
+  pointer-events: none;
+  animation-direction: reverse;
+}
+@keyframes animate-outer-triangles {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-30deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.inner-triangle {
+  animation: animate-inner-triangles 60s ease-in-out infinite;
+  position: absolute;
+  pointer-events: none;
+  display: block;
+  z-index: -15;
+  transform-origin: center;
+  animation-direction: alternate;
+}
+@keyframes animate-inner-triangles {
+  0% {
+    transform: translateX(0%) translateY(0%) rotate(0deg);
+  }
+  50% {
+    transform: translateX(-10%) translateY(-20%) rotate(180deg);
+  }
+  100% {
+    transform: translateX(0%) translateY(0%) rotate(360deg);
+  }
+}
+/*!
+* Create the bolts
+*/
+.outer-bolt {
+  animation: animate-outer-bolts 90s ease-in-out infinite;
+  position: absolute;
+  z-index: -10;
+  display: block;
+  pointer-events: none;
+  animation-direction: alternate-reverse;
+}
+@keyframes animate-outer-bolts {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-20deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.inner-bolt {
+  animation: animate-inner-bolts 90s ease-in-out infinite;
+  position: absolute;
+  pointer-events: none;
+  display: block;
+  z-index: -10;
+}
+@keyframes animate-inner-bolts {
+  0% {
+    transform: translateX(0%) translateY(0%) rotate(15deg);
+  }
+  25% {
+    transform: translateX(160%) translateY(-220%) rotate(15deg);
+  }
+  50% {
+    transform: translateX(-220%) translateY(440%) rotate(15deg);
+  }
+  75% {
+    transform: translateX(160%) translateY(-220%) rotate(15deg);
+  }
+  100% {
+    transform: translateX(0%) translateY(0%) rotate(15deg);
+  }
+}
+/*!
+* Create the waves
+*/
+.outer-wave {
+  position: absolute;
+  z-index: -5;
+  display: block;
+  pointer-events: none;
+}
+.inner-wave {
+  animation: animate-inner-waves 120s linear infinite;
+  position: absolute;
+  pointer-events: none;
+  display: block;
+  z-index: -5;
+  animation-direction: alternate;
+}
+@keyframes animate-inner-waves {
+  0% {
+    transform: translateX(600%) translateY(600%) rotate(45deg);
+  }
+  50% {
+    transform: translateX(-600%) translateY(-600%) rotate(45deg);
+  }
+  100% {
+    transform: translateX(600%) translateY(600%) rotate(45deg);
+  }
+}
+
+@tailwind utilities;
