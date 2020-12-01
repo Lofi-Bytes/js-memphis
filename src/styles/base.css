@@ -16,12 +16,6 @@ html {
   font-family: 'stay_classy_sldtregular';
 }
 
-/* .rainbow {
-  @apply bg-gradient-to-right from-fuchsia-300 via-lightBlue-300 to-teal-300;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-} */
-
 /*!
 * Create the canvas to draw on (is *not* HTML Canvas)
 */
@@ -57,29 +51,11 @@ html {
   }
 }
 .inner-square-solid {
-  /* animation: animate-inner-squares-solid 120s ease-in-out infinite; */
   position: absolute;
   pointer-events: none;
   border-radius: .25rem;
   display: block;
 }
-/* @keyframes animate-inner-squares-solid {
-  0% {
-    transform: translateX(0%) translateY(0%);
-  }
-  25% {
-    transform: translateX(-5%) translateY(-5%);
-  }
-  50% {
-    transform: translateX(-10%) translateY(-10%);
-  }
-  75% {
-    transform: translateX(-5%) translateY(-5%);
-  }
-  100% {
-    transform: translateX(0%) translateY(0%);
-  }
-} */
 /*!
 * Create the outline squares
 */

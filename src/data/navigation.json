@@ -1,1 +1,14 @@
-{}
+[
+  {
+    "title": "Writing",
+    "path": "/writing/"
+  },
+  {
+    "title": "Speaking",
+    "path": "/speaking/"
+  },
+  {
+    "title": "Projects",
+    "path": "/projects/"
+  }
+]
