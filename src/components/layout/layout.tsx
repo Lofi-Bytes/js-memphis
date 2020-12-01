@@ -1,6 +1,5 @@
 import React, { FC, ReactNode, useState, useEffect } from 'react'
 
-import Banner from '../banner'
 import Footer from '../footer'
 import Header from '../header'
 
@@ -117,14 +116,9 @@ const Layout: FC<LayoutProps> = ({
         className="flex flex-col justify-between relative"
       >
         <Header />
-        <Banner />
-        <main className="min-h-screen max-w-screen-lg m-auto">
           {children}
-        </main>
         <Footer />
       </div>
-      {/* <div id="canvas" className="bg-transparent">
-      </div> */}
     </React.Fragment>
   )
 }

@@ -1,7 +1,7 @@
-import React, { FC } from 'react'
+import React, { FC, ReactNode } from 'react'
 
 
-const Footer: FC = ({}) => {
+const Footer: FC<ReactNode> = ({}) => {
   return (
     <React.Fragment>
       <footer className="bg-indigo-700 bg-opacity-70 w-full ">

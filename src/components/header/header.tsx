@@ -1,7 +1,7 @@
-import React, { FC } from 'react'
+import React, { FC, ReactNode } from 'react'
 
 
-const Header: FC = ({}) => {
+const Header: FC<ReactNode> = ({}) => {
   return (
     <React.Fragment>
       <header className="bg-indigo-400 bg-opacity-30 w-full py-6 px-8">

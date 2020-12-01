@@ -1,7 +1,7 @@
-import React, { FC } from 'react'
+import React, { FC, ReactNode } from 'react'
 
 
-const Banner: FC = ({}) => {
+const Banner: FC<ReactNode> = ({}) => {
   return (
     <React.Fragment>
       <div className="bg-indigo-400 bg-opacity-30 w-full">
