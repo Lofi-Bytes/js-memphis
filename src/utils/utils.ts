@@ -13,3 +13,15 @@ export function removeElementsByClass(className){
     elements[0].parentNode.removeChild(elements[0]);
   }
 }
+/*
+  Window object doesn't exist outside of the window!
+*/
+export function getWindowInnerHeight() {
+  return typeof window !== `undefined` ? window.innerHeight : 0
+}
+/*
+  Window object doesn't exist outside of the window!
+*/
+export function getWindowInnerWidth() {
+  return typeof window !== `undefined` ? window.innerHeight : 0
+}

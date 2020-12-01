@@ -4,7 +4,11 @@ import Banner from '../banner'
 import Footer from '../footer'
 import Header from '../header'
 
-import {removeElementsByClass} from '../../utils/utils'
+import {
+  removeElementsByClass,
+  getWindowInnerHeight,
+  getWindowInnerWidth
+} from '../../utils/utils'
 
 import {
   createSquaresSolid,
@@ -26,8 +30,8 @@ type LayoutProps = {
 const Layout: FC<LayoutProps> = ({
   children
 }: LayoutProps) => {
-  const [height, setHeight] = useState(window.innerHeight)
-  const [width, setWidth] = useState(window.innerWidth)
+  const [height, setHeight] = useState(getWindowInnerHeight)
+  const [width, setWidth] = useState(getWindowInnerWidth)
 
   useEffect(() => {
     setTimeout(() => {
@@ -54,12 +58,19 @@ const Layout: FC<LayoutProps> = ({
     }, 350)
 
     const handleWindowResize = () => {
-      setWidth(window.innerWidth)
-      setHeight(window.innerHeight)
+      setWidth(getWindowInnerWidth)
+      setHeight(getWindowInnerHeight)
     }
-    window.addEventListener("resize", handleWindowResize)
 
-    return () => window.removeEventListener("resize", handleWindowResize)
+    typeof window !== `undefined`
+      ? window.addEventListener("resize", handleWindowResize)
+      : null
+
+    return () => {
+      typeof window !== `undefined`
+      ? window.removeEventListener("resize", handleWindowResize)
+      : null
+    }
   }, [])
 
   useEffect(() => {
