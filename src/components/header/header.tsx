@@ -9,11 +9,11 @@ const Header: FC<ReactNode> = ({}) => {
           <div className="logo z-5">
             <p className="js text-4xl text-gray-50 font-semibold">JS</p>
           </div>
-          <div className="nav flex justify-center items-center justify-between text-gray-50">
+          <nav className="nav flex justify-center items-center justify-between text-gray-50">
             <p className="text-base tracking-wider">Writing</p>
             <p className="ml-6 text-base tracking-wider">Speaking</p>
             <p className="ml-6 text-base tracking-wider">Projects</p>
-          </div>
+          </nav>
         </div>
       </header>
     </React.Fragment>

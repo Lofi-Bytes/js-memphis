@@ -12,24 +12,22 @@ html {
   font-size: 18px
 }
 
-#canvas {
-  @apply bg-gradient-to-b from-indigo-400 via-red-200 to-indigo-700;
-}
-
 .js {
   font-family: 'stay_classy_sldtregular';
 }
+
+/* .rainbow {
+  @apply bg-gradient-to-right from-fuchsia-300 via-lightBlue-300 to-teal-300;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+} */
 
 /*!
 * Create the canvas to draw on (is *not* HTML Canvas)
 */
 #canvas {
+  @apply bg-gradient-to-b from-indigo-400 via-red-200 to-indigo-700;
   overflow: hidden;
-  /* position: absolute;
-  top: 0;
-  left: 0; */
-  /* background-color: transparent; */
-  z-index: -30;
 }
 /*!
 * Create the solid squares
@@ -37,7 +35,6 @@ html {
 .outer-square-solid {
   animation: animate-outer-squares-solid 120s ease-in-out infinite;
   position: absolute;
-  z-index: -25;
   display: block;
   pointer-events: none;
   border-radius: .25rem;
@@ -65,7 +62,6 @@ html {
   pointer-events: none;
   border-radius: .25rem;
   display: block;
-  z-index: -25;
 }
 /* @keyframes animate-inner-squares-solid {
   0% {
@@ -90,7 +86,6 @@ html {
 .outer-square-outline {
   animation: animate-outer-squares-outline 120s ease-in-out infinite;
   position: absolute;
-  z-index: -20;
   display: block;
   pointer-events: none;
   border-radius: .25rem;
@@ -121,7 +116,6 @@ html {
   border-width: 4px;
   border-style: solid;
   display: block;
-  z-index: -20;
   animation-direction: alternate-reverse;
 }
 @keyframes animate-inner-squares-outline {
@@ -141,7 +135,6 @@ html {
 .outer-triangle {
   animation: animate-outer-triangles 90s ease-in-out infinite;
   position: absolute;
-  z-index: -15;
   display: block;
   pointer-events: none;
   animation-direction: reverse;
@@ -162,7 +155,6 @@ html {
   position: absolute;
   pointer-events: none;
   display: block;
-  z-index: -15;
   transform-origin: center;
   animation-direction: alternate;
 }
@@ -183,7 +175,6 @@ html {
 .outer-bolt {
   animation: animate-outer-bolts 90s ease-in-out infinite;
   position: absolute;
-  z-index: -10;
   display: block;
   pointer-events: none;
   animation-direction: alternate-reverse;
@@ -204,7 +195,6 @@ html {
   position: absolute;
   pointer-events: none;
   display: block;
-  z-index: -10;
 }
 @keyframes animate-inner-bolts {
   0% {
@@ -228,7 +218,6 @@ html {
 */
 .outer-wave {
   position: absolute;
-  z-index: -5;
   display: block;
   pointer-events: none;
 }
@@ -237,7 +226,6 @@ html {
   position: absolute;
   pointer-events: none;
   display: block;
-  z-index: -5;
   animation-direction: alternate;
 }
 @keyframes animate-inner-waves {

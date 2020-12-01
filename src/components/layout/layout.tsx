@@ -115,9 +115,11 @@ const Layout: FC<LayoutProps> = ({
         id="canvas"
         className="flex flex-col justify-between relative"
       >
-        <Header />
-          {children}
-        <Footer />
+        <div className="z-10">
+          <Header />
+            {children}
+          <Footer />
+        </div>
       </div>
     </React.Fragment>
   )
