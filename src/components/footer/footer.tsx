@@ -20,7 +20,7 @@ const Footer: FC<ReactNode> = ({}: ReactNode) => {
 
   return (
     <React.Fragment>
-      <footer className="flex flex-col justify-center items-center bg-indigo-700 bg-opacity-70 w-full h-40">
+      <footer className="flex flex-col justify-center items-center bg-indigo-700 bg-opacity-70 w-full h-40 mb-8 sm:mb-0">
         <div className="flex justify-center items-center relative">
           <a
             href="https://twitter.com/LofiBytes/"
