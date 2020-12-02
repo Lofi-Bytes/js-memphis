@@ -1,5 +1,7 @@
 import React, { FC, ReactNode } from 'react'
 
+import Navigation from '../navigation'
+
 
 const Header: FC<ReactNode> = ({}) => {
   return (
@@ -9,11 +11,7 @@ const Header: FC<ReactNode> = ({}) => {
           <div className="logo z-5">
             <p className="js text-4xl text-gray-50 font-semibold">JS</p>
           </div>
-          <nav className="nav flex items-center justify-between text-gray-50">
-            <p className="text-base tracking-wider">Writing</p>
-            <p className="ml-6 text-base tracking-wider">Speaking</p>
-            <p className="ml-6 text-base tracking-wider">Projects</p>
-          </nav>
+          <Navigation />
         </div>
       </header>
     </React.Fragment>
