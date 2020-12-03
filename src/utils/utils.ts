@@ -16,12 +16,14 @@ export function removeElementsByClass(className){
 /*
   Window object doesn't exist outside of the window!
 */
-export function getWindowInnerHeight() {
-  return typeof window !== `undefined` ? window.innerHeight : 0
+export function getDocumentHeight() {
+  let body = document.body,
+      html = document.documentElement
+  return Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight)
 }
 /*
   Window object doesn't exist outside of the window!
 */
 export function getWindowInnerWidth() {
-  return typeof window !== `undefined` ? window.innerHeight : 0
+  return typeof window !== `undefined` ? window.innerWidth : 0
 }

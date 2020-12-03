@@ -1,12 +1,13 @@
-import {randomIntFromInterval} from './utils'
+import {
+  randomIntFromInterval,
+  getDocumentHeight
+} from './utils'
 
 /*
   Create the set of solid squares
 */
 export function createSquaresSolid(): any {
-  let body = document.body,
-      html = document.documentElement
-  let height = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight)
+  let height = getDocumentHeight()
 
   const colors: string[] = [
     '#FB7185', // rose 400
@@ -39,9 +40,7 @@ export function createSquaresSolid(): any {
   Create the set of outline squares
 */
 export function createSquaresOutline(): any {
-  let body = document.body,
-      html = document.documentElement
-  let height = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight)
+  let height = getDocumentHeight()
 
   const colors: string[] = [
     '#5EEAD4', // teal 300
@@ -72,9 +71,7 @@ export function createSquaresOutline(): any {
   Create the set of triangles
 */
 export function createTriangles(): any {
-  let body = document.body,
-      html = document.documentElement
-  let height = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight)
+  let height = getDocumentHeight()
 
   const colors: string[] = [
     '#A78BFA', // violet 400
@@ -103,9 +100,7 @@ export function createTriangles(): any {
   Create the set of bolts
 */
 export function createBolts(): any {
-  let body = document.body,
-      html = document.documentElement
-  let height = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight)
+  let height = getDocumentHeight()
 
   const colors: string[] = [
     '#FEF08A', // yellow 200
@@ -135,9 +130,7 @@ export function createBolts(): any {
   Create the set of wave triangle
 */
 export function createWave(): any {
-  let body = document.body,
-      html = document.documentElement
-  let height = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight)
+  let height = getDocumentHeight()
 
   const colors: string[] = [
     // '#F472B6' // pink 400

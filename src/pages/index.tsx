@@ -1,8 +1,9 @@
 import React, { FC, ReactNode } from 'react'
 
-import Banner from '../components/banner'
-import Layout from '../components/layout'
 import Avatar from '../components/avatar'
+import Banner from '../components/banner'
+import ContactForm from '../components/contact-form'
+import Layout from '../components/layout'
 
 
 const Home: FC<ReactNode> = () => {
@@ -14,7 +15,9 @@ const Home: FC<ReactNode> = () => {
             <span className="hidden sm:inline-block">
               <i className="fal fa-narwhal text-rose-300"></i>&nbsp;
             </span>
+            <span className="text-teal-100">
             Bit-Casting Technomancer
+            </span>
             <span className="hidden sm:inline-block">
               &nbsp;<i className="fal fa-alien-monster text-teal-300"></i>
             </span>
@@ -23,7 +26,7 @@ const Home: FC<ReactNode> = () => {
             </span>
           </>
         }
-        subTitle={<>Designer, Full Stack Developer, &amp; Tech Lead</>}
+        subTitle={<span className="text-teal-100">Designer, Full Stack Developer, &amp; Tech Lead</span>}
       />
       <main className="min-h-screen max-w-screen-lg m-auto">
         <section className="bg-gray-100 rounded-xl p-8 w-11/12 sm:w-2/3 mx-auto -mt-12 mb-8 sm:mb-10 shadow-xl relative">
@@ -64,21 +67,7 @@ const Home: FC<ReactNode> = () => {
         </section>
 
         <section className="bg-gray-100 rounded-xl p-8 pb-10 w-11/12 sm:w-2/3 mx-auto mb-20 shadow-xl z-10 relative">
-          <h2 className="text-gray-800 text-2xl tracking-wide">Say Hello</h2>
-          <div className="grid grid-cols-1 gap-6 mt-8">
-            <label className="block">
-              <span className="text-gray-600 tracking-wider">Name</span>
-              <input type="text" className="mt-0 block w-full px-0.5 border-0 border-b-2 border-purple-300 focus:ring-0 focus:border-fuchsia-500 bg-gray-100" placeholder="" />
-            </label>
-            <label className="block">
-              <span className="text-gray-600 tracking-wider">Email</span>
-              <input type="email" className="mt-0 block w-full px-0.5 border-0 border-b-2 border-purple-300 focus:ring-0 focus:border-fuchsia-500 bg-gray-100" />
-            </label>
-            <label className="block">
-              <span className="text-gray-600 tracking-wider">Message</span>
-              <textarea className="mt-0 block w-full px-0.5 border-0 border-b-2 border-purple-300 focus:ring-0 focus:border-fuchsia-500 bg-gray-100" rows={2}></textarea>
-            </label>
-          </div>
+          <ContactForm />
         </section>
       </main>
     </Layout>
