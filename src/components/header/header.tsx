@@ -3,7 +3,7 @@ import React, { FC, ReactNode } from 'react'
 import Navigation from '../navigation'
 
 
-const Header: FC<ReactNode> = ({}) => {
+const Header: FC<ReactNode> = ({}: ReactNode) => {
   return (
     <React.Fragment>
       <header className="bg-indigo-400 bg-opacity-30 w-full py-6 px-8">

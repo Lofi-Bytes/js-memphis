@@ -10,7 +10,7 @@ export type BannerProps = {
 const Banner: FC<BannerProps> = ({
   title,
   subTitle
-}) => {
+}: BannerProps) => {
   return (
     <React.Fragment>
       <div className="bg-indigo-400 bg-opacity-30 w-full">

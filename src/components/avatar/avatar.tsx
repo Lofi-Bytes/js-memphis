@@ -1,14 +1,8 @@
 import React, { FC, ReactNode } from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-import Img, { FixedObject } from "gatsby-image"
+import Img from "gatsby-image"
 import BackgroundImage from 'gatsby-background-image'
 
-
-// export type AvatarProps = {
-//   url?: string,
-//   altText?: string,
-//   title?: string
-// }
 
 const Avatar: FC<ReactNode> = ({}) => {
   const data = useStaticQuery(graphql`

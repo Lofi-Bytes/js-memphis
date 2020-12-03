@@ -39,9 +39,12 @@ module.exports = {
   variants: {
     extend: {
       backgroundColor: ['active'],
+      borderColor: ['hover'],
+      borderWidth: ['hover', 'focus'],
       boxShadow: ['active'],
       cursor: ['hover', 'focus'],
       textColor: ['active'],
+      transitionProperty: ['hover', 'focus'],
     },
   },
   plugins: [
