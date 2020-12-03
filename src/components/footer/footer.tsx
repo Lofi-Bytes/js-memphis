@@ -47,7 +47,7 @@ const Footer: FC<ReactNode> = ({}: ReactNode) => {
                   <Link
                     to={path}
                   >
-                    <span className="text-base tracking-wider text-teal-100 hover:text-pink-200 focus:text-pink-200 active:text-pink-300 hover:cursor-pointer duration-200 ml-6">{title}</span>
+                    <span className="text-base tracking-wider text-teal-100 hover:text-pink-200 focus:text-pink-200 active:text-pink-300 hover:cursor-pointer duration-200">{title}</span>
                   </Link>
                 </React.Fragment>
               )
