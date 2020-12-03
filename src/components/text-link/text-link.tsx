@@ -24,9 +24,9 @@ const TextLink: FC<TextLinkProps> = ({
                 rel="noopener noreferrer"
                 className="text-lightBlue-400 focus:outline-none focus:ring-1 focus:ring-lightBlue-400 rounded"
               >
-                <div className="hover:border-b-2 border-lightBlue-400 hover:transition-all transition-all duration-75 w-max inline">
+                <span className="hover:border-b-2 border-lightBlue-400 hover:transition-all transition-all duration-75 w-max inline">
                   {children}&nbsp;<sup><i className="fas fa-external-link-alt external-link-icon text-xs" /></sup>
-                </div>
+                </span>
               </a>
             :
               <a
@@ -35,9 +35,9 @@ const TextLink: FC<TextLinkProps> = ({
                 rel="noopener noreferrer"
                 className="text-lightBlue-400 focus:outline-none focus:ring-1 focus:ring-lightBlue-400 rounded"
               >
-                <div className="hover:border-b-2 border-lightBlue-400 hover:transition-all transition-all w-max inline">
+                <span className="hover:border-b-2 border-lightBlue-400 hover:transition-all transition-all w-max inline">
                   {children}
-                </div>
+                </span>
               </a>
         }
       </React.Fragment>

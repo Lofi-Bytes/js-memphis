@@ -40,3 +40,11 @@ export const formatClassList = (classList:string): string => {
 export const joinStrings = (join: string, ...strings: string[]): string => {
   return strings.join(join)
 }
+/*
+  React Hook Form
+*/
+export function encode(data) {
+  return Object.keys(data)
+    .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .join('&')
+}
