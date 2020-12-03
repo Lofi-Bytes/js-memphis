@@ -38,6 +38,8 @@ module.exports = {
   },
   variants: {
     extend: {
+      backgroundColor: ['active'],
+      boxShadow: ['active'],
       cursor: ['hover', 'focus'],
       textColor: ['active'],
     },

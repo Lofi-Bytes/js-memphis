@@ -1,5 +1,7 @@
 import React, { FC, ReactNode } from 'react'
 
+import Button from '../button'
+
 
 const ContactForm: FC<ReactNode> = ({}: ReactNode) => {
   return (
@@ -18,6 +20,14 @@ const ContactForm: FC<ReactNode> = ({}: ReactNode) => {
           <span className="text-gray-600 tracking-wider">Message</span>
           <textarea className="mt-0 block w-full px-0.5 border-0 border-b-2 border-purple-300 focus:ring-0 focus:border-fuchsia-500 bg-gray-100" rows={2}></textarea>
         </label>
+        <Button
+          action="primary"
+          className="mt-4"
+          title="Submit"
+          type="button"
+        >
+          Submit
+        </Button>
       </div>
     </React.Fragment>
   )
