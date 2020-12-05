@@ -51,15 +51,109 @@ const ContactForm: FC<ReactNode> = ({}: ReactNode) => {
           <input type="hidden" name="form-contact" value="contact" />
           <label className="block">
             <span className="text-gray-600 tracking-wider">Name</span>
-            <input type="text" className="mt-0 block w-full px-0.5 border-0 border-b-2 border-purple-300 focus:ring-0 focus:border-fuchsia-500 bg-gray-100" placeholder="" />
+            <input
+              className={
+                !JSON.stringify(formState.touched.name)
+                ?
+                  "mt-0 block w-full px-0.5 border-0 border-b-2 border-purple-300 focus:ring-0 focus:border-fuchsia-500 bg-gray-100"
+                :
+                  JSON.stringify(formState.touched.name)
+                  &&
+                  formState.dirtyFields.name === undefined
+                  &&
+                  !errors.name
+                  ?
+                    "mt-0 block w-full px-0.5 border-0 border-b-2 border-purple-300 focus:ring-0 focus:border-fuchsia-500 bg-gray-100 is-invalid"
+                  :
+                    errors.name
+                    ?
+                      "mt-0 block w-full px-0.5 border-0 border-b-2 border-purple-300 focus:ring-0 focus:border-fuchsia-500 bg-gray-100 is-invalid"
+                    :
+                      "mt-0 block w-full px-0.5 border-0 border-b-2 border-purple-300 focus:ring-0 focus:border-fuchsia-500 bg-gray-100 is-valid"
+              }
+              placeholder=""
+              type="text"
+              name="name"
+              onChange={handleChange}
+              ref={register({ required: true, maxLength: 200 })}
+            />
+
+            {((errors.name && errors.name.type === 'required') || formState.touched.name) &&
+              <div className="invalid-feedback">
+                Please provide a name.
+              </div>
+            }
           </label>
           <label className="block">
             <span className="text-gray-600 tracking-wider">Email</span>
-            <input type="email" className="mt-0 block w-full px-0.5 border-0 border-b-2 border-purple-300 focus:ring-0 focus:border-fuchsia-500 bg-gray-100" />
+            <input
+              className={
+                !JSON.stringify(formState.touched.email)
+                ?
+                  "mt-0 block w-full px-0.5 border-0 border-b-2 border-purple-300 focus:ring-0 focus:border-fuchsia-500 bg-gray-100"
+                :
+                  JSON.stringify(formState.touched.email)
+                  &&
+                  formState.dirtyFields.email === undefined
+                  &&
+                  !errors.email
+                  ?
+                    "mt-0 block w-full px-0.5 border-0 border-b-2 border-purple-300 focus:ring-0 focus:border-fuchsia-500 bg-gray-100 is-invalid"
+                  :
+                    errors.email
+                    ?
+                      "mt-0 block w-full px-0.5 border-0 border-b-2 border-purple-300 focus:ring-0 focus:border-fuchsia-500 bg-gray-100 is-invalid"
+                    :
+                      "mt-0 block w-full px-0.5 border-0 border-b-2 border-purple-300 focus:ring-0 focus:border-fuchsia-500 bg-gray-100 is-valid"
+              }
+              type="email"
+              name="email"
+              onChange={handleChange}
+              ref={register({
+                required: true,
+                pattern: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+              })}
+            />
+
+            {((errors.email && errors.email.type === 'required') || formState.touched.email) &&
+              <div className="invalid-feedback">
+                Please provide your email address.
+              </div>
+            }
           </label>
           <label className="block">
             <span className="text-gray-600 tracking-wider">Message</span>
-            <textarea className="mt-0 block w-full px-0.5 border-0 border-b-2 border-purple-300 focus:ring-0 focus:border-fuchsia-500 bg-gray-100" rows={2}></textarea>
+            <textarea
+              className={
+                !JSON.stringify(formState.touched.message)
+                ?
+                  "mt-0 block w-full px-0.5 border-0 border-b-2 border-purple-300 focus:ring-0 focus:border-fuchsia-500 bg-gray-100"
+                :
+                  JSON.stringify(formState.touched.message)
+                  &&
+                  formState.dirtyFields.message === undefined
+                  &&
+                  !errors.message
+                  ?
+                    "mt-0 block w-full px-0.5 border-0 border-b-2 border-purple-300 focus:ring-0 focus:border-fuchsia-500 bg-gray-100 is-invalid"
+                  :
+                    errors.message
+                    ?
+                      "mt-0 block w-full px-0.5 border-0 border-b-2 border-purple-300 focus:ring-0 focus:border-fuchsia-500 bg-gray-100 is-invalid"
+                    :
+                      "mt-0 block w-full px-0.5 border-0 border-b-2 border-purple-300 focus:ring-0 focus:border-fuchsia-500 bg-gray-100 is-valid"
+              }
+              rows={4}
+              name="message"
+              onChange={handleChange}
+              ref={register({ required: true })}
+              ></textarea>
+
+              {((errors.message && errors.message.type === 'required') || formState.touched.message) &&
+                <div className="invalid-feedback">
+                  Please provide a message.
+                </div>
+              }
           </label>
           <Button
             action="primary"
