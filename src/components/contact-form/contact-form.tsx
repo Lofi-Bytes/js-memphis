@@ -13,26 +13,23 @@ export type ContactFormProps = {
   message: string
 }
 
-const ContactForm: FC<ContactFormProps> = ({
-  name,
-  email,
-  message
-}: ContactFormProps) => {
+const ContactForm: FC<ContactFormProps> = ({}: ContactFormProps) => {
   const {
     register,
     handleSubmit,
     formState,
     errors,
+    clearErrors,
     reset
   } = useForm<ContactFormProps>({
-    mode: 'onBlur',
+    mode: 'onBlur'
   })
   const [state, setState] = React.useState({})
   const [feedbackMsg, setFeedbackMsg] = useState(null)
-  const handleChange = e => setState({
-    ...state,
-    [e.target.name]: e.target.value
-  })
+  // const handleChange = e => setState({
+  //   ...state,
+  //   [e.target.name]: e.target.value
+  // })
   const onSubmit = (data, e) => {
     // JSON.stringify(data)
     e.preventDefault()
@@ -67,7 +64,7 @@ const ContactForm: FC<ContactFormProps> = ({
         data-netlify-honeypot="bot-field"
         onSubmit={handleSubmit(onSubmit)}
       >
-        <div className="grid grid-cols-1 gap-6 mt-8">
+        <div className="grid grid-cols-1 gap-4 mt-8">
           <input type="hidden" name="form-contact" value="contact" />
           <label className="block">
             <span className="text-gray-600 tracking-wider text-sm">Name</span>
@@ -87,15 +84,31 @@ const ContactForm: FC<ContactFormProps> = ({
                             "mt-1 block pl-3 pr-10 border-0 border-b-4 border-red-300 focus:ring-0 focus:border-red-500 bg-gray-200 rounded-lg text-gray-600 text-lg w-full shadow-md"
                           :
                             errors.name && errors.name.type === "maxLength"
-                            ?
-                              "mt-1 block pl-3 pr-10 border-0 border-b-4 border-red-300 focus:ring-0 focus:border-red-500 bg-gray-200 rounded-lg text-gray-600 text-lg w-full shadow-md"
-                            :
-                              "mt-1 block pl-3 pr-10 border-0 border-b-4 border-green-300 focus:ring-0 focus:border-green-500 bg-gray-200 rounded-lg text-gray-600 text-lg w-full shadow-md"
+                              ?
+                                "mt-1 block pl-3 pr-10 border-0 border-b-4 border-red-300 focus:ring-0 focus:border-red-500 bg-gray-200 rounded-lg text-gray-600 text-lg w-full shadow-md"
+                              :
+                                "mt-1 block pl-3 pr-10 border-0 border-b-4 border-green-300 focus:ring-0 focus:border-green-500 bg-gray-200 rounded-lg text-gray-600 text-lg w-full shadow-md"
                 }
+                aria-required="true"
                 placeholder=""
                 type="text"
                 name="name"
-                onChange={handleChange}
+                // onChange={() => reset()}
+                // onChange={() => clearErrors("name")}
+                // onChange={() => {
+                //   reset({
+                //     name: ""
+                //   }, {
+                //     errors: false, // errors will be reset
+                //     // dirtyFields: false, // dirtyField will be reset
+                //     // dirty: false, // dirty will not be reset
+                //     // isSubmitted: false,
+                //     touched: false, // touched will be reset
+                //     // isValid: false,
+                //     // submitCount: false,
+                //   });
+                // }}
+                // formState.touched.name = !formState.touched.name}
                 ref={
                   register(
                     {
@@ -126,19 +139,51 @@ const ContactForm: FC<ContactFormProps> = ({
                               <i className="far fa-check text-green-600 text-2xl w-4 absolute right-4 top-1/4"></i>
               }
             </div>
-
-            {errors.name && errors.name.type === "required" && (
-              <p className="error text-red-600 mt-1">
-                Please enter your name.
-              </p>
-            )}
-            {errors.name && errors.name.type === "minLength" && (
-              <p className="error text-red-600 mt-1">Your name must be at least 2 characters.</p>
-            )}
-            {errors.name && errors.name.type === "maxLength" && (
-              <p className="error text-red-600 mt-1">Your name must be less than 100 characters.</p>
-            )}
-
+            <p
+              className={
+                (errors.name && errors.name.type === "required") ||
+                (errors.name && errors.name.type === "minLength") ||
+                (errors.name && errors.name.type === "maxLength")
+                ?
+                  "error text-red-600 mt-1 opacity-100 transition-opacity duration-200 delay-75"
+                :
+                  "error text-red-600 mt-1 opacity-0 transition-opacity duration-200 delay-75"
+              }
+              aria-hidden={
+                (errors.name && errors.name.type === "required") ||
+                (errors.name && errors.name.type === "minLength") ||
+                (errors.name && errors.name.type === "maxLength")
+                ?
+                  "false"
+                :
+                  "true"
+              }
+              aria-live={
+                (errors.name && errors.name.type === "required") ||
+                (errors.name && errors.name.type === "minLength") ||
+                (errors.name && errors.name.type === "maxLength")
+                ?
+                  "polite"
+                :
+                  "off"
+              }
+            >
+              {
+                errors.name && errors.name.type === "required"
+                  ?
+                    <>Please enter your name.</>
+                  :
+                    errors.name && errors.name.type === "minLength"
+                      ?
+                        <>Your name must be at least 2 characters.</>
+                      :
+                        errors.name && errors.name.type === "maxLength"
+                          ?
+                            <>Your name must be less than 100 characters.</>
+                          :
+                            <>&nbsp;</>
+              }
+            </p>
           </label>
           <label className="block">
             <span className="text-gray-600 tracking-wider text-sm">Email</span>
@@ -159,9 +204,10 @@ const ContactForm: FC<ContactFormProps> = ({
                           :
                             "mt-1 block pl-3 pr-10 border-0 border-b-4 border-green-300 focus:ring-0 focus:border-green-500 bg-gray-200 rounded-lg text-gray-600 text-lg w-full shadow-md"
                 }
+                aria-required="true"
                 type="email"
                 name="email"
-                onChange={handleChange}
+                // onChange={handleChange}
                 ref={
                   register(
                     {
@@ -187,16 +233,44 @@ const ContactForm: FC<ContactFormProps> = ({
                             <i className="far fa-check text-green-600 text-2xl w-4 absolute right-4 top-1/4"></i>
               }
             </div>
-
-            {errors.email && errors.email.type === "required" && (
-              <p className="error text-red-600 mt-1">
-                Please enter your email.
-              </p>
-            )}
-            {errors.email && errors.email.type === "pattern" && (
-              <p className="error text-red-600 mt-1">Please enter a valid email address.</p>
-            )}
-
+            <p
+              className={
+                (errors.email && errors.email.type === "required") ||
+                (errors.email && errors.email.type === "minLength")
+                ?
+                  "error text-red-600 mt-1 opacity-100 transition-opacity duration-200 delay-75"
+                :
+                  "error text-red-600 mt-1 opacity-0 transition-opacity duration-200 delay-75"
+              }
+              aria-hidden={
+                (errors.email && errors.email.type === "required") ||
+                (errors.email && errors.email.type === "pattern")
+                ?
+                  "false"
+                :
+                  "true"
+              }
+              aria-live={
+                (errors.email && errors.email.type === "required") ||
+                (errors.email && errors.email.type === "pattern")
+                ?
+                  "polite"
+                :
+                  "off"
+              }
+            >
+              {
+                errors.email && errors.email.type === "required"
+                  ?
+                    <>Please enter your email.</>
+                  :
+                    errors.email && errors.email.type === "pattern"
+                      ?
+                        <>Please enter a valid email address.</>
+                      :
+                        <>&nbsp;</>
+              }
+            </p>
           </label>
           <label className="block">
             <span className="text-gray-600 tracking-wider text-sm">Message</span>
@@ -221,9 +295,10 @@ const ContactForm: FC<ContactFormProps> = ({
                             :
                               "mt-1 block flex-grow pl-3 pr-10 border-0 border-b-4 border-green-300 focus:ring-0 focus:border-green-500 bg-gray-200 rounded-lg text-gray-600 text-lg w-full shadow-md"
                 }
+                aria-required="true"
                 rows={4}
                 name="message"
-                onChange={handleChange}
+                // onChange={handleChange}
                 ref={
                   register(
                     {
@@ -254,19 +329,51 @@ const ContactForm: FC<ContactFormProps> = ({
                               <i className="far fa-check text-green-600 text-2xl w-4 absolute right-4 top-2"></i>
               }
             </div>
-
-            {errors.message && errors.message.type === "required" && (
-              <p className="error text-red-600 mt-1">
-                Please enter a message.
-              </p>
-            )}
-            {errors.message && errors.message.type === "minLength" && (
-              <p className="error text-red-600 mt-1">Your message must be at least 15 characters.</p>
-            )}
-            {errors.message && errors.message.type === "maxLength" && (
-              <p className="error text-red-600 mt-1">Your message must be less than 3000 characters.</p>
-            )}
-
+            <p
+              className={
+                (errors.message && errors.message.type === "required") ||
+                (errors.message && errors.message.type === "minLength") ||
+                (errors.message && errors.message.type === "maxLength")
+                ?
+                  "error text-red-600 mt-1 opacity-100 transition-opacity duration-200 delay-75"
+                :
+                  "error text-red-600 mt-1 opacity-0 transition-opacity duration-200 delay-75"
+              }
+              aria-hidden={
+                (errors.message && errors.message.type === "required") ||
+                (errors.message && errors.message.type === "minLength") ||
+                (errors.message && errors.message.type === "maxLength")
+                ?
+                  "false"
+                :
+                  "true"
+              }
+              aria-live={
+                (errors.message && errors.message.type === "required") ||
+                (errors.message && errors.message.type === "minLength") ||
+                (errors.message && errors.message.type === "maxLength")
+                ?
+                  "polite"
+                :
+                  "off"
+              }
+            >
+              {
+                errors.message && errors.message.type === "required"
+                  ?
+                    <>Please enter a message.</>
+                  :
+                    errors.message && errors.message.type === "minLength"
+                      ?
+                        <>Your message must be at least 15 characters.</>
+                      :
+                        errors.message && errors.message.type === "maxLength"
+                          ?
+                            <>Your message must be less than 3000 characters.</>
+                          :
+                            <>&nbsp;</>
+              }
+            </p>
           </label>
           <Button
             action="primary"
