@@ -63,6 +63,14 @@ const ContactForm: FC<ContactFormProps> = ({}: ContactFormProps) => {
         </>
       }
 
+      <>
+        <div role="alert" className="h-96 mt-1 flex flex-col items-center justify-center p-6 bg-gray-200 rounded-lg text-gray-600 text-lg w-full shadow-md">
+          <i className="far fa-check-circle text-green-500 text-6xl sm:text-7xl md:text-8xl text-center w-full"></i>
+          <p className="text-gray-600 text-xl sm:text-2xl md:text-3xl text-center tracking-wider leading-relaxed mt-4">Thank you!</p>
+          <p className="text-gray-600 text-base sm:text-lg md:text-xl tracking-wider leading-relaxed mt-4">I have received your message.</p>
+        </div>
+      </>
+
       <h2 className="text-gray-800 text-2xl tracking-wide">Say Hello</h2>
       <form
         name="contact"
