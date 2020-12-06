@@ -31,13 +31,17 @@ export function getDocumentHeight() {
     ? html = document.documentElement
     : null
 
-  return Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight)
+  return typeof document !== `undefined`
+    ? Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight)
+    : null
 }
 /*
   Window object doesn't exist outside of the window!
 */
 export function getWindowInnerWidth() {
-  return typeof window !== `undefined` ? window.innerWidth : 0
+  return typeof window !== `undefined`
+    ? window.innerWidth
+    : 0
 }
 /*
   Utilities for making tailwind classes cleaner to work with
