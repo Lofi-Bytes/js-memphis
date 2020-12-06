@@ -27,6 +27,10 @@ const ContactForm: FC<ContactFormProps> = ({}: ContactFormProps) => {
   const [state, setState] = React.useState({})
   const [successMsg, setSuccessMsg] = useState(false)
   const [errorMsg, setErrorMsg] = useState(false)
+  const handleChange = e => setState({
+    ...state,
+    [e.target.name]: e.target.value
+  })
   const onSubmit = (data, e) => {
     // JSON.stringify(data)
     e.preventDefault()
@@ -109,22 +113,7 @@ const ContactForm: FC<ContactFormProps> = ({}: ContactFormProps) => {
                   placeholder=""
                   type="text"
                   name="name"
-                  // onChange={() => reset()}
-                  // onChange={() => clearErrors("name")}
-                  // onChange={() => {
-                  //   reset({
-                  //     name: ""
-                  //   }, {
-                  //     errors: false, // errors will be reset
-                  //     // dirtyFields: false, // dirtyField will be reset
-                  //     // dirty: false, // dirty will not be reset
-                  //     // isSubmitted: false,
-                  //     touched: false, // touched will be reset
-                  //     // isValid: false,
-                  //     // submitCount: false,
-                  //   });
-                  // }}
-                  // formState.touched.name = !formState.touched.name}
+                  onChange={handleChange}
                   ref={
                     register(
                       {
@@ -223,7 +212,7 @@ const ContactForm: FC<ContactFormProps> = ({}: ContactFormProps) => {
                   aria-required="true"
                   type="email"
                   name="email"
-                  // onChange={handleChange}
+                  onChange={handleChange}
                   ref={
                     register(
                       {
@@ -314,7 +303,7 @@ const ContactForm: FC<ContactFormProps> = ({}: ContactFormProps) => {
                   aria-required="true"
                   rows={4}
                   name="message"
-                  // onChange={handleChange}
+                  onChange={handleChange}
                   ref={
                     register(
                       {
