@@ -94,18 +94,13 @@ const ContactPage: FC = () => {
               </div>
             }
 
-            {/* {!successMsg && */}
+            {!successMsg &&
               <form
                 name="contact"
                 method="post"
                 data-netlify="true"
                 data-netlify-honeypot="bot-field"
                 onSubmit={handleSubmit(onSubmit)}
-                className={
-                  !successMsg
-                  ? "visible"
-                  : "invisible"
-                }
               >
                 <div className="grid grid-cols-1 gap-4 mt-8">
                   <input type="hidden" name="form-contact" value="contact" />
@@ -413,7 +408,7 @@ const ContactPage: FC = () => {
                   </Button>
                 </div>
               </form>
-            {/* } */}
+            }
           </React.Fragment>
         </section>
       </main>
