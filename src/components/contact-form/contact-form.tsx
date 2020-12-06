@@ -13,7 +13,7 @@ export type ContactFormProps = {
   message: string
 }
 
-const ContactForm: FC<ContactFormProps> = ({}: ContactFormProps) => {
+const ContactForm: FC = ({}) => {
   const {
     register,
     handleSubmit,
@@ -27,10 +27,11 @@ const ContactForm: FC<ContactFormProps> = ({}: ContactFormProps) => {
   const [state, setState] = React.useState({})
   const [successMsg, setSuccessMsg] = useState(false)
   const [errorMsg, setErrorMsg] = useState(false)
-  const handleChange = e => setState({
+  const handleChange = e => {setState({
     ...state,
     [e.target.name]: e.target.value
-  })
+
+  })}
   const onSubmit = (data, e) => {
     // JSON.stringify(data)
     e.preventDefault()
