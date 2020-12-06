@@ -67,8 +67,8 @@ const Layout: FC<LayoutProps> = ({
 
     return () => {
       typeof window !== `undefined`
-      ? window.removeEventListener("resize", handleWindowResize)
-      : null
+        ? window.removeEventListener("resize", handleWindowResize)
+        : null
     }
   }, [])
 

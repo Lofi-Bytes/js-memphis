@@ -32,7 +32,7 @@ const PRIMARY_BASE: string = `
   px-6
   py-2
   rounded-full
-  shadow-xl
+  shadow-lg
 `
 
 const SECONDARY_BASE: string = `

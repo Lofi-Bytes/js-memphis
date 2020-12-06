@@ -55,7 +55,14 @@ const ContactForm: FC<ContactFormProps> = ({}: ContactFormProps) => {
   }
   return (
     <React.Fragment>
-      {feedbackMsg && <div role="alert" className="fade alert alert-success show">{feedbackMsg}</div>}
+      {feedbackMsg &&
+        <>
+          <div role="alert" className="fade alert alert-success show">
+            {feedbackMsg}
+          </div>
+        </>
+      }
+
       <h2 className="text-gray-800 text-2xl tracking-wide">Say Hello</h2>
       <form
         name="contact"
@@ -171,17 +178,17 @@ const ContactForm: FC<ContactFormProps> = ({}: ContactFormProps) => {
               {
                 errors.name && errors.name.type === "required"
                   ?
-                    <>Please enter your name.</>
+                    <p className="text-sm">Please enter your name.</p>
                   :
                     errors.name && errors.name.type === "minLength"
                       ?
-                        <>Your name must be at least 2 characters.</>
+                        <p className="text-sm">Your name must be at least 2 characters.</p>
                       :
                         errors.name && errors.name.type === "maxLength"
                           ?
-                            <>Your name must be less than 100 characters.</>
+                            <p className="text-sm">Your name must be less than 100 characters.</p>
                           :
-                            <>&nbsp;</>
+                            <p className="text-sm">&nbsp;</p>
               }
             </p>
           </label>
@@ -262,13 +269,13 @@ const ContactForm: FC<ContactFormProps> = ({}: ContactFormProps) => {
               {
                 errors.email && errors.email.type === "required"
                   ?
-                    <>Please enter your email.</>
+                    <p className="text-sm">Please enter your email.</p>
                   :
                     errors.email && errors.email.type === "pattern"
                       ?
-                        <>Please enter a valid email address.</>
+                        <p className="text-sm">Please enter a valid email address.</p>
                       :
-                        <>&nbsp;</>
+                        <p className="text-sm">&nbsp;</p>
               }
             </p>
           </label>
@@ -361,17 +368,17 @@ const ContactForm: FC<ContactFormProps> = ({}: ContactFormProps) => {
               {
                 errors.message && errors.message.type === "required"
                   ?
-                    <>Please enter a message.</>
+                    <p className="text-sm">Please enter a message.</p>
                   :
                     errors.message && errors.message.type === "minLength"
                       ?
-                        <>Your message must be at least 15 characters.</>
+                        <p className="text-sm">Your message must be at least 15 characters.</p>
                       :
                         errors.message && errors.message.type === "maxLength"
                           ?
-                            <>Your message must be less than 3000 characters.</>
+                            <p className="text-sm">Your message must be less than 3000 characters.</p>
                           :
-                            <>&nbsp;</>
+                            <p className="text-sm">&nbsp;</p>
               }
             </p>
           </label>

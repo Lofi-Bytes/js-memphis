@@ -7,8 +7,12 @@ export function randomIntFromInterval(min, max) { // min and max included
 /*
   Invoke to remove all elements of a given className from the DOM
 */
-export function removeElementsByClass(className){
-  var elements = document.getElementsByClassName(className);
+export function removeElementsByClass(className) {
+  let elements
+  typeof document !== `undefined`
+    ? elements = document.getElementsByClassName(className)
+    : null
+
   while(elements.length > 0){
     elements[0].parentNode.removeChild(elements[0]);
   }
@@ -17,8 +21,16 @@ export function removeElementsByClass(className){
   Window object doesn't exist outside of the window!
 */
 export function getDocumentHeight() {
-  let body = document.body,
-      html = document.documentElement
+  let body
+  typeof document !== `undefined`
+    ? body = document.body
+    : null
+
+  let html
+  typeof document !== `undefined`
+    ? html = document.documentElement
+    : null
+
   return Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight)
 }
 /*
