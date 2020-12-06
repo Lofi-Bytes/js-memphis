@@ -14,13 +14,13 @@ const HomePage: FC<ReactNode> = () => {
         title={
           <>
             <span className="hidden sm:inline-block">
-              <i className="fal fa-narwhal text-rose-300"></i>&nbsp;
+              <i className="fal fa-narwhal text-rose-300"></i>&nbsp;&nbsp;
             </span>
             <span className="text-teal-100">
             Bit-Casting Technomancer
             </span>
             <span className="hidden sm:inline-block">
-              &nbsp;<i className="fal fa-alien-monster text-teal-300"></i>
+              &nbsp;&nbsp;<i className="fal fa-alien-monster text-teal-300"></i>
             </span>
             <span className="block sm:hidden">
               <i className="fal fa-narwhal text-rose-300"></i>&nbsp;&nbsp;<i className="fal fa-alien-monster text-teal-300"></i>
