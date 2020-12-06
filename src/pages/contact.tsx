@@ -6,9 +6,7 @@ import { encode } from '../utils/utils'
 
 import Banner from '../components/banner'
 import Button from '../components/button'
-import ContactForm from '../components/contact-form'
 import Layout from '../components/layout'
-import TextLink from '../components/text-link'
 
 
 const ContactPage: FC = () => {
@@ -23,7 +21,7 @@ const ContactPage: FC = () => {
     mode: 'onBlur'
   })
   const [state, setState] = React.useState({})
-  const [successMsg, setSuccessMsg] = useState(true)
+  const [successMsg, setSuccessMsg] = useState(false)
   const [errorMsg, setErrorMsg] = useState(false)
   const handleChange = e => {setState({
     ...state,
