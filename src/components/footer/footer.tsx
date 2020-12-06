@@ -26,6 +26,7 @@ const Footer: FC<ReactNode> = ({}: ReactNode) => {
             href="https://twitter.com/LofiBytes/"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Twitter"
           >
             <i className="fab fa-twitter text-teal-100 hover:text-pink-200 focus:text-pink-200 active:text-pink-300 text-3xl hover:cursor-pointer duration-200"></i>
           </a>
@@ -33,6 +34,7 @@ const Footer: FC<ReactNode> = ({}: ReactNode) => {
             href="https://github.com/JSNickerson"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Github"
           >
             <i className="fab fa-github text-teal-100 hover:text-pink-200 focus:text-pink-200 active:text-pink-300 text-3xl ml-6 hover:cursor-pointer duration-200"></i>
           </a>

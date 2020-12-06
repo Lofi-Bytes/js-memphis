@@ -22,9 +22,9 @@ const TextLink: FC<TextLinkProps> = ({
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-lightBlue-400 focus:outline-none focus:ring-1 focus:ring-lightBlue-400 rounded"
+                className="text-lightBlue-700 focus:outline-none focus:ring-1 focus:ring-lightBlue-700 rounded"
               >
-                <span className="hover:border-b-2 border-lightBlue-400 hover:transition-all transition-all duration-75 w-max inline">
+                <span className="hover:border-b-2 border-lightBlue-700 hover:transition-all transition-all duration-75 w-max inline">
                   {children}&nbsp;<sup><i className="fas fa-external-link-alt external-link-icon text-xs" /></sup>
                 </span>
               </a>
@@ -33,9 +33,9 @@ const TextLink: FC<TextLinkProps> = ({
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-lightBlue-400 focus:outline-none focus:ring-1 focus:ring-lightBlue-400 rounded"
+                className="text-lightBlue-700 focus:outline-none focus:ring-1 focus:ring-lightBlue-700 rounded"
               >
-                <span className="hover:border-b-2 border-lightBlue-400 hover:transition-all transition-all w-max inline">
+                <span className="hover:border-b-2 border-lightBlue-700 hover:transition-all transition-all w-max inline">
                   {children}
                 </span>
               </a>

@@ -58,14 +58,14 @@ const SECONDARY_BASE: string = `
 
 const PRIMARY: string = `
   ${PRIMARY_BASE}
-  bg-rose-300
-  text-rose-800
+  bg-purple-300
+  text-purple-900
   font-medium
 
-  focus:ring-offset-rose-500
-  focus:ring-rose-200
+  focus:ring-offset-purple-700
+  focus:ring-purple-200
   focus:ring-opacity-75
-  focus:bg-rose-200
+  focus:bg-purple-200
 
 `
   // hover:ring-offset-purple-600

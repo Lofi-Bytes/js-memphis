@@ -5,7 +5,7 @@ import Header from '../header'
 
 import {
   removeElementsByClass,
-  getWindowInnerHeight,
+  getDocumentHeight,
   getWindowInnerWidth
 } from '../../utils/utils'
 
@@ -29,7 +29,7 @@ type LayoutProps = {
 const Layout: FC<LayoutProps> = ({
   children
 }: LayoutProps) => {
-  const [height, setHeight] = useState(getWindowInnerHeight)
+  const [height, setHeight] = useState(getDocumentHeight)
   const [width, setWidth] = useState(getWindowInnerWidth)
 
   useEffect(() => {
@@ -58,7 +58,7 @@ const Layout: FC<LayoutProps> = ({
 
     const handleWindowResize = () => {
       setWidth(getWindowInnerWidth)
-      setHeight(getWindowInnerHeight)
+      setHeight(getDocumentHeight)
     }
 
     typeof window !== `undefined`

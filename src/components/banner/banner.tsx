@@ -13,7 +13,7 @@ const Banner: FC<BannerProps> = ({
 }: BannerProps) => {
   return (
     <React.Fragment>
-      <div className="bg-indigo-400 bg-opacity-30 w-full">
+      <div className="bg-indigo-400 bg-opacity-40 w-full">
         <div className="flex flex-col justify-center items-center max-w-screen-lg m-auto h-80 pb-20 px-6">
           <h1 className="text-teal-100 text-2xl sm:text-3xl lg:text-4xl  font-light text-center">
             {/* <span
