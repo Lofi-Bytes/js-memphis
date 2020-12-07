@@ -18,10 +18,10 @@ const WritingListPage: FC<ReactNode> = () => {
             Writing
             </span>
             <span className="hidden sm:inline-block">
-              &nbsp;&nbsp;<i className="fal fa-comment-edit text-teal-100"></i>
+              &nbsp;&nbsp;<i className="fal fa-comment-edit text-orange-300"></i>
             </span>
             <span className="block sm:hidden">
-              <i className="fal fa-comment-edit text-gray-50"></i>
+              <i className="fal fa-comment-edit text-orange-300"></i>
             </span>
           </>
         }

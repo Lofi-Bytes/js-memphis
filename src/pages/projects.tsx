@@ -18,7 +18,7 @@ const ProjectsListPage: FC<ReactNode> = () => {
             Projects
             </span>
             <span className="hidden sm:inline-block">
-              &nbsp;&nbsp;<i className="fal fa-code-merge text-teal-100"></i>
+              &nbsp;&nbsp;<i className="fal fa-code-merge text-teal-300"></i>
             </span>
             <span className="block sm:hidden">
               <i className="fal fa-code-branch text-rose-300"></i>&nbsp;&nbsp;<i className="fal fa-code-merge text-teal-300"></i>
