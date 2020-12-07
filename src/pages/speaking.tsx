@@ -3,11 +3,17 @@ import React, { FC, ReactNode } from 'react'
 import Banner from '../components/banner'
 import Layout from '../components/layout'
 import TextLink from '../components/text-link'
+import SEO from '../components/seo'
 
 
 const SpeakingListPage: FC<ReactNode> = () => {
   return (
     <Layout>
+      <SEO
+        metaTitle=""
+        metaDescription=""
+        canonicalUrl=""
+      />
       <Banner
         title={
           <>

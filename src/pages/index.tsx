@@ -5,11 +5,17 @@ import Banner from '../components/banner'
 import ContactForm from '../components/contact-form'
 import Layout from '../components/layout'
 import TextLink from '../components/text-link'
+import SEO from '../components/seo'
 
 
 const HomePage: FC<ReactNode> = () => {
   return (
     <Layout>
+      <SEO
+        metaTitle=""
+        metaDescription=""
+        canonicalUrl=""
+      />
       <Banner
         title={
           <>

@@ -7,6 +7,7 @@ import { encode } from '../utils/utils'
 import Banner from '../components/banner'
 import Button from '../components/button'
 import Layout from '../components/layout'
+import SEO from '../components/seo'
 
 
 const ContactPage: FC = () => {
@@ -53,6 +54,11 @@ const ContactPage: FC = () => {
   }
   return (
     <Layout>
+      <SEO
+        metaTitle=""
+        metaDescription=""
+        canonicalUrl=""
+      />
       <Banner
         title={
           <>
