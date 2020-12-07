@@ -403,6 +403,7 @@ const ContactPage: FC = () => {
                     className="mt-4"
                     title="Submit"
                     type="submit"
+                    disabled={formState.isSubmitting}
                   >
                     Submit
                   </Button>

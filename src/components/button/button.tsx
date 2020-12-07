@@ -10,7 +10,9 @@ export type ButtonProps = {
   action: 'primary' | 'secondary',
   children: ReactNode,
   className?: string,
+  disabled: boolean,
   title: string,
+  type: 'button' | 'submit' | 'reset',
   [other:string]: unknown
 }
 
@@ -88,7 +90,9 @@ const Button: FC<ButtonProps> = ({
   action,
   children,
   className,
+  disabled,
   title,
+  type,
   ...other
 }: ButtonProps) => {
 
@@ -103,8 +107,9 @@ const Button: FC<ButtonProps> = ({
             ? joinStrings(' ', primary, className)
             : joinStrings(' ', secondary, className)
         }
+        disabled={disabled}
         title={title}
-        type='button'
+        type={type}
         {...other}
       >
         {children}
