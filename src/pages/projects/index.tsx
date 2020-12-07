@@ -6,7 +6,7 @@ import TextLink from '../../components/text-link'
 import SEO from '../../components/seo'
 
 
-const ProjectListPage: FC<ReactNode> = () => {
+const ProjectsListPage: FC<ReactNode> = () => {
   return (
     <Layout>
       <SEO
@@ -17,17 +17,17 @@ const ProjectListPage: FC<ReactNode> = () => {
       <Banner
         title={
           <>
-            {/* <span className="hidden sm:inline-block">
-              <i className="fal fa-narwhal text-rose-300"></i>&nbsp;
-            </span> */}
+            <span className="hidden sm:inline-block">
+              <i className="fal fa-code-branch text-rose-300"></i>&nbsp;&nbsp;
+            </span>
             <span className="text-teal-100">
             Projects
             </span>
             <span className="hidden sm:inline-block">
-              &nbsp;&nbsp;<i className="fal fa-comment-edit text-orange-300"></i>
+              &nbsp;&nbsp;<i className="fal fa-code-merge text-teal-300"></i>
             </span>
             <span className="block sm:hidden">
-              <i className="fal fa-comment-edit text-orange-300"></i>
+              <i className="fal fa-code-branch text-rose-300"></i>&nbsp;&nbsp;<i className="fal fa-code-merge text-teal-300"></i>
             </span>
           </>
         }
@@ -42,4 +42,4 @@ const ProjectListPage: FC<ReactNode> = () => {
   )
 }
 
-export default ProjectListPage
+export default ProjectsListPage

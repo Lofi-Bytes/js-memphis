@@ -34,8 +34,16 @@ const Footer: FC<ReactNode> = ({}: ReactNode) => {
             </a>
           </div>
         </div>
+        <p className="text-teal-100 text-center text-sm sm:hidden pb-6 px-6 pt-4">
+          Material &amp; content copyright &copy; {new Date().getFullYear()} Jillian Serenity. All rights reserved.
+        </p>
         <FooterNavigation />
       </footer>
+      <div className="w-full bg-indigo-700 bg-opacity-70 pb-2 hidden sm:block">
+        <p className="text-teal-100 text-center text-sm">
+          Material &amp; content copyright &copy; {new Date().getFullYear()} Jillian Serenity. All rights reserved.
+        </p>
+      </div>
       <MobileNavigation />
     </React.Fragment>
   )

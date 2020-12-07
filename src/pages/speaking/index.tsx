@@ -24,10 +24,10 @@ const SpeakingListPage: FC<ReactNode> = () => {
             Speaking
             </span>
             <span className="hidden sm:inline-block">
-              &nbsp;&nbsp;<i className="fal fa-comment-edit text-orange-300"></i>
+              &nbsp;&nbsp;<i className="fal fa-podium-star text-emerald-300"></i>
             </span>
             <span className="block sm:hidden">
-              <i className="fal fa-comment-edit text-orange-300"></i>
+              <i className="fal fa-podium-star text-emerald-300"></i>
             </span>
           </>
         }
