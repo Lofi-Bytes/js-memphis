@@ -1,12 +1,12 @@
 import React, { FC, ReactNode } from 'react'
 
-import Banner from '../components/banner'
-import Layout from '../components/layout'
-import TextLink from '../components/text-link'
-import SEO from '../components/seo'
+import Banner from '../../components/banner'
+import Layout from '../../components/layout'
+import TextLink from '../../components/text-link'
+import SEO from '../../components/seo'
 
 
-const WritingListPage: FC<ReactNode> = () => {
+const ProjectListPage: FC<ReactNode> = () => {
   return (
     <Layout>
       <SEO
@@ -21,7 +21,7 @@ const WritingListPage: FC<ReactNode> = () => {
               <i className="fal fa-narwhal text-rose-300"></i>&nbsp;
             </span> */}
             <span className="text-teal-100">
-            Writing
+            Projects
             </span>
             <span className="hidden sm:inline-block">
               &nbsp;&nbsp;<i className="fal fa-comment-edit text-orange-300"></i>
@@ -42,4 +42,4 @@ const WritingListPage: FC<ReactNode> = () => {
   )
 }
 
-export default WritingListPage
+export default ProjectListPage
