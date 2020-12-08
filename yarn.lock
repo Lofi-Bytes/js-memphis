@@ -5962,6 +5962,11 @@ font-proxima-nova@^1.0.1:
   resolved "https://registry.yarnpkg.com/font-proxima-nova/-/font-proxima-nova-1.0.1.tgz#0e3c72655da643668a5ce54e3a2dad7e32915426"
   integrity sha512-2KJ9QIg2ZhroIWVGS/dQqGFftwbpC2JqZErre4ALz0ZsHpA5S0cmL6GlLVCds4umfCtIyVSzMbXWZMvl8c9w5g==
 
+fontsource-lora@^3.0.5:
+  version "3.0.5"
+  resolved "https://registry.yarnpkg.com/fontsource-lora/-/fontsource-lora-3.0.5.tgz#883ba1b49d61f76e03aec4fd96b21d370fbfb57d"
+  integrity sha512-MYTngSDt4VtVatu4ewDCqBerwXBTOPPH9MWPI3Ps1XCsw3V2/4fl+DUD2AfdWxeCnuTxUSBspYAV+y7WuMQ+cg==
+
 for-in@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/for-in/-/for-in-1.0.2.tgz#81068d295a8142ec0ac726c6e2200c30fb6d5e80"

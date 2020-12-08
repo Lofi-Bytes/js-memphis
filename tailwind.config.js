@@ -43,8 +43,14 @@ module.exports = {
       borderWidth: ['hover', 'focus'],
       boxShadow: ['active'],
       cursor: ['hover', 'focus'],
+      ringColor: ['hover'],
+      ringOffsetColor: ['hover'],
+      ringOffsetWidth: ['hover'],
+      ringOpacity: ['hover'],
+      ringWidth: ['hover'],
       textColor: ['active'],
       transitionProperty: ['hover', 'focus'],
+      translate: ['active']
     },
   },
   plugins: [

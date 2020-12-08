@@ -1,14 +1,30 @@
 [
   {
     "title": "Test Post 1",
-    "path": "/writing/"
+    "path": "/writing/test-1",
+    "excerpt": "I'm baby pop-up photo booth cardigan mumblecore tattooed quinoa. Bitters sartorial cold-pressed next level umami trust fund organic sustainable photo booth raclette.",
+    "date": "Feb. 24th, 2020",
+    "tags": [
+      "JavaScript",
+      "Jamstack"
+    ]
   },
   {
     "title": "Test Post 2",
-    "path": "/writing/"
+    "path": "/writing/test-2",
+    "excerpt": "Tattooed waistcoat echo park, quinoa farm-to-table vice literally vegan 8-bit meggings subway tile edison bulb. Echo park hexagon paleo disrupt glossier shoreditch celiac dreamcatcher.",
+    "date": "May 9th, 2020",
+    "tags": [
+      "LGBTQ+"
+    ]
   },
   {
     "title": "Test Post 3",
-    "path": "/writing/"
+    "path": "/writing/test-3",
+    "excerpt": "Tilde la croix tote bag tacos banjo roof party freegan truffaut before they sold out forage sustainable. Tilde direct trade affogato salvia, plaid unicorn palo santo meh +1 paleo four dollar toast street art. Kombucha poutine yr locavore.",
+    "date": "Oct 31, 2020",
+    "tags": [
+      "Design Systems"
+    ]
   }
 ]

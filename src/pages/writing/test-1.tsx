@@ -6,7 +6,7 @@ import TextLink from '../../components/text-link'
 import SEO from '../../components/seo'
 
 
-const FirstWritingTestPage: FC<ReactNode> = () => {
+const FirstPostTestPage: FC<ReactNode> = () => {
   return (
     <Layout>
       <SEO
@@ -42,4 +42,4 @@ const FirstWritingTestPage: FC<ReactNode> = () => {
   )
 }
 
-export default FirstWritingTestPage
+export default FirstPostTestPage
