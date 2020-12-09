@@ -50,7 +50,7 @@ const WritingPostListPage: FC<ReactNode> = () => {
         // subTitle={<span className="text-teal-100">Designer, Full Stack Developer, &amp; Tech Lead</span>}
       />
       <main className="min-h-screen max-w-screen-lg m-auto mb-20">
-        <section className="bg-gray-100 rounded-xl p-8 pt-10 w-11/12 sm:w-2/3 mx-auto -mt-12 mb-8 sm:mb-10 shadow-xl relative">
+        <section className="bg-gray-100 rounded-xl p-8 pt-10 w-11/12 sm:w-3/4 mx-auto -mt-12 mb-8 sm:mb-10 shadow-xl relative">
           {
             postListData.allPostsJson.edges.map((edge, index) => {
               const path = edge.node.path
@@ -62,7 +62,7 @@ const WritingPostListPage: FC<ReactNode> = () => {
                 <React.Fragment key={`item-${index}`}>
                   <Link
                     to={path}
-                    className="block overflow-hidden transition shadow-lg hover:shadow-xl focus:shadow-xl active:shadow-sm duration-200 rounded-lg bg-violet-100 focus:bg-violet-50 focus:outline-none focus:ring-4  focus:ring-violet-200 focus:ring-opacity-50 border-0 border-l-4 border-violet-300 hover:border-violet-400 focus:border-violet-500 transform focus:-translate-y-0.5 hover:-translate-y-0.5 active:translate-y-0.5 ease-in-out px-8 py-6 mb-8"
+                    className="block overflow-hidden transition shadow-lg hover:shadow-xl focus:shadow-xl active:shadow-sm duration-200 rounded-lg bg-violet-100 focus:bg-violet-50 focus:outline-none focus:ring-4  focus:ring-violet-200 focus:ring-opacity-50 border-0 border-l-4 border-violet-300 hover:border-violet-400 focus:border-violet-500 transform focus:-translate-y-0.5 hover:-translate-y-0.5 active:translate-y-0.5 ease-in-out group px-8 py-6 mb-8"
                   >
                     <h2 className="tracking-wider text-gray-800 text-xl">
                       {title}
@@ -79,8 +79,8 @@ const WritingPostListPage: FC<ReactNode> = () => {
                           console.log(tag)
                           if (tag === "JavaScript") {
                             return (
-                              <div className="rounded-full bg-rose-100 shadow w-max py-1 px-3 mr-3">
-                                <p className="text-sm tracking-wider text-rose-800">
+                              <div className="rounded-full bg-violet-50 shadow group-focus:bg-violet-100 transition ease-in-out w-max py-1 px-3 mr-3">
+                                <p className="text-sm tracking-widert text-violet-500">
                                   {tag}
                                 </p>
                               </div>
@@ -88,8 +88,8 @@ const WritingPostListPage: FC<ReactNode> = () => {
                           }
                           if (tag === "Jamstack") {
                             return (
-                              <div className="rounded-full bg-orange-100 shadow w-max py-1 px-3 mr-3">
-                                <p className="text-sm tracking-wider text-orange-800">
+                              <div className="rounded-full bg-violet-50 shadow group-focus:bg-violet-100 transition ease-in-out w-max py-1 px-3 mr-3">
+                                <p className="text-sm tracking-widert text-violet-500">
                                   {tag}
                                 </p>
                               </div>
@@ -97,8 +97,8 @@ const WritingPostListPage: FC<ReactNode> = () => {
                           }
                           if (tag === "LGBTQ+") {
                             return (
-                              <div className="rounded-full bg-emerald-100 shadow w-max py-1 px-3 mr-3">
-                                <p className="text-sm tracking-wider text-emerald-800">
+                              <div className="rounded-full bg-violet-50 shadow group-focus:bg-violet-100 transition ease-in-out w-max py-1 px-3 mr-3">
+                                <p className="text-sm tracking-widert text-violet-500">
                                   {tag}
                                 </p>
                               </div>
@@ -106,8 +106,8 @@ const WritingPostListPage: FC<ReactNode> = () => {
                           }
                           if (tag === "Design Systems") {
                             return (
-                              <div className="rounded-full bg-lightBlue-100 shadow w-max py-1 px-3 mr-3">
-                                <p className="text-sm tracking-wider text-lightBlue-800">
+                              <div className="rounded-full bg-violet-50 shadow group-focus:bg-violet-100 transition ease-in-out w-max py-1 px-3 mr-3">
+                                <p className="text-sm tracking-widert text-violet-500">
                                   {tag}
                                 </p>
                               </div>

@@ -16,6 +16,19 @@ html {
   font-family: 'stay_classy_sldtregular';
 }
 
+/* .rainbow {
+  background: -webkit-linear-gradient(left,red, orange, yellow, green, cyan, violet);
+  background: -o-linear-gradient(right,red, orange, yellow, green, cyan, violet);
+  background: -moz-linear-gradient(right,red, orange, yellow, green, cyan, violet);
+  background: linear-gradient(to right,red, orange, yellow, green, cyan, violet);
+  -webkit-background-clip: text;
+  -o-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+} */
+
 /*!
 * Create the canvas to draw on (is *not* HTML Canvas)
 */
