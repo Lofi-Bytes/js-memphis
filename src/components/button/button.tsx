@@ -69,12 +69,10 @@ const PRIMARY: string = `
   focus:ring-offset-purple-700
   focus:ring-purple-200
   focus:ring-opacity-75
-  focus:bg-purple-200
 
   hover:ring-offset-purple-700
   hover:ring-purple-200
   hover:ring-opacity-75
-  hover:bg-purple-200
 
   transform
   hover:-translate-y-0.5
