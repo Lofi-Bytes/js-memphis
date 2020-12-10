@@ -73,8 +73,11 @@ const HomePage: FC<ReactNode> = () => {
           </p>
         </section>
 
-        <section className="bg-gray-100 rounded-xl p-8 pb-10 w-11/12 sm:w-2/3 mx-auto shadow-xl z-10 relative">
-          <ContactForm />
+        <section className="bg-gray-100 rounded-xl p-8 pb-10 w-11/12 sm:w-3/4 mx-auto shadow-xl z-10 relative">
+          <h2 className="text-gray-800 text-2xl tracking-wide">Say Hello</h2>
+          <div className="w-3/4 mx-auto">
+            <ContactForm />
+          </div>
         </section>
       </main>
     </Layout>

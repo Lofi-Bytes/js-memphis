@@ -46,7 +46,7 @@ const SpeakingListPage: FC<ReactNode> = () => {
         // subTitle={<span className="text-teal-100">Designer, Full Stack Developer, &amp; Tech Lead</span>}
       />
       <main className="min-h-screen max-w-screen-lg m-auto mb-20">
-        <section className="bg-gray-100 rounded-xl p-8 w-11/12 sm:w-3/4 mx-auto -mt-12 mb-8 sm:mb-10 shadow-xl relative">
+        <section className="bg-gray-100 rounded-xl p-8 pt-10 w-11/12 sm:w-3/4 mx-auto -mt-12 mb-8 sm:mb-10 shadow-xl relative">
           {
             talkListData.allTalksJson.edges.map((edge, index) => {
               const path = edge.node.path

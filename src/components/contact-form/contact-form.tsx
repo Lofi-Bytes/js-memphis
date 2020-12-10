@@ -57,7 +57,6 @@ const ContactForm: FC = ({}) => {
   }
   return (
     <React.Fragment>
-      <h2 className="text-gray-800 text-2xl tracking-wide">Say Hello</h2>
 
       {successMsg &&
         <div role="alert" className="h-96 mt-8 flex flex-col items-center justify-center p-6 bg-gray-200 rounded-lg text-gray-600 text-lg w-full shadow-md">
