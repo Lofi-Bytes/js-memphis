@@ -1,12 +1,26 @@
-import React, { FC, ReactNode } from 'react'
+import React, { FC, ReactNode, useEffect } from 'react'
 
 import Banner from '../../components/banner'
 import Layout from '../../components/layout'
 import TextLink from '../../components/text-link'
+import Section from '../../components/section'
 import SEO from '../../components/seo'
+import Main from '../../components/main'
 
+import Prism from 'prismjs'
+
+
+const code =
+`export function randomIntFromInterval(min, max) { // min and max included
+  return Math.floor(Math.random() * (max - min + 1) + min);
+}`
 
 const FirstPostTestPage: FC<ReactNode> = () => {
+  useEffect(() => {
+    // call the highlightAll() function to style our code blocks
+    Prism.highlightAll()
+  })
+
   return (
     <Layout>
       <SEO
@@ -33,11 +47,15 @@ const FirstPostTestPage: FC<ReactNode> = () => {
         }
         // subTitle={<span className="text-teal-100">Designer, Full Stack Developer, &amp; Tech Lead</span>}
       />
-      <main className="min-h-screen max-w-screen-lg m-auto mb-20">
-        <section className="bg-gray-100 rounded-xl p-8 w-11/12 sm:w-2/3 mx-auto -mt-12 mb-8 sm:mb-10 shadow-xl relative">
-
-        </section>
-      </main>
+      <Main>
+        <Section>
+          <div className="code-container">
+            <pre className="line-numbers py-6">
+              <code className="language-javascript">{code}</code>
+            </pre>
+          </div>
+        </Section>
+      </Main>
     </Layout>
   )
 }

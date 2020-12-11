@@ -7,7 +7,10 @@ import { encode } from '../utils/utils'
 import Banner from '../components/banner'
 import Button from '../components/button'
 import Layout from '../components/layout'
+import TextLink from '../components/text-link'
+import Section from '../components/section'
 import SEO from '../components/seo'
+import Main from '../components/main'
 
 
 const ContactPage: FC = () => {
@@ -78,8 +81,8 @@ const ContactPage: FC = () => {
         }
         // subTitle={<span className="text-teal-100">Designer, Full Stack Developer, &amp; Tech Lead</span>}
       />
-      <main className="min-h-screen max-w-screen-lg m-auto mb-20">
-        <section className="bg-gray-100 rounded-xl p-8 pb-10 w-11/12 sm:w-2/3 mx-auto -mt-12 shadow-xl z-10 relative">
+      <Main>
+        <Section>
           <React.Fragment>
 
             {successMsg &&
@@ -417,8 +420,8 @@ const ContactPage: FC = () => {
               </form>
             }
           </React.Fragment>
-        </section>
-      </main>
+        </Section>
+      </Main>
     </Layout>
   )
 }

@@ -5,7 +5,9 @@ import Banner from '../components/banner'
 import ContactForm from '../components/contact-form'
 import Layout from '../components/layout'
 import TextLink from '../components/text-link'
+import Section from '../components/section'
 import SEO from '../components/seo'
+import Main from '../components/main'
 
 
 const HomePage: FC<ReactNode> = () => {
@@ -33,10 +35,10 @@ const HomePage: FC<ReactNode> = () => {
             </span>
           </>
         }
-        subTitle={<span className="text-teal-100">Designer, Full Stack Developer, &amp; Tech Lead</span>}
+        subTitle={<span className="text-teal-100">Designer, Developer, &amp; Tech Lead</span>}
       />
-      <main className="min-h-screen max-w-screen-lg m-auto mb-20">
-        <section className="bg-gray-100 rounded-xl p-8 w-11/12 sm:w-3/4 mx-auto -mt-12 mb-8 sm:mb-10 shadow-xl relative">
+      <Main>
+        <Section>
           <Avatar />
           <h2 className="text-gray-800 text-2xl mt-6 tracking-wide">About Me</h2>
           <p className="text-gray-600 tracking-wider leading-relaxed mt-3">
@@ -71,15 +73,15 @@ const HomePage: FC<ReactNode> = () => {
           <p className="text-gray-600 tracking-wider leading-relaxed mt-3">
             In my free time I enjoy adventuring in my van (<TextLink href="https://www.instagram.com/explore/tags/vanlife/?hl=en" external={true}>#vanlife</TextLink>), spending time with my dog, practicing yoga, mountain biking, and reading.
           </p>
-        </section>
+        </Section>
 
-        <section className="bg-gray-100 rounded-xl p-8 pb-10 w-11/12 sm:w-3/4 mx-auto shadow-xl z-10 relative">
+        <Section>
           <h2 className="text-gray-800 text-2xl tracking-wide">Say Hello</h2>
           <div className="w-3/4 mx-auto">
             <ContactForm />
           </div>
-        </section>
-      </main>
+        </Section>
+      </Main>
     </Layout>
   )
 }

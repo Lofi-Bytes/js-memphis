@@ -7,7 +7,7 @@ import Navigation from '../navigation'
 const Header: FC<ReactNode> = ({}: ReactNode) => {
   return (
     <React.Fragment>
-      <header className="bg-indigo-400 bg-opacity-40 w-full py-6 px-8">
+      <header className="bg-indigo-700 bg-opacity-30 w-full py-6 px-8">
         <div className="flex items-center justify-between max-w-screen-lg m-auto z-5">
           <Link
             to="/"
