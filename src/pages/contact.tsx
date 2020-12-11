@@ -82,7 +82,7 @@ const ContactPage: FC = () => {
         // subTitle={<span className="text-teal-100">Designer, Full Stack Developer, &amp; Tech Lead</span>}
       />
       <Main>
-        <Section>
+        <Section className="-mt-12 mb-8">
           <React.Fragment>
 
             {successMsg &&

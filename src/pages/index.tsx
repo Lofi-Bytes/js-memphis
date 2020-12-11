@@ -38,7 +38,7 @@ const HomePage: FC<ReactNode> = () => {
         subTitle={<span className="text-teal-100">Designer, Developer, &amp; Tech Lead</span>}
       />
       <Main>
-        <Section>
+        <Section className="-mt-12 mb-8">
           <Avatar />
           <h2 className="text-gray-800 text-2xl mt-6 tracking-wide">About Me</h2>
           <p className="text-gray-600 tracking-wider leading-relaxed mt-3">

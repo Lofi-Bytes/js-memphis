@@ -49,7 +49,7 @@ const WritingPostListPage: FC<ReactNode> = () => {
         // subTitle={<span className="text-teal-100">Designer, Full Stack Developer, &amp; Tech Lead</span>}
       />
       <Main>
-        <Section>
+        <Section className="-mt-12 mb-8">
           {
             postListData.allPostsJson.edges.map((edge, index) => {
               const path = edge.node.path
