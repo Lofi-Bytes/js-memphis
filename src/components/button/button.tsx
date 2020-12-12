@@ -1,4 +1,5 @@
 import React, { FC, ReactNode } from 'react'
+import { Link } from 'gatsby'
 
 import {
   formatClassList,
@@ -12,6 +13,7 @@ export type ButtonProps = {
   className?: string,
   disabled: boolean,
   title: string,
+  to: string,
   type: 'button' | 'submit' | 'reset',
   [other:string]: unknown
 }
@@ -19,8 +21,14 @@ export type ButtonProps = {
 const BTN: string = `
   font-normal
   font-sans
+
+  outline-none
   focus:outline-none
+  hover:outline-none
+  active:outline-none
+
   overflow-hidden
+  text-center
   tracking-wide
   transition
 `
@@ -29,10 +37,19 @@ const PRIMARY_BASE: string = `
   ${BTN}
   active:shadow-sm
   duration-200
+
+  ring-1
+  ring-offset-1
+
   focus:ring-1
   focus:ring-offset-1
+
   hover:ring-1
   hover:ring-offset-1
+
+  active:ring-1
+  active:ring-offset-1
+
   px-6
   py-2
   rounded-full
@@ -66,6 +83,10 @@ const PRIMARY: string = `
   text-purple-900
   font-medium
 
+  ring-offset-purple-300
+  ring-purple-200
+  ring-opacity-75
+
   focus:ring-offset-purple-700
   focus:ring-purple-200
   focus:ring-opacity-75
@@ -73,6 +94,10 @@ const PRIMARY: string = `
   hover:ring-offset-purple-700
   hover:ring-purple-200
   hover:ring-opacity-75
+
+  active:ring-offset-purple-700
+  active:ring-purple-200
+  active:ring-opacity-75
 
   transform
   hover:-translate-y-0.5
@@ -103,6 +128,7 @@ const Button: FC<ButtonProps> = ({
   className,
   disabled,
   title,
+  to,
   type,
   ...other
 }: ButtonProps) => {
@@ -112,20 +138,39 @@ const Button: FC<ButtonProps> = ({
 
   return (
     <React.Fragment>
-      <button
-        className={
-          action === 'primary'
-            ? joinStrings(' ', primary, className)
-            : primary
-            // : joinStrings(' ', secondary, className)
-        }
-        disabled={disabled}
-        title={title}
-        type={type}
-        {...other}
-      >
-        {children}
-      </button>
+      {
+        to
+          ?
+            <Link
+              className={
+                action === 'primary'
+                  ? joinStrings(' ', primary, className)
+                  : primary
+                  // : joinStrings(' ', secondary, className)
+              }
+              role="button"
+              title={title}
+              to={to}
+              type={type}
+              {...other}
+            >
+              {children}
+            </Link>
+          :
+            <button
+              className={
+                action === 'primary'
+                  ? joinStrings(' ', primary, className)
+                  : primary
+                  // : joinStrings(' ', secondary, className)
+              }
+              title={title}
+              type={type}
+              {...other}
+            >
+              {children}
+            </button>
+      }
     </React.Fragment>
   )
 }

@@ -21,7 +21,7 @@ const HomePage: FC<ReactNode> = () => {
         canonicalUrl=""
       />
       <Banner
-        title={<span className="js text-5xl leading-relaxed lg:text-6xl lg:leading-loose">Jillian Serenity</span>}
+        title={<span className="js text-5xl leading-relaxed md:text-6xl md:leading-loose lg:text-7xl lg:leading-relaxed">Jillian Serenity</span>}
         subTitle={
           <>
             <span className="hidden sm:inline-block">
@@ -86,19 +86,16 @@ const HomePage: FC<ReactNode> = () => {
           <div
             className="mx-auto mt-8 w-full md:w-3/4"
           >
-            <Link
+            <Button
+              action="primary"
+              className="w-full"
+              disabled={false}
+              title="Submit"
               to="/about"
+              type="submit"
             >
-              <Button
-                action="primary"
-                className="w-full"
-                disabled={false}
-                title="Submit"
-                type="submit"
-              >
-                Learn more about me
-              </Button>
-            </Link>
+              Learn more about me
+            </Button>
           </div>
         </Section>
 
