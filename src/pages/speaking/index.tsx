@@ -35,14 +35,14 @@ const SpeakingListPage: FC<ReactNode> = () => {
       <Banner
         title={
           <>
-            <span className="text-teal-100">
+            <span>
             Speaking Engagements
             </span>
             <span className="hidden sm:inline-block">
-              &nbsp;&nbsp;<i className="fal fa-podium-star text-emerald-300"></i>
+              &nbsp;&nbsp;<i className="fal fa-podium-star text-rose-300"></i>
             </span>
-            <span className="block sm:hidden">
-              <i className="fal fa-podium-star text-emerald-300"></i>
+            <span className="block sm:hidden mt-3">
+              <i className="fal fa-podium-star text-rose-300"></i>
             </span>
           </>
         }

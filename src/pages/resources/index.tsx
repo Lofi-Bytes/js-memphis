@@ -36,16 +36,16 @@ const ProjectsListPage: FC<ReactNode> = () => {
         title={
           <>
             <span className="hidden sm:inline-block">
-              <i className="fal fa-code-branch text-amber-300"></i>&nbsp;&nbsp;
+              <i className="fal fa-gem text-fuchsia-300"></i>&nbsp;&nbsp;
             </span>
-            <span className="text-teal-100">
-            Projects
+            <span>
+            Resources
             </span>
             <span className="hidden sm:inline-block">
-              &nbsp;&nbsp;<i className="fal fa-code-merge text-teal-300"></i>
+              &nbsp;&nbsp;<i className="fal fa-gem text-lime-300"></i>
             </span>
-            <span className="block sm:hidden">
-              <i className="fal fa-code-branch text-amber-300"></i>&nbsp;&nbsp;<i className="fal fa-code-merge text-teal-300"></i>
+            <span className="block sm:hidden mt-3">
+              <i className="fal fa-gem text-fuchsia-300"></i>&nbsp;&nbsp;<i className="fal fa-gem text-lime-300"></i>
             </span>
           </>
         }

@@ -35,13 +35,13 @@ const WritingPostListPage: FC<ReactNode> = () => {
       <Banner
         title={
           <>
-            <span className="text-teal-100">
+            <span>
             Writing
             </span>
             <span className="hidden sm:inline-block">
               &nbsp;&nbsp;<i className="fal fa-comment-edit text-orange-300"></i>
             </span>
-            <span className="block sm:hidden">
+            <span className="block sm:hidden mt-3">
               <i className="fal fa-comment-edit text-orange-300"></i>
             </span>
           </>
@@ -76,7 +76,7 @@ const WritingPostListPage: FC<ReactNode> = () => {
                       {
                         tags.map((tag, index) => {
                           return (
-                            <div className="rounded-full bg-violet-50 shadow group-focus:bg-violet-100 transition ease-in-out w-max py-1 px-3 mr-3">
+                            <div className="rounded-full bg-violet-50 shadow group-focus:bg-violet-100 transition ease-in-out w-max py-1 px-3 mr-3 mb-2">
                               <p className="text-sm tracking-widert text-violet-700">
                                 {tag}
                               </p>
