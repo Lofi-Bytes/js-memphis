@@ -16,7 +16,7 @@ const STYLES = `
   rounded-xl
   p-8
   w-11/12
-  sm:w-3/4
+  md:w-3/4
   mx-auto
   sm:mb-10
   shadow-xl
