@@ -2,8 +2,8 @@ module.exports = {
   siteMetadata: {
     title: `Jillian Serenity - Designer, Full Stack Developer, & Tech Lead`,
     description: `Lead Developer; Educational Technology and Web Applications @ BSCS Science Learning`,
-    author: `Jillian Serenity`,
-    siteUrl: `https://jillianserenity.dev/`,
+    author: `Jillian S. Estrella`,
+    siteUrl: `https://jillian.dev/`,
   },
   plugins: [
     `gatsby-plugin-postcss`,
@@ -38,8 +38,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-robots-txt`,
       options: {
-        host: `https://jillianserenity.dev`,
-        sitemap: `https://jillianserenity.dev/sitemap.xml`,
+        host: `https://jillian.dev`,
+        sitemap: `https://jillian.dev/sitemap.xml`,
         policy: [{ userAgent: `*`, allow: `/` }]
       }
     },
