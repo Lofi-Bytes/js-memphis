@@ -19,9 +19,6 @@ export type ButtonProps = {
 }
 
 const BTN: string = `
-  font-normal
-  font-sans
-
   outline-none
   focus:outline-none
   hover:outline-none
@@ -104,12 +101,7 @@ const PRIMARY: string = `
   focus:-translate-y-0.5
   active:translate-y-0.5
   ease-in-out
-
 `
-  // hover:ring-offset-purple-600
-  // hover:ring-purple-200
-  // hover:ring-opacity-75
-  // hover:bg-purple-200
 
 // const SECONDARY: string = `
 //   ${SECONDARY_BASE}
