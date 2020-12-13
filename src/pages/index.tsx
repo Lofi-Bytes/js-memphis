@@ -92,7 +92,6 @@ const HomePage: FC<ReactNode> = () => {
               disabled={false}
               title="Learn more about me"
               to="/about"
-              type="button"
             >
               Learn more about me
             </Button>

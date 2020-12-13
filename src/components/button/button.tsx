@@ -14,7 +14,7 @@ export type ButtonProps = {
   disabled: boolean,
   title: string,
   to: string,
-  type: 'button' | 'submit' | 'reset',
+  type?: 'button' | 'submit' | 'reset',
   [other:string]: unknown
 }
 
@@ -28,6 +28,8 @@ const BTN: string = `
   text-center
   tracking-wide
   transition
+
+  block
 `
 
 const PRIMARY_BASE: string = `
@@ -143,7 +145,6 @@ const Button: FC<ButtonProps> = ({
               role={type}
               title={title}
               to={to}
-              type={type}
               {...other}
             >
               {children}
