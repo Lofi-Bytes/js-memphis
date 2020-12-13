@@ -148,7 +148,7 @@ const Button: FC<ButtonProps> = ({
                   : primary
                   // : joinStrings(' ', secondary, className)
               }
-              role="button"
+              role={type}
               title={title}
               to={to}
               type={type}

@@ -90,9 +90,9 @@ const HomePage: FC<ReactNode> = () => {
               action="primary"
               className="w-full"
               disabled={false}
-              title="Submit"
+              title="Learn more about me"
               to="/about"
-              type="submit"
+              type="button"
             >
               Learn more about me
             </Button>

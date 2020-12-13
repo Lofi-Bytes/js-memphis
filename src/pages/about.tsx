@@ -64,7 +64,7 @@ const AboutPage: FC<ReactNode> = () => {
               disabled={false}
               title="Submit"
               to="/resume"
-              type="submit"
+              type="button"
             >
               See my resumé
             </Button>
