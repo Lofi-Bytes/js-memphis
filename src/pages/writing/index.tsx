@@ -35,7 +35,7 @@ const WritingPostListPage: FC<ReactNode> = () => {
       <Banner
         title={
           <>
-            <span>
+            <span className="js text-5xl leading-relaxed md:text-6xl md:leading-loose lg:text-7xl lg:leading-relaxed">
             Writing
             </span>
             <span className="hidden sm:inline-block">

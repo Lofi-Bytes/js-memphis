@@ -52,7 +52,7 @@ const AboutPage: FC<ReactNode> = () => {
           </p> */}
 
           <h2 className="text-gray-700 text-xl mt-10 tracking-wide">Education</h2>
-          <div className="d-block sm:flex items-center justify-between border-b border-dotted border-pink-400 mt-3">
+          <div className="d-block sm:flex items-center justify-between border-b border-dotted border-pink-400 mt-3 uppercase">
             <TextLink
               href="https://umich.edu/"
               external={true}
@@ -66,7 +66,7 @@ const AboutPage: FC<ReactNode> = () => {
           </div>
           <div className="flex items-start justify-between mt-4">
             <div>
-              <p>
+              <p className="text-gray-600 tracking-wider leading-relaxed font-serif italic">
                 <TextLink
                   href="https://en.wikipedia.org/wiki/Master_of_Science#United_States"
                   external={true}
@@ -87,7 +87,7 @@ const AboutPage: FC<ReactNode> = () => {
 
           <div className="flex items-start justify-between mt-4">
             <div>
-              <p>
+              <p className="text-gray-600 tracking-wider leading-relaxed font-serif italic">
                 <TextLink
                   href="https://en.wikipedia.org/wiki/Graduate_certificate#United_States"
                   external={true}
@@ -106,7 +106,7 @@ const AboutPage: FC<ReactNode> = () => {
             Emphasis was placed on numerical analysis, algorithms, and computational techniques for solving and analyzing physics and engineering problems.
           </p>
 
-          <div className="d-block sm:flex items-center justify-between border-b border-dotted border-pink-400 mt-8">
+          <div className="d-block sm:flex items-center justify-between border-b border-dotted border-pink-400 mt-8 uppercase">
             <TextLink
               href="https://www.colorado.edu/"
               external={true}
@@ -121,7 +121,7 @@ const AboutPage: FC<ReactNode> = () => {
 
           <div className="flex items-start justify-between mt-4">
             <div>
-              <p>
+              <p className="text-gray-600 tracking-wider leading-relaxed font-serif italic">
                 <TextLink
                   href="https://en.wikipedia.org/wiki/Bachelor%27s_degree"
                   external={true}
@@ -142,7 +142,7 @@ const AboutPage: FC<ReactNode> = () => {
 
           <div className="flex items-start justify-between mt-4">
             <div>
-              <p>
+              <p className="text-gray-600 tracking-wider leading-relaxed font-serif italic">
                 <TextLink
                   href="https://en.wikipedia.org/wiki/Bachelor%27s_degree"
                   external={true}
@@ -160,14 +160,6 @@ const AboutPage: FC<ReactNode> = () => {
           <p className="text-gray-600 tracking-wider leading-relaxed hidden sm:block mt-3 mx-6">
             I studied, in-depth, the current understanding of most astrophysical phenomena such as geophysics, atmospheric & planetary science, stellar structure & evolution, galaxies, neutron stars, and black holes.
           </p>
-
-
-
-
-
-
-
-
 
           <h2 className="text-gray-700 text-xl mt-10 tracking-wide">Extracurricular Interests</h2>
           <p className="text-gray-600 tracking-wider leading-relaxed mt-3">

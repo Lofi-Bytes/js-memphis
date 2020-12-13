@@ -38,7 +38,7 @@ const ProjectsListPage: FC<ReactNode> = () => {
             <span className="hidden sm:inline-block">
               <i className="fal fa-code-branch text-amber-300"></i>&nbsp;&nbsp;
             </span>
-            <span>
+            <span className="js text-5xl leading-relaxed md:text-6xl md:leading-loose lg:text-7xl lg:leading-relaxed">
             Projects
             </span>
             <span className="hidden sm:inline-block">

@@ -53,7 +53,7 @@ const HomePage: FC<ReactNode> = () => {
           <Avatar />
           <h2 className="text-gray-800 text-2xl mt-10 tracking-wide">Jillian S. Estrella <br className="sm:hidden" /><span className="text-gray-500 text-xl">🏳️‍🌈 she/her 🏳️‍⚧️</span></h2>
           <p className="text-gray-500 text-xl tracking-wider leading-relaxed mt-1">
-            UI Designer, Frontend Developer, &amp; Product Manager
+            Front End Systems Designer &amp; Architect
           </p>
           <div className="flex justify-start items-start relative mt-3">
             <div>

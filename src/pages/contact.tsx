@@ -68,8 +68,8 @@ const ContactPage: FC = () => {
             <span className="hidden sm:inline-block">
               <i className="fal fa-paper-plane text-gray-50"></i>&nbsp;
             </span>
-            <span className="text-teal-100">
-            Say Hello
+            <span className="js text-5xl leading-relaxed md:text-6xl md:leading-loose lg:text-7xl lg:leading-relaxed">
+              Send Me a Message
             </span>
             <span className="hidden sm:inline-block">
               &nbsp;<i className="fal fa-mailbox text-gray-50"></i>
