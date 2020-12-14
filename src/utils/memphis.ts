@@ -6,25 +6,25 @@ import {
 /*
   Create the set of solid squares
 */
-export function createSquaresSolid(): any {
-  let height = getDocumentHeight()
+export const createSquaresSolid = (): any => {
+  let height: number = getDocumentHeight()
 
   const colors: string[] = [
     '#FB7185', // rose 400
     '#F472B6', // pink 400
     '#38BDF8' // light blue 400
   ]
-  const canvas = document.getElementById('canvas')
+  const canvas: HTMLElement | null = document.getElementById('canvas')
 
-  const size = randomIntFromInterval(60, 220)
-  const bg = colors[Math.floor(Math.random() * colors.length)]
+  const size: number = randomIntFromInterval(60, 220)
+  const bg: string = colors[Math.floor(Math.random() * colors.length)]
 
-  const outerSquareSolid = document.createElement('div')
+  const outerSquareSolid: HTMLElement = document.createElement('div')
   outerSquareSolid.classList.add('outer-square-solid')
   outerSquareSolid.style.width = size + 'px'
   outerSquareSolid.style.height = size + 'px'
 
-  const innerSquareSolid = document.createElement('div')
+  const innerSquareSolid: HTMLElement = document.createElement('div')
   innerSquareSolid.classList.add('inner-square-solid')
   innerSquareSolid.style.width = size + 'px'
   innerSquareSolid.style.height = size + 'px'
@@ -39,24 +39,24 @@ export function createSquaresSolid(): any {
 /*
   Create the set of outline squares
 */
-export function createSquaresOutline(): any {
-  let height = getDocumentHeight()
+export const createSquaresOutline = (): any => {
+  let height: number = getDocumentHeight()
 
   const colors: string[] = [
     '#5EEAD4', // teal 300
     '#FAFAF9' // warm gray 50
   ]
-  const canvas = document.getElementById('canvas')
+  const canvas: HTMLElement | null = document.getElementById('canvas')
 
-  const size = randomIntFromInterval(20, 120)
-  const bg = colors[Math.floor(Math.random() * colors.length)]
+  const size: number = randomIntFromInterval(20, 120)
+  const bg: string = colors[Math.floor(Math.random() * colors.length)]
 
-  const outerSquareOutline = document.createElement('div')
+  const outerSquareOutline: HTMLElement = document.createElement('div')
   outerSquareOutline.classList.add('outer-square-outline')
   outerSquareOutline.style.width = size + 'px'
   outerSquareOutline.style.height = size + 'px'
 
-  const innerSquareOutline = document.createElement('div')
+  const innerSquareOutline: HTMLElement = document.createElement('div')
   innerSquareOutline.classList.add('inner-square-outline')
   innerSquareOutline.style.width = size + 'px'
   innerSquareOutline.style.height = size + 'px'
@@ -70,23 +70,23 @@ export function createSquaresOutline(): any {
 /*
   Create the set of triangles
 */
-export function createTriangles(): any {
-  let height = getDocumentHeight()
+export const createTriangles = (): any => {
+  let height: number = getDocumentHeight()
 
   const colors: string[] = [
     '#A78BFA', // violet 400
     '#38BDF8', // light blue 400
   ]
-  const canvas = document.getElementById('canvas')
+  const canvas: HTMLElement | null = document.getElementById('canvas')
 
-  const size = randomIntFromInterval(40, 100)
-  const bg = colors[Math.floor(Math.random() * colors.length)]
+  const size: number = randomIntFromInterval(40, 100)
+  const bg: string = colors[Math.floor(Math.random() * colors.length)]
 
-  const outerTriangle = document.createElement('div')
+  const outerTriangle: HTMLElement = document.createElement('div')
   outerTriangle.classList.add('outer-triangle')
   outerTriangle.style.fontSize = size + 'px'
 
-  const innerTriangle = document.createElement('i')
+  const innerTriangle: HTMLElement = document.createElement('i')
   innerTriangle.classList.add(`inner-triangle`, `fal`, `fa-triangle`)
   innerTriangle.style.fontSize = size + 'px'
   innerTriangle.style.top = randomIntFromInterval(0, height).toString() + 'px'
@@ -99,23 +99,23 @@ export function createTriangles(): any {
 /*
   Create the set of bolts
 */
-export function createBolts(): any {
-  let height = getDocumentHeight()
+export const createBolts = (): any => {
+  let height: number = getDocumentHeight()
 
   const colors: string[] = [
     '#FEF08A', // yellow 200
     '#67E8F9', // cyan 300
   ]
-  const canvas = document.getElementById('canvas')
+  const canvas: HTMLElement | null = document.getElementById('canvas')
 
-  const size = randomIntFromInterval(40, 80)
-  const bg = colors[Math.floor(Math.random() * colors.length)]
+  const size: number = randomIntFromInterval(40, 80)
+  const bg: string = colors[Math.floor(Math.random() * colors.length)]
 
-  const outerBolt = document.createElement('div')
+  const outerBolt: HTMLElement = document.createElement('div')
   outerBolt.classList.add('outer-bolt')
   outerBolt.style.fontSize = size + 'px'
 
-  const innerBolt = document.createElement('i')
+  const innerBolt: HTMLElement = document.createElement('i')
   innerBolt.classList.add(`inner-bolt`, `fal`, `fa-bolt`)
   innerBolt.style.fontSize = size + 'px'
   innerBolt.style.top = randomIntFromInterval(0, height).toString() + 'px'
@@ -129,23 +129,23 @@ export function createBolts(): any {
 /*
   Create the set of wave triangle
 */
-export function createWave(): any {
-  let height = getDocumentHeight()
+export const createWave = (): any => {
+  let height: number = getDocumentHeight()
 
   const colors: string[] = [
     // '#F472B6' // pink 400
     '#1C1917'
   ]
-  const canvas = document.getElementById('canvas')
+  const canvas: HTMLElement | null = document.getElementById('canvas')
 
-  const size = randomIntFromInterval(20, 60)
-  const bg = colors[Math.floor(Math.random() * colors.length)]
+  const size: number = randomIntFromInterval(20, 60)
+  const bg: string = colors[Math.floor(Math.random() * colors.length)]
 
-  const outerWave = document.createElement('div')
+  const outerWave: HTMLElement = document.createElement('div')
   outerWave.classList.add('outer-wave')
   outerWave.style.fontSize = size + 'px'
 
-  const innerWave = document.createElement('i')
+  const innerWave: HTMLElement = document.createElement('i')
   innerWave.classList.add(`inner-wave`, `fal`, `fa-water`)
   innerWave.style.fontSize = size + 'px'
   innerWave.style.top = randomIntFromInterval(0, height).toString() + 'px'
