@@ -1,12 +1,10 @@
 import React, { FC, ReactNode } from 'react'
-import { Link } from 'gatsby'
 
 import Avatar from '../components/avatar'
 import Banner from '../components/banner'
 import Button from '../components/button'
 import ContactForm from '../components/contact-form'
 import Layout from '../components/layout'
-import TextLink from '../components/text-link'
 import Section from '../components/section'
 import SEO from '../components/seo'
 import Main from '../components/main'
@@ -39,12 +37,6 @@ const HomePage: FC<ReactNode> = () => {
             <span className="block sm:hidden">
               <i className="fal fa-narwhal text-rose-300"></i>&nbsp;&nbsp;<i className="fal fa-alien-monster text-teal-300"></i>
             </span>
-            {/* <span
-              className="bg-gradient-to-r text-transparent bg-clip-text from-pink-200 via-fuchsia-200 to-blue-200 absolute right-48 top-48"
-              style={{color: 'transparent'}}
-            >
-              she/her
-            </span> */}
           </>
         }
       />

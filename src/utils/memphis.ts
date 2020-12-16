@@ -6,40 +6,40 @@ import {
 /*
   Create the set of solid squares
 */
-export const createSquaresSolid = (): any => {
-  let height: number = getDocumentHeight()
+// export const createSquaresSolid = () => {
+//   let height: number = getDocumentHeight()
 
-  const colors: string[] = [
-    '#FB7185', // rose 400
-    '#F472B6', // pink 400
-    '#38BDF8' // light blue 400
-  ]
-  const canvas: HTMLElement | null = document.getElementById('canvas')
+//   const colors: string[] = [
+//     '#FB7185', // rose 400
+//     '#F472B6', // pink 400
+//     '#38BDF8' // lightBlue 400
+//   ]
+//   const canvas: HTMLElement | null = document.getElementById('canvas')
 
-  const size: number = randomIntFromInterval(60, 220)
-  const bg: string = colors[Math.floor(Math.random() * colors.length)]
+//   const size: number = randomIntFromInterval(60, 220)
+//   const bg: string = colors[Math.floor(Math.random() * colors.length)]
 
-  const outerSquareSolid: HTMLElement = document.createElement('div')
-  outerSquareSolid.classList.add('outer-square-solid')
-  outerSquareSolid.style.width = size + 'px'
-  outerSquareSolid.style.height = size + 'px'
+//   const outerSquareSolid: HTMLElement = document.createElement('div')
+//   outerSquareSolid.classList.add('outer-square-solid')
+//   outerSquareSolid.style.width = size + 'px'
+//   outerSquareSolid.style.height = size + 'px'
 
-  const innerSquareSolid: HTMLElement = document.createElement('div')
-  innerSquareSolid.classList.add('inner-square-solid')
-  innerSquareSolid.style.width = size + 'px'
-  innerSquareSolid.style.height = size + 'px'
-  innerSquareSolid.style.top = randomIntFromInterval(0, height).toString() + 'px'
-  innerSquareSolid.style.left = randomIntFromInterval(0, innerWidth).toString() + 'px'
-  innerSquareSolid.style.transform = `rotate(${Math.floor(Math.random() * 90)}deg)`
-  innerSquareSolid.style.background = bg
+//   const innerSquareSolid: HTMLElement = document.createElement('div')
+//   innerSquareSolid.classList.add('inner-square-solid')
+//   innerSquareSolid.style.width = size + 'px'
+//   innerSquareSolid.style.height = size + 'px'
+//   innerSquareSolid.style.top = randomIntFromInterval(0, height).toString() + 'px'
+//   innerSquareSolid.style.left = randomIntFromInterval(0, innerWidth).toString() + 'px'
+//   innerSquareSolid.style.transform = `rotate(${Math.floor(Math.random() * 90)}deg)`
+//   innerSquareSolid.style.background = bg
 
-  canvas.appendChild(outerSquareSolid)
-  outerSquareSolid.appendChild(innerSquareSolid)
-}
+//   canvas.appendChild(outerSquareSolid)
+//   outerSquareSolid.appendChild(innerSquareSolid)
+// }
 /*
   Create the set of outline squares
 */
-export const createSquaresOutline = (): any => {
+export const createSquaresOutline = () => {
   let height: number = getDocumentHeight()
 
   const colors: string[] = [
@@ -70,12 +70,12 @@ export const createSquaresOutline = (): any => {
 /*
   Create the set of triangles
 */
-export const createTriangles = (): any => {
+export const createTriangles = () => {
   let height: number = getDocumentHeight()
 
   const colors: string[] = [
     '#A78BFA', // violet 400
-    '#38BDF8', // light blue 400
+    '#38BDF8', // lightBlue 400
   ]
   const canvas: HTMLElement | null = document.getElementById('canvas')
 
@@ -99,7 +99,7 @@ export const createTriangles = (): any => {
 /*
   Create the set of bolts
 */
-export const createBolts = (): any => {
+export const createBolts = () => {
   let height: number = getDocumentHeight()
 
   const colors: string[] = [
@@ -120,7 +120,6 @@ export const createBolts = (): any => {
   innerBolt.style.fontSize = size + 'px'
   innerBolt.style.top = randomIntFromInterval(0, height).toString() + 'px'
   innerBolt.style.left = randomIntFromInterval(0, innerWidth).toString() + 'px'
-  // innerBolt.style.transform = `rotate(25deg)`
   innerBolt.style.color = bg
 
   canvas.appendChild(outerBolt)
@@ -129,12 +128,11 @@ export const createBolts = (): any => {
 /*
   Create the set of wave triangle
 */
-export const createWave = (): any => {
+export const createWave = () => {
   let height: number = getDocumentHeight()
 
   const colors: string[] = [
-    // '#F472B6' // pink 400
-    '#1C1917'
+    '#1C1917' // warm gray 900
   ]
   const canvas: HTMLElement | null = document.getElementById('canvas')
 
@@ -154,4 +152,76 @@ export const createWave = (): any => {
 
   canvas.appendChild(outerWave)
   outerWave.appendChild(innerWave)
+}
+
+
+
+
+
+
+
+
+
+export interface ShapeElementParameters {
+  bordered: boolean,
+  colors: string[],
+  degrees?: number,
+  icon: boolean,
+  innerClassArray: string[],
+  innerElementType: string,
+  max: number,
+  min: number,
+  outerClassArray: string[],
+  outerElementType: string
+}
+
+export const createShapeElement = ({
+  bordered,
+  colors,
+  degrees,
+  icon,
+  innerClassArray,
+  innerElementType,
+  max,
+  min,
+  outerClassArray,
+  outerElementType
+}: ShapeElementParameters) => {
+  let height: number = getDocumentHeight()
+
+  const canvas: HTMLElement | null = document.getElementById('canvas')
+
+  const size: number = randomIntFromInterval(min, max)
+  const bg: string = colors[Math.floor(Math.random() * colors.length)]
+
+  const outerElement: HTMLElement = document.createElement(outerElementType)
+  outerElement.classList.add(...outerClassArray)
+  icon
+    ? outerElement.style.fontSize = size + 'px'
+    : (
+      outerElement.style.width = size + 'px',
+      outerElement.style.height = size + 'px'
+    )
+
+  const innerElement: HTMLElement = document.createElement(innerElementType)
+  innerElement.classList.add(...innerClassArray)
+  icon
+    ? innerElement.style.fontSize = size + 'px'
+    : (
+      innerElement.style.width = size + 'px',
+      innerElement.style.height = size + 'px'
+    )
+  innerElement.style.top = randomIntFromInterval(0, height).toString() + 'px'
+  innerElement.style.left = randomIntFromInterval(0, innerWidth).toString() + 'px'
+
+  degrees ? innerElement.style.transform = `rotate(${Math.floor(Math.random() * degrees)}deg)` : null
+
+  icon
+    ? innerElement.style.color = bg
+    : bordered
+      ? innerElement.style.borderColor = bg
+      : innerElement.style.background = bg
+
+  canvas.appendChild(outerElement)
+  outerElement.appendChild(innerElement)
 }

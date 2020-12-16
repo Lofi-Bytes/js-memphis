@@ -10,11 +10,12 @@ import {
 } from '../../utils/utils'
 
 import {
-  createSquaresSolid,
+  // createSquaresSolid,
   createSquaresOutline,
   createTriangles,
   createBolts,
-  createWave
+  createWave,
+  createShapeElement
 } from '../../utils/memphis'
 
 import '@fortawesome/fontawesome-pro/css/all.min.css'
@@ -32,15 +33,49 @@ const Layout: FC<LayoutProps> = ({
   const [height, setHeight] = useState(getDocumentHeight)
   const [width, setWidth] = useState(getWindowInnerWidth)
 
+  const squareSolid = {
+    bordered: false,
+    colors: [
+      '#FB7185', // rose 400
+      '#F472B6', // pink 400
+      '#38BDF8' // lightBlue 400
+    ],
+    degrees: 90,
+    icon: false,
+    innerClassArray: ['inner-square-solid'],
+    innerElementType: 'div',
+    max: 220,
+    min: 60,
+    outerClassArray: ['outer-square-solid'],
+    outerElementType: 'div'
+  }
+
+  const squareOutline = {
+    bordered: true,
+    colors: [
+      '#5EEAD4', // teal 300
+      '#FAFAF9' // warm gray 50
+    ],
+    icon: false,
+    innerClassArray: ['inner-square-outline'],
+    innerElementType: 'div',
+    max: 120,
+    min: 20,
+    outerClassArray: ['inner-square-outline'],
+    outerElementType: 'div'
+  }
+
   useEffect(() => {
     setTimeout(() => {
       // Initialize the solid squares
       for (let i = 0; i < 10; i++) {
-        createSquaresSolid()
+        // createSquaresSolid()
+        createShapeElement(squareSolid)
       }
       // Initialize the outline squares
       for (let i = 0; i < 7; i++) {
-        createSquaresOutline()
+        // createSquaresOutline()
+        createShapeElement(squareOutline)
       }
       // Initialize the triangles
       for (let i = 0; i < 7; i++) {
@@ -86,11 +121,13 @@ const Layout: FC<LayoutProps> = ({
     const populateElements = () => {
       // Re-draw the solid squares
       for (let i = 0; i < 10; i++) {
-        createSquaresSolid()
+        // createSquaresSolid()
+        createShapeElement(squareSolid)
       }
       // Re-draw the outline squares
       for (let i = 0; i < 7; i++) {
-        createSquaresOutline()
+        // createSquaresOutline()
+        createShapeElement(squareOutline)
       }
       // Re-draw the triangles
       for (let i = 0; i < 7; i++) {
