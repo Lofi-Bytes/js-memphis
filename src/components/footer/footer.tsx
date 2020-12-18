@@ -13,10 +13,23 @@ const Footer: FC<ReactNode> = ({}: ReactNode) => {
         <div className="flex justify-center items-center relative">
           <div>
             <a
+              href="https://github.com/lofi-bytes"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Jillian's Github"
+              title="Jillian's Github"
+              className="text-3xl text-teal-100 hover:text-pink-200 focus:text-pink-200 active:text-pink-300 hover:cursor-pointer duration-200 focus:outline-none focus:ring focus:ring-teal-200 rounded py-1 px-2"
+            >
+              <i className="fab fa-github"></i>
+            </a>
+          </div>
+          <div className="ml-6">
+            <a
               href="https://twitter.com/LofiBytes/"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Twitter"
+              aria-label="Jillian's Twitter"
+              title="Jillian's Twitter"
               className="text-3xl text-teal-100 hover:text-pink-200 focus:text-pink-200 active:text-pink-300 hover:cursor-pointer duration-200 focus:outline-none focus:ring focus:ring-teal-200 rounded py-1 px-2"
             >
               <i className="fab fa-twitter"></i>
@@ -24,13 +37,26 @@ const Footer: FC<ReactNode> = ({}: ReactNode) => {
           </div>
           <div className="ml-6">
             <a
-              href="https://github.com/JSNickerson"
+              href="https://codepen.io/LofiBytes"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Github"
+              aria-label="Jillian's CodePen"
+              title="Jillian's CodePen"
               className="text-3xl text-teal-100 hover:text-pink-200 focus:text-pink-200 active:text-pink-300 hover:cursor-pointer duration-200 focus:outline-none focus:ring focus:ring-teal-200 rounded py-1 px-2"
             >
-              <i className="fab fa-github"></i>
+              <i className="fab fa-codepen"></i>
+            </a>
+          </div>
+          <div className="ml-6">
+            <a
+              href="https://dev.to/lofibytes"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Jillian's DEV Profile"
+              title="Jillian's DEV Profile"
+              className="text-3xl text-teal-100 hover:text-pink-200 focus:text-pink-200 active:text-pink-300 hover:cursor-pointer duration-200 focus:outline-none focus:ring focus:ring-teal-200 rounded py-1 px-2"
+            >
+              <i className="fab fa-dev"></i>
             </a>
           </div>
         </div>

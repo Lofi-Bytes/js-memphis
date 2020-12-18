@@ -61,7 +61,51 @@ const Layout: FC<LayoutProps> = ({
     innerElementType: 'div',
     max: 120,
     min: 20,
-    outerClassArray: ['inner-square-outline'],
+    outerClassArray: ['outer-square-outline'],
+    outerElementType: 'div'
+  }
+
+  const triangles = {
+    bordered: true,
+    colors: [
+      '#A78BFA', // violet 400
+      '#38BDF8', // lightBlue 400
+    ],
+    icon: true,
+    innerClassArray: ['inner-triangle', `fal`, `fa-triangle`],
+    innerElementType: 'i',
+    max: 100,
+    min: 40,
+    outerClassArray: ['outer-triangle'],
+    outerElementType: 'div'
+  }
+
+  const bolts = {
+    bordered: true,
+    colors: [
+      '#FEF08A', // yellow 200
+      '#67E8F9', // cyan 300
+    ],
+    icon: true,
+    innerClassArray: ['inner-bolt', `fal`, `fa-bolt`],
+    innerElementType: 'i',
+    max: 80,
+    min: 40,
+    outerClassArray: ['outer-bolt'],
+    outerElementType: 'div'
+  }
+
+  const waves = {
+    bordered: true,
+    colors: [
+      '#1C1917' // warm gray 900
+    ],
+    icon: true,
+    innerClassArray: ['inner-wave', `fal`, `fa-water`],
+    innerElementType: 'i',
+    max: 60,
+    min: 20,
+    outerClassArray: ['outer-wave'],
     outerElementType: 'div'
   }
 
@@ -79,15 +123,18 @@ const Layout: FC<LayoutProps> = ({
       }
       // Initialize the triangles
       for (let i = 0; i < 7; i++) {
-        createTriangles()
+        // createTriangles()
+        createShapeElement(triangles)
       }
       // Initialize the bolts
       for (let i = 0; i < 5; i++) {
-        createBolts()
+        // createBolts()
+        createShapeElement(bolts)
       }
       // Initialize the waves
       for (let i = 0; i < 20; i++) {
-        createWave()
+        // createWave()
+        createShapeElement(waves)
       }
     }, 350)
 
@@ -131,15 +178,18 @@ const Layout: FC<LayoutProps> = ({
       }
       // Re-draw the triangles
       for (let i = 0; i < 7; i++) {
-        createTriangles()
+        // createTriangles()
+        createShapeElement(triangles)
       }
       // Re-draw the bolts
       for (let i = 0; i < 5; i++) {
-        createBolts()
+        // createBolts()
+        createShapeElement(bolts)
       }
       // Re-draw the waves
       for (let i = 0; i < 20; i++) {
-        createWave()
+        // createWave()
+        createShapeElement(waves)
       }
     }
 

@@ -50,10 +50,23 @@ const HomePage: FC<ReactNode> = () => {
           <div className="flex justify-start items-start relative mt-3">
             <div>
               <a
+                href="https://github.com/lofi-bytes"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Jillian's Github"
+                title="Jillian's Github"
+                className="text-2xl text-gray-500 hover:text-lightBlue-700 focus:text-lightBlue-700 active:text-lightBlue-700 hover:cursor-pointer duration-200 focus:outline-none focus:ring focus:ring-lightBlue-700 rounded py-1 px-2"
+              >
+                <i className="fab fa-github"></i>
+              </a>
+            </div>
+            <div className="ml-2">
+              <a
                 href="https://twitter.com/LofiBytes/"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Twitter"
+                aria-label="Jillian's Twitter"
+                title="Jillian's Twitter"
                 className="text-2xl text-gray-500 hover:text-lightBlue-700 focus:text-lightBlue-700 active:text-lightBlue-700 hover:cursor-pointer duration-200 focus:outline-none focus:ring focus:ring-lightBlue-700 rounded py-1 px-2"
               >
                 <i className="fab fa-twitter"></i>
@@ -61,13 +74,26 @@ const HomePage: FC<ReactNode> = () => {
             </div>
             <div className="ml-2">
               <a
-                href="https://github.com/JSNickerson"
+                href="https://codepen.io/LofiBytes"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Github"
+                aria-label="Jillian's CodePen"
+                title="Jillian's CodePen"
                 className="text-2xl text-gray-500 hover:text-lightBlue-700 focus:text-lightBlue-700 active:text-lightBlue-700 hover:cursor-pointer duration-200 focus:outline-none focus:ring focus:ring-lightBlue-700 rounded py-1 px-2"
               >
-                <i className="fab fa-github"></i>
+                <i className="fab fa-codepen"></i>
+              </a>
+            </div>
+            <div className="ml-2">
+              <a
+                href="https://dev.to/lofibytes"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Jillian's DEV Profile"
+                title="Jillian's DEV Profile"
+                className="text-2xl text-gray-500 hover:text-lightBlue-700 focus:text-lightBlue-700 active:text-lightBlue-700 hover:cursor-pointer duration-200 focus:outline-none focus:ring focus:ring-lightBlue-700 rounded py-1 px-2"
+              >
+                <i className="fab fa-dev"></i>
               </a>
             </div>
           </div>

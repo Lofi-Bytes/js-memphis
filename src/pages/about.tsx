@@ -137,7 +137,7 @@ const AboutPage: FC<ReactNode> = () => {
             <p className="text-gray-600 tracking-wider leading-relaxed hidden sm:block">08/2010</p>
           </div>
           <p className="text-gray-600 tracking-wider leading-relaxed hidden sm:block mt-3 mx-6">
-            I gained a strong foundation in classical mechanics, modern physics, electromagnetics, quan- tum mechanics, thermodynamics, condensed matter physics, nuclear & particle physics, plasma physics, circuit theory & design, and certified to design and machine custom parts for laboratory experiments in the physics departments state of the art machine shop.
+            I gained a strong foundation in classical mechanics, modern physics, electromagnetics, quantum mechanics, thermodynamics, condensed matter physics, nuclear & particle physics, plasma physics, circuit theory & design, and certified to design and machine custom parts for laboratory experiments in the physics departments state of the art machine shop.
           </p>
 
           <div className="flex items-start justify-between mt-4">
