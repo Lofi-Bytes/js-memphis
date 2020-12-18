@@ -2,30 +2,11 @@
   {
     "title": "Imagining a Better Way to Web Part 01",
     "path": "https://betterwaytoweb-01.jillian.dev/",
-    "excerpt": "This talk covers the first of three intersectional topics; The Jamstack, Component based architecture, and Design systems. These tools and techniques will improve the quality and consistency of your products. They will improve the working experience and quality of collaboration across your team(s). And they will improve your audience experience.",
-    "date": "Feb. 24th, 2020",
+    "excerpt": "This talk covers the first of three intersectional topics; The Jamstack, Component-based architecture, and Design systems. These tools and techniques will improve the quality and consistency of your products. They will improve the working experience and quality of collaboration across your team(s). And they will improve your audience experience.",
+    "date": "Oct. 21st, 2020",
     "tags": [
       "JavaScript",
       "Jamstack"
-    ]
-  },
-  {
-    "title": "Imagining a Better Way to Web Part 02",
-    "path": "https://betterwaytoweb-02.jillian.dev/",
-    "excerpt": "This talk covers the second of three intersectional topics; The Jamstack, Component based architecture, and Design systems. These tools and techniques will improve the quality and consistency of your products. They will improve the working experience and quality of collaboration across your team(s). And they will improve your audience experience.",
-    "date": "May 9th, 2020",
-    "tags": [
-      "JavaScript",
-      "Component Based Architecture"
-    ]
-  },
-  {
-    "title": "Imagining a Better Way to Web Part 03",
-    "path": "https://betterwaytoweb-03.jillian.dev/",
-    "excerpt": "This talk covers the third of three intersectional topics; The Jamstack, Component based architecture, and Design systems. These tools and techniques will improve the quality and consistency of your products. They will improve the working experience and quality of collaboration across your team(s). And they will improve your audience experience.",
-    "date": "Oct 31, 2020",
-    "tags": [
-      "Design Systems"
     ]
   }
 ]
