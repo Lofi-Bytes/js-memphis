@@ -36,16 +36,16 @@ const ProjectsListPage: FC<ReactNode> = () => {
         title={
           <>
             <span className="hidden sm:inline-block">
-              <i className="fal fa-code-branch text-amber-300"></i>&nbsp;&nbsp;
+              <i className="fal fa-code-branch text-amber-300 text-4xl leading-relaxed md:text-5xl md:leading-loose lg:text-5xl lg:leading-relaxed"></i>&nbsp;&nbsp;
             </span>
             <span className="js text-5xl leading-relaxed md:text-6xl md:leading-loose lg:text-7xl lg:leading-relaxed">
             Projects
             </span>
             <span className="hidden sm:inline-block">
-              &nbsp;&nbsp;<i className="fal fa-code-merge text-teal-300"></i>
+              &nbsp;&nbsp;<i className="fal fa-code-merge text-teal-300 text-4xl leading-relaxed md:text-5xl md:leading-loose lg:text-5xl lg:leading-relaxed"></i>
             </span>
             <span className="block sm:hidden mt-3">
-              <i className="fal fa-code-branch text-amber-300"></i>&nbsp;&nbsp;<i className="fal fa-code-merge text-teal-300"></i>
+              <i className="fal fa-code-branch text-amber-300 text-4xl"></i>&nbsp;&nbsp;<i className="fal fa-code-merge text-teal-300 text-4xl"></i>
             </span>
           </>
         }
@@ -69,7 +69,7 @@ const ProjectsListPage: FC<ReactNode> = () => {
                     className="block overflow-hidden transition shadow-lg hover:shadow-xl focus:shadow-xl active:shadow-sm duration-200 rounded-lg bg-lightBlue-100 focus:bg-lightBlue-50 focus:outline-none focus:ring-4  focus:ring-lightBlue-200 focus:ring-opacity-50 border-0 border-l-4 border-lightBlue-300 hover:border-lightBlue-400 focus:border-lightBlue-500 transform focus:-translate-y-0.5 hover:-translate-y-0.5 active:translate-y-0.5 ease-in-out group px-8 py-6 mb-8"
                   >
                     <div className="flex justify-between items-start">
-                      <h2 className="tracking-wider text-gray-800 text-xl">
+                      <h2 className="tracking-wider text-gray-800 text-xl w-11/12">
                         {title}
                       </h2>
                       <i className="fas fa-external-link-alt external-link-icon text-sm text-lightBlue-700" />
@@ -84,7 +84,10 @@ const ProjectsListPage: FC<ReactNode> = () => {
                       {
                         tags.map((tag, index) => {
                           return (
-                            <div className="rounded-full bg-lightBlue-50 shadow group-focus:bg-lightBlue-100 transition ease-in-out w-max py-1 px-3 mr-3">
+                            <div
+                              className="rounded-full bg-lightBlue-50 shadow group-focus:bg-lightBlue-100 transition ease-in-out w-max py-1 px-3 mr-3 mb-2"
+                              key={`item-${index}`}
+                            >
                               <p className="text-sm tracking-widert text-lightBlue-700">
                                 {tag}
                               </p>

@@ -39,10 +39,10 @@ const WritingPostListPage: FC<ReactNode> = () => {
             Writing
             </span>
             <span className="hidden sm:inline-block">
-              &nbsp;&nbsp;<i className="fal fa-comment-edit text-orange-300"></i>
+              &nbsp;&nbsp;<i className="fal fa-comment-edit text-orange-300 text-4xl leading-relaxed md:text-5xl md:leading-loose lg:text-5xl lg:leading-relaxed"></i>
             </span>
             <span className="block sm:hidden mt-3">
-              <i className="fal fa-comment-edit text-orange-300"></i>
+              <i className="fal fa-comment-edit text-orange-300 text-4xl"></i>
             </span>
           </>
         }
@@ -76,7 +76,10 @@ const WritingPostListPage: FC<ReactNode> = () => {
                       {
                         tags.map((tag, index) => {
                           return (
-                            <div className="rounded-full bg-violet-50 shadow group-focus:bg-violet-100 transition ease-in-out w-max py-1 px-3 mr-3 mb-2">
+                            <div
+                              className="rounded-full bg-violet-50 shadow group-focus:bg-violet-100 transition ease-in-out w-max py-1 px-3 mr-3 mb-2"
+                              key={`item-${index}`}
+                            >
                               <p className="text-sm tracking-widert text-violet-700">
                                 {tag}
                               </p>
