@@ -1,5 +1,4 @@
 import React, { FC, ReactNode } from 'react'
-import { useStaticQuery, graphql, Link } from 'gatsby'
 
 import MobileNavigation from '../mobile-navigation'
 import FooterNavigation from '../footer-navigation'
@@ -14,8 +13,6 @@ const Footer: FC<ReactNode> = ({}: ReactNode) => {
           <div>
             <a
               href="https://github.com/lofi-bytes"
-              target="_blank"
-              rel="noopener noreferrer"
               aria-label="Jillian's Github"
               title="Jillian's Github"
               className="text-3xl text-teal-100 hover:text-pink-200 focus:text-pink-200 active:text-pink-300 hover:cursor-pointer duration-200 focus:outline-none focus:ring focus:ring-teal-200 rounded py-1 px-2"
@@ -26,8 +23,6 @@ const Footer: FC<ReactNode> = ({}: ReactNode) => {
           <div className="ml-6">
             <a
               href="https://twitter.com/LofiBytes/"
-              target="_blank"
-              rel="noopener noreferrer"
               aria-label="Jillian's Twitter"
               title="Jillian's Twitter"
               className="text-3xl text-teal-100 hover:text-pink-200 focus:text-pink-200 active:text-pink-300 hover:cursor-pointer duration-200 focus:outline-none focus:ring focus:ring-teal-200 rounded py-1 px-2"
@@ -38,8 +33,6 @@ const Footer: FC<ReactNode> = ({}: ReactNode) => {
           <div className="ml-6">
             <a
               href="https://codepen.io/LofiBytes"
-              target="_blank"
-              rel="noopener noreferrer"
               aria-label="Jillian's CodePen"
               title="Jillian's CodePen"
               className="text-3xl text-teal-100 hover:text-pink-200 focus:text-pink-200 active:text-pink-300 hover:cursor-pointer duration-200 focus:outline-none focus:ring focus:ring-teal-200 rounded py-1 px-2"
@@ -50,8 +43,6 @@ const Footer: FC<ReactNode> = ({}: ReactNode) => {
           <div className="ml-6">
             <a
               href="https://dev.to/lofibytes"
-              target="_blank"
-              rel="noopener noreferrer"
               aria-label="Jillian's DEV Profile"
               title="Jillian's DEV Profile"
               className="text-3xl text-teal-100 hover:text-pink-200 focus:text-pink-200 active:text-pink-300 hover:cursor-pointer duration-200 focus:outline-none focus:ring focus:ring-teal-200 rounded py-1 px-2"

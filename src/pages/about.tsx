@@ -29,13 +29,13 @@ const AboutPage: FC<ReactNode> = () => {
           <Avatar />
           <h2 className="text-gray-700 text-xl mt-10 tracking-wide">Current Work</h2>
           <p className="text-gray-600 tracking-wider leading-relaxed mt-3">
-            I work for a nonprofit organization, <TextLink href="https://bscs.org/" external={true}>BSCS Science Learning</TextLink>, whose mission is to transform science teaching and learning through research-driven innovation.
+            I work for a nonprofit organization, <TextLink to="https://bscs.org/" external={true}>BSCS Science Learning</TextLink>, whose mission is to transform science teaching and learning through research-driven innovation.
           </p>
           {/* <p className="text-gray-600 tracking-wider leading-relaxed mt-4">
             At BSCS Science Learning, we operate on federal and private grants. The nature of this work requires our small team to build many websites and web apps every year. To keep up with demaind, we must ensure that our infrastructure is agile enough to meet the needs of a diverse range of projects while staying within budget, meeting strict deadlines, and reducing both the cost of ongoing maintenance and technical debt.
           </p> */}
           <p className="text-gray-600 tracking-wider leading-relaxed mt-4">
-            A critical part of my role within the organization is to continually improve developer experience, designer experience, <em>and</em> <TextLink href="https://medium.com/s/user-friendly/why-im-done-saying-user-user-experience-and-ux-in-2019-4fdfc6b7de23" external={true}>audience</TextLink> experience. During my time with BSCS, I have overseen the adoption of innovative approaches to software and design such as <i className="fas fa-heart text-pink-300"></i> <TextLink href="https://www.invisionapp.com/inside-design/guide-to-design-systems/" external={true}>design systems</TextLink>, <TextLink href="https://medium.com/omarelgabrys-blog/component-based-architecture-3c3c23c7e348" external={true}>component based</TextLink>, <TextLink href="https://martinfowler.com/articles/serverless.html" external={true}>serverless</TextLink>, <TextLink href="https://martinfowler.com/articles/microservices.html" external={true}> and microservice</TextLink> architectures, and the beloved <i className="fas fa-heart text-pink-300"></i> <TextLink href="https://jamstack.org/" external={true}>Jamstack</TextLink>.
+            A critical part of my role within the organization is to continually improve developer experience, designer experience, <em>and</em> <TextLink to="https://medium.com/s/user-friendly/why-im-done-saying-user-user-experience-and-ux-in-2019-4fdfc6b7de23" external={true}>audience</TextLink> experience. During my time with BSCS, I have overseen the adoption of innovative approaches to software and design such as <i className="fas fa-heart text-pink-300"></i> <TextLink to="https://www.invisionapp.com/inside-design/guide-to-design-systems/" external={true}>design systems</TextLink>, <TextLink to="https://medium.com/omarelgabrys-blog/component-based-architecture-3c3c23c7e348" external={true}>component based</TextLink>, <TextLink to="https://martinfowler.com/articles/serverless.html" external={true}>serverless</TextLink>, <TextLink to="https://martinfowler.com/articles/microservices.html" external={true}> and microservice</TextLink> architectures, and the beloved <i className="fas fa-heart text-pink-300"></i> <TextLink to="https://jamstack.org/" external={true}>Jamstack</TextLink>.
           </p>
 
           <h2 className="text-gray-700 text-xl mt-10 tracking-wide">Previous Work</h2>
@@ -48,13 +48,13 @@ const AboutPage: FC<ReactNode> = () => {
 
           {/* <h2 className="text-gray-700 text-xl mt-10 tracking-wide">Education</h2>
           <p className="text-gray-600 tracking-wider leading-relaxed mt-3">
-            I hold an <TextLink href="https://en.wikipedia.org/wiki/Master_of_Science#United_States" external={true}>M.S.</TextLink> in <TextLink href="https://clasp.engin.umich.edu/" external={true}>Atmospheric and Space Science</TextLink> and a <TextLink href="https://en.wikipedia.org/wiki/Graduate_certificate#United_States" external={true}>GradCert</TextLink> in <TextLink href="https://micde.umich.edu/" external={true}>Computer Science and Engineering</TextLink> from <TextLink href="https://umich.edu/" external={true}>The University of Michigan, Ann Arbor</TextLink>. I did my undergraduate studies at <TextLink href="https://www.colorado.edu/" external={true}>The University of Colorado, Boulder</TextLink> where I earned a <TextLink href="https://en.wikipedia.org/wiki/Bachelor%27s_degree" external={true}>B.A.</TextLink> in <TextLink href="https://www.colorado.edu/aps/" external={true}>Astrophysical, Planetary, and Atmospheric Science</TextLink> and a <TextLink href="https://en.wikipedia.org/wiki/Bachelor%27s_degree" external={true}>B.A.</TextLink> in <TextLink href="https://www.colorado.edu/physics/" external={true}>Physics</TextLink>.
+            I hold an <TextLink to="https://en.wikipedia.org/wiki/Master_of_Science#United_States" external={true}>M.S.</TextLink> in <TextLink to="https://clasp.engin.umich.edu/" external={true}>Atmospheric and Space Science</TextLink> and a <TextLink to="https://en.wikipedia.org/wiki/Graduate_certificate#United_States" external={true}>GradCert</TextLink> in <TextLink to="https://micde.umich.edu/" external={true}>Computer Science and Engineering</TextLink> from <TextLink to="https://umich.edu/" external={true}>The University of Michigan, Ann Arbor</TextLink>. I did my undergraduate studies at <TextLink to="https://www.colorado.edu/" external={true}>The University of Colorado, Boulder</TextLink> where I earned a <TextLink to="https://en.wikipedia.org/wiki/Bachelor%27s_degree" external={true}>B.A.</TextLink> in <TextLink to="https://www.colorado.edu/aps/" external={true}>Astrophysical, Planetary, and Atmospheric Science</TextLink> and a <TextLink to="https://en.wikipedia.org/wiki/Bachelor%27s_degree" external={true}>B.A.</TextLink> in <TextLink to="https://www.colorado.edu/physics/" external={true}>Physics</TextLink>.
           </p> */}
 
           <h2 className="text-gray-700 text-xl mt-10 tracking-wide">Education</h2>
           <div className="d-block sm:flex items-center justify-between border-b border-dotted border-pink-400 mt-3 uppercase">
             <TextLink
-              href="https://umich.edu/"
+              to="https://umich.edu/"
               external={true}
               type="h3"
             >
@@ -68,13 +68,13 @@ const AboutPage: FC<ReactNode> = () => {
             <div>
               <p className="text-gray-600 tracking-wider leading-relaxed font-serif italic">
                 <TextLink
-                  href="https://en.wikipedia.org/wiki/Master_of_Science#United_States"
+                  to="https://en.wikipedia.org/wiki/Master_of_Science#United_States"
                   external={true}
                 >M.S.</TextLink> Atmospheric and Space Science
               </p>
               <p>
                 <TextLink
-                  href="https://clasp.engin.umich.edu/"
+                  to="https://clasp.engin.umich.edu/"
                   external={true}
                 >https://clasp.engin.umich.edu/</TextLink>
               </p>
@@ -89,13 +89,13 @@ const AboutPage: FC<ReactNode> = () => {
             <div>
               <p className="text-gray-600 tracking-wider leading-relaxed font-serif italic">
                 <TextLink
-                  href="https://en.wikipedia.org/wiki/Graduate_certificate#United_States"
+                  to="https://en.wikipedia.org/wiki/Graduate_certificate#United_States"
                   external={true}
                 >GradCert</TextLink> Computational Discovery and Engineering
               </p>
               <p>
                 <TextLink
-                  href="https://micde.umich.edu/"
+                  to="https://micde.umich.edu/"
                   external={true}
                 >https://micde.umich.edu/</TextLink>
               </p>
@@ -108,7 +108,7 @@ const AboutPage: FC<ReactNode> = () => {
 
           <div className="d-block sm:flex items-center justify-between border-b border-dotted border-pink-400 mt-8 uppercase">
             <TextLink
-              href="https://www.colorado.edu/"
+              to="https://www.colorado.edu/"
               external={true}
               type="h3"
             >
@@ -123,13 +123,13 @@ const AboutPage: FC<ReactNode> = () => {
             <div>
               <p className="text-gray-600 tracking-wider leading-relaxed font-serif italic">
                 <TextLink
-                  href="https://en.wikipedia.org/wiki/Bachelor%27s_degree"
+                  to="https://en.wikipedia.org/wiki/Bachelor%27s_degree"
                   external={true}
                 >B.A.</TextLink> Physics
               </p>
               <p>
                 <TextLink
-                  href="https://www.colorado.edu/physics/"
+                  to="https://www.colorado.edu/physics/"
                   external={true}
                 >https://www.colorado.edu/physics/</TextLink>
               </p>
@@ -144,13 +144,13 @@ const AboutPage: FC<ReactNode> = () => {
             <div>
               <p className="text-gray-600 tracking-wider leading-relaxed font-serif italic">
                 <TextLink
-                  href="https://en.wikipedia.org/wiki/Bachelor%27s_degree"
+                  to="https://en.wikipedia.org/wiki/Bachelor%27s_degree"
                   external={true}
                 >B.A.</TextLink> Astrophysical, Planetary, and Atmospheric Science
               </p>
               <p>
                 <TextLink
-                  href="https://www.colorado.edu/aps/"
+                  to="https://www.colorado.edu/aps/"
                   external={true}
                 >https://www.colorado.edu/aps/</TextLink>
               </p>
@@ -163,7 +163,7 @@ const AboutPage: FC<ReactNode> = () => {
 
           <h2 className="text-gray-700 text-xl mt-10 tracking-wide">Extracurricular Interests</h2>
           <p className="text-gray-600 tracking-wider leading-relaxed mt-3">
-            In my free time I enjoy adventuring in my van (<TextLink href="https://www.instagram.com/explore/tags/vanlife/?hl=en" external={true}>#vanlife</TextLink>), spending time with my dog, practicing yoga, mountain biking, and I read a lot.
+            In my free time I enjoy adventuring in my van (<TextLink to="https://www.instagram.com/explore/tags/vanlife/?hl=en" external={true}>#vanlife</TextLink>), spending time with my dog, practicing yoga, mountain biking, and I read a lot.
           </p>
           {/* <div
             className="mx-auto mt-12 w-full md:w-3/4"
