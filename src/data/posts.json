@@ -1,10 +1,32 @@
 [
   {
-    "title": "Beautiful Forms on the Jamstack",
-    "subtitle": "With Typescript, React Hook Form, Tailwind CSS, and Netlify",
-    "path": "/writing/beautiful-forms-jamstack",
-    "excerpt": "I'm baby pop-up photo booth cardigan mumblecore tattooed quinoa. Bitters sartorial cold-pressed next level umami trust fund organic sustainable photo booth raclette.",
-    "date": "Feb. 24th, 2020",
+    "title": "Beautiful Web Forms on the Jamstack",
+    "subtitle": "With Tailwind CSS",
+    "path": "/writing/beautiful-web-forms-jamstack-tailwindcss",
+    "excerpt": "",
+    "date": "Dec. 21st, 2020",
+    "tags": [
+      "JavaScript",
+      "Jamstack"
+    ]
+  },
+  {
+    "title": "Beautiful Web Forms on the Jamstack",
+    "subtitle": "With React Hook Form",
+    "path": "/writing/beautiful-web-forms-jamstack-react-hook-form",
+    "excerpt": "",
+    "date": "Dec. 21st, 2020",
+    "tags": [
+      "JavaScript",
+      "Jamstack"
+    ]
+  },
+  {
+    "title": "Beautiful Web Forms on the Jamstack",
+    "subtitle": "With Netlify Forms",
+    "path": "/writing/beautiful-web-forms-jamstack-netlify-forms",
+    "excerpt": "",
+    "date": "Dec. 21st, 2020",
     "tags": [
       "JavaScript",
       "Jamstack"

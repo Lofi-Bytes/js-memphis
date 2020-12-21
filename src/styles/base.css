@@ -238,4 +238,9 @@ pre[class*="language-"] {
   border: none !important;
 }
 
+pre[class*="language-"] > code {
+  max-height: 32em;
+  overflow: auto;
+}
+
 @tailwind utilities;

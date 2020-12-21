@@ -13,7 +13,7 @@ export type ButtonProps = {
   className?: string,
   disabled: boolean,
   title: string,
-  to: string,
+  to?: string,
   type?: 'button' | 'submit' | 'reset',
   [other:string]: unknown
 }
