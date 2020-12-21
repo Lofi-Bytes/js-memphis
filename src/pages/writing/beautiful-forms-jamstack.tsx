@@ -1,4 +1,5 @@
 import React, { FC, ReactNode, useEffect } from 'react'
+import { useStaticQuery, graphql } from 'gatsby'
 
 import Banner from '../../components/banner'
 import Layout from '../../components/layout'
@@ -16,6 +17,31 @@ const code =
 }`
 
 const FirstPostTestPage: FC<ReactNode> = () => {
+  const postData = useStaticQuery(graphql`
+    query BeautifulFormsJamstackQuery {
+      allPostsJson(
+        filter: {
+          title: {
+            eq: "Beautiful Forms on the Jamstack"
+          }
+        }
+      ) {
+        edges {
+          node {
+            title
+            subtitle
+            date
+            tags
+          }
+        }
+      }
+    }
+  `)
+  const title = postData.allPostsJson.edges[0].node.title
+  const subtitle = postData.allPostsJson.edges[0].node.subtitle
+  const date = postData.allPostsJson.edges[0].node.date
+  const tags = postData.allPostsJson.edges[0].node.tags
+
   useEffect(() => {
     // call the highlightAll() function to style our code blocks
     Prism.highlightAll()
@@ -29,28 +55,15 @@ const FirstPostTestPage: FC<ReactNode> = () => {
         canonicalUrl=""
       />
       <Banner
-        title={
-          <>
-            {/* <span className="hidden sm:inline-block">
-              <i className="fal fa-narwhal text-rose-300"></i>&nbsp;
-            </span> */}
-            <span className="text-teal-100">
-            Writing
-            </span>
-            <span className="hidden sm:inline-block">
-              &nbsp;&nbsp;<i className="fal fa-comment-edit text-orange-300"></i>
-            </span>
-            <span className="block sm:hidden">
-              <i className="fal fa-comment-edit text-orange-300"></i>
-            </span>
-          </>
-        }
-        // subTitle={<span className="text-teal-100">Designer, Full Stack Developer, &amp; Tech Lead</span>}
+        align="left"
+        title={title}
+        subtitle={subtitle}
+        date={date}
       />
       <Main>
         <Section className="-mt-12 mb-8">
           <div className="code-container">
-            <pre className="line-numbers py-6">
+            <pre className="line-numbers">
               <code className="language-javascript">{code}</code>
             </pre>
           </div>

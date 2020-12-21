@@ -31,6 +31,7 @@ const Avatar: FC<ReactNode> = ({}) => {
           <Img
             className="bg-cover hidden"
             fluid={img}
+            alt="Jillian's avatar."
           />
           <div className="w-full h-full absolute top-0 left-0 rounded-full ring-4 ring-purple-300 ring-opacity-30 ring-inset"></div>
         </BackgroundImage>

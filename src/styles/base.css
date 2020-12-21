@@ -229,4 +229,13 @@ html {
   }
 }
 
+pre[class*="language-"] {
+  padding-bottom: 2.5rem !important;
+  padding-top: 2.5rem !important;
+}
+
+.line-numbers .line-numbers-rows {
+  border: none !important;
+}
+
 @tailwind utilities;
