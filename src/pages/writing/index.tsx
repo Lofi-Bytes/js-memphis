@@ -3,10 +3,10 @@ import { useStaticQuery, graphql, Link } from 'gatsby'
 
 import Banner from '../../components/banner'
 import Layout from '../../components/layout'
-import TextLink from '../../components/text-link'
 import Section from '../../components/section'
 import SEO from '../../components/seo'
 import Main from '../../components/main'
+import Tag from '../../components/tag'
 
 
 const WritingPostListPage: FC<ReactNode> = () => {
@@ -76,14 +76,12 @@ const WritingPostListPage: FC<ReactNode> = () => {
                       {
                         tags.map((tag, index) => {
                           return (
-                            <div
-                              className="rounded-full bg-violet-50 shadow group-focus:bg-violet-100 transition ease-in-out w-max py-1 px-3 mr-3 mb-2"
+                            <Tag
                               key={`item-${index}`}
+                              color="violet"
                             >
-                              <p className="text-sm tracking-widert text-violet-700">
-                                {tag}
-                              </p>
-                            </div>
+                              {tag}
+                            </Tag>
                           )
                         })
                       }
