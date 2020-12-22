@@ -18,7 +18,7 @@ const Banner: FC<BannerProps> = ({
   return (
     <React.Fragment>
       <div className="bg-indigo-700 bg-opacity-30 w-full z-5">
-        <div className="flex flex-col justify-center items-center max-w-screen-md m-auto h-80 pb-28 px-6">
+        <div className="flex flex-col justify-center items-center max-w-screen-md m-auto h-80 pb-14 sm:pb-28 px-6">
           {
             align === 'left'
             ?
