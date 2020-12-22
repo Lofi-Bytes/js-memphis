@@ -25,16 +25,16 @@ const TextLink: FC<TextLinkProps> = ({
             ?
               <a
                 href={to}
-                className="text-lightBlue-700 focus:outline-none focus:ring-1 focus:ring-lightBlue-700 rounded"
+                className="focus:outline-none focus:ring-2 focus:ring-lightBlue-500 rounded-sm"
               >
                 {
                   type
                     ?
-                      <CustomTag className="hover:border-b-2 border-lightBlue-700 hover:transition-all transition-all duration-75 w-max inline">
+                      <CustomTag className="border-b-2 border-lightBlue-500 w-max inline">
                         {children}
                       </CustomTag>
                     :
-                      <span className="hover:border-b-2 border-lightBlue-700 hover:transition-all transition-all duration-75 w-max inline">
+                      <span className="border-b-2 border-lightBlue-500 w-max inline">
                         {children}
                       </span>
                 }
@@ -42,16 +42,16 @@ const TextLink: FC<TextLinkProps> = ({
             :
               <Link
                 to={to}
-                className="text-lightBlue-700 focus:outline-none focus:ring-1 focus:ring-lightBlue-700 rounded"
+                className="focus:outline-none focus:ring-2 focus:ring-lightBlue-500 rounded-sm"
               >
                 {
                   type
                     ?
-                      <CustomTag className="hover:border-b-2 border-lightBlue-700 hover:transition-all transition-all duration-75 w-max inline">
+                      <CustomTag className="border-b-2 border-lightBlue-500 w-max inline">
                         {children}
                       </CustomTag>
                     :
-                      <span className="hover:border-b-2 border-lightBlue-700 hover:transition-all transition-all duration-75 w-max inline">
+                      <span className="border-b-2 border-lightBlue-500 w-max inline">
                         {children}
                       </span>
                 }

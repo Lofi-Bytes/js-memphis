@@ -14,9 +14,11 @@ type SectionProps = {
 const STYLES = `
   bg-gray-100
   rounded-xl
-  p-8
+  py-8
+  px-8
+  sm:px-14
   w-11/12
-  md:w-3/4
+  sm:w-9/12
   mx-auto
   sm:mb-10
   shadow-xl

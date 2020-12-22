@@ -182,7 +182,9 @@ const AboutPage: FC<ReactNode> = () => {
         </Section>
 
         <Section>
-          <h2 className="text-gray-800 text-2xl tracking-wide">Interested in collaborating?</h2>
+          <div className="bg-rose-300 w-max py-2 px-10 -ml-10 sm:px-24 sm:-ml-24 rounded shadow-lg">
+            <h2 className="text-gray-800 text-2xl tracking-wide">Interested in collaborating?</h2>
+          </div>
           <div className="md:w-3/4 mx-auto">
             <ContactForm />
           </div>

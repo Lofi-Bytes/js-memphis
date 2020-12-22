@@ -6,7 +6,9 @@
     "excerpt": "",
     "date": "Dec. 21st, 2020",
     "tags": [
-      "JavaScript",
+      "Tailwind CSS",
+      "React",
+      "TypeScript",
       "Jamstack"
     ]
   },
@@ -17,7 +19,9 @@
     "excerpt": "",
     "date": "Dec. 21st, 2020",
     "tags": [
-      "JavaScript",
+      "React Hook Form",
+      "React",
+      "TypeScript",
       "Jamstack"
     ]
   },
@@ -28,6 +32,8 @@
     "excerpt": "",
     "date": "Dec. 21st, 2020",
     "tags": [
+      "Netlify Forms",
+      "React",
       "JavaScript",
       "Jamstack"
     ]

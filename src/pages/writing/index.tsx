@@ -16,6 +16,7 @@ const WritingPostListPage: FC<ReactNode> = () => {
         edges {
           node {
             title
+            subtitle
             path
             excerpt
             date
@@ -54,6 +55,7 @@ const WritingPostListPage: FC<ReactNode> = () => {
             postListData.allPostsJson.edges.map((edge, index) => {
               const path = edge.node.path
               const title = edge.node.title
+              const subtitle = edge.node.subtitle
               const excerpt = edge.node.excerpt
               const date = edge.node.date
               const tags = edge.node.tags
@@ -66,6 +68,7 @@ const WritingPostListPage: FC<ReactNode> = () => {
                     <h2 className="tracking-wider text-gray-800 text-xl">
                       {title}
                     </h2>
+                    <p className="tracking-wider text-gray-800 text-md">{subtitle}</p>
                     <p className="font-serif italic text-sm tracking-wider text-gray-600">
                       {date}
                     </p>

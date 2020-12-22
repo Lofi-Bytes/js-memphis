@@ -66,20 +66,22 @@ const FirstPostTestPage: FC<ReactNode> = () => {
       />
       <Main>
         <Section className="-mt-12 mb-8">
-          <h2 className="text-gray-800 text-2xl tracking-wide">Introduction</h2>
-          <p className="text-gray-600 tracking-wider leading-relaxed mt-3">
+          <div className="bg-rose-300 w-max py-2 px-10 -ml-10 sm:px-24 sm:-ml-24 rounded shadow-lg">
+            <h2 className="text-gray-800 text-2xl tracking-wide">Series Introduction</h2>
+          </div>
+          <p className="text-gray-600 tracking-wider leading-relaxed mt-8">
             Web forms are arguably one of the most important tools in web development and design. They drive conversions and bridge the communication gap between you and your audience. When implemented poorly, they can serve to frustrate and alienate your audience. Good designers always seek to make forms as simple as possible. Reducing friction for one's audience increases conversion potential and makes web sites/apps more pleasant to use.
           </p>
-          <p className="text-gray-600 tracking-wider leading-relaxed mt-3">
+          <p className="text-gray-600 tracking-wider leading-relaxed mt-4">
             Historically, web forms have been one of the more clunky parts of the audience experience. For example, server side validation requires submitting the form to the mercy of a request-respons cycle before the audience can recieve feedback. I'm sure most of us have had the experience of our web form sate being cleared, having to start over entirely 😩.
           </p>
-          <p className="text-gray-600 tracking-wider leading-relaxed mt-3">
+          <p className="text-gray-600 tracking-wider leading-relaxed mt-4">
             On the development side, implementing web forms well has been a lot of work. Fortunately as the front end has become more capable, development has followed suit and shifted toward the front end. This has allowed for innovative approaches that make both the audience experience <em>and</em> the developer experience happier. The audience gets more real-time feedback on thier progress with less friction and the developer can implement the improved experience with less work.
           </p>
-          <p className="text-gray-600 tracking-wider leading-relaxed mt-3">
-            Let's take a look at the following three tools that are leading the drive to make web forms a more pleasant experience for everyone:
+          <p className="text-gray-600 tracking-wider leading-relaxed mt-4">
+            In this three part series, we will take a look at the following tools that are leading the drive to make web forms a more pleasant experience for everyone:
           </p>
-          <ol className="list-decimal list-inside text-gray-600 tracking-wider leading-relaxed mt-3">
+          <ol className="list-decimal list-inside text-gray-600 tracking-wider leading-relaxed pb-4 sm:px-8 mt-4">
             <li>
               We will start by ensuring our form is accessible and pleasant to look at using <TextLink
                 to="https://github.com/tailwindlabs/tailwindcss-forms"
@@ -93,7 +95,7 @@ const FirstPostTestPage: FC<ReactNode> = () => {
                 Tailwind CSS
               </TextLink>] plugin that provides a basic reset for form styles that makes form elements easy to override with [Tailwind CSS] utilities."
             </li>
-            <li className="mt-3">
+            <li className="mt-4">
               We will then look at how to implement real-time form validation using <TextLink
                 to="https://react-hook-form.com/"
                 external={true}
@@ -101,7 +103,7 @@ const FirstPostTestPage: FC<ReactNode> = () => {
                 React Hook Form
               </TextLink>; a super light, performant, and easy-to-use form validation library.
             </li>
-            <li className="mt-3">
+            <li className="mt-4">
               Finally, we will see how to handle form submissions using <TextLink
               to="https://www.netlify.com/products/forms/"
               external={true}
@@ -111,13 +113,12 @@ const FirstPostTestPage: FC<ReactNode> = () => {
             </li>
           </ol>
 
+        </Section>
+        <Section className="mb-8">
 
 
-          <p className="text-gray-600 tracking-wider leading-relaxed mt-3">
 
-            <br />
-
-            <br />
+          <p className="text-gray-600 tracking-wider leading-relaxed mt-4">
 
           </p>
 
