@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 
 import Avatar from '../components/avatar'
 import Banner from '../components/banner'
-import Button from '../components/button'
+// import Button from '../components/button'
 import ContactForm from '../components/contact-form'
 import Layout from '../components/layout'
 import TextLink from '../components/text-link'
@@ -27,8 +27,8 @@ const AboutPage: FC<ReactNode> = () => {
       <Main>
         <Section className="-mt-10 mb-8 pb-12">
           <Avatar />
-          <i className="fal fa-triangle text-yellow-300 absolute -right-4 -top-10 text-6xl sm:-right-12 sm:-top-12 sm:text-7xl lg:-right-16 lg:-top-10 lg:text-8xl transofrm rotate-12 transform-gpu"></i>
-          <i className="fal fa-triangle text-emerald-300 absolute -left-8 top-52 text-5xl sm:-left-12 sm:top-40 sm:text-6xl lg:-left-10 lg:top-36 lg:text-7xl transofrm -rotate-12 transform-gpu"></i>
+          <i className="fal fa-triangle text-yellow-300 absolute -left-4 -top-8 text-6xl sm:-left-8 sm:-top-10 sm:text-7xl lg:-left-8 lg:-top-14 lg:text-8xl transofrm -rotate-90 transform-gpu"></i>
+          <i className="fal fa-bolt text-emerald-300 absolute -right-2 bottom-64 text-6xl sm:-right-4 sm:bottom-48 sm:text-7xl lg:-right-4 lg:bottom-48 lg:text-8xl transofrm rotate-12 transform-gpu"></i>
           <h2 className="text-gray-700 text-xl mt-10 tracking-wide">Current Work</h2>
           <p className="text-gray-600 tracking-wider leading-relaxed mt-3">
             I work for a nonprofit organization, <TextLink to="https://bscs.org/" external={true}>BSCS Science Learning</TextLink>, whose mission is to transform science teaching and learning through research-driven innovation.
@@ -62,7 +62,7 @@ const AboutPage: FC<ReactNode> = () => {
             >
               University of Michigan
             </TextLink>
-            <p className="text-gray-600 tracking-wider leading-relaxed">
+            <p className="text-gray-600 tracking-wider leading-relaxed hidden sm:block">
               Ann Arbor, MI
             </p>
           </div>
@@ -72,18 +72,15 @@ const AboutPage: FC<ReactNode> = () => {
                 <TextLink
                   to="https://en.wikipedia.org/wiki/Master_of_Science#United_States"
                   external={true}
-                >M.S.</TextLink> Atmospheric and Space Science
-              </p>
-              <p className="text-gray-600 tracking-wider leading-relaxed">
-                <TextLink
+                >M.S.</TextLink> <TextLink
                   to="https://clasp.engin.umich.edu/"
                   external={true}
-                >https://clasp.engin.umich.edu/</TextLink>
+                >Atmospheric and Space Science</TextLink>
               </p>
             </div>
             <p className="text-gray-500 tracking-wider leading-relaxed hidden sm:block">05/2014</p>
           </div>
-          <p className="text-gray-600 tracking-wider leading-relaxed hidden sm:block mt-3 mx-6">
+          <p className="text-gray-600 tracking-wider leading-relaxed mt-3 mx-6">
             My studies focused on the theory of plasma physics, electromagnetism, fluid dynamics, atmospheric radiative transfer and their applications to solar physics and planetary science.
           </p>
 
@@ -93,18 +90,15 @@ const AboutPage: FC<ReactNode> = () => {
                 <TextLink
                   to="https://en.wikipedia.org/wiki/Graduate_certificate#United_States"
                   external={true}
-                >GradCert</TextLink> Computational Discovery and Engineering
-              </p>
-              <p className="text-gray-600 tracking-wider leading-relaxed">
-                <TextLink
+                >GradCert</TextLink> <TextLink
                   to="https://micde.umich.edu/"
                   external={true}
-                >https://micde.umich.edu/</TextLink>
+                >Computational Discovery and Engineering</TextLink>
               </p>
             </div>
             <p className="text-gray-500 tracking-wider leading-relaxed hidden sm:block">07/2014</p>
           </div>
-          <p className="text-gray-600 tracking-wider leading-relaxed hidden sm:block mt-3 mx-6">
+          <p className="text-gray-600 tracking-wider leading-relaxed mt-3 mx-6">
             Emphasis was placed on numerical analysis, algorithms, and computational techniques for solving and analyzing physics and engineering problems.
           </p>
 
@@ -116,7 +110,7 @@ const AboutPage: FC<ReactNode> = () => {
             >
               University of Colorado
             </TextLink>
-            <p className="text-gray-600 tracking-wider leading-relaxed">
+            <p className="text-gray-600 tracking-wider leading-relaxed hidden sm:block">
               Boulder, CO
             </p>
           </div>
@@ -127,18 +121,15 @@ const AboutPage: FC<ReactNode> = () => {
                 <TextLink
                   to="https://en.wikipedia.org/wiki/Bachelor%27s_degree"
                   external={true}
-                >B.A.</TextLink> Physics
-              </p>
-              <p className="text-gray-600 tracking-wider leading-relaxed">
-                <TextLink
+                >B.A.</TextLink> <TextLink
                   to="https://www.colorado.edu/physics/"
                   external={true}
-                >https://www.colorado.edu/physics/</TextLink>
+                >Physics</TextLink>
               </p>
             </div>
             <p className="text-gray-500 tracking-wider leading-relaxed hidden sm:block">08/2010</p>
           </div>
-          <p className="text-gray-600 tracking-wider leading-relaxed hidden sm:block mt-3 mx-6">
+          <p className="text-gray-600 tracking-wider leading-relaxed mt-3 mx-6">
             I gained a strong foundation in classical mechanics, modern physics, electromagnetics, quantum mechanics, thermodynamics, condensed matter physics, nuclear & particle physics, plasma physics, circuit theory & design, and certified to design and machine custom parts for laboratory experiments in the physics departments state of the art machine shop.
           </p>
 
@@ -148,18 +139,15 @@ const AboutPage: FC<ReactNode> = () => {
                 <TextLink
                   to="https://en.wikipedia.org/wiki/Bachelor%27s_degree"
                   external={true}
-                >B.A.</TextLink> Astrophysical, Planetary, and Atmospheric Science
-              </p>
-              <p className="text-gray-600 tracking-wider leading-relaxed">
-                <TextLink
+                >B.A.</TextLink> <TextLink
                   to="https://www.colorado.edu/aps/"
                   external={true}
-                >https://www.colorado.edu/aps/</TextLink>
+                >Astrophysical, Planetary, and Atmospheric Science</TextLink>
               </p>
             </div>
             <p className="text-gray-500 tracking-wider leading-relaxed hidden sm:block">08/2010</p>
           </div>
-          <p className="text-gray-600 tracking-wider leading-relaxed hidden sm:block mt-3 mx-6">
+          <p className="text-gray-600 tracking-wider leading-relaxed mt-3 mx-6">
             I studied, in-depth, the current understanding of most astrophysical phenomena such as geophysics, atmospheric & planetary science, stellar structure & evolution, galaxies, neutron stars, and black holes.
           </p>
 

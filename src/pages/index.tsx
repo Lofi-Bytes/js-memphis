@@ -44,7 +44,7 @@ const HomePage: FC<ReactNode> = () => {
         <Section className="-mt-10 mb-8">
           <Avatar />
           <i className="fal fa-stop text-cyan-300 absolute -right-3 -top-10 text-6xl sm:-right-6 sm:-top-10 sm:text-7xl lg:-right-14 lg:-top-8 lg:text-8xl transofrm rotate-12 transform-gpu"></i>
-          <i className="fal fa-triangle text-emerald-300 absolute -left-5 top-52 text-5xl sm:-left-12 sm:top-40 sm:text-6xl lg:-left-10 lg:top-36 lg:text-7xl transofrm -rotate-12 transform-gpu"></i>
+          <i className="fal fa-triangle text-emerald-300 absolute -left-2 top-52 text-5xl sm:-left-4 sm:top-48 sm:text-6xl lg:-left-6 lg:top-36 lg:text-7xl transofrm rotate-45 transform-gpu"></i>
           <h2 className="text-gray-800 text-2xl mt-10 tracking-wide">Jillian S. Estrella <br className="sm:hidden" /><span className="text-gray-500 text-xl">🏳️‍🌈 she/her 🏳️‍⚧️</span></h2>
           <p className="text-gray-500 text-xl tracking-wider leading-relaxed mt-1">
             Front End Systems Designer &amp; Architect
