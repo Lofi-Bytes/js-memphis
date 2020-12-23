@@ -172,7 +172,7 @@ const AboutPage: FC<ReactNode> = () => {
         </Section>
 
         <Section>
-          <div className="bg-cyan-300 w-max py-2 pl-10 pr-4 -ml-10 sm:px-24 sm:-ml-24 rounded shadow-lg">
+          <div className="bg-cyan-300 w-max py-2 pl-10 pr-4 -ml-10 sm:px-24 sm:-ml-24 rounded shadow-lg max-w-xs sm:max-w-none">
             <h2 className="text-gray-800 text-xl sm:text-2xl tracking-wide">Interested in collaborating?</h2>
           </div>
           <div className="md:w-10/12 mx-auto">
