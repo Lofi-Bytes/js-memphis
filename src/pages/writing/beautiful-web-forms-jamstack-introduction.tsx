@@ -8,9 +8,9 @@ import TextLink from '../../components/text-link'
 import Section from '../../components/section'
 import SEO from '../../components/seo'
 import Main from '../../components/main'
+import NextButton from '../../components/next-button'
 
 import Prism from 'prismjs'
-import NextButton from '../../components/next-button'
 
 
 const BeautifulFormsJamstackIntroductionPage: FC<ReactNode> = () => {
@@ -128,6 +128,7 @@ const BeautifulFormsJamstackIntroductionPage: FC<ReactNode> = () => {
           </p>
           <div className="mt-4">
             <NextButton
+              action="primary"
               path={path}
             >
               Let's Get Started&nbsp;&nbsp;<i className="far fa-chevron-right"></i>

@@ -4,27 +4,27 @@ import { useStaticQuery, graphql } from 'gatsby'
 import Button from '../button'
 
 
-type NextButtonProps = {
+type PreviousButtonProps = {
   action: 'primary' | 'secondary',
   children: ReactNode,
   path: string,
   className?: string
 }
 
-const NextButton: FC<NextButtonProps> = ({
+const PreviousButton: FC<PreviousButtonProps> = ({
   action,
   children,
   path,
   className
-}: NextButtonProps) => {
+}: PreviousButtonProps) => {
   const postData = useStaticQuery(graphql`
-    query NextQuery {
+    query PreviousQuery {
       allPostsJson(sort: {fields: date, order: ASC}) {
         edges {
           node {
             path
           }
-          next {
+          previous {
             subtitle
             path
           }
@@ -32,25 +32,20 @@ const NextButton: FC<NextButtonProps> = ({
       }
     }
   `)
-  // console.log(path)
-  // console.log(postData.allPostsJson)
-
-
 
   return (
     <>
       {
         postData.allPostsJson.edges.map((edge, index) => {
-          let nextPath
-          if(edge.node.path === path && edge.next) {
-            nextPath = edge.next.path
-            // console.log(edge.next.path)
+          let previousPath
+          if(edge.node.path === path && edge.previous) {
+            previousPath = edge.previous.path
             return(
               <Button
                 action={action}
                 disabled={false}
                 title=""
-                to={nextPath}
+                to={previousPath}
                 key={index}
               >
                 {children}
@@ -64,4 +59,4 @@ const NextButton: FC<NextButtonProps> = ({
   )
 }
 
-export default NextButton
+export default PreviousButton
