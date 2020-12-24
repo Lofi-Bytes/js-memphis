@@ -1,6 +1,7 @@
 import React, { FC, ReactNode, useEffect } from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 
+import Alert from '../../components/alert'
 import Banner from '../../components/banner'
 import Layout from '../../components/layout'
 import TextLink from '../../components/text-link'
@@ -11,40 +12,6 @@ import Main from '../../components/main'
 import Prism from 'prismjs'
 import NextButton from '../../components/next-button'
 
-
-const install =
-`# Using npm
-npm install @tailwindcss/forms
-
-# Using Yarn
-yarn add @tailwindcss/forms`
-
-const tailwindConfig =
-`module.exports = {
-  theme: {
-    // ...
-  },
-  plugins: [
-    require('@tailwindcss/forms'),
-    // ...
-  ],
-}`
-
-const initialForm =
-`<div className="grid grid-cols-1 gap-6">
-  <label className="block">
-    <span className="text-gray-700">Name</span>
-    <input type="text" className="mt-0 block w-full px-0.5 border-0 border-b-2 border-gray-200 focus:ring-0 focus:border-black" placeholder="">
-  </label>
-  <label className="block">
-    <span className="text-gray-700">Email</span>
-    <input type="email" className="mt-0 block w-full px-0.5 border-0 border-b-2 border-gray-200 focus:ring-0 focus:border-black" placeholder="">
-  </label>
-  <label className="block">
-    <span className="text-gray-700">Message</span>
-    <textarea className="mt-0 block w-full px-0.5 border-0 border-b-2 border-gray-200 focus:ring-0 focus:border-black" rows={4}></textarea>
-  </label>
-</div>`
 
 const BeautifulFormsJamstackIntroductionPage: FC<ReactNode> = () => {
   const postData = useStaticQuery(graphql`
@@ -101,10 +68,18 @@ const BeautifulFormsJamstackIntroductionPage: FC<ReactNode> = () => {
           <div className="bg-rose-300 w-max py-2 px-10 -ml-10 sm:px-24 sm:-ml-24 rounded shadow-lg max-w-xs sm:max-w-none">
             <h2 className="text-gray-800 text-xl sm:text-2xl tracking-wide">Series Introduction</h2>
           </div>
-          <div className="flex border-l-4 bg-blue-100 border-blue-400 py-4 px-8 rounded shadow-lg mt-8">
+
+          {/* <div className="flex border-l-4 bg-blue-100 border-blue-400 py-4 px-8 rounded shadow-lg mt-8">
             <i className="far fa-info-circle text-xl text-blue-900 mt-0.5"></i>
             <p className="text-blue-900 ml-4 tracking-wider leading-relaxed">This series assumes the reader has an intermediate understanding of React JS and Tailwind CSS.</p>
-          </div>
+          </div> */}
+
+          <Alert
+
+          >
+            This series assumes the reader has an intermediate understanding of React JS and Tailwind CSS.
+          </Alert>
+
           <p className="text-gray-600 tracking-wider leading-relaxed mt-8">
             Web forms are arguably one of the most important tools in web development and design. They drive conversions and bridge the communication gap between you and your audience. When implemented poorly, they can serve to frustrate and alienate your audience. Good designers always seek to make forms as simple as possible. Reducing friction for one's audience increases conversion potential and makes web sites/apps more pleasant to use.
           </p>
