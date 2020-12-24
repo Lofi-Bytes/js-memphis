@@ -1,6 +1,19 @@
 [
   {
     "title": "Beautiful Web Forms on the Jamstack",
+    "subtitle": "",
+    "path": "/writing/beautiful-web-forms-jamstack-introduction",
+    "excerpt": "",
+    "date": "Dec. 20th, 2020",
+    "tags": [
+      "Tailwind CSS",
+      "React",
+      "TypeScript",
+      "Jamstack"
+    ]
+  },
+  {
+    "title": "Beautiful Web Forms on the Jamstack",
     "subtitle": "With Tailwind CSS",
     "path": "/writing/beautiful-web-forms-jamstack-tailwindcss",
     "excerpt": "",
@@ -17,7 +30,7 @@
     "subtitle": "With React Hook Form",
     "path": "/writing/beautiful-web-forms-jamstack-react-hook-form",
     "excerpt": "",
-    "date": "Dec. 21st, 2020",
+    "date": "Dec. 22nd, 2020",
     "tags": [
       "React Hook Form",
       "React",
@@ -30,7 +43,7 @@
     "subtitle": "With Netlify Forms",
     "path": "/writing/beautiful-web-forms-jamstack-netlify-forms",
     "excerpt": "",
-    "date": "Dec. 21st, 2020",
+    "date": "Dec. 23rd, 2020",
     "tags": [
       "Netlify Forms",
       "React",

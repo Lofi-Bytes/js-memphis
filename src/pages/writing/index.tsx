@@ -12,7 +12,7 @@ import Tag from '../../components/tag'
 const WritingPostListPage: FC<ReactNode> = () => {
   const postListData = useStaticQuery(graphql`
     query WritingPostListNavigationQuery {
-      allPostsJson {
+      allPostsJson(sort: {fields: date, order: DESC}) {
         edges {
           node {
             title
