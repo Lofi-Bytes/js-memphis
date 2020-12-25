@@ -12,10 +12,9 @@
         "graphql"
       ],
       "plugins": [
-        "show-language",
         "line-numbers"
       ],
-      "theme": "okaidia",
+      "theme": "coy",
       "css": true
     }]
   ]

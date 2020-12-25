@@ -110,7 +110,7 @@ const PRIMARY: string = `
 const SECONDARY: string = `
   ${SECONDARY_BASE}
   bg-purple-50
-  text-purple-900
+  text-purple-600
   font-medium
 
   ring-offset-purple-300

@@ -229,9 +229,10 @@ html {
   }
 }
 
-pre[class*="language-"] {
-  padding-bottom: 2.5rem !important;
-  padding-top: 2.5rem !important;
+pre {
+  /* padding-bottom: 2.5rem !important;
+  padding-top: 2.5rem !important; */
+  border: none !important;
 }
 
 .line-numbers .line-numbers-rows {
@@ -241,6 +242,8 @@ pre[class*="language-"] {
 pre[class*="language-"] > code {
   max-height: 32em;
   overflow: auto;
+  box-shadow: none !important;
+  border-left: none !important;
 }
 
 @tailwind utilities;

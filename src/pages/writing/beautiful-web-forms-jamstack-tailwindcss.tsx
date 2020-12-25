@@ -111,7 +111,12 @@ const BeautifulFormsJamstackTailwindCSSPage: FC<ReactNode> = () => {
           <p className="text-gray-600 tracking-wider leading-relaxed mt-3">
             Starting with @tailwindcss/forms is fairly routine. Install the plugin:
           </p>
-          <div className="code-container mt-4">
+          <div className="code-container shadow mt-4 bg-gray-50 rounded-lg p-1 pt-3 border-l-8 border-blue-500">
+            <div
+              className="text-lg text font-thin font-mono w-max rounded-tr-xl rounded-bl-xl px-4 ml-3 bg-gray-900 text-gray-50 shadow-md"
+            >
+              zsh
+            </div>
             <pre>
               <code className="language-bash">{install}</code>
             </pre>
@@ -119,7 +124,15 @@ const BeautifulFormsJamstackTailwindCSSPage: FC<ReactNode> = () => {
           <p className="text-gray-600 tracking-wider leading-relaxed mt-8">
             Then add the plugin to your <code className="language-bash">tailwind.config.js</code> file:
           </p>
-          <div className="code-container mt-4">
+          <div className="code-container shadow mt-4 bg-gray-50 rounded-lg p-1 pt-3 border-l-8 border-blue-500">
+            <div
+              className="text-lg text font-thin font-mono w-max rounded-tr-xl rounded-bl-xl px-4 ml-3 shadow-md"
+              style={{
+                backgroundColor: '#f7df1e'
+              }}
+            >
+              JS
+            </div>
             <pre>
               <code className="language-javascript">{tailwindConfig}</code>
             </pre>
@@ -128,15 +141,23 @@ const BeautifulFormsJamstackTailwindCSSPage: FC<ReactNode> = () => {
           <p className="text-gray-600 tracking-wider leading-relaxed mt-3">
             I found that the easiest way to get started is to look at the provided <TextLink to="https://tailwindcss-forms.vercel.app/" external={true}>live demo examples</TextLink>. For this post, we will recreate the contact form on the homepage of jillian.dev. We will start by simply copying the underline-style form example and modify the fields as needed (also adjusting the HTML to be valid JSX/TSX):
           </p>
-          <div className="code-container mt-4">
+          <div className="code-container shadow mt-4 bg-gray-50 rounded-lg p-1 pt-3 border-l-8 border-blue-500">
+            <div
+              className="text-lg text font-thin font-mono w-max rounded-tl-sm rounded-tr-xl rounded-bl-xl rounded-br-sm px-4 ml-3 shadow-md text-gray-50"
+              style={{
+                backgroundColor: '#007ACC'
+              }}
+            >
+              TSX
+            </div>
             <pre>
-              <code className="language-tsx">{initialForm}</code>
+              <code className="language-tsx line-numbers">{initialForm}</code>
             </pre>
           </div>
           <p className="text-gray-600 tracking-wider leading-relaxed mt-8">
             Which should display like this:
           </p>
-          <div className="bg-white shadow-lg rounded px-8 py-4 mt-4" style={{ backgroundColor: 'white' }}>
+          <div className="bg-white shadow rounded px-8 py-4 mt-4" style={{ backgroundColor: 'white' }}>
             <div className="grid grid-cols-1 gap-6">
               <label className="block">
                 <span className="text-gray-700">Name</span>
@@ -163,7 +184,7 @@ const BeautifulFormsJamstackTailwindCSSPage: FC<ReactNode> = () => {
               action="primary"
               path={path}
             >
-              Let's Get Started&nbsp;&nbsp;<i className="far fa-chevron-right"></i>
+              Next&nbsp;&nbsp;<i className="far fa-chevron-right"></i>
             </NextButton>
           </div>
         </Section>

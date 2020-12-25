@@ -24,5 +24,18 @@
       "TypeScript",
       "Jamstack"
     ]
+  },
+  {
+    "title": "Beautiful Web Forms on the Jamstack",
+    "subtitle": "With React Hook Form",
+    "path": "/writing/beautiful-web-forms-jamstack-react-hook-form",
+    "excerpt": "",
+    "date": "Dec. 22nd, 2020",
+    "tags": [
+      "React Hook Form",
+      "React",
+      "TypeScript",
+      "Jamstack"
+    ]
   }
 ]
