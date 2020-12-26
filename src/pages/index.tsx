@@ -20,7 +20,7 @@ const HomePage: FC<ReactNode> = () => {
       />
       <Banner
         title={<span className="js text-5xl leading-relaxed md:text-6xl md:leading-loose lg:text-7xl lg:leading-relaxed">Jillian Serenity</span>}
-        subTitle={
+        subtitle={
           <>
             <span className="hidden sm:inline-block">
               <i className="fal fa-narwhal text-pink-200"></i>&nbsp;&nbsp;

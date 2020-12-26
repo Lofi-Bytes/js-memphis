@@ -79,7 +79,7 @@ const ContactPage: FC = () => {
             </span>
           </>
         }
-        // subTitle={<span className="text-teal-100">Designer, Full Stack Developer, &amp; Tech Lead</span>}
+        // subtitle={<span className="text-teal-100">Designer, Full Stack Developer, &amp; Tech Lead</span>}
       />
       <Main>
         <Section className="-mt-12 mb-8">

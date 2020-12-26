@@ -22,7 +22,7 @@ const AboutPage: FC<ReactNode> = () => {
       />
       <Banner
         title={<span className="js text-5xl leading-relaxed md:text-6xl md:leading-loose lg:text-7xl lg:leading-relaxed">About Me</span>}
-        // subTitle={}
+        // subtitle={}
       />
       <Main>
         <Section className="-mt-10 mb-8 pb-12">
