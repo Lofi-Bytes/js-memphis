@@ -1,5 +1,4 @@
 import React, { FC, ReactNode, useState, useEffect } from 'react'
-import { Location } from '@reach/router'
 
 import Footer from '../footer'
 import Header from '../header'
@@ -30,7 +29,8 @@ type LayoutProps = {
 }
 
 const Layout: FC<LayoutProps> = ({
-  children
+  children,
+  location
 }: LayoutProps) => {
   const [height, setHeight] = useState(getDocumentHeight)
   const [width, setWidth] = useState(getWindowInnerWidth)
