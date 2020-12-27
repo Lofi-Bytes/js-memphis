@@ -1,4 +1,4 @@
-import React, { FC, ReactNode } from 'react'
+import React, { FC } from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 
 import Banner from '../../components/banner'
@@ -9,7 +9,13 @@ import Main from '../../components/main'
 import Tag from '../../components/tag'
 
 
-const ProjectsListPage: FC<ReactNode> = () => {
+type PageProps = {
+  location: Location
+}
+
+const ProjectsListPage: FC<PageProps> = ({
+  location
+}: PageProps) => {
   const projectsListData = useStaticQuery(graphql`
     query ProjectsListNavigationQuery {
       allProjectsJson {
@@ -26,7 +32,7 @@ const ProjectsListPage: FC<ReactNode> = () => {
     }
   `)
   return (
-    <Layout>
+    <Layout location={location}>
       <SEO
         metaTitle=""
         metaDescription=""
@@ -36,16 +42,16 @@ const ProjectsListPage: FC<ReactNode> = () => {
         title={
           <>
             <span className="hidden sm:inline-block">
-              <i className="text-4xl leading-relaxed fal fa-code-branch text-amber-300 md:text-5xl md:leading-loose lg:text-5xl lg:leading-relaxed"></i>&nbsp;&nbsp;
+              <i className="text-4xl leading-relaxed fal fa-code-branch text-amber-300 md:text-5xl md:leading-loose lg:text-5xl lg:leading-relaxed" />&nbsp;&nbsp;
             </span>
             <span className="text-5xl leading-relaxed js md:text-6xl md:leading-loose lg:text-7xl lg:leading-relaxed">
             Selected Projects
             </span>
             <span className="hidden sm:inline-block">
-              &nbsp;&nbsp;<i className="text-4xl leading-relaxed text-teal-300 fal fa-code-merge md:text-5xl md:leading-loose lg:text-5xl lg:leading-relaxed"></i>
+              &nbsp;&nbsp;<i className="text-4xl leading-relaxed text-teal-300 fal fa-code-merge md:text-5xl md:leading-loose lg:text-5xl lg:leading-relaxed" />
             </span>
             <span className="block mt-3 sm:hidden">
-              <i className="text-4xl fal fa-code-branch text-amber-300"></i>&nbsp;&nbsp;<i className="text-4xl text-teal-300 fal fa-code-merge"></i>
+              <i className="text-4xl fal fa-code-branch text-amber-300" />&nbsp;&nbsp;<i className="text-4xl text-teal-300 fal fa-code-merge" />
             </span>
           </>
         }

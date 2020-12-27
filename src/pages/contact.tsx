@@ -7,13 +7,18 @@ import { encode } from '../utils/utils'
 import Banner from '../components/banner'
 import Button from '../components/button'
 import Layout from '../components/layout'
-import TextLink from '../components/text-link'
 import Section from '../components/section'
 import SEO from '../components/seo'
 import Main from '../components/main'
 
 
-const ContactPage: FC = () => {
+type PageProps = {
+  location: Location
+}
+
+const ContactPage: FC<PageProps> = ({
+  location
+}: PageProps) => {
   const {
     register,
     handleSubmit,
@@ -56,7 +61,7 @@ const ContactPage: FC = () => {
       })
   }
   return (
-    <Layout>
+    <Layout location={location}>
       <SEO
         metaTitle=""
         metaDescription=""
@@ -66,16 +71,16 @@ const ContactPage: FC = () => {
         title={
           <>
             <span className="hidden sm:inline-block">
-              <i className="text-4xl leading-relaxed fal fa-paper-plane text-gray-50 md:text-5xl md:leading-loose lg:text-5xl lg:leading-relaxed"></i>&nbsp;&nbsp;
+              <i className="text-4xl leading-relaxed fal fa-paper-plane text-gray-50 md:text-5xl md:leading-loose lg:text-5xl lg:leading-relaxed" />&nbsp;&nbsp;
             </span>
             <span className="text-5xl leading-relaxed js md:text-6xl md:leading-loose lg:text-7xl lg:leading-relaxed">
               Send Me a Message
             </span>
             <span className="hidden sm:inline-block">
-              &nbsp;&nbsp;<i className="text-4xl leading-relaxed fal fa-mailbox text-gray-50 md:text-5xl md:leading-loose lg:text-5xl lg:leading-relaxed"></i>
+              &nbsp;&nbsp;<i className="text-4xl leading-relaxed fal fa-mailbox text-gray-50 md:text-5xl md:leading-loose lg:text-5xl lg:leading-relaxed" />
             </span>
             <span className="block sm:hidden">
-              <i className="text-4xl fal fa-paper-plane text-gray-50"></i>&nbsp;&nbsp;<i className="text-4xl fal fa-mailbox text-gray-50"></i>
+              <i className="text-4xl fal fa-paper-plane text-gray-50" />&nbsp;&nbsp;<i className="text-4xl fal fa-mailbox text-gray-50" />
             </span>
           </>
         }

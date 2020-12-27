@@ -11,7 +11,14 @@ import NextPrev from '../../components/next-prev'
 
 import Prism from 'prismjs'
 
-const BeautifulWebFormsJamstackReactHookFormPage: FC<ReactNode> = () => {
+
+type PageProps = {
+  location: Location
+}
+
+const BeautifulWebFormsJamstackReactHookFormPage: FC<PageProps> = ({
+  location
+}: PageProps) => {
   const postData = useStaticQuery(graphql`
     query BeautifulWebFormsJamstackReactHookFormQuery {
       allPostsJson(
@@ -48,7 +55,7 @@ const BeautifulWebFormsJamstackReactHookFormPage: FC<ReactNode> = () => {
   })
 
   return (
-    <Layout>
+    <Layout location={location}>
       <SEO
         metaTitle=""
         metaDescription=""

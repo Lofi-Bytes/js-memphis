@@ -1,9 +1,7 @@
 import React, { FC, ReactNode } from 'react'
-import { Link } from 'gatsby'
 
 import Avatar from '../components/avatar'
 import Banner from '../components/banner'
-// import Button from '../components/button'
 import ContactForm from '../components/contact-form'
 import Layout from '../components/layout'
 import TextLink from '../components/text-link'
@@ -12,9 +10,15 @@ import SEO from '../components/seo'
 import Main from '../components/main'
 
 
-const AboutPage: FC<ReactNode> = () => {
+type PageProps = {
+  location: Location
+}
+
+const AboutPage: FC<PageProps> = ({
+  location
+}: PageProps) => {
   return (
-    <Layout>
+    <Layout location={location}>
       <SEO
         metaTitle=""
         metaDescription=""
@@ -27,8 +31,8 @@ const AboutPage: FC<ReactNode> = () => {
       <Main>
         <Section className="pb-12 mb-8 -mt-10">
           <Avatar />
-          <i className="absolute text-6xl text-yellow-300 -rotate-90 fal fa-triangle -left-4 -top-8 sm:-left-8 sm:-top-10 sm:text-7xl lg:-left-8 lg:-top-14 lg:text-8xl transofrm transform-gpu"></i>
-          <i className="absolute text-6xl fal fa-bolt text-emerald-300 -right-2 bottom-64 sm:-right-4 sm:bottom-48 sm:text-7xl lg:-right-4 lg:bottom-48 lg:text-8xl transofrm rotate-12 transform-gpu"></i>
+          <i className="absolute text-6xl text-yellow-300 -rotate-90 fal fa-triangle -left-4 -top-8 sm:-left-8 sm:-top-10 sm:text-7xl lg:-left-8 lg:-top-14 lg:text-8xl transofrm transform-gpu" />
+          <i className="absolute text-6xl fal fa-bolt text-emerald-300 -right-2 bottom-64 sm:-right-4 sm:bottom-48 sm:text-7xl lg:-right-4 lg:bottom-48 lg:text-8xl transofrm rotate-12 transform-gpu" />
           <h2 className="mt-10 text-xl tracking-wide text-gray-700">Current Work</h2>
           <p className="mt-3 leading-relaxed tracking-wider text-gray-600">
             I work for a nonprofit organization, <TextLink to="https://bscs.org/" external={true}>BSCS Science Learning</TextLink>, whose mission is to transform science teaching and learning through research-driven innovation.
@@ -37,7 +41,7 @@ const AboutPage: FC<ReactNode> = () => {
             At BSCS Science Learning, we operate on federal and private grants. The nature of this work requires our small team to build many websites and web apps every year. To keep up with demaind, we must ensure that our infrastructure is agile enough to meet the needs of a diverse range of projects while staying within budget, meeting strict deadlines, and reducing both the cost of ongoing maintenance and technical debt.
           </p> */}
           <p className="mt-4 leading-relaxed tracking-wider text-gray-600">
-            A critical part of my role within the organization is to continually improve developer experience, designer experience, <em>and</em> <TextLink to="https://medium.com/s/user-friendly/why-im-done-saying-user-user-experience-and-ux-in-2019-4fdfc6b7de23" external={true}>audience</TextLink> experience. During my time with BSCS, I have overseen the adoption of innovative approaches to software and design such as <i className="text-pink-300 fas fa-heart"></i> <TextLink to="https://www.invisionapp.com/inside-design/guide-to-design-systems/" external={true}>design systems</TextLink>, <TextLink to="https://medium.com/omarelgabrys-blog/component-based-architecture-3c3c23c7e348" external={true}>component based</TextLink>, <TextLink to="https://martinfowler.com/articles/serverless.html" external={true}>serverless</TextLink>, <TextLink to="https://martinfowler.com/articles/microservices.html" external={true}> and microservice</TextLink> architectures, and the beloved <i className="text-pink-300 fas fa-heart"></i> <TextLink to="https://jamstack.org/" external={true}>Jamstack</TextLink>.
+            A critical part of my role within the organization is to continually improve developer experience, designer experience, <em>and</em> <TextLink to="https://medium.com/s/user-friendly/why-im-done-saying-user-user-experience-and-ux-in-2019-4fdfc6b7de23" external={true}>audience</TextLink> experience. During my time with BSCS, I have overseen the adoption of innovative approaches to software and design such as <i className="text-pink-300 fas fa-heart" /> <TextLink to="https://www.invisionapp.com/inside-design/guide-to-design-systems/" external={true}>design systems</TextLink>, <TextLink to="https://medium.com/omarelgabrys-blog/component-based-architecture-3c3c23c7e348" external={true}>component based</TextLink>, <TextLink to="https://martinfowler.com/articles/serverless.html" external={true}>serverless</TextLink>, <TextLink to="https://martinfowler.com/articles/microservices.html" external={true}> and microservice</TextLink> architectures, and the beloved <i className="text-pink-300 fas fa-heart" /> <TextLink to="https://jamstack.org/" external={true}>Jamstack</TextLink>.
           </p>
 
           {/* <p className="mt-4 leading-relaxed tracking-wider text-gray-600">

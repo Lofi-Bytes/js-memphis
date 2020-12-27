@@ -24,7 +24,8 @@ import 'font-proxima-nova/style.css'
 
 
 type LayoutProps = {
-  children: ReactNode
+  children: ReactNode,
+  location: Location
 }
 
 const Layout: FC<LayoutProps> = ({
@@ -117,9 +118,9 @@ const Layout: FC<LayoutProps> = ({
         className="relative flex flex-col justify-between"
       >
         <div className="z-10">
-          <Header />
+          <Header location={location} />
             {children}
-          <Footer />
+          <Footer location={location} />
         </div>
       </div>
     </React.Fragment>

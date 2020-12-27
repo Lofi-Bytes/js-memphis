@@ -150,9 +150,9 @@ const ContactForm: FC = ({}) => {
                   (errors.name && errors.name.type === "minLength") ||
                   (errors.name && errors.name.type === "maxLength")
                   ?
-                    "error text-red-600 mt-1 opacity-100 transition-opacity duration-200 delay-75"
+                    "error text-red-600 mt-1 opacity-100 transition-opacity duration-200 delay-75 text-sm"
                   :
-                    "error text-red-600 mt-1 opacity-0 transition-opacity duration-200 delay-75"
+                    "error text-red-600 mt-1 opacity-0 transition-opacity duration-200 delay-75 text-sm"
                 }
                 aria-hidden={
                   (errors.name && errors.name.type === "required") ||
@@ -176,17 +176,17 @@ const ContactForm: FC = ({}) => {
                 {
                   errors.name && errors.name.type === "required"
                     ?
-                      <p className="text-sm">Please enter your name.</p>
+                      <>Please enter your name.</>
                     :
                       errors.name && errors.name.type === "minLength"
                         ?
-                          <p className="text-sm">Your name must be at least 2 characters.</p>
+                          <>Your name must be at least 2 characters.</>
                         :
                           errors.name && errors.name.type === "maxLength"
                             ?
-                              <p className="text-sm">Your name must be less than 100 characters.</p>
+                              <>Your name must be less than 100 characters.</>
                             :
-                              <p className="text-sm">&nbsp;</p>
+                              <>&nbsp;</>
                 }
               </p>
             </label>
@@ -243,9 +243,9 @@ const ContactForm: FC = ({}) => {
                   (errors.email && errors.email.type === "required") ||
                   (errors.email && errors.email.type === "minLength")
                   ?
-                    "error text-red-600 mt-1 opacity-100 transition-opacity duration-200 delay-75"
+                    "error text-red-600 mt-1 opacity-100 transition-opacity duration-200 delay-75 text-sm"
                   :
-                    "error text-red-600 mt-1 opacity-0 transition-opacity duration-200 delay-75"
+                    "error text-red-600 mt-1 opacity-0 transition-opacity duration-200 delay-75 text-sm"
                 }
                 aria-hidden={
                   (errors.email && errors.email.type === "required") ||
@@ -267,13 +267,13 @@ const ContactForm: FC = ({}) => {
                 {
                   errors.email && errors.email.type === "required"
                     ?
-                      <p className="text-sm">Please enter your email.</p>
+                      <>Please enter your email.</>
                     :
                       errors.email && errors.email.type === "pattern"
                         ?
-                          <p className="text-sm">Please enter a valid email address.</p>
+                          <>Please enter a valid email address.</>
                         :
-                          <p className="text-sm">&nbsp;</p>
+                          <>&nbsp;</>
                 }
               </p>
             </label>
@@ -340,9 +340,9 @@ const ContactForm: FC = ({}) => {
                   (errors.message && errors.message.type === "minLength") ||
                   (errors.message && errors.message.type === "maxLength")
                   ?
-                    "error text-red-600 mt-1 opacity-100 transition-opacity duration-200 delay-75"
+                    "error text-red-600 mt-1 opacity-100 transition-opacity duration-200 delay-75 text-sm"
                   :
-                    "error text-red-600 mt-1 opacity-0 transition-opacity duration-200 delay-75"
+                    "error text-red-600 mt-1 opacity-0 transition-opacity duration-200 delay-75 text-sm"
                 }
                 aria-hidden={
                   (errors.message && errors.message.type === "required") ||
@@ -366,17 +366,17 @@ const ContactForm: FC = ({}) => {
                 {
                   errors.message && errors.message.type === "required"
                     ?
-                      <p className="text-sm">Please enter a message.</p>
+                      <>Please enter a message.</>
                     :
                       errors.message && errors.message.type === "minLength"
                         ?
-                          <p className="text-sm">Your message must be at least 15 characters.</p>
+                          <>Your message must be at least 15 characters.</>
                         :
                           errors.message && errors.message.type === "maxLength"
                             ?
-                              <p className="text-sm">Your message must be less than 3000 characters.</p>
+                              <>Your message must be less than 3000 characters.</>
                             :
-                              <p className="text-sm">&nbsp;</p>
+                              <>&nbsp;</>
                 }
               </p>
             </label>

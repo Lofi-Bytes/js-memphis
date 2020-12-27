@@ -1,14 +1,17 @@
 [
   {
     "title": "Writing",
-    "path": "/writing/"
+    "path": "/writing/",
+    "iconClass": "fal fa-comment-edit"
   },
   {
     "title": "Speaking",
-    "path": "/speaking/"
+    "path": "/speaking/",
+    "iconClass": "fal fa-podium-star"
   },
   {
     "title": "Projects",
-    "path": "/projects/"
+    "path": "/projects/",
+    "iconClass": "fal fa-code-branch"
   }
 ]

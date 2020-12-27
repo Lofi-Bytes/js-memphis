@@ -48,7 +48,7 @@ const NextButton: FC<NextButtonProps> = ({
                 to={nextPath}
                 key={index}
               >
-                {children}
+                {children}&nbsp;&nbsp;<i className="far fa-chevron-right" />
               </Button>
             )
           }

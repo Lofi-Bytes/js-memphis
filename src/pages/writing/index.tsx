@@ -9,7 +9,13 @@ import Main from '../../components/main'
 import Tag from '../../components/tag'
 
 
-const WritingPostListPage: FC<ReactNode> = () => {
+type PageProps = {
+  location: Location
+}
+
+const WritingPostListPage: FC<PageProps> = ({
+  location
+}: PageProps) => {
   const postListData = useStaticQuery(graphql`
     query WritingPostListNavigationQuery {
       allPostsJson(sort: {fields: date, order: DESC}) {
@@ -27,7 +33,7 @@ const WritingPostListPage: FC<ReactNode> = () => {
     }
   `)
   return (
-    <Layout>
+    <Layout location={location}>
       <SEO
         metaTitle=""
         metaDescription=""
@@ -40,10 +46,10 @@ const WritingPostListPage: FC<ReactNode> = () => {
             Writing
             </span>
             <span className="hidden sm:inline-block">
-              &nbsp;&nbsp;<i className="text-4xl leading-relaxed text-orange-300 fal fa-comment-edit md:text-5xl md:leading-loose lg:text-5xl lg:leading-relaxed"></i>
+              &nbsp;&nbsp;<i className="text-4xl leading-relaxed text-orange-300 fal fa-comment-edit md:text-5xl md:leading-loose lg:text-5xl lg:leading-relaxed" />
             </span>
             <span className="block mt-3 sm:hidden">
-              <i className="text-4xl text-orange-300 fal fa-comment-edit"></i>
+              <i className="text-4xl text-orange-300 fal fa-comment-edit" />
             </span>
           </>
         }

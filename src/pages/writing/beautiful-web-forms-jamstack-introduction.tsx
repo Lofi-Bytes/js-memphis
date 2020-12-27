@@ -12,8 +12,13 @@ import NextPrev from '../../components/next-prev'
 
 import Prism from 'prismjs'
 
+type PageProps = {
+  location: Location
+}
 
-const BeautifulFormsJamstackIntroductionPage: FC<ReactNode> = () => {
+const BeautifulFormsJamstackIntroductionPage: FC<PageProps> = ({
+  location
+}: PageProps) => {
   const postData = useStaticQuery(graphql`
     query BeautifulFormsJamstackIntroductionQuery {
       allPostsJson(
@@ -51,7 +56,7 @@ const BeautifulFormsJamstackIntroductionPage: FC<ReactNode> = () => {
   })
 
   return (
-    <Layout>
+    <Layout location={location}>
       <SEO
         metaTitle=""
         metaDescription=""
@@ -121,7 +126,7 @@ const BeautifulFormsJamstackIntroductionPage: FC<ReactNode> = () => {
           </p>
 
           <NextPrev path={path} className="mt-4">
-            Let's Get Started&nbsp;&nbsp;<i className="far fa-chevron-right"></i>
+            Let's Get Started
           </NextPrev>
         </Section>
       </Main>

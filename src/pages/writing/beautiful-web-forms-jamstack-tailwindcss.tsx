@@ -12,6 +12,10 @@ import NextPrev from '../../components/next-prev'
 import Prism from 'prismjs'
 
 
+type PageProps = {
+  location: Location
+}
+
 const install =
 `# Using npm
 npm install @tailwindcss/forms
@@ -96,7 +100,9 @@ const styledForm =
   </div>
 </form>`
 
-const BeautifulWebFormsJamstackTailwindCSSPage: FC<ReactNode> = () => {
+const BeautifulWebFormsJamstackTailwindCSSPage: FC<PageProps> = ({
+  location
+}: PageProps) => {
   const postData = useStaticQuery(graphql`
     query BeautifulWebFormsJamstackTailwindCSSQuery {
       allPostsJson(
@@ -133,7 +139,7 @@ const BeautifulWebFormsJamstackTailwindCSSPage: FC<ReactNode> = () => {
   })
 
   return (
-    <Layout>
+    <Layout location={location}>
       <SEO
         metaTitle=""
         metaDescription=""

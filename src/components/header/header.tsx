@@ -4,7 +4,13 @@ import { Link } from 'gatsby'
 import Navigation from '../navigation'
 
 
-const Header: FC<ReactNode> = ({}: ReactNode) => {
+type HeaderProps = {
+  location: Location
+}
+
+const Header: FC<HeaderProps> = ({
+  location
+}: HeaderProps) => {
   return (
     <React.Fragment>
       <div className="flex items-center justify-center w-full p-1 bg-gray-900 opacity-75">
@@ -18,7 +24,7 @@ const Header: FC<ReactNode> = ({}: ReactNode) => {
           >
             JS
           </Link>
-          <Navigation />
+          <Navigation location={location} />
         </div>
       </header>
     </React.Fragment>

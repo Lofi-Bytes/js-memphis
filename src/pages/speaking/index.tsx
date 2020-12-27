@@ -9,7 +9,13 @@ import Main from '../../components/main'
 import Tag from '../../components/tag'
 
 
-const SpeakingListPage: FC<ReactNode> = () => {
+type PageProps = {
+  location: Location
+}
+
+const SpeakingListPage: FC<PageProps> = ({
+  location
+}: PageProps) => {
   const talkListData = useStaticQuery(graphql`
     query SpeakingTalkListNavigationQuery {
       allTalksJson {
@@ -26,7 +32,7 @@ const SpeakingListPage: FC<ReactNode> = () => {
     }
   `)
   return (
-    <Layout>
+    <Layout location={location}>
       <SEO
         metaTitle=""
         metaDescription=""
@@ -39,10 +45,10 @@ const SpeakingListPage: FC<ReactNode> = () => {
             Speaking Engagements
             </span>
             <span className="hidden sm:inline-block">
-              &nbsp;&nbsp;<i className="text-4xl leading-relaxed fal fa-podium-star text-rose-300 md:text-5xl md:leading-loose lg:text-5xl lg:leading-relaxed"></i>
+              &nbsp;&nbsp;<i className="text-4xl leading-relaxed fal fa-podium-star text-rose-300 md:text-5xl md:leading-loose lg:text-5xl lg:leading-relaxed" />
             </span>
             <span className="block mt-3 sm:hidden">
-              <i className="text-4xl fal fa-podium-star text-rose-300"></i>
+              <i className="text-4xl fal fa-podium-star text-rose-300" />
             </span>
           </>
         }

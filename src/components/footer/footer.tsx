@@ -4,8 +4,13 @@ import MobileNavigation from '../mobile-navigation'
 import FooterNavigation from '../footer-navigation'
 
 
+type FooterProps = {
+  location: Location
+}
 
-const Footer: FC<ReactNode> = ({}: ReactNode) => {
+const Footer: FC<FooterProps> = ({
+  location
+}: FooterProps) => {
   return (
     <React.Fragment>
       <footer className="flex flex-col items-center justify-center w-full h-40 mb-8 bg-indigo-700 bg-opacity-70 sm:mb-0">
@@ -61,7 +66,7 @@ const Footer: FC<ReactNode> = ({}: ReactNode) => {
           Material &amp; content copyright &copy; {new Date().getFullYear()} Jillian S. Estrella. All rights reserved.
         </p>
       </div>
-      <MobileNavigation />
+      <MobileNavigation location={location} />
     </React.Fragment>
   )
 }

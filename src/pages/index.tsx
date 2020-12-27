@@ -1,4 +1,4 @@
-import React, { FC, ReactNode } from 'react'
+import React, { FC } from 'react'
 
 import Avatar from '../components/avatar'
 import Banner from '../components/banner'
@@ -10,9 +10,15 @@ import SEO from '../components/seo'
 import Main from '../components/main'
 
 
-const HomePage: FC<ReactNode> = () => {
+type PageProps = {
+  location: Location
+}
+
+const HomePage: FC<PageProps> = ({
+  location
+}: PageProps) => {
   return (
-    <Layout>
+    <Layout location={location}>
       <SEO
         metaTitle=""
         metaDescription=""
@@ -23,7 +29,7 @@ const HomePage: FC<ReactNode> = () => {
         subtitle={
           <>
             <span className="hidden sm:inline-block">
-              <i className="text-pink-200 fal fa-narwhal"></i>&nbsp;&nbsp;
+              <i className="text-pink-200 fal fa-narwhal" />&nbsp;&nbsp;
             </span>
             <span
               className="text-transparent bg-gradient-to-r bg-clip-text from-pink-200 via-fuchsia-200 to-blue-200"
@@ -32,10 +38,10 @@ const HomePage: FC<ReactNode> = () => {
               Bit-Casting Technomancer
             </span>
             <span className="hidden sm:inline-block">
-              &nbsp;&nbsp;<i className="text-blue-200 fal fa-alien-monster"></i>
+              &nbsp;&nbsp;<i className="text-blue-200 fal fa-alien-monster" />
             </span>
             <span className="block sm:hidden">
-              <i className="fal fa-narwhal text-rose-300"></i>&nbsp;&nbsp;<i className="text-teal-300 fal fa-alien-monster"></i>
+              <i className="fal fa-narwhal text-rose-300" />&nbsp;&nbsp;<i className="text-teal-300 fal fa-alien-monster" />
             </span>
           </>
         }

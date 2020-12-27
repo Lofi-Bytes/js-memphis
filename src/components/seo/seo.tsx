@@ -20,7 +20,6 @@ const SEO: FC<HelmetProps> = ({
   canonicalUrl,
   ...other
 }: HelmetProps) => {
-  console.log(metaTitle, metaDescription, canonicalUrl)
   const { site } = useStaticQuery(
     graphql`
       query {

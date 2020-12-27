@@ -55,13 +55,13 @@ const NextPrev: FC<NextPrevProps> = ({
                   action="secondary"
                   path={path}
                 >
-                  <i className="far fa-chevron-left"></i>&nbsp;&nbsp;Prev
+                  Prev
                 </PreviousButton>
                 <NextButton
                   action="primary"
                   path={path}
                 >
-                  Next&nbsp;&nbsp;<i className="far fa-chevron-right"></i>
+                  Next
                 </NextButton>
               </div>
             )
@@ -85,7 +85,7 @@ const NextPrev: FC<NextPrevProps> = ({
                   action="primary"
                   path={path}
                 >
-                  <i className="far fa-chevron-left"></i>&nbsp;&nbsp;Previous
+                  Previous
                 </PreviousButton>
               </div>
             )

@@ -2,7 +2,13 @@ import React, { FC, ReactNode } from 'react'
 import { useStaticQuery, graphql, Link } from 'gatsby'
 
 
-const Navigation: FC<ReactNode> = ({}: ReactNode) => {
+type NavigationProps = {
+  location: Location
+}
+
+const Navigation: FC<NavigationProps> = ({
+  location
+}: NavigationProps) => {
   const navigationData = useStaticQuery(graphql`
     query NavigationQuery {
       allNavigationJson {
@@ -23,16 +29,38 @@ const Navigation: FC<ReactNode> = ({}: ReactNode) => {
           navigationData.allNavigationJson.edges.map((edge, index) => {
             const path = edge.node.path
             const title = edge.node.title
+
+            const regex = new RegExp(path, 'g')
+
             return(
               <React.Fragment key={`item-${index}`}>
                 <div className="ml-6">
-                  <Link
+                  {/* <Link
                     to={path}
                     className="p-1 text-base tracking-wider text-teal-100 duration-200 rounded hover:text-pink-200 focus:text-pink-200 active:text-pink-300 hover:cursor-pointer focus:outline-none focus:ring focus:ring-teal-200"
                   >
                     {title}
-                  </Link>
+                  </Link> */}
                 </div>
+                {
+                  location.pathname.match(regex)
+                  ? (
+                    <Link
+                      to={path}
+                      className="p-1 text-base tracking-wider text-pink-200 duration-200 rounded hover:text-pink-200 focus:text-pink-200 active:text-pink-300 hover:cursor-pointer focus:outline-none focus:ring focus:ring-teal-200"
+                    >
+                      {title}
+                    </Link>
+                  )
+                  : (
+                    <Link
+                      to={path}
+                      className="p-1 text-base tracking-wider text-teal-100 duration-200 rounded hover:text-pink-200 focus:text-pink-200 active:text-pink-300 hover:cursor-pointer focus:outline-none focus:ring focus:ring-teal-200"
+                    >
+                      {title}
+                    </Link>
+                  )
+                }
               </React.Fragment>
             )
           })
