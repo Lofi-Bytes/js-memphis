@@ -8,6 +8,7 @@ import Section from '../../components/section'
 import SEO from '../../components/seo'
 import Main from '../../components/main'
 import NextPrev from '../../components/next-prev'
+import Tag from '../../components/tag'
 
 import Prism from 'prismjs'
 
@@ -48,6 +49,7 @@ const BeautifulWebFormsJamstackReactHookFormPage: FC<PageProps> = ({
   const subtitle = postData.allPostsJson.edges[0].node.subtitle
   const date = postData.allPostsJson.edges[0].node.date
   const path = postData.allPostsJson.edges[0].node.path
+  const tags = postData.allPostsJson.edges[0].node.tags
 
   useEffect(() => {
     // call the highlightAll() function to style our code blocks
@@ -77,6 +79,24 @@ const BeautifulWebFormsJamstackReactHookFormPage: FC<PageProps> = ({
           </p>
 
           <NextPrev path={path} className="mt-10" />
+        </Section>
+        <Section className="mb-8">
+          <h3 className="text-xl tracking-wide text-gray-700 ">Tags</h3>
+          <div className="flex flex-wrap mt-4">
+            {
+              tags.map((tag, index) => {
+                return (
+                  <Tag
+                    card={false}
+                    key={`item-${index}`}
+                    color="purple"
+                  >
+                    {tag}
+                  </Tag>
+                )
+              })
+            }
+          </div>
         </Section>
       </Main>
     </Layout>

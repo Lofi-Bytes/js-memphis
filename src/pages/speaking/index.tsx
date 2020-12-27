@@ -83,6 +83,7 @@ const SpeakingListPage: FC<PageProps> = ({
                         tags.map((tag, index) => {
                           return (
                             <Tag
+                              card={true}
                               key={`item-${index}`}
                               color="rose"
                             >
