@@ -95,6 +95,9 @@ const HomePage: FC<ReactNode> = () => {
           <p className="mt-8 leading-relaxed tracking-wider text-gray-600">
             Hi there! Welcome to my creative space. I love building beautiful digital experiences and I am passionate about technology that advances social and environmental justice.
           </p>
+          <p className="mt-4 leading-relaxed tracking-wider text-gray-600">
+            Please take a look around and be sure to check back regularly. This is my brand new website as of December 2020, and I will be adding new content regularly.
+          </p>
           <div
             className="w-full mx-auto mt-8 md:w-3/4"
           >

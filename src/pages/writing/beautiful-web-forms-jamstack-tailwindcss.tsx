@@ -97,9 +97,9 @@ const styledForm =
   </div>
 </form>`
 
-const BeautifulFormsJamstackTailwindCSSPage: FC<ReactNode> = () => {
+const BeautifulWebFormsJamstackTailwindCSSPage: FC<ReactNode> = () => {
   const postData = useStaticQuery(graphql`
-    query BeautifulFormsJamstackTailwindCSSQuery {
+    query BeautifulWebFormsJamstackTailwindCSSQuery {
       allPostsJson(
         filter: {
           title: {
@@ -209,7 +209,7 @@ const BeautifulFormsJamstackTailwindCSSPage: FC<ReactNode> = () => {
           <p className="mt-8 leading-relaxed tracking-wider text-gray-600">
             Which should display like this:
           </p>
-          <div>
+          <div className="mx-auto md:w-10/12">
             <div className="px-8 py-4 mt-4 bg-white rounded shadow" style={{ backgroundColor: 'white' }}>
               <div className="grid grid-cols-1 gap-6">
                 <label className="block">
@@ -228,7 +228,7 @@ const BeautifulFormsJamstackTailwindCSSPage: FC<ReactNode> = () => {
             </div>
           </div>
           <p className="mt-8 leading-relaxed tracking-wider text-gray-600">
-            With a nice reset in place, now we can just add or remove any of the Tialwind CSS utility classes that we want in order to style the form to our liking:
+            With a nice reset in place, now we can just add or remove any of the Tailwind CSS utility classes that we want in order to style the form to our liking:
           </p>
           <div className="p-1 pt-3 mt-4 border-l-8 border-blue-500 rounded-lg shadow code-container bg-gray-50">
             <div
@@ -245,9 +245,9 @@ const BeautifulFormsJamstackTailwindCSSPage: FC<ReactNode> = () => {
             </pre>
           </div>
           <p className="mt-8 leading-relaxed tracking-wider text-gray-600">
-            Note that on lines 6, 18, and 29 I preemptively changed the <code className="language-bash">div</code>'s to <code className="css">display: relative;</code> since we will be using those elements to position icons for visual feedback during form field validation in the next post. And there we have it, a gorgeous, accessible contact form:
+            Note that on lines 6, 18, and 29 I preemptively changed the <code className="language-bash">div</code>'s to <code className="css">display: relative;</code> since we will be using those elements to position icons for visual feedback during form field validation in the next post. Of course I also added a button since that is an important part of any form 😊. And there we have it, a gorgeously styled and accessible contact form:
           </p>
-          <div>
+          <div className="mx-auto md:w-10/12">
             <div className="grid grid-cols-1 gap-4 mt-8">
               <input type="hidden" name="form-contact" value="contact" />
               <label className="block">
@@ -293,6 +293,9 @@ const BeautifulFormsJamstackTailwindCSSPage: FC<ReactNode> = () => {
               </button>
             </div>
           </div>
+          <p className="mt-8 leading-relaxed tracking-wider text-gray-600">
+            Next up, we will dive into using React Hook Form for client-side form field validation.
+          </p>
           <div className="flex items-center justify-between mt-10">
             <PreviousButton
               action="secondary"
@@ -313,4 +316,4 @@ const BeautifulFormsJamstackTailwindCSSPage: FC<ReactNode> = () => {
   )
 }
 
-export default BeautifulFormsJamstackTailwindCSSPage
+export default BeautifulWebFormsJamstackTailwindCSSPage
