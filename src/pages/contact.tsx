@@ -60,22 +60,22 @@ const ContactPage: FC = () => {
       <SEO
         metaTitle=""
         metaDescription=""
-        canonicalUrl=""
+        canonicalUrl="https://jillian.dev/contact/"
       />
       <Banner
         title={
           <>
             <span className="hidden sm:inline-block">
-              <i className="fal fa-paper-plane text-gray-50"></i>&nbsp;
+              <i className="text-4xl leading-relaxed fal fa-paper-plane text-gray-50 md:text-5xl md:leading-loose lg:text-5xl lg:leading-relaxed"></i>&nbsp;&nbsp;
             </span>
             <span className="text-5xl leading-relaxed js md:text-6xl md:leading-loose lg:text-7xl lg:leading-relaxed">
               Send Me a Message
             </span>
             <span className="hidden sm:inline-block">
-              &nbsp;<i className="fal fa-mailbox text-gray-50"></i>
+              &nbsp;&nbsp;<i className="text-4xl leading-relaxed fal fa-mailbox text-gray-50 md:text-5xl md:leading-loose lg:text-5xl lg:leading-relaxed"></i>
             </span>
             <span className="block sm:hidden">
-              <i className="fal fa-paper-plane text-gray-50"></i>&nbsp;&nbsp;<i className="fal fa-mailbox text-gray-50"></i>
+              <i className="text-4xl fal fa-paper-plane text-gray-50"></i>&nbsp;&nbsp;<i className="text-4xl fal fa-mailbox text-gray-50"></i>
             </span>
           </>
         }
@@ -83,7 +83,7 @@ const ContactPage: FC = () => {
       />
       <Main>
         <Section className="mb-8 -mt-12">
-          <React.Fragment>
+          <div className="mx-auto md:w-10/12">
 
             {successMsg &&
               <div role="alert" className="flex flex-col items-center justify-center w-full p-6 mt-8 text-lg text-gray-600 bg-gray-200 rounded-lg shadow-md h-96">
@@ -419,7 +419,7 @@ const ContactPage: FC = () => {
                 </div>
               </form>
             }
-          </React.Fragment>
+          </div>
         </Section>
       </Main>
     </Layout>

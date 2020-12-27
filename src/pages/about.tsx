@@ -18,7 +18,7 @@ const AboutPage: FC<ReactNode> = () => {
       <SEO
         metaTitle=""
         metaDescription=""
-        canonicalUrl=""
+        canonicalUrl="https://jillian.dev/about"
       />
       <Banner
         title={<span className="text-5xl leading-relaxed js md:text-6xl md:leading-loose lg:text-7xl lg:leading-relaxed">About Me</span>}
@@ -39,6 +39,10 @@ const AboutPage: FC<ReactNode> = () => {
           <p className="mt-4 leading-relaxed tracking-wider text-gray-600">
             A critical part of my role within the organization is to continually improve developer experience, designer experience, <em>and</em> <TextLink to="https://medium.com/s/user-friendly/why-im-done-saying-user-user-experience-and-ux-in-2019-4fdfc6b7de23" external={true}>audience</TextLink> experience. During my time with BSCS, I have overseen the adoption of innovative approaches to software and design such as <i className="text-pink-300 fas fa-heart"></i> <TextLink to="https://www.invisionapp.com/inside-design/guide-to-design-systems/" external={true}>design systems</TextLink>, <TextLink to="https://medium.com/omarelgabrys-blog/component-based-architecture-3c3c23c7e348" external={true}>component based</TextLink>, <TextLink to="https://martinfowler.com/articles/serverless.html" external={true}>serverless</TextLink>, <TextLink to="https://martinfowler.com/articles/microservices.html" external={true}> and microservice</TextLink> architectures, and the beloved <i className="text-pink-300 fas fa-heart"></i> <TextLink to="https://jamstack.org/" external={true}>Jamstack</TextLink>.
           </p>
+
+          {/* <p className="mt-4 leading-relaxed tracking-wider text-gray-600">
+            Having built BSCS's web development team from the ground up, the adoption of these technologies has allowed our small team to
+          </p> */}
 
           <h2 className="mt-10 text-xl tracking-wide text-gray-700">Previous Work</h2>
           <p className="mt-3 leading-relaxed tracking-wider text-gray-600">

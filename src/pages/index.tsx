@@ -16,7 +16,7 @@ const HomePage: FC<ReactNode> = () => {
       <SEO
         metaTitle=""
         metaDescription=""
-        canonicalUrl=""
+        canonicalUrl="https://jillian.dev/"
       />
       <Banner
         title={<span className="text-5xl leading-relaxed js md:text-6xl md:leading-loose lg:text-7xl lg:leading-relaxed">Jillian Serenity</span>}
