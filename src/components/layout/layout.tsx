@@ -1,4 +1,5 @@
 import React, { FC, ReactNode, useState, useEffect } from 'react'
+import { Location } from '@reach/router'
 
 import Footer from '../footer'
 import Header from '../header'
