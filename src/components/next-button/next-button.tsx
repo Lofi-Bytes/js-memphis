@@ -32,10 +32,6 @@ const NextButton: FC<NextButtonProps> = ({
       }
     }
   `)
-  // console.log(path)
-  // console.log(postData.allPostsJson)
-
-
 
   return (
     <>
@@ -44,7 +40,6 @@ const NextButton: FC<NextButtonProps> = ({
           let nextPath
           if(edge.node.path === path && edge.next) {
             nextPath = edge.next.path
-            // console.log(edge.next.path)
             return(
               <Button
                 action={action}

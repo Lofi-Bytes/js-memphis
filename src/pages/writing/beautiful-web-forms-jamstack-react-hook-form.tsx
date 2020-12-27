@@ -7,8 +7,7 @@ import TextLink from '../../components/text-link'
 import Section from '../../components/section'
 import SEO from '../../components/seo'
 import Main from '../../components/main'
-import NextButton from '../../components/next-button'
-import PreviousButton from '../../components/previous-button'
+import NextPrev from '../../components/next-prev'
 
 import Prism from 'prismjs'
 
@@ -70,21 +69,7 @@ const BeautifulWebFormsJamstackReactHookFormPage: FC<ReactNode> = () => {
           <p className="mt-3 leading-relaxed tracking-wider text-gray-600">
           </p>
 
-          <div className="flex items-center justify-between mt-10">
-            <PreviousButton
-              action="secondary"
-              path={path}
-            >
-              <i className="far fa-chevron-left"></i>&nbsp;&nbsp;Prev
-            </PreviousButton>
-            <NextButton
-              action="primary"
-              path={path}
-            >
-              Next&nbsp;&nbsp;<i className="far fa-chevron-right"></i>
-            </NextButton>
-          </div>
-
+          <NextPrev path={path} className="mt-10" />
         </Section>
       </Main>
     </Layout>

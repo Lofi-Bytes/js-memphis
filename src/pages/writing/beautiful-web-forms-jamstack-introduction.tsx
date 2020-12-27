@@ -8,7 +8,7 @@ import TextLink from '../../components/text-link'
 import Section from '../../components/section'
 import SEO from '../../components/seo'
 import Main from '../../components/main'
-import NextButton from '../../components/next-button'
+import NextPrev from '../../components/next-prev'
 
 import Prism from 'prismjs'
 
@@ -69,14 +69,7 @@ const BeautifulFormsJamstackIntroductionPage: FC<ReactNode> = () => {
             <h2 className="text-xl tracking-wide text-gray-800 sm:text-2xl">Series Introduction</h2>
           </div>
 
-          {/* <div className="flex px-8 py-4 mt-8 bg-blue-100 border-l-4 border-blue-400 rounded shadow-lg">
-            <i className="far fa-info-circle text-xl text-blue-900 mt-0.5"></i>
-            <p className="ml-4 leading-relaxed tracking-wider text-blue-900">This series assumes the reader has an intermediate understanding of React JS and Tailwind CSS.</p>
-          </div> */}
-
-          <Alert
-
-          >
+          <Alert>
             This series assumes the reader has an intermediate understanding of React JS and Tailwind CSS.
           </Alert>
 
@@ -126,14 +119,10 @@ const BeautifulFormsJamstackIntroductionPage: FC<ReactNode> = () => {
           <p className="mt-8 leading-relaxed tracking-wider text-gray-600">
             Ready to dive in?
           </p>
-          <div className="mt-4">
-            <NextButton
-              action="primary"
-              path={path}
-            >
-              Let's Get Started&nbsp;&nbsp;<i className="far fa-chevron-right"></i>
-            </NextButton>
-          </div>
+
+          <NextPrev path={path} className="mt-4">
+            Let's Get Started&nbsp;&nbsp;<i className="far fa-chevron-right"></i>
+          </NextPrev>
         </Section>
       </Main>
     </Layout>

@@ -7,8 +7,7 @@ import TextLink from '../../components/text-link'
 import Section from '../../components/section'
 import SEO from '../../components/seo'
 import Main from '../../components/main'
-import NextButton from '../../components/next-button'
-import PreviousButton from '../../components/previous-button'
+import NextPrev from '../../components/next-prev'
 
 import Prism from 'prismjs'
 
@@ -123,7 +122,6 @@ const BeautifulWebFormsJamstackTailwindCSSPage: FC<ReactNode> = () => {
     }
   `)
 
-  console.log(postData.allPostsJson.edges[0])
   const title = postData.allPostsJson.edges[0].node.title
   const subtitle = postData.allPostsJson.edges[0].node.subtitle
   const date = postData.allPostsJson.edges[0].node.date
@@ -296,20 +294,7 @@ const BeautifulWebFormsJamstackTailwindCSSPage: FC<ReactNode> = () => {
           <p className="mt-8 leading-relaxed tracking-wider text-gray-600">
             Next up, we will dive into using React Hook Form for client-side form field validation.
           </p>
-          <div className="flex items-center justify-between mt-10">
-            <PreviousButton
-              action="secondary"
-              path={path}
-            >
-              <i className="far fa-chevron-left"></i>&nbsp;&nbsp;Prev
-            </PreviousButton>
-            <NextButton
-              action="primary"
-              path={path}
-            >
-              Next&nbsp;&nbsp;<i className="far fa-chevron-right"></i>
-            </NextButton>
-          </div>
+          <NextPrev path={path} className="mt-10" />
         </Section>
       </Main>
     </Layout>
