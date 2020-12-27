@@ -18,7 +18,7 @@ const MobileNavigation: FC<ReactNode> = ({}: ReactNode) => {
 
   return (
     <React.Fragment>
-      <nav className="nav fixed bottom-0 w-full flex sm:hidden items-center justify-around text-gray-50 bg-indigo-700 h-16 z-20">
+      <nav className="fixed bottom-0 z-20 flex items-center justify-around w-full h-16 bg-indigo-700 nav sm:hidden text-gray-50">
         {
           navigationData.allNavigationJson.edges.map((edge, index) => {
             const path = edge.node.path
@@ -28,7 +28,7 @@ const MobileNavigation: FC<ReactNode> = ({}: ReactNode) => {
                 <Link
                   to={path}
                 >
-                  <span className="text-base tracking-wider text-teal-100 hover:text-pink-200 focus:text-pink-200 active:text-pink-300 hover:cursor-pointer duration-200">{title}</span>
+                  <span className="text-base tracking-wider text-teal-100 duration-200 hover:text-pink-200 focus:text-pink-200 active:text-pink-300 hover:cursor-pointer">{title}</span>
                 </Link>
               </React.Fragment>
             )

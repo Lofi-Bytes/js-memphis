@@ -114,7 +114,7 @@ const Layout: FC<LayoutProps> = ({
     <React.Fragment>
       <div
         id="canvas"
-        className="flex flex-col justify-between relative"
+        className="relative flex flex-col justify-between"
       >
         <div className="z-10">
           <Header />

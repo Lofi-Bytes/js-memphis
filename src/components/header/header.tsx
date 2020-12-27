@@ -7,14 +7,14 @@ import Navigation from '../navigation'
 const Header: FC<ReactNode> = ({}: ReactNode) => {
   return (
     <React.Fragment>
-      <div className="flex items-center justify-center w-full bg-gray-900 p-1 opacity-75">
-        <p className="text-gray-50 text-lg"><strong>All</strong> Black Lives Matter</p>
+      <div className="flex items-center justify-center w-full p-1 bg-gray-900 opacity-75">
+        <p className="text-lg text-gray-50"><strong>All</strong> Black Lives Matter</p>
       </div>
-      <header className="bg-indigo-700 bg-opacity-30 w-full py-6 px-8">
+      <header className="w-full px-8 py-6 bg-indigo-700 bg-opacity-30">
         <div className="flex items-center justify-between max-w-screen-lg m-auto z-5">
           <Link
             to="/"
-            className="js text-4xl font-semibold text-teal-100 hover:text-pink-200 focus:text-pink-200 active:text-pink-300 hover:cursor-pointer duration-200 focus:outline-none focus:ring focus:ring-teal-200 rounded pt-3 px-2 pb-1"
+            className="px-2 pt-3 pb-1 text-4xl font-semibold text-teal-100 duration-200 rounded js hover:text-pink-200 focus:text-pink-200 active:text-pink-300 hover:cursor-pointer focus:outline-none focus:ring focus:ring-teal-200"
           >
             JS
           </Link>

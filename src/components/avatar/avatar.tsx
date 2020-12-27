@@ -24,16 +24,16 @@ const Avatar: FC<ReactNode> = ({}) => {
       <div className="absolute -top-16 left-1/2">
         <BackgroundImage
           Tag="section"
-          className="w-28 h-28 rounded-full overflow-hidden relative -left-1/2 shadow-xl flex flex-col justify-between items-center bg-cover bg-center bg-no-repeat"
+          className="relative flex flex-col items-center justify-between overflow-hidden bg-center bg-no-repeat bg-cover rounded-full shadow-xl w-28 h-28 -left-1/2"
           fluid={img}
           backgroundColor={`#040e18`}
         >
           <Img
-            className="bg-cover hidden"
+            className="hidden bg-cover"
             fluid={img}
             alt="Jillian's avatar."
           />
-          <div className="w-full h-full absolute top-0 left-0 rounded-full ring-4 ring-purple-300 ring-opacity-30 ring-inset"></div>
+          <div className="absolute top-0 left-0 w-full h-full rounded-full ring-4 ring-purple-300 ring-opacity-30 ring-inset"></div>
         </BackgroundImage>
       </div>
     </React.Fragment>

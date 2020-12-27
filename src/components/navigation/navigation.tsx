@@ -18,7 +18,7 @@ const Navigation: FC<ReactNode> = ({}: ReactNode) => {
 
   return (
     <React.Fragment>
-      <nav className="nav hidden sm:flex items-center justify-between text-gray-50">
+      <nav className="items-center justify-between hidden nav sm:flex text-gray-50">
         {
           navigationData.allNavigationJson.edges.map((edge, index) => {
             const path = edge.node.path
@@ -28,7 +28,7 @@ const Navigation: FC<ReactNode> = ({}: ReactNode) => {
                 <div className="ml-6">
                   <Link
                     to={path}
-                    className="text-base tracking-wider text-teal-100 hover:text-pink-200 focus:text-pink-200 active:text-pink-300 hover:cursor-pointer duration-200 focus:outline-none focus:ring focus:ring-teal-200 rounded p-1"
+                    className="p-1 text-base tracking-wider text-teal-100 duration-200 rounded hover:text-pink-200 focus:text-pink-200 active:text-pink-300 hover:cursor-pointer focus:outline-none focus:ring focus:ring-teal-200"
                   >
                     {title}
                   </Link>

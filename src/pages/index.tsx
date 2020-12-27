@@ -19,43 +19,43 @@ const HomePage: FC<ReactNode> = () => {
         canonicalUrl=""
       />
       <Banner
-        title={<span className="js text-5xl leading-relaxed md:text-6xl md:leading-loose lg:text-7xl lg:leading-relaxed">Jillian Serenity</span>}
+        title={<span className="text-5xl leading-relaxed js md:text-6xl md:leading-loose lg:text-7xl lg:leading-relaxed">Jillian Serenity</span>}
         subtitle={
           <>
             <span className="hidden sm:inline-block">
-              <i className="fal fa-narwhal text-pink-200"></i>&nbsp;&nbsp;
+              <i className="text-pink-200 fal fa-narwhal"></i>&nbsp;&nbsp;
             </span>
             <span
-              className="bg-gradient-to-r text-transparent bg-clip-text from-pink-200 via-fuchsia-200 to-blue-200"
+              className="text-transparent bg-gradient-to-r bg-clip-text from-pink-200 via-fuchsia-200 to-blue-200"
               style={{color: 'transparent'}}
             >
               Bit-Casting Technomancer
             </span>
             <span className="hidden sm:inline-block">
-              &nbsp;&nbsp;<i className="fal fa-alien-monster text-blue-200"></i>
+              &nbsp;&nbsp;<i className="text-blue-200 fal fa-alien-monster"></i>
             </span>
             <span className="block sm:hidden">
-              <i className="fal fa-narwhal text-rose-300"></i>&nbsp;&nbsp;<i className="fal fa-alien-monster text-teal-300"></i>
+              <i className="fal fa-narwhal text-rose-300"></i>&nbsp;&nbsp;<i className="text-teal-300 fal fa-alien-monster"></i>
             </span>
           </>
         }
       />
       <Main>
-        <Section className="-mt-10 mb-8">
+        <Section className="mb-8 -mt-10">
           <Avatar />
-          <i className="fal fa-stop text-cyan-300 absolute -right-3 -top-10 text-6xl sm:-right-6 sm:-top-10 sm:text-7xl lg:-right-14 lg:-top-8 lg:text-8xl transofrm rotate-12 transform-gpu"></i>
-          <i className="fal fa-triangle text-emerald-300 absolute -left-2 top-52 text-5xl sm:-left-4 sm:top-48 sm:text-6xl lg:-left-6 lg:top-36 lg:text-7xl transofrm rotate-45 transform-gpu"></i>
-          <h2 className="text-gray-800 text-2xl mt-10 tracking-wide">Jillian S. Estrella <br className="sm:hidden" /><span className="text-gray-500 text-xl">🏳️‍🌈 she/her 🏳️‍⚧️</span></h2>
-          <p className="text-gray-500 text-xl tracking-wider leading-relaxed mt-1">
+          <i className="absolute text-6xl fal fa-stop text-cyan-300 -right-3 -top-10 sm:-right-6 sm:-top-10 sm:text-7xl lg:-right-14 lg:-top-8 lg:text-8xl transofrm rotate-12 transform-gpu"></i>
+          <i className="absolute text-5xl rotate-45 fal fa-triangle text-emerald-300 -left-2 top-52 sm:-left-4 sm:top-48 sm:text-6xl lg:-left-6 lg:top-36 lg:text-7xl transofrm transform-gpu"></i>
+          <h2 className="mt-10 text-2xl tracking-wide text-gray-800">Jillian S. Estrella <br className="sm:hidden" /><span className="text-xl text-gray-500">🏳️‍🌈 she/her 🏳️‍⚧️</span></h2>
+          <p className="mt-1 text-xl leading-relaxed tracking-wider text-gray-500">
             Front End Systems Designer &amp; Architect
           </p>
-          <div className="flex justify-start items-start relative mt-3">
+          <div className="relative flex items-start justify-start mt-3">
             <div>
               <a
                 href="https://github.com/lofi-bytes"
                 aria-label="Jillian's Github"
                 title="Jillian's Github"
-                className="text-2xl text-gray-500 hover:text-lightBlue-700 focus:text-lightBlue-700 active:text-lightBlue-700 hover:cursor-pointer duration-200 focus:outline-none focus:ring focus:ring-lightBlue-700 rounded py-1 px-2"
+                className="px-2 py-1 text-2xl text-gray-500 duration-200 rounded hover:text-lightBlue-700 focus:text-lightBlue-700 active:text-lightBlue-700 hover:cursor-pointer focus:outline-none focus:ring focus:ring-lightBlue-700"
               >
                 <i className="fab fa-github"></i>
               </a>
@@ -65,7 +65,7 @@ const HomePage: FC<ReactNode> = () => {
                 href="https://twitter.com/LofiBytes/"
                 aria-label="Jillian's Twitter"
                 title="Jillian's Twitter"
-                className="text-2xl text-gray-500 hover:text-lightBlue-700 focus:text-lightBlue-700 active:text-lightBlue-700 hover:cursor-pointer duration-200 focus:outline-none focus:ring focus:ring-lightBlue-700 rounded py-1 px-2"
+                className="px-2 py-1 text-2xl text-gray-500 duration-200 rounded hover:text-lightBlue-700 focus:text-lightBlue-700 active:text-lightBlue-700 hover:cursor-pointer focus:outline-none focus:ring focus:ring-lightBlue-700"
               >
                 <i className="fab fa-twitter"></i>
               </a>
@@ -75,7 +75,7 @@ const HomePage: FC<ReactNode> = () => {
                 href="https://codepen.io/LofiBytes"
                 aria-label="Jillian's CodePen"
                 title="Jillian's CodePen"
-                className="text-2xl text-gray-500 hover:text-lightBlue-700 focus:text-lightBlue-700 active:text-lightBlue-700 hover:cursor-pointer duration-200 focus:outline-none focus:ring focus:ring-lightBlue-700 rounded py-1 px-2"
+                className="px-2 py-1 text-2xl text-gray-500 duration-200 rounded hover:text-lightBlue-700 focus:text-lightBlue-700 active:text-lightBlue-700 hover:cursor-pointer focus:outline-none focus:ring focus:ring-lightBlue-700"
               >
                 <i className="fab fa-codepen"></i>
               </a>
@@ -85,18 +85,18 @@ const HomePage: FC<ReactNode> = () => {
                 href="https://dev.to/lofibytes"
                 aria-label="Jillian's DEV Profile"
                 title="Jillian's DEV Profile"
-                className="text-2xl text-gray-500 hover:text-lightBlue-700 focus:text-lightBlue-700 active:text-lightBlue-700 hover:cursor-pointer duration-200 focus:outline-none focus:ring focus:ring-lightBlue-700 rounded py-1 px-2"
+                className="px-2 py-1 text-2xl text-gray-500 duration-200 rounded hover:text-lightBlue-700 focus:text-lightBlue-700 active:text-lightBlue-700 hover:cursor-pointer focus:outline-none focus:ring focus:ring-lightBlue-700"
               >
                 <i className="fab fa-dev"></i>
               </a>
             </div>
           </div>
 
-          <p className="text-gray-600 tracking-wider leading-relaxed mt-8">
+          <p className="mt-8 leading-relaxed tracking-wider text-gray-600">
             Hi there! Welcome to my creative space. I love building beautiful digital experiences and I am passionate about technology that advances social and environmental justice.
           </p>
           <div
-            className="mx-auto mt-8 w-full md:w-3/4"
+            className="w-full mx-auto mt-8 md:w-3/4"
           >
             <Button
               action="primary"
@@ -111,10 +111,10 @@ const HomePage: FC<ReactNode> = () => {
         </Section>
 
         <Section>
-          <div className="bg-yellow-300 w-max py-2 px-10 -ml-10 sm:px-24 sm:-ml-24 rounded shadow-lg max-w-xs sm:max-w-none">
-            <h2 className="text-gray-800 text-xl sm:text-2xl tracking-wide">Say Hello</h2>
+          <div className="max-w-xs px-10 py-2 -ml-10 bg-yellow-300 rounded shadow-lg w-max sm:px-24 sm:-ml-24 sm:max-w-none">
+            <h2 className="text-xl tracking-wide text-gray-800 sm:text-2xl">Say Hello</h2>
           </div>
-          <div className="md:w-10/12 mx-auto">
+          <div className="mx-auto md:w-10/12">
             <ContactForm />
           </div>
         </Section>

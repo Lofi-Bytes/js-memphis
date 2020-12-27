@@ -5,11 +5,11 @@ type MainProps = {
   children: ReactNode
 }
 
-const Main: FC<ReactNode> = ({
+const Main: FC<MainProps> = ({
   children
 }: MainProps) => {
   return (
-    <main className="min-h-screen max-w-screen-lg m-auto mb-20">
+    <main className="max-w-screen-lg min-h-screen m-auto mb-20">
       {children}
     </main>
   )

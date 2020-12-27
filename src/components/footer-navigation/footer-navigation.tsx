@@ -18,7 +18,7 @@ const FooterNavigation: FC<ReactNode> = ({}: ReactNode) => {
 
   return (
     <React.Fragment>
-      <nav className="nav hidden sm:flex items-center justify-around text-gray-50 w-2/3 md:w-1/2 mx-auto mt-6">
+      <nav className="items-center justify-around hidden w-2/3 mx-auto mt-6 nav sm:flex text-gray-50 md:w-1/2">
         {
           navigationData.allNavigationJson.edges.map((edge, index) => {
             const path = edge.node.path
@@ -27,7 +27,7 @@ const FooterNavigation: FC<ReactNode> = ({}: ReactNode) => {
               <React.Fragment key={`item-${index}`}>
                 <Link
                   to={path}
-                  className="text-base tracking-wider text-teal-100 hover:text-pink-200 focus:text-pink-200 active:text-pink-300 hover:cursor-pointer duration-200 focus:outline-none focus:ring focus:ring-teal-200 rounded py-1 px-2"
+                  className="px-2 py-1 text-base tracking-wider text-teal-100 duration-200 rounded hover:text-pink-200 focus:text-pink-200 active:text-pink-300 hover:cursor-pointer focus:outline-none focus:ring focus:ring-teal-200"
                 >
                   {title}
                 </Link>

@@ -17,29 +17,29 @@ const Banner: FC<BannerProps> = ({
 }: BannerProps) => {
   return (
     <React.Fragment>
-      <div className="bg-indigo-700 bg-opacity-30 w-full z-5">
-        <div className="flex flex-col justify-center items-center max-w-screen-md m-auto h-80 pb-14 sm:pb-28 px-6">
+      <div className="w-full bg-indigo-700 bg-opacity-30 z-5">
+        <div className="flex flex-col items-center justify-center max-w-screen-md px-6 m-auto h-80 pb-14 sm:pb-28">
           {
             align === 'left'
             ?
               <>
-                <h1 className="text-teal-100 text-3xl sm:text-4xl font-light w-full">
+                <h1 className="w-full text-3xl font-light text-teal-100 sm:text-4xl">
                   {title}
                 </h1>
-                <p className="text-teal-100 text-lg sm:text-xl lg:text-2xl font-medium sm:font-light mt-3 tracking-wide w-full">{subtitle}</p>
+                <p className="w-full mt-3 text-lg font-medium tracking-wide text-teal-100 sm:text-xl lg:text-2xl sm:font-light">{subtitle}</p>
                 {
                   date
                     ?
-                      <p className="text-gray-200 font-serif italic w-full mt-2 text-sm sm:text-base">{date}</p>
+                      <p className="w-full mt-2 font-serif text-sm italic text-gray-200 sm:text-base">{date}</p>
                     : null
                 }
               </>
             :
               <>
-                <h1 className="text-teal-100 text-3xl sm:text-4xl font-light text-center">
+                <h1 className="text-3xl font-light text-center text-teal-100 sm:text-4xl">
                   {title}
                 </h1>
-                <p className="text-teal-100 text-lg sm:text-xl lg:text-2xl font-medium sm:font-light mt-3 tracking-wide text-center">{subtitle}</p>
+                <p className="mt-3 text-lg font-medium tracking-wide text-center text-teal-100 sm:text-xl lg:text-2xl sm:font-light">{subtitle}</p>
               </>
           }
         </div>

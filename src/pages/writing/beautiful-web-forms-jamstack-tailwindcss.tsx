@@ -54,10 +54,10 @@ const styledForm =
   <div className="grid grid-cols-1 gap-4 mt-8">
     <input type="hidden" name="form-contact" value="contact" />
     <label className="block">
-      <span className="text-gray-600 tracking-wider text-sm">Name</span>
+      <span className="text-sm tracking-wider text-gray-600">Name</span>
       <div className="relative">
         <input
-          className="mt-1 block pl-3 pr-10 border-0 border-l-4 border-purple-300 focus:ring-0 focus:border-fuchsia-500 bg-gray-200 rounded-lg text-gray-600 text-lg w-full shadow-md"
+          className="block w-full pl-3 pr-10 mt-1 text-lg text-gray-600 bg-gray-200 border-0 border-l-4 border-purple-300 rounded-lg shadow-md focus:ring-0 focus:border-fuchsia-500"
           aria-required="true"
           placeholder=""
           type="text"
@@ -66,10 +66,10 @@ const styledForm =
       </div>
     </label>
     <label className="block">
-      <span className="text-gray-600 tracking-wider text-sm">Email</span>
+      <span className="text-sm tracking-wider text-gray-600">Email</span>
       <div className="relative">
         <input
-          className="mt-1 block pl-3 pr-10 border-0 border-l-4 border-purple-300 focus:ring-0 focus:border-fuchsia-500 bg-gray-200 rounded-lg text-gray-600 text-lg w-full shadow-md"
+          className="block w-full pl-3 pr-10 mt-1 text-lg text-gray-600 bg-gray-200 border-0 border-l-4 border-purple-300 rounded-lg shadow-md focus:ring-0 focus:border-fuchsia-500"
           aria-required="true"
           type="email"
           name="email"
@@ -77,10 +77,10 @@ const styledForm =
       </div>
     </label>
     <label className="block">
-      <span className="text-gray-600 tracking-wider text-sm">Message</span>
+      <span className="text-sm tracking-wider text-gray-600">Message</span>
       <div className="relative">
         <textarea
-          className="mt-1 block flex-grow pl-3 pr-10 border-0 border-l-4 border-purple-300 focus:ring-0 focus:border-fuchsia-500 bg-gray-200 rounded-lg text-gray-600 text-lg w-full shadow-md"
+          className="flex-grow block w-full pl-3 pr-10 mt-1 text-lg text-gray-600 bg-gray-200 border-0 border-l-4 border-purple-300 rounded-lg shadow-md focus:ring-0 focus:border-fuchsia-500"
           aria-required="true"
           rows={4}
           name="message"
@@ -148,22 +148,22 @@ const BeautifulFormsJamstackTailwindCSSPage: FC<ReactNode> = () => {
         date={date}
       />
       <Main>
-        <Section className="-mt-12 mb-8">
-          <div className="bg-cyan-300 w-max py-2 px-10 -ml-10 sm:px-24 sm:-ml-24 rounded shadow-lg max-w-xs sm:max-w-none">
-            <h2 className="text-gray-800 text-xl sm:text-2xl tracking-wide">@tailwindcss/forms</h2>
+        <Section className="mb-8 -mt-12">
+          <div className="max-w-xs px-10 py-2 -ml-10 rounded shadow-lg bg-cyan-300 w-max sm:px-24 sm:-ml-24 sm:max-w-none">
+            <h2 className="text-xl tracking-wide text-gray-800 sm:text-2xl">@tailwindcss/forms</h2>
           </div>
-          <h3 className="text-gray-700 text-xl mt-10 tracking-wide">Introduction</h3>
-          <p className="text-gray-600 tracking-wider leading-relaxed mt-3">
+          <h3 className="mt-10 text-xl tracking-wide text-gray-700">Introduction</h3>
+          <p className="mt-3 leading-relaxed tracking-wider text-gray-600">
             Form elements are not always the easiest to style. @tailwindcss/forms convieniently provides a basic reset for form styles that makes form elements easy to override with Tailwind CSS utility classes. @tailwindcss/forms is designed for Tailwind CSS v2.0 and replaces <TextLink to="https://github.com/tailwindlabs/tailwindcss-custom-forms" external={true}>tailwindcss-custom-forms</TextLink> which was designed to work with Tailwind CSS v1.0.
           </p>
 
-          <h3 className="text-gray-700 text-xl mt-10 tracking-wide">Getting Started</h3>
-          <p className="text-gray-600 tracking-wider leading-relaxed mt-3">
+          <h3 className="mt-10 text-xl tracking-wide text-gray-700">Getting Started</h3>
+          <p className="mt-3 leading-relaxed tracking-wider text-gray-600">
             Starting with @tailwindcss/forms is fairly routine. Install the plugin:
           </p>
-          <div className="code-container shadow mt-4 bg-gray-50 rounded-lg p-1 pt-3 border-l-8 border-blue-500">
+          <div className="p-1 pt-3 mt-4 border-l-8 border-blue-500 rounded-lg shadow code-container bg-gray-50">
             <div
-              className="text-lg text font-thin font-mono w-max rounded-tr-xl rounded-bl-xl px-4 ml-3 bg-gray-900 shadow-md mb-4"
+              className="px-4 mb-4 ml-3 font-mono text-lg font-thin bg-gray-900 shadow-md text w-max rounded-tr-xl rounded-bl-xl"
               style={{ color: '#ffffff' }}
             >
               zsh
@@ -172,12 +172,12 @@ const BeautifulFormsJamstackTailwindCSSPage: FC<ReactNode> = () => {
               <code className="language-bash">{install}</code>
             </pre>
           </div>
-          <p className="text-gray-600 tracking-wider leading-relaxed mt-8">
+          <p className="mt-8 leading-relaxed tracking-wider text-gray-600">
             Then add the plugin to your <code className="language-bash">tailwind.config.js</code> file:
           </p>
-          <div className="code-container shadow mt-4 bg-gray-50 rounded-lg p-1 pt-3 border-l-8 border-blue-500">
+          <div className="p-1 pt-3 mt-4 border-l-8 border-blue-500 rounded-lg shadow code-container bg-gray-50">
             <div
-              className="text-lg text font-thin font-mono w-max rounded-tr-xl rounded-bl-xl px-4 ml-3 shadow-md mb-4"
+              className="px-4 mb-4 ml-3 font-mono text-lg font-thin shadow-md text w-max rounded-tr-xl rounded-bl-xl"
               style={{
                 backgroundColor: '#f7df1e'
               }}
@@ -188,13 +188,13 @@ const BeautifulFormsJamstackTailwindCSSPage: FC<ReactNode> = () => {
               <code className="language-javascript">{tailwindConfig}</code>
             </pre>
           </div>
-          <h3 className="text-gray-700 text-xl mt-10 tracking-wide">Usage</h3>
-          <p className="text-gray-600 tracking-wider leading-relaxed mt-3">
+          <h3 className="mt-10 text-xl tracking-wide text-gray-700">Usage</h3>
+          <p className="mt-3 leading-relaxed tracking-wider text-gray-600">
             I found that the easiest way to get started is to look at the provided <TextLink to="https://tailwindcss-forms.vercel.app/" external={true}>live demo examples</TextLink>. For this post, we will recreate the contact form found on the homepage of <TextLink to="/" external={false}>jillian.dev</TextLink>. We will start by using dev tools to copy the underline-style form example and modify the fields as needed (also adjusting the HTML to be valid JSX/TSX):
           </p>
-          <div className="code-container shadow mt-4 bg-gray-50 rounded-lg p-1 pt-3 border-l-8 border-blue-500">
+          <div className="p-1 pt-3 mt-4 border-l-8 border-blue-500 rounded-lg shadow code-container bg-gray-50">
             <div
-              className="text-lg text font-thin font-mono w-max rounded-tl-sm rounded-tr-xl rounded-bl-xl rounded-br-sm px-4 ml-3 shadow-md mb-4"
+              className="px-4 mb-4 ml-3 font-mono text-lg font-thin rounded-tl-sm rounded-br-sm shadow-md text w-max rounded-tr-xl rounded-bl-xl"
               style={{
                 backgroundColor: '#007ACC',
                 color: '#ffffff'
@@ -206,11 +206,11 @@ const BeautifulFormsJamstackTailwindCSSPage: FC<ReactNode> = () => {
               <code className="language-tsx line-numbers">{initialForm}</code>
             </pre>
           </div>
-          <p className="text-gray-600 tracking-wider leading-relaxed mt-8">
+          <p className="mt-8 leading-relaxed tracking-wider text-gray-600">
             Which should display like this:
           </p>
           <div>
-            <div className="bg-white shadow rounded px-8 py-4 mt-4" style={{ backgroundColor: 'white' }}>
+            <div className="px-8 py-4 mt-4 bg-white rounded shadow" style={{ backgroundColor: 'white' }}>
               <div className="grid grid-cols-1 gap-6">
                 <label className="block">
                   <span className="text-gray-700">Name</span>
@@ -227,12 +227,12 @@ const BeautifulFormsJamstackTailwindCSSPage: FC<ReactNode> = () => {
               </div>
             </div>
           </div>
-          <p className="text-gray-600 tracking-wider leading-relaxed mt-8">
+          <p className="mt-8 leading-relaxed tracking-wider text-gray-600">
             With a nice reset in place, now we can just add or remove any of the Tialwind CSS utility classes that we want in order to style the form to our liking:
           </p>
-          <div className="code-container shadow mt-4 bg-gray-50 rounded-lg p-1 pt-3 border-l-8 border-blue-500">
+          <div className="p-1 pt-3 mt-4 border-l-8 border-blue-500 rounded-lg shadow code-container bg-gray-50">
             <div
-              className="text-lg text font-thin font-mono w-max rounded-tl-sm rounded-tr-xl rounded-bl-xl rounded-br-sm px-4 ml-3 shadow-md mb-4"
+              className="px-4 mb-4 ml-3 font-mono text-lg font-thin rounded-tl-sm rounded-br-sm shadow-md text w-max rounded-tr-xl rounded-bl-xl"
               style={{
                 backgroundColor: '#007ACC',
                 color: '#ffffff'
@@ -244,17 +244,17 @@ const BeautifulFormsJamstackTailwindCSSPage: FC<ReactNode> = () => {
               <code className="language-tsx line-numbers">{styledForm}</code>
             </pre>
           </div>
-          <p className="text-gray-600 tracking-wider leading-relaxed mt-8">
-            Note that on lines 6, 18, and 29 I preemptively changed the <code className="language-bash">div</code>'s to <code className="css">display: relative;</code> since we will be using those elements to position icons for visual feedback in the next post. And there we have it, a gorgeous, accessible contact form that doesn't yet function:
+          <p className="mt-8 leading-relaxed tracking-wider text-gray-600">
+            Note that on lines 6, 18, and 29 I preemptively changed the <code className="language-bash">div</code>'s to <code className="css">display: relative;</code> since we will be using those elements to position icons for visual feedback during form field validation in the next post. And there we have it, a gorgeous, accessible contact form:
           </p>
           <div>
             <div className="grid grid-cols-1 gap-4 mt-8">
               <input type="hidden" name="form-contact" value="contact" />
               <label className="block">
-                <span className="text-gray-600 tracking-wider text-sm">Name</span>
+                <span className="text-sm tracking-wider text-gray-600">Name</span>
                 <div className="relative">
                   <input
-                    className="mt-1 block pl-3 pr-10 border-0 border-l-4 border-purple-300 focus:ring-0 focus:border-fuchsia-500 bg-gray-200 rounded-lg text-gray-600 text-lg w-full shadow-md"
+                    className="block w-full pl-3 pr-10 mt-1 text-lg text-gray-600 bg-gray-200 border-0 border-l-4 border-purple-300 rounded-lg shadow-md focus:ring-0 focus:border-fuchsia-500"
                     aria-required="true"
                     placeholder=""
                     type="text"
@@ -263,10 +263,10 @@ const BeautifulFormsJamstackTailwindCSSPage: FC<ReactNode> = () => {
                 </div>
               </label>
               <label className="block">
-                <span className="text-gray-600 tracking-wider text-sm">Email</span>
+                <span className="text-sm tracking-wider text-gray-600">Email</span>
                 <div className="relative">
                   <input
-                    className="mt-1 block pl-3 pr-10 border-0 border-l-4 border-purple-300 focus:ring-0 focus:border-fuchsia-500 bg-gray-200 rounded-lg text-gray-600 text-lg w-full shadow-md"
+                    className="block w-full pl-3 pr-10 mt-1 text-lg text-gray-600 bg-gray-200 border-0 border-l-4 border-purple-300 rounded-lg shadow-md focus:ring-0 focus:border-fuchsia-500"
                     aria-required="true"
                     type="email"
                     name="email"
@@ -274,10 +274,10 @@ const BeautifulFormsJamstackTailwindCSSPage: FC<ReactNode> = () => {
                 </div>
               </label>
               <label className="block">
-                <span className="text-gray-600 tracking-wider text-sm">Message</span>
+                <span className="text-sm tracking-wider text-gray-600">Message</span>
                 <div className="relative">
                   <textarea
-                    className="mt-1 block flex-grow pl-3 pr-10 border-0 border-l-4 border-purple-300 focus:ring-0 focus:border-fuchsia-500 bg-gray-200 rounded-lg text-gray-600 text-lg w-full shadow-md"
+                    className="flex-grow block w-full pl-3 pr-10 mt-1 text-lg text-gray-600 bg-gray-200 border-0 border-l-4 border-purple-300 rounded-lg shadow-md focus:ring-0 focus:border-fuchsia-500"
                     aria-required="true"
                     rows={4}
                     name="message"
@@ -293,7 +293,7 @@ const BeautifulFormsJamstackTailwindCSSPage: FC<ReactNode> = () => {
               </button>
             </div>
           </div>
-          <div className="flex justify-between items-center mt-10">
+          <div className="flex items-center justify-between mt-10">
             <PreviousButton
               action="secondary"
               path={path}

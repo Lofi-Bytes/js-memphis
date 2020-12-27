@@ -68,7 +68,7 @@ const ContactPage: FC = () => {
             <span className="hidden sm:inline-block">
               <i className="fal fa-paper-plane text-gray-50"></i>&nbsp;
             </span>
-            <span className="js text-5xl leading-relaxed md:text-6xl md:leading-loose lg:text-7xl lg:leading-relaxed">
+            <span className="text-5xl leading-relaxed js md:text-6xl md:leading-loose lg:text-7xl lg:leading-relaxed">
               Send Me a Message
             </span>
             <span className="hidden sm:inline-block">
@@ -82,23 +82,23 @@ const ContactPage: FC = () => {
         // subtitle={<span className="text-teal-100">Designer, Full Stack Developer, &amp; Tech Lead</span>}
       />
       <Main>
-        <Section className="-mt-12 mb-8">
+        <Section className="mb-8 -mt-12">
           <React.Fragment>
 
             {successMsg &&
-              <div role="alert" className="h-96 mt-8 flex flex-col items-center justify-center p-6 bg-gray-200 rounded-lg text-gray-600 text-lg w-full shadow-md">
-                <i className="far fa-check-circle text-green-500 text-6xl sm:text-7xl md:text-8xl text-center w-full"></i>
-                <p className="text-gray-600 text-xl sm:text-2xl md:text-3xl text-center tracking-wider leading-relaxed mt-4">Thank you!</p>
-                <p className="text-gray-600 text-base sm:text-lg md:text-xl tracking-wider leading-relaxed mt-4">I have received your message.</p>
+              <div role="alert" className="flex flex-col items-center justify-center w-full p-6 mt-8 text-lg text-gray-600 bg-gray-200 rounded-lg shadow-md h-96">
+                <i className="w-full text-6xl text-center text-green-500 far fa-check-circle sm:text-7xl md:text-8xl"></i>
+                <p className="mt-4 text-xl leading-relaxed tracking-wider text-center text-gray-600 sm:text-2xl md:text-3xl">Thank you!</p>
+                <p className="mt-4 text-base leading-relaxed tracking-wider text-gray-600 sm:text-lg md:text-xl">I have received your message.</p>
               </div>
             }
 
             {errorMsg &&
-              <div role="alert" className="mt-6 flex items-start justify-start p-4 bg-red-100 rounded-lg text-gray-600 text-lg w-full shadow-md border-red-500 border-l-4">
-                <i className="far fa-times-circle text-red-500 text-3xl mt-1"></i>
+              <div role="alert" className="flex items-start justify-start w-full p-4 mt-6 text-lg text-gray-600 bg-red-100 border-l-4 border-red-500 rounded-lg shadow-md">
+                <i className="mt-1 text-3xl text-red-500 far fa-times-circle"></i>
                 <div className="ml-4">
-                  <p className="text-gray-600 text-2xl tracking-wider leading-relaxed">Oops!</p>
-                  <p className="text-gray-600 text-lg tracking-wider leading-relaxed mt-3">Well that's embarassing. Something went wrong. Please try to submit your message again.</p>
+                  <p className="text-2xl leading-relaxed tracking-wider text-gray-600">Oops!</p>
+                  <p className="mt-3 text-lg leading-relaxed tracking-wider text-gray-600">Well that's embarassing. Something went wrong. Please try to submit your message again.</p>
                 </div>
               </div>
             }
@@ -114,7 +114,7 @@ const ContactPage: FC = () => {
                 <div className="grid grid-cols-1 gap-4 mt-8">
                   <input type="hidden" name="form-contact" value="contact" />
                   <label className="block">
-                    <span className="text-gray-600 tracking-wider text-sm">Name</span>
+                    <span className="text-sm tracking-wider text-gray-600">Name</span>
                     <div className="relative">
                       <input
                         className={
@@ -154,21 +154,21 @@ const ContactPage: FC = () => {
                       {
                         !JSON.stringify(formState.touched.name) // field is pristine
                           ?
-                            <div className="w-4 absolute right-4 top-1/4"></div>
+                            <div className="absolute w-4 right-4 top-1/4"></div>
                           :
                             errors.name && errors.name.type === "required"
                               ?
-                                <i className="far fa-times text-red-600 text-2xl w-4 absolute right-4 top-1/4"></i>
+                                <i className="absolute w-4 text-2xl text-red-600 far fa-times right-4 top-1/4"></i>
                               :
                                 errors.name && errors.name.type === "minLength"
                                   ?
-                                    <i className="far fa-times text-red-600 text-2xl w-4 absolute right-4 top-1/4"></i>
+                                    <i className="absolute w-4 text-2xl text-red-600 far fa-times right-4 top-1/4"></i>
                                   :
                                     errors.name && errors.name.type === "maxLength"
                                     ?
-                                      <i className="far fa-times text-red-600 text-2xl w-4 absolute right-4 top-1/4"></i>
+                                      <i className="absolute w-4 text-2xl text-red-600 far fa-times right-4 top-1/4"></i>
                                     :
-                                      <i className="far fa-check text-green-600 text-2xl w-4 absolute right-4 top-1/4"></i>
+                                      <i className="absolute w-4 text-2xl text-green-600 far fa-check right-4 top-1/4"></i>
                       }
                     </div>
                     <p
@@ -218,7 +218,7 @@ const ContactPage: FC = () => {
                     </p>
                   </label>
                   <label className="block">
-                    <span className="text-gray-600 tracking-wider text-sm">Email</span>
+                    <span className="text-sm tracking-wider text-gray-600">Email</span>
                     <div className="relative">
                       <input
                         className={
@@ -256,13 +256,13 @@ const ContactPage: FC = () => {
                           :
                             errors.email && errors.email.type === "required"
                               ?
-                                <i className="far fa-times text-red-600 text-2xl w-4 absolute right-4 top-1/4"></i>
+                                <i className="absolute w-4 text-2xl text-red-600 far fa-times right-4 top-1/4"></i>
                               :
                                 errors.email && errors.email.type === "pattern"
                                   ?
-                                    <i className="far fa-times text-red-600 text-2xl w-4 absolute right-4 top-1/4"></i>
+                                    <i className="absolute w-4 text-2xl text-red-600 far fa-times right-4 top-1/4"></i>
                                   :
-                                    <i className="far fa-check text-green-600 text-2xl w-4 absolute right-4 top-1/4"></i>
+                                    <i className="absolute w-4 text-2xl text-green-600 far fa-check right-4 top-1/4"></i>
                       }
                     </div>
                     <p
@@ -305,7 +305,7 @@ const ContactPage: FC = () => {
                     </p>
                   </label>
                   <label className="block">
-                    <span className="text-gray-600 tracking-wider text-sm">Message</span>
+                    <span className="text-sm tracking-wider text-gray-600">Message</span>
                     <div className="relative">
                       <textarea
                         className={
@@ -348,17 +348,17 @@ const ContactPage: FC = () => {
                           :
                             errors.message && errors.message.type === "required"
                               ?
-                                <i className="far fa-times text-red-600 text-2xl w-4 absolute right-4 top-2"></i>
+                                <i className="absolute w-4 text-2xl text-red-600 far fa-times right-4 top-2"></i>
                               :
                                 errors.message && errors.message.type === "minLength"
                                   ?
-                                    <i className="far fa-times text-red-600 text-2xl w-4 absolute right-4 top-2"></i>
+                                    <i className="absolute w-4 text-2xl text-red-600 far fa-times right-4 top-2"></i>
                                   :
                                     errors.message && errors.message.type === "maxLength"
                                     ?
-                                      <i className="far fa-times text-red-600 text-2xl w-4 absolute right-4 top-2"></i>
+                                      <i className="absolute w-4 text-2xl text-red-600 far fa-times right-4 top-2"></i>
                                     :
-                                      <i className="far fa-check text-green-600 text-2xl w-4 absolute right-4 top-2"></i>
+                                      <i className="absolute w-4 text-2xl text-green-600 far fa-check right-4 top-2"></i>
                       }
                     </div>
                     <p
