@@ -13,7 +13,7 @@ const Footer: FC<FooterProps> = ({
 }: FooterProps) => {
   return (
     <React.Fragment>
-      <footer className="flex flex-col items-center justify-center w-full h-40 mb-8 bg-indigo-700 bg-opacity-70 sm:mb-0">
+      <footer className="flex flex-col items-center justify-center w-full bg-indigo-700 h-72 sm:h-40 bg-opacity-70">
         <div className="relative flex items-center justify-center">
           <div>
             <a
