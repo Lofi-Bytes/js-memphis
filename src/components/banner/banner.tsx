@@ -26,7 +26,7 @@ const Banner: FC<BannerProps> = ({
                 <h1 className="w-full text-3xl font-light text-teal-100 sm:text-4xl">
                   {title}
                 </h1>
-                <p className="w-full mt-3 text-lg font-medium tracking-wide text-teal-100 sm:text-xl lg:text-2xl sm:font-light">{subtitle}</p>
+                <p className="w-full mt-3 text-xl font-medium tracking-wide text-teal-100 lg:text-2xl sm:font-light">{subtitle}</p>
                 {
                   date
                     ?
@@ -39,7 +39,7 @@ const Banner: FC<BannerProps> = ({
                 <h1 className="text-3xl font-light text-center text-teal-100 sm:text-4xl">
                   {title}
                 </h1>
-                <p className="mt-3 text-lg font-medium tracking-wide text-center text-teal-100 sm:text-xl lg:text-2xl sm:font-light">{subtitle}</p>
+                <p className="mt-3 text-xl font-medium tracking-wide text-center text-teal-100 lg:text-2xl sm:font-light">{subtitle}</p>
               </>
           }
         </div>
