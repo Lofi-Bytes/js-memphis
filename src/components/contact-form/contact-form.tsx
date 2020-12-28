@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react'
+import React, { FC, ReactNode, useState } from 'react'
 
 import { useForm } from 'react-hook-form'
 
@@ -13,7 +13,7 @@ export type ContactFormProps = {
   message: string
 }
 
-const ContactForm: FC = ({}) => {
+const ContactForm: FC<ReactNode> = ({}: ReactNode) => {
   const {
     register,
     handleSubmit,
