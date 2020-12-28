@@ -9,6 +9,7 @@ import SEO from '../../components/seo'
 import Main from '../../components/main'
 import NextPrev from '../../components/next-prev'
 import Tag from '../../components/tag'
+import CodeContainer from '../../components/code-container'
 
 import Prism from 'prismjs'
 
@@ -167,51 +168,37 @@ const BeautifulWebFormsJamstackTailwindCSSPage: FC<PageProps> = ({
           <p className="mt-3 leading-relaxed tracking-wider text-gray-600">
             Starting with @tailwindcss/forms is fairly routine. Install the plugin:
           </p>
-          <div className="p-1 pt-3 mt-4 border-l-8 border-blue-500 rounded-lg shadow code-container bg-gray-50">
-            <div
-              className="px-4 mb-4 ml-3 font-mono text-lg font-thin bg-gray-900 shadow-md text w-max rounded-tr-xl rounded-bl-xl"
-              style={{ color: '#ffffff' }}
-            >
-              zsh
-            </div>
-            <pre>
-              <code className="language-bash">{install}</code>
-            </pre>
-          </div>
+          <CodeContainer
+            language="bash"
+            tag="zsh"
+            tagBgColor="bg-gray-900"
+            tagColor="#ffffff"
+          >
+            {install}
+          </CodeContainer>
           <p className="mt-8 leading-relaxed tracking-wider text-gray-600">
             Then add the plugin to your <code className="language-bash">tailwind.config.js</code> file:
           </p>
-          <div className="p-1 pt-3 mt-4 border-l-8 border-blue-500 rounded-lg shadow code-container bg-gray-50">
-            <div
-              className="px-4 mb-4 ml-3 font-mono text-lg font-thin shadow-md text w-max rounded-tr-xl rounded-bl-xl"
-              style={{
-                backgroundColor: '#f7df1e'
-              }}
-            >
-              JS
-            </div>
-            <pre>
-              <code className="language-javascript">{tailwindConfig}</code>
-            </pre>
-          </div>
+          <CodeContainer
+            language="js"
+            tag="JS"
+            tagBgColor="#f7df1e"
+            tagColor="text-gray-900"
+          >
+            {tailwindConfig}
+          </CodeContainer>
           <h3 className="mt-10 text-xl tracking-wide text-gray-700">Usage</h3>
           <p className="mt-3 leading-relaxed tracking-wider text-gray-600">
             I found that the easiest way to get started is to look at the provided <TextLink to="https://tailwindcss-forms.vercel.app/" external={true}>live demo examples</TextLink>. For this post, we will recreate the contact form found on the homepage of <TextLink to="/" external={false}>jillian.dev</TextLink>. We will start by using dev tools to copy the underline-style form example and modify the fields as needed (also adjusting the HTML to be valid JSX/TSX):
           </p>
-          <div className="p-1 pt-3 mt-4 border-l-8 border-blue-500 rounded-lg shadow code-container bg-gray-50">
-            <div
-              className="px-4 mb-4 ml-3 font-mono text-lg font-thin rounded-tl-sm rounded-br-sm shadow-md text w-max rounded-tr-xl rounded-bl-xl"
-              style={{
-                backgroundColor: '#007ACC',
-                color: '#ffffff'
-              }}
-            >
-              TSX
-            </div>
-            <pre>
-              <code className="language-tsx line-numbers">{initialForm}</code>
-            </pre>
-          </div>
+          <CodeContainer
+            language="tsx"
+            tag="TSX"
+            tagBgColor="#007ACC"
+            tagColor="#ffffff"
+          >
+            {initialForm}
+          </CodeContainer>
           <p className="mt-8 leading-relaxed tracking-wider text-gray-600">
             Which should display like this:
           </p>
@@ -236,20 +223,14 @@ const BeautifulWebFormsJamstackTailwindCSSPage: FC<PageProps> = ({
           <p className="mt-8 leading-relaxed tracking-wider text-gray-600">
             With a nice reset in place, now we can just add or remove any of the Tailwind CSS utility classes that we want in order to style the form to our liking:
           </p>
-          <div className="p-1 pt-3 mt-4 border-l-8 border-blue-500 rounded-lg shadow code-container bg-gray-50">
-            <div
-              className="px-4 mb-4 ml-3 font-mono text-lg font-thin rounded-tl-sm rounded-br-sm shadow-md text w-max rounded-tr-xl rounded-bl-xl"
-              style={{
-                backgroundColor: '#007ACC',
-                color: '#ffffff'
-              }}
-            >
-              TSX
-            </div>
-            <pre>
-              <code className="language-tsx line-numbers">{styledForm}</code>
-            </pre>
-          </div>
+          <CodeContainer
+            language="tsx"
+            tag="TSX"
+            tagBgColor="#007ACC"
+            tagColor="#ffffff"
+          >
+            {styledForm}
+          </CodeContainer>
           <p className="mt-8 leading-relaxed tracking-wider text-gray-600">
             Note that on lines 6, 18, and 29 I preemptively changed the <code className="language-bash">div</code>'s to <code className="css">display: relative;</code> since we will be using those elements to position icons for visual feedback during form field validation in the next post. Of course I also added a button since that is an important part of any form 😊. And there we have it, a gorgeously styled and accessible contact form:
           </p>

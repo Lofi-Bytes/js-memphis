@@ -20,7 +20,7 @@ const Alert: FC<AlertProps> = ({
   // const styles = formatClassList(STYLES)
   return (
     <div
-      className="flex px-8 py-4 mt-8 bg-blue-100 border-l-4 border-blue-400 rounded shadow-lg"
+      className="flex px-8 py-4 mt-8 bg-blue-100 border-l-8 border-blue-500 rounded shadow-lg"
       // className={
       //   className
       //     ? joinStrings(' ', styles, className)

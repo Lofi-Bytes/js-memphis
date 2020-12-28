@@ -12,6 +12,7 @@ import NextPrev from '../../components/next-prev'
 import Tag from '../../components/tag'
 
 import Prism from 'prismjs'
+import CodeContainer from '../../components/code-container/code-container'
 
 
 const install =
@@ -158,17 +159,14 @@ const BeautifulWebFormsJamstackReactHookFormPage: FC<PageProps> = ({
           <p className="mt-3 leading-relaxed tracking-wider text-gray-600">
             Start by installing React Hook Form:
           </p>
-          <div className="p-1 pt-3 mt-4 border-l-8 border-blue-500 rounded-lg shadow code-container bg-gray-50">
-            <div
-              className="px-4 mb-4 ml-3 font-mono text-lg font-thin bg-gray-900 shadow-md text w-max rounded-tr-xl rounded-bl-xl"
-              style={{ color: '#ffffff' }}
-            >
-              zsh
-            </div>
-            <pre>
-              <code className="language-bash">{install}</code>
-            </pre>
-          </div>
+          <CodeContainer
+            language="bash"
+            tag="zsh"
+            tagBgColor="bg-gray-900"
+            tagColor="#ffffff"
+          >
+            {install}
+          </CodeContainer>
           <p className="mt-3 leading-relaxed tracking-wider text-gray-600">
             Now we are ready to start using it in our project.
           </p>
@@ -176,45 +174,29 @@ const BeautifulWebFormsJamstackReactHookFormPage: FC<PageProps> = ({
           <p className="mt-3 leading-relaxed tracking-wider text-gray-600">
             Starting with a basic react arrow function component, which renders the Tailwind CSS-styled form that we created previously:
           </p>
-          <div className="p-1 pt-3 mt-4 border-l-8 border-blue-500 rounded-lg shadow code-container bg-gray-50">
-            <div className="mb-4 ml-3">
-              <code className="language-bash">./src/components/contact-form/contact-form.tsx</code>
-            </div>
-            <div
-              className="px-4 mb-4 ml-3 font-mono text-lg font-thin rounded-tl-sm rounded-br-sm shadow-md text w-max rounded-tr-xl rounded-bl-xl"
-              style={{
-                backgroundColor: '#007ACC',
-                color: '#ffffff'
-              }}
-            >
-              TSX
-            </div>
-            <pre>
-              <code className="language-tsx line-numbers">{styledForm}</code>
-            </pre>
-          </div>
+          <CodeContainer
+            language="tsx"
+            path="./src/components/contact-form/contact-form.tsx"
+            tag="TSX"
+            tagBgColor="#007ACC"
+            tagColor="#ffffff"
+          >
+            {styledForm}
+          </CodeContainer>
           <p className="mt-8 leading-relaxed tracking-wider text-gray-600">
             Note above that I have abstracted the button into its own component which keeps things dry and cleans up the TSX in this component.
           </p>
           <Alert>
-            As a standard practice, I keep an <code className="language-bash">index.ts</code> file inside of all component subdirectories which cleans up imports throughout the app:
-            <div className="p-1 pt-3 mt-4 border-l-8 border-blue-500 rounded-lg shadow code-container bg-gray-50">
-              <div className="mb-4 ml-3">
-                <code className="language-bash">./src/components/button/index.ts</code>
-              </div>
-              <div
-                className="px-4 mb-4 ml-3 font-mono text-lg font-thin rounded-tl-sm rounded-br-sm shadow-md text w-max rounded-tr-xl rounded-bl-xl"
-                style={{
-                  backgroundColor: '#007ACC',
-                  color: '#ffffff'
-                }}
-              >
-                TS
-              </div>
-              <pre>
-                <code className="language-tsx line-numbers">{buttonExport}</code>
-              </pre>
-            </div>
+            Note the Button import. As a standard practice, I keep an <code className="language-bash">index.ts</code> file inside of all component subdirectories (including <code className="language-bash">contact-form</code>) which cleans up imports throughout the app:
+            <CodeContainer
+              language="ts"
+              path="./src/components/button/index.ts"
+              tag="TS"
+              tagBgColor="#007ACC"
+              tagColor="#ffffff"
+            >
+              {buttonExport}
+            </CodeContainer>
           </Alert>
 
           <NextPrev path={path} className="mt-10" />
