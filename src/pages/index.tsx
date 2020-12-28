@@ -114,7 +114,7 @@ const HomePage: FC<PageProps> = ({
               title="Learn more about me"
               to="/about"
             >
-              Learn more about me
+              Learn more about me&nbsp;&nbsp;<i className="far fa-chevron-right" />
             </Button>
           </div>
         </Section>
