@@ -16,6 +16,9 @@ module.exports = {
     extend: {},
     colors: {
       // Build your palette here
+      transparent: 'transparent',
+      black: colors.black,
+      white: colors.white,
       gray: colors.warmGray,
       red: colors.red,
       orange: colors.orange,

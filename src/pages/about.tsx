@@ -1,4 +1,4 @@
-import React, { FC, ReactNode } from 'react'
+import React, { FC } from 'react'
 
 import Avatar from '../components/avatar'
 import Banner from '../components/banner'

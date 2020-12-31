@@ -163,7 +163,7 @@ const BeautifulWebFormsJamstackReactHookFormPage: FC<PageProps> = ({
             language="bash"
             tag="zsh"
             tagBgColor="bg-gray-900"
-            tagColor="#ffffff"
+            tagColor="text-white"
           >
             {install}
           </CodeContainer>
