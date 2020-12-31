@@ -179,7 +179,7 @@ const BeautifulWebFormsJamstackReactHookFormPage: FC<PageProps> = ({
             path="./src/components/contact-form/contact-form.tsx"
             tag="TSX"
             tagBgColor="#007ACC"
-            tagColor="#ffffff"
+            tagColor="text-white"
           >
             {styledForm}
           </CodeContainer>
@@ -193,7 +193,7 @@ const BeautifulWebFormsJamstackReactHookFormPage: FC<PageProps> = ({
               path="./src/components/button/index.ts"
               tag="TS"
               tagBgColor="#007ACC"
-              tagColor="#ffffff"
+              tagColor="text-white"
             >
               {buttonExport}
             </CodeContainer>

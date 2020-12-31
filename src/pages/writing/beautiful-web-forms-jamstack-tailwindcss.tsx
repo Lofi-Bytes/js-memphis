@@ -172,7 +172,7 @@ const BeautifulWebFormsJamstackTailwindCSSPage: FC<PageProps> = ({
             language="bash"
             tag="zsh"
             tagBgColor="bg-gray-900"
-            tagColor="#ffffff"
+            tagColor="text-white"
           >
             {install}
           </CodeContainer>
@@ -195,7 +195,7 @@ const BeautifulWebFormsJamstackTailwindCSSPage: FC<PageProps> = ({
             language="tsx"
             tag="TSX"
             tagBgColor="#007ACC"
-            tagColor="#ffffff"
+            tagColor="text-white"
           >
             {initialForm}
           </CodeContainer>
@@ -227,7 +227,7 @@ const BeautifulWebFormsJamstackTailwindCSSPage: FC<PageProps> = ({
             language="tsx"
             tag="TSX"
             tagBgColor="#007ACC"
-            tagColor="#ffffff"
+            tagColor="text-white"
           >
             {styledForm}
           </CodeContainer>
