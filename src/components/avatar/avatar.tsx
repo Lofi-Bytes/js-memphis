@@ -7,7 +7,7 @@ import BackgroundImage from 'gatsby-background-image'
 const Avatar: FC<ReactNode> = ({}) => {
   const data = useStaticQuery(graphql`
     query {
-      Image01: file(relativePath: { eq: "IMG_4907.JPG" }) {
+      Image01: file(relativePath: { eq: "BIfVQUcG_400x400.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 300) {
             ...GatsbyImageSharpFluid_withWebp
