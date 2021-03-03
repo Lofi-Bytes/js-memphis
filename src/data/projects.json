@@ -4,6 +4,7 @@
     "path": "https://healthliteracy.bscs.org/",
     "excerpt": "In this project, we are developing curriculum materials for middle and high school students that will help them learn to evaluate information and claims about health issues. The project is being supported by the National Institutes of Health (NIH).",
     "date": "2017 - 2021",
+    "section": "bscs",
     "tags": [
       "NIH",
       "Gatsby",
@@ -17,6 +18,7 @@
     "path": "https://codepen.io/LofiBytes/pen/YzGZxWX",
     "excerpt": "An approximate reproduction of jillian.dev's animated Memphis design background.",
     "date": "Dec. 18th, 2020",
+    "section": "codepen",
     "tags": [
       "CSS",
       "React",
@@ -28,6 +30,7 @@
     "path": "https://3dmss.bscs.org/",
     "excerpt": "A Medical Mystery is a new 3D curriculum program to support middle school educators who are navigating next generation science. The program was developed in a partnership between BSCS Science Learning and Oregon Public Broadcasting (OPB) and includes a free Next Generation Science Standards (NGSS)-aligned body systems curriculum unit and teacher’s guide, along with an online professional learning course. A Medical Mystery was funded by the National Science Foundation under Grant No. DRL-1502571.",
     "date": "2015 - 2019",
+    "section": "bscs",
     "tags": [
       "NGSS",
       "Gatsby",
@@ -41,6 +44,7 @@
     "path": "https://allergies.bscs.org/",
     "excerpt": "This project was supported by the National Institute of Allergy and Infectious Diseases and was a collaboration between BSCS Science Learning, Dawson Media Group, and Oxbow Labs.",
     "date": "2012 - 2017",
+    "section": "bscs",
     "tags": [
       "Drupal",
       "PHP",
@@ -54,6 +58,7 @@
     "path": "http://www.fieldscope.org/",
     "excerpt": "FieldScope is an interactive citizen science platform. Organizers of field studies can leverage sophisticated graphing and mapping visualization tools and resources to enhance their existing and future citizen science projects. Participants of all ages and backgrounds can then conveniently upload measurements, observations, and media to a shared project database.",
     "date": "2016",
+    "section": "bscs",
     "tags": [
       "Python",
       "Django",
@@ -67,6 +72,7 @@
     "path": "https://ebola.bscs.org/",
     "excerpt": "This project was an NSF-supported collaboration between BSCS Science Learning and Oregon Public Broadcasting (OPB). This interactive learning experience was designed to help people better understand important factors that contribute to the infection and spread of Ebola virus disease and how these factors interact with each other.",
     "date": "2015",
+    "section": "bscs",
     "tags": [
       "Python",
       "MatLab",
