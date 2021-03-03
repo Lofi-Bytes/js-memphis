@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Jillian Serenity - Designer, Full Stack Developer, & Tech Lead`,
-    description: `Lead Developer; Educational Technology and Web Applications @ BSCS Science Learning`,
+    title: `Jillian Serenity - Front End Systems Designer & Solutions Architect`,
+    description: `Head of development & design @ BSCS Science Learning`,
     author: `Jillian S. Estrella`,
     siteUrl: `https://jillian.dev/`,
   },
