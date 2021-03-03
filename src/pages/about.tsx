@@ -33,6 +33,12 @@ const AboutPage: FC<PageProps> = ({
           <Avatar />
           <i className="absolute text-6xl text-yellow-300 -rotate-90 fal fa-triangle -left-4 -top-8 sm:-left-8 sm:-top-10 sm:text-7xl lg:-left-8 lg:-top-14 lg:text-8xl transofrm transform-gpu" />
           <i className="absolute text-6xl fal fa-bolt text-emerald-300 -right-2 bottom-64 sm:-right-4 sm:bottom-48 sm:text-7xl lg:-right-4 lg:bottom-48 lg:text-8xl transofrm rotate-12 transform-gpu" />
+
+          <h2 className="mt-10 text-2xl tracking-wide text-gray-800">Jillian S. Estrella <br className="sm:hidden" /><span className="text-xl text-gray-500">🏳️‍🌈 she/her 🏳️‍⚧️</span></h2>
+          <p className="mt-1 text-xl leading-relaxed tracking-wider text-gray-500">
+            Front End Systems Designer &amp; Solutions Architect
+          </p>
+
           <h2 className="mt-10 text-xl tracking-wide text-gray-700">Current Work</h2>
           <p className="mt-3 leading-relaxed tracking-wider text-gray-600">
             I work for a nonprofit organization, <TextLink to="https://bscs.org/" external={true}>BSCS Science Learning</TextLink>, whose mission is to transform science teaching and learning through research-driven innovation.
@@ -43,14 +49,23 @@ const AboutPage: FC<PageProps> = ({
           <p className="mt-4 leading-relaxed tracking-wider text-gray-600">
             A critical part of my role within the organization is to continually improve developer experience, designer experience, <em>and</em> <TextLink to="https://medium.com/s/user-friendly/why-im-done-saying-user-user-experience-and-ux-in-2019-4fdfc6b7de23" external={true}>audience</TextLink> experience. During my time with BSCS, I have overseen the adoption of innovative approaches to software and design such as <i className="text-pink-300 fas fa-heart" /> <TextLink to="https://www.invisionapp.com/inside-design/guide-to-design-systems/" external={true}>design systems</TextLink>, <TextLink to="https://medium.com/omarelgabrys-blog/component-based-architecture-3c3c23c7e348" external={true}>component based</TextLink>, <TextLink to="https://martinfowler.com/articles/serverless.html" external={true}>serverless</TextLink>, <TextLink to="https://martinfowler.com/articles/microservices.html" external={true}> and microservice</TextLink> architectures, and the beloved <i className="text-pink-300 fas fa-heart" /> <TextLink to="https://jamstack.org/" external={true}>Jamstack</TextLink>.
           </p>
-
-          {/* <p className="mt-4 leading-relaxed tracking-wider text-gray-600">
-            Having built BSCS's web development team from the ground up, the adoption of these technologies has allowed our small team to
-          </p> */}
+          <p className="mt-4 leading-relaxed tracking-wider text-gray-600">
+            These innovations have allowed my small team to keep pace with the increasing demand of an organization that has more than doubled in size in the last three years.
+          </p>
+          <p className="mt-4 leading-relaxed tracking-wider text-gray-600">
+            A typical day for me involves architecting solutions to complex problems, overseeing our digital products through their entire lifecycle - from the proposal/planning phase to sunsetting, guiding my highly talented team, and designing/building UI's and UI components.
+          </p>
+          {/* <ul className="pb-4 mt-4 leading-relaxed tracking-wider text-gray-600 list-disc list-inside sm:px-8">
+            <li>Product management: </li>
+            <li className="mt-4"></li>
+            <li className="mt-4"></li>
+            <li className="mt-4"></li>
+            <li className="mt-4"></li>
+          </ul> */}
 
           <h2 className="mt-10 text-xl tracking-wide text-gray-700">Previous Work</h2>
           <p className="mt-3 leading-relaxed tracking-wider text-gray-600">
-            Prior to my career as a software developer, I was an astronomy and physics instructor. My courses introduced students to the skills required to think critically about the physical world and offered students experience in solving real-world problems.
+            Prior to my career in software development, I was an astronomy and physics instructor. My courses introduced students to the skills required to think critically about the physical world and offered students experience in solving real-world problems.
           </p>
           <p className="mt-4 leading-relaxed tracking-wider text-gray-600">
             In graduate school, I did research on the space environment of planets and comets. Colloquially known as “space weather,” my research investigated how the solar wind affects the magnetospheres, ionospheres, and upper atmospheres of these objects.
