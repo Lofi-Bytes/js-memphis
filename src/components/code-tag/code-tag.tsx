@@ -1,61 +1,56 @@
-import React, { FC, ReactNode } from 'react'
+import React, { FC, ReactNode } from "react"
+
+import { formatClassList, joinStrings } from '../../utils/utils'
 
 
-type CodeContainerProps = {
+const CODE_TAG: string = `
+  font-mono
+  font-thin
+  mb-4
+  ml-3
+  px-4
+  rounded-bl-xl
+  rounded-tr-xl
+  shadow-md
+  text-lg
+  w-max
+`
+
+type CodeTagProps = {
   tag: string,
   tagBgColor: string,
   tagColor: string
 }
 
-const CodeTag: FC<CodeContainerProps> = ({
+const CodeTag: FC<CodeTagProps> = ({
   tag,
   tagBgColor,
   tagColor
-}: CodeContainerProps) => {
+}: CodeTagProps) => {
+  let formattedCodeTag: string = formatClassList(CODE_TAG)
+
+  let style: React.CSSProperties = {
+    color: tagColor,
+    backgroundColor: tagBgColor
+  }
+
+  if (!tagColor.startsWith("#")) {
+    delete style.color
+    formattedCodeTag = joinStrings(' ', formattedCodeTag, tagColor)
+  }
+
+  if (!tagBgColor.startsWith("#")) {
+    delete style.backgroundColor
+    formattedCodeTag = joinStrings(' ', formattedCodeTag, tagBgColor)
+  }
+
   return (
-    <>
-      {
-        tagColor.startsWith("#") && tagBgColor.startsWith("#")
-          ?
-            <div
-              className={`px-4 mb-4 ml-3 font-mono text-lg font-thin shadow-md text w-max rounded-tr-xl rounded-bl-xl`}
-              style={{
-                backgroundColor: `${tagBgColor}`,
-                color: `${tagColor}`
-              }}
-            >
-              {tag}
-            </div>
-          :
-            tagColor.startsWith("#") && !tagBgColor.startsWith("#")
-              ?
-                <div
-                  className={`px-4 mb-4 ml-3 font-mono text-lg font-thin shadow-md text w-max rounded-tr-xl rounded-bl-xl ${tagBgColor}`}
-                  style={{
-                    color: `${tagColor}`
-                  }}
-                >
-                  {tag}
-                </div>
-              :
-                !tagColor.startsWith("#") && tagBgColor.startsWith("#")
-                  ?
-                    <div
-                      className={`px-4 mb-4 ml-3 font-mono text-lg font-thin shadow-md text w-max rounded-tr-xl rounded-bl-xl ${tagColor}`}
-                      style={{
-                        backgroundColor: `${tagBgColor}`,
-                      }}
-                    >
-                      {tag}
-                    </div>
-                  :
-                    <div
-                      className={`px-4 mb-4 ml-3 font-mono text-lg font-thin ${tagBgColor} ${tagColor} shadow-md text w-max rounded-tr-xl rounded-bl-xl`}
-                    >
-                      {tag}
-                    </div>
-      }
-    </>
+    <div
+      className={formattedCodeTag}
+      style={style}
+    >
+      {tag}
+    </div>
   )
 }
 

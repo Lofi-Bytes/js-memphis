@@ -1,4 +1,4 @@
-import React, { FC, ReactNode } from 'react'
+import React, { FC } from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 
 import Banner from '../../components/banner'
