@@ -50,12 +50,15 @@ const Tag: FC<TagProps> = ({
             color === 'violet'
               ? 'rounded-full bg-violet-200 shadow w-max py-0.5 px-3 mr-3 mt-3'
               :
-                color === 'rose'
-                  ? 'rounded-full bg-rose-200 shadow w-max py-0.5 px-3 mr-3 mt-3'
+                color === 'purple'
+                  ? 'rounded-full bg-purple-200 shadow w-max py-0.5 px-3 mr-3 mt-3'
                   :
-                    color === 'lightBlue'
-                      ? 'rounded-full bg-lightBlue-200 shadow w-max py-0.5 px-3 mr-3 mt-3'
-                      : null
+                    color === 'rose'
+                      ? 'rounded-full bg-rose-200 shadow w-max py-0.5 px-3 mr-3 mt-3'
+                      :
+                        color === 'lightBlue'
+                          ? 'rounded-full bg-lightBlue-200 shadow w-max py-0.5 px-3 mr-3 mt-3'
+                          : null
           }
         >
           <p
@@ -63,12 +66,15 @@ const Tag: FC<TagProps> = ({
               color === 'violet'
                 ? 'text-xs tracking-wider text-violet-800 align-middle inline-block'
                 :
-                  color === 'rose'
-                    ? 'text-xs tracking-wider text-rose-800 align-middle inline-block'
+                  color === 'purple'
+                    ? 'text-xs tracking-wider text-purple-800 align-middle inline-block'
                     :
-                      color === 'lightBlue'
-                        ? 'text-xs tracking-wider text-lightBlue-800 align-middle inline-block'
-                        : null
+                      color === 'rose'
+                        ? 'text-xs tracking-wider text-rose-800 align-middle inline-block'
+                        :
+                          color === 'lightBlue'
+                            ? 'text-xs tracking-wider text-lightBlue-800 align-middle inline-block'
+                            : null
             }
           >
             {children}
