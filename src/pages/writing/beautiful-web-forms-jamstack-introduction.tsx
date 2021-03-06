@@ -140,7 +140,7 @@ const BeautifulFormsJamstackIntroductionPage: FC<PageProps> = ({
                   <Tag
                     card={false}
                     key={`item-${index}`}
-                    color="purple"
+                    tagColor="purple"
                   >
                     {tag}
                   </Tag>

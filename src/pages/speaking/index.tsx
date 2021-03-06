@@ -88,7 +88,7 @@ const SpeakingListPage: FC<PageProps> = ({
                             <Tag
                               card={true}
                               key={`item-${index}`}
-                              color="rose"
+                              tagColor="rose"
                             >
                               {tag}
                             </Tag>

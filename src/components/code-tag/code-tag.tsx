@@ -1,4 +1,4 @@
-import React, { FC, ReactNode } from "react"
+import React, { FC, CSSProperties } from "react"
 
 import { formatClassList, joinStrings } from '../../utils/utils'
 
@@ -29,7 +29,7 @@ const CodeTag: FC<CodeTagProps> = ({
 }: CodeTagProps) => {
   let formattedCodeTag: string = formatClassList(CODE_TAG)
 
-  let style: React.CSSProperties = {
+  let style: CSSProperties = {
     color: tagColor,
     backgroundColor: tagBgColor
   }

@@ -91,7 +91,7 @@ const WritingPostListPage: FC<PageProps> = ({
                             <Tag
                               card={true}
                               key={`item-${index}`}
-                              color="violet"
+                              tagColor="violet"
                             >
                               {tag}
                             </Tag>
