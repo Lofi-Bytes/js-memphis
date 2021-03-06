@@ -96,7 +96,7 @@ const ProjectsListPage: FC<PageProps> = ({
                                 <Tag
                                   card={true}
                                   key={`item-${index}`}
-                                  color="lightBlue"
+                                  tagColor="lightBlue"
                                 >
                                   {tag}
                                 </Tag>
