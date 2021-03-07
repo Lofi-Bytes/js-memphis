@@ -1,4 +1,5 @@
 import React, { FC } from 'react'
+import { StaticImage } from 'gatsby-plugin-image'
 
 import Avatar from '../components/avatar'
 import Banner from '../components/banner'
@@ -175,8 +176,19 @@ const AboutPage: FC<PageProps> = ({
           </p>
 
           <h2 className="mt-10 text-xl tracking-wide text-gray-700">Extracurricular Interests</h2>
+
+          <StaticImage
+            src="../images/IMG_7135.JPG"
+            placeholder="blurred"
+            aspectRatio={16/9}
+            layout="fullWidth"
+            formats={["auto", "webp", "avif"]}
+            className="h-64 mt-3"
+            alt="Jillian's family."
+          />
+
           <p className="mt-3 leading-relaxed tracking-wider text-gray-600">
-            In my free time I enjoy adventuring in my van (<TextLink to="https://www.instagram.com/explore/tags/vanlife/?hl=en" external={true}>#vanlife</TextLink>), spending time with my dog, practicing yoga, mountain biking, and I read a lot.
+            In my free time I enjoy spending time with my beautiful family, adventuring in our van (<TextLink to="https://www.instagram.com/explore/tags/vanlife/?hl=en" external={true}>#vanlife</TextLink>), practicing yoga, mountain biking, and I read a lot.
           </p>
           {/* <div
             className="w-full mx-auto mt-12 md:w-3/4"
@@ -204,7 +216,7 @@ const AboutPage: FC<PageProps> = ({
         </Section>
       </Main>
     </Layout>
-  )
+  );
 }
 
 export default AboutPage
