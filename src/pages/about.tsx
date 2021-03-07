@@ -35,8 +35,8 @@ const AboutPage: FC<PageProps> = ({
           <i className="absolute text-6xl text-yellow-300 -rotate-90 fal fa-triangle -left-4 -top-8 sm:-left-8 sm:-top-10 sm:text-7xl lg:-left-8 lg:-top-14 lg:text-8xl transofrm transform-gpu" />
           <i className="absolute text-6xl fal fa-bolt text-emerald-300 -right-2 bottom-64 sm:-right-4 sm:bottom-48 sm:text-7xl lg:-right-4 lg:bottom-48 lg:text-8xl transofrm rotate-12 transform-gpu" />
 
-          <h2 className="mt-10 text-2xl tracking-wide text-gray-700">Jillian S. Estrella <br className="sm:hidden" /><span className="text-xl text-gray-500">🏳️‍🌈 she/her 🏳️‍⚧️</span></h2>
-          <p className="mt-1 text-xl leading-relaxed tracking-wider text-gray-500">
+          <h2 className="mt-10 text-2xl tracking-wide text-gray-700">Jillian S. Estrella <br className="sm:hidden" /><span className="text-xl text-gray-600">🏳️‍🌈 she/her 🏳️‍⚧️</span></h2>
+          <p className="mt-1 text-xl leading-relaxed tracking-wider text-gray-600">
             Front End Systems Designer &amp; Solutions Architect
           </p>
 
@@ -102,7 +102,7 @@ const AboutPage: FC<PageProps> = ({
                 >Atmospheric and Space Science</TextLink>
               </p>
             </div>
-            <p className="hidden leading-relaxed tracking-wider text-gray-500 sm:block">05/2014</p>
+            <p className="hidden leading-relaxed tracking-wider text-gray-600 sm:block">05/2014</p>
           </div>
           <p className="mx-6 mt-3 leading-relaxed tracking-wider text-gray-600">
             My studies focused on the theory of plasma physics, electromagnetism, fluid dynamics, atmospheric radiative transfer and their applications to solar physics and planetary science.
@@ -120,7 +120,7 @@ const AboutPage: FC<PageProps> = ({
                 >Computational Discovery and Engineering</TextLink>
               </p>
             </div>
-            <p className="hidden leading-relaxed tracking-wider text-gray-500 sm:block">07/2014</p>
+            <p className="hidden leading-relaxed tracking-wider text-gray-600 sm:block">07/2014</p>
           </div>
           <p className="mx-6 mt-3 leading-relaxed tracking-wider text-gray-600">
             Emphasis was placed on numerical analysis, algorithms, and computational techniques for solving and analyzing physics and engineering problems.
@@ -151,7 +151,7 @@ const AboutPage: FC<PageProps> = ({
                 >Physics</TextLink>
               </p>
             </div>
-            <p className="hidden leading-relaxed tracking-wider text-gray-500 sm:block">08/2010</p>
+            <p className="hidden leading-relaxed tracking-wider text-gray-600 sm:block">08/2010</p>
           </div>
           <p className="mx-6 mt-3 leading-relaxed tracking-wider text-gray-600">
             I gained a strong foundation in classical mechanics, modern physics, electromagnetics, quantum mechanics, thermodynamics, condensed matter physics, nuclear & particle physics, plasma physics, circuit theory & design, and certified to design and machine custom parts for laboratory experiments in the physics departments state of the art machine shop.
@@ -169,7 +169,7 @@ const AboutPage: FC<PageProps> = ({
                 >Astrophysical, Planetary, and Atmospheric Science</TextLink>
               </p>
             </div>
-            <p className="hidden leading-relaxed tracking-wider text-gray-500 sm:block">08/2010</p>
+            <p className="hidden leading-relaxed tracking-wider text-gray-600 sm:block">08/2010</p>
           </div>
           <p className="mx-6 mt-3 leading-relaxed tracking-wider text-gray-600">
             I studied, in-depth, the current understanding of most astrophysical phenomena such as geophysics, atmospheric & planetary science, stellar structure & evolution, galaxies, neutron stars, and black holes.
