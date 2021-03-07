@@ -1,5 +1,7 @@
 import React, { FC } from 'react'
-import { StaticImage } from 'gatsby-plugin-image'
+// import { StaticImage } from 'gatsby-plugin-image'
+import { useStaticQuery, graphql } from 'gatsby'
+import Img from 'gatsby-image'
 
 import Avatar from '../components/avatar'
 import Banner from '../components/banner'
@@ -18,6 +20,20 @@ type PageProps = {
 const AboutPage: FC<PageProps> = ({
   location
 }: PageProps) => {
+  const data = useStaticQuery(graphql`
+    query {
+      Image01: file(relativePath: { eq: "IMG_7135.JPG" }) {
+        childImageSharp {
+          fluid(quality: 100) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+    }
+  `)
+
+  const img = data.Image01.childImageSharp.fluid
+
   return (
     <Layout location={location}>
       <SEO
@@ -177,7 +193,7 @@ const AboutPage: FC<PageProps> = ({
 
           <h2 className="mt-10 text-xl tracking-wide text-gray-700">Extracurricular Interests</h2>
 
-          <StaticImage
+          {/* <StaticImage
             src="../images/IMG_7135.JPG"
             placeholder="blurred"
             aspectRatio={16/9}
@@ -185,6 +201,12 @@ const AboutPage: FC<PageProps> = ({
             formats={["auto", "webp", "avif"]}
             className="h-64 mt-3"
             alt="Jillian's family."
+          /> */}
+
+          <Img
+            fluid={img}
+            className="h-64 mt-3"
+            alt="Jillian's avatar."
           />
 
           <p className="mt-3 leading-relaxed tracking-wider text-gray-600">
