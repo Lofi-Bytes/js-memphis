@@ -1,3 +1,15 @@
 [build.environment]
 # NODE_OPTIONS = "--max_old_space_size=4096"
 NODE_VERSION = "12.18.3"
+
+[[redirects]]
+  from = "https://jillianserenity.dev/*"
+  to = "https://jillian.dev/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://lofibytes.dev/*"
+  to = "https://jillian.dev/:splat"
+  status = 301
+  force = true
