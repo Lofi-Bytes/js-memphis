@@ -19,8 +19,7 @@ import {
 } from '../../utils/memphis'
 
 import '@fortawesome/fontawesome-pro/css/all.min.css'
-import 'typeface-lora'
-import 'font-proxima-nova/style.css'
+import '@fontsource/lora/400-italic.css'
 
 
 type LayoutProps = {

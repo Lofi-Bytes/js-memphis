@@ -23,7 +23,7 @@ const CHILDREN: string = `
   align-middle
   inline-block
   text-xs
-  tracking-wider
+  tracking-widest
 `
 
 const tagColorsCard = {

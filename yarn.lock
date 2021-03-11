@@ -1062,6 +1062,11 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
+"@fontsource/lora@^4.2.2":
+  version "4.2.2"
+  resolved "https://registry.yarnpkg.com/@fontsource/lora/-/lora-4.2.2.tgz#39f6d867fb016b042b148b5ce40cd88444b74dff"
+  integrity sha512-FswpuT8Qq44Zp8X3FRiQt81ZAMpsIULVmnAJaNNBZzE0GB5RSTHVtrs0sopDbamkmEoHYHwFBHSVjyQGw14r5g==
+
 "@fortawesome/fontawesome-pro@^5.15.2":
   version "5.15.2"
   resolved "https://npm.fontawesome.com/@fortawesome/fontawesome-pro/-/5.15.2/fontawesome-pro-5.15.2.tgz#188d7d199f381c9fcf7b2fc0fd7d9e148e80b27a"
@@ -5637,16 +5642,6 @@ follow-redirects@^1.0.0, follow-redirects@^1.10.0:
   version "1.13.0"
   resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.13.0.tgz#b42e8d93a2a7eea5ed88633676d6597bc8e384db"
   integrity sha512-aq6gF1BEKje4a9i9+5jimNFIpq4Q1WiwBToeRK5NvZBd/TRsmW8BsJfOEGkr76TbOyPVD3OVDN910EcUNtRYEA==
-
-font-proxima-nova@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/font-proxima-nova/-/font-proxima-nova-1.0.1.tgz#0e3c72655da643668a5ce54e3a2dad7e32915426"
-  integrity sha512-2KJ9QIg2ZhroIWVGS/dQqGFftwbpC2JqZErre4ALz0ZsHpA5S0cmL6GlLVCds4umfCtIyVSzMbXWZMvl8c9w5g==
-
-fontsource-lora@^3.1.6:
-  version "3.1.6"
-  resolved "https://registry.yarnpkg.com/fontsource-lora/-/fontsource-lora-3.1.6.tgz#45eda7c131764dca47431c2fa25d96c969e4df40"
-  integrity sha512-id09lzUC70pXXyAnivRNUHzUmIWiJLndL/2Zs4hcLYTMTfVXhJfMRFavW8HRNvElVNfyIoh9+7aArcELoJvbmQ==
 
 for-in@^1.0.2:
   version "1.0.2"

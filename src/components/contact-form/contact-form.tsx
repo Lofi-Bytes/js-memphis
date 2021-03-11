@@ -30,7 +30,6 @@ const ContactForm: FC<ReactNode> = ({}: ReactNode) => {
   const handleChange = e => {setState({
     ...state,
     [e.target.name]: e.target.value
-
   })}
   const onSubmit = (data, e) => {
     // JSON.stringify(data)

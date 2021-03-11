@@ -90,7 +90,7 @@ const BeautifulFormsJamstackIntroductionPage: FC<PageProps> = ({
             On the development side, implementing web forms well has been a lot of work. Fortunately as the front end has become more capable, development has followed suit and shifted toward the front end. This has allowed for innovative approaches that make both the audience experience <em>and</em> the developer experience happier. The audience gets more real-time feedback on thier progress with less friction and the developer can implement the improved experience with less work.
           </p>
           <p className="mt-4 leading-relaxed tracking-wider text-gray-600">
-            In this three part series, we will take a look at the following tools that are leading the drive to make web forms a more pleasant experience for everyone:
+            In this two part series, we will take a look at the following tools that are leading the drive to make web forms a more pleasant experience for everyone:
           </p>
           <ol className="pb-4 mt-4 leading-relaxed tracking-wider text-gray-600 list-decimal list-inside sm:px-8">
             <li>
@@ -115,7 +115,7 @@ const BeautifulFormsJamstackIntroductionPage: FC<PageProps> = ({
               </TextLink>; a super light, performant, and easy-to-use form validation library.
             </li>
             <li className="mt-4">
-              Finally, we will see how to handle form submissions using <TextLink
+              Along the way, we will see how to handle form submissions using <TextLink
               to="https://www.netlify.com/products/forms/"
               external={true}
             >

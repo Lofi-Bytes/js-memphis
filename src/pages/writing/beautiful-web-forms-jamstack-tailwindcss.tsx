@@ -161,7 +161,17 @@ const BeautifulWebFormsJamstackTailwindCSSPage: FC<PageProps> = ({
           </div>
           <h3 className="mt-10 text-xl tracking-wide text-gray-700">Introduction</h3>
           <p className="mt-3 leading-relaxed tracking-wider text-gray-600">
-            Form elements are not always the easiest to style. @tailwindcss/forms convieniently provides a basic reset for form styles that makes form elements easy to override with Tailwind CSS utility classes. @tailwindcss/forms is designed for Tailwind CSS v2.0 and replaces <TextLink to="https://github.com/tailwindlabs/tailwindcss-custom-forms" external={true}>tailwindcss-custom-forms</TextLink> which was designed to work with Tailwind CSS v1.0.
+            Form elements are not always the easiest to style. <TextLink
+                to="https://github.com/tailwindlabs/tailwindcss-forms"
+                external={true}
+              >
+                @tailwindcss/forms
+              </TextLink> convieniently provides a basic reset for form styles that makes form elements easy to override with <TextLink
+                to="https://tailwindcss.com/"
+                external={true}
+              >
+                Tailwind CSS
+              </TextLink> utility classes. @tailwindcss/forms is designed for Tailwind CSS v2.0 and replaces <TextLink to="https://github.com/tailwindlabs/tailwindcss-custom-forms" external={true}>tailwindcss-custom-forms</TextLink> which was designed to work with Tailwind CSS v1.0.
           </p>
 
           <h3 className="mt-10 text-xl tracking-wide text-gray-700">Getting Started</h3>
