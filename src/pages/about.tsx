@@ -46,7 +46,7 @@ const AboutPage: FC<PageProps> = ({
         // subtitle={}
       />
       <Main>
-        <Section className="pb-12 mb-8 -mt-10">
+        <Section background="opaque" className="pb-12 mb-8 -mt-10">
           <Avatar />
           <i className="absolute text-6xl text-yellow-300 -rotate-90 fal fa-triangle -left-4 -top-8 sm:-left-8 sm:-top-10 sm:text-7xl lg:-left-8 lg:-top-14 lg:text-8xl transofrm transform-gpu" />
           <i className="absolute text-6xl fal fa-bolt text-emerald-300 -right-2 bottom-64 sm:-right-4 sm:bottom-48 sm:text-7xl lg:-right-4 lg:bottom-48 lg:text-8xl transofrm rotate-12 transform-gpu" />
@@ -228,9 +228,9 @@ const AboutPage: FC<PageProps> = ({
           </div> */}
         </Section>
 
-        <Section>
+        <Section background="opaque">
           <div className="max-w-xs py-2 pl-10 pr-4 -ml-10 rounded shadow-lg bg-cyan-300 w-max sm:px-24 sm:-ml-24 sm:max-w-none">
-            <h2 className="text-xl tracking-wide text-gray-800 sm:text-2xl">Interested in collaborating?</h2>
+            <h2 className="text-xl tracking-wide text-cyan-900 sm:text-2xl">Interested in collaborating?</h2>
           </div>
           <div className="mx-auto md:w-10/12">
             <ContactForm />

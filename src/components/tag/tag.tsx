@@ -8,7 +8,7 @@ const TAG_BASE: string = `
   mt-3
   px-3
   py-0.5
-  rounded-full
+  rounded-lg
   shadow
   w-max
 `

@@ -47,7 +47,7 @@ const HomePage: FC<PageProps> = ({
         }
       />
       <Main>
-        <Section className="mb-8 -mt-10">
+        <Section background="opaque" className="mb-8 -mt-10">
           <Avatar />
           <i className="absolute text-6xl fal fa-stop text-cyan-300 -right-3 -top-10 sm:-right-6 sm:-top-10 sm:text-7xl lg:-right-14 lg:-top-8 lg:text-8xl transofrm rotate-12 transform-gpu"></i>
           <i className="absolute text-5xl rotate-45 fal fa-triangle text-emerald-300 -left-2 top-52 sm:-left-4 sm:top-48 sm:text-6xl lg:-left-6 lg:top-36 lg:text-7xl transofrm transform-gpu"></i>
@@ -120,9 +120,9 @@ const HomePage: FC<PageProps> = ({
           </div>
         </Section>
 
-        <Section>
+        <Section background="opaque">
           <div className="max-w-xs px-10 py-2 -ml-10 bg-yellow-300 rounded shadow-lg w-max sm:px-24 sm:-ml-24 sm:max-w-none">
-            <h2 className="text-xl tracking-wide text-gray-800 sm:text-2xl">Say Hello</h2>
+            <h2 className="text-xl tracking-wide text-yellow-900 sm:text-2xl">Say Hello</h2>
           </div>
           <div className="mx-auto md:w-10/12">
             <ContactForm />

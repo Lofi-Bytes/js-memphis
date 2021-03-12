@@ -37,13 +37,13 @@ const MobileNavigation: FC<MobileNavigationProps> = ({
 
             return(
               <React.Fragment key={`item-${index}`}>
-                <Link to={path}>
+                <Link to={path} className="focus:outline-none group">
                   {
                     location.pathname.match(regex)
                     ? <div className="-mt-1 border-b-8 border-pink-200 rounded-sm" />
-                    : <div className="-mt-1 border-b-8 border-indigo-700 rounded-sm" />
+                    : <div className="-mt-1 border-b-8 border-indigo-700 rounded-sm group-hover:border-pink-200 group-focus:border-pink-200" />
                   }
-                  <div className="flex flex-col items-center justify-center py-3 tracking-wider text-teal-100 duration-200 hover:text-pink-200 focus:text-pink-200 active:text-pink-300 hover:cursor-pointer">
+                  <div className="flex flex-col items-center justify-center py-3 tracking-wider text-teal-100 duration-200 group-hover:text-pink-200 group-focus:text-pink-200 hover:cursor-pointer">
                     <i className={
                       iconClass
                         ? joinStrings(' ', iconClass, "text-xl")

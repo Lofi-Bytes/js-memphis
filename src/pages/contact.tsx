@@ -87,7 +87,10 @@ const ContactPage: FC<PageProps> = ({
         // subtitle={<span className="text-teal-100">Designer, Full Stack Developer, &amp; Tech Lead</span>}
       />
       <Main>
-        <Section className="mb-8 -mt-12">
+        <Section background="opaque" className="mb-8 -mt-12">
+          <div className="max-w-xs py-2 pl-10 pr-4 -ml-10 rounded shadow-lg bg-cyan-300 w-max sm:px-24 sm:-ml-24 sm:max-w-none">
+            <h2 className="text-xl tracking-wide text-cyan-900 sm:text-2xl">Interested in collaborating?</h2>
+          </div>
           <div className="mx-auto md:w-10/12">
 
             {successMsg &&

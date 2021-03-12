@@ -7,12 +7,12 @@ import {
 
 
 type SectionProps = {
+  background: 'opaque' | 'transparent',
   children: ReactNode,
   className?: string
 }
 
 const STYLES = `
-  bg-gray-100
   rounded-xl
   py-8
   px-8
@@ -21,15 +21,23 @@ const STYLES = `
   sm:w-9/12
   mx-auto
   sm:mb-10
-  shadow-xl
   relative
 `
 
 const Section: FC<SectionProps> = ({
+  background='opaque',
   children,
   className
 }: SectionProps) => {
-  const styles = formatClassList(STYLES)
+  let styles = formatClassList(STYLES)
+
+  if (background === 'opaque') {
+    styles = joinStrings(' ', styles, 'bg-gray-100 shadow-xl')
+  }
+
+  if (background === 'transparent') {
+    styles = joinStrings(' ', styles, 'bg-transparent')
+  }
 
   return (
     <section

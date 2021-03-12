@@ -42,7 +42,7 @@ module.exports = {
   variants: {
     extend: {
       backgroundColor: ['active', 'group-focus'],
-      borderColor: ['hover'],
+      borderColor: ['hover', 'group-focus'],
       borderWidth: ['hover', 'focus'],
       boxShadow: ['active'],
       cursor: ['hover', 'focus'],
@@ -51,7 +51,7 @@ module.exports = {
       ringOffsetWidth: ['hover', 'active'],
       ringOpacity: ['hover', 'active'],
       ringWidth: ['hover', 'active'],
-      textColor: ['active'],
+      textColor: ['active', 'group-focus'],
       transitionProperty: ['hover', 'focus'],
       translate: ['active']
     },
