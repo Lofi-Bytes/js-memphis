@@ -31,7 +31,7 @@ const Section: FC<SectionProps> = ({
   let styles = formatClassList(STYLES)
 
   if (background === 'opaque') {
-    styles = joinStrings(' ', styles, 'bg-gray-100 shadow-xl px-8')
+    styles = joinStrings(' ', styles, 'bg-gray-100 shadow-xl px-4 sm:px-8')
   }
 
   if (background === 'transparent') {

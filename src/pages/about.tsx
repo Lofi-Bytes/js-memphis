@@ -205,7 +205,7 @@ const AboutPage: FC<PageProps> = ({
 
           <Img
             fluid={img}
-            className="h-64 mt-3"
+            className="h-64 mt-3 rounded-md"
             alt="Jillian's avatar."
           />
 
