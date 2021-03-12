@@ -192,7 +192,7 @@ const BeautifulWebFormsJamstackReactHookFormPage: FC<PageProps> = ({
         date={date}
       />
       <Main>
-        <Section background="transparent" className="mb-8 -mt-12">
+        <Section background="opaque" className="mb-8 -mt-12">
           <div className="max-w-xs px-10 py-2 -ml-10 bg-yellow-300 rounded shadow-lg w-max sm:px-24 sm:-ml-24 sm:max-w-none">
             <h2 className="text-xl tracking-wide text-gray-800 sm:text-2xl">React Hook Form</h2>
           </div>
@@ -275,7 +275,7 @@ const BeautifulWebFormsJamstackReactHookFormPage: FC<PageProps> = ({
           </Alert>
           <NextPrev path={path} className="mt-10" />
         </Section>
-        <Section background="transparent" className="mb-8">
+        <Section background="opaque" className="mb-8">
           <h3 className="text-xl tracking-wide text-gray-700 ">Tags</h3>
           <div className="flex flex-wrap mt-4">
             {
