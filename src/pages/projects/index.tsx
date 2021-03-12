@@ -79,7 +79,7 @@ const ProjectsListPage: FC<PageProps> = ({
                     ?
                       <a
                         href={path}
-                        className="block overflow-hidden transition shadow-lg hover:shadow-xl focus:shadow-xl active:shadow-sm duration-200 rounded-lg bg-lightBlue-100 focus:bg-lightBlue-50 focus:outline-none focus:ring-4  focus:ring-lightBlue-200 focus:ring-opacity-50 border-0 border-l-8 border-lightBlue-400 hover:border-lightBlue-500 focus:border-lightBlue-600 transform focus:-translate-y-0.5 hover:-translate-y-0.5 active:translate-y-0.5 ease-in-out group px-8 py-6"
+                        className="block overflow-hidden transition shadow-lg hover:shadow-xl focus:shadow-xl active:shadow-sm duration-200 rounded-lg bg-lightBlue-100 focus:bg-lightBlue-50 focus:outline-none focus:ring-4  focus:ring-lightBlue-200 focus:ring-opacity-50 border-0 border-l-8 border-lightBlue-400 hover:border-lightBlue-500 focus:border-lightBlue-600 transform focus:-translate-y-0.5 hover:-translate-y-0.5 active:translate-y-0.5 ease-in-out group px-4 sm:px-8 py-6"
                       >
                         <h2 className="w-11/12 text-xl tracking-wider text-lightBlue-900">
                           {title}
@@ -137,7 +137,7 @@ const ProjectsListPage: FC<PageProps> = ({
                     ?
                       <a
                         href={path}
-                        className="block overflow-hidden transition shadow-lg hover:shadow-xl focus:shadow-xl active:shadow-sm duration-200 rounded-lg bg-lightBlue-100 focus:bg-lightBlue-50 focus:outline-none focus:ring-4  focus:ring-lightBlue-200 focus:ring-opacity-50 border-0 border-l-8 border-lightBlue-400 hover:border-lightBlue-500 focus:border-lightBlue-600 transform focus:-translate-y-0.5 hover:-translate-y-0.5 active:translate-y-0.5 ease-in-out group px-8 py-6"
+                        className="block overflow-hidden transition shadow-lg hover:shadow-xl focus:shadow-xl active:shadow-sm duration-200 rounded-lg bg-lightBlue-100 focus:bg-lightBlue-50 focus:outline-none focus:ring-4  focus:ring-lightBlue-200 focus:ring-opacity-50 border-0 border-l-8 border-lightBlue-400 hover:border-lightBlue-500 focus:border-lightBlue-600 transform focus:-translate-y-0.5 hover:-translate-y-0.5 active:translate-y-0.5 ease-in-out group px-4 sm:px-8 py-6"
                       >
                         <h2 className="w-11/12 text-xl tracking-wider text-lightBlue-900">
                           {title}

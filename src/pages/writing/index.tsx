@@ -58,7 +58,7 @@ const WritingPostListPage: FC<PageProps> = ({
       <Main>
         <Section background="transparent" className="mb-8 -mt-12">
           <div className="max-w-xs px-10 py-2 mb-10 -ml-10 rounded shadow-lg bg-rose-300 w-max sm:px-24 sm:-ml-24 sm:max-w-none">
-            <h2 className="text-xl tracking-wide text-rose-900 sm:text-2xl">Development</h2>
+            <h2 className="text-xl tracking-wide text-rose-900 sm:text-2xl">Software Development</h2>
           </div>
           <div className="grid grid-flow-row-dense gap-8">
           {
@@ -73,7 +73,7 @@ const WritingPostListPage: FC<PageProps> = ({
                 <React.Fragment key={`item-${index}`}>
                   <Link
                     to={path}
-                    className="block overflow-hidden transition shadow-lg hover:shadow-xl focus:shadow-xl active:shadow-sm duration-200 rounded-lg bg-violet-100 focus:bg-violet-50 focus:outline-none focus:ring-4 focus:ring-violet-200 focus:ring-opacity-50 border-0 border-l-8 border-violet-400 hover:border-violet-500 focus:border-violet-600 transform focus:-translate-y-0.5 hover:-translate-y-0.5 active:translate-y-0.5 ease-in-out group px-8 py-6"
+                    className="block overflow-hidden transition shadow-lg hover:shadow-xl focus:shadow-xl active:shadow-sm duration-200 rounded-lg bg-violet-100 focus:bg-violet-50 focus:outline-none focus:ring-4 focus:ring-violet-200 focus:ring-opacity-50 border-0 border-l-8 border-violet-400 hover:border-violet-500 focus:border-violet-600 transform focus:-translate-y-0.5 hover:-translate-y-0.5 active:translate-y-0.5 ease-in-out group px-4 sm:px-8 py-6"
                   >
                     <h2 className="text-xl tracking-wider text-violet-900">
                       {title}

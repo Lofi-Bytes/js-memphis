@@ -71,7 +71,7 @@ const SpeakingListPage: FC<PageProps> = ({
                 <React.Fragment key={`item-${index}`}>
                   <a
                     href={path}
-                    className="block overflow-hidden transition shadow-lg hover:shadow-xl focus:shadow-xl active:shadow-sm duration-200 rounded-lg bg-rose-100 focus:bg-rose-50 focus:outline-none focus:ring-4  focus:ring-rose-200 focus:ring-opacity-50 border-0 border-l-8 border-rose-400 hover:border-rose-500 focus:border-rose-600 transform focus:-translate-y-0.5 hover:-translate-y-0.5 active:translate-y-0.5 ease-in-out group px-8 py-6"
+                    className="block overflow-hidden transition shadow-lg hover:shadow-xl focus:shadow-xl active:shadow-sm duration-200 rounded-lg bg-rose-100 focus:bg-rose-50 focus:outline-none focus:ring-4  focus:ring-rose-200 focus:ring-opacity-50 border-0 border-l-8 border-rose-400 hover:border-rose-500 focus:border-rose-600 transform focus:-translate-y-0.5 hover:-translate-y-0.5 active:translate-y-0.5 ease-in-out group px-4 sm:px-8 py-6"
                   >
                     <h2 className="w-11/12 text-xl tracking-wider text-rose-900">
                       {title}

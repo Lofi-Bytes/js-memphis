@@ -15,7 +15,6 @@ type SectionProps = {
 const STYLES = `
   rounded-xl
   py-8
-  px-8
   sm:px-14
   w-11/12
   sm:w-9/12
@@ -25,14 +24,14 @@ const STYLES = `
 `
 
 const Section: FC<SectionProps> = ({
-  background='opaque',
+  background,
   children,
   className
 }: SectionProps) => {
   let styles = formatClassList(STYLES)
 
   if (background === 'opaque') {
-    styles = joinStrings(' ', styles, 'bg-gray-100 shadow-xl')
+    styles = joinStrings(' ', styles, 'bg-gray-100 shadow-xl px-8')
   }
 
   if (background === 'transparent') {
