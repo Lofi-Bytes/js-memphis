@@ -89,7 +89,7 @@ const ContactPage: FC<PageProps> = ({
       <Main>
         <Section background="opaque" className="mb-8 -mt-12">
           <div className="max-w-xs py-2 pl-10 pr-4 -ml-10 rounded shadow-lg bg-cyan-300 w-max sm:px-24 sm:-ml-24 sm:max-w-none">
-            <h2 className="text-xl tracking-wide text-cyan-900 sm:text-2xl">Interested in collaborating?</h2>
+            <h2 className="text-xl tracking-wide text-cyan-900 sm:text-2xl">Say hello</h2>
           </div>
           <div className="mx-auto md:w-10/12">
 
@@ -422,7 +422,7 @@ const ContactPage: FC<PageProps> = ({
                     type="submit"
                     disabled={formState.isSubmitting}
                   >
-                    Submit
+                    Get in touch
                   </Button>
                 </div>
               </form>

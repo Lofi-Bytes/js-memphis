@@ -8,7 +8,7 @@ import {
 
 
 export type ButtonProps = {
-  action: 'primary' | 'secondary',
+  action: 'primary' | 'secondary' | 'tertiary',
   children: ReactNode,
   className?: string,
   disabled: boolean,
@@ -19,6 +19,10 @@ export type ButtonProps = {
 }
 
 const BTN: string = `
+  block
+  cursor-pointer
+  font-medium
+
   outline-none
   focus:outline-none
   hover:outline-none
@@ -28,11 +32,9 @@ const BTN: string = `
   text-center
   tracking-wide
   transition
-
-  block
 `
 
-const PRIMARY_BASE: string = `
+const PRIMARY_SECONDARY_BASE: string = `
   ${BTN}
   active:shadow-sm
   duration-200
@@ -53,87 +55,55 @@ const PRIMARY_BASE: string = `
   py-2
   rounded-full
   shadow-lg
-`
 
-const SECONDARY_BASE: string = `
-  ${BTN}
-  active:shadow-sm
-  duration-200
+  transform
+  hover:-translate-y-0.5
+  focus:-translate-y-0.5
+  active:translate-y-0.5
+  ease-in-out
 
-  ring-1
-  ring-offset-1
+  active:ring-offset-purple-700
+  active:ring-purple-200
+  active:ring-opacity-75
 
-  focus:ring-1
-  focus:ring-offset-1
+  hover:ring-offset-purple-700
+  hover:ring-purple-200
+  hover:ring-opacity-75
 
-  hover:ring-1
-  hover:ring-offset-1
+  focus:ring-offset-purple-700
+  focus:ring-purple-200
+  focus:ring-opacity-75
 
-  active:ring-1
-  active:ring-offset-1
-
-  px-6
-  py-2
-  rounded-full
-  shadow-lg
+  ring-offset-purple-300
+  ring-purple-200
+  ring-opacity-75
 `
 
 const PRIMARY: string = `
-  ${PRIMARY_BASE}
+  ${PRIMARY_SECONDARY_BASE}
   bg-purple-300
   text-purple-900
-  font-medium
-
-  ring-offset-purple-300
-  ring-purple-200
-  ring-opacity-75
-
-  focus:ring-offset-purple-700
-  focus:ring-purple-200
-  focus:ring-opacity-75
-
-  hover:ring-offset-purple-700
-  hover:ring-purple-200
-  hover:ring-opacity-75
-
-  active:ring-offset-purple-700
-  active:ring-purple-200
-  active:ring-opacity-75
-
-  transform
-  hover:-translate-y-0.5
-  focus:-translate-y-0.5
-  active:translate-y-0.5
-  ease-in-out
 `
 
 const SECONDARY: string = `
-  ${SECONDARY_BASE}
+  ${PRIMARY_SECONDARY_BASE}
   bg-purple-50
   text-purple-600
-  font-medium
+`
 
-  ring-offset-purple-300
-  ring-purple-200
-  ring-opacity-75
+const TERTIARY: string = `
+  ${BTN}
 
-  focus:ring-offset-purple-700
-  focus:ring-purple-200
-  focus:ring-opacity-75
+  border-b-2
+  border-transparent
 
-  hover:ring-offset-purple-700
-  hover:ring-purple-200
-  hover:ring-opacity-75
-
-  active:ring-offset-purple-700
-  active:ring-purple-200
-  active:ring-opacity-75
-
-  transform
-  hover:-translate-y-0.5
-  focus:-translate-y-0.5
-  active:translate-y-0.5
   ease-in-out
+  text-purple-700
+  transform
+
+  hover:border-purple-700
+  focus:border-purple-700
+  active:border-purple-700
 `
 
 const Button: FC<ButtonProps> = ({
@@ -146,47 +116,47 @@ const Button: FC<ButtonProps> = ({
   type,
   ...other
 }: ButtonProps) => {
+  let formattedPrimary = formatClassList(PRIMARY)
+  let formattedSecondary = formatClassList(SECONDARY)
+  let formattedTertiary = formatClassList(TERTIARY)
 
-  const primary = formatClassList(PRIMARY)
-  const secondary = formatClassList(SECONDARY)
+  let formattedClassName
+
+  if (action === 'primary') {
+    formattedClassName = joinStrings(' ', formattedPrimary, className)
+  }
+
+  if (action === 'secondary') {
+    formattedClassName = joinStrings(' ', formattedSecondary, className)
+  }
+
+  if (action === 'tertiary') {
+    formattedClassName = joinStrings(' ', formattedTertiary, className)
+  }
+
+  if (to) {
+    return (
+      <Link
+        className={formattedClassName}
+        role={type}
+        title={title}
+        to={to}
+        {...other}
+      >
+        {children}
+      </Link>
+    )
+  }
 
   return (
-    <React.Fragment>
-      {
-        to
-          ?
-            <Link
-              className={
-                action === 'primary'
-                  ? joinStrings(' ', primary, className)
-                  : action === 'secondary'
-                    ? joinStrings(' ', secondary, className)
-                    : className
-              }
-              role={type}
-              title={title}
-              to={to}
-              {...other}
-            >
-              {children}
-            </Link>
-          :
-            <button
-              className={
-                action === 'primary'
-                  ? joinStrings(' ', primary, className)
-                  : action === 'secondary'
-                    ? joinStrings(' ', secondary, className)
-                    : className
-              }
-              title={title}
-              type={type}
-              {...other}
-            >
-              {children}
-            </button>
-      }
-    </React.Fragment>
+    <button
+      className={formattedClassName}
+      role={type}
+      title={title}
+      {...other}
+    >
+      {children}
+    </button>
   )
 }
 

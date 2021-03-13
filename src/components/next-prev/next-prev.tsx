@@ -1,6 +1,7 @@
 import React, { FC, ReactNode } from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 
+import Button from '../button'
 import NextButton from '../../components/next-button'
 import PreviousButton from '../../components/previous-button'
 
@@ -80,20 +81,33 @@ const NextPrev: FC<NextPrevProps> = ({
           }
           if(edge.node.path === path && (!edge.next && edge.previous)) {
             return(
-              <div className={className}>
+              <div
+                className={
+                  className
+                    ? joinStrings(' ', "flex items-center justify-between", className)
+                    : "flex items-center justify-between"
+                }
+              >
                 <PreviousButton
-                  action="primary"
+                  action="secondary"
                   path={path}
                 >
-                  Previous
+                  Prev
                 </PreviousButton>
+                <Button
+                  action="primary"
+                  disabled={false}
+                  title="Back to article list"
+                  to="/writing"
+                >
+                  List&nbsp;&nbsp;<i className="far fa-chevron-right" />
+                </Button>
               </div>
             )
           }
         })
       }
     </>
-
   )
 }
 

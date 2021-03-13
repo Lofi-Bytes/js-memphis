@@ -386,7 +386,7 @@ const ContactForm: FC<ReactNode> = ({}: ReactNode) => {
               type="submit"
               disabled={formState.isSubmitting}
             >
-              Submit
+              Send message
             </Button>
           </div>
         </form>

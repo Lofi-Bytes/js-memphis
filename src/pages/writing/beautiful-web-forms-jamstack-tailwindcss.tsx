@@ -286,7 +286,7 @@ const BeautifulWebFormsJamstackTailwindCSSPage: FC<PageProps> = ({
                 title="Submit"
                 // type="submit"
               >
-                Submit
+                Send message
               </button>
             </div>
           </div>

@@ -11,6 +11,7 @@ import TextLink from '../components/text-link'
 import Section from '../components/section'
 import SEO from '../components/seo'
 import Main from '../components/main'
+import Button from '../components/button'
 
 
 type PageProps = {
@@ -55,6 +56,16 @@ const AboutPage: FC<PageProps> = ({
           <p className="mt-1 text-xl leading-relaxed tracking-wider text-gray-600">
             Front End Systems Designer &amp; Solutions Architect
           </p>
+
+          <Button
+            action="tertiary"
+            disabled={false}
+            title="Return to homepage"
+            className="mt-6 w-max"
+            to="/"
+          >
+            <i className="fas fa-arrow-left" />&nbsp;&nbsp;Return to homepage
+          </Button>
 
           <h2 className="mt-10 text-xl tracking-wide text-gray-700">Current Work</h2>
           <p className="mt-3 leading-relaxed tracking-wider text-gray-600">
@@ -226,6 +237,16 @@ const AboutPage: FC<PageProps> = ({
               See my resumé
             </Button>
           </div> */}
+
+          <Button
+            action="secondary"
+            disabled={false}
+            title="Return to homepage"
+            className="mt-16 w-max"
+            to="/"
+          >
+            <i className="fas fa-chevron-left" />&nbsp;&nbsp;Return to homepage
+          </Button>
         </Section>
 
         <Section background="opaque">

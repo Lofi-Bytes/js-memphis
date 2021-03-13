@@ -10,6 +10,7 @@ import SEO from '../../components/seo'
 import Main from '../../components/main'
 import NextPrev from '../../components/next-prev'
 import Tag from '../../components/tag'
+import Button from '../../components/button'
 
 import Prism from 'prismjs'
 
@@ -75,6 +76,16 @@ const BeautifulFormsJamstackIntroductionPage: FC<PageProps> = ({
           <div className="max-w-xs px-10 py-2 -ml-10 rounded shadow-lg bg-rose-300 w-max sm:px-24 sm:-ml-24 sm:max-w-none">
             <h2 className="text-xl tracking-wide text-gray-800 sm:text-2xl">Series Introduction</h2>
           </div>
+
+          <Button
+            action="tertiary"
+            disabled={false}
+            title="Back to article list"
+            className="mt-10 w-max"
+            to="/"
+          >
+            <i className="fas fa-arrow-left" />&nbsp;&nbsp;Back to article list
+          </Button>
 
           <Alert>
             This series assumes the reader has an intermediate understanding of React JS and Tailwind CSS.

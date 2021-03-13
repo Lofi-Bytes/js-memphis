@@ -109,7 +109,7 @@ const HomePage: FC<PageProps> = ({
             className="w-full mx-auto mt-8 md:w-3/4"
           >
             <Button
-              action="primary"
+              action="secondary"
               className="w-full"
               disabled={false}
               title="Learn more about me"
@@ -122,7 +122,7 @@ const HomePage: FC<PageProps> = ({
 
         <Section background="opaque">
           <div className="max-w-xs px-10 py-2 -ml-10 bg-yellow-300 rounded shadow-lg w-max sm:px-24 sm:-ml-24 sm:max-w-none">
-            <h2 className="text-xl tracking-wide text-yellow-900 sm:text-2xl">Say Hello</h2>
+            <h2 className="text-xl tracking-wide text-yellow-900 sm:text-2xl">Say hello</h2>
           </div>
           <div className="mx-auto md:w-10/12">
             <ContactForm />
