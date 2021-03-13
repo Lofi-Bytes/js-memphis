@@ -6,6 +6,7 @@ import CodeTag from '../code-tag'
 type CodeContainerProps = {
   children: ReactNode,
   language: string,
+  lineNumbers: boolean,
   path?: string,
   tag: string,
   tagBgColor: string,
@@ -15,6 +16,7 @@ type CodeContainerProps = {
 const CodeContainer: FC<CodeContainerProps> = ({
   children,
   language,
+  lineNumbers,
   path,
   tag,
   tagBgColor,
@@ -36,7 +38,7 @@ const CodeContainer: FC<CodeContainerProps> = ({
         tagColor={tagColor}
         tag={tag}
       />
-      <pre>
+      <pre className={lineNumbers ? "line-numbers" : null}>
         <code className={`language-${language}`}>{children}</code>
       </pre>
     </div>

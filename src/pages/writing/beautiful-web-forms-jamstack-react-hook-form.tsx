@@ -206,6 +206,7 @@ const BeautifulWebFormsJamstackReactHookFormPage: FC<PageProps> = ({
           </p>
           <CodeContainer
             language="bash"
+            lineNumbers={true}
             tag="zsh"
             tagBgColor="bg-gray-900"
             tagColor="text-white"
@@ -221,6 +222,7 @@ const BeautifulWebFormsJamstackReactHookFormPage: FC<PageProps> = ({
           </p>
           <CodeContainer
             language="tsx"
+            lineNumbers={true}
             path="./src/components/contact-form/contact-form.tsx"
             tag="TSX"
             tagBgColor="#007ACC"
@@ -236,6 +238,7 @@ const BeautifulWebFormsJamstackReactHookFormPage: FC<PageProps> = ({
           </Alert>
           <CodeContainer
             language="ts"
+            lineNumbers={false}
             path="./src/components/button/index.ts"
             tag="TS"
             tagBgColor="#007ACC"
@@ -248,6 +251,7 @@ const BeautifulWebFormsJamstackReactHookFormPage: FC<PageProps> = ({
           </p>
           <CodeContainer
             language="ts"
+            lineNumbers={false}
             tag="TS"
             tagBgColor="#007ACC"
             tagColor="text-white"
@@ -259,6 +263,7 @@ const BeautifulWebFormsJamstackReactHookFormPage: FC<PageProps> = ({
           </p>
           <CodeContainer
             language="ts"
+            lineNumbers={true}
             tag="TS"
             tagBgColor="#007ACC"
             tagColor="text-white"

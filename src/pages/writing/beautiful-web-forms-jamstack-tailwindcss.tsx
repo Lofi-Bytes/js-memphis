@@ -180,6 +180,7 @@ const BeautifulWebFormsJamstackTailwindCSSPage: FC<PageProps> = ({
           </p>
           <CodeContainer
             language="bash"
+            lineNumbers={true}
             tag="zsh"
             tagBgColor="bg-gray-900"
             tagColor="text-white"
@@ -191,6 +192,7 @@ const BeautifulWebFormsJamstackTailwindCSSPage: FC<PageProps> = ({
           </p>
           <CodeContainer
             language="js"
+            lineNumbers={true}
             tag="JS"
             tagBgColor="#f7df1e"
             tagColor="text-gray-900"
@@ -203,6 +205,7 @@ const BeautifulWebFormsJamstackTailwindCSSPage: FC<PageProps> = ({
           </p>
           <CodeContainer
             language="tsx"
+            lineNumbers={true}
             tag="TSX"
             tagBgColor="#007ACC"
             tagColor="text-white"
@@ -235,6 +238,7 @@ const BeautifulWebFormsJamstackTailwindCSSPage: FC<PageProps> = ({
           </p>
           <CodeContainer
             language="tsx"
+            lineNumbers={true}
             tag="TSX"
             tagBgColor="#007ACC"
             tagColor="text-white"
