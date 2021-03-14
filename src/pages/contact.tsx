@@ -11,6 +11,9 @@ import Section from '../components/section'
 import SEO from '../components/seo'
 import Main from '../components/main'
 
+import SuccessMessage from '../components/contact-form/success-message'
+import ErrorMessage from '../components/contact-form/error-message'
+
 
 type PageProps = {
   location: Location
@@ -93,23 +96,8 @@ const ContactPage: FC<PageProps> = ({
           </div>
           <div className="mx-auto md:w-10/12">
 
-            {successMsg &&
-              <div role="alert" className="flex flex-col items-center justify-center w-full p-6 mt-8 text-lg text-gray-600 bg-gray-200 rounded-lg shadow-md h-96">
-                <i className="w-full text-6xl text-center text-green-500 far fa-check-circle sm:text-7xl md:text-8xl"></i>
-                <p className="mt-4 text-xl leading-relaxed tracking-wider text-center text-gray-600 sm:text-2xl md:text-3xl">Thank you!</p>
-                <p className="mt-4 text-base leading-relaxed tracking-wider text-gray-600 sm:text-lg md:text-xl">I have received your message.</p>
-              </div>
-            }
-
-            {errorMsg &&
-              <div role="alert" className="flex items-start justify-start w-full p-4 mt-6 text-lg text-gray-600 bg-red-100 border-l-4 border-red-500 rounded-lg shadow-md">
-                <i className="mt-1 text-3xl text-red-500 far fa-times-circle"></i>
-                <div className="ml-4">
-                  <p className="text-2xl leading-relaxed tracking-wider text-gray-600">Oops!</p>
-                  <p className="mt-3 text-lg leading-relaxed tracking-wider text-gray-600">Well that's embarassing. Something went wrong. Please try to submit your message again.</p>
-                </div>
-              </div>
-            }
+            {successMsg && <SuccessMessage />}
+            {errorMsg && <ErrorMessage />}
 
             {!successMsg &&
               <form
