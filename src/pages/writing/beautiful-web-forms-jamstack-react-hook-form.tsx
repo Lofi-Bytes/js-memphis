@@ -4,12 +4,12 @@ import { useStaticQuery, graphql } from 'gatsby'
 import Alert from '../../components/alert'
 import Banner from '../../components/banner'
 import Layout from '../../components/layout'
-import TextLink from '../../components/text-link'
-import Section from '../../components/section'
-import SEO from '../../components/seo'
 import Main from '../../components/main'
 import NextPrev from '../../components/next-prev'
+import SEO from '../../components/seo'
+import Section from '../../components/section'
 import Tag from '../../components/tag'
+import TextLink from '../../components/text-link'
 
 import Prism from 'prismjs'
 import CodeContainer from '../../components/code-container/code-container'
@@ -82,8 +82,6 @@ const ContactForm: FC<ReactNode> = ({}: ReactNode) => {
 
 export default ContactForm`
 
-const buttonExport: string = `export { default } from './button'`
-
 const importUseForm: string = `import { useForm } from 'react-hook-form'`
 
 const setUp: string = `import React, { FC, ReactNode, useState } from 'react'
@@ -147,7 +145,7 @@ const BeautifulWebFormsJamstackReactHookFormPage: FC<PageProps> = ({
       allPostsJson(
         filter: {
           title: {
-            eq: "Beautiful Web Forms on the Jamstack"
+            eq: "Beautiful web forms on the Jamstack"
           },
           subtitle: {
             eq: "With React Hook Form"
@@ -231,22 +229,6 @@ const BeautifulWebFormsJamstackReactHookFormPage: FC<PageProps> = ({
             {styledForm}
           </CodeContainer>
           <p className="mt-8 leading-relaxed tracking-wider text-gray-600">
-            Above I have abstracted the button into its own component which keeps things dry and cleans up the TSX in the contact form component. {/* Please see ____ for tips on component design with TailwindCSS. */}
-          </p>
-          <Alert>
-            Note the Button import. As a standard practice, I keep an <code className="language-bash">index.ts</code> file inside of all component subdirectories (including <code className="language-bash">contact-form</code>) which cleans up imports throughout the app:
-          </Alert>
-          <CodeContainer
-            language="ts"
-            lineNumbers={false}
-            path="./src/components/button/index.ts"
-            tag="TS"
-            tagBgColor="#007ACC"
-            tagColor="text-white"
-          >
-            {buttonExport}
-          </CodeContainer>
-          <p className="mt-8 leading-relaxed tracking-wider text-gray-600">
             The first thing we want to do to get started is import the <code className="language-bash">useForm</code> hook:
           </p>
           <CodeContainer
@@ -278,7 +260,7 @@ const BeautifulWebFormsJamstackReactHookFormPage: FC<PageProps> = ({
               I usually accomplish this by building this same form into its own <TextLink to="/contact" external={false}>contact</TextLink> page/route. Yes, this does result in duplicated code which isn't terribly DRY, but in this case it is necessary. Since I use the contact component on many other pages, I don't find it necessary to directly link to a dedicated "contact" route anywhere, but it does exist.
             </p>
           </Alert>
-          <NextPrev path={path} className="mt-10" />
+          <NextPrev path={path} className="mt-10" >test</NextPrev>
         </Section>
         <Section background="opaque" className="mb-8">
           <h3 className="text-xl tracking-wide text-gray-700 ">Tags</h3>

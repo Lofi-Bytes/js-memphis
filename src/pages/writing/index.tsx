@@ -23,6 +23,7 @@ const WritingPostListPage: FC<PageProps> = ({
           node {
             title
             subtitle
+            published
             path
             excerpt
             date
@@ -66,44 +67,51 @@ const WritingPostListPage: FC<PageProps> = ({
               const path = edge.node.path
               const title = edge.node.title
               const subtitle = edge.node.subtitle
+              const published = edge.node.published
               const excerpt = edge.node.excerpt
               const date = edge.node.date
               const tags = edge.node.tags
               return(
                 <React.Fragment key={`item-${index}`}>
-                  <Link
-                    to={path}
-                    className="block overflow-hidden transition shadow-lg hover:shadow-xl focus:shadow-xl active:shadow-sm duration-200 rounded-lg bg-violet-100 focus:bg-violet-50 focus:outline-none focus:ring-4 focus:ring-violet-200 focus:ring-opacity-50 border-0 border-l-8 border-violet-400 hover:border-violet-500 focus:border-violet-600 transform focus:-translate-y-0.5 hover:-translate-y-0.5 active:translate-y-0.5 ease-in-out group px-4 sm:px-8 py-6"
-                  >
-                    <h2 className="text-xl tracking-wider text-violet-900">
-                      {title}
-                    </h2>
-                    <p className="tracking-wider text-violet-900 text-md">{subtitle}</p>
-                    <p className="font-serif text-sm italic tracking-wider text-violet-700">
-                      {date}
-                    </p>
-                    <div className="flex flex-wrap mt-2">
-                      {
-                        tags.map((tag, index) => {
-                          return (
-                            <Tag
-                              card={true}
-                              key={`item-${index}`}
-                              tagColor="violet"
-                            >
-                              {tag}
-                            </Tag>
-                          )
-                        })
-                      }
-                    </div>
-                    <p className="mt-4 text-base tracking-wider text-violet-700">
-                      {excerpt}
-                    </p>
-                    <div className="flex flex-row-reverse">
-                      <i className="mt-2 text-xl transition duration-150 ease-in-out border-b-4 rounded-sm border-violet-100 fas fa-arrow-right text-violet-400 group-focus:text-violet-600 group-hover:text-violet-500 group-hover:border-violet-500 group-focus:border-violet-600 pb-0.5"></i>
-                    </div>
-                  </Link>
+                  {
+                    published
+                      ?
+                        <Link
+                          to={path}
+                          className="block overflow-hidden transition shadow-lg hover:shadow-xl focus:shadow-xl active:shadow-sm duration-200 rounded-lg bg-violet-100 focus:bg-violet-50 focus:outline-none focus:ring-4 focus:ring-violet-200 focus:ring-opacity-50 border-0 border-l-8 border-violet-400 hover:border-violet-500 focus:border-violet-600 transform focus:-translate-y-0.5 hover:-translate-y-0.5 active:translate-y-0.5 ease-in-out group px-4 sm:px-8 py-6"
+                        >
+                          <h2 className="text-xl tracking-wider text-violet-900">
+                            {title}
+                          </h2>
+                          <p className="tracking-wider text-violet-900 text-md">{subtitle}</p>
+                          <p className="font-serif text-sm italic tracking-wider text-violet-700">
+                            {date}
+                          </p>
+                          <div className="flex flex-wrap mt-2">
+                            {
+                              tags.map((tag, index) => {
+                                return (
+                                  <Tag
+                                    card={true}
+                                    key={`item-${index}`}
+                                    tagColor="violet"
+                                  >
+                                    {tag}
+                                  </Tag>
+                                )
+                              })
+                            }
+                          </div>
+                          <p className="mt-4 text-base tracking-wider text-violet-700">
+                            {excerpt}
+                          </p>
+                          <div className="flex flex-row-reverse">
+                            <i className="mt-2 text-xl transition duration-150 ease-in-out border-b-4 rounded-sm border-violet-100 fas fa-arrow-right text-violet-400 group-focus:text-violet-600 group-hover:text-violet-500 group-hover:border-violet-500 group-focus:border-violet-600 pb-0.5"></i>
+                          </div>
+                        </Link>
+                      :
+                        null
+                  }
                 </React.Fragment>
               )
             })

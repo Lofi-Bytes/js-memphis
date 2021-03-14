@@ -1,15 +1,16 @@
 import React, { FC, ReactNode, useEffect } from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 
+import Alert from '../../components/alert'
 import Banner from '../../components/banner'
+import CodeContainer from '../../components/code-container'
 import Layout from '../../components/layout'
-import TextLink from '../../components/text-link'
-import Section from '../../components/section'
-import SEO from '../../components/seo'
 import Main from '../../components/main'
 import NextPrev from '../../components/next-prev'
+import SEO from '../../components/seo'
+import Section from '../../components/section'
 import Tag from '../../components/tag'
-import CodeContainer from '../../components/code-container'
+import TextLink from '../../components/text-link'
 
 import Prism from 'prismjs'
 
@@ -18,14 +19,14 @@ type PageProps = {
   location: Location
 }
 
-const install =
+const install: string =
 `# Using npm
 npm install @tailwindcss/forms
 
 # Using Yarn
 yarn add @tailwindcss/forms`
 
-const tailwindConfig =
+const tailwindConfig: string =
 `module.exports = {
   theme: {
     // ...
@@ -36,7 +37,7 @@ const tailwindConfig =
   ],
 }`
 
-const initialForm =
+const initialForm: string =
 `<form name="contact">
   <div className="grid grid-cols-1 gap-6">
     <label className="block">
@@ -54,7 +55,7 @@ const initialForm =
   </div>
 </div>`
 
-const styledForm =
+const styledForm: string =
 `<form name="contact">
   <div className="grid grid-cols-1 gap-4 mt-8">
     <input type="hidden" name="form-contact" value="contact" />
@@ -85,7 +86,7 @@ const styledForm =
       <span className="text-sm tracking-wider text-gray-600">Message</span>
       <div className="relative">
         <textarea
-          className="flex-grow block w-full pl-3 pr-10 mt-1 text-lg text-gray-600 bg-gray-200 border-0 border-l-4 border-purple-300 rounded-lg shadow-md focus:ring-0 focus:border-fuchsia-500"
+          className="block w-full pl-3 pr-10 mt-1 text-lg text-gray-600 bg-gray-200 border-0 border-l-4 border-purple-300 rounded-lg shadow-md focus:ring-0 focus:border-fuchsia-500"
           aria-required="true"
           rows={4}
           name="message"
@@ -102,6 +103,110 @@ const styledForm =
   </div>
 </form>`
 
+const refactoredForm: string = `import React, { ReactNode } from 'react'
+
+import { formatClassList } from '../../utils/utils'
+
+import Button from '../../components/button'
+
+
+const FIELD_BASE: string = \`
+  bg-gray-200
+  block
+  border-0
+  border-l-4
+  focus:ring-0
+  mt-1
+  pl-3
+  pr-10
+  rounded-lg
+  shadow-md
+  text-gray-600
+  text-lg
+  w-full
+\`
+
+const FIELD: string = \`
+  \${FIELD_BASE}
+  border-purple-300
+  focus:border-fuchsia-500
+\`
+
+const GRID: string = \`
+  gap-4
+  grid
+  grid-cols-1
+  mt-8
+\`
+
+const LABEL: string = \`
+  text-gray-600
+  text-sm
+  tracking-wider
+\`
+
+const ContactForm = ({}: ReactNode) => {
+  const formattedField: string = formatClassList(FIELD)
+  const formattedLabel: string = formatClassList(LABEL)
+  const formattedGrid: string = formatClassList(GRID)
+
+  return (
+    <form name="contact">
+      <div className={formattedGrid}>
+        <input type="hidden" name="form-contact" value="contact" />
+        <label className="block">
+          <span className={formattedLabel}>Name</span>
+          <div className="relative">
+            <input
+              className={formattedField}
+              aria-required="true"
+              placeholder=""
+              type="text"
+              name="name"
+            />
+          </div>
+        </label>
+        <label className="block">
+          <span className={formattedLabel}>Email</span>
+          <div className="relative">
+            <input
+              className={formattedField}
+              aria-required="true"
+              type="email"
+              name="email"
+            />
+          </div>
+        </label>
+        <label className="block">
+          <span className={formattedLabel}>Message</span>
+          <div className="relative">
+            <textarea
+              className={formattedField}
+              aria-required="true"
+              rows={4}
+              name="message"
+            />
+          </div>
+        </label>
+        <Button
+          action="primary"
+          className="mt-4"
+          title="Submit"
+          type="submit"
+          disabled={false}
+        >
+          Send your message
+        </Button>
+      </div>
+    </form>
+  )
+}
+
+export default ContactForm
+`
+
+const buttonExport: string = `export { default } from './button'`
+
 const BeautifulWebFormsJamstackTailwindCSSPage: FC<PageProps> = ({
   location
 }: PageProps) => {
@@ -110,7 +215,7 @@ const BeautifulWebFormsJamstackTailwindCSSPage: FC<PageProps> = ({
       allPostsJson(
         filter: {
           title: {
-            eq: "Beautiful Web Forms on the Jamstack"
+            eq: "Beautiful web forms on the Jamstack"
           },
           subtitle: {
             eq: "With Tailwind CSS"
@@ -246,7 +351,7 @@ const BeautifulWebFormsJamstackTailwindCSSPage: FC<PageProps> = ({
             {styledForm}
           </CodeContainer>
           <p className="mt-8 leading-relaxed tracking-wider text-gray-600">
-            Note that on lines 6, 18, and 29 I preemptively changed the <code className="language-bash">div</code>'s to <code className="css">display: relative;</code> since we will be using those elements to position icons for visual feedback during form field validation in the next post. Of course I also added a button since that is an important part of any form 😊. And there we have it, a gorgeously styled and accessible contact form:
+            Note that on lines 6, 18, and 29 I preemptively changed the <code className="language-bash">div</code>'s to <code className="language-css">display: relative;</code> since we will be using those elements to position icons for visual feedback during form field validation in the next post. Of course I also added a button since that is an important part of any form 😊. And there we have it, a gorgeously styled and accessible contact form:
           </p>
           <div className="mx-auto md:w-10/12">
             <div className="grid grid-cols-1 gap-4 mt-8">
@@ -294,6 +399,34 @@ const BeautifulWebFormsJamstackTailwindCSSPage: FC<PageProps> = ({
               </button>
             </div>
           </div>
+          <p className="mt-12 leading-relaxed tracking-wider text-gray-600">
+            Lastly, lets refactor this a bit to deal with our unwieldy Tailwind CSS class names so that our final <code className="language-bash">ContactForm</code> component will look as follows:
+          </p>
+          <CodeContainer
+            language="tsx"
+            lineNumbers={true}
+            tag="TSX"
+            tagBgColor="#007ACC"
+            tagColor="text-white"
+          >
+            {refactoredForm}
+          </CodeContainer>
+          <p className="mt-8 leading-relaxed tracking-wider text-gray-600">
+            For further understanding and an in-depth look that my approach to keeping components tidy while working with Tailwind CSS please see <TextLink to="/" external={false}>Tidy React-Typescript component design with Tailwind CSS</TextLink>. Above I have also abstracted the button into its own component, which keeps things dry and further cleans up the TSX in the contact form component.
+          </p>
+          <Alert>
+            Note the Button import. As a standard practice, I keep an <code className="language-bash">index.ts</code> file inside of all component subdirectories (including <code className="language-bash">contact-form</code>) which cleans up imports throughout the app:
+          </Alert>
+          <CodeContainer
+            language="ts"
+            lineNumbers={false}
+            path="./src/components/button/index.ts"
+            tag="TS"
+            tagBgColor="#007ACC"
+            tagColor="text-white"
+          >
+            {buttonExport}
+          </CodeContainer>
           <p className="mt-8 leading-relaxed tracking-wider text-gray-600">
             Next up, we will dive into using React Hook Form for client-side form field validation.
           </p>

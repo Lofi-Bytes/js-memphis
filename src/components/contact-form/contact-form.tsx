@@ -1,8 +1,8 @@
-import React, { FC, ReactNode, useState } from 'react'
+import React, { ReactNode, useState } from 'react'
 
 import { useForm } from 'react-hook-form'
 
-import { encode } from '../../utils/utils'
+import { encode, formatClassList } from '../../utils/utils'
 
 import Button from '../button'
 
@@ -13,19 +13,26 @@ import ErrorMessage from './error-message'
 
 
 export type ContactFormProps = {
-  test: string,
-  name: string,
   email: string,
-  message: string
+  message: string,
+  name: string,
+  test: string
 }
 
-const ContactForm: FC<ReactNode> = ({}: ReactNode) => {
+const GRID: string = `
+  gap-4
+  grid
+  grid-cols-1
+  mt-8
+`
+
+const ContactForm = ({}: ReactNode) => {
   const {
-    register,
-    handleSubmit,
-    formState,
-    errors,
     clearErrors,
+    errors,
+    formState,
+    handleSubmit,
+    register,
     reset
   } = useForm<ContactFormProps>({
     mode: 'onBlur'
@@ -61,6 +68,8 @@ const ContactForm: FC<ReactNode> = ({}: ReactNode) => {
       })
   }
 
+  const formattedGrid: string = formatClassList(GRID)
+
   return (
     <React.Fragment>
       {successMsg && <SuccessMessage />}
@@ -74,7 +83,7 @@ const ContactForm: FC<ReactNode> = ({}: ReactNode) => {
           data-netlify-honeypot="bot-field"
           onSubmit={handleSubmit(onSubmit)}
         >
-          <div className="grid grid-cols-1 gap-4 mt-8">
+          <div className={formattedGrid}>
             <input type="hidden" name="form-contact" value="contact" />
             <TextInput
               label="name"

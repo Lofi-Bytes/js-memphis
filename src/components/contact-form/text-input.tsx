@@ -1,6 +1,8 @@
 import React from 'react'
 
-import { formatClassList } from '../../utils/utils'
+import { RegisterOptions, FieldErrors, FormStateProxy } from 'react-hook-form'
+
+import { formatClassList, joinStrings } from '../../utils/utils'
 
 import {
   FieldEmptyIcon,
@@ -11,12 +13,11 @@ import {
 
 export type TextInputTypes = {
   label: string,
-  errors: any,
-  errorMessage: any,
-  formState: any,
-  handleChange: any,
-  register: any,
-  [other:string]: unknown
+  errors: FieldErrors,
+  errorMessage: object,
+  formState: FormStateProxy,
+  handleChange: Function,
+  register: RegisterOptions
 }
 
 const FIELD_BASE: string = `
@@ -64,24 +65,34 @@ const ERROR_HELP_TEXT: string = `
   transition-opacity
 `
 
+const LABEL: string = `
+  text-gray-600
+  text-sm
+  tracking-wider
+`
+
 const TextInput = ({
   label,
   errors,
   errorMessage,
   formState,
   handleChange,
-  register,
-  ...other
+  register
 }) => {
   label = label.toLowerCase()
 
+  const formattedErrorHelpText: string = formatClassList(ERROR_HELP_TEXT)
   const formattedField: string = formatClassList(FIELD)
   const formattedFieldError: string = formatClassList(FIELD_ERROR)
   const formattedFieldValid: string = formatClassList(FIELD_VALID)
+  const formattedLabel: string = formatClassList(LABEL)
+
+  console.log(typeof handleChange);
+
 
   return (
     <label className="block">
-      <span className="text-sm tracking-wider text-gray-600">{label.charAt(0).toUpperCase() + label.slice(1)}</span>
+      <span className={formattedLabel}>{label.charAt(0).toUpperCase() + label.slice(1)}</span>
       <div className="relative">
         <input
           className={
@@ -109,8 +120,8 @@ const TextInput = ({
       <p
         className={
           errors[label]
-            ? `${ERROR_HELP_TEXT} opacity-100`
-            : `${ERROR_HELP_TEXT} opacity-0`
+            ? joinStrings(' ', formattedErrorHelpText, 'opacity-100')
+            : joinStrings(' ', formattedErrorHelpText, 'opacity-0')
         }
         aria-hidden={
           errors[label]
