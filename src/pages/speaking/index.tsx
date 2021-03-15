@@ -57,7 +57,7 @@ const SpeakingListPage: FC<PageProps> = ({
       <Main>
         <Section background="transparent" className="mb-8 -mt-12">
           <div className="max-w-xs px-10 py-2 mb-10 -ml-10 rounded shadow-lg bg-cyan-300 w-max sm:px-24 sm:-ml-24 sm:max-w-none">
-            <h2 className="text-xl tracking-wide text-cyan-900 sm:text-2xl">Invited Talks</h2>
+            <h2 className="text-xl tracking-wide text-cyan-900 sm:text-2xl">Invited talks</h2>
           </div>
           <div className="grid grid-flow-row-dense gap-8">
           {
