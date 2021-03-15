@@ -400,7 +400,7 @@ const BeautifulWebFormsJamstackTailwindCSSPage: FC<PageProps> = ({
             </div>
           </div>
           <p className="mt-12 leading-relaxed tracking-wider text-gray-600">
-            Lastly, lets refactor this a bit to deal with our unwieldy Tailwind CSS class names so that our final <code className="language-bash">ContactForm</code> component will look as follows:
+            Lets refactor this a bit to deal with our unwieldy Tailwind CSS class names so that our <code className="language-bash">ContactForm</code> component should look as follows:
           </p>
           <CodeContainer
             language="tsx"
