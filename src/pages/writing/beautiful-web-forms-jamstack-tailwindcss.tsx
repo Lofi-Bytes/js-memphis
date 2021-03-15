@@ -412,7 +412,10 @@ const BeautifulWebFormsJamstackTailwindCSSPage: FC<PageProps> = ({
             {refactoredForm}
           </CodeContainer>
           <p className="mt-8 leading-relaxed tracking-wider text-gray-600">
-            For further understanding and an in-depth look that my approach to keeping components tidy while working with Tailwind CSS please see <TextLink to="/" external={false}>Tidy React-Typescript component design with Tailwind CSS</TextLink>. Above I have also abstracted the button into its own component, which keeps things dry and further cleans up the TSX in the contact form component.
+            For further understanding and an in-depth look that my approach to keeping components tidy while working with Tailwind CSS please see <TextLink to="/" external={false}>Tidy React-Typescript component design with Tailwind CSS</TextLink>.
+          </p>
+          <p className="mt-8 leading-relaxed tracking-wider text-gray-600">
+            Above I have also abstracted the button into its own component, which keeps things DRY and further cleans up the TSX in the contact form component.
           </p>
           <Alert>
             Note the Button import. As a standard practice, I keep an <code className="language-bash">index.ts</code> file inside of all component subdirectories (including <code className="language-bash">contact-form</code>) which cleans up imports throughout the app:

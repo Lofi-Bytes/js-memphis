@@ -27,6 +27,7 @@ const NextButton: FC<NextButtonProps> = ({
           next {
             subtitle
             path
+            published
           }
         }
       }
@@ -38,7 +39,8 @@ const NextButton: FC<NextButtonProps> = ({
       {
         postData.allPostsJson.edges.map((edge, index) => {
           let nextPath
-          if(edge.node.path === path && edge.next) {
+
+          if(edge.node.path === path && edge.next && edge.next.published) {
             nextPath = edge.next.path
             return(
               <Button

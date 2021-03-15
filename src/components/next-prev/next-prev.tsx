@@ -29,10 +29,12 @@ const NextPrev: FC<NextPrevProps> = ({
           next {
             subtitle
             path
+            published
           }
           previous {
             subtitle
             path
+            published
           }
         }
       }
@@ -43,7 +45,13 @@ const NextPrev: FC<NextPrevProps> = ({
     <>
       {
         postData.allPostsJson.edges.map((edge, index) => {
-          if(edge.node.path === path && (edge.next && edge.previous)) {
+          if(
+              edge.node.path === path &&
+              edge.next &&
+              edge.next.published &&
+              edge.previous &&
+              edge.previous.published
+          ) {
             return(
               <div
                 className={
@@ -67,7 +75,11 @@ const NextPrev: FC<NextPrevProps> = ({
               </div>
             )
           }
-          if(edge.node.path === path && (edge.next && !edge.previous)) {
+          if(
+              edge.node.path === path &&
+              edge.next &&
+              !edge.previous
+          ) {
             return(
               <div className={className}>
                 <NextButton
@@ -79,7 +91,11 @@ const NextPrev: FC<NextPrevProps> = ({
               </div>
             )
           }
-          if(edge.node.path === path && (!edge.next && edge.previous)) {
+          if(
+              edge.node.path === path &&
+              (!edge.next || (edge.next && !edge.next.published)) &&
+              edge.previous
+          ) {
             return(
               <div
                 className={
