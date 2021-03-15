@@ -1,4 +1,4 @@
-import React, { FC, ReactNode } from 'react'
+import React, { ReactNode } from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 
 import Button from '../button'
@@ -11,7 +11,7 @@ type PreviousButtonProps = {
   className?: string
 }
 
-const PreviousButton: FC<PreviousButtonProps> = ({
+const PreviousButton = ({
   action,
   children,
   path,
@@ -38,6 +38,7 @@ const PreviousButton: FC<PreviousButtonProps> = ({
       {
         postData.allPostsJson.edges.map((edge, index) => {
           let previousPath
+
           if(edge.node.path === path && edge.previous) {
             previousPath = edge.previous.path
             return(
@@ -46,7 +47,7 @@ const PreviousButton: FC<PreviousButtonProps> = ({
                 disabled={false}
                 title=""
                 to={previousPath}
-                key={index}
+                key={`prev-${index}`}
               >
                 <i className="far fa-chevron-left" />&nbsp;&nbsp;{children}
               </Button>

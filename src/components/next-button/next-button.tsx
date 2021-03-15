@@ -1,4 +1,4 @@
-import React, { FC, ReactNode } from 'react'
+import React, { ReactNode } from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 
 import Button from '../button'
@@ -11,7 +11,7 @@ type NextButtonProps = {
   className?: string
 }
 
-const NextButton: FC<NextButtonProps> = ({
+const NextButton = ({
   action,
   children,
   path,
@@ -27,7 +27,6 @@ const NextButton: FC<NextButtonProps> = ({
           next {
             subtitle
             path
-            published
           }
         }
       }
@@ -40,7 +39,7 @@ const NextButton: FC<NextButtonProps> = ({
         postData.allPostsJson.edges.map((edge, index) => {
           let nextPath
 
-          if(edge.node.path === path && edge.next && edge.next.published) {
+          if(edge.node.path === path && edge.next) {
             nextPath = edge.next.path
             return(
               <Button
@@ -48,7 +47,7 @@ const NextButton: FC<NextButtonProps> = ({
                 disabled={false}
                 title=""
                 to={nextPath}
-                key={index}
+                key={`next-${index}`}
               >
                 {children}&nbsp;&nbsp;<i className="far fa-chevron-right" />
               </Button>

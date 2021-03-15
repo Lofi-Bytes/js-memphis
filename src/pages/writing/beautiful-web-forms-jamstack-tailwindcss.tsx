@@ -1,4 +1,4 @@
-import React, { FC, ReactNode, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 
 import Alert from '../../components/alert'
@@ -207,7 +207,7 @@ export default ContactForm
 
 const buttonExport: string = `export { default } from './button'`
 
-const BeautifulWebFormsJamstackTailwindCSSPage: FC<PageProps> = ({
+const BeautifulWebFormsJamstackTailwindCSSPage = ({
   location
 }: PageProps) => {
   const postData = useStaticQuery(graphql`
@@ -392,8 +392,6 @@ const BeautifulWebFormsJamstackTailwindCSSPage: FC<PageProps> = ({
               </label>
               <button
                 className="outline-none focus:outline-none hover:outline-none active:outline-none overflow-hidden text-center tracking-wide transition block active:shadow-sm duration-200 ring-1 ring-offset-1 focus:ring-1 focus:ring-offset-1 hover:ring-1 hover:ring-offset-1 active:ring-1 active:ring-offset-1 px-6 py-2 rounded-full shadow-lg bg-purple-300 text-purple-900 font-medium ring-offset-purple-300 ring-purple-200 ring-opacity-75 focus:ring-offset-purple-700 focus:ring-purple-200 focus:ring-opacity-75 hover:ring-offset-purple-700 hover:ring-purple-200 hover:ring-opacity-75 active:ring-offset-purple-700 active:ring-purple-200 active:ring-opacity-75 transform hover:-translate-y-0.5 focus:-translate-y-0.5 active:translate-y-0.5 ease-in-out"
-                title="Submit"
-                // type="submit"
               >
                 Send your message
               </button>
@@ -431,7 +429,13 @@ const BeautifulWebFormsJamstackTailwindCSSPage: FC<PageProps> = ({
             {buttonExport}
           </CodeContainer>
           <p className="mt-8 leading-relaxed tracking-wider text-gray-600">
+            Now would be a prudent opportunity to break parts of our form component into smaller subcomponents before we start adding a bunch of form validation logic. Otherwise our form component will become unwieldy. Excluding our button component, we can abstract two subcomponents (within reason<sup>1</sup>) from this form: <code className="language-bash">TextInput</code> and <code className="language-bash">TextArea</code>.
+          </p>
+          <p className="mt-8 leading-relaxed tracking-wider text-gray-600">
             Next up, we will dive into using React Hook Form for client-side form field validation.
+          </p>
+          <p className="mt-8 text-xs leading-relaxed tracking-wider text-gray-600">
+            <sup>1</sup>I'm not a fan of over-abstraction, ie. componentizing nearly every pixel on the screen. Doing so bloats a codebase and makes it just as difficult to follow as if one hadn't broken it into components at all. Balance is important here and takes good judgement. Before breaking a piece into a component ask yourself if it will be beneficial to do so.
           </p>
           <NextPrev path={path} className="mt-10" />
         </Section>

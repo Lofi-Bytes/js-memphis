@@ -1,4 +1,4 @@
-import React, { FC, ReactNode } from 'react'
+import React, { ReactNode } from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 
 import Button from '../button'
@@ -14,7 +14,7 @@ type NextPrevProps = {
   className?: string
 }
 
-const NextPrev: FC<NextPrevProps> = ({
+const NextPrev = ({
   path,
   children,
   className
@@ -54,6 +54,7 @@ const NextPrev: FC<NextPrevProps> = ({
           ) {
             return(
               <div
+                key={index}
                 className={
                   className
                     ? joinStrings(' ', "flex items-center justify-between", className)
@@ -81,7 +82,7 @@ const NextPrev: FC<NextPrevProps> = ({
               !edge.previous
           ) {
             return(
-              <div className={className}>
+              <div className={className} key={index}>
                 <NextButton
                   action="primary"
                   path={path}
@@ -98,6 +99,7 @@ const NextPrev: FC<NextPrevProps> = ({
           ) {
             return(
               <div
+                key={index}
                 className={
                   className
                     ? joinStrings(' ', "flex items-center justify-between", className)

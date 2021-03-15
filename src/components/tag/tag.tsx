@@ -84,7 +84,6 @@ const Tag: FC<TagProps> = ({
       if (key === tagColor) {
         formattedTagCard = joinStrings(' ', formattedTagCard, value.tag)
         formattedChildren = joinStrings(' ', formattedChildren, value.children)
-        console.log(formattedChildren);
       }
 
     }
@@ -95,7 +94,6 @@ const Tag: FC<TagProps> = ({
       if (key === tagColor) {
         formattedTagBase = joinStrings(' ', formattedTagBase, value.tag)
         formattedChildren = joinStrings(' ', formattedChildren, value.children)
-        console.log(formattedChildren);
       }
     }
   }

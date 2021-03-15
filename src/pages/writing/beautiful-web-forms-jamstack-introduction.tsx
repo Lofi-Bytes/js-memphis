@@ -1,4 +1,4 @@
-import React, { FC, ReactNode, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 
 import Alert from '../../components/alert'
@@ -18,7 +18,7 @@ type PageProps = {
   location: Location
 }
 
-const BeautifulFormsJamstackIntroductionPage: FC<PageProps> = ({
+const BeautifulFormsJamstackIntroductionPage = ({
   location
 }: PageProps) => {
   const postData = useStaticQuery(graphql`
@@ -46,7 +46,6 @@ const BeautifulFormsJamstackIntroductionPage: FC<PageProps> = ({
     }
   `)
 
-  console.log(postData.allPostsJson.edges[0])
   const title = postData.allPostsJson.edges[0].node.title
   const subtitle = postData.allPostsJson.edges[0].node.subtitle
   const date = postData.allPostsJson.edges[0].node.date

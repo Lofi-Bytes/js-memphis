@@ -87,9 +87,6 @@ const TextInput = ({
   const formattedFieldValid: string = formatClassList(FIELD_VALID)
   const formattedLabel: string = formatClassList(LABEL)
 
-  console.log(typeof handleChange);
-
-
   return (
     <label className="block">
       <span className={formattedLabel}>{label.charAt(0).toUpperCase() + label.slice(1)}</span>

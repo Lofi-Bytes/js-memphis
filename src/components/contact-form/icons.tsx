@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React from 'react'
 
 import {
   formatClassList,
@@ -37,7 +37,7 @@ const FIELD_VALID_ICON: string = `
   text-green-600
 `
 
-export const FieldEmptyIcon: FC<FieldIconProps> = ({
+export const FieldEmptyIcon = ({
   className
 }: FieldIconProps) => {
   const formattedFieldEmptyIcon: string = formatClassList(
@@ -48,7 +48,7 @@ export const FieldEmptyIcon: FC<FieldIconProps> = ({
   )
 }
 
-export const FieldErrorIcon: FC<FieldIconProps> = ({
+export const FieldErrorIcon = ({
   className
 }: FieldIconProps) => {
   const formattedFieldErrorIcon: string = formatClassList(
@@ -59,7 +59,7 @@ export const FieldErrorIcon: FC<FieldIconProps> = ({
   )
 }
 
-export const FieldValidIcon: FC<FieldIconProps> = ({
+export const FieldValidIcon = ({
   className
 }: FieldIconProps) => {
   const formattedFieldValidIcon: string = formatClassList(

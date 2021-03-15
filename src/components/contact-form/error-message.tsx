@@ -1,7 +1,7 @@
-import React, { FC, ReactNode } from 'react'
+import React, { ReactNode } from 'react'
 
 
-const ErrorMessage: FC<ReactNode> = ({}: ReactNode) => (
+const ErrorMessage = ({}: ReactNode) => (
   <div role="alert" className="flex items-start justify-start w-full p-4 mt-6 text-lg text-gray-600 bg-red-100 border-l-4 border-red-500 rounded-lg shadow-md">
     <i className="mt-1 text-3xl text-red-500 far fa-times-circle"></i>
     <div className="ml-4">
