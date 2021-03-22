@@ -54,7 +54,7 @@ const AboutPage: FC<PageProps> = ({
 
           <h2 className="mt-10 text-2xl tracking-wide text-gray-700">Jillian S. Estrella <br className="sm:hidden" /><span className="text-xl text-gray-600">🏳️‍🌈 she/her 🏳️‍⚧️</span></h2>
           <p className="mt-1 text-xl leading-relaxed tracking-wider text-gray-600">
-            Front End Systems Designer &amp; Solutions Architect
+            Front-end systems designer &amp; solutions architect
           </p>
 
           <Button
@@ -81,7 +81,7 @@ const AboutPage: FC<PageProps> = ({
             These innovations have allowed my small team to keep pace with the increasing demand of an organization that has more than doubled in size in the last three years.
           </p>
           <p className="mt-4 leading-relaxed tracking-wider text-gray-600">
-            A typical day for me involves architecting solutions to complex problems, overseeing our digital products through their entire lifecycle - from the proposal/planning phase to sunsetting, guiding my highly talented team, and designing/building UI's and UI components.
+            A typical day for me involves architecting solutions to complex problems, overseeing our digital products through their entire lifecycle - from the proposal/planning phase to sunsetting, guiding and mentoring my highly talented team, and designing/building UI's and UI components.
           </p>
           {/* <ul className="pb-4 mt-4 leading-relaxed tracking-wider text-gray-600 list-disc list-inside sm:px-8">
             <li>Product management: </li>
@@ -181,7 +181,7 @@ const AboutPage: FC<PageProps> = ({
             <p className="hidden leading-relaxed tracking-wider text-gray-600 sm:block">08/2010</p>
           </div>
           <p className="mx-6 mt-3 leading-relaxed tracking-wider text-gray-600">
-            I gained a strong foundation in classical mechanics, modern physics, electromagnetics, quantum mechanics, thermodynamics, condensed matter physics, nuclear & particle physics, plasma physics, circuit theory & design, and certified to design and machine custom parts for laboratory experiments in the physics departments state of the art machine shop.
+            I gained a strong foundation in classical mechanics, modern physics, electromagnetics, quantum mechanics, thermodynamics, condensed matter physics, nuclear & particle physics, plasma physics, circuit theory & design, and certified to design and machine custom parts for laboratory experiments in the physics department's state of the art machine shop.
           </p>
 
           <div className="flex items-start justify-between mt-4">
