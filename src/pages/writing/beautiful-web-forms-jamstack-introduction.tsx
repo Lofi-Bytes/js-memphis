@@ -60,9 +60,9 @@ const BeautifulFormsJamstackIntroductionPage = ({
   return (
     <Layout location={location}>
       <SEO
-        metaTitle=""
-        metaDescription=""
-        canonicalUrl=""
+        metaTitle="Beautiful web forms on the Jamstack | Series introduction"
+        metaDescription="Web forms are arguably one of the most important tools in web development and design."
+        canonicalUrl="https://jillian.dev/writing/beautiful-web-forms-jamstack-introduction"
       />
       <Banner
         align="left"
@@ -91,7 +91,7 @@ const BeautifulFormsJamstackIntroductionPage = ({
           </Alert>
 
           <p className="mt-8 leading-relaxed tracking-wider text-gray-600">
-            Web forms are arguably one of the most important tools in web development and design. They drive conversions and bridge the communication gap between you and your audience. When implemented poorly, they can serve to frustrate and alienate your audience. Good designers always seek to make forms as simple as possible. Reducing friction for one's audience increases conversion potential and makes web sites/apps more pleasant to use.
+            Web forms are arguably one of the most important tools in web development and design. They drive conversions and bridge the communication gap between you and your audience. When implemented poorly, they can serve to frustrate and alienate your audience. Good designers always seek to make forms as easy to use as possible. Reducing friction for one's audience increases conversion potential and makes web sites/apps more pleasant to use.
           </p>
           <p className="mt-4 leading-relaxed tracking-wider text-gray-600">
             Historically, web forms have been one of the more clunky parts of the audience experience. For example, server side validation requires submitting the form to the mercy of a request-response cycle before the audience can recieve feedback. I'm sure most of us have had the experience of our web form state being cleared, having to start over entirely 😩.

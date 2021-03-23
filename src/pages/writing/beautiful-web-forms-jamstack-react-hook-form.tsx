@@ -179,9 +179,9 @@ const BeautifulWebFormsJamstackReactHookFormPage: FC<PageProps> = ({
   return (
     <Layout location={location}>
       <SEO
-        metaTitle=""
-        metaDescription=""
-        canonicalUrl=""
+        metaTitle="Beautiful web forms on the Jamstack with React Hook Form"
+        metaDescription="React Hook Form makes client side form field validation easy."
+        canonicalUrl="https://jillian.dev/writing/beautiful-web-forms-jamstack-react-hook-form"
       />
       <Banner
         align="left"

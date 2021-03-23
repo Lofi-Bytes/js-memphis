@@ -34,9 +34,9 @@ const SpeakingListPage: FC<PageProps> = ({
   return (
     <Layout location={location}>
       <SEO
-        metaTitle=""
-        metaDescription=""
-        canonicalUrl=""
+        metaTitle="Jillian's talks"
+        metaDescription="See some of my recent talks."
+        canonicalUrl="https://jillian.dev/speaking/"
       />
       <Banner
         title={

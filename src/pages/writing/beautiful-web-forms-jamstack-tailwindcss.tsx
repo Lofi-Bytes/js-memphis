@@ -249,9 +249,9 @@ const BeautifulWebFormsJamstackTailwindCSSPage = ({
   return (
     <Layout location={location}>
       <SEO
-        metaTitle=""
-        metaDescription=""
-        canonicalUrl=""
+        metaTitle="Beautiful web forms on the Jamstack with Tailwind CSS"
+        metaDescription="Form elements are not always the easiest to style. @tailwindcss/forms solves this by prviding a basic reset."
+        canonicalUrl="https://jillian.dev/writing/beautiful-web-forms-jamstack-tailwindcss"
       />
       <Banner
         align="left"

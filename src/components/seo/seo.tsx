@@ -44,7 +44,8 @@ const SEO: FC<HelmetProps> = ({
         lang,
       }}
       title={metaTitle ? metaTitle : title}
-      titleTemplate={`%s | ${title}`}
+      // titleTemplate={`%s | ${title}`}
+      titleTemplate={`%s`}
       link={[
         {
           rel: `canonical`,

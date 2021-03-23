@@ -20,8 +20,8 @@ const HomePage: FC<PageProps> = ({
   return (
     <Layout location={location}>
       <SEO
-        metaTitle=""
-        metaDescription=""
+        metaTitle="Jillian S. Estrella"
+        metaDescription="Front-end systems designer & solutions architect"
         canonicalUrl="https://jillian.dev/"
       />
       <Banner

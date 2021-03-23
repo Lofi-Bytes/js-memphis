@@ -38,8 +38,8 @@ const AboutPage: FC<PageProps> = ({
   return (
     <Layout location={location}>
       <SEO
-        metaTitle=""
-        metaDescription=""
+        metaTitle="About Jillian"
+        metaDescription="I love building beautiful digital experiences and I am passionate about technology that advances social and environmental justice."
         canonicalUrl="https://jillian.dev/about"
       />
       <Banner

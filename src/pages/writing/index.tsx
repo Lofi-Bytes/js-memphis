@@ -36,9 +36,9 @@ const WritingPostListPage: FC<PageProps> = ({
   return (
     <Layout location={location}>
       <SEO
-        metaTitle=""
-        metaDescription=""
-        canonicalUrl=""
+        metaTitle="Jillian's blog"
+        metaDescription="I blog about interesting tech and diversity, equity, and inclusion."
+        canonicalUrl="https://jillian.dev/writing/"
       />
       <Banner
         title={

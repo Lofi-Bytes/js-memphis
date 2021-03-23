@@ -66,8 +66,8 @@ const ContactPage: FC<PageProps> = ({
   return (
     <Layout location={location}>
       <SEO
-        metaTitle=""
-        metaDescription=""
+        metaTitle="Contact Jillian"
+        metaDescription="Feel free to say hello. I love to meet new people and invite opportunities to collaborate."
         canonicalUrl="https://jillian.dev/contact/"
       />
       <Banner

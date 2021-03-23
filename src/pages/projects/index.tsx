@@ -35,9 +35,9 @@ const ProjectsListPage: FC<PageProps> = ({
   return (
     <Layout location={location}>
       <SEO
-        metaTitle=""
-        metaDescription=""
-        canonicalUrl=""
+        metaTitle="Jillian's projects"
+        metaDescription="Peruse a selection of my recent projects."
+        canonicalUrl="https://jillian.dev/projects/"
       />
       <Banner
         title={
