@@ -97,8 +97,17 @@ const HomePage: FC<PageProps> = ({
                 <i className="fab fa-dev"></i>
               </a>
             </div>
+            <div className="ml-2">
+              <a
+                href="https://www.linkedin.com/in/jillianserenity/"
+                aria-label="Jillian's LinkedIn Profile"
+                title="Jillian's LinkedIn Profile"
+                className="px-2 py-1 text-2xl text-gray-500 duration-200 rounded hover:text-lightBlue-700 focus:text-lightBlue-700 active:text-lightBlue-700 hover:cursor-pointer focus:outline-none focus:ring focus:ring-lightBlue-700"
+              >
+                <i className="fab fa-linkedin"></i>
+              </a>
+            </div>
           </div>
-
           <p className="mt-8 leading-relaxed tracking-wider text-gray-600">
             Hi there! Welcome to my creative space. I love building beautiful digital experiences and I am passionate about technology that advances social and environmental justice.
           </p>
