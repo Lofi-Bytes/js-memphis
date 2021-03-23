@@ -1,24 +1,25 @@
-import React, { FC } from 'react'
+import React from 'react'
 // import { StaticImage } from 'gatsby-plugin-image'
 import { useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
 import Avatar from '../components/avatar'
 import Banner from '../components/banner'
+import Button from '../components/button'
 import ContactForm from '../components/contact-form'
 import Layout from '../components/layout'
-import TextLink from '../components/text-link'
-import Section from '../components/section'
-import SEO from '../components/seo'
 import Main from '../components/main'
-import Button from '../components/button'
+import SEO from '../components/seo'
+import Section from '../components/section'
+import SocialIconRow from '../components/social-icon-row'
+import TextLink from '../components/text-link'
 
 
 type PageProps = {
   location: Location
 }
 
-const AboutPage: FC<PageProps> = ({
+const AboutPage = ({
   location
 }: PageProps) => {
   const data = useStaticQuery(graphql`
@@ -56,7 +57,7 @@ const AboutPage: FC<PageProps> = ({
           <p className="mt-1 text-xl leading-relaxed tracking-wider text-gray-600">
             Front-end systems designer &amp; solutions architect
           </p>
-
+          <SocialIconRow className="mt-3" />
           <Button
             action="tertiary"
             disabled={false}
