@@ -55,6 +55,16 @@ const Footer: FC<FooterProps> = ({
               <i className="fab fa-dev"></i>
             </a>
           </div>
+          <div className="ml-6">
+            <a
+              href="https://www.linkedin.com/in/jillianserenity/"
+              aria-label="Jillian's LinkedIn Profile"
+              title="Jillian's LinkedIn Profile"
+              className="px-2 py-1 text-3xl text-teal-100 duration-200 rounded hover:text-pink-200 focus:text-pink-200 active:text-pink-300 hover:cursor-pointer focus:outline-none focus:ring focus:ring-teal-200"
+            >
+              <i className="fab fa-linkedin"></i>
+            </a>
+          </div>
         </div>
         <p className="px-6 pt-4 pb-6 text-sm text-center text-teal-100 sm:hidden">
           Material &amp; content copyright &copy; {new Date().getFullYear()} Jillian Serenity. All rights reserved.
