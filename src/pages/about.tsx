@@ -78,10 +78,13 @@ const AboutPage: FC<PageProps> = ({
             A critical part of my role within the organization is to continually improve developer experience, designer experience, <em>and</em> <TextLink to="https://medium.com/s/user-friendly/why-im-done-saying-user-user-experience-and-ux-in-2019-4fdfc6b7de23" external={true}>audience</TextLink> experience. During my time with BSCS, I have overseen the adoption of innovative approaches to software and design such as <i className="text-pink-300 fas fa-heart" /> <TextLink to="https://www.invisionapp.com/inside-design/guide-to-design-systems/" external={true}>design systems</TextLink>, <TextLink to="https://medium.com/omarelgabrys-blog/component-based-architecture-3c3c23c7e348" external={true}>component based</TextLink>, <TextLink to="https://martinfowler.com/articles/serverless.html" external={true}>serverless</TextLink>, <TextLink to="https://martinfowler.com/articles/microservices.html" external={true}> and microservice</TextLink> architectures, and the beloved <i className="text-pink-300 fas fa-heart" /> <TextLink to="https://jamstack.org/" external={true}>Jamstack</TextLink>.
           </p>
           <p className="mt-4 leading-relaxed tracking-wider text-gray-600">
-            These innovations have allowed my small team to keep pace with the increasing demand of an organization that has more than doubled in size in the last three years.
+            These innovations have allowed my small team to keep pace with the increasing demand of an organization that has doubled in size in the last three years. We are able to create BSCS's digital products with more efficiency and at a higher quality with lower product support costs.
           </p>
           <p className="mt-4 leading-relaxed tracking-wider text-gray-600">
-            A typical day for me involves architecting solutions to complex problems, overseeing our digital products through their entire lifecycle - from the proposal/planning phase to sunsetting, guiding and mentoring my highly talented team, and designing/building UI's and UI components.
+            A typical day for me involves architecting solutions to complex problems, overseeing our digital products through their entire lifecycle - from planning to sunsetting, guiding and mentoring my highly talented team, and designing/building UI's and UI components.
+          </p>
+          <p className="mt-4 leading-relaxed tracking-wider text-gray-600">
+            Our current stack consists of React + TypeScript frontends (Gatsby / Next.js / Tailwind CSS), Golang microservices, Fauna DB, Docker, and Nginx.
           </p>
           {/* <ul className="pb-4 mt-4 leading-relaxed tracking-wider text-gray-600 list-disc list-inside sm:px-8">
             <li>Product management: </li>
