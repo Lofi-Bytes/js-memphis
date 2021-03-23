@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Jillian Serenity - Front End Systems Designer & Solutions Architect`,
-    description: `Head of development & design @ BSCS Science Learning`,
+    title: `Jillian S. Estrella`,
+    description: `Front-end systems designer &amp; solutions architect`,
     author: `Jillian S. Estrella`,
     siteUrl: `https://jillian.dev/`,
   },
@@ -11,7 +11,7 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-transformer-json`,
-    `gatsby-plugin-image`,
+    // `gatsby-plugin-image`,
     // Images
     {
       resolve: `gatsby-source-filesystem`,

@@ -83,19 +83,6 @@ const AboutPage: FC<PageProps> = ({
           <p className="mt-4 leading-relaxed tracking-wider text-gray-600">
             A typical day for me involves architecting solutions to complex problems, overseeing our digital products through their entire lifecycle - from planning to sunsetting, guiding and mentoring my highly talented team, and designing/building UI's and UI components.
           </p>
-          <p className="mt-4 leading-relaxed tracking-wider text-gray-600">
-            Our current stack consists of
-          </p>
-          <ul className="pb-4 mt-4 leading-relaxed tracking-wider text-gray-600 list-disc list-inside sm:px-8">
-            <li>React + TypeScript frontends (Gatsby / Next.js / Tailwind CSS)</li>
-            <li className="mt-4">Golang microservices</li>
-            <li className="mt-4">Fauna DB for persisting data</li>
-            <li className="mt-4">Docker</li>
-            <li className="mt-4">Nginx</li>
-          </ul>
-          <p className="mt-4 leading-relaxed tracking-wider text-gray-600">
-            Our design system, Caribou, uses Gatsby and our component library is built in Storybook; components are published to NPM to make them readily consumable.
-          </p>
           <h2 className="mt-10 text-xl tracking-wide text-gray-700">Previous Work</h2>
           <p className="mt-3 leading-relaxed tracking-wider text-gray-600">
             Prior to my career in software development, I was an astronomy and physics instructor. My courses introduced students to the skills required to think critically about the physical world and offered students experience in solving real-world problems.
