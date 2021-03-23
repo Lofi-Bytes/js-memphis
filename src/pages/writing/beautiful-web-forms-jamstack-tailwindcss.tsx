@@ -58,7 +58,6 @@ const initialForm: string =
 const styledForm: string =
 `<form name="contact">
   <div className="grid grid-cols-1 gap-4 mt-8">
-    <input type="hidden" name="form-contact" value="contact" />
     <label className="block">
       <span className="text-sm tracking-wider text-gray-600">Name</span>
       <div className="relative">
@@ -153,7 +152,6 @@ const ContactForm = ({}: ReactNode) => {
   return (
     <form name="contact">
       <div className={formattedGrid}>
-        <input type="hidden" name="form-contact" value="contact" />
         <label className="block">
           <span className={formattedLabel}>Name</span>
           <div className="relative">
@@ -206,6 +204,199 @@ export default ContactForm
 `
 
 const buttonExport: string = `export { default } from './button'`
+
+const textInput: string = `import React from 'react'
+
+import { formatClassList } from '../../utils/utils'
+
+
+export type TextInputProps = {
+  label: string
+}
+
+const FIELD_BASE: string = \`
+  bg-gray-200
+  block
+  border-0
+  border-l-4
+  focus:ring-0
+  mt-1
+  pl-3
+  pr-10
+  rounded-lg
+  shadow-md
+  text-gray-600
+  text-lg
+  w-full
+\`
+
+const FIELD: string = \`
+  \${FIELD_BASE}
+  border-purple-300
+  focus:border-fuchsia-500
+\`
+
+const LABEL: string = \`
+  text-gray-600
+  text-sm
+  tracking-wider
+\`
+
+const TextInput = ({
+  label
+}: TextInputProps) => {
+  label = label.toLowerCase()
+
+  const formattedField: string = formatClassList(FIELD)
+  const formattedLabel: string = formatClassList(LABEL)
+
+  return (
+    <label className="block">
+      <span className={formattedLabel}>{label.charAt(0).toUpperCase() + label.slice(1)}</span>
+      <div className="relative">
+        <input
+          className={formattedField}
+          aria-required="true"
+          placeholder=""
+          type="text"
+          name={label}
+        />
+      </div>
+    </label>
+  )
+}
+
+export default TextInput`
+
+const textArea: string = `import React from 'react'
+
+import { formatClassList } from '../../utils/utils'
+
+
+export type TextAreaProps = {
+  label: string
+}
+
+const FIELD_BASE: string = \`
+  bg-gray-200
+  block
+  border-0
+  border-l-4
+  focus:ring-0
+  mt-1
+  pl-3
+  pr-10
+  rounded-lg
+  shadow-md
+  text-gray-600
+  text-lg
+  w-full
+\`
+
+const FIELD: string = \`
+  \${FIELD_BASE}
+  border-purple-300
+  focus:border-fuchsia-500
+\`
+
+const LABEL: string = \`
+  text-gray-600
+  text-sm
+  tracking-wider
+\`
+
+const TextInput = ({
+  label
+}: TextAreaProps) => {
+  label = label.toLowerCase()
+
+  const formattedField: string = formatClassList(FIELD)
+  const formattedLabel: string = formatClassList(LABEL)
+
+  return (
+    <label className="block">
+      <span className={formattedLabel}>{label.charAt(0).toUpperCase() + label.slice(1)}</span>
+      <div className="relative">
+        <textarea
+          className={formattedField}
+          aria-required="true"
+          rows={4}
+          name={label}
+        />
+      </div>
+    </label>
+  )
+}
+
+export default TextInput`
+
+const grid: string = `import React, { ReactNode } from 'react'
+
+import { formatClassList } from '../../utils/utils'
+
+
+export type GridProps = {
+  children: ReactNode
+}
+
+const GRID: string = \`
+  gap-4
+  grid
+  grid-cols-1
+  mt-8
+\`
+
+const Grid = ({children}: GridProps) => {
+  const formattedGrid: string = formatClassList(GRID)
+
+  return(
+    <div className={formattedGrid}>{children}</div>
+  )
+}
+
+export default Grid
+`
+
+const refactoredFormWithComponents: string = `import React, { ReactNode } from 'react'
+
+import { formatClassList } from '../../utils/utils'
+
+import Button from '../../components/button'
+
+import Grid from './grid'
+import TextArea from './text-area'
+import TextInput from './text-input'
+
+
+const ContactForm = ({}: ReactNode) => {
+  return (
+    <form name="contact">
+      <Grid>
+        <TextInput
+          label="name"
+        />
+        <TextInput
+          label="email"
+        />
+        <TextArea
+          label="message"
+        />"
+        <Button
+          action="primary"
+          className="mt-4"
+          title="Submit"
+          type="submit"
+          disabled={false}
+        >
+          Send your message
+        </Button>
+      </Grid>
+    </form>
+  )
+}
+
+export default ContactForm
+`
 
 const BeautifulWebFormsJamstackTailwindCSSPage = ({
   location
@@ -355,7 +546,6 @@ const BeautifulWebFormsJamstackTailwindCSSPage = ({
           </p>
           <div className="mx-auto md:w-10/12">
             <div className="grid grid-cols-1 gap-4 mt-8">
-              <input type="hidden" name="form-contact" value="contact" />
               <label className="block">
                 <span className="text-sm tracking-wider text-gray-600">Name</span>
                 <div className="relative">
@@ -416,7 +606,7 @@ const BeautifulWebFormsJamstackTailwindCSSPage = ({
             Above I have also abstracted the button into its own component, which keeps things DRY and further cleans up the TSX in the contact form component.
           </p>
           <Alert>
-            Note the Button import. As a standard practice, I keep an <code className="language-bash">index.ts</code> file inside of all component subdirectories (including <code className="language-bash">contact-form</code>) which cleans up imports throughout the app:
+            Note the Button import. As a standard practice, I keep an <code className="language-bash">index.ts</code> file inside of all component subdirectories (including <code className="language-bash">contact-form</code>) which cleans up imports throughout the app.
           </Alert>
           <CodeContainer
             language="ts"
@@ -431,8 +621,53 @@ const BeautifulWebFormsJamstackTailwindCSSPage = ({
           <p className="mt-8 leading-relaxed tracking-wider text-gray-600">
             Now would be a prudent opportunity to break parts of our form component into smaller subcomponents before we start adding a bunch of form validation logic. Otherwise our form component will become difficult to maintain. Including our button component, which we aren't going to cover in this post, we can abstract two more subcomponents from this form (within reason<sup>1</sup>): <code className="language-bash">TextInput</code> and <code className="language-bash">TextArea</code>.
           </p>
+          <CodeContainer
+            language="ts"
+            lineNumbers={true}
+            path="./text-input.tsx"
+            tag="TS"
+            tagBgColor="#007ACC"
+            tagColor="text-white"
+          >
+            {textInput}
+          </CodeContainer>
+          <CodeContainer
+            language="ts"
+            lineNumbers={true}
+            path="./text-area.tsx"
+            tag="TS"
+            tagBgColor="#007ACC"
+            tagColor="text-white"
+          >
+            {textArea}
+          </CodeContainer>
           <p className="mt-8 leading-relaxed tracking-wider text-gray-600">
-            Next up, we will dive into using React Hook Form for client-side form field validation.
+            And for completeness, lets turn our grid into a component as well.
+          </p>
+          <CodeContainer
+            language="ts"
+            lineNumbers={true}
+            path="./grid.tsx"
+            tag="TS"
+            tagBgColor="#007ACC"
+            tagColor="text-white"
+          >
+            {grid}
+          </CodeContainer>
+          <p className="mt-8 leading-relaxed tracking-wider text-gray-600">
+            So our form component is now in good shape for managing the added complexity of React Hook Form.
+          </p>
+          <CodeContainer
+            language="ts"
+            lineNumbers={true}
+            tag="TS"
+            tagBgColor="#007ACC"
+            tagColor="text-white"
+          >
+            {refactoredFormWithComponents}
+          </CodeContainer>
+          <p className="mt-8 leading-relaxed tracking-wider text-gray-600">
+            Next up, we will dive into adding React Hook Form client-side form field validation to this form.
           </p>
           <p className="mt-8 text-xs leading-relaxed tracking-wider text-gray-600">
             <sup>1</sup>I'm not a fan of over-abstraction, ie. componentizing too much bloats a codebase and makes it just as difficult to follow as it would be if one hadn't broken it into components at all. Balance is important here and takes good judgement. Before breaking a piece into a component ask yourself if it will be beneficial to do so.

@@ -2,14 +2,15 @@ import React, { ReactNode, useState } from 'react'
 
 import { useForm } from 'react-hook-form'
 
-import { encode, formatClassList } from '../../utils/utils'
+import { encode } from '../../utils/utils'
 
 import Button from '../button'
 
-import TextInput from './text-input'
-import TextArea from './text-area'
-import SuccessMessage from './success-message'
 import ErrorMessage from './error-message'
+import Grid from './grid'
+import SuccessMessage from './success-message'
+import TextArea from './text-area'
+import TextInput from './text-input'
 
 
 export type ContactFormProps = {
@@ -18,13 +19,6 @@ export type ContactFormProps = {
   name: string,
   test: string
 }
-
-const GRID: string = `
-  gap-4
-  grid
-  grid-cols-1
-  mt-8
-`
 
 const ContactForm = ({}: ReactNode) => {
   const {
@@ -68,8 +62,6 @@ const ContactForm = ({}: ReactNode) => {
       })
   }
 
-  const formattedGrid: string = formatClassList(GRID)
-
   return (
     <React.Fragment>
       {successMsg && <SuccessMessage />}
@@ -83,8 +75,12 @@ const ContactForm = ({}: ReactNode) => {
           data-netlify-honeypot="bot-field"
           onSubmit={handleSubmit(onSubmit)}
         >
-          <div className={formattedGrid}>
-            <input type="hidden" name="form-contact" value="contact" />
+          <Grid>
+            <input
+              type="hidden"
+              name="form-contact"
+              value="contact"
+            />
             <TextInput
               label="name"
               errors={errors}
@@ -151,7 +147,7 @@ const ContactForm = ({}: ReactNode) => {
             >
               Get in touch
             </Button>
-          </div>
+          </Grid>
         </form>
       }
     </React.Fragment>

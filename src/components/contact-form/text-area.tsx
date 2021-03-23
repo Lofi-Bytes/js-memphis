@@ -11,7 +11,7 @@ import {
 } from './icons'
 
 
-export type TextInputTypes = {
+export type TextAreaProps = {
   label: string,
   errors: FieldErrors,
   errorMessage: object,
@@ -78,7 +78,7 @@ const TextArea = ({
   formState,
   handleChange,
   register
-}) => {
+}: TextAreaProps) => {
   label = label.toLowerCase()
 
   const formattedErrorHelpText: string = formatClassList(ERROR_HELP_TEXT)
@@ -103,7 +103,7 @@ const TextArea = ({
           aria-required="true"
           rows={4}
           name={label}
-          onChange={handleChange}
+          onChange={() => handleChange}
           ref={register}
         />
         {
