@@ -59,7 +59,7 @@ const HomePage = ({
           </p> */}
           <SocialIconRow className="mt-3" />
           <p className="mt-8 leading-relaxed tracking-wider text-gray-600">
-            Hi there! Welcome to my creative space. I love building beautiful digital experiences and I am passionate about technology that advances social and environmental justice.
+            Hi there! Welcome to my creative space. I love building beautiful and accessible digital experiences and I am passionate about technology that advances social and environmental justice.
           </p>
           <p className="mt-4 leading-relaxed tracking-wider text-gray-600">
             Please take a look around and be sure to check back often. This is my brand new website as of December 2020, and I will be adding new content regularly.
