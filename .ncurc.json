@@ -1,0 +1,6 @@
+{
+  "reject": [
+    "gatsby-image",
+    "react-hook-form"
+  ]
+}
