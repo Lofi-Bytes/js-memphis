@@ -39,7 +39,7 @@ const Section: FC<SectionProps> = ({
   }
 
   return (
-    <section
+    <article
       className={
         className
           ? joinStrings(' ', styles, className)
@@ -47,7 +47,7 @@ const Section: FC<SectionProps> = ({
       }
     >
       {children}
-    </section>
+    </article>
   )
 }
 

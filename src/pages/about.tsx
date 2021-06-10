@@ -55,7 +55,7 @@ const AboutPage = ({
 
           <h2 className="mt-10 text-2xl tracking-wide text-gray-700">Jillian S. Estrella <br className="sm:hidden" /><span className="text-xl text-gray-600">🏳️‍🌈 she/her 🏳️‍⚧️</span></h2>
           <p className="mt-1 text-xl leading-relaxed tracking-wider text-gray-600">
-            Front-end systems designer &amp; solutions architect
+            Design systems engineer &amp; solutions architect
           </p>
           <SocialIconRow className="mt-3" />
           <Button
@@ -69,22 +69,62 @@ const AboutPage = ({
           </Button>
 
           <h2 className="mt-10 text-xl tracking-wide text-gray-700">Current Work</h2>
+          <div className="items-center justify-between mt-3 uppercase border-b border-pink-400 border-dotted d-block sm:flex">
+            <TextLink
+              to="https://www.northwesternmutual.com/"
+              external={true}
+              type="h3"
+            >
+              Northwestern Mutual
+            </TextLink>
+            <p className="hidden leading-relaxed tracking-wider text-gray-600 sm:block">
+              2021 - Present
+            </p>
+          </div>
           <p className="mt-3 leading-relaxed tracking-wider text-gray-600">
-            I work for a nonprofit organization, <TextLink to="https://bscs.org/" external={true}>BSCS Science Learning</TextLink>, whose mission is to transform science teaching and learning through research-driven innovation.
+            I’m soooo excited‼️ to share that starting in July I will be joining the design system team at Northwestern Mutual, where I will be leading the contributions and integrations branch for their design system, Luna.
+          </p>
+          <h2 className="mt-10 text-xl tracking-wide text-gray-700">Previous Work</h2>
+          <div className="items-center justify-between mt-3 uppercase border-b border-pink-400 border-dotted d-block sm:flex">
+            <TextLink
+              to="https://bscs.org/"
+              external={true}
+              type="h3"
+            >
+              BSCS Science Learning
+            </TextLink>
+            <p className="hidden leading-relaxed tracking-wider text-gray-600 sm:block">
+              2015 - 2021
+            </p>
+          </div>
+          <p className="mt-3 leading-relaxed tracking-wider text-gray-600">
+            Previously, I worked for a nonprofit organization, <TextLink to="https://bscs.org/" external={true}>BSCS Science Learning</TextLink>, whose mission is to transform science teaching and learning through research-driven innovation.
           </p>
           {/* <p className="mt-4 leading-relaxed tracking-wider text-gray-600">
             At BSCS Science Learning, we operate on federal and private grants. The nature of this work requires our small team to build many websites and web apps every year. To keep up with demaind, we must ensure that our infrastructure is agile enough to meet the needs of a diverse range of projects while staying within budget, meeting strict deadlines, and reducing both the cost of ongoing maintenance and technical debt.
           </p> */}
           <p className="mt-4 leading-relaxed tracking-wider text-gray-600">
-            A critical part of my role within BSCS is to improve the experience for the developer, designer, and user. During my time with BSCS, I have overseen the adoption of innovative approaches to software and design such as <i className="text-pink-300 fas fa-heart" /> <TextLink to="https://www.invisionapp.com/inside-design/guide-to-design-systems/" external={true}>design systems</TextLink>; <TextLink to="https://medium.com/omarelgabrys-blog/component-based-architecture-3c3c23c7e348" external={true}>component based</TextLink>, <TextLink to="https://martinfowler.com/articles/serverless.html" external={true}>serverless</TextLink>, <TextLink to="https://martinfowler.com/articles/microservices.html" external={true}> and microservice</TextLink> architectures; and the beloved <i className="text-pink-300 fas fa-heart" /> <TextLink to="https://jamstack.org/" external={true}>Jamstack</TextLink>.
+            A critical part of my role within BSCS was to improve the experience for the developer, designer, and user. During my time with BSCS, I oversaw the adoption of innovative approaches to software and design such as <i className="text-pink-300 fas fa-heart" /> <TextLink to="https://www.invisionapp.com/inside-design/guide-to-design-systems/" external={true}>design systems</TextLink>; <TextLink to="https://medium.com/omarelgabrys-blog/component-based-architecture-3c3c23c7e348" external={true}>component based</TextLink>, <TextLink to="https://martinfowler.com/articles/serverless.html" external={true}>serverless</TextLink>, <TextLink to="https://martinfowler.com/articles/microservices.html" external={true}> and microservice</TextLink> architectures; and the beloved <i className="text-pink-300 fas fa-heart" /> <TextLink to="https://jamstack.org/" external={true}>Jamstack</TextLink>.
           </p>
           <p className="mt-4 leading-relaxed tracking-wider text-gray-600">
-            These innovations have allowed my small team to keep pace with increasing demand. We are able to create BSCS's digital products with more efficiency and at a higher quality with lower product support costs.
+            These innovations allowed my small team to keep pace with increasing demand. We were able to create BSCS's digital products with more efficiency and at a higher quality with lower product support costs.
           </p>
           <p className="mt-4 leading-relaxed tracking-wider text-gray-600">
-            A typical day for me involves architecting solutions to complex problems, overseeing our digital products throughout their lifecycle, guiding and mentoring my team, and designing/building UI's and UI components.
+            A typical day for me involved architecting solutions to complex problems, overseeing BSCS's digital products throughout their lifecycle, guiding and mentoring my team, and designing/building UI's and UI components.
           </p>
-          <h2 className="mt-10 text-xl tracking-wide text-gray-700">Previous Work</h2>
+          <div className="items-center justify-between mt-8 uppercase border-b border-pink-400 border-dotted d-block sm:flex">
+            {/* <TextLink
+              to="https://umich.edu/"
+              external={true}
+              type="h3"
+            >
+              Physics and Astronomy
+            </TextLink> */}
+            Astronomy and Physics
+            <p className="hidden leading-relaxed tracking-wider text-gray-600 sm:block">
+              2014 - 2015
+            </p>
+          </div>
           <p className="mt-3 leading-relaxed tracking-wider text-gray-600">
             Prior to my career in software development, I was an astronomy and physics instructor. My courses introduced students to the skills required to think critically about the physical world and offered students experience in solving real-world problems.
           </p>
