@@ -150,7 +150,7 @@ body {
   }
 }
 .inner-heart {
-  animation: animate-inner-heart 60s ease-in-out infinite;
+  animation: animate-inner-heart 40s ease-in-out infinite;
   position: absolute;
   pointer-events: none;
   display: block;
@@ -162,10 +162,10 @@ body {
     transform: translateX(0%) translateY(0%) rotate(0deg);
   }
   50% {
-    transform: translateX(-10%) translateY(-20%) rotate(180deg);
+    transform: translateX(-10%) translateY(-20%) rotate(-180deg);
   }
   100% {
-    transform: translateX(0%) translateY(0%) rotate(360deg);
+    transform: translateX(0%) translateY(0%) rotate(-360deg);
   }
 }
 /*!
