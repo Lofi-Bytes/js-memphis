@@ -6,8 +6,6 @@ import {
 export const squareSolid = {
   bordered: false,
   colors: [
-    '#FB7185', // rose 400
-    '#F472B6', // pink 400
     '#38BDF8' // lightBlue 400
   ],
   degrees: 90,
@@ -35,7 +33,22 @@ export const squareOutline = {
   outerElementType: 'div'
 }
 
-export const triangles = {
+export const heart = {
+  bordered: true,
+  colors: [
+    '#FB7185', // rose 400
+    '#F472B6', // pink 400
+  ],
+  icon: true,
+  innerClassArray: ['inner-heart', `far`, `fa-heart`],
+  innerElementType: 'i',
+  max: 60,
+  min: 20,
+  outerClassArray: ['outer-heart'],
+  outerElementType: 'div'
+}
+
+export const triangle = {
   bordered: true,
   colors: [
     '#A78BFA', // violet 400
@@ -50,7 +63,7 @@ export const triangles = {
   outerElementType: 'div'
 }
 
-export const bolts = {
+export const bolt = {
   bordered: true,
   colors: [
     '#FEF08A', // yellow 200
@@ -65,7 +78,7 @@ export const bolts = {
   outerElementType: 'div'
 }
 
-export const waves = {
+export const wave = {
   bordered: true,
   colors: [
     '#1C1917' // warm gray 900

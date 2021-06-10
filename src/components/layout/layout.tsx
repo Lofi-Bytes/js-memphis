@@ -1,4 +1,4 @@
-import React, { FC, ReactNode, useState, useEffect } from 'react'
+import React, { ReactNode, useState, useEffect } from 'react'
 
 import Footer from '../footer'
 import Header from '../header'
@@ -12,9 +12,10 @@ import {
 import {
   squareSolid,
   squareOutline,
-  triangles,
-  bolts,
-  waves,
+  heart,
+  triangle,
+  bolt,
+  wave,
   createShapeElement
 } from '../../utils/memphis'
 
@@ -27,7 +28,7 @@ type LayoutProps = {
   location: Location
 }
 
-const Layout: FC<LayoutProps> = ({
+const Layout = ({
   children,
   location
 }: LayoutProps) => {
@@ -37,24 +38,28 @@ const Layout: FC<LayoutProps> = ({
   useEffect(() => {
     setTimeout(() => {
       // Initialize the solid squares
-      for (let i = 0; i < 10; i++) {
+      for (let i = 0; i < 5; i++) {
         createShapeElement(squareSolid)
       }
       // Initialize the outline squares
       for (let i = 0; i < 7; i++) {
         createShapeElement(squareOutline)
       }
+      // Initialize the outline hearts
+      for (let i = 0; i < 10; i++) {
+        createShapeElement(heart)
+      }
       // Initialize the triangles
       for (let i = 0; i < 7; i++) {
-        createShapeElement(triangles)
+        createShapeElement(triangle)
       }
       // Initialize the bolts
       for (let i = 0; i < 5; i++) {
-        createShapeElement(bolts)
+        createShapeElement(bolt)
       }
       // Initialize the waves
       for (let i = 0; i < 20; i++) {
-        createShapeElement(waves)
+        createShapeElement(wave)
       }
     }, 350)
 
@@ -87,24 +92,28 @@ const Layout: FC<LayoutProps> = ({
 
     const populateElements = () => {
       // Re-draw the solid squares
-      for (let i = 0; i < 10; i++) {
+      for (let i = 0; i < 5; i++) {
         createShapeElement(squareSolid)
       }
       // Re-draw the outline squares
       for (let i = 0; i < 7; i++) {
         createShapeElement(squareOutline)
       }
+      // Initialize the outline hearts
+      for (let i = 0; i < 10; i++) {
+        createShapeElement(heart)
+      }
       // Re-draw the triangles
       for (let i = 0; i < 7; i++) {
-        createShapeElement(triangles)
+        createShapeElement(triangle)
       }
       // Re-draw the bolts
       for (let i = 0; i < 5; i++) {
-        createShapeElement(bolts)
+        createShapeElement(bolt)
       }
       // Re-draw the waves
-      for (let i = 0; i < 20; i++) {
-        createShapeElement(waves)
+      for (let i = 0; i < 15; i++) {
+        createShapeElement(wave)
       }
     }
 

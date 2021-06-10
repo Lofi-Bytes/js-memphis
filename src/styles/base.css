@@ -44,13 +44,13 @@ body {
 * Create the solid squares
 */
 .outer-square-solid {
-  animation: animate-outer-squares-solid 120s ease-in-out infinite;
+  animation: animate-outer-square-solid 120s ease-in-out infinite;
   position: absolute;
   display: block;
   pointer-events: none;
   border-radius: .25rem;
 }
-@keyframes animate-outer-squares-solid {
+@keyframes animate-outer-square-solid {
   0% {
     transform: rotate(0deg);
   }
@@ -77,14 +77,14 @@ body {
 * Create the outline squares
 */
 .outer-square-outline {
-  animation: animate-outer-squares-outline 120s ease-in-out infinite;
+  animation: animate-outer-square-outline 120s ease-in-out infinite;
   position: absolute;
   display: block;
   pointer-events: none;
   border-radius: .25rem;
   animation-direction: alternate-reverse;
 }
-@keyframes animate-outer-squares-outline {
+@keyframes animate-outer-square-outline {
   0% {
     transform: rotate(0deg);
   }
@@ -102,7 +102,7 @@ body {
   }
 }
 .inner-square-outline {
-  animation: animate-inner-squares-outline 120s ease-in-out infinite;
+  animation: animate-inner-square-outline 120s ease-in-out infinite;
   position: absolute;
   pointer-events: none;
   border-radius: .25rem;
@@ -111,7 +111,7 @@ body {
   display: block;
   animation-direction: alternate-reverse;
 }
-@keyframes animate-inner-squares-outline {
+@keyframes animate-inner-square-outline {
   0% {
     transform: translateX(0%) translateY(0%) rotate(0deg);
   }
@@ -123,16 +123,62 @@ body {
   }
 }
 /*!
+* Create the hearts
+*/
+.outer-heart {
+  animation: animate-outer-heart 120s ease-in-out infinite;
+  position: absolute;
+  display: block;
+  pointer-events: none;
+  border-radius: .25rem;
+}
+@keyframes animate-outer-heart {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-7deg);
+  }
+  50% {
+    transform: rotate(14deg);
+  }
+  75% {
+    transform: rotate(-7deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.inner-heart {
+  animation: animate-inner-heart 60s ease-in-out infinite;
+  position: absolute;
+  pointer-events: none;
+  display: block;
+  transform-origin: center;
+  animation-direction: alternate;
+}
+@keyframes animate-inner-heart {
+  0% {
+    transform: translateX(0%) translateY(0%) rotate(0deg);
+  }
+  50% {
+    transform: translateX(-10%) translateY(-20%) rotate(180deg);
+  }
+  100% {
+    transform: translateX(0%) translateY(0%) rotate(360deg);
+  }
+}
+/*!
 * Create the triangles
 */
 .outer-triangle {
-  animation: animate-outer-triangles 90s ease-in-out infinite;
+  animation: animate-outer-triangle 90s ease-in-out infinite;
   position: absolute;
   display: block;
   pointer-events: none;
   animation-direction: reverse;
 }
-@keyframes animate-outer-triangles {
+@keyframes animate-outer-triangle {
   0% {
     transform: rotate(0deg);
   }
@@ -144,14 +190,14 @@ body {
   }
 }
 .inner-triangle {
-  animation: animate-inner-triangles 60s ease-in-out infinite;
+  animation: animate-inner-triangle 60s ease-in-out infinite;
   position: absolute;
   pointer-events: none;
   display: block;
   transform-origin: center;
   animation-direction: alternate;
 }
-@keyframes animate-inner-triangles {
+@keyframes animate-inner-triangle {
   0% {
     transform: translateX(0%) translateY(0%) rotate(0deg);
   }
@@ -166,13 +212,13 @@ body {
 * Create the bolts
 */
 .outer-bolt {
-  animation: animate-outer-bolts 90s ease-in-out infinite;
+  animation: animate-outer-bolt 90s ease-in-out infinite;
   position: absolute;
   display: block;
   pointer-events: none;
   animation-direction: alternate-reverse;
 }
-@keyframes animate-outer-bolts {
+@keyframes animate-outer-bolt {
   0% {
     transform: rotate(0deg);
   }
@@ -184,12 +230,12 @@ body {
   }
 }
 .inner-bolt {
-  animation: animate-inner-bolts 90s ease-in-out infinite;
+  animation: animate-inner-bolt 90s ease-in-out infinite;
   position: absolute;
   pointer-events: none;
   display: block;
 }
-@keyframes animate-inner-bolts {
+@keyframes animate-inner-bolt {
   0% {
     transform: translateX(0%) translateY(0%) rotate(15deg);
   }
@@ -215,13 +261,13 @@ body {
   pointer-events: none;
 }
 .inner-wave {
-  animation: animate-inner-waves 120s linear infinite;
+  animation: animate-inner-wave 120s linear infinite;
   position: absolute;
   pointer-events: none;
   display: block;
   animation-direction: alternate;
 }
-@keyframes animate-inner-waves {
+@keyframes animate-inner-wave {
   0% {
     transform: translateX(600%) translateY(600%) rotate(45deg);
   }
