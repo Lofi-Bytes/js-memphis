@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Jillian S. Estrella`,
-    description: `Front-end systems designer &amp; solutions architect`,
+    description: `Design systems engineer &amp; solutions architect`,
     author: `Jillian S. Estrella`,
     siteUrl: `https://jillian.dev/`,
   },

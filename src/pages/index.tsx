@@ -22,7 +22,7 @@ const HomePage = ({
     <Layout location={location}>
       <SEO
         metaTitle="Jillian S. Estrella"
-        metaDescription="Front-end systems designer & solutions architect"
+        metaDescription="Design systems engineer &amp; solutions architect"
         canonicalUrl="https://jillian.dev/"
       />
       <Banner
