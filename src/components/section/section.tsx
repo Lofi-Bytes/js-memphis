@@ -1,4 +1,4 @@
-import React, { FC, ReactNode } from 'react'
+import React, { ReactNode } from 'react'
 
 import {
   formatClassList,
@@ -13,17 +13,17 @@ type SectionProps = {
 }
 
 const STYLES = `
-  rounded-xl
-  py-8
-  sm:px-14
-  w-11/12
-  sm:w-9/12
   mx-auto
-  sm:mb-10
+  py-8
   relative
+  rounded-xl
+  sm:mb-10
+  sm:px-14
+  sm:w-9/12
+  w-11/12
 `
 
-const Section: FC<SectionProps> = ({
+const Section = ({
   background,
   children,
   className

@@ -1,9 +1,4 @@
-import React, { FC, ReactNode } from 'react'
-
-import {
-  formatClassList,
-  joinStrings
-} from '../../utils/utils'
+import React, { ReactNode } from 'react'
 
 
 type AlertProps = {
@@ -11,9 +6,8 @@ type AlertProps = {
   className?: string
 }
 
-// const STYLES = ``
 
-const Alert: FC<AlertProps> = ({
+const Alert = ({
   children,
   className
 }: AlertProps) => {
