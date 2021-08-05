@@ -79,3 +79,14 @@ export const encode = (
       encodeURIComponent(data[key])
     ).join('&')
 }
+
+/*
+  Format the date
+*/
+export const formatDate = (date: string) => {
+  const months = ["Jan", "Feb", "Mar","Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+  const datetime: Date = new Date(date)
+  const formatted_date: string = `${months[datetime.getMonth()]} ${datetime.getDate()}, ${datetime.getFullYear()}`
+
+  return formatted_date
+}

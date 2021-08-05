@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 
+import { formatDate } from '../../utils/utils'
+
 import Alert from '../../components/alert'
 import Banner from '../../components/banner'
 import CodeContainer from '../../components/code-container'
@@ -432,6 +434,8 @@ const BeautifulWebFormsJamstackTailwindCSSPage = ({
   const path = postData.allPostsJson.edges[0].node.path
   const tags = postData.allPostsJson.edges[0].node.tags
 
+  const formattedDate = formatDate(date)
+
   useEffect(() => {
     // call the highlightAll() function to style our code blocks
     Prism.highlightAll()
@@ -448,7 +452,7 @@ const BeautifulWebFormsJamstackTailwindCSSPage = ({
         align="left"
         title={title}
         subtitle={subtitle}
-        date={date}
+        date={formattedDate}
       />
       <Main>
         <Section background="opaque" className="mb-8 -mt-12">

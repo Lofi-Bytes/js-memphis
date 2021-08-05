@@ -1,6 +1,8 @@
 import React, { FC } from 'react'
 import { useStaticQuery, graphql, Link } from 'gatsby'
 
+import { formatDate } from '../../utils/utils'
+
 import Banner from '../../components/banner'
 import Layout from '../../components/layout'
 import Section from '../../components/section'
@@ -33,6 +35,7 @@ const WritingPostListPage: FC<PageProps> = ({
       }
     }
   `)
+
   return (
     <Layout location={location}>
       <SEO
@@ -71,6 +74,9 @@ const WritingPostListPage: FC<PageProps> = ({
               const excerpt = edge.node.excerpt
               const date = edge.node.date
               const tags = edge.node.tags
+
+              const formattedDate = formatDate(date)
+
               return(
                 <React.Fragment key={`item-${index}`}>
                   {
@@ -85,7 +91,7 @@ const WritingPostListPage: FC<PageProps> = ({
                           </h2>
                           <p className="tracking-wider text-violet-900 text-md">{subtitle}</p>
                           <p className="font-serif text-sm italic tracking-wider text-violet-700">
-                            {date}
+                            {formattedDate}
                           </p>
                           <div className="flex flex-wrap mt-2">
                             {

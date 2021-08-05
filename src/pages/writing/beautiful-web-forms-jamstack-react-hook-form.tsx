@@ -1,6 +1,8 @@
 import React, { FC, useEffect } from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 
+import { formatDate } from '../../utils/utils'
+
 import Alert from '../../components/alert'
 import Banner from '../../components/banner'
 import Layout from '../../components/layout'
@@ -171,6 +173,8 @@ const BeautifulWebFormsJamstackReactHookFormPage: FC<PageProps> = ({
   const path = postData.allPostsJson.edges[0].node.path
   const tags = postData.allPostsJson.edges[0].node.tags
 
+  const formattedDate = formatDate(date)
+
   useEffect(() => {
     // call the highlightAll() function to style our code blocks
     Prism.highlightAll()
@@ -187,7 +191,7 @@ const BeautifulWebFormsJamstackReactHookFormPage: FC<PageProps> = ({
         align="left"
         title={title}
         subtitle={subtitle}
-        date={date}
+        date={formattedDate}
       />
       <Main>
         <Section background="opaque" className="mb-8 -mt-12">

@@ -5,7 +5,7 @@
     "published": true,
     "path": "/writing/beautiful-web-forms-jamstack-introduction",
     "excerpt": "",
-    "date": "Dec. 25th, 2020",
+    "date": "2020/12/25",
     "tags": [
       "Tailwind CSS",
       "React",
@@ -19,7 +19,7 @@
     "published": true,
     "path": "/writing/beautiful-web-forms-jamstack-tailwindcss",
     "excerpt": "",
-    "date": "Dec. 26th, 2020",
+    "date": "2020/12/26",
     "tags": [
       "Tailwind CSS",
       "React",
@@ -33,12 +33,26 @@
     "published": false,
     "path": "/writing/beautiful-web-forms-jamstack-react-hook-form",
     "excerpt": "",
-    "date": "Dec. 27th, 2020",
+    "date": "2020/12/27",
     "tags": [
       "React Hook Form",
       "React",
       "TypeScript",
       "Jamstack"
+    ]
+  },
+  {
+    "title": "Coding from my iPad with Working Copy and Ulysses",
+    "subtitle": "",
+    "published": true,
+    "path": "/writing/coding-from-my-ipad-with-working-copy-and-ulysses",
+    "excerpt": "",
+    "date": "2021/08/05",
+    "tags": [
+      "Markdown",
+      "GitHub",
+      "Git",
+      "Writing"
     ]
   }
 ]
