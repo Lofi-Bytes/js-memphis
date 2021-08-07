@@ -1,5 +1,21 @@
 [
   {
+    "title": "reveal.js + Tailwind CSS Starter",
+    "path": "https://github.com/Lofi-Bytes/reveal-tailwind-starter",
+    "excerpt": "Hate making presentations in PowerPoint? Love HTML + Tailwind CSS? Try out this reveal.js + Tailwind starter. Host it as a static site, accessible from anywhere. It will make all your wildest dreams come true.",
+    "date": "Aug. 7th, 2021",
+    "section": "github",
+    "tags": [
+      "reveal.js",
+      "Tailwind CSS",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Presentations"
+    ],
+    "active": true
+  },
+  {
     "title": "Developing Skills in Health Literacy",
     "path": "https://healthliteracy.bscs.org/",
     "excerpt": "In this project, we are developing curriculum materials for middle and high school students that will help them learn to evaluate information and claims about health issues. The project is being supported by the National Institutes of Health (NIH).",
@@ -11,7 +27,8 @@
       "React",
       "GraphQL",
       "TypeScript"
-    ]
+    ],
+    "active": false
   },
   {
     "title": "Modern Memphis",
@@ -23,7 +40,8 @@
       "CSS",
       "React",
       "TypeScript"
-    ]
+    ],
+    "active": true
   },
   {
     "title": "3D Middle School Life Science Curriculum Program: A Medical Mystery",
@@ -37,7 +55,8 @@
       "React",
       "GraphQL",
       "JavaScript"
-    ]
+    ],
+    "active": true
   },
   {
     "title": "Student Allergy Clinic",
@@ -51,7 +70,8 @@
       "JavaScript",
       "CSS",
       "HTML"
-    ]
+    ],
+    "active": true
   },
   {
     "title": "FieldScope Landing Site",
@@ -65,7 +85,8 @@
       "JavaScript",
       "CSS",
       "HTML"
-    ]
+    ],
+    "active": true
   },
   {
     "title": "Understanding Ebola Virus Disease",
@@ -79,6 +100,7 @@
       "JavaScript",
       "CSS",
       "HTML"
-    ]
+    ],
+    "active": true
   }
 ]
