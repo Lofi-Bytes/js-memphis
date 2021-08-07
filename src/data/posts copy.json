@@ -1,10 +1,11 @@
 [
   {
-    "title": "Beautiful Web Forms on the Jamstack",
-    "subtitle": "",
+    "title": "Beautiful web forms on the Jamstack",
+    "subtitle": "Series introduction",
+    "published": true,
     "path": "/writing/beautiful-web-forms-jamstack-introduction",
     "excerpt": "",
-    "date": "Dec. 20th, 2020",
+    "date": "2020/12/25",
     "tags": [
       "Tailwind CSS",
       "React",
@@ -13,11 +14,12 @@
     ]
   },
   {
-    "title": "Beautiful Web Forms on the Jamstack",
+    "title": "Beautiful web forms on the Jamstack",
     "subtitle": "With Tailwind CSS",
+    "published": true,
     "path": "/writing/beautiful-web-forms-jamstack-tailwindcss",
     "excerpt": "",
-    "date": "Dec. 21st, 2020",
+    "date": "2020/12/26",
     "tags": [
       "Tailwind CSS",
       "React",
@@ -26,11 +28,12 @@
     ]
   },
   {
-    "title": "Beautiful Web Forms on the Jamstack",
+    "title": "Beautiful web forms on the Jamstack",
     "subtitle": "With React Hook Form",
+    "published": false,
     "path": "/writing/beautiful-web-forms-jamstack-react-hook-form",
     "excerpt": "",
-    "date": "Dec. 22nd, 2020",
+    "date": "2020/12/27",
     "tags": [
       "React Hook Form",
       "React",
@@ -49,6 +52,20 @@
       "React",
       "JavaScript",
       "Jamstack"
+    ]
+  },
+  {
+    "title": "Writing from my iPad with Version Control and Markdown",
+    "subtitle": "",
+    "published": true,
+    "path": "/writing/writing-from-my-ipad-with-version-control-and-markdown",
+    "excerpt": "",
+    "date": "2021/08/05",
+    "tags": [
+      "Markdown",
+      "GitHub",
+      "Git",
+      "Writing"
     ]
   }
 ]

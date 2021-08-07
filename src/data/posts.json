@@ -28,24 +28,10 @@
     ]
   },
   {
-    "title": "Beautiful web forms on the Jamstack",
-    "subtitle": "With React Hook Form",
-    "published": false,
-    "path": "/writing/beautiful-web-forms-jamstack-react-hook-form",
-    "excerpt": "",
-    "date": "2020/12/27",
-    "tags": [
-      "React Hook Form",
-      "React",
-      "TypeScript",
-      "Jamstack"
-    ]
-  },
-  {
-    "title": "Coding from my iPad with Working Copy and Ulysses",
+    "title": "Writing from my iPad with Version Control and Markdown",
     "subtitle": "",
     "published": true,
-    "path": "/writing/coding-from-my-ipad-with-working-copy-and-ulysses",
+    "path": "/writing/writing-from-my-ipad-with-version-control-and-markdown",
     "excerpt": "",
     "date": "2021/08/05",
     "tags": [

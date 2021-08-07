@@ -5,6 +5,7 @@ import { formatDate } from '../../utils/utils'
 
 import Alert from '../../components/alert'
 import Banner from '../../components/banner'
+import Button from '../../components/button'
 import Layout from '../../components/layout'
 import TextLink from '../../components/text-link'
 import Section from '../../components/section'
@@ -12,7 +13,6 @@ import SEO from '../../components/seo'
 import Main from '../../components/main'
 import NextPrev from '../../components/next-prev'
 import Tag from '../../components/tag'
-import Button from '../../components/button'
 
 import Prism from 'prismjs'
 

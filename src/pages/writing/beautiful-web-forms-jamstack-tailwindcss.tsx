@@ -5,6 +5,7 @@ import { formatDate } from '../../utils/utils'
 
 import Alert from '../../components/alert'
 import Banner from '../../components/banner'
+import Button from '../../components/button'
 import CodeContainer from '../../components/code-container'
 import Layout from '../../components/layout'
 import Main from '../../components/main'
@@ -459,6 +460,17 @@ const BeautifulWebFormsJamstackTailwindCSSPage = ({
           <div className="max-w-xs px-10 py-2 -ml-10 rounded shadow-lg bg-cyan-300 w-max sm:px-24 sm:-ml-24 sm:max-w-none">
             <h2 className="text-xl tracking-wide text-gray-800 sm:text-2xl">@tailwindcss/forms</h2>
           </div>
+
+          <Button
+            action="tertiary"
+            disabled={false}
+            title="Back to article list"
+            className="mt-10 w-max"
+            to="/writing"
+          >
+            <i className="fas fa-arrow-left" />&nbsp;&nbsp;Back to article list
+          </Button>
+
           <h3 className="mt-10 text-xl tracking-wide text-gray-700">Introduction</h3>
           <p className="mt-3 leading-relaxed tracking-wider text-gray-600">
             Form elements are not always the easiest to style. <TextLink
