@@ -16,6 +16,63 @@
     "active": true
   },
   {
+    "title": "Chemical Kinetics in the Enceladus Plume",
+    "path": "https://github.com/Lofi-Bytes/chemical-kinetics-in-the-enceladus-plume",
+    "excerpt": "A Description of Enceladus’ Plume Sources and Chemical Reactions Significant to the Plume-Magnetosphere Interaction.",
+    "date": "Aug. 7th, 2021",
+    "section": "github",
+    "tags": [
+      "Computation",
+      "Chemical kinetics",
+      "Enceladus",
+      "Python"
+    ],
+    "active": true
+  },
+  {
+    "title": "Upper Atmosphere and Ionosphere",
+    "path": "https://github.com/Lofi-Bytes/upper-atmosphere-and-ionosphere",
+    "excerpt": "Simulation of Earth's upper atmosphere and ionosphere AOSS 495 winter semester 2012.",
+    "date": "April. 27th, 2012",
+    "section": "github",
+    "tags": [
+      "computation",
+      "numerical modeling",
+      "ionosphere",
+      "Python",
+      "F2Py"
+    ],
+    "active": true
+  },
+  {
+    "title": "Magnetopause Standoff Distance",
+    "path": "https://github.com/Lofi-Bytes/magnetopause-standoff-distance",
+    "excerpt": "Data-model comparison and sensitivity study of the magnetopause standoff distance using the empirical model proposed by Shue et. al. [1998].",
+    "date": "March. 23rd, 2014",
+    "section": "github",
+    "tags": [
+      "computation",
+      "empirical modeling",
+      "magnetosphere",
+      "Python"
+    ],
+    "active": true
+  },
+  {
+    "title": "Ebola Virus Disease",
+    "path": "https://github.com/Lofi-Bytes/ebola-virus-disease",
+    "excerpt": "Modeling the spread of Ebola Virus Disease through a population.",
+    "date": "Jan. 23rd, 2016",
+    "section": "github",
+    "tags": [
+      "computation",
+      "numerical modeling",
+      "evd",
+      "Python"
+    ],
+    "active": true
+  },
+  {
     "title": "Developing Skills in Health Literacy",
     "path": "https://healthliteracy.bscs.org/",
     "excerpt": "In this project, we are developing curriculum materials for middle and high school students that will help them learn to evaluate information and claims about health issues. The project is being supported by the National Institutes of Health (NIH).",

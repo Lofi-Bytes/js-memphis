@@ -212,6 +212,9 @@ const WritingFromMyIpadWithVersionControlAndMarkdown = ({
           <p className="mt-4 leading-relaxed tracking-wider text-gray-600">
             There is a plethora of Markdown editor options available. Not all allow *edit in place*, making them unsuitable for this workflow. Of the Markdown editors that I tested, Ulysses and iA Writer were my preferred options. However, Ulysses is the best choice with its file management capabilities, rich set of features, and customizability.
           </p>
+          <p className="mt-4 leading-relaxed tracking-wider text-gray-600">
+            Both Ulysses and iA Writer have native apps for iOS and macOS, potentially making them a great choice to use across all devices. Although I have not tested the desktop apps yet, I expect them to be functionally similar to their iOS counterparts. Thus far, I’ve been using VS Code for writing in Markdown on my Mac which has worked well enough, but lacking the helpful features that these apps offer.
+          </p>
           <NextPrev path={path} className="mt-10" />
         </Section>
         <Section background="opaque" className="mb-8">

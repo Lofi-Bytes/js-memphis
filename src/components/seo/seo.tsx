@@ -10,7 +10,7 @@ export type HelmetProps = {
   metaTitle: string,
   canonicalUrl: string,
   lang?: string,
-  noIndex: boolean,
+  noIndex?: boolean,
   ogImage?: string,
   ogImageAlt?: string,
   twitterImage?: string,
