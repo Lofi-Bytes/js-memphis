@@ -1,7 +1,8 @@
-import React, { FC } from 'react'
+import React from 'react'
 import Helmet from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
 
+import faviconImage from '../../images/favicon/star-512-300945.png'
 
 export type HelmetProps = {
   metaDescription: string,
@@ -9,15 +10,23 @@ export type HelmetProps = {
   metaTitle: string,
   canonicalUrl: string,
   lang?: string,
+  noIndex: boolean,
+  ogImage?: string,
+  ogImageAlt?: string,
+  twitterImage?: string,
   [other: string]: unknown
 }
 
-const SEO: FC<HelmetProps> = ({
-  metaDescription,
+const SEO = ({
+  canonicalUrl,
   lang='en',
   meta,
+  metaDescription,
   metaTitle,
-  canonicalUrl,
+  noIndex=false,
+  ogImage,
+  ogImageAlt,
+  twitterImage,
   ...other
 }: HelmetProps) => {
   const { site } = useStaticQuery(
@@ -54,8 +63,27 @@ const SEO: FC<HelmetProps> = ({
       ]}
       meta={[
         {
+          charset: `utf-8`
+        },
+        {
+          name: `viewport`,
+          content: `width=device-width, initial-scale=1, shrink-to-fit=no`
+        },
+        {
           name: `description`,
           content: metaDescription ? metaDescription : description,
+        },
+        {
+          property: `og:url`,
+          content: canonicalUrl
+        },
+        {
+          property: `og:type`,
+          content: `website`,
+        },
+        {
+          property: `og:site_name`,
+          content: `Jillian S. Estrella, Design systems engineer & solutions architect`
         },
         {
           property: `og:title`,
@@ -66,8 +94,12 @@ const SEO: FC<HelmetProps> = ({
           content: metaDescription ? metaDescription : description,
         },
         {
-          property: `og:type`,
-          content: `website`,
+          property: `og:image`,
+          content: ogImage ? ogImage : faviconImage
+        },
+        {
+          property: `og:image:alt`,
+          content: ogImageAlt ? ogImageAlt : `Lagoon-colored star.`
         },
         {
           name: `twitter:card`,
@@ -78,6 +110,22 @@ const SEO: FC<HelmetProps> = ({
           content: author,
         },
         {
+          name: `twitter:site`,
+          content: `@LofiBytes`
+        },
+        {
+          name: `twitter:image`,
+          content: twitterImage
+                    ? twitterImage
+                    : ogImage
+                      ? ogImage
+                      : faviconImage
+        },
+        {
+          property: `twitter:image:alt`,
+          content: ogImageAlt ? ogImageAlt : `Lagoon-colored star.`
+        },
+        {
           name: `twitter:title`,
           content: metaTitle ? metaTitle : title,
         },
@@ -85,6 +133,14 @@ const SEO: FC<HelmetProps> = ({
           name: `twitter:description`,
           content: metaDescription ? metaDescription : description,
         },
+        noIndex
+          ?
+            {
+              name: `robots`,
+              content: `noindex`
+            }
+          :
+            {}
       ]}
     />
   )

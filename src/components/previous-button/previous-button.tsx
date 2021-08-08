@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react'
+import React, { Fragment, ReactNode } from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 
 import Button from '../button'
@@ -53,7 +53,7 @@ const PreviousButton = ({
               </Button>
             )
           }
-          return(<></>)
+          return(<Fragment key={`next-prev-${index}`}></Fragment>)
         })
       }
     </>

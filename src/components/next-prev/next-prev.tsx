@@ -54,7 +54,7 @@ const NextPrev = ({
           ) {
             return(
               <div
-                key={index}
+                key={`next-prev-${index}`}
                 className={
                   className
                     ? joinStrings(' ', "flex items-center justify-between", className)
@@ -82,7 +82,7 @@ const NextPrev = ({
               !edge.previous
           ) {
             return(
-              <div className={className} key={index}>
+              <div className={className} key={`next-prev-${index}`}>
                 <NextButton
                   action="primary"
                   path={path}
@@ -99,7 +99,7 @@ const NextPrev = ({
           ) {
             return(
               <div
-                key={index}
+                key={`next-prev-${index}`}
                 className={
                   className
                     ? joinStrings(' ', "flex items-center justify-between", className)
