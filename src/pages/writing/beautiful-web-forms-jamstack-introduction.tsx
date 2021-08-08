@@ -77,7 +77,7 @@ const BeautifulFormsJamstackIntroductionPage = ({
       <Main>
         <Section background="opaque" className="mb-8 -mt-12">
           <div className="max-w-xs px-10 py-2 -ml-10 rounded shadow-lg bg-rose-300 w-max sm:px-24 sm:-ml-24 sm:max-w-none">
-            <h2 className="text-xl tracking-wide text-gray-800 sm:text-2xl">Series introduction</h2>
+            <h2 className="text-xl tracking-wide text-rose-900 sm:text-2xl">Series introduction</h2>
           </div>
 
           <Button
