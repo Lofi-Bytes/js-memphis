@@ -179,7 +179,7 @@ const WritingFromMyIpadWithVersionControlAndMarkdown = ({
           <p className="mt-4 leading-relaxed tracking-wider text-gray-600">
             Markdown editors take a minimalist approach. They intentionally stay out of the way to offer a focused, distraction-free writing experience.
           </p>
-          <h4 className="mt-10 text-lg tracking-wide text-gray-700">Ulysses</h4>
+          <h4 className="mt-10 text-lg tracking-wide text-gray-600">Ulysses</h4>
           <p className="mt-4 leading-relaxed tracking-wider text-gray-600">
             Ulysses is a fantastic Markdown editor. The biggest complaint folx have with Ulysses is that it is subscription-based; $6 per month or $50 per year. It’s intuitive and easy to use, and it comes with a full-featured file manager built in. It feels natural to work with for anyone who is used to using Finder on macOS or Explorer on Windows, and is a standard expectation if one is used to working with code editors on their computer. The built-in file manager makes perfect sense when working with Git repositories.
           </p>
@@ -189,7 +189,7 @@ const WritingFromMyIpadWithVersionControlAndMarkdown = ({
           <p className="mt-4 leading-relaxed tracking-wider text-gray-600">
             Ulysses is also customizable. Not so much that you will spend loads of time fiddling with settings, but enough to get it feeling good for a persons individual needs/preferences.
           </p>
-          <h4 className="mt-10 text-lg tracking-wide text-gray-700">iA Writer</h4>
+          <h4 className="mt-10 text-lg tracking-wide text-gray-600">iA Writer</h4>
           <p className="mt-4 leading-relaxed tracking-wider text-gray-600">
             iA Writer is a compelling alternative to Ulysses. It offers some similar features to Ulysses, but is noticeably less feature full. It is not as customizable as Ulysses, making it feel more opinionated. My favorite of the features that it does offer is the built-in style checker. I like how it shows in real time if you are using superfluous language, helping one to write more concisely. iA Writer comes at a one-time cost of $30. I think a lot of folx prefer iA Writer since it is not subscription-based.
           </p>
