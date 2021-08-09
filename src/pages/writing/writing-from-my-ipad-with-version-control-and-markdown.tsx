@@ -149,7 +149,16 @@ const WritingFromMyIpadWithVersionControlAndMarkdown = ({
           <p className="mt-4 leading-relaxed tracking-wider text-gray-600">
             Furthermore, it should be noted that Working Copy has a built-in editor. Hence, this workflow can work with Working Copy alone, but the writing experience won’t be as eloquent.
           </p>
-          <h3 className="mt-10 text-xl tracking-wide text-gray-700">Markdown Editor</h3>
+          <h3 className="mt-10 text-xl tracking-wide text-gray-700">Edit in Place</h3>
+          <p className="mt-4 leading-relaxed tracking-wider text-gray-600">
+            The key to using version control with any file editing app on the iPad is that the apps used must take an *edit in place* approach to working with files. This contrasts with many iOS apps that tend to keep files locked away and exclusively accessible from within the respective app. More and more apps are taking on the edit in place mindset, which has become more justified since Apple introduced <TextLink
+              to="https://apps.apple.com/us/app/files/id1232058109"
+              external={true}
+            >
+              Files
+            </TextLink> on iOS. As a result, you can initialize a Git repository with Working Copy, and then you can use an *edit in place* file editor of choice to create and edit files within the repository. Any changes to a file shows immediately in all apps that are used to access the file.
+          </p>
+          <h3 className="mt-10 text-xl tracking-wide text-gray-700">Markdown</h3>
           <p className="mt-4 leading-relaxed tracking-wider text-gray-600">
             Writing in Markdown is becoming increasingly popular, and for good reason. Markdown is an easy <TextLink
               to="https://en.wikipedia.org/wiki/Markup_language"
@@ -157,15 +166,6 @@ const WritingFromMyIpadWithVersionControlAndMarkdown = ({
             >
               markup language
             </TextLink> to learn. Once you understand the basics of Markdown, it becomes faster to format your document inline as you write, rather than fiddling with the myriad of formatting buttons like one would find in MS Word or Google Docs.
-          </p>
-          <h3 className="mt-10 text-xl tracking-wide text-gray-700">Edit in Place</h3>
-          <p className="mt-4 leading-relaxed tracking-wider text-gray-600">
-            What makes these apps work seamlessly together is that they both take an *edit in place* approach to working with files. This contrasts with many iOS apps that tend to keep files locked away and exclusively accessible from within the respective app. More and more apps are taking on the edit in place mindset, which has become more justified since Apple introduced <TextLink
-              to="https://apps.apple.com/us/app/files/id1232058109"
-              external={true}
-            >
-              Files
-            </TextLink> on iOS. As a result, you can initialize a Git repository with Working Copy, and then you can use either Working Copy or another *edit in place* editor of choice to create and edit files within the repository. Any changes to a file shows immediately in all apps that are used to access the file.
           </p>
           <h3 className="mt-10 text-xl tracking-wide text-gray-700">Markdown Editors</h3>
           <p className="mt-4 leading-relaxed tracking-wider text-gray-600">
@@ -204,7 +204,7 @@ const WritingFromMyIpadWithVersionControlAndMarkdown = ({
             In my time using this workflow, I’ve been enjoying the freedom and flexibility that it is affording. I feel like I am controlling my files, not the apps. The best part is that this workflow is platform-agnostic and everything is in version control.
           </p>
           <p className="mt-4 leading-relaxed tracking-wider text-gray-600">
-            WThe clarity that comes from writing in a proper Markdown editor on the iPad cannot be overstated. The writing experience is focused and distraction free. It is helping to overcome my “writers block” and enabling me to be more productive by alleviating the fatigue I experience from being tethered to my computer for long hours.
+            The clarity that comes from writing in a proper Markdown editor on the iPad cannot be overstated. The writing experience is focused and distraction free. It is helping to overcome my “writers block” and enabling me to be more productive by alleviating the fatigue I experience from being tethered to my computer for long hours.
           </p>
           <p className="mt-4 leading-relaxed tracking-wider text-gray-600">
             Working Copy is a powerful yet easy to use Git client. It makes keeping any work that I do on my iPad in version control simple. This allows me to keep my work in sync across all my devices and ensures that work from one device doesn’t accidentally overwrite work from another.
