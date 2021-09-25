@@ -83,6 +83,7 @@ const Layout = ({
     const removeElements = (populateElements) => {
       removeElementsByClass('outer-square-solid')
       removeElementsByClass('outer-square-outline')
+      removeElementsByClass('outer-heart')
       removeElementsByClass('outer-triangle')
       removeElementsByClass('outer-bolt')
       removeElementsByClass('outer-wave')
