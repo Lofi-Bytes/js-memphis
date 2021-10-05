@@ -55,7 +55,7 @@ const AboutPage = ({
 
           <h2 className="mt-10 text-2xl tracking-wide text-gray-700">Jillian S. Estrella <br className="sm:hidden" /><span className="text-xl text-gray-600">🏳️‍🌈 she/her 🏳️‍⚧️</span></h2>
           <p className="mt-1 text-xl leading-relaxed tracking-wider text-gray-600">
-            Design systems engineer &amp; solutions architect
+            Design systems engineer
           </p>
           <SocialIconRow className="mt-3" />
           <Button
