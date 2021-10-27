@@ -13,8 +13,8 @@ const Header: FC<HeaderProps> = ({
 }: HeaderProps) => {
   return (
     <React.Fragment>
-      <div className="flex items-center justify-center w-full p-1 bg-gray-900 opacity-75">
-        <p className="text-lg text-gray-50"><strong>All</strong> Black Lives Matter</p>
+      <div className="flex items-center justify-center w-full p-1 bg-stone-900 opacity-75">
+        <p className="text-lg text-stone-50"><strong>All</strong> Black Lives Matter</p>
       </div>
       <header className="w-full px-8 py-6 bg-indigo-700 bg-opacity-30">
         <div className="flex items-center justify-between max-w-screen-lg m-auto z-5">

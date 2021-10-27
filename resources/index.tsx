@@ -72,12 +72,12 @@ const ProjectsListPage = ({
                       className="block overflow-hidden transition shadow-lg hover:shadow-xl focus:shadow-xl active:shadow-sm duration-200 rounded-lg bg-amber-100 focus:bg-amber-50 focus:outline-none focus:ring-4  focus:ring-amber-200 focus:ring-opacity-50 border-0 border-l-4 border-amber-300 hover:border-amber-400 focus:border-amber-500 transform focus:-translate-y-0.5 hover:-translate-y-0.5 active:translate-y-0.5 ease-in-out group px-8 py-6 mb-8"
                     >
                       <div className="flex items-start justify-between">
-                        <h2 className="text-lg tracking-wider text-gray-800">
+                        <h2 className="text-lg tracking-wider text-stone-800">
                           {title}
                         </h2>
                         <i className="text-xs fas fa-external-link-alt external-link-icon text-amber-700" />
                       </div>
-                      <p className="mt-2 text-sm tracking-wider text-gray-600">
+                      <p className="mt-2 text-sm tracking-wider text-stone-600">
                         By {author}
                       </p>
                       <div className="flex flex-wrap mt-4">

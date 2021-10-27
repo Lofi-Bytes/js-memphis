@@ -25,16 +25,16 @@ const TextLink: FC<TextLinkProps> = ({
             ?
               <a
                 href={to}
-                className="rounded-sm focus:outline-none focus:ring-2 focus:ring-lightBlue-500"
+                className="rounded-sm focus:outline-none focus:ring-2 focus:ring-sky-500"
               >
                 {
                   type
                     ?
-                      <CustomTag className="inline border-b-2 border-lightBlue-500 w-max">
+                      <CustomTag className="inline border-b-2 border-sky-500 w-max">
                         {children}
                       </CustomTag>
                     :
-                      <span className="inline border-b-2 border-lightBlue-500 w-max">
+                      <span className="inline border-b-2 border-sky-500 w-max">
                         {children}
                       </span>
                 }
@@ -42,16 +42,16 @@ const TextLink: FC<TextLinkProps> = ({
             :
               <Link
                 to={to}
-                className="rounded-sm focus:outline-none focus:ring-2 focus:ring-lightBlue-500"
+                className="rounded-sm focus:outline-none focus:ring-2 focus:ring-sky-500"
               >
                 {
                   type
                     ?
-                      <CustomTag className="inline border-b-2 border-lightBlue-500 w-max">
+                      <CustomTag className="inline border-b-2 border-sky-500 w-max">
                         {children}
                       </CustomTag>
                     :
-                      <span className="inline border-b-2 border-lightBlue-500 w-max">
+                      <span className="inline border-b-2 border-sky-500 w-max">
                         {children}
                       </span>
                 }

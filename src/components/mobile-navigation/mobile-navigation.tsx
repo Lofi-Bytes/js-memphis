@@ -26,7 +26,7 @@ const MobileNavigation: FC<MobileNavigationProps> = ({
 
   return (
     <React.Fragment>
-      <nav className="fixed bottom-0 left-0 right-0 z-20 flex items-center justify-around w-11/12 mx-auto mb-3 overflow-hidden bg-indigo-700 border border-indigo-700 rounded-xl nav sm:hidden text-gray-50">
+      <nav className="fixed bottom-0 left-0 right-0 z-20 flex items-center justify-around w-11/12 mx-auto mb-3 overflow-hidden bg-indigo-700 border border-indigo-700 rounded-xl nav sm:hidden text-stone-50">
         {
           navigationData.allNavigationJson.edges.map((edge, index) => {
             const path = edge.node.path

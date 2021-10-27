@@ -81,12 +81,12 @@ const ProjectsListPage = ({
                     ?
                       <a
                         href={path}
-                        className="block overflow-hidden transition shadow-lg hover:shadow-xl focus:shadow-xl active:shadow-sm duration-200 rounded-lg bg-lightBlue-100 focus:bg-lightBlue-50 focus:outline-none focus:ring-4  focus:ring-lightBlue-200 focus:ring-opacity-50 border-0 border-l-8 border-lightBlue-400 hover:border-lightBlue-500 focus:border-lightBlue-600 transform focus:-translate-y-0.5 hover:-translate-y-0.5 active:translate-y-0.5 ease-in-out group px-4 sm:px-8 py-6"
+                        className="block overflow-hidden transition shadow-lg hover:shadow-xl focus:shadow-xl active:shadow-sm duration-200 rounded-lg bg-sky-100 focus:bg-sky-50 focus:outline-none focus:ring-4  focus:ring-sky-200 focus:ring-opacity-50 border-0 border-l-8 border-sky-400 hover:border-sky-500 focus:border-sky-600 transform focus:-translate-y-0.5 hover:-translate-y-0.5 active:translate-y-0.5 ease-in-out group px-4 sm:px-8 py-6"
                       >
-                        <h2 className="w-11/12 text-xl tracking-wider text-lightBlue-900">
+                        <h2 className="w-11/12 text-xl tracking-wider text-sky-900">
                           {title}
                         </h2>
-                        <p className="font-serif text-sm italic tracking-wider text-lightBlue-700">
+                        <p className="font-serif text-sm italic tracking-wider text-sky-700">
                           {date}
                         </p>
                         <div className="flex flex-wrap mt-2">
@@ -96,7 +96,7 @@ const ProjectsListPage = ({
                                 <Tag
                                   card={true}
                                   key={`item-${index}`}
-                                  tagColor="lightBlue"
+                                  tagColor="sky"
                                 >
                                   {tag}
                                 </Tag>
@@ -104,11 +104,11 @@ const ProjectsListPage = ({
                             })
                           }
                         </div>
-                        <p className="mt-4 text-base tracking-wider text-lightBlue-700">
+                        <p className="mt-4 text-base tracking-wider text-sky-700">
                           {excerpt}
                         </p>
                         <div className="flex flex-row-reverse">
-                          <i className="mt-2 text-xl transition duration-150 ease-in-out border-b-4 rounded-sm border-lightBlue-100 fas fa-arrow-right text-lightBlue-400 group-focus:text-lightBlue-600 group-hover:text-lightBlue-500 group-hover:border-lightBlue-500 group-focus:border-lightBlue-600 pb-0.5" />
+                          <i className="mt-2 text-xl transition duration-150 ease-in-out border-b-4 rounded-sm border-sky-100 fas fa-arrow-right text-sky-400 group-focus:text-sky-600 group-hover:text-sky-500 group-hover:border-sky-500 group-focus:border-sky-600 pb-0.5" />
                         </div>
                       </a>
                     : null
@@ -117,12 +117,12 @@ const ProjectsListPage = ({
                   {section === 'github' && !active
                     ?
                       <div
-                        className="block px-4 py-6 overflow-hidden border-0 border-l-8 rounded-lg shadow-lg bg-lightBlue-100 border-lightBlue-400 sm:px-8"
+                        className="block px-4 py-6 overflow-hidden border-0 border-l-8 rounded-lg shadow-lg bg-sky-100 border-sky-400 sm:px-8"
                       >
-                        <h2 className="w-11/12 text-xl tracking-wider text-lightBlue-900">
+                        <h2 className="w-11/12 text-xl tracking-wider text-sky-900">
                           {title}
                         </h2>
-                        <p className="font-serif text-sm italic tracking-wider text-lightBlue-700">
+                        <p className="font-serif text-sm italic tracking-wider text-sky-700">
                           {date}
                         </p>
                         <div className="flex flex-wrap mt-2">
@@ -132,7 +132,7 @@ const ProjectsListPage = ({
                                 <Tag
                                   card={true}
                                   key={`item-${index}`}
-                                  tagColor="lightBlue"
+                                  tagColor="sky"
                                 >
                                   {tag}
                                 </Tag>
@@ -140,12 +140,12 @@ const ProjectsListPage = ({
                             })
                           }
                         </div>
-                        <p className="mt-4 text-base tracking-wider text-lightBlue-700">
+                        <p className="mt-4 text-base tracking-wider text-sky-700">
                           {excerpt}
                         </p>
                         <div className="flex flex-row-reverse">
-                          <div className="mt-2 px-3 py-0.5 rounded-lg shadow w-max bg-lightBlue-50">
-                            <span className="w-11/12 text-lg tracking-wider text-lightBlue-600">
+                          <div className="mt-2 px-3 py-0.5 rounded-lg shadow w-max bg-sky-50">
+                            <span className="w-11/12 text-lg tracking-wider text-sky-600">
                               Coming soon
                             </span>
                           </div>

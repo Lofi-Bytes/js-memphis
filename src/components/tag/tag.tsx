@@ -39,9 +39,9 @@ const tagColorsCard = {
     tag: 'bg-rose-50 group-focus:bg-rose-100',
     children: 'text-rose-700'
   },
-  lightBlue: {
-    tag: 'bg-lightBlue-50 group-focus:bg-lightBlue-100',
-    children: 'text-lightBlue-700'
+  sky: {
+    tag: 'bg-sky-50 group-focus:bg-sky-100',
+    children: 'text-sky-700'
   },
   yellow: {
     tag: 'bg-yellow-50 group-focus:bg-yellow-100',
@@ -62,9 +62,9 @@ const tagColors = {
     tag: 'bg-rose-200',
     children: 'text-rose-800'
   },
-  lightBlue: {
-    tag: 'bg-lightBlue-200',
-    children: 'text-lightBlue-800'
+  sky: {
+    tag: 'bg-sky-200',
+    children: 'text-sky-800'
   },
   yellow: {
     tag: 'bg-yellow-200',

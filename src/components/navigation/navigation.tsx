@@ -24,7 +24,7 @@ const Navigation: FC<NavigationProps> = ({
 
   return (
     <React.Fragment>
-      <nav className="items-center justify-between hidden nav sm:flex text-gray-50">
+      <nav className="items-center justify-between hidden nav sm:flex text-stone-50">
         {
           navigationData.allNavigationJson.edges.map((edge, index) => {
             const path = edge.node.path

@@ -36,10 +36,10 @@ const ContactForm: FC<ReactNode> = ({}: ReactNode) => {
       <div className="grid grid-cols-1 gap-4 mt-8">
         <input type="hidden" name="form-contact" value="contact" />
         <label className="block">
-          <span className="text-sm tracking-wider text-gray-600">Name</span>
+          <span className="text-sm tracking-wider text-stone-600">Name</span>
           <div className="relative">
             <input
-              className="block w-full pl-3 pr-10 mt-1 text-lg text-gray-600 bg-gray-200 border-0 border-l-4 border-purple-300 rounded-lg shadow-md focus:ring-0 focus:border-fuchsia-500"
+              className="block w-full pl-3 pr-10 mt-1 text-lg border-0 border-l-4 border-purple-300 rounded-lg shadow-md text-stone-600 bg-stone-200 focus:ring-0 focus:border-fuchsia-500"
               aria-required="true"
               placeholder=""
               type="text"
@@ -48,10 +48,10 @@ const ContactForm: FC<ReactNode> = ({}: ReactNode) => {
           </div>
         </label>
         <label className="block">
-          <span className="text-sm tracking-wider text-gray-600">Email</span>
+          <span className="text-sm tracking-wider text-stone-600">Email</span>
           <div className="relative">
             <input
-              className="block w-full pl-3 pr-10 mt-1 text-lg text-gray-600 bg-gray-200 border-0 border-l-4 border-purple-300 rounded-lg shadow-md focus:ring-0 focus:border-fuchsia-500"
+              className="block w-full pl-3 pr-10 mt-1 text-lg border-0 border-l-4 border-purple-300 rounded-lg shadow-md text-stone-600 bg-stone-200 focus:ring-0 focus:border-fuchsia-500"
               aria-required="true"
               type="email"
               name="email"
@@ -59,10 +59,10 @@ const ContactForm: FC<ReactNode> = ({}: ReactNode) => {
           </div>
         </label>
         <label className="block">
-          <span className="text-sm tracking-wider text-gray-600">Message</span>
+          <span className="text-sm tracking-wider text-stone-600">Message</span>
           <div className="relative">
             <textarea
-              className="flex-grow block w-full pl-3 pr-10 mt-1 text-lg text-gray-600 bg-gray-200 border-0 border-l-4 border-purple-300 rounded-lg shadow-md focus:ring-0 focus:border-fuchsia-500"
+              className="flex-grow block w-full pl-3 pr-10 mt-1 text-lg border-0 border-l-4 border-purple-300 rounded-lg shadow-md text-stone-600 bg-stone-200 focus:ring-0 focus:border-fuchsia-500"
               aria-required="true"
               rows={4}
               name="message"
@@ -196,30 +196,30 @@ const BeautifulWebFormsJamstackReactHookFormPage: FC<PageProps> = ({
       <Main>
         <Section background="opaque" className="mb-8 -mt-12">
           <div className="max-w-xs px-10 py-2 -ml-10 bg-yellow-300 rounded shadow-lg w-max sm:px-24 sm:-ml-24 sm:max-w-none">
-            <h2 className="text-xl tracking-wide text-gray-800 sm:text-2xl">React Hook Form</h2>
+            <h2 className="text-xl tracking-wide text-stone-800 sm:text-2xl">React Hook Form</h2>
           </div>
-          <h3 className="mt-10 text-xl tracking-wide text-gray-700">Introduction</h3>
-          <p className="mt-3 leading-relaxed tracking-wider text-gray-600">
+          <h3 className="mt-10 text-xl tracking-wide text-stone-700">Introduction</h3>
+          <p className="mt-3 leading-relaxed tracking-wider text-stone-600">
             <TextLink to="https://react-hook-form.com/" external={true}>React Hook Form</TextLink> is a lightweight and performant client side form field validation library for <TextLink to="https://reactjs.org/" external={true}>React</TextLink>. In this post we will continue to build the contact form that we started previously.
           </p>
-          <h3 className="mt-10 text-xl tracking-wide text-gray-700">Getting Started</h3>
-          <p className="mt-3 leading-relaxed tracking-wider text-gray-600">
+          <h3 className="mt-10 text-xl tracking-wide text-stone-700">Getting Started</h3>
+          <p className="mt-3 leading-relaxed tracking-wider text-stone-600">
             Start by installing React Hook Form:
           </p>
           <CodeContainer
             language="bash"
             lineNumbers={true}
             tag="zsh"
-            tagBgColor="bg-gray-900"
+            tagBgColor="bg-stone-900"
             tagColor="text-white"
           >
             {install}
           </CodeContainer>
-          <p className="mt-3 leading-relaxed tracking-wider text-gray-600">
+          <p className="mt-3 leading-relaxed tracking-wider text-stone-600">
             Now we are ready to start using it in our project.
           </p>
-          <h3 className="mt-10 text-xl tracking-wide text-gray-700">Usage</h3>
-          <p className="mt-3 leading-relaxed tracking-wider text-gray-600">
+          <h3 className="mt-10 text-xl tracking-wide text-stone-700">Usage</h3>
+          <p className="mt-3 leading-relaxed tracking-wider text-stone-600">
             Starting with a basic react arrow function component (of type ReactNode), which renders the Tailwind CSS-styled form that we created previously:
           </p>
           <CodeContainer
@@ -232,7 +232,7 @@ const BeautifulWebFormsJamstackReactHookFormPage: FC<PageProps> = ({
           >
             {styledForm}
           </CodeContainer>
-          <p className="mt-8 leading-relaxed tracking-wider text-gray-600">
+          <p className="mt-8 leading-relaxed tracking-wider text-stone-600">
             The first thing we want to do to get started is import the <code className="language-bash">useForm</code> hook:
           </p>
           <CodeContainer
@@ -244,7 +244,7 @@ const BeautifulWebFormsJamstackReactHookFormPage: FC<PageProps> = ({
           >
             {importUseForm}
           </CodeContainer>
-          <p className="mt-8 leading-relaxed tracking-wider text-gray-600">
+          <p className="mt-8 leading-relaxed tracking-wider text-stone-600">
             Now we are going to set up several React Hook Form methods that we will use. <code className="language-bash">useForm</code> takes <TextLink to="https://react-hook-form.com/api#useForm" external={true}>optional arguments</TextLink> and we define it to be of type <code className="language-bash">ContactFormProps</code>. We will set React Hook Form's <code className="language-bash">mode</code> argument to fire validation on blur. In addition, we will be storing information about the forms state. Finally we set up our submit handler, which uses JavaScripts <TextLink to="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API" external={true}>Fetch API</TextLink> to submit our form to <TextLink to="https://www.netlify.com/products/forms/" external={true}>Netlify Forms</TextLink>. Note that we use the <code className="language-bash">reset</code> method in our submit handler to clear the form when the form has been submitted successfully.
           </p>
           <CodeContainer
@@ -267,7 +267,7 @@ const BeautifulWebFormsJamstackReactHookFormPage: FC<PageProps> = ({
           <NextPrev path={path} className="mt-10" >test</NextPrev>
         </Section>
         <Section background="opaque" className="mb-8">
-          <h3 className="text-xl tracking-wide text-gray-700 ">Tags</h3>
+          <h3 className="text-xl tracking-wide text-stone-700 ">Tags</h3>
           <div className="flex flex-wrap mt-4">
             {
               tags.map((tag, index) => {

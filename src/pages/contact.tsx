@@ -74,16 +74,16 @@ const ContactPage = ({
         title={
           <>
             <span className="hidden sm:inline-block">
-              <i className="text-4xl leading-relaxed fal fa-paper-plane text-gray-50 md:text-5xl md:leading-loose lg:text-5xl lg:leading-relaxed" />&nbsp;&nbsp;
+              <i className="text-4xl leading-relaxed fal fa-paper-plane text-stone-50 md:text-5xl md:leading-loose lg:text-5xl lg:leading-relaxed" />&nbsp;&nbsp;
             </span>
             <span className="text-5xl leading-relaxed js md:text-6xl md:leading-loose lg:text-7xl lg:leading-relaxed">
               Send Me a Message
             </span>
             <span className="hidden sm:inline-block">
-              &nbsp;&nbsp;<i className="text-4xl leading-relaxed fal fa-mailbox text-gray-50 md:text-5xl md:leading-loose lg:text-5xl lg:leading-relaxed" />
+              &nbsp;&nbsp;<i className="text-4xl leading-relaxed fal fa-mailbox text-stone-50 md:text-5xl md:leading-loose lg:text-5xl lg:leading-relaxed" />
             </span>
             <span className="block sm:hidden">
-              <i className="text-4xl fal fa-paper-plane text-gray-50" />&nbsp;&nbsp;<i className="text-4xl fal fa-mailbox text-gray-50" />
+              <i className="text-4xl fal fa-paper-plane text-stone-50" />&nbsp;&nbsp;<i className="text-4xl fal fa-mailbox text-stone-50" />
             </span>
           </>
         }
@@ -110,27 +110,27 @@ const ContactPage = ({
                 <div className="grid grid-cols-1 gap-4 mt-8">
                   <input type="hidden" name="form-contact" value="contact" />
                   <label className="block">
-                    <span className="text-sm tracking-wider text-gray-600">Name</span>
+                    <span className="text-sm tracking-wider text-stone-600">Name</span>
                     <div className="relative">
                       <input
                         className={
                           !JSON.stringify(formState.touched.name) // field is pristine
                           ?
-                            "mt-1 block pl-3 pr-10 border-0 border-l-4 border-purple-300 focus:ring-0 focus:border-fuchsia-500 bg-gray-200 rounded-lg text-gray-600 text-lg w-full shadow-md"
+                            "mt-1 block pl-3 pr-10 border-0 border-l-4 border-purple-300 focus:ring-0 focus:border-fuchsia-500 bg-stone-200 rounded-lg text-stone-600 text-lg w-full shadow-md"
                           :
                             errors.name && errors.name.type === "required"
                               ?
-                                "mt-1 block pl-3 pr-10 border-0 border-l-4 border-red-300 focus:ring-0 focus:border-red-500 bg-gray-200 rounded-lg text-gray-600 text-lg w-full shadow-md"
+                                "mt-1 block pl-3 pr-10 border-0 border-l-4 border-red-300 focus:ring-0 focus:border-red-500 bg-stone-200 rounded-lg text-stone-600 text-lg w-full shadow-md"
                               :
                                 errors.name && errors.name.type === "minLength"
                                   ?
-                                    "mt-1 block pl-3 pr-10 border-0 border-l-4 border-red-300 focus:ring-0 focus:border-red-500 bg-gray-200 rounded-lg text-gray-600 text-lg w-full shadow-md"
+                                    "mt-1 block pl-3 pr-10 border-0 border-l-4 border-red-300 focus:ring-0 focus:border-red-500 bg-stone-200 rounded-lg text-stone-600 text-lg w-full shadow-md"
                                   :
                                     errors.name && errors.name.type === "maxLength"
                                       ?
-                                        "mt-1 block pl-3 pr-10 border-0 border-l-4 border-red-300 focus:ring-0 focus:border-red-500 bg-gray-200 rounded-lg text-gray-600 text-lg w-full shadow-md"
+                                        "mt-1 block pl-3 pr-10 border-0 border-l-4 border-red-300 focus:ring-0 focus:border-red-500 bg-stone-200 rounded-lg text-stone-600 text-lg w-full shadow-md"
                                       :
-                                        "mt-1 block pl-3 pr-10 border-0 border-l-4 border-green-300 focus:ring-0 focus:border-green-500 bg-gray-200 rounded-lg text-gray-600 text-lg w-full shadow-md"
+                                        "mt-1 block pl-3 pr-10 border-0 border-l-4 border-green-300 focus:ring-0 focus:border-green-500 bg-stone-200 rounded-lg text-stone-600 text-lg w-full shadow-md"
                         }
                         aria-required="true"
                         placeholder=""
@@ -214,23 +214,23 @@ const ContactPage = ({
                     </p>
                   </label>
                   <label className="block">
-                    <span className="text-sm tracking-wider text-gray-600">Email</span>
+                    <span className="text-sm tracking-wider text-stone-600">Email</span>
                     <div className="relative">
                       <input
                         className={
                           !JSON.stringify(formState.touched.email) // field is pristine
                           ?
-                            "mt-1 block pl-3 pr-10 border-0 border-l-4 border-purple-300 focus:ring-0 focus:border-fuchsia-500 bg-gray-200 rounded-lg text-gray-600 text-lg w-full shadow-md"
+                            "mt-1 block pl-3 pr-10 border-0 border-l-4 border-purple-300 focus:ring-0 focus:border-fuchsia-500 bg-stone-200 rounded-lg text-stone-600 text-lg w-full shadow-md"
                           :
                             errors.email && errors.email.type === "required"
                               ?
-                                "mt-1 block pl-3 pr-10 border-0 border-l-4 border-red-300 focus:ring-0 focus:border-red-500 bg-gray-200 rounded-lg text-gray-600 text-lg w-full shadow-md"
+                                "mt-1 block pl-3 pr-10 border-0 border-l-4 border-red-300 focus:ring-0 focus:border-red-500 bg-stone-200 rounded-lg text-stone-600 text-lg w-full shadow-md"
                               :
                                 errors.email && errors.email.type === "pattern"
                                   ?
-                                    "mt-1 block pl-3 pr-10 border-0 border-l-4 border-red-300 focus:ring-0 focus:border-red-500 bg-gray-200 rounded-lg text-gray-600 text-lg w-full shadow-md"
+                                    "mt-1 block pl-3 pr-10 border-0 border-l-4 border-red-300 focus:ring-0 focus:border-red-500 bg-stone-200 rounded-lg text-stone-600 text-lg w-full shadow-md"
                                   :
-                                    "mt-1 block pl-3 pr-10 border-0 border-l-4 border-green-300 focus:ring-0 focus:border-green-500 bg-gray-200 rounded-lg text-gray-600 text-lg w-full shadow-md"
+                                    "mt-1 block pl-3 pr-10 border-0 border-l-4 border-green-300 focus:ring-0 focus:border-green-500 bg-stone-200 rounded-lg text-stone-600 text-lg w-full shadow-md"
                         }
                         aria-required="true"
                         type="email"
@@ -301,27 +301,27 @@ const ContactPage = ({
                     </p>
                   </label>
                   <label className="block">
-                    <span className="text-sm tracking-wider text-gray-600">Message</span>
+                    <span className="text-sm tracking-wider text-stone-600">Message</span>
                     <div className="relative">
                       <textarea
                         className={
                           !JSON.stringify(formState.touched.message) // field is pristine
                           ?
-                            "mt-1 block flex-grow pl-3 pr-10 border-0 border-l-4 border-purple-300 focus:ring-0 focus:border-fuchsia-500 bg-gray-200 rounded-lg text-gray-600 text-lg w-full shadow-md"
+                            "mt-1 block flex-grow pl-3 pr-10 border-0 border-l-4 border-purple-300 focus:ring-0 focus:border-fuchsia-500 bg-stone-200 rounded-lg text-stone-600 text-lg w-full shadow-md"
                           :
                             errors.message && errors.message.type === "required"
                               ?
-                                "mt-1 block flex-grow pl-3 pr-10 border-0 border-l-4 border-red-300 focus:ring-0 focus:border-red-500 bg-gray-200 rounded-lg text-gray-600 text-lg w-full shadow-md"
+                                "mt-1 block flex-grow pl-3 pr-10 border-0 border-l-4 border-red-300 focus:ring-0 focus:border-red-500 bg-stone-200 rounded-lg text-stone-600 text-lg w-full shadow-md"
                               :
                                 errors.message && errors.message.type === "minLength"
                                   ?
-                                    "mt-1 block flex-grow pl-3 pr-10 border-0 border-l-4 border-red-300 focus:ring-0 focus:border-red-500 bg-gray-200 rounded-lg text-gray-600 text-lg w-full shadow-md"
+                                    "mt-1 block flex-grow pl-3 pr-10 border-0 border-l-4 border-red-300 focus:ring-0 focus:border-red-500 bg-stone-200 rounded-lg text-stone-600 text-lg w-full shadow-md"
                                   :
                                     errors.message && errors.message.type === "maxLength"
                                     ?
-                                      "mt-1 block flex-grow pl-3 pr-10 border-0 border-l-4 border-red-300 focus:ring-0 focus:border-red-500 bg-gray-200 rounded-lg text-gray-600 text-lg w-full shadow-md"
+                                      "mt-1 block flex-grow pl-3 pr-10 border-0 border-l-4 border-red-300 focus:ring-0 focus:border-red-500 bg-stone-200 rounded-lg text-stone-600 text-lg w-full shadow-md"
                                     :
-                                      "mt-1 block flex-grow pl-3 pr-10 border-0 border-l-4 border-green-300 focus:ring-0 focus:border-green-500 bg-gray-200 rounded-lg text-gray-600 text-lg w-full shadow-md"
+                                      "mt-1 block flex-grow pl-3 pr-10 border-0 border-l-4 border-green-300 focus:ring-0 focus:border-green-500 bg-stone-200 rounded-lg text-stone-600 text-lg w-full shadow-md"
                         }
                         aria-required="true"
                         rows={4}

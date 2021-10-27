@@ -18,7 +18,7 @@ const FooterNavigation: FC<ReactNode> = ({}: ReactNode) => {
 
   return (
     <React.Fragment>
-      <nav className="items-center justify-around hidden w-2/3 mx-auto mt-6 nav sm:flex text-gray-50 md:w-1/2">
+      <nav className="items-center justify-around hidden w-2/3 mx-auto mt-6 nav sm:flex text-stone-50 md:w-1/2">
         {
           navigationData.allNavigationJson.edges.map((edge, index) => {
             const path = edge.node.path

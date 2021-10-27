@@ -18,16 +18,16 @@ const ICONANCHOR: string = `
   px-2
   py-1
   text-2xl
-  text-gray-500
+  text-stone-500
   duration-200
   rounded
-  hover:text-lightBlue-700
-  focus:text-lightBlue-700
-  active:text-lightBlue-700
+  hover:text-sky-700
+  focus:text-sky-700
+  active:text-sky-700
   hover:cursor-pointer
   focus:outline-none
   focus:ring
-  focus:ring-lightBlue-700
+  focus:ring-sky-700
 `
 
 const SocialIconRow = ({className}: SocialIconRowProps) => {

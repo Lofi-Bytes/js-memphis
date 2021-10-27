@@ -6,7 +6,7 @@ import Button from '../../components/button'
 
 
 const FIELD_BASE: string = `
-  bg-gray-200
+  bg-stone-200
   block
   border-0
   border-l-4
@@ -16,7 +16,7 @@ const FIELD_BASE: string = `
   pr-10
   rounded-lg
   shadow-md
-  text-gray-600
+  text-stone-600
   text-lg
   w-full
 `
@@ -35,7 +35,7 @@ const GRID: string = `
 `
 
 const LABEL: string = `
-  text-gray-600
+  text-stone-600
   text-sm
   tracking-wider
 `

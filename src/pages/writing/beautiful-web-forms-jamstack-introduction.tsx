@@ -94,19 +94,19 @@ const BeautifulFormsJamstackIntroductionPage = ({
             This series assumes the reader has an intermediate understanding of React JS and Tailwind CSS.
           </Alert>
 
-          <p className="mt-8 leading-relaxed tracking-wider text-gray-600">
+          <p className="mt-8 leading-relaxed tracking-wider text-stone-600">
             Web forms are arguably one of the most important tools in web development and design. They drive conversions and bridge the communication gap between you and your audience. When implemented poorly, they can serve to frustrate and alienate your audience. Good designers always seek to make forms as easy to use as possible. Reducing friction for one's audience increases conversion potential and makes web sites/apps more pleasant to use.
           </p>
-          <p className="mt-4 leading-relaxed tracking-wider text-gray-600">
+          <p className="mt-4 leading-relaxed tracking-wider text-stone-600">
             Historically, web forms have been one of the more clunky parts of the audience experience. For example, server side validation requires submitting the form to the mercy of a request-response cycle before the audience can recieve feedback. I'm sure most of us have had the experience of our web form state being cleared, having to start over entirely 😩.
           </p>
-          <p className="mt-4 leading-relaxed tracking-wider text-gray-600">
+          <p className="mt-4 leading-relaxed tracking-wider text-stone-600">
             On the development side, implementing web forms well has been a lot of work. Fortunately as the front end has become more capable, development has followed suit and shifted toward the front end. This has allowed for innovative approaches that make both the audience experience <em>and</em> the developer experience happier. The audience gets more real-time feedback on thier progress with less friction and the developer can implement the improved experience with less work.
           </p>
-          <p className="mt-4 leading-relaxed tracking-wider text-gray-600">
+          <p className="mt-4 leading-relaxed tracking-wider text-stone-600">
             In this two part series, we will take a look at the following tools that are leading the drive to make web forms a more pleasant experience for everyone:
           </p>
-          <ol className="pb-4 mt-4 leading-relaxed tracking-wider text-gray-600 list-decimal list-inside sm:px-8">
+          <ol className="pb-4 mt-4 leading-relaxed tracking-wider text-stone-600 list-decimal list-inside sm:px-8">
             <li>
               We will start by ensuring our form is accessible and pleasant to look at using <TextLink
                 to="https://github.com/tailwindlabs/tailwindcss-forms"
@@ -137,7 +137,7 @@ const BeautifulFormsJamstackIntroductionPage = ({
             </TextLink>. On the Jamstack we seek to reduce technical debt by elmininating unnecessary complexity. Often, the answer lies in elegant 3rd party solutions. We will see that in <strong><em>most</em></strong> cases, one no longer needs their own dedicated server for form handling, among other things. Freeing up our time and effort for building better products, rather than building infrastructure.
             </li>
           </ol>
-          <p className="mt-8 leading-relaxed tracking-wider text-gray-600">
+          <p className="mt-8 leading-relaxed tracking-wider text-stone-600">
             Ready to dive in?
           </p>
 
@@ -146,7 +146,7 @@ const BeautifulFormsJamstackIntroductionPage = ({
           </NextPrev>
         </Section>
         <Section background="opaque" className="mb-8">
-          <h3 className="text-xl tracking-wide text-gray-700 ">Tags</h3>
+          <h3 className="text-xl tracking-wide text-stone-700 ">Tags</h3>
           <div className="flex flex-wrap mt-4">
             {
               tags.map((tag, index) => {

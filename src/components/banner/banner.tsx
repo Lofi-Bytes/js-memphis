@@ -30,7 +30,7 @@ const Banner: FC<BannerProps> = ({
                 {
                   date
                     ?
-                      <p className="w-full mt-2 font-serif text-sm italic text-gray-200 sm:text-base">{date}</p>
+                      <p className="w-full mt-2 font-serif text-sm italic text-stone-200 sm:text-base">{date}</p>
                     : null
                 }
               </>

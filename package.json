@@ -17,8 +17,6 @@
   "dependencies": {
     "@fontsource/lora": "^4.5.0",
     "@fortawesome/fontawesome-pro": "^5.15.4",
-    "@tailwindcss/forms": "^0.3.4",
-    "autoprefixer": "^10.3.7",
     "babel-plugin-prismjs": "^2.1.0",
     "babel-preset-gatsby": "^2.0.0",
     "gatsby": "^4.0.1",
@@ -37,23 +35,17 @@
     "gatsby-source-filesystem": "^4.0.0",
     "gatsby-transformer-json": "^4.0.0",
     "gatsby-transformer-sharp": "^4.0.0",
-    "postcss": "^8.3.11",
     "prismjs": "^1.25.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-helmet": "^6.1.0",
-    "react-hook-form": "^6.15.4",
-    "tailwindcss": "^2.2.17",
-    "typeface-lora": "^1.1.13"
+    "react-hook-form": "^6.15.4"
   },
   "devDependencies": {
-    "prettier": "2.4.1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "@tailwindcss/forms": "^0.4.0-alpha.1",
+    "autoprefixer": "^10.3.7",
+    "postcss": "^8.3.11",
+    "prettier": "2.4.1",
+    "tailwindcss": "^3.0.0-alpha.1"
   }
 }

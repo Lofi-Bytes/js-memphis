@@ -6,7 +6,7 @@ import {
 export const squareSolid = {
   bordered: false,
   colors: [
-    '#38BDF8' // lightBlue 400
+    '#38BDF8' // sky 400
   ],
   degrees: 90,
   icon: false,
@@ -22,7 +22,7 @@ export const squareOutline = {
   bordered: true,
   colors: [
     '#5EEAD4', // teal 300
-    '#FAFAF9' // warm gray 50
+    '#FAFAF9' // warm stone 50
   ],
   icon: false,
   innerClassArray: ['inner-square-outline'],
@@ -52,7 +52,7 @@ export const triangle = {
   bordered: true,
   colors: [
     '#A78BFA', // violet 400
-    '#38BDF8', // lightBlue 400
+    '#38BDF8', // sky 400
   ],
   icon: true,
   innerClassArray: ['inner-triangle', `fal`, `fa-triangle`],
@@ -81,7 +81,7 @@ export const bolt = {
 export const wave = {
   bordered: true,
   colors: [
-    '#1C1917' // warm gray 900
+    '#1C1917' // warm stone 900
   ],
   icon: true,
   innerClassArray: ['inner-wave', `fal`, `fa-water`],
