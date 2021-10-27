@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React from 'react'
 import { useStaticQuery, graphql, Link } from 'gatsby'
 
 import { formatDate } from '../../utils/utils'
@@ -15,7 +15,7 @@ type PageProps = {
   location: Location
 }
 
-const WritingPostListPage: FC<PageProps> = ({
+const WritingPostListPage = ({
   location
 }: PageProps) => {
   const postListData = useStaticQuery(graphql`

@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 
 import Banner from '../../components/banner'
@@ -13,7 +13,7 @@ type PageProps = {
   location: Location
 }
 
-const SpeakingListPage: FC<PageProps> = ({
+const SpeakingListPage = ({
   location
 }: PageProps) => {
   const talkListData = useStaticQuery(graphql`

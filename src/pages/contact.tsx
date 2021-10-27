@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react'
+import React, { useState } from 'react'
 
 import { useForm } from 'react-hook-form'
 
@@ -19,7 +19,7 @@ type PageProps = {
   location: Location
 }
 
-const ContactPage: FC<PageProps> = ({
+const ContactPage = ({
   location
 }: PageProps) => {
   const {
