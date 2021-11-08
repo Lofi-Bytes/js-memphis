@@ -22,7 +22,7 @@ const HomePage = ({
     <Layout location={location}>
       <SEO
         metaTitle="Jillian S. Estrella"
-        metaDescription="Design systems engineer &amp; solutions architect"
+        metaDescription="Design systems engineer"
         canonicalUrl="https://jillian.dev/"
       />
       <Banner
@@ -54,9 +54,6 @@ const HomePage = ({
           <i className="absolute text-5xl rotate-45 fal fa-triangle text-emerald-300 -left-2 top-52 sm:-left-4 sm:top-48 sm:text-6xl lg:-left-6 lg:top-36 lg:text-7xl transofrm transform-gpu"></i>
           {/* <h2 className="mt-10 text-2xl tracking-wide text-stone-800">Jillian S. Estrella <br className="sm:hidden" /><span className="text-xl text-stone-500">🏳️‍🌈 she/her 🏳️‍⚧️</span></h2> */}
           <h2 className="mt-10 text-2xl tracking-wide text-stone-700">Design systems engineer<br /><span className="text-xl text-stone-600">🏳️‍🌈 she/her 🏳️‍⚧️</span></h2>
-          {/* <p className="mt-1 text-xl leading-relaxed tracking-wider text-stone-500">
-            Front End Systems Designer &amp; Solutions Architect
-          </p> */}
           <SocialIconRow className="mt-3" />
           <p className="mt-8 leading-relaxed tracking-wider text-stone-600">
             Hi there! Welcome to my creative space. I love building beautiful and accessible digital experiences and I am passionate about technology that advances social and environmental justice.
