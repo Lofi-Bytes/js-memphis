@@ -153,7 +153,7 @@ const WhatADesignSystemIsWhyYouShouldCare = ({
             <TextLink
               to="https://tailwindcss.com"
               external={true}
-            >Tailwind CSS</TextLink> is one such system. Often referred to as a “utility only” CSS library[^1], Tailwind CSS is one of the most elegant open-source systems. It provides a complete suite of foundations out of the box. As an additional bonus, Tailwind’s class names double perfectly as (<TextLink
+            >Tailwind CSS</TextLink> is one such system. Often referred to as a “utility only” CSS library<sup>1</sup>, Tailwind CSS is one of the most elegant open-source systems. It provides a complete suite of foundations out of the box. As an additional bonus, Tailwind’s class names double perfectly as (<TextLink
               to="https://spectrum.adobe.com/page/design-tokens/#Global-tokens"
               external={true}
             >global</TextLink>) design tokens. Tailwind’s docs are a joy to use, and non-tech people such as designers pick up the class names (tokens) with ease. Once you set up Tailwind with your customizations, such as your brand's color pallets, one can readily jump right into building brand guidelines. There are other utility class libraries available, but my experience is that none are as polished as Tailwind.
@@ -201,6 +201,9 @@ const WhatADesignSystemIsWhyYouShouldCare = ({
               </TextLink>
             </li>
           </ul>
+          <p className="mt-8 text-xs leading-relaxed tracking-wider text-stone-600">
+            <sup>1</sup>Referring to Tailwind CSS as a “utility only CSS framework” doesn’t do it justice. Doing so causes those who don’t understand the beauty of systems to underestimate its value.
+          </p>
           <NextPrev path={path} className="mt-10" />
         </Section>
         <Section background="opaque" className="mb-8">
