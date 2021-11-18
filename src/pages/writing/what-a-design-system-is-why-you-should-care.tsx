@@ -99,12 +99,14 @@ const WhatADesignSystemIsWhyYouShouldCare = ({
           <p className="mt-4 leading-relaxed tracking-wider text-stone-600">
             <TextLink
               to="https://www.merriam-webster.com/dictionary/system"
+              title="Merriam-Webster"
               external={true}
             >Merriam-Webster</TextLink> defines a system as an organized set of doctrines, ideas, or principles usually intended to explain the arrangement or working of a systematic whole.
           </p>
           <p className="mt-4 leading-relaxed tracking-wider text-stone-600">
             In her book, <TextLink
               to="https://www.amazon.com/dp/1603580557/"
+              title="Thinking in Systems"
               external={true}
             >Thinking in Systems</TextLink>, Donella H. Meadows explains that a system must consist of three kinds of things:
           </p>
@@ -123,9 +125,11 @@ const WhatADesignSystemIsWhyYouShouldCare = ({
           <p className="mt-4 leading-relaxed tracking-wider text-stone-600">
             Tools such as <TextLink
               to="https://developer.mozilla.org/en-US/docs/Web/CSS"
+              title="Cascading Style Sheets (CSS)"
               external={true}
             >CSS</TextLink> and <TextLink
               to="https://www.figma.com"
+              title="Figma"
               external={true}
             >Figma</TextLink> give us thousands of options regarding space, color, type, depth, and much more. This affords us incredible latitude for creativity. However, this much flexibility can also be a curse. Building a digital product without constraints is like trying to build a straw house from individual strands of hay, or trying to build a brick house from individual grains of sand. You wouldn’t do it because it would be torture. You would instead start by compressing the hay into bales, or the sand into bricks. Perhaps you would have a handful of sizes of bales or bricks to choose from for different parts of the house. These constraints, defined in advance, make the process of assembling the house considerably less complicated.
           </p>
@@ -139,9 +143,11 @@ const WhatADesignSystemIsWhyYouShouldCare = ({
           <p className="mt-4 leading-relaxed tracking-wider text-stone-600">
             There are many open-source options available. Some are a better choice than others. For example, <em>Material Design</em>, a <em>design language</em> (synonymous with design system) created and open sourced by Google, is a popular choice among the uninitiated. This design language, published at <TextLink
               to="https://material.io/design"
+              title="Material Design"
               external={true}
             >https://material.io/design</TextLink>, is used to inform many open-source <TextLink
               to="https://www.freecodecamp.org/news/the-difference-between-a-framework-and-a-library-bd133054023f/"
+              title="The difference between a framework and a library"
               external={true}
             ><em>frameworks</em> and <em>component libraries</em></TextLink>. If you choose to use it, your projects will inevitably look like they were built by Google. Gross 🤢
           </p>
@@ -152,30 +158,37 @@ const WhatADesignSystemIsWhyYouShouldCare = ({
           <p className="mt-4 leading-relaxed tracking-wider text-stone-600">
             <TextLink
               to="https://tailwindcss.com"
+              title="Tailwind CSS"
               external={true}
             >Tailwind CSS</TextLink> is one such system. Often referred to as a “utility only” CSS library<sup>1</sup>, Tailwind CSS is one of the most elegant open-source systems. It provides a complete suite of foundations out of the box. As an additional bonus, Tailwind’s class names double perfectly as (<TextLink
               to="https://spectrum.adobe.com/page/design-tokens/#Global-tokens"
+              title="Global tokens"
               external={true}
             >global</TextLink>) design tokens. Tailwind’s docs are a joy to use, and non-tech people such as designers pick up the class names (tokens) with ease. Once you set up Tailwind with your customizations, such as your brand's color pallets, one can readily jump right into building brand guidelines. There are other utility class libraries available, but my experience is that none are as polished as Tailwind.
           </p>
           <p className="mt-4 leading-relaxed tracking-wider text-stone-600">
             <TextLink
               to="http://getbem.com"
+              title="Block Element Modifier (BEM)"
               external={true}
             >Block Element Modifier (BEM)</TextLink> libraries such as Bootstrap, Foundation, Bulma, and Materialize are not suitable starting points for a design system. They offer limited, if any at all, utilities that serve as proper foundations. They are highly opinionated and come with their own pre-defined guidelines baked in. To get them to align with your brand identity, you will waste many hours undoing/overriding their out-of-the-box behavior.
           </p>
           <p className="mt-4 leading-relaxed tracking-wider text-stone-600">
             Tailwind does <TextLink
               to="https://tailwindcss.com/docs/extracting-components#extracting-component-classes-with-apply"
+              title="Extracting component classes with @apply"
               external={true}
             >come with a pattern</TextLink> that allows you to create your own BEM-like class names — some design systems implement <TextLink
               to="https://spectrum.adobe.com/page/design-tokens/#Alias-tokens"
+              title="Alias tokens"
               external={true}
             >alias tokens</TextLink> and <TextLink
               to="https://spectrum.adobe.com/page/design-tokens/#Component-specific-tokens"
+              title="Component-specific tokens"
               external={true}
             >component-specific tokens</TextLink>. I don’t use this approach in my personal projects whenever possible. If you need an HTML/CSS-only component library, you will use this pattern. Otherwise, component-based architecture allows you to circumvent the additional effort. <TextLink
               to="https://jillian.dev"
+              title=""
               external={true}
             >Just add the relevant class lists (global tokens) to string literals assigned to constants at the top of your components</TextLink>. This approach creates a CSS-in-JS-like experience without the CSS-in-JS runtime overhead.
           </p>
@@ -187,6 +200,7 @@ const WhatADesignSystemIsWhyYouShouldCare = ({
             <li>
               <TextLink
                 to="https://designsystemsrepo.com/design-systems"
+                title="Design Systems Gallery; a comprehensive and curated list of design systems, style guides and pattern libraries that you can use for inspiration."
                 external={true}
               >
                 https://designsystemsrepo.com/design-systems
@@ -195,6 +209,7 @@ const WhatADesignSystemIsWhyYouShouldCare = ({
             <li>
               <TextLink
                 to="https://adele.uxpin.com"
+                title="Adele; the repository of publicly available design systems and pattern libraries"
                 external={true}
               >
                 https://adele.uxpin.com

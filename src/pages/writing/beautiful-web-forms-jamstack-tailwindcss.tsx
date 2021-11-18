@@ -65,7 +65,7 @@ const styledForm: string =
       <span className="text-sm tracking-wider text-stone-600">Name</span>
       <div className="relative">
         <input
-          className="block w-full pl-3 pr-10 mt-1 text-lg text-stone-600 bg-stone-200 border-0 border-l-4 border-purple-300 rounded-lg shadow-md focus:ring-0 focus:border-fuchsia-500"
+          className="block w-full pl-3 pr-10 mt-1 text-lg border-0 border-l-4 border-purple-300 rounded-lg shadow-md text-stone-600 bg-stone-200 focus:ring-0 focus:border-fuchsia-500"
           aria-required="true"
           placeholder=""
           type="text"
@@ -77,7 +77,7 @@ const styledForm: string =
       <span className="text-sm tracking-wider text-stone-600">Email</span>
       <div className="relative">
         <input
-          className="block w-full pl-3 pr-10 mt-1 text-lg text-stone-600 bg-stone-200 border-0 border-l-4 border-purple-300 rounded-lg shadow-md focus:ring-0 focus:border-fuchsia-500"
+          className="block w-full pl-3 pr-10 mt-1 text-lg border-0 border-l-4 border-purple-300 rounded-lg shadow-md text-stone-600 bg-stone-200 focus:ring-0 focus:border-fuchsia-500"
           aria-required="true"
           type="email"
           name="email"
@@ -88,7 +88,7 @@ const styledForm: string =
       <span className="text-sm tracking-wider text-stone-600">Message</span>
       <div className="relative">
         <textarea
-          className="block w-full pl-3 pr-10 mt-1 text-lg text-stone-600 bg-stone-200 border-0 border-l-4 border-purple-300 rounded-lg shadow-md focus:ring-0 focus:border-fuchsia-500"
+          className="block w-full pl-3 pr-10 mt-1 text-lg border-0 border-l-4 border-purple-300 rounded-lg shadow-md text-stone-600 bg-stone-200 focus:ring-0 focus:border-fuchsia-500"
           aria-required="true"
           rows={4}
           name="message"
@@ -475,15 +475,17 @@ const BeautifulWebFormsJamstackTailwindCSSPage = ({
           <p className="mt-3 leading-relaxed tracking-wider text-stone-600">
             Form elements are not always the easiest to style. <TextLink
                 to="https://github.com/tailwindlabs/tailwindcss-forms"
+                title=""
                 external={true}
               >
                 @tailwindcss/forms
               </TextLink> convieniently provides a basic reset for form styles that makes form elements easy to override with <TextLink
                 to="https://tailwindcss.com/"
+                title=""
                 external={true}
               >
                 Tailwind CSS
-              </TextLink> utility classes. @tailwindcss/forms is designed for Tailwind CSS v2.0 and replaces <TextLink to="https://github.com/tailwindlabs/tailwindcss-custom-forms" external={true}>tailwindcss-custom-forms</TextLink> which was designed to work with Tailwind CSS v1.0.
+              </TextLink> utility classes. @tailwindcss/forms is designed for Tailwind CSS v2.0 and replaces <TextLink to="https://github.com/tailwindlabs/tailwindcss-custom-forms" title="" external={true}>tailwindcss-custom-forms</TextLink> which was designed to work with Tailwind CSS v1.0.
           </p>
 
           <h3 className="mt-10 text-xl tracking-wide text-stone-700">Getting Started</h3>
@@ -513,7 +515,7 @@ const BeautifulWebFormsJamstackTailwindCSSPage = ({
           </CodeContainer>
           <h3 className="mt-10 text-xl tracking-wide text-stone-700">Usage</h3>
           <p className="mt-3 leading-relaxed tracking-wider text-stone-600">
-            I found that the easiest way to get started is to look at the provided <TextLink to="https://tailwindcss-forms.vercel.app/" external={true}>live demo examples</TextLink>. For this post, we will recreate the contact form found on the homepage of <TextLink to="/" external={false}>jillian.dev</TextLink>. We will start by using dev tools to copy the underline-style form example and modify the fields as needed (also adjusting the HTML to be valid JSX/TSX):
+            I found that the easiest way to get started is to look at the provided <TextLink to="https://tailwindcss-forms.vercel.app/" title="" external={true}>live demo examples</TextLink>. For this post, we will recreate the contact form found on the homepage of <TextLink to="/" title="" external={false}>jillian.dev</TextLink>. We will start by using dev tools to copy the underline-style form example and modify the fields as needed (also adjusting the HTML to be valid JSX/TSX):
           </p>
           <CodeContainer
             language="tsx"
@@ -566,7 +568,7 @@ const BeautifulWebFormsJamstackTailwindCSSPage = ({
                 <span className="text-sm tracking-wider text-stone-600">Name</span>
                 <div className="relative">
                   <input
-                    className="block w-full pl-3 pr-10 mt-1 text-lg text-stone-600 bg-stone-200 border-0 border-l-4 border-purple-300 rounded-lg shadow-md focus:ring-0 focus:border-fuchsia-500"
+                    className="block w-full pl-3 pr-10 mt-1 text-lg border-0 border-l-4 border-purple-300 rounded-lg shadow-md text-stone-600 bg-stone-200 focus:ring-0 focus:border-fuchsia-500"
                     aria-required="true"
                     placeholder=""
                     type="text"
@@ -578,7 +580,7 @@ const BeautifulWebFormsJamstackTailwindCSSPage = ({
                 <span className="text-sm tracking-wider text-stone-600">Email</span>
                 <div className="relative">
                   <input
-                    className="block w-full pl-3 pr-10 mt-1 text-lg text-stone-600 bg-stone-200 border-0 border-l-4 border-purple-300 rounded-lg shadow-md focus:ring-0 focus:border-fuchsia-500"
+                    className="block w-full pl-3 pr-10 mt-1 text-lg border-0 border-l-4 border-purple-300 rounded-lg shadow-md text-stone-600 bg-stone-200 focus:ring-0 focus:border-fuchsia-500"
                     aria-required="true"
                     type="email"
                     name="email"
@@ -589,7 +591,7 @@ const BeautifulWebFormsJamstackTailwindCSSPage = ({
                 <span className="text-sm tracking-wider text-stone-600">Message</span>
                 <div className="relative">
                   <textarea
-                    className="flex-grow block w-full pl-3 pr-10 mt-1 text-lg text-stone-600 bg-stone-200 border-0 border-l-4 border-purple-300 rounded-lg shadow-md focus:ring-0 focus:border-fuchsia-500"
+                    className="flex-grow block w-full pl-3 pr-10 mt-1 text-lg border-0 border-l-4 border-purple-300 rounded-lg shadow-md text-stone-600 bg-stone-200 focus:ring-0 focus:border-fuchsia-500"
                     aria-required="true"
                     rows={4}
                     name="message"
@@ -616,7 +618,7 @@ const BeautifulWebFormsJamstackTailwindCSSPage = ({
             {refactoredForm}
           </CodeContainer>
           <p className="mt-8 leading-relaxed tracking-wider text-stone-600">
-            For further understanding and an in-depth look that my approach to keeping components tidy while working with Tailwind CSS please see <TextLink to="/" external={false}>Tidy React-Typescript component design with Tailwind CSS</TextLink>.
+            For further understanding and an in-depth look that my approach to keeping components tidy while working with Tailwind CSS please see <TextLink to="/" title="" external={false}>Tidy React-Typescript component design with Tailwind CSS</TextLink>.
           </p>
           <p className="mt-8 leading-relaxed tracking-wider text-stone-600">
             Above I have also abstracted the button into its own component, which keeps things DRY and further cleans up the TSX in the contact form component.

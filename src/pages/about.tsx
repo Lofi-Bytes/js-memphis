@@ -72,6 +72,7 @@ const AboutPage = ({
           <div className="items-center justify-between mt-3 uppercase border-b border-pink-400 border-dotted d-block sm:flex">
             <TextLink
               to="https://www.northwesternmutual.com/"
+              title=""
               external={true}
               type="h3"
             >
@@ -88,6 +89,7 @@ const AboutPage = ({
           <div className="items-center justify-between mt-3 uppercase border-b border-pink-400 border-dotted d-block sm:flex">
             <TextLink
               to="https://bscs.org/"
+              title=""
               external={true}
               type="h3"
             >
@@ -98,13 +100,13 @@ const AboutPage = ({
             </p>
           </div>
           <p className="mt-3 leading-relaxed tracking-wider text-stone-600">
-            Previously, I worked for a nonprofit organization, <TextLink to="https://bscs.org/" external={true}>BSCS Science Learning</TextLink>, whose mission is to transform science teaching and learning through research-driven innovation.
+            Previously, I worked for a nonprofit organization, <TextLink to="https://bscs.org/" title="" external={true}>BSCS Science Learning</TextLink>, whose mission is to transform science teaching and learning through research-driven innovation.
           </p>
           {/* <p className="mt-4 leading-relaxed tracking-wider text-stone-600">
             At BSCS Science Learning, we operate on federal and private grants. The nature of this work requires our small team to build many websites and web apps every year. To keep up with demaind, we must ensure that our infrastructure is agile enough to meet the needs of a diverse range of projects while staying within budget, meeting strict deadlines, and reducing both the cost of ongoing maintenance and technical debt.
           </p> */}
           <p className="mt-4 leading-relaxed tracking-wider text-stone-600">
-            A critical part of my role within BSCS was to improve the experience for the developer, designer, and user. During my time with BSCS, I oversaw the adoption of innovative approaches to software and design such as <i className="text-pink-300 fas fa-heart" /> <TextLink to="https://www.invisionapp.com/inside-design/guide-to-design-systems/" external={true}>design systems</TextLink>; <TextLink to="https://medium.com/omarelgabrys-blog/component-based-architecture-3c3c23c7e348" external={true}>component based</TextLink>, <TextLink to="https://martinfowler.com/articles/serverless.html" external={true}>serverless</TextLink>, <TextLink to="https://martinfowler.com/articles/microservices.html" external={true}> and microservice</TextLink> architectures; and the beloved <i className="text-pink-300 fas fa-heart" /> <TextLink to="https://jamstack.org/" external={true}>Jamstack</TextLink>.
+            A critical part of my role within BSCS was to improve the experience for the developer, designer, and user. During my time with BSCS, I oversaw the adoption of innovative approaches to software and design such as <i className="text-pink-300 fas fa-heart" /> <TextLink to="https://www.invisionapp.com/inside-design/guide-to-design-systems/" title="" external={true}>design systems</TextLink>; <TextLink to="https://medium.com/omarelgabrys-blog/component-based-architecture-3c3c23c7e348" title="" external={true}>component based</TextLink>, <TextLink to="https://martinfowler.com/articles/serverless.html" title="" external={true}>serverless</TextLink>, <TextLink to="https://martinfowler.com/articles/microservices.html" title="" external={true}> and microservice</TextLink> architectures; and the beloved <i className="text-pink-300 fas fa-heart" /> <TextLink to="https://jamstack.org/" title="" external={true}>Jamstack</TextLink>.
           </p>
           <p className="mt-4 leading-relaxed tracking-wider text-stone-600">
             These innovations allowed my small team to keep pace with increasing demand. We were able to create BSCS's digital products with more efficiency and at a higher quality with lower product support costs.
@@ -115,6 +117,7 @@ const AboutPage = ({
           <div className="items-center justify-between mt-8 uppercase border-b border-pink-400 border-dotted d-block sm:flex">
             {/* <TextLink
               to="https://umich.edu/"
+              title=""
               external={true}
               type="h3"
             >
@@ -134,13 +137,14 @@ const AboutPage = ({
 
           {/* <h2 className="mt-10 text-xl tracking-wide text-stone-700">Education</h2>
           <p className="mt-3 leading-relaxed tracking-wider text-stone-600">
-            I hold an <TextLink to="https://en.wikipedia.org/wiki/Master_of_Science#United_States" external={true}>M.S.</TextLink> in <TextLink to="https://clasp.engin.umich.edu/" external={true}>Atmospheric and Space Science</TextLink> and a <TextLink to="https://en.wikipedia.org/wiki/Graduate_certificate#United_States" external={true}>GradCert</TextLink> in <TextLink to="https://micde.umich.edu/" external={true}>Computer Science and Engineering</TextLink> from <TextLink to="https://umich.edu/" external={true}>The University of Michigan, Ann Arbor</TextLink>. I did my undergraduate studies at <TextLink to="https://www.colorado.edu/" external={true}>The University of Colorado, Boulder</TextLink> where I earned a <TextLink to="https://en.wikipedia.org/wiki/Bachelor%27s_degree" external={true}>B.A.</TextLink> in <TextLink to="https://www.colorado.edu/aps/" external={true}>Astrophysical, Planetary, and Atmospheric Science</TextLink> and a <TextLink to="https://en.wikipedia.org/wiki/Bachelor%27s_degree" external={true}>B.A.</TextLink> in <TextLink to="https://www.colorado.edu/physics/" external={true}>Physics</TextLink>.
+            I hold an <TextLink to="https://en.wikipedia.org/wiki/Master_of_Science#United_States" title="" external={true}>M.S.</TextLink> in <TextLink to="https://clasp.engin.umich.edu/" title="" external={true}>Atmospheric and Space Science</TextLink> and a <TextLink to="https://en.wikipedia.org/wiki/Graduate_certificate#United_States" title="" external={true}>GradCert</TextLink> in <TextLink to="https://micde.umich.edu/" title="" external={true}>Computer Science and Engineering</TextLink> from <TextLink to="https://umich.edu/" title="" external={true}>The University of Michigan, Ann Arbor</TextLink>. I did my undergraduate studies at <TextLink to="https://www.colorado.edu/" title="" external={true}>The University of Colorado, Boulder</TextLink> where I earned a <TextLink to="https://en.wikipedia.org/wiki/Bachelor%27s_degree" title="" external={true}>B.A.</TextLink> in <TextLink to="https://www.colorado.edu/aps/" title="" external={true}>Astrophysical, Planetary, and Atmospheric Science</TextLink> and a <TextLink to="https://en.wikipedia.org/wiki/Bachelor%27s_degree" title="" external={true}>B.A.</TextLink> in <TextLink to="https://www.colorado.edu/physics/" title="" external={true}>Physics</TextLink>.
           </p> */}
 
           <h2 className="mt-10 text-xl tracking-wide text-stone-700">Education</h2>
           <div className="items-center justify-between mt-3 uppercase border-b border-pink-400 border-dotted d-block sm:flex">
             <TextLink
               to="https://umich.edu/"
+              title=""
               external={true}
               type="h3"
             >
@@ -155,9 +159,11 @@ const AboutPage = ({
               <p className="font-serif italic leading-relaxed tracking-wider text-stone-600">
                 <TextLink
                   to="https://en.wikipedia.org/wiki/Master_of_Science#United_States"
+                  title=""
                   external={true}
                 >M.S.</TextLink> <TextLink
                   to="https://clasp.engin.umich.edu/"
+                  title=""
                   external={true}
                 >Atmospheric and Space Science</TextLink>
               </p>
@@ -173,9 +179,11 @@ const AboutPage = ({
               <p className="font-serif italic leading-relaxed tracking-wider text-stone-600">
                 <TextLink
                   to="https://en.wikipedia.org/wiki/Graduate_certificate#United_States"
+                  title=""
                   external={true}
                 >GradCert</TextLink> <TextLink
                   to="https://micde.umich.edu/"
+                  title=""
                   external={true}
                 >Computational Discovery and Engineering</TextLink>
               </p>
@@ -189,6 +197,7 @@ const AboutPage = ({
           <div className="items-center justify-between mt-8 uppercase border-b border-pink-400 border-dotted d-block sm:flex">
             <TextLink
               to="https://www.colorado.edu/"
+              title=""
               external={true}
               type="h3"
             >
@@ -204,9 +213,11 @@ const AboutPage = ({
               <p className="font-serif italic leading-relaxed tracking-wider text-stone-600">
                 <TextLink
                   to="https://en.wikipedia.org/wiki/Bachelor%27s_degree"
+                  title=""
                   external={true}
                 >B.A.</TextLink> <TextLink
                   to="https://www.colorado.edu/physics/"
+                  title=""
                   external={true}
                 >Physics</TextLink>
               </p>
@@ -222,9 +233,11 @@ const AboutPage = ({
               <p className="font-serif italic leading-relaxed tracking-wider text-stone-600">
                 <TextLink
                   to="https://en.wikipedia.org/wiki/Bachelor%27s_degree"
+                  title=""
                   external={true}
                 >B.A.</TextLink> <TextLink
                   to="https://www.colorado.edu/aps/"
+                  title=""
                   external={true}
                 >Astrophysical, Planetary, and Atmospheric Science</TextLink>
               </p>
@@ -254,7 +267,7 @@ const AboutPage = ({
           />
 
           <p className="mt-3 leading-relaxed tracking-wider text-stone-600">
-            In my free time I enjoy spending time with my beautiful family, adventuring in our van (<TextLink to="https://www.instagram.com/explore/tags/vanlife/?hl=en" external={true}>#vanlife</TextLink>), practicing yoga, mountain biking, and I read a lot.
+            In my free time I enjoy spending time with my beautiful family, adventuring in our van (<TextLink to="https://www.instagram.com/explore/tags/vanlife/?hl=en" title="" external={true}>#vanlife</TextLink>), practicing yoga, mountain biking, and I read a lot.
           </p>
           {/* <div
             className="w-full mx-auto mt-12 md:w-3/4"

@@ -3,17 +3,19 @@ import { Link } from 'gatsby'
 
 
 export type TextLinkProps = {
-  type?: string,
   children: ReactNode,
   external: boolean,
+  title: string,
   to: string
+  type?: string,
 }
 
 const TextLink: FC<TextLinkProps> = ({
-  type,
   children,
   external,
-  to
+  title,
+  to,
+  type
 }: TextLinkProps) => {
   const CustomTag = `${type}` as keyof JSX.IntrinsicElements
 
@@ -25,6 +27,7 @@ const TextLink: FC<TextLinkProps> = ({
             ?
               <a
                 href={to}
+                title={title}
                 className="rounded-sm focus:outline-none focus:ring-2 focus:ring-sky-500"
               >
                 {

@@ -93,45 +93,57 @@ const WritingFromMyIpadWithVersionControlAndMarkdown = ({
           <p className="mt-8 leading-relaxed tracking-wider text-stone-600">
             As a software developer, and someone who voice codes, I prefer to work in a command line / simple text editor environment when possible. <TextLink
               to="https://en.wikipedia.org/wiki/Graphical_user_interface"
+              title=""
               external={true}
             >GUI’s</TextLink> and things I have to click around in add an extra layer of friction for me. Software such as MS Word or Google Docs are overbearingly <TextLink
               to="https://en.wikipedia.org/wiki/WYSIWYG"
+              title=""
               external={true}
             >WYSIWYG</TextLink> and mouse click-dependent, they get in the way.
           </p>
           <p className="mt-4 leading-relaxed tracking-wider text-stone-600">
             As an alternative to WYSIWYG editors, A lot of folx use <TextLink
               to="https://en.wikipedia.org/wiki/Markdown"
+              title=""
               external={true}
             >Markdown</TextLink>  on their blogs as a means of keeping their content framework-agnostic. I am among those who appreciate the simplicity of writing in Markdown. To be clear, I do not use Markdown on my blog / personal site. For my personal work, I experience too much frustration with the “one size fits all” approach to building websites with Markdown or a <TextLink
               to="https://en.wikipedia.org/wiki/Content_management_system"
+              title=""
               external={true}
             >CMS</TextLink>. I’d prefer to retain the flexibility of writing in <TextLink
               to="https://en.wikipedia.org/wiki/HTML"
+              title=""
               external={true}
             >HTML</TextLink>/<TextLink
               to="https://en.wikipedia.org/wiki/CSS"
+              title=""
               external={true}
             >CSS</TextLink>/<TextLink
               to="https://en.wikipedia.org/wiki/JavaScript"
+              title=""
               external={true}
             >JS</TextLink>. Aside from publishing my works on my website, much of my writing process does indeed happen in Markdown, and I treat my Markdown files as the source of truth with version control.
           </p>
           <p className="mt-4 leading-relaxed tracking-wider text-stone-600">
             As a professional software developer, I spend far too many hours in front of my computer. Thus, I would like the option to read, research, or write in a different setting away from my desk, such as chilling in my hammock with my iPad. Since I keep my developer's journal, blog, and other notes in Markdown files and in version control, I set out to find a way to access these files and edit them on my iPad. At first, I was thinking I would have to do something elaborate like <TextLink
               to="https://github.com/cdr/code-server"
+              title=""
               external={true}
             >host VS Code on a server</TextLink> or edit the files in my browser on <TextLink
               to="https://en.wikipedia.org/wiki/GitHub"
+              title=""
               external={true}
             >GitHub</TextLink>. Luckily, it didn’t take too much digging to discover there’s good native software for the iPad that makes setting up this workflow easy. This workflow consists of a combination of two apps, <TextLink
               to="https://workingcopyapp.com"
+              title=""
               external={true}
             >Working Copy</TextLink> and <TextLink
               to="https://ulysses.app"
+              title=""
               external={true}
             >Ulysses</TextLink> (or <TextLink
               to="https://ia.net/writer"
+              title=""
               external={true}
             >iA Writer</TextLink>).
           </p>
@@ -139,9 +151,11 @@ const WritingFromMyIpadWithVersionControlAndMarkdown = ({
           <p className="mt-4 leading-relaxed tracking-wider text-stone-600">
             Working Copy is a “powerful <TextLink
               to="https://en.wikipedia.org/wiki/Git"
+              title=""
               external={true}
             >Git</TextLink> client for <TextLink
               to="https://en.wikipedia.org/wiki/IOS"
+              title=""
               external={true}
             >iOS</TextLink> that clones, edits, commits, pushes, & more”. It's an intuitive GUI for Git. If you are familiar with Git, then getting up to speed with Working Copy won’t take you but a few minutes.
           </p>
@@ -152,6 +166,7 @@ const WritingFromMyIpadWithVersionControlAndMarkdown = ({
           <p className="mt-4 leading-relaxed tracking-wider text-stone-600">
             The key to using version control with any file editing app on the iPad is that the apps used must take an *edit in place* approach to working with files. This contrasts with many iOS apps that tend to keep files locked away and exclusively accessible from within the respective app. More and more apps are taking on the edit in place mindset, which has become more justified since Apple introduced <TextLink
               to="https://apps.apple.com/us/app/files/id1232058109"
+              title=""
               external={true}
             >
               Files
@@ -161,6 +176,7 @@ const WritingFromMyIpadWithVersionControlAndMarkdown = ({
           <p className="mt-4 leading-relaxed tracking-wider text-stone-600">
             Writing in Markdown is becoming increasingly popular, and for good reason. Markdown is an easy <TextLink
               to="https://en.wikipedia.org/wiki/Markup_language"
+              title=""
               external={true}
             >
               markup language
@@ -170,6 +186,7 @@ const WritingFromMyIpadWithVersionControlAndMarkdown = ({
           <p className="mt-4 leading-relaxed tracking-wider text-stone-600">
             The nice thing about Markdown editors is that they have clever ways of quasi-rendering the results of your Markdown syntax right inside the editor as you work. It eliminates the urge to have an editor window and a render window open side-by-side; as would be the case with a more traditional tool like <TextLink
               to="https://en.wikipedia.org/wiki/Visual_Studio_Code"
+              title=""
               external={true}
             >
               VS Code

@@ -106,15 +106,17 @@ const BeautifulFormsJamstackIntroductionPage = ({
           <p className="mt-4 leading-relaxed tracking-wider text-stone-600">
             In this two part series, we will take a look at the following tools that are leading the drive to make web forms a more pleasant experience for everyone:
           </p>
-          <ol className="pb-4 mt-4 leading-relaxed tracking-wider text-stone-600 list-decimal list-inside sm:px-8">
+          <ol className="pb-4 mt-4 leading-relaxed tracking-wider list-decimal list-inside text-stone-600 sm:px-8">
             <li>
               We will start by ensuring our form is accessible and pleasant to look at using <TextLink
                 to="https://github.com/tailwindlabs/tailwindcss-forms"
+                 title=""
                 external={true}
               >
                 @tailwindcss/forms
               </TextLink>. @tailwindcss/forms is "a [<TextLink
                 to="https://tailwindcss.com/"
+                title=""
                 external={true}
               >
                 Tailwind CSS
@@ -123,6 +125,7 @@ const BeautifulFormsJamstackIntroductionPage = ({
             <li className="mt-4">
               We will then look at how to implement real-time form validation using <TextLink
                 to="https://react-hook-form.com/"
+                title=""
                 external={true}
               >
                 React Hook Form
@@ -131,6 +134,7 @@ const BeautifulFormsJamstackIntroductionPage = ({
             <li className="mt-4">
               Along the way, we will see how to handle form submissions using <TextLink
               to="https://www.netlify.com/products/forms/"
+              title=""
               external={true}
             >
               Netlify Forms
