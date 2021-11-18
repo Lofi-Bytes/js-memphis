@@ -3,7 +3,6 @@ import { useStaticQuery, graphql } from 'gatsby'
 
 import { formatDate } from '../../utils/utils'
 
-import Alert from '../../components/alert'
 import Banner from '../../components/banner'
 import Layout from '../../components/layout'
 import TextLink from '../../components/text-link'
@@ -28,7 +27,7 @@ const WritingFromMyIpadWithVersionControlAndMarkdown = ({
       allPostsJson(
         filter: {
           title: {
-            eq: "Writing from my iPad with Version Control and Markdown"
+            eq: "Writing from my iPad with version control and Markdown"
           },
           subtitle: {
             eq: ""
@@ -64,7 +63,7 @@ const WritingFromMyIpadWithVersionControlAndMarkdown = ({
   return (
     <Layout location={location}>
       <SEO
-        metaTitle="Writing from my iPad with Version Control and Markdown"
+        metaTitle="Writing from my iPad with version control and Markdown"
         metaDescription=""
         canonicalUrl="https://jillian.dev/writing/writing-from-my-ipad-with-version-control-and-markdown"
       />

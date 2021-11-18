@@ -28,7 +28,7 @@
     ]
   },
   {
-    "title": "Writing from my iPad with Version Control and Markdown",
+    "title": "Writing from my iPad with version control and Markdown",
     "subtitle": "",
     "published": true,
     "path": "/writing/writing-from-my-ipad-with-version-control-and-markdown",
@@ -39,6 +39,20 @@
       "GitHub",
       "Git",
       "Writing"
+    ]
+  },
+  {
+    "title": "What a design system is, and why you should care",
+    "subtitle": "",
+    "published": true,
+    "path": "/writing/what-a-design-system-is-why-you-should-care",
+    "excerpt": "",
+    "date": "2021/11/18",
+    "tags": [
+      "Design",
+      "Systems",
+      "Design systems",
+      "Tailwind CSS"
     ]
   }
 ]
