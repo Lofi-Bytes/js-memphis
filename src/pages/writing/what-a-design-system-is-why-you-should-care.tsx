@@ -89,7 +89,6 @@ const WhatADesignSystemIsWhyYouShouldCare = ({
             <i className="fas fa-arrow-left" />&nbsp;&nbsp;Back to article list
           </Button>
 
-          {/* <h3 className="mt-10 text-xl tracking-wide text-stone-700">Motivation</h3> */}
           <p className="mt-8 leading-relaxed tracking-wider text-stone-600">
             Have you ever wondered how some designers, developers, or companies get their digital products to look so “designed” and professional? They seem to captivate and earn a user's trust instantaneously. Have you had trouble getting your own digital products to reach the same level of presentational nirvana? Have you asked yourself what could possibly be their secret? If only you, too, could get your hands on some of that magic sauce.
           </p>
@@ -138,7 +137,7 @@ const WhatADesignSystemIsWhyYouShouldCare = ({
             Digital companies invest a ton of resources to build and maintain their design systems. They do this because their design system (usually) defines their brand. Their design system will inform their brand guidelines and visual identity such as how the company relates to its customers through color, voice, tone, and product interactions. However, you don’t have to be a multi-billion dollar company, or a design firm, with large teams of specialists to apply design system sensibilities to your projects.
           </p>
           <p className="mt-4 leading-relaxed tracking-wider text-stone-600">
-            There are many open-source options available. Some are a better choice than others. For example, *Material Design*, a *design language* (synonymous with design system) created and open sourced by Google, is a popular choice among the uninitiated. This design language, published at <TextLink
+            There are many open-source options available. Some are a better choice than others. For example, <em>Material Design</em>, a <em>design language</em> (synonymous with design system) created and open sourced by Google, is a popular choice among the uninitiated. This design language, published at <TextLink
               to="https://material.io/design"
               external={true}
             >https://material.io/design</TextLink>, is used to inform many open-source <TextLink
