@@ -194,7 +194,7 @@ const WhatADesignSystemIsWhyYouShouldCare = ({
           </p>
           <h3 className="mt-10 text-xl tracking-wide text-stone-700">Conclusion</h3>
           <p className="mt-4 leading-relaxed tracking-wider text-stone-600">
-            Working with a proper system will make you a better designer/developer. Limiting your options in advance will reduce decision fatigue, enforce consistency — especially when working with a team, and reduce development time. If you have never worked with a system, starting from scratch can be daunting. If you are new to systems, I recommended that you start with an existing high-quality foundational system to familiarize yourself with systems thinking. To get a feel for what makes a design system successful, take time to explore the design systems of some of the world's most successful brands:
+            Working with a proper system will make you a better designer/developer. Limiting your options in advance will reduce decision fatigue, enforce consistency — especially when working with a team, and reduce development time. If you have never worked with a system, starting from scratch can be daunting. If you are new to systems, I recommended that you start with an existing high-quality foundational system to familiarize yourself with systems thinking. Lastly, To get a feel for what makes a design system successful, take time to explore the design systems of some of the world's most successful brands:
           </p>
           <ul className="pb-4 mt-4 leading-relaxed tracking-wider list-inside text-stone-600 sm:px-8">
             <li>
@@ -217,10 +217,10 @@ const WhatADesignSystemIsWhyYouShouldCare = ({
             </li>
           </ul>
           <p className="mt-4 leading-relaxed tracking-wider text-stone-600">
-            In this article we’ve explored what a design system is, and how it can improve one’s process. But one still needs good design sensibilities in order to build a system and then put it to good use. Check back soon for both; a series on practical and easy to implement design best practices and a series on design system implementation.
+            In this article we’ve explored what a design system is, and how it can improve one’s process. But one still needs good design sensibilities in order to build a system and then put it to good use. Check back soon for my upcoming series on practical and easy to implement design best practices.
           </p>
           <p className="mt-8 text-xs leading-relaxed tracking-wider text-stone-600">
-            <sup>1</sup>Referring to Tailwind CSS as a “utility only CSS framework” doesn’t do it justice. Doing so causes those who don’t understand the beauty of systems to underestimate its value.
+            <sup>1</sup>Referring to Tailwind CSS as a “utility only CSS framework” is a travesty. Once one looks at it in the context of systems, its elegance cannot be overstated.
           </p>
           <NextPrev path={path} className="mt-10" />
         </Section>
