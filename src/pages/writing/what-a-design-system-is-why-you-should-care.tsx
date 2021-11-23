@@ -194,7 +194,7 @@ const WhatADesignSystemIsWhyYouShouldCare = ({
           </p>
           <h3 className="mt-10 text-xl tracking-wide text-stone-700">Conclusion</h3>
           <p className="mt-4 leading-relaxed tracking-wider text-stone-600">
-            Working with a proper system will make you a better designer/developer. Limiting your options in advance will reduce decision fatigue, enforce consistency — especially when working with a team, and reduce development time. If you have never worked with a system, starting from scratch can be daunting. If you are new to systems, I recommended that you start with an existing high-quality foundational system to familiarize yourself with systems thinking. Lastly, To get a feel for what makes a design system successful, take time to explore the design systems of some of the world's most successful brands:
+            Working with a proper system will make you a better designer/developer. Limiting your options in advance will reduce decision fatigue, enforce consistency — especially when working with a team, and reduce development time. If you have never worked with a system, starting from scratch can be daunting. If you are new to systems, I recommended that you start with an existing high-quality foundational system to familiarize yourself with systems thinking. To get a feel for what makes a design system successful, take time to explore the design systems of some of the world's most successful brands:
           </p>
           <ul className="pb-4 mt-4 leading-relaxed tracking-wider list-inside text-stone-600 sm:px-8">
             <li>
