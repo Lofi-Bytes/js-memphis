@@ -217,7 +217,7 @@ const WhatADesignSystemIsWhyYouShouldCare = ({
             </li>
           </ul>
           <p className="mt-4 leading-relaxed tracking-wider text-stone-600">
-            In this article we’ve explored what a design system is, and how it can improve one’s process. But one still needs good design sensibilities in order to build a system and then put it to good use. Check back soon for my upcoming series on practical and easy to implement design best practices.
+            In this article we’ve explored what a design system is, and how it can improve one’s process. But one still needs good design sensibilities in order to build a system and then put it to good use. Check back soon for both; a series on practical and easy to implement design best practices and a series on design system implementation.
           </p>
           <p className="mt-8 text-xs leading-relaxed tracking-wider text-stone-600">
             <sup>1</sup>Referring to Tailwind CSS as a “utility only CSS framework” doesn’t do it justice. Doing so causes those who don’t understand the beauty of systems to underestimate its value.
