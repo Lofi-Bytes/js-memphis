@@ -147,7 +147,7 @@ const WritingFromMyIpadWithVersionControlAndMarkdown = ({
               external={true}
             >iA Writer</TextLink>).
           </p>
-          <h3 className="mt-10 text-xl tracking-wide text-stone-700">Version Control</h3>
+          <h3 className="mt-10 text-xl tracking-wide text-stone-700">Version control</h3>
           <p className="mt-4 leading-relaxed tracking-wider text-stone-600">
             Working Copy is a “powerful <TextLink
               to="https://en.wikipedia.org/wiki/Git"
@@ -162,7 +162,7 @@ const WritingFromMyIpadWithVersionControlAndMarkdown = ({
           <p className="mt-4 leading-relaxed tracking-wider text-stone-600">
             Furthermore, it should be noted that Working Copy has a built-in editor. Hence, this workflow can work with Working Copy alone, but the writing experience won’t be as eloquent.
           </p>
-          <h3 className="mt-10 text-xl tracking-wide text-stone-700">Edit in Place</h3>
+          <h3 className="mt-10 text-xl tracking-wide text-stone-700">Edit in place</h3>
           <p className="mt-4 leading-relaxed tracking-wider text-stone-600">
             The key to using version control with any file editing app on the iPad is that the apps used must take an *edit in place* approach to working with files. This contrasts with many iOS apps that tend to keep files locked away and exclusively accessible from within the respective app. More and more apps are taking on the edit in place mindset, which has become more justified since Apple introduced <TextLink
               to="https://apps.apple.com/us/app/files/id1232058109"
@@ -182,7 +182,7 @@ const WritingFromMyIpadWithVersionControlAndMarkdown = ({
               markup language
             </TextLink> to learn. Once you understand the basics of Markdown, it becomes faster to format your document inline as you write, rather than fiddling with the myriad of formatting buttons like one would find in MS Word or Google Docs.
           </p>
-          <h3 className="mt-10 text-xl tracking-wide text-stone-700">Markdown Editors</h3>
+          <h3 className="mt-10 text-xl tracking-wide text-stone-700">Markdown editors</h3>
           <p className="mt-4 leading-relaxed tracking-wider text-stone-600">
             The nice thing about Markdown editors is that they have clever ways of quasi-rendering the results of your Markdown syntax right inside the editor as you work. It eliminates the urge to have an editor window and a render window open side-by-side; as would be the case with a more traditional tool like <TextLink
               to="https://en.wikipedia.org/wiki/Visual_Studio_Code"
