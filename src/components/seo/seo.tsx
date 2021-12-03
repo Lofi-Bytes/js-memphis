@@ -83,7 +83,7 @@ const SEO = ({
         },
         {
           property: `og:site_name`,
-          content: `Jillian S. Estrella, Design systems engineer & solutions architect`
+          content: `Jillian S. Estrella, Design systems engineer`
         },
         {
           property: `og:title`,
