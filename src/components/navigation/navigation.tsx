@@ -1,4 +1,4 @@
-import React, { FC, ReactNode } from 'react'
+import React from 'react'
 import { useStaticQuery, graphql, Link } from 'gatsby'
 
 
@@ -6,7 +6,7 @@ type NavigationProps = {
   location: Location
 }
 
-const Navigation: FC<NavigationProps> = ({
+const Navigation = ({
   location
 }: NavigationProps) => {
   const navigationData = useStaticQuery(graphql`

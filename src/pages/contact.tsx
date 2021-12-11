@@ -4,15 +4,15 @@ import { useForm } from 'react-hook-form'
 
 import { encode } from '../utils/utils'
 
-import Banner from '../components/banner'
 import Button from '../components/button'
-import Layout from '../components/layout'
-import Section from '../components/section'
-import SEO from '../components/seo'
-import Main from '../components/main'
-
-import SuccessMessage from '../components/contact-form/success-message'
 import ErrorMessage from '../components/contact-form/error-message'
+import Jumbotron from '../components/jumbotron'
+import Layout from '../components/layout'
+import Main from '../components/main'
+import Section from '../components/section'
+import Banner from '../components/banner/banner'
+import SEO from '../components/seo'
+import SuccessMessage from '../components/contact-form/success-message'
 
 
 type PageProps = {
@@ -70,7 +70,7 @@ const ContactPage = ({
         metaDescription="Feel free to say hello. I love to meet new people and invite opportunities to collaborate."
         canonicalUrl="https://jillian.dev/contact/"
       />
-      <Banner
+      <Jumbotron
         title={
           <>
             <span className="hidden sm:inline-block">
@@ -91,9 +91,12 @@ const ContactPage = ({
       />
       <Main>
         <Section background="opaque" className="mb-8 -mt-12">
-          <div className="max-w-xs py-2 pl-10 pr-4 -ml-10 rounded shadow-lg bg-cyan-300 w-max sm:px-24 sm:-ml-24 sm:max-w-none">
+          {/* <div className="max-w-xs py-2 pl-10 pr-4 -ml-10 rounded shadow-lg bg-cyan-300 w-max sm:px-24 sm:-ml-24 sm:max-w-none">
             <h2 className="text-xl tracking-wide text-cyan-900 sm:text-2xl">Say hello</h2>
-          </div>
+          </div> */}
+          <Banner color="cyan">
+            Say hello
+          </Banner>
           <div className="mx-auto md:w-10/12">
 
             {successMsg && <SuccessMessage />}

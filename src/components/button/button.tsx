@@ -1,4 +1,4 @@
-import React, { FC, ReactNode } from 'react'
+import React, { ReactNode } from 'react'
 import { Link } from 'gatsby'
 
 import {
@@ -55,6 +55,7 @@ const PRIMARY_SECONDARY_BASE: string = `
   py-2
   rounded-full
   shadow-lg
+  shadow-purple-300/50
 
   transform
   hover:-translate-y-0.5
@@ -106,7 +107,7 @@ const TERTIARY: string = `
   active:border-purple-700
 `
 
-const Button: FC<ButtonProps> = ({
+const Button = ({
   action,
   children,
   className,

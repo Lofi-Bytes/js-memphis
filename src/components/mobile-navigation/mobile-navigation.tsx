@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React from 'react'
 import { useStaticQuery, graphql, Link } from 'gatsby'
 import { joinStrings } from '../../utils/utils'
 
@@ -7,7 +7,7 @@ type MobileNavigationProps = {
   location: Location
 }
 
-const MobileNavigation: FC<MobileNavigationProps> = ({
+const MobileNavigation = ({
   location
 }: MobileNavigationProps) => {
   const navigationData = useStaticQuery(graphql`

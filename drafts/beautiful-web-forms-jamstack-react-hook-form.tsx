@@ -1,15 +1,15 @@
-import React, { FC, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 
 import { formatDate } from '../../utils/utils'
 
 import Alert from '../../components/alert'
-import Banner from '../../components/banner'
+import Jumbotron from '../../components/jumbotron'
 import Layout from '../../components/layout'
 import Main from '../../components/main'
 import NextPrev from '../../components/next-prev'
-import SEO from '../../components/seo'
 import Section from '../../components/section'
+import SEO from '../../components/seo'
 import Tag from '../../components/tag'
 import TextLink from '../../components/text-link'
 
@@ -25,12 +25,12 @@ npm install react-hook-form
 yarn add react-hook-form`
 
 const styledForm: string =
-`import React, { FC, ReactNode, useState } from 'react'
+`import React, { ReactNode, useState } from 'react'
 
 import Button from '../button'
 
 
-const ContactForm: FC<ReactNode> = ({}: ReactNode) => {
+const ContactForm = ({}: ReactNode) => {
   return (
     <form name="contact">
       <div className="grid grid-cols-1 gap-4 mt-8">
@@ -86,7 +86,7 @@ export default ContactForm`
 
 const importUseForm: string = `import { useForm } from 'react-hook-form'`
 
-const setUp: string = `import React, { FC, ReactNode, useState } from 'react'
+const setUp: string = `import React, { ReactNode, useState } from 'react'
 
 import Button from '../button'
 
@@ -97,7 +97,7 @@ export type ContactFormProps = {
   message: string
 }
 
-const ContactForm: FC<ReactNode> = ({}: ReactNode) => {
+const ContactForm = ({}: ReactNode) => {
   const {
     register,
     handleSubmit,
@@ -139,7 +139,7 @@ type PageProps = {
   location: Location
 }
 
-const BeautifulWebFormsJamstackReactHookFormPage: FC<PageProps> = ({
+const BeautifulWebFormsJamstackReactHookFormPage = ({
   location
 }: PageProps) => {
   const postData = useStaticQuery(graphql`
@@ -187,7 +187,7 @@ const BeautifulWebFormsJamstackReactHookFormPage: FC<PageProps> = ({
         metaDescription="React Hook Form makes client side form field validation easy."
         canonicalUrl="https://jillian.dev/writing/beautiful-web-forms-jamstack-react-hook-form"
       />
-      <Banner
+      <Jumbotron
         align="left"
         title={title}
         subtitle={subtitle}

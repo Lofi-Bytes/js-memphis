@@ -3,17 +3,18 @@ import { useStaticQuery, graphql } from 'gatsby'
 
 import { formatDate } from '../../utils/utils'
 
-import Banner from '../../components/banner'
+import Banner from '../../components/banner/banner'
+import Button from '../../components/button'
+import Jumbotron from '../../components/jumbotron'
 import Layout from '../../components/layout'
-import TextLink from '../../components/text-link'
-import Section from '../../components/section'
-import SEO from '../../components/seo'
 import Main from '../../components/main'
 import NextPrev from '../../components/next-prev'
-import Tag from '../../components/tag'
-import Button from '../../components/button'
-
 import Prism from 'prismjs'
+import Section from '../../components/section'
+import SEO from '../../components/seo'
+import Tag from '../../components/tag'
+import TextLink from '../../components/text-link'
+
 
 type PageProps = {
   location: Location
@@ -67,7 +68,7 @@ const WhatADesignSystemIsWhyYouShouldCare = ({
         metaDescription=""
         canonicalUrl="https://jillian.dev/writing/what-a-design-system-is-why-you-should-care"
       />
-      <Banner
+      <Jumbotron
         align="left"
         title={title}
         subtitle={subtitle}
@@ -75,9 +76,13 @@ const WhatADesignSystemIsWhyYouShouldCare = ({
       />
       <Main>
         <Section background="opaque" className="mb-8 -mt-12">
-          <div className="max-w-xs px-10 py-2 -ml-10 bg-purple-300 rounded shadow-lg w-max sm:px-24 sm:-ml-24 sm:max-w-none">
+          {/* <div className="max-w-xs px-10 py-2 -ml-10 bg-purple-300 rounded shadow-lg w-max sm:px-24 sm:-ml-24 sm:max-w-none">
             <h2 className="text-xl tracking-wide text-purple-900 sm:text-2xl">Thinking in systems</h2>
-          </div>
+          </div> */}
+
+          <Banner color="rose">
+            Thinking in systems
+          </Banner>
 
           <Button
             action="tertiary"

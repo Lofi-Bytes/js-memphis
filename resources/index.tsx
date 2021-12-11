@@ -1,11 +1,11 @@
 import React from 'react'
 import { useStaticQuery, graphql, Link } from 'gatsby'
 
-import Banner from '../../components/banner'
+import Jumbotron from '../../components/jumbotron'
 import Layout from '../../components/layout'
+import Main from '../../components/main'
 import Section from '../../components/section'
 import SEO from '../../components/seo'
-import Main from '../../components/main'
 
 type PageProps = {
   location: Location
@@ -35,7 +35,7 @@ const ProjectsListPage = ({
         metaDescription=""
         canonicalUrl=""
       />
-      <Banner
+      <Jumbotron
         title={
           <>
             <span className="hidden sm:inline-block">

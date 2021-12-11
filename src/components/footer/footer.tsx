@@ -1,4 +1,4 @@
-import React, { FC, ReactNode } from 'react'
+import React from 'react'
 
 import MobileNavigation from '../mobile-navigation'
 import FooterNavigation from '../footer-navigation'
@@ -8,7 +8,7 @@ type FooterProps = {
   location: Location
 }
 
-const Footer: FC<FooterProps> = ({
+const Footer = ({
   location
 }: FooterProps) => {
   return (

@@ -4,13 +4,14 @@ import { useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
 import Avatar from '../components/avatar'
-import Banner from '../components/banner'
 import Button from '../components/button'
 import ContactForm from '../components/contact-form'
+import Jumbotron from '../components/jumbotron'
 import Layout from '../components/layout'
 import Main from '../components/main'
-import SEO from '../components/seo'
 import Section from '../components/section'
+import Banner from '../components/banner/banner'
+import SEO from '../components/seo'
 import SocialIconRow from '../components/social-icon-row'
 import TextLink from '../components/text-link'
 
@@ -43,7 +44,7 @@ const AboutPage = ({
         metaDescription="I love building beautiful digital experiences and I am passionate about technology that advances social and environmental justice."
         canonicalUrl="https://jillian.dev/about"
       />
-      <Banner
+      <Jumbotron
         title={<span className="text-5xl leading-relaxed js md:text-6xl md:leading-loose lg:text-7xl lg:leading-relaxed">About Me</span>}
         // subtitle={}
       />
@@ -296,9 +297,9 @@ const AboutPage = ({
         </Section>
 
         <Section background="opaque">
-          <div className="max-w-xs py-2 pl-10 pr-4 -ml-10 rounded shadow-lg bg-cyan-300 w-max sm:px-24 sm:-ml-24 sm:max-w-none">
-            <h2 className="text-xl tracking-wide text-cyan-900 sm:text-2xl">Interested in collaborating?</h2>
-          </div>
+          <Banner color="cyan">
+            Interested in collaborating?
+          </Banner>
           <div className="mx-auto md:w-10/12">
             <ContactForm />
           </div>

@@ -1,4 +1,4 @@
-import React, { FC, ReactNode } from 'react'
+import React, { ReactNode } from 'react'
 
 import CodeTag from '../code-tag'
 
@@ -13,7 +13,7 @@ type CodeContainerProps = {
   tagColor: string
 }
 
-const CodeContainer: FC<CodeContainerProps> = ({
+const CodeContainer = ({
   children,
   language,
   lineNumbers,

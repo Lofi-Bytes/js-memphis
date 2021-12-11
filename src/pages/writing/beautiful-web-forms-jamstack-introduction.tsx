@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 import { formatDate } from '../../utils/utils'
 
 import Alert from '../../components/alert'
-import Banner from '../../components/banner'
+import Jumbotron from '../../components/jumbotron'
 import Button from '../../components/button'
 import Layout from '../../components/layout'
 import TextLink from '../../components/text-link'
@@ -15,6 +15,7 @@ import NextPrev from '../../components/next-prev'
 import Tag from '../../components/tag'
 
 import Prism from 'prismjs'
+import Banner from '../../components/banner/banner'
 
 type PageProps = {
   location: Location
@@ -68,7 +69,7 @@ const BeautifulFormsJamstackIntroductionPage = ({
         metaDescription="Web forms are arguably one of the most important tools in web development and design."
         canonicalUrl="https://jillian.dev/writing/beautiful-web-forms-jamstack-introduction"
       />
-      <Banner
+      <Jumbotron
         align="left"
         title={title}
         subtitle={subtitle}
@@ -76,9 +77,9 @@ const BeautifulFormsJamstackIntroductionPage = ({
       />
       <Main>
         <Section background="opaque" className="mb-8 -mt-12">
-          <div className="max-w-xs px-10 py-2 -ml-10 rounded shadow-lg bg-rose-300 w-max sm:px-24 sm:-ml-24 sm:max-w-none">
-            <h2 className="text-xl tracking-wide text-rose-900 sm:text-2xl">Series introduction</h2>
-          </div>
+          <Banner color="rose">
+            Series introduction
+          </Banner>
 
           <Button
             action="tertiary"

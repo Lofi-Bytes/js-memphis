@@ -1,4 +1,4 @@
-import React, { FC, ReactNode } from 'react'
+import React, { ReactNode } from 'react'
 
 import { formatClassList, joinStrings } from '../../utils/utils'
 
@@ -78,7 +78,7 @@ type TagProps = {
   children: ReactNode
 }
 
-const Tag: FC<TagProps> = ({
+const Tag = ({
   card,
   tagColor,
   children

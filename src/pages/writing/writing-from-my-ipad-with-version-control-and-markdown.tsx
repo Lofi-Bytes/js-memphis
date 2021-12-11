@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 
 import { formatDate } from '../../utils/utils'
 
-import Banner from '../../components/banner'
+import Jumbotron from '../../components/jumbotron'
 import Layout from '../../components/layout'
 import TextLink from '../../components/text-link'
 import Section from '../../components/section'
@@ -14,6 +14,7 @@ import Tag from '../../components/tag'
 import Button from '../../components/button'
 
 import Prism from 'prismjs'
+import Banner from '../../components/banner/banner'
 
 type PageProps = {
   location: Location
@@ -67,7 +68,7 @@ const WritingFromMyIpadWithVersionControlAndMarkdown = ({
         metaDescription=""
         canonicalUrl="https://jillian.dev/writing/writing-from-my-ipad-with-version-control-and-markdown"
       />
-      <Banner
+      <Jumbotron
         align="left"
         title={title}
         subtitle={subtitle}
@@ -75,10 +76,9 @@ const WritingFromMyIpadWithVersionControlAndMarkdown = ({
       />
       <Main>
         <Section background="opaque" className="mb-8 -mt-12">
-          <div className="max-w-xs px-10 py-2 -ml-10 bg-purple-300 rounded shadow-lg w-max sm:px-24 sm:-ml-24 sm:max-w-none">
-            <h2 className="text-xl tracking-wide text-purple-900 sm:text-2xl">My new writing workflow</h2>
-          </div>
-
+          <Banner color="purple">
+            My new writing workflow
+          </Banner>
           <Button
             action="tertiary"
             disabled={false}

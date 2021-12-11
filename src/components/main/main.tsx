@@ -1,11 +1,11 @@
-import React, { FC, ReactNode } from 'react'
+import React, { ReactNode } from 'react'
 
 
 type MainProps = {
   children: ReactNode
 }
 
-const Main: FC<MainProps> = ({
+const Main = ({
   children
 }: MainProps) => {
   return (

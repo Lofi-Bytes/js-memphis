@@ -1,8 +1,8 @@
-import React, { FC, ReactNode } from 'react'
+import React, { ReactNode } from 'react'
 import { useStaticQuery, graphql, Link } from 'gatsby'
 
 
-const FooterNavigation: FC<ReactNode> = ({}: ReactNode) => {
+const FooterNavigation = ({}: ReactNode) => {
   const navigationData = useStaticQuery(graphql`
     query FooterNavigationQuery {
       allNavigationJson {

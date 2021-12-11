@@ -1,4 +1,4 @@
-import React, { FC, ReactNode } from 'react'
+import React from 'react'
 import { Link } from 'gatsby'
 
 import Navigation from '../navigation'
@@ -8,12 +8,12 @@ type HeaderProps = {
   location: Location
 }
 
-const Header: FC<HeaderProps> = ({
+const Header = ({
   location
 }: HeaderProps) => {
   return (
     <React.Fragment>
-      <div className="flex items-center justify-center w-full p-1 bg-stone-900 opacity-75">
+      <div className="flex items-center justify-center w-full p-1 opacity-75 bg-stone-900">
         <p className="text-lg text-stone-50"><strong>All</strong> Black Lives Matter</p>
       </div>
       <header className="w-full px-8 py-6 bg-indigo-700 bg-opacity-30">

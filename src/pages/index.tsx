@@ -1,13 +1,14 @@
 import React from 'react'
 
 import Avatar from '../components/avatar'
-import Banner from '../components/banner'
 import Button from '../components/button'
 import ContactForm from '../components/contact-form'
+import Jumbotron from '../components/jumbotron'
 import Layout from '../components/layout'
 import Main from '../components/main'
-import SEO from '../components/seo'
 import Section from '../components/section'
+import Banner from '../components/banner/banner'
+import SEO from '../components/seo'
 import SocialIconRow from '../components/social-icon-row'
 
 
@@ -25,7 +26,7 @@ const HomePage = ({
         metaDescription="Design systems engineer"
         canonicalUrl="https://jillian.dev/"
       />
-      <Banner
+      <Jumbotron
         title={<span className="text-5xl leading-relaxed js md:text-6xl md:leading-loose lg:text-7xl lg:leading-relaxed">Jillian Serenity</span>}
         subtitle={
           <>
@@ -77,9 +78,9 @@ const HomePage = ({
         </Section>
 
         <Section background="opaque">
-          <div className="max-w-xs px-10 py-2 -ml-10 bg-yellow-300 rounded shadow-lg w-max sm:px-24 sm:-ml-24 sm:max-w-none">
-            <h2 className="text-xl tracking-wide text-yellow-900 sm:text-2xl">Say hello</h2>
-          </div>
+          <Banner color="yellow">
+            Say hello
+          </Banner>
           <div className="mx-auto md:w-10/12">
             <ContactForm />
           </div>

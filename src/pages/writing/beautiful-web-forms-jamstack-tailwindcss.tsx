@@ -4,18 +4,19 @@ import { useStaticQuery, graphql } from 'gatsby'
 import { formatDate } from '../../utils/utils'
 
 import Alert from '../../components/alert'
-import Banner from '../../components/banner'
 import Button from '../../components/button'
 import CodeContainer from '../../components/code-container'
+import Jumbotron from '../../components/jumbotron'
 import Layout from '../../components/layout'
 import Main from '../../components/main'
 import NextPrev from '../../components/next-prev'
-import SEO from '../../components/seo'
 import Section from '../../components/section'
+import SEO from '../../components/seo'
 import Tag from '../../components/tag'
 import TextLink from '../../components/text-link'
 
 import Prism from 'prismjs'
+import Banner from '../../components/banner/banner'
 
 
 type PageProps = {
@@ -449,7 +450,7 @@ const BeautifulWebFormsJamstackTailwindCSSPage = ({
         metaDescription="Form elements are not always the easiest to style. @tailwindcss/forms solves this by prviding a basic reset."
         canonicalUrl="https://jillian.dev/writing/beautiful-web-forms-jamstack-tailwindcss"
       />
-      <Banner
+      <Jumbotron
         align="left"
         title={title}
         subtitle={subtitle}
@@ -457,9 +458,9 @@ const BeautifulWebFormsJamstackTailwindCSSPage = ({
       />
       <Main>
         <Section background="opaque" className="mb-8 -mt-12">
-          <div className="max-w-xs px-10 py-2 -ml-10 rounded shadow-lg bg-cyan-300 w-max sm:px-24 sm:-ml-24 sm:max-w-none">
-            <h2 className="text-xl tracking-wide text-cyan-900 sm:text-2xl">@tailwindcss/forms</h2>
-          </div>
+          <Banner color="cyan">
+            @tailwindcss/forms
+          </Banner>
 
           <Button
             action="tertiary"

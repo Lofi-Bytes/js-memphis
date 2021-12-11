@@ -1,9 +1,9 @@
 import React from 'react'
-import { useStaticQuery, graphql, Link } from 'gatsby'
+import { useStaticQuery, graphql } from 'gatsby'
 
-import { formatDate } from '../../utils/utils'
-
-import Banner from '../../components/banner'
+import Banner from '../../components/banner/banner'
+import Card from '../../components/card'
+import Jumbotron from '../../components/jumbotron'
 import Layout from '../../components/layout'
 import Section from '../../components/section'
 import SEO from '../../components/seo'
@@ -43,7 +43,7 @@ const WritingPostListPage = ({
         metaDescription="I blog about interesting tech and diversity, equity, and inclusion."
         canonicalUrl="https://jillian.dev/writing/"
       />
-      <Banner
+      <Jumbotron
         title={
           <>
             <span className="text-5xl leading-relaxed js md:text-6xl md:leading-loose lg:text-7xl lg:leading-relaxed">
@@ -57,64 +57,53 @@ const WritingPostListPage = ({
             </span>
           </>
         }
-        // subTitle={<span className="text-teal-100">Designer, Full Stack Developer, &amp; Tech Lead</span>}
       />
       <Main>
         <Section background="transparent" className="mb-8 -mt-12">
-          <div className="max-w-xs px-10 py-2 mb-10 -ml-10 rounded shadow-lg bg-rose-300 w-max sm:px-24 sm:-ml-24 sm:max-w-none">
-            <h2 className="text-xl tracking-wide text-rose-900 sm:text-2xl">Software development</h2>
-          </div>
+          <Banner
+            color="rose"
+            pageType="listPage"
+          >
+            Software development
+          </Banner>
+
           <div className="grid grid-flow-row-dense gap-8">
           {
             postListData.allPostsJson.edges.map((edge, index) => {
               const path = edge.node.path
               const title = edge.node.title
-              const subtitle = edge.node.subtitle
               const published = edge.node.published
               const excerpt = edge.node.excerpt
               const date = edge.node.date
               const tags = edge.node.tags
-
-              const formattedDate = formatDate(date)
 
               return(
                 <React.Fragment key={`item-${index}`}>
                   {
                     published
                       ?
-                        <Link
+                        <Card
+                          color="violet"
+                          date={date}
+                          excerpt={excerpt}
+                          external={false}
+                          published={published}
+                          title={title}
                           to={path}
-                          className="block overflow-hidden transition shadow-lg hover:shadow-xl focus:shadow-xl active:shadow-sm duration-200 rounded-lg bg-violet-100 focus:bg-violet-50 focus:outline-none focus:ring-4 focus:ring-violet-200 focus:ring-opacity-50 border-0 border-l-8 border-violet-400 hover:border-violet-500 focus:border-violet-600 transform focus:-translate-y-0.5 hover:-translate-y-0.5 active:translate-y-0.5 ease-in-out group px-4 sm:px-8 py-6"
-                        >
-                          <h2 className="text-xl tracking-wider text-violet-900">
-                            {title}
-                          </h2>
-                          <p className="tracking-wider text-violet-900 text-md">{subtitle}</p>
-                          <p className="font-serif text-sm italic tracking-wider text-violet-700">
-                            {formattedDate}
-                          </p>
-                          <div className="flex flex-wrap mt-2">
-                            {
-                              tags.map((tag, index) => {
-                                return (
-                                  <Tag
-                                    card={true}
-                                    key={`item-${index}`}
-                                    tagColor="violet"
-                                  >
-                                    {tag}
-                                  </Tag>
-                                )
-                              })
-                            }
-                          </div>
-                          <p className="mt-4 text-base tracking-wider text-violet-700">
-                            {excerpt}
-                          </p>
-                          <div className="flex flex-row-reverse">
-                            <i className="mt-2 text-xl transition duration-150 ease-in-out border-b-4 rounded-sm border-violet-100 fas fa-arrow-right text-violet-400 group-focus:text-violet-600 group-hover:text-violet-500 group-hover:border-violet-500 group-focus:border-violet-600 pb-0.5"></i>
-                          </div>
-                        </Link>
+                          tags={
+                            tags.map((tag, index) => {
+                              return (
+                                <Tag
+                                  card={true}
+                                  key={`item-${index}`}
+                                  tagColor="violet"
+                                >
+                                  {tag}
+                                </Tag>
+                              )
+                            })
+                          }
+                        />
                       :
                         null
                   }

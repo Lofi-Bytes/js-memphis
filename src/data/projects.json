@@ -2,8 +2,9 @@
   {
     "title": "reveal.js + Tailwind CSS Starter",
     "path": "https://github.com/Lofi-Bytes/reveal-tailwind-starter",
+    "published": true,
     "excerpt": "Hate making presentations in PowerPoint? Love HTML + Tailwind CSS? Try out this reveal.js + Tailwind starter. Host it as a static site, accessible from anywhere. It will make all your wildest dreams come true.",
-    "date": "Aug. 7th, 2021",
+    "date": "08/07/2021",
     "section": "github",
     "tags": [
       "reveal.js",
@@ -18,8 +19,9 @@
   {
     "title": "Chemical Kinetics in the Enceladus Plume",
     "path": "https://github.com/Lofi-Bytes/chemical-kinetics-in-the-enceladus-plume",
+    "published": true,
     "excerpt": "A Description of Enceladus’ Plume Sources and Chemical Reactions Significant to the Plume-Magnetosphere Interaction.",
-    "date": "Aug. 7th, 2021",
+    "date": "05/04/2014",
     "section": "github",
     "tags": [
       "Computation",
@@ -32,8 +34,9 @@
   {
     "title": "Upper Atmosphere and Ionosphere",
     "path": "https://github.com/Lofi-Bytes/upper-atmosphere-and-ionosphere",
+    "published": true,
     "excerpt": "Simulation of Earth's upper atmosphere and ionosphere AOSS 495 winter semester 2012.",
-    "date": "April. 27th, 2012",
+    "date": "04/27/2012",
     "section": "github",
     "tags": [
       "computation",
@@ -47,8 +50,9 @@
   {
     "title": "Magnetopause Standoff Distance",
     "path": "https://github.com/Lofi-Bytes/magnetopause-standoff-distance",
+    "published": true,
     "excerpt": "Data-model comparison and sensitivity study of the magnetopause standoff distance using the empirical model proposed by Shue et. al. [1998].",
-    "date": "March. 23rd, 2014",
+    "date": "03/23/2014",
     "section": "github",
     "tags": [
       "computation",
@@ -61,8 +65,9 @@
   {
     "title": "Ebola Virus Disease",
     "path": "https://github.com/Lofi-Bytes/ebola-virus-disease",
+    "published": true,
     "excerpt": "Modeling the spread of Ebola Virus Disease through a population.",
-    "date": "Jan. 23rd, 2016",
+    "date": "01/23/2016",
     "section": "github",
     "tags": [
       "computation",
@@ -75,6 +80,7 @@
   {
     "title": "Developing Skills in Health Literacy",
     "path": "https://healthliteracy.bscs.org/",
+    "published": true,
     "excerpt": "In this project, we are developing curriculum materials for middle and high school students that will help them learn to evaluate information and claims about health issues. The project is being supported by the National Institutes of Health (NIH).",
     "date": "2017 - 2021",
     "section": "bscs",
@@ -90,8 +96,9 @@
   {
     "title": "Modern Memphis",
     "path": "https://codepen.io/LofiBytes/pen/YzGZxWX",
+    "published": true,
     "excerpt": "An approximate reproduction of jillian.dev's animated Memphis design background.",
-    "date": "Dec. 18th, 2020",
+    "date": "12/18/2020",
     "section": "codepen",
     "tags": [
       "CSS",
@@ -103,6 +110,7 @@
   {
     "title": "3D Middle School Life Science Curriculum Program: A Medical Mystery",
     "path": "https://3dmss.bscs.org/",
+    "published": true,
     "excerpt": "A Medical Mystery is a new 3D curriculum program to support middle school educators who are navigating next generation science. The program was developed in a partnership between BSCS Science Learning and Oregon Public Broadcasting (OPB) and includes a free Next Generation Science Standards (NGSS)-aligned body systems curriculum unit and teacher’s guide, along with an online professional learning course. A Medical Mystery was funded by the National Science Foundation under Grant No. DRL-1502571.",
     "date": "2015 - 2019",
     "section": "bscs",
@@ -118,6 +126,7 @@
   {
     "title": "Student Allergy Clinic",
     "path": "https://allergies.bscs.org/",
+    "published": true,
     "excerpt": "This project was supported by the National Institute of Allergy and Infectious Diseases and was a collaboration between BSCS Science Learning, Dawson Media Group, and Oxbow Labs.",
     "date": "2012 - 2017",
     "section": "bscs",
@@ -133,6 +142,7 @@
   {
     "title": "FieldScope Landing Site",
     "path": "http://www.fieldscope.org/",
+    "published": true,
     "excerpt": "FieldScope is an interactive citizen science platform. Organizers of field studies can leverage sophisticated graphing and mapping visualization tools and resources to enhance their existing and future citizen science projects. Participants of all ages and backgrounds can then conveniently upload measurements, observations, and media to a shared project database.",
     "date": "2016",
     "section": "bscs",
@@ -148,6 +158,7 @@
   {
     "title": "Understanding Ebola Virus Disease",
     "path": "https://ebola.bscs.org/",
+    "published": true,
     "excerpt": "This project was an NSF-supported collaboration between BSCS Science Learning and Oregon Public Broadcasting (OPB). This interactive learning experience was designed to help people better understand important factors that contribute to the infection and spread of Ebola virus disease and how these factors interact with each other.",
     "date": "2015",
     "section": "bscs",

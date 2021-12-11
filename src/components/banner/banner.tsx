@@ -1,50 +1,144 @@
-import React, { FC, ReactNode } from 'react'
+import React, { ReactNode } from 'react'
+
+import {
+  formatClassList,
+  joinStrings
+} from '../../utils/utils'
 
 
 export type BannerProps = {
-  align?: string,
-  title?: ReactNode,
-  subtitle?: ReactNode,
-  date?: string
-  [other:string]: unknown
+  children: ReactNode,
+  color: 'cyan' | 'rose' | 'purple' | 'yellow'
+  pageType?: 'listPage' | 'page'
 }
 
-const Banner: FC<BannerProps> = ({
-  align,
-  title,
-  subtitle,
-  date
+export type ClassListTypes = {
+  formattedBanner: string,
+  formattedHeading: string
+}
+
+const BANNER: string = `
+  -ml-10
+  max-w-xs
+  px-10
+  py-2
+  rounded
+  shadow-lg
+  sm:-ml-24
+  sm:max-w-none
+  sm:px-24
+  w-max
+`
+
+const HEADING: string = `
+  sm:text-2xl
+  text-xl
+  tracking-wide
+`
+
+const BANNER_CYAN: string = `
+  bg-cyan-300
+  shadow-cyan-600/50
+`
+
+const HEADING_CYAN: string = `
+  text-cyan-900
+`
+
+const BANNER_ROSE: string = `
+  bg-rose-300
+  shadow-rose-600/50
+`
+
+const HEADING_ROSE: string = `
+  text-rose-900
+`
+
+const BANNER_PURPLE: string = `
+  bg-purple-300
+  shadow-purple-600/50
+`
+
+const HEADING_PURPLE: string = `
+  text-purple-900
+`
+
+const BANNER_YELLOW: string = `
+  bg-yellow-300
+  shadow-yellow-600/50
+`
+
+const HEADING_YELLOW: string = `
+  text-yellow-900
+`
+
+const LIST_PAGE_STYLE: string = `
+  mb-10
+`
+
+const Banner = ({
+  children,
+  color,
+  pageType='page'
 }: BannerProps) => {
+  const addColorToFormattedClassLists = (
+    bannerColor: string,
+    headingColor: string
+  ) => {
+    let formattedBanner: string
+    let formattedHeading: string
+
+    formattedBanner = joinStrings(
+      ' ',
+      formatClassList(BANNER),
+      formatClassList(bannerColor),
+      pageType === 'listPage' ? LIST_PAGE_STYLE : ''
+    )
+    formattedHeading = joinStrings(
+      ' ',
+      formatClassList(HEADING),
+      formatClassList(headingColor)
+    )
+
+    return {formattedBanner, formattedHeading}
+  }
+
+  let classList: ClassListTypes
+
+  if (color === 'cyan') {
+    classList = addColorToFormattedClassLists(
+      BANNER_CYAN,
+      HEADING_CYAN
+    )
+  }
+
+  if (color === 'rose') {
+    classList = addColorToFormattedClassLists(
+      BANNER_ROSE,
+      HEADING_ROSE
+    )
+  }
+
+  if (color === 'purple') {
+    classList = addColorToFormattedClassLists(
+      BANNER_PURPLE,
+      HEADING_PURPLE
+    )
+  }
+
+  if (color === 'yellow') {
+    classList = addColorToFormattedClassLists(
+      BANNER_YELLOW,
+      HEADING_YELLOW
+    )
+  }
+
   return (
-    <React.Fragment>
-      <div className="w-full bg-indigo-700 bg-opacity-30 z-5">
-        <div className="flex flex-col items-center justify-center max-w-screen-md px-6 m-auto h-80 pb-14 sm:pb-28">
-          {
-            align === 'left'
-            ?
-              <>
-                <h1 className="w-full text-3xl font-light text-teal-100 sm:text-4xl">
-                  {title}
-                </h1>
-                <p className="w-full mt-3 text-xl font-medium tracking-wide text-teal-100 lg:text-2xl sm:font-light">{subtitle}</p>
-                {
-                  date
-                    ?
-                      <p className="w-full mt-2 font-serif text-sm italic text-stone-200 sm:text-base">{date}</p>
-                    : null
-                }
-              </>
-            :
-              <>
-                <h1 className="text-3xl font-light text-center text-teal-100 sm:text-4xl">
-                  {title}
-                </h1>
-                <p className="mt-3 text-xl font-medium tracking-wide text-center text-teal-100 lg:text-2xl sm:font-light">{subtitle}</p>
-              </>
-          }
-        </div>
-      </div>
-    </React.Fragment>
+    <div className={classList.formattedBanner}>
+      <h2 className={classList.formattedHeading}>
+        {children}
+      </h2>
+    </div>
   )
 }
 

@@ -2,10 +2,12 @@ import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 
 import Banner from '../../components/banner'
+import Card from '../../components/card'
+import Jumbotron from '../../components/jumbotron'
 import Layout from '../../components/layout'
+import Main from '../../components/main'
 import Section from '../../components/section'
 import SEO from '../../components/seo'
-import Main from '../../components/main'
 import Tag from '../../components/tag'
 
 
@@ -40,7 +42,7 @@ const ProjectsListPage = ({
         metaDescription="Peruse a selection of my recent projects."
         canonicalUrl="https://jillian.dev/projects/"
       />
-      <Banner
+      <Jumbotron
         title={
           <>
             <span className="hidden sm:inline-block">
@@ -57,13 +59,15 @@ const ProjectsListPage = ({
             </span>
           </>
         }
-        // subTitle={<span className="text-teal-100">Designer, Full Stack Developer, &amp; Tech Lead</span>}
       />
       <Main>
         <Section background="transparent" className="mb-8 -mt-12">
-          <div className="max-w-xs px-10 py-2 mb-10 -ml-10 rounded shadow-lg bg-cyan-300 w-max sm:px-24 sm:-ml-24 sm:max-w-none">
-            <h2 className="text-xl tracking-wide text-cyan-900 sm:text-2xl">GitHub</h2>
-          </div>
+          <Banner
+            color="cyan"
+            pageType="listPage"
+          >
+            GitHub
+          </Banner>
           <div className="grid grid-flow-row-dense gap-8">
           {
             projectsListData.allProjectsJson.edges.map((edge, index) => {
@@ -77,80 +81,30 @@ const ProjectsListPage = ({
 
               return(
                 <React.Fragment key={`item-${index}`}>
-                  {section === 'github' && active
+                  {section === 'github'
                     ?
-                      <a
-                        href={path}
-                        className="block overflow-hidden transition shadow-lg hover:shadow-xl focus:shadow-xl active:shadow-sm duration-200 rounded-lg bg-sky-100 focus:bg-sky-50 focus:outline-none focus:ring-4  focus:ring-sky-200 focus:ring-opacity-50 border-0 border-l-8 border-sky-400 hover:border-sky-500 focus:border-sky-600 transform focus:-translate-y-0.5 hover:-translate-y-0.5 active:translate-y-0.5 ease-in-out group px-4 sm:px-8 py-6"
-                      >
-                        <h2 className="w-11/12 text-xl tracking-wider text-sky-900">
-                          {title}
-                        </h2>
-                        <p className="font-serif text-sm italic tracking-wider text-sky-700">
-                          {date}
-                        </p>
-                        <div className="flex flex-wrap mt-2">
-                          {
-                            tags.map((tag, index) => {
-                              return (
-                                <Tag
-                                  card={true}
-                                  key={`item-${index}`}
-                                  tagColor="sky"
-                                >
-                                  {tag}
-                                </Tag>
-                              )
-                            })
-                          }
-                        </div>
-                        <p className="mt-4 text-base tracking-wider text-sky-700">
-                          {excerpt}
-                        </p>
-                        <div className="flex flex-row-reverse">
-                          <i className="mt-2 text-xl transition duration-150 ease-in-out border-b-4 rounded-sm border-sky-100 fas fa-arrow-right text-sky-400 group-focus:text-sky-600 group-hover:text-sky-500 group-hover:border-sky-500 group-focus:border-sky-600 pb-0.5" />
-                        </div>
-                      </a>
-                    : null
-                  }
-
-                  {section === 'github' && !active
-                    ?
-                      <div
-                        className="block px-4 py-6 overflow-hidden border-0 border-l-8 rounded-lg shadow-lg bg-sky-100 border-sky-400 sm:px-8"
-                      >
-                        <h2 className="w-11/12 text-xl tracking-wider text-sky-900">
-                          {title}
-                        </h2>
-                        <p className="font-serif text-sm italic tracking-wider text-sky-700">
-                          {date}
-                        </p>
-                        <div className="flex flex-wrap mt-2">
-                          {
-                            tags.map((tag, index) => {
-                              return (
-                                <Tag
-                                  card={true}
-                                  key={`item-${index}`}
-                                  tagColor="sky"
-                                >
-                                  {tag}
-                                </Tag>
-                              )
-                            })
-                          }
-                        </div>
-                        <p className="mt-4 text-base tracking-wider text-sky-700">
-                          {excerpt}
-                        </p>
-                        <div className="flex flex-row-reverse">
-                          <div className="mt-2 px-3 py-0.5 rounded-lg shadow w-max bg-sky-50">
-                            <span className="w-11/12 text-lg tracking-wider text-sky-600">
-                              Coming soon
-                            </span>
-                          </div>
-                        </div>
-                      </div>
+                      <Card
+                        color="sky"
+                        date={date}
+                        excerpt={excerpt}
+                        external={true}
+                        published={active ? true : false}
+                        title={title}
+                        to={path}
+                        tags={
+                          tags.map((tag, index) => {
+                            return (
+                              <Tag
+                                card={true}
+                                key={`item-${index}`}
+                                tagColor="sky"
+                              >
+                                {tag}
+                              </Tag>
+                            )
+                          })
+                        }
+                      />
                     : null
                   }
                 </React.Fragment>
@@ -160,9 +114,12 @@ const ProjectsListPage = ({
           </div>
         </Section>
         <Section background="transparent" className="mb-8">
-          <div className="max-w-xs px-10 py-2 mb-10 -ml-10 rounded shadow-lg bg-rose-300 w-max sm:px-24 sm:-ml-24 sm:max-w-none">
-            <h2 className="text-xl tracking-wide text-rose-900 sm:text-2xl">CodePen</h2>
-          </div>
+          <Banner
+            color="rose"
+            pageType="listPage"
+          >
+            CodePen
+          </Banner>
           <div className="grid grid-flow-row-dense gap-8">
           {
             projectsListData.allProjectsJson.edges.map((edge, index) => {
@@ -176,80 +133,30 @@ const ProjectsListPage = ({
 
               return(
                 <React.Fragment key={`item-${index}`}>
-                  {section === 'codepen' && active
+                  {section === 'codepen'
                     ?
-                      <a
-                        href={path}
-                        className="block overflow-hidden transition shadow-lg hover:shadow-xl focus:shadow-xl active:shadow-sm duration-200 rounded-lg bg-rose-100 focus:bg-rose-50 focus:outline-none focus:ring-4  focus:ring-rose-200 focus:ring-opacity-50 border-0 border-l-8 border-rose-400 hover:border-rose-500 focus:border-rose-600 transform focus:-translate-y-0.5 hover:-translate-y-0.5 active:translate-y-0.5 ease-in-out group px-4 sm:px-8 py-6"
-                      >
-                        <h2 className="w-11/12 text-xl tracking-wider text-rose-900">
-                          {title}
-                        </h2>
-                        <p className="font-serif text-sm italic tracking-wider text-rose-700">
-                          {date}
-                        </p>
-                        <div className="flex flex-wrap mt-2">
-                          {
-                            tags.map((tag, index) => {
-                              return (
-                                <Tag
-                                  card={true}
-                                  key={`item-${index}`}
-                                  tagColor="rose"
-                                >
-                                  {tag}
-                                </Tag>
-                              )
-                            })
-                          }
-                        </div>
-                        <p className="mt-4 text-base tracking-wider text-rose-700">
-                          {excerpt}
-                        </p>
-                        <div className="flex flex-row-reverse">
-                          <i className="mt-2 text-xl transition duration-150 ease-in-out border-b-4 rounded-sm border-rose-100 fas fa-arrow-right text-rose-400 group-focus:text-rose-600 group-hover:text-rose-500 group-hover:border-rose-500 group-focus:border-rose-600 pb-0.5" />
-                        </div>
-                      </a>
-                    : null
-                  }
-
-                  {section === 'codepen' && !active
-                    ?
-                      <div
-                        className="block px-4 py-6 overflow-hidden border-0 border-l-8 rounded-lg shadow-lg bg-rose-100 border-rose-400 sm:px-8"
-                      >
-                        <h2 className="w-11/12 text-xl tracking-wider text-rose-900">
-                          {title}
-                        </h2>
-                        <p className="font-serif text-sm italic tracking-wider text-rose-700">
-                          {date}
-                        </p>
-                        <div className="flex flex-wrap mt-2">
-                          {
-                            tags.map((tag, index) => {
-                              return (
-                                <Tag
-                                  card={true}
-                                  key={`item-${index}`}
-                                  tagColor="rose"
-                                >
-                                  {tag}
-                                </Tag>
-                              )
-                            })
-                          }
-                        </div>
-                        <p className="mt-4 text-base tracking-wider text-rose-700">
-                          {excerpt}
-                        </p>
-                        <div className="flex flex-row-reverse">
-                          <div className="mt-2 px-3 py-0.5 rounded-lg shadow w-max bg-rose-50">
-                            <span className="w-11/12 text-lg tracking-wider text-rose-600">
-                              Coming soon
-                            </span>
-                          </div>
-                        </div>
-                      </div>
+                      <Card
+                        color="rose"
+                        date={date}
+                        excerpt={excerpt}
+                        external={true}
+                        published={active ? true : false}
+                        title={title}
+                        to={path}
+                        tags={
+                          tags.map((tag, index) => {
+                            return (
+                              <Tag
+                                card={true}
+                                key={`item-${index}`}
+                                tagColor="rose"
+                              >
+                                {tag}
+                              </Tag>
+                            )
+                          })
+                        }
+                      />
                     : null
                   }
                 </React.Fragment>
@@ -259,9 +166,12 @@ const ProjectsListPage = ({
           </div>
         </Section>
         <Section background="transparent" className="mb-8">
-          <div className="max-w-xs px-10 py-2 mb-10 -ml-10 bg-yellow-300 rounded shadow-lg w-max sm:px-24 sm:-ml-24 sm:max-w-none">
-            <h2 className="text-xl tracking-wide text-yellow-900 sm:text-2xl">BSCS Science Learning</h2>
-          </div>
+          <Banner
+            color="yellow"
+            pageType="listPage"
+          >
+            BSCS Science Learning
+          </Banner>
           <div className="grid grid-flow-row-dense gap-8">
           {
             projectsListData.allProjectsJson.edges.map((edge, index) => {
@@ -275,80 +185,30 @@ const ProjectsListPage = ({
 
               return(
                 <React.Fragment key={`item-${index}`}>
-                  {section === 'bscs' && active
+                  {section === 'bscs'
                     ?
-                      <a
-                        href={path}
-                        className="block overflow-hidden transition shadow-lg hover:shadow-xl focus:shadow-xl active:shadow-sm duration-200 rounded-lg bg-yellow-100 focus:bg-yellow-50 focus:outline-none focus:ring-4  focus:ring-yellow-200 focus:ring-opacity-50 border-0 border-l-8 border-yellow-500 hover:border-yellow-600 focus:border-yellow-600 transform focus:-translate-y-0.5 hover:-translate-y-0.5 active:translate-y-0.5 ease-in-out group px-4 sm:px-8 py-6"
-                      >
-                        <h2 className="w-11/12 text-xl tracking-wider text-yellow-900">
-                          {title}
-                        </h2>
-                        <p className="font-serif text-sm italic tracking-wider text-yellow-700">
-                          {date}
-                        </p>
-                        <div className="flex flex-wrap mt-2">
-                          {
-                            tags.map((tag, index) => {
-                              return (
-                                <Tag
-                                  card={true}
-                                  key={`item-${index}`}
-                                  tagColor="yellow"
-                                >
-                                  {tag}
-                                </Tag>
-                              )
-                            })
-                          }
-                        </div>
-                        <p className="mt-4 text-base tracking-wider text-yellow-700">
-                          {excerpt}
-                        </p>
-                        <div className="flex flex-row-reverse">
-                          <i className="mt-2 text-xl transition duration-150 ease-in-out border-b-4 rounded-sm border-yellow-100 fas fa-arrow-right text-yellow-500 group-focus:text-yellow-600 group-hover:text-yellow-600 group-hover:border-yellow-600 group-focus:border-yellow-600 pb-0.5" />
-                        </div>
-                      </a>
-                    : null
-                  }
-
-                  {section === 'bscs' && !active
-                    ?
-                      <div
-                        className="block px-4 py-6 overflow-hidden bg-yellow-100 border-0 border-l-8 border-yellow-400 rounded-lg shadow-lg sm:px-8"
-                      >
-                        <h2 className="w-11/12 text-xl tracking-wider text-yellow-900">
-                          {title}
-                        </h2>
-                        <p className="font-serif text-sm italic tracking-wider text-yellow-700">
-                          {date}
-                        </p>
-                        <div className="flex flex-wrap mt-2">
-                          {
-                            tags.map((tag, index) => {
-                              return (
-                                <Tag
-                                  card={true}
-                                  key={`item-${index}`}
-                                  tagColor="yellow"
-                                >
-                                  {tag}
-                                </Tag>
-                              )
-                            })
-                          }
-                        </div>
-                        <p className="mt-4 text-base tracking-wider text-yellow-700">
-                          {excerpt}
-                        </p>
-                        <div className="flex flex-row-reverse">
-                          <div className="mt-2 px-3 py-0.5 rounded-lg shadow w-max bg-yellow-50">
-                            <span className="w-11/12 text-lg tracking-wider text-yellow-700">
-                              Coming soon
-                            </span>
-                          </div>
-                        </div>
-                      </div>
+                      <Card
+                        color="yellow"
+                        date={date}
+                        excerpt={excerpt}
+                        external={true}
+                        published={active ? true : false}
+                        title={title}
+                        to={path}
+                        tags={
+                          tags.map((tag, index) => {
+                            return (
+                              <Tag
+                                card={true}
+                                key={`item-${index}`}
+                                tagColor="yellow"
+                              >
+                                {tag}
+                              </Tag>
+                            )
+                          })
+                        }
+                      />
                     : null
                   }
                 </React.Fragment>
