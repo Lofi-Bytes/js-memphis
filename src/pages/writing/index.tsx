@@ -61,7 +61,7 @@ const WritingPostListPage = ({
       <Main>
         <Section background="transparent" className="mb-8 -mt-12">
           <Banner
-            color="rose"
+            color="purple"
             pageType="listPage"
           >
             Software development

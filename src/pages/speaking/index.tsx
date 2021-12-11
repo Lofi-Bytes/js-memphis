@@ -58,7 +58,7 @@ const SpeakingListPage = ({
       <Main>
         <Section background="transparent" className="mb-8 -mt-12">
           <Banner
-            color="cyan"
+            color="rose"
             pageType="listPage"
           >
             Invited talks

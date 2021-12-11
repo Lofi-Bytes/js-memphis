@@ -102,6 +102,7 @@ const ICON: string = `
 const CARD_ROSE: string = `
   bg-rose-100
   border-rose-400
+  shadow-rose-600/50
 `
 
 const CARD_ROSE_PUBLISHED: string = `
@@ -138,6 +139,7 @@ const ICON_ROSE_PUBLISHED: string = `
 const CARD_SKY: string = `
   bg-sky-100
   border-sky-400
+  shadow-sky-600/50
 `
 
 const CARD_SKY_PUBLISHED: string = `
@@ -174,6 +176,7 @@ const ICON_SKY_PUBLISHED: string = `
 const CARD_VIOLET: string = `
   bg-violet-100
   border-violet-400
+  shadow-violet-600/50
 `
 
 const CARD_VIOLET_PUBLISHED: string = `
@@ -210,6 +213,7 @@ const ICON_VIOLET_PUBLISHED: string = `
 const CARD_YELLOW: string = `
   bg-yellow-100
   border-yellow-500
+  shadow-yellow-600/50
 `
 
 const CARD_YELLOW_PUBLISHED: string = `
