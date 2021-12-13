@@ -24,7 +24,9 @@ export type ClassListTypes = {
   formattedTitle: string,
   formattedDate: string,
   formattedExcerpt: string,
-  formattedIcon: string
+  formattedIcon: string,
+  formattedComingSoonButton: string
+  formattedComingSoonButtonText: string
 }
 
 const CARD: string = `
@@ -99,6 +101,21 @@ const ICON: string = `
   pb-0.5
 `
 
+const COMING_SOON_BUTTON: string = `
+  mt-2
+  px-3
+  py-0.5
+  rounded-lg
+  shadow
+  w-max
+`
+
+const COMING_SOON_BUTTON_TEXT: string = `
+  text-lg
+  tracking-wider
+  w-11/12
+`
+
 const CARD_ROSE: string = `
   bg-rose-100
   border-rose-400
@@ -134,6 +151,14 @@ const ICON_ROSE_PUBLISHED: string = `
   group-focus:text-rose-600
   group-hover:border-rose-500
   group-hover:text-rose-500
+`
+
+const COMING_SOOON_BUTTON_ROSE: string = `
+  bg-rose-50
+`
+
+const COMING_SOON_BUTTON_TEXT_ROSE: string = `
+  text-rose-600
 `
 
 const CARD_SKY: string = `
@@ -173,6 +198,14 @@ const ICON_SKY_PUBLISHED: string = `
   group-hover:text-sky-500
 `
 
+const COMING_SOOON_BUTTON_SKY: string = `
+  bg-sky-50
+`
+
+const COMING_SOON_BUTTON_TEXT_SKY: string = `
+  text-sky-600
+`
+
 const CARD_VIOLET: string = `
   bg-violet-100
   border-violet-400
@@ -208,6 +241,15 @@ const ICON_VIOLET_PUBLISHED: string = `
   group-focus:text-violet-600
   group-hover:border-violet-500
   group-hover:text-violet-500
+`
+
+const COMING_SOOON_BUTTON_VIOLET: string = `
+  bg-violet-50
+`
+
+
+const COMING_SOON_BUTTON_TEXT_VIOLET: string = `
+  text-violet-600
 `
 
 const CARD_YELLOW: string = `
@@ -247,6 +289,14 @@ const ICON_YELLOW_PUBLISHED: string = `
   group-hover:text-yellow-600
 `
 
+const COMING_SOOON_BUTTON_YELLOW: string = `
+  bg-yellow-50
+`
+
+const COMING_SOON_BUTTON_TEXT_YELLOW: string = `
+  text-yellow-700
+`
+
 const Card = ({
   color,
   date,
@@ -265,13 +315,17 @@ const Card = ({
     dateStyles: string,
     excerptStyles: string,
     iconStyles: string,
-    iconPublishedStyles: string
+    iconPublishedStyles: string,
+    comingSoonButtonStyles: string,
+    comingSoonButtonTextStyles: string
   ) => {
     let formattedCard: string
     let formattedTitle: string
     let formattedDate: string
     let formattedExcerpt: string
     let formattedIcon: string
+    let formattedComingSoonButton: string
+    let formattedComingSoonButtonText: string
 
     if (published) {
       formattedCard = joinStrings(
@@ -295,10 +349,15 @@ const Card = ({
         formatClassList(CARD),
         formatClassList(cardStyles),
       )
-      formattedIcon = joinStrings(
+      formattedComingSoonButton = joinStrings(
         ' ',
-        formatClassList(ICON),
-        formatClassList(iconStyles)
+        formatClassList(COMING_SOON_BUTTON),
+        formatClassList(comingSoonButtonStyles)
+      )
+      formattedComingSoonButtonText = joinStrings(
+        ' ',
+        formatClassList(COMING_SOON_BUTTON_TEXT),
+        formatClassList(comingSoonButtonTextStyles)
       )
     }
     formattedTitle = joinStrings(
@@ -322,7 +381,9 @@ const Card = ({
       formattedTitle,
       formattedDate,
       formattedExcerpt,
-      formattedIcon
+      formattedIcon,
+      formattedComingSoonButton,
+      formattedComingSoonButtonText
     }
   }
 
@@ -336,7 +397,9 @@ const Card = ({
       DATE_ROSE,
       EXCERPT_ROSE,
       ICON_ROSE,
-      ICON_ROSE_PUBLISHED
+      ICON_ROSE_PUBLISHED,
+      COMING_SOOON_BUTTON_ROSE,
+      COMING_SOON_BUTTON_TEXT_ROSE
     )
   }
 
@@ -348,7 +411,9 @@ const Card = ({
       DATE_SKY,
       EXCERPT_SKY,
       ICON_SKY,
-      ICON_SKY_PUBLISHED
+      ICON_SKY_PUBLISHED,
+      COMING_SOOON_BUTTON_SKY,
+      COMING_SOON_BUTTON_TEXT_SKY
     )
   }
 
@@ -360,7 +425,9 @@ const Card = ({
       DATE_VIOLET,
       EXCERPT_VIOLET,
       ICON_VIOLET,
-      ICON_VIOLET_PUBLISHED
+      ICON_VIOLET_PUBLISHED,
+      COMING_SOOON_BUTTON_VIOLET,
+      COMING_SOON_BUTTON_TEXT_VIOLET
     )
   }
 
@@ -372,7 +439,9 @@ const Card = ({
       DATE_YELLOW,
       EXCERPT_YELLOW,
       ICON_YELLOW,
-      ICON_YELLOW_PUBLISHED
+      ICON_YELLOW_PUBLISHED,
+      COMING_SOOON_BUTTON_YELLOW,
+      COMING_SOON_BUTTON_TEXT_YELLOW
     )
   }
 
@@ -425,7 +494,11 @@ const Card = ({
                     {excerpt}
                   </p>
                   <div className={formattedIconRow}>
-                    <i className={classList.formattedIcon} />
+                    <div className={classList.formattedComingSoonButton}>
+                      <span className={classList.formattedComingSoonButtonText}>
+                        Coming soon
+                      </span>
+                    </div>
                   </div>
                 </div>
           :
