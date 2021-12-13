@@ -4,17 +4,19 @@ import { useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
 import Avatar from '../components/avatar'
+import Banner from '../components/banner/banner'
 import Button from '../components/button'
 import ContactForm from '../components/contact-form'
+import H3 from '../components/content-heading'
 import Jumbotron from '../components/jumbotron'
 import Layout from '../components/layout'
 import Main from '../components/main'
+import P from '../components/paragraph'
 import Section from '../components/section'
-import Banner from '../components/banner/banner'
 import SEO from '../components/seo'
 import SocialIconRow from '../components/social-icon-row'
 import TextLink from '../components/text-link'
-
+import UL from '../components/unordered-list'
 
 type PageProps = {
   location: Location
@@ -55,9 +57,9 @@ const AboutPage = ({
           <i className="absolute text-6xl fal fa-bolt text-emerald-300 -right-2 bottom-64 sm:-right-4 sm:bottom-48 sm:text-7xl lg:-right-4 lg:bottom-48 lg:text-8xl transofrm rotate-12 transform-gpu" />
 
           <h2 className="mt-10 text-2xl tracking-wide text-stone-700">Jillian S. Estrella <br className="sm:hidden" /><span className="text-xl text-stone-600">🏳️‍🌈 she/her 🏳️‍⚧️</span></h2>
-          <p className="mt-1 text-xl leading-relaxed tracking-wider text-stone-600">
+          <P className="mt-1 text-xl">
             Design systems engineer
-          </p>
+          </P>
           <SocialIconRow className="mt-3" />
           <Button
             action="tertiary"
@@ -79,13 +81,13 @@ const AboutPage = ({
             >
               Northwestern Mutual
             </TextLink>
-            <p className="hidden leading-relaxed tracking-wider text-stone-600 sm:block">
+            <P className="hidden sm:block">
               2021 - Present
-            </p>
+            </P>
           </div>
-          <p className="mt-3 leading-relaxed tracking-wider text-stone-600">
+          <P className="mt-3">
             I’m soooo excited‼️ to share that starting in July I will be joining the design system team at Northwestern Mutual, where I will be leading the contributions and integrations branch for their design system, Luna.
-          </p>
+          </P>
           <h2 className="mt-10 text-xl tracking-wide text-stone-700">Previous Work</h2>
           <div className="items-center justify-between mt-3 uppercase border-b border-pink-400 border-dotted d-block sm:flex">
             <TextLink
@@ -96,25 +98,25 @@ const AboutPage = ({
             >
               BSCS Science Learning
             </TextLink>
-            <p className="hidden leading-relaxed tracking-wider text-stone-600 sm:block">
+            <P className="hidden sm:block">
               2015 - 2021
-            </p>
+            </P>
           </div>
-          <p className="mt-3 leading-relaxed tracking-wider text-stone-600">
+          <P className="mt-3">
             Previously, I worked for a nonprofit organization, <TextLink to="https://bscs.org/" title="" external={true}>BSCS Science Learning</TextLink>, whose mission is to transform science teaching and learning through research-driven innovation.
-          </p>
-          {/* <p className="mt-4 leading-relaxed tracking-wider text-stone-600">
+          </P>
+          {/* <P className="mt-4">
             At BSCS Science Learning, we operate on federal and private grants. The nature of this work requires our small team to build many websites and web apps every year. To keep up with demaind, we must ensure that our infrastructure is agile enough to meet the needs of a diverse range of projects while staying within budget, meeting strict deadlines, and reducing both the cost of ongoing maintenance and technical debt.
-          </p> */}
-          <p className="mt-4 leading-relaxed tracking-wider text-stone-600">
+          </P> */}
+          <P className="mt-4">
             A critical part of my role within BSCS was to improve the experience for the developer, designer, and user. During my time with BSCS, I oversaw the adoption of innovative approaches to software and design such as <i className="text-pink-300 fas fa-heart" /> <TextLink to="https://www.invisionapp.com/inside-design/guide-to-design-systems/" title="" external={true}>design systems</TextLink>; <TextLink to="https://medium.com/omarelgabrys-blog/component-based-architecture-3c3c23c7e348" title="" external={true}>component based</TextLink>, <TextLink to="https://martinfowler.com/articles/serverless.html" title="" external={true}>serverless</TextLink>, <TextLink to="https://martinfowler.com/articles/microservices.html" title="" external={true}> and microservice</TextLink> architectures; and the beloved <i className="text-pink-300 fas fa-heart" /> <TextLink to="https://jamstack.org/" title="" external={true}>Jamstack</TextLink>.
-          </p>
-          <p className="mt-4 leading-relaxed tracking-wider text-stone-600">
+          </P>
+          <P className="mt-4">
             These innovations allowed my small team to keep pace with increasing demand. We were able to create BSCS's digital products with more efficiency and at a higher quality with lower product support costs.
-          </p>
-          <p className="mt-4 leading-relaxed tracking-wider text-stone-600">
+          </P>
+          <P className="mt-4">
             A typical day for me involved architecting solutions to complex problems, overseeing BSCS's digital products throughout their lifecycle, guiding and mentoring my team, and designing/building UI's and UI components.
-          </p>
+          </P>
           <div className="items-center justify-between mt-8 uppercase border-b border-pink-400 border-dotted d-block sm:flex">
             {/* <TextLink
               to="https://umich.edu/"
@@ -125,21 +127,21 @@ const AboutPage = ({
               Physics and Astronomy
             </TextLink> */}
             Astronomy and Physics
-            <p className="hidden leading-relaxed tracking-wider text-stone-600 sm:block">
+            <P className="hidden sm:block">
               2014 - 2015
-            </p>
+            </P>
           </div>
-          <p className="mt-3 leading-relaxed tracking-wider text-stone-600">
+          <P className="mt-3">
             Prior to my career in software development, I was an astronomy and physics instructor. My courses introduced students to the skills required to think critically about the physical world and offered students experience in solving real-world problems.
-          </p>
-          <p className="mt-4 leading-relaxed tracking-wider text-stone-600">
+          </P>
+          <P className="mt-4">
             In graduate school, I did research on the space environment of planets and comets. Colloquially known as “space weather,” my research investigated how the solar wind affects the magnetospheres, ionospheres, and upper atmospheres of these objects.
-          </p>
+          </P>
 
           {/* <h2 className="mt-10 text-xl tracking-wide text-stone-700">Education</h2>
-          <p className="mt-3 leading-relaxed tracking-wider text-stone-600">
+          <P className="mt-3">
             I hold an <TextLink to="https://en.wikipedia.org/wiki/Master_of_Science#United_States" title="" external={true}>M.S.</TextLink> in <TextLink to="https://clasp.engin.umich.edu/" title="" external={true}>Atmospheric and Space Science</TextLink> and a <TextLink to="https://en.wikipedia.org/wiki/Graduate_certificate#United_States" title="" external={true}>GradCert</TextLink> in <TextLink to="https://micde.umich.edu/" title="" external={true}>Computer Science and Engineering</TextLink> from <TextLink to="https://umich.edu/" title="" external={true}>The University of Michigan, Ann Arbor</TextLink>. I did my undergraduate studies at <TextLink to="https://www.colorado.edu/" title="" external={true}>The University of Colorado, Boulder</TextLink> where I earned a <TextLink to="https://en.wikipedia.org/wiki/Bachelor%27s_degree" title="" external={true}>B.A.</TextLink> in <TextLink to="https://www.colorado.edu/aps/" title="" external={true}>Astrophysical, Planetary, and Atmospheric Science</TextLink> and a <TextLink to="https://en.wikipedia.org/wiki/Bachelor%27s_degree" title="" external={true}>B.A.</TextLink> in <TextLink to="https://www.colorado.edu/physics/" title="" external={true}>Physics</TextLink>.
-          </p> */}
+          </P> */}
 
           <h2 className="mt-10 text-xl tracking-wide text-stone-700">Education</h2>
           <div className="items-center justify-between mt-3 uppercase border-b border-pink-400 border-dotted d-block sm:flex">
@@ -151,13 +153,13 @@ const AboutPage = ({
             >
               University of Michigan
             </TextLink>
-            <p className="hidden leading-relaxed tracking-wider text-stone-600 sm:block">
+            <P className="hidden sm:block">
               Ann Arbor, MI
-            </p>
+            </P>
           </div>
           <div className="flex items-start justify-between mt-4">
             <div>
-              <p className="font-serif italic leading-relaxed tracking-wider text-stone-600">
+              <P className="font-serif italic">
                 <TextLink
                   to="https://en.wikipedia.org/wiki/Master_of_Science#United_States"
                   title=""
@@ -167,17 +169,17 @@ const AboutPage = ({
                   title=""
                   external={true}
                 >Atmospheric and Space Science</TextLink>
-              </p>
+              </P>
             </div>
-            <p className="hidden leading-relaxed tracking-wider text-stone-600 sm:block">05/2014</p>
+            <P className="hidden sm:block">05/2014</P>
           </div>
-          <p className="mx-6 mt-3 leading-relaxed tracking-wider text-stone-600">
+          <P className="mx-6 mt-3">
             My studies focused on the theory of plasma physics, electromagnetism, fluid dynamics, atmospheric radiative transfer and their applications to solar physics and planetary science.
-          </p>
+          </P>
 
           <div className="flex items-start justify-between mt-4">
             <div>
-              <p className="font-serif italic leading-relaxed tracking-wider text-stone-600">
+              <P className="font-serif italic">
                 <TextLink
                   to="https://en.wikipedia.org/wiki/Graduate_certificate#United_States"
                   title=""
@@ -187,13 +189,13 @@ const AboutPage = ({
                   title=""
                   external={true}
                 >Computational Discovery and Engineering</TextLink>
-              </p>
+              </P>
             </div>
-            <p className="hidden leading-relaxed tracking-wider text-stone-600 sm:block">07/2014</p>
+            <P className="hidden sm:block">07/2014</P>
           </div>
-          <p className="mx-6 mt-3 leading-relaxed tracking-wider text-stone-600">
+          <P className="mx-6 mt-3">
             Emphasis was placed on numerical analysis, algorithms, and computational techniques for solving and analyzing physics and engineering problems.
-          </p>
+          </P>
 
           <div className="items-center justify-between mt-8 uppercase border-b border-pink-400 border-dotted d-block sm:flex">
             <TextLink
@@ -204,14 +206,14 @@ const AboutPage = ({
             >
               University of Colorado
             </TextLink>
-            <p className="hidden leading-relaxed tracking-wider text-stone-600 sm:block">
+            <P className="hidden sm:block">
               Boulder, CO
-            </p>
+            </P>
           </div>
 
           <div className="flex items-start justify-between mt-4">
             <div>
-              <p className="font-serif italic leading-relaxed tracking-wider text-stone-600">
+              <P className="font-serif italic">
                 <TextLink
                   to="https://en.wikipedia.org/wiki/Bachelor%27s_degree"
                   title=""
@@ -221,17 +223,17 @@ const AboutPage = ({
                   title=""
                   external={true}
                 >Physics</TextLink>
-              </p>
+              </P>
             </div>
-            <p className="hidden leading-relaxed tracking-wider text-stone-600 sm:block">08/2010</p>
+            <P className="hidden sm:block">08/2010</P>
           </div>
-          <p className="mx-6 mt-3 leading-relaxed tracking-wider text-stone-600">
+          <P className="mx-6 mt-3">
             I gained a strong foundation in classical mechanics, modern physics, electromagnetics, quantum mechanics, thermodynamics, condensed matter physics, nuclear & particle physics, plasma physics, circuit theory & design, and certified to design and machine custom parts for laboratory experiments in the physics department's state of the art machine shop.
-          </p>
+          </P>
 
           <div className="flex items-start justify-between mt-4">
             <div>
-              <p className="font-serif italic leading-relaxed tracking-wider text-stone-600">
+              <P className="font-serif italic">
                 <TextLink
                   to="https://en.wikipedia.org/wiki/Bachelor%27s_degree"
                   title=""
@@ -241,13 +243,13 @@ const AboutPage = ({
                   title=""
                   external={true}
                 >Astrophysical, Planetary, and Atmospheric Science</TextLink>
-              </p>
+              </P>
             </div>
-            <p className="hidden leading-relaxed tracking-wider text-stone-600 sm:block">08/2010</p>
+            <P className="hidden sm:block">08/2010</P>
           </div>
-          <p className="mx-6 mt-3 leading-relaxed tracking-wider text-stone-600">
+          <P className="mx-6 mt-3">
             I studied, in-depth, the current understanding of most astrophysical phenomena such as geophysics, atmospheric & planetary science, stellar structure & evolution, galaxies, neutron stars, and black holes.
-          </p>
+          </P>
 
           <h2 className="mt-10 text-xl tracking-wide text-stone-700">Extracurricular Interests</h2>
 
@@ -267,9 +269,9 @@ const AboutPage = ({
             alt="Jillian's avatar."
           />
 
-          <p className="mt-3 leading-relaxed tracking-wider text-stone-600">
+          <P className="mt-3">
             In my free time I enjoy spending time with my beautiful family, adventuring in our van (<TextLink to="https://www.instagram.com/explore/tags/vanlife/?hl=en" title="" external={true}>#vanlife</TextLink>), practicing yoga, mountain biking, and I read a lot.
-          </p>
+          </P>
           {/* <div
             className="w-full mx-auto mt-12 md:w-3/4"
           >

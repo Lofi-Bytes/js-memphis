@@ -4,19 +4,22 @@ import { useStaticQuery, graphql } from 'gatsby'
 import { formatDate } from '../../utils/utils'
 
 import Alert from '../../components/alert'
+import Banner from '../../components/banner/banner'
 import Button from '../../components/button'
 import CodeContainer from '../../components/code-container'
+import H3 from '../../components/content-heading'
 import Jumbotron from '../../components/jumbotron'
 import Layout from '../../components/layout'
 import Main from '../../components/main'
 import NextPrev from '../../components/next-prev'
+import P from '../../components/paragraph'
 import Section from '../../components/section'
 import SEO from '../../components/seo'
 import Tag from '../../components/tag'
 import TextLink from '../../components/text-link'
+import UL from '../../components/unordered-list'
 
 import Prism from 'prismjs'
-import Banner from '../../components/banner/banner'
 
 
 type PageProps = {
@@ -472,8 +475,8 @@ const BeautifulWebFormsJamstackTailwindCSSPage = ({
             <i className="fas fa-arrow-left" />&nbsp;&nbsp;Back to article list
           </Button>
 
-          <h3 className="mt-10 text-xl tracking-wide text-stone-700">Introduction</h3>
-          <p className="mt-3 leading-relaxed tracking-wider text-stone-600">
+          <H3 className="mt-10">Introduction</H3>
+          <P className="mt-3">
             Form elements are not always the easiest to style. <TextLink
                 to="https://github.com/tailwindlabs/tailwindcss-forms"
                 title=""
@@ -487,12 +490,12 @@ const BeautifulWebFormsJamstackTailwindCSSPage = ({
               >
                 Tailwind CSS
               </TextLink> utility classes. @tailwindcss/forms is designed for Tailwind CSS v2.0 and replaces <TextLink to="https://github.com/tailwindlabs/tailwindcss-custom-forms" title="" external={true}>tailwindcss-custom-forms</TextLink> which was designed to work with Tailwind CSS v1.0.
-          </p>
+          </P>
 
-          <h3 className="mt-10 text-xl tracking-wide text-stone-700">Getting Started</h3>
-          <p className="mt-3 leading-relaxed tracking-wider text-stone-600">
+          <H3 className="mt-10">Getting Started</H3>
+          <P className="mt-3">
             Starting with @tailwindcss/forms is fairly routine. Install the plugin:
-          </p>
+          </P>
           <CodeContainer
             language="bash"
             lineNumbers={true}
@@ -502,9 +505,9 @@ const BeautifulWebFormsJamstackTailwindCSSPage = ({
           >
             {install}
           </CodeContainer>
-          <p className="mt-8 leading-relaxed tracking-wider text-stone-600">
+          <P className="mt-8">
             Then add the plugin to your <code className="language-bash">tailwind.config.js</code> file:
-          </p>
+          </P>
           <CodeContainer
             language="js"
             lineNumbers={true}
@@ -514,10 +517,10 @@ const BeautifulWebFormsJamstackTailwindCSSPage = ({
           >
             {tailwindConfig}
           </CodeContainer>
-          <h3 className="mt-10 text-xl tracking-wide text-stone-700">Usage</h3>
-          <p className="mt-3 leading-relaxed tracking-wider text-stone-600">
+          <H3 className="mt-10">Usage</H3>
+          <P className="mt-3">
             I found that the easiest way to get started is to look at the provided <TextLink to="https://tailwindcss-forms.vercel.app/" title="" external={true}>live demo examples</TextLink>. For this post, we will recreate the contact form found on the homepage of <TextLink to="/" title="" external={false}>jillian.dev</TextLink>. We will start by using dev tools to copy the underline-style form example and modify the fields as needed (also adjusting the HTML to be valid JSX/TSX):
-          </p>
+          </P>
           <CodeContainer
             language="tsx"
             lineNumbers={true}
@@ -527,9 +530,9 @@ const BeautifulWebFormsJamstackTailwindCSSPage = ({
           >
             {initialForm}
           </CodeContainer>
-          <p className="mt-8 leading-relaxed tracking-wider text-stone-600">
+          <P className="mt-8">
             Which should display like this:
-          </p>
+          </P>
           <div className="mx-auto md:w-10/12">
             <div className="px-8 py-4 mt-4 bg-white rounded shadow" style={{ backgroundColor: 'white' }}>
               <div className="grid grid-cols-1 gap-6">
@@ -548,9 +551,9 @@ const BeautifulWebFormsJamstackTailwindCSSPage = ({
               </div>
             </div>
           </div>
-          <p className="mt-8 leading-relaxed tracking-wider text-stone-600">
+          <P className="mt-8">
             With a nice reset in place, now we can just add or remove any of the Tailwind CSS utility classes that we want in order to style the form to our liking:
-          </p>
+          </P>
           <CodeContainer
             language="tsx"
             lineNumbers={true}
@@ -560,9 +563,9 @@ const BeautifulWebFormsJamstackTailwindCSSPage = ({
           >
             {styledForm}
           </CodeContainer>
-          <p className="mt-8 leading-relaxed tracking-wider text-stone-600">
+          <P className="mt-8">
             Note that on lines 6, 18, and 29 I preemptively changed the <code className="language-bash">div</code>'s to <code className="language-css">display: relative;</code> since we will be using those elements to position icons for visual feedback during form field validation in the next post. Of course I also added a button since that is an important part of any form 😊. And there we have it, a gorgeously styled and accessible contact form:
-          </p>
+          </P>
           <div className="mx-auto md:w-10/12">
             <div className="grid grid-cols-1 gap-4 mt-8">
               <label className="block">
@@ -606,9 +609,9 @@ const BeautifulWebFormsJamstackTailwindCSSPage = ({
               </button>
             </div>
           </div>
-          <p className="mt-12 leading-relaxed tracking-wider text-stone-600">
+          <P className="mt-12">
             Lets refactor this a bit to deal with our unwieldy Tailwind CSS class names so that our <code className="language-bash">ContactForm</code> component should look as follows:
-          </p>
+          </P>
           <CodeContainer
             language="tsx"
             lineNumbers={true}
@@ -618,12 +621,12 @@ const BeautifulWebFormsJamstackTailwindCSSPage = ({
           >
             {refactoredForm}
           </CodeContainer>
-          <p className="mt-8 leading-relaxed tracking-wider text-stone-600">
+          <P className="mt-8">
             For further understanding and an in-depth look that my approach to keeping components tidy while working with Tailwind CSS please see <TextLink to="/" title="" external={false}>Tidy React-Typescript component design with Tailwind CSS</TextLink>.
-          </p>
-          <p className="mt-8 leading-relaxed tracking-wider text-stone-600">
+          </P>
+          <P className="mt-8">
             Above I have also abstracted the button into its own component, which keeps things DRY and further cleans up the TSX in the contact form component.
-          </p>
+          </P>
           <Alert>
             Note the Button import. As a standard practice, I keep an <code className="language-bash">index.ts</code> file inside of all component subdirectories (including <code className="language-bash">contact-form</code>) which cleans up imports throughout the app.
           </Alert>
@@ -637,9 +640,9 @@ const BeautifulWebFormsJamstackTailwindCSSPage = ({
           >
             {buttonExport}
           </CodeContainer>
-          <p className="mt-8 leading-relaxed tracking-wider text-stone-600">
+          <P className="mt-8">
             Now would be a prudent opportunity to break parts of our form component into smaller subcomponents before we start adding a bunch of form validation logic. Otherwise our form component will become difficult to maintain. Including our button component, which we aren't going to cover in this post, we can abstract two more subcomponents from this form (within reason<sup>1</sup>): <code className="language-bash">TextInput</code> and <code className="language-bash">TextArea</code>.
-          </p>
+          </P>
           <CodeContainer
             language="ts"
             lineNumbers={true}
@@ -660,9 +663,9 @@ const BeautifulWebFormsJamstackTailwindCSSPage = ({
           >
             {textArea}
           </CodeContainer>
-          <p className="mt-8 leading-relaxed tracking-wider text-stone-600">
+          <P className="mt-8">
             And for completeness, lets turn our grid into a component as well.
-          </p>
+          </P>
           <CodeContainer
             language="ts"
             lineNumbers={true}
@@ -673,9 +676,9 @@ const BeautifulWebFormsJamstackTailwindCSSPage = ({
           >
             {grid}
           </CodeContainer>
-          <p className="mt-8 leading-relaxed tracking-wider text-stone-600">
+          <P className="mt-8">
             So our form component is now in good shape for managing the added complexity of React Hook Form.
-          </p>
+          </P>
           <CodeContainer
             language="ts"
             lineNumbers={true}
@@ -685,16 +688,16 @@ const BeautifulWebFormsJamstackTailwindCSSPage = ({
           >
             {refactoredFormWithComponents}
           </CodeContainer>
-          <p className="mt-8 leading-relaxed tracking-wider text-stone-600">
+          <P className="mt-8">
             Next up, we will dive into adding React Hook Form client-side form field validation to this form.
-          </p>
-          <p className="mt-8 text-xs leading-relaxed tracking-wider text-stone-600">
+          </P>
+          <P className="mt-8 text-xs">
             <sup>1</sup>I'm not a fan of over-abstraction, ie. componentizing too much bloats a codebase and makes it just as difficult to follow as it would be if one hadn't broken it into components at all. Balance is important here and takes good judgement. Before breaking a piece into a component ask yourself if it will be beneficial to do so.
-          </p>
+          </P>
           <NextPrev path={path} className="mt-10" />
         </Section>
         <Section background="opaque" className="mb-8">
-          <h3 className="text-xl tracking-wide text-stone-700 ">Tags</h3>
+          <H3>Tags</H3>
           <div className="flex flex-wrap mt-4">
             {
               tags.map((tag, index) => {

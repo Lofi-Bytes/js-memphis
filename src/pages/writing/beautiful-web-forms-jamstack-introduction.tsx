@@ -4,18 +4,22 @@ import { useStaticQuery, graphql } from 'gatsby'
 import { formatDate } from '../../utils/utils'
 
 import Alert from '../../components/alert'
-import Jumbotron from '../../components/jumbotron'
+import Banner from '../../components/banner/banner'
 import Button from '../../components/button'
+import H3 from '../../components/content-heading'
+import Jumbotron from '../../components/jumbotron'
 import Layout from '../../components/layout'
-import TextLink from '../../components/text-link'
-import Section from '../../components/section'
-import SEO from '../../components/seo'
 import Main from '../../components/main'
 import NextPrev from '../../components/next-prev'
+import P from '../../components/paragraph'
+import Section from '../../components/section'
+import SEO from '../../components/seo'
 import Tag from '../../components/tag'
+import TextLink from '../../components/text-link'
+import UL from '../../components/unordered-list'
 
 import Prism from 'prismjs'
-import Banner from '../../components/banner/banner'
+
 
 type PageProps = {
   location: Location
@@ -95,18 +99,18 @@ const BeautifulFormsJamstackIntroductionPage = ({
             This series assumes the reader has an intermediate understanding of React JS and Tailwind CSS.
           </Alert>
 
-          <p className="mt-8 leading-relaxed tracking-wider text-stone-600">
+          <P className="mt-8">
             Web forms are arguably one of the most important tools in web development and design. They drive conversions and bridge the communication gap between you and your audience. When implemented poorly, they can serve to frustrate and alienate your audience. Good designers always seek to make forms as easy to use as possible. Reducing friction for one's audience increases conversion potential and makes web sites/apps more pleasant to use.
-          </p>
-          <p className="mt-4 leading-relaxed tracking-wider text-stone-600">
+          </P>
+          <P className="mt-4">
             Historically, web forms have been one of the more clunky parts of the audience experience. For example, server side validation requires submitting the form to the mercy of a request-response cycle before the audience can recieve feedback. I'm sure most of us have had the experience of our web form state being cleared, having to start over entirely 😩.
-          </p>
-          <p className="mt-4 leading-relaxed tracking-wider text-stone-600">
+          </P>
+          <P className="mt-4">
             On the development side, implementing web forms well has been a lot of work. Fortunately as the front end has become more capable, development has followed suit and shifted toward the front end. This has allowed for innovative approaches that make both the audience experience <em>and</em> the developer experience happier. The audience gets more real-time feedback on thier progress with less friction and the developer can implement the improved experience with less work.
-          </p>
-          <p className="mt-4 leading-relaxed tracking-wider text-stone-600">
+          </P>
+          <P className="mt-4">
             In this two part series, we will take a look at the following tools that are leading the drive to make web forms a more pleasant experience for everyone:
-          </p>
+          </P>
           <ol className="pb-4 mt-4 leading-relaxed tracking-wider list-decimal list-inside text-stone-600 sm:px-8">
             <li>
               We will start by ensuring our form is accessible and pleasant to look at using <TextLink
@@ -142,16 +146,16 @@ const BeautifulFormsJamstackIntroductionPage = ({
             </TextLink>. On the Jamstack we seek to reduce technical debt by elmininating unnecessary complexity. Often, the answer lies in elegant 3rd party solutions. We will see that in <strong><em>most</em></strong> cases, one no longer needs their own dedicated server for form handling, among other things. Freeing up our time and effort for building better products, rather than building infrastructure.
             </li>
           </ol>
-          <p className="mt-8 leading-relaxed tracking-wider text-stone-600">
+          <P className="mt-8">
             Ready to dive in?
-          </p>
+          </P>
 
           <NextPrev path={path} className="mt-4">
             Let's Get Started
           </NextPrev>
         </Section>
         <Section background="opaque" className="mb-8">
-          <h3 className="text-xl tracking-wide text-stone-700 ">Tags</h3>
+          <H3>Tags</H3>
           <div className="flex flex-wrap mt-4">
             {
               tags.map((tag, index) => {

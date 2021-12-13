@@ -1,16 +1,18 @@
 import React from 'react'
 
 import Avatar from '../components/avatar'
+import Banner from '../components/banner/banner'
 import Button from '../components/button'
 import ContactForm from '../components/contact-form'
+import H3 from '../components/content-heading'
 import Jumbotron from '../components/jumbotron'
 import Layout from '../components/layout'
 import Main from '../components/main'
+import P from '../components/paragraph'
 import Section from '../components/section'
-import Banner from '../components/banner/banner'
 import SEO from '../components/seo'
 import SocialIconRow from '../components/social-icon-row'
-
+import UL from '../components/unordered-list'
 
 type PageProps = {
   location: Location
@@ -56,12 +58,12 @@ const HomePage = ({
           {/* <h2 className="mt-10 text-2xl tracking-wide text-stone-800">Jillian S. Estrella <br className="sm:hidden" /><span className="text-xl text-stone-500">🏳️‍🌈 she/her 🏳️‍⚧️</span></h2> */}
           <h2 className="mt-10 text-2xl tracking-wide text-stone-700">Design systems engineer<br /><span className="text-xl text-stone-600">🏳️‍🌈 she/her 🏳️‍⚧️</span></h2>
           <SocialIconRow className="mt-3" />
-          <p className="mt-8 leading-relaxed tracking-wider text-stone-600">
+          <P className="mt-8">
             Hi there! Welcome to my creative space. I love building beautiful and accessible digital experiences and I am passionate about technology that advances social and environmental justice.
-          </p>
-          <p className="mt-4 leading-relaxed tracking-wider text-stone-600">
+          </P>
+          <P className="mt-4">
             Please take a look around and be sure to check back often. This is my brand new website as of December 2020, and I will be adding new content regularly.
-          </p>
+          </P>
           <div
             className="w-full mx-auto mt-8 md:w-3/4"
           >
