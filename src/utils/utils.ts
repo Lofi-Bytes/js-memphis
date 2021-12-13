@@ -84,9 +84,12 @@ export const encode = (
   Format the date
 */
 export const formatDate = (date: string) => {
-  const months = ["Jan", "Feb", "Mar","Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+  const months: string[] = ["Jan", "Feb", "Mar","Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
   const datetime: Date = new Date(date)
-  const formatted_date: string = `${months[datetime.getMonth()]} ${datetime.getDate()}, ${datetime.getFullYear()}`
+
+  let formatted_date: string = `${months[datetime.getMonth()]} ${datetime.getDate()}, ${datetime.getFullYear()}`
+
+  if (formatted_date === 'undefined NaN, NaN') formatted_date = date
 
   return formatted_date
 }

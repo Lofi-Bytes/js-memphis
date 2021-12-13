@@ -380,9 +380,6 @@ const Card = ({
   const formattedIconRow: string = formatClassList(ICON_ROW)
 
   const formattedDate = formatDate(date)
-  formattedDate !== 'undefined NaN, NaN'
-                    ? formattedDate
-                    : date
 
   return (
     <Fragment>
