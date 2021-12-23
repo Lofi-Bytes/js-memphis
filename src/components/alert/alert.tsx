@@ -1,30 +1,68 @@
-import React, { ReactNode } from 'react'
+import * as React from 'react'
+import {
+  formatClassList,
+  joinStrings
+} from '../../utils/utils'
 
 
 type AlertProps = {
-  children: ReactNode,
+  children: React.ReactNode,
   className?: string
 }
 
+const ALERT_BOX = `
+  bg-blue-100
+  border-blue-500
+  border-l-8
+  flex
+  mt-8
+  px-4
+  py-4
+  rounded
+  shadow
+  sm:px-8
+`
+
+const ICON_CONTAINER = `
+  hidden
+  sm:inline-block
+`
+
+const ICON = `
+  fa-info-circle
+  far
+  mt-0.5
+  text-blue-900
+  text-xl
+`
+
+const ALERT_MESSAGE = `
+  leading-relaxed
+  sm:ml-4
+  text-blue-900
+  tracking-wider
+`
 
 const Alert = ({
   children,
   className
 }: AlertProps) => {
-  // const styles = formatClassList(STYLES)
+  const formattedAlertBox = formatClassList(ALERT_BOX)
+  const formattedClassList = className
+                              ? joinStrings(' ', formattedAlertBox, className)
+                              : formattedAlertBox
+  const formattedIconContainer = formatClassList(ICON_CONTAINER)
+  const formattedIcon = formatClassList(ICON)
+  const formattedAlertMessage = formatClassList(ALERT_MESSAGE)
+
   return (
     <div
-      className="flex px-4 py-4 mt-8 bg-blue-100 border-l-8 border-blue-500 rounded shadow sm:px-8"
-      // className={
-      //   className
-      //     ? joinStrings(' ', styles, className)
-      //     : styles
-      // }
+      className={formattedClassList}
     >
-      <div className="hidden sm:inline-block">
-        <i className="far fa-info-circle text-xl text-blue-900 mt-0.5"></i>
+      <div className={formattedIconContainer}>
+        <i className={formattedIcon}></i>
       </div>
-      <p className="leading-relaxed tracking-wider text-blue-900 sm:ml-4">{children}</p>
+      <p className={formattedAlertMessage}>{children}</p>
     </div>
   )
 }

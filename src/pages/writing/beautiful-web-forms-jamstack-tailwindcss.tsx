@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import * as React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 
 import { formatDate } from '../../utils/utils'
@@ -17,7 +17,6 @@ import Section from '../../components/section'
 import SEO from '../../components/seo'
 import Tag from '../../components/tag'
 import TextLink from '../../components/text-link'
-import UL from '../../components/unordered-list'
 
 import Prism from 'prismjs'
 
@@ -441,7 +440,7 @@ const BeautifulWebFormsJamstackTailwindCSSPage = ({
 
   const formattedDate = formatDate(date)
 
-  useEffect(() => {
+  React.useEffect(() => {
     // call the highlightAll() function to style our code blocks
     Prism.highlightAll()
   })

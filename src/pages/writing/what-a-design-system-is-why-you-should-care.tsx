@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import * as React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 
 import { formatDate } from '../../utils/utils'
@@ -60,7 +60,7 @@ const WhatADesignSystemIsWhyYouShouldCare = ({
 
   const formattedDate = formatDate(date)
 
-  useEffect(() => {
+  React.useEffect(() => {
     // call the highlightAll() function to style our code blocks
     Prism.highlightAll()
   })
