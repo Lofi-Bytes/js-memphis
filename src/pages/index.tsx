@@ -1,10 +1,9 @@
-import React from 'react'
+import * as React from 'react'
 
 import Avatar from '../components/avatar'
 import Banner from '../components/banner/banner'
 import Button from '../components/button'
 import ContactForm from '../components/contact-form'
-import H3 from '../components/content-heading'
 import Jumbotron from '../components/jumbotron'
 import Layout from '../components/layout'
 import Main from '../components/main'
@@ -12,7 +11,6 @@ import P from '../components/paragraph'
 import Section from '../components/section'
 import SEO from '../components/seo'
 import SocialIconRow from '../components/social-icon-row'
-import UL from '../components/unordered-list'
 
 type PageProps = {
   location: Location
@@ -55,7 +53,6 @@ const HomePage = ({
           <Avatar />
           <i className="absolute text-6xl fal fa-stop text-cyan-300 -right-3 -top-10 sm:-right-6 sm:-top-10 sm:text-7xl lg:-right-14 lg:-top-8 lg:text-8xl transofrm rotate-12 transform-gpu"></i>
           <i className="absolute text-5xl rotate-45 fal fa-triangle text-emerald-300 -left-2 top-52 sm:-left-4 sm:top-48 sm:text-6xl lg:-left-6 lg:top-36 lg:text-7xl transofrm transform-gpu"></i>
-          {/* <h2 className="mt-10 text-2xl tracking-wide text-stone-800">Jillian S. Estrella <br className="sm:hidden" /><span className="text-xl text-stone-500">🏳️‍🌈 she/her 🏳️‍⚧️</span></h2> */}
           <h2 className="mt-10 text-2xl tracking-wide text-stone-700">Design systems engineer<br /><span className="text-xl text-stone-600">🏳️‍🌈 she/her 🏳️‍⚧️</span></h2>
           <SocialIconRow className="mt-3" />
           <P className="mt-8">

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import * as React from 'react'
 
 import { useForm } from 'react-hook-form'
 
@@ -33,8 +33,8 @@ const ContactPage = ({
     mode: 'onBlur'
   })
   const [state, setState] = React.useState({})
-  const [successMsg, setSuccessMsg] = useState(false)
-  const [errorMsg, setErrorMsg] = useState(false)
+  const [successMsg, setSuccessMsg] = React.useState(false)
+  const [errorMsg, setErrorMsg] = React.useState(false)
   const handleChange = e => {setState({
     ...state,
     [e.target.name]: e.target.value

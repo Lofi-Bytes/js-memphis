@@ -1,13 +1,9 @@
-import React from 'react'
-// import { StaticImage } from 'gatsby-plugin-image'
-import { useStaticQuery, graphql } from 'gatsby'
-import Img from 'gatsby-image'
+import * as React from 'react'
 
 import Avatar from '../components/avatar'
 import Banner from '../components/banner/banner'
 import Button from '../components/button'
 import ContactForm from '../components/contact-form'
-import H3 from '../components/content-heading'
 import Jumbotron from '../components/jumbotron'
 import Layout from '../components/layout'
 import Main from '../components/main'
@@ -16,7 +12,6 @@ import Section from '../components/section'
 import SEO from '../components/seo'
 import SocialIconRow from '../components/social-icon-row'
 import TextLink from '../components/text-link'
-import UL from '../components/unordered-list'
 
 type PageProps = {
   location: Location
@@ -25,19 +20,6 @@ type PageProps = {
 const AboutPage = ({
   location
 }: PageProps) => {
-  const data = useStaticQuery(graphql`
-    query {
-      Image01: file(relativePath: { eq: "IMG_7135.JPG" }) {
-        childImageSharp {
-          fluid(quality: 100) {
-            ...GatsbyImageSharpFluid_withWebp
-          }
-        }
-      }
-    }
-  `)
-
-  const img = data.Image01.childImageSharp.fluid
 
   return (
     <Layout location={location}>
@@ -252,22 +234,6 @@ const AboutPage = ({
           </P>
 
           <h2 className="mt-10 text-xl tracking-wide text-stone-700">Extracurricular Interests</h2>
-
-          {/* <StaticImage
-            src="../images/IMG_7135.JPG"
-            placeholder="blurred"
-            aspectRatio={16/9}
-            layout="fullWidth"
-            formats={["auto", "webp", "avif"]}
-            className="h-64 mt-3"
-            alt="Jillian's family."
-          /> */}
-
-          <Img
-            fluid={img}
-            className="h-64 mt-3 rounded-md"
-            alt="Jillian's avatar."
-          />
 
           <P className="mt-3">
             In my free time I enjoy spending time with my beautiful family, adventuring in our van (<TextLink to="https://www.instagram.com/explore/tags/vanlife/?hl=en" title="" external={true}>#vanlife</TextLink>), practicing yoga, mountain biking, and I read a lot.
