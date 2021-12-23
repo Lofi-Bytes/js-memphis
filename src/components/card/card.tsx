@@ -1,4 +1,4 @@
-import React, { Fragment, ReactNode } from 'react'
+import * as React from 'react'
 import { Link } from 'gatsby'
 
 import {
@@ -14,7 +14,7 @@ export type CardProps = {
   excerpt: string,
   external: boolean,
   published: boolean,
-  tags: ReactNode,
+  tags: React.ReactNode,
   title: string,
   to: string
 }
@@ -451,7 +451,7 @@ const Card = ({
   const formattedDate = formatDate(date)
 
   return (
-    <Fragment>
+    <React.Fragment>
       {
         external
           ?
@@ -545,7 +545,7 @@ const Card = ({
                   </div>
                 </div>
       }
-    </Fragment>
+    </React.Fragment>
   )
 }
 

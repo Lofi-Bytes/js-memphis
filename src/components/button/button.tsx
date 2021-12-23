@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react'
+import * as React from 'react'
 import { Link } from 'gatsby'
 
 import {
@@ -9,7 +9,7 @@ import {
 
 export type ButtonProps = {
   action: 'primary' | 'secondary' | 'tertiary',
-  children: ReactNode,
+  children: React.ReactNode,
   className?: string,
   disabled: boolean,
   title: string,

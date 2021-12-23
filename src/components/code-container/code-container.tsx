@@ -1,10 +1,15 @@
-import React, { ReactNode } from 'react'
+import * as React from 'react'
 
 import CodeTag from '../code-tag'
 
+import {
+  formatClassList,
+  joinStrings
+} from '../../utils/utils'
 
 type CodeContainerProps = {
-  children: ReactNode,
+  children: React.ReactNode,
+  className?: string,
   language: string,
   lineNumbers: boolean,
   path?: string,
@@ -13,8 +18,26 @@ type CodeContainerProps = {
   tagColor: string
 }
 
+const CODE_CONTAINER = `
+  bg-stone-50
+  border-blue-500
+  border-l-8
+  code-container
+  mt-4
+  p-1
+  pt-3
+  rounded
+  shadow
+`
+
+const PATH_CONTAINER = `
+  mb-4
+  ml-3
+`
+
 const CodeContainer = ({
   children,
+  className,
   language,
   lineNumbers,
   path,
@@ -22,12 +45,18 @@ const CodeContainer = ({
   tagBgColor,
   tagColor
 }: CodeContainerProps) => {
+  const formattedCodeContainer = formatClassList(CODE_CONTAINER)
+  const formattedClassList = className
+                            ? joinStrings(' ', formattedCodeContainer, className)
+                            : formattedCodeContainer
+  const formattedPathContainer = formatClassList(PATH_CONTAINER)
+
   return (
-    <div className="p-1 pt-3 mt-4 border-l-8 border-blue-500 rounded shadow code-container bg-stone-50">
+    <div className={formattedClassList}>
       {
         path
           ?
-            <div className="mb-4 ml-3">
+            <div className={formattedPathContainer}>
               <code className="language-bash">{path}</code>
             </div>
           :
