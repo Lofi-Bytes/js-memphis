@@ -87,6 +87,7 @@ const BeautifulFormsJamstackIntroductionPage = ({
           <Button
             action="tertiary"
             disabled={false}
+            role="link"
             title="Back to article list"
             className="mt-10 w-max"
             to="/writing"

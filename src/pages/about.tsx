@@ -46,6 +46,7 @@ const AboutPage = ({
           <Button
             action="tertiary"
             disabled={false}
+            role="link"
             title="Return to homepage"
             className="mt-6 w-max"
             to="/"
@@ -245,6 +246,7 @@ const AboutPage = ({
               action="primary"
               className="w-full"
               disabled={false}
+              role="link"
               title="See my resumé"
               to="/resume"
               type="button"
@@ -256,6 +258,7 @@ const AboutPage = ({
           <Button
             action="secondary"
             disabled={false}
+            role="link"
             title="Return to homepage"
             className="mt-16 w-max"
             to="/"

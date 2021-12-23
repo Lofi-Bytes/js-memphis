@@ -46,6 +46,7 @@ const NextButton = ({
                 action={action}
                 disabled={false}
                 title=""
+                role="link"
                 to={nextPath}
                 key={`next-${index}`}
               >

@@ -74,6 +74,7 @@ const ContactForm = ({}: ReactNode) => {
           className="mt-4"
           title="Submit"
           type="submit"
+          role="button"
         >
           Submit
         </Button>

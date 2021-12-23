@@ -68,6 +68,7 @@ const HomePage = ({
               action="secondary"
               className="w-full"
               disabled={false}
+              role="link"
               title="Learn more about me"
               to="/about"
             >

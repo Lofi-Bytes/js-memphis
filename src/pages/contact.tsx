@@ -409,6 +409,7 @@ const ContactPage = ({
                   <Button
                     action="primary"
                     className="mt-4"
+                    role="button"
                     title="Submit"
                     type="submit"
                     disabled={formState.isSubmitting}

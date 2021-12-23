@@ -115,6 +115,7 @@ const NextPrev = ({
                 <Button
                   action="primary"
                   disabled={false}
+                  role="link"
                   title="Back to article list"
                   to="/writing"
                 >

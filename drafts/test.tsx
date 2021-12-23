@@ -88,6 +88,7 @@ const ContactForm = ({}: ReactNode) => {
           className="mt-4"
           title="Submit"
           type="submit"
+          role="button"
           disabled={false}
         >
           Send your message

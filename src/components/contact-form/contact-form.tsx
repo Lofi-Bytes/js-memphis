@@ -143,6 +143,7 @@ const ContactForm = ({}: React.ReactNode) => {
               className="mt-4"
               title="Submit"
               type="submit"
+              role="button"
               disabled={formState.isSubmitting}
             >
               Get in touch

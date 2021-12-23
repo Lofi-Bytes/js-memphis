@@ -14,7 +14,8 @@ export type ButtonProps = {
   disabled: boolean,
   title: string,
   to?: string,
-  type?: 'button' | 'submit' | 'reset',
+  type?: string,
+  role?: string,
   [other:string]: unknown
 }
 
@@ -112,6 +113,7 @@ const Button = ({
   children,
   className,
   disabled,
+  role,
   title,
   to,
   type,
@@ -139,8 +141,9 @@ const Button = ({
     return (
       <Link
         className={formattedClassName}
-        role={type}
+        role={role}
         title={title}
+        type={type}
         to={to}
         {...other}
       >
@@ -152,8 +155,9 @@ const Button = ({
   return (
     <button
       className={formattedClassName}
-      role={type}
+      role={role}
       title={title}
+      type={type}
       {...other}
     >
       {children}

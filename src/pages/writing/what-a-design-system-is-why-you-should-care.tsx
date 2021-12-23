@@ -86,9 +86,10 @@ const WhatADesignSystemIsWhyYouShouldCare = ({
 
           <Button
             action="tertiary"
-            disabled={false}
-            title="Back to article list"
             className="mt-10 w-max"
+            disabled={false}
+            role="link"
+            title="Back to article list"
             to="/writing"
           >
             <i className="fas fa-arrow-left" />&nbsp;&nbsp;Back to article list

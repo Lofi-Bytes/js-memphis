@@ -85,9 +85,10 @@ const WritingFromMyIpadWithVersionControlAndMarkdown = ({
           </Banner>
           <Button
             action="tertiary"
+            className="mt-10 w-max"
+            role="link"
             disabled={false}
             title="Back to article list"
-            className="mt-10 w-max"
             to="/writing"
           >
             <i className="fas fa-arrow-left" />&nbsp;&nbsp;Back to article list

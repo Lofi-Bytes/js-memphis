@@ -45,6 +45,7 @@ const PreviousButton = ({
               <Button
                 action={action}
                 disabled={false}
+                role="link"
                 title=""
                 to={previousPath}
                 key={`prev-${index}`}
