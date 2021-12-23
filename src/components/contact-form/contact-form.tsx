@@ -1,4 +1,4 @@
-import React, { ReactNode, useState } from 'react'
+import * as React from 'react'
 
 import { useForm } from 'react-hook-form'
 
@@ -20,7 +20,7 @@ export type ContactFormProps = {
   test: string
 }
 
-const ContactForm = ({}: ReactNode) => {
+const ContactForm = ({}: React.ReactNode) => {
   const {
     clearErrors,
     errors,
@@ -31,9 +31,9 @@ const ContactForm = ({}: ReactNode) => {
   } = useForm<ContactFormProps>({
     mode: 'onBlur'
   })
-  const [state, setState] = useState<object>({})
-  const [successMsg, setSuccessMsg] = useState<boolean>(false)
-  const [errorMsg, setErrorMsg] = useState<boolean>(false)
+  const [state, setState] = React.useState<object>({})
+  const [successMsg, setSuccessMsg] = React.useState<boolean>(false)
+  const [errorMsg, setErrorMsg] = React.useState<boolean>(false)
   const handleChange = e => {setState({
     ...state,
     [e.target.name]: e.target.value

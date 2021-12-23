@@ -1,7 +1,16 @@
-import React, { CSSProperties } from "react"
+import * as React from 'react'
 
-import { formatClassList, joinStrings } from '../../utils/utils'
+import {
+  formatClassList,
+  joinStrings
+} from '../../utils/utils'
 
+
+type CodeTagProps = {
+  tag: string,
+  tagBgColor: string,
+  tagColor: string
+}
 
 const CODE_TAG: string = `
   font-mono
@@ -16,12 +25,6 @@ const CODE_TAG: string = `
   w-max
 `
 
-type CodeTagProps = {
-  tag: string,
-  tagBgColor: string,
-  tagColor: string
-}
-
 const CodeTag = ({
   tag,
   tagBgColor,
@@ -29,7 +32,7 @@ const CodeTag = ({
 }: CodeTagProps) => {
   let formattedCodeTag: string = formatClassList(CODE_TAG)
 
-  let style: CSSProperties = {
+  let style: React.CSSProperties = {
     color: tagColor,
     backgroundColor: tagBgColor
   }

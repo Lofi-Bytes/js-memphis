@@ -1,14 +1,21 @@
-import React from 'react'
+import * as React from 'react'
 
 import MobileNavigation from '../mobile-navigation'
 import FooterNavigation from '../footer-navigation'
 
+import {
+  formatClassList,
+  joinStrings
+} from '../../utils/utils'
+
 
 type FooterProps = {
+  className?: string,
   location: Location
 }
 
 const Footer = ({
+  className,
   location
 }: FooterProps) => {
   return (

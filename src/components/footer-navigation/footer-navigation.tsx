@@ -1,8 +1,50 @@
-import React, { ReactNode } from 'react'
+import * as React from 'react'
 import { useStaticQuery, graphql, Link } from 'gatsby'
 
+import {
+  formatClassList,
+  joinStrings
+} from '../../utils/utils'
 
-const FooterNavigation = ({}: ReactNode) => {
+
+type FooterNavigationProps = {
+  className?: string,
+  location: Location
+}
+
+const NAV = `
+  hidden
+  items-center
+  justify-around
+  m-6
+  md:w-1/2
+  mx-auto
+  nav
+  sm:flex
+  text-stone-50
+  w-2/3
+`
+
+const LINK = `
+  active:text-pink-300
+  duration-200
+  focus:outline-none
+  focus:ring
+  focus:ring-teal-200
+  focus:text-pink-200
+  hover:cursor-pointer
+  hover:text-pink-200
+  px-2
+  py-1
+  rounded
+  text-base
+  text-teal-100
+  tracking-wider
+`
+
+const FooterNavigation = ({
+  className
+}: FooterNavigationProps) => {
   const navigationData = useStaticQuery(graphql`
     query FooterNavigationQuery {
       allNavigationJson {
@@ -16,9 +58,15 @@ const FooterNavigation = ({}: ReactNode) => {
     }
   `)
 
+  const formattedNav = formatClassList(NAV)
+  const formattedClassList = className
+                              ? joinStrings(' ', formattedNav, className)
+                              : formattedNav
+  const formattedLink = formatClassList(LINK)
+
   return (
     <React.Fragment>
-      <nav className="items-center justify-around hidden w-2/3 mx-auto mt-6 nav sm:flex text-stone-50 md:w-1/2">
+      <nav className={formattedClassList}>
         {
           navigationData.allNavigationJson.edges.map((edge, index) => {
             const path = edge.node.path
@@ -27,7 +75,7 @@ const FooterNavigation = ({}: ReactNode) => {
               <React.Fragment key={`item-${index}`}>
                 <Link
                   to={path}
-                  className="px-2 py-1 text-base tracking-wider text-teal-100 duration-200 rounded hover:text-pink-200 focus:text-pink-200 active:text-pink-300 hover:cursor-pointer focus:outline-none focus:ring focus:ring-teal-200"
+                  className={formattedLink}
                 >
                   {title}
                 </Link>
