@@ -1,8 +1,8 @@
-import React, { ReactNode } from 'react'
+import * as React from 'react'
 
 
 type MainProps = {
-  children: ReactNode
+  children: React.ReactNode
 }
 
 const Main = ({
