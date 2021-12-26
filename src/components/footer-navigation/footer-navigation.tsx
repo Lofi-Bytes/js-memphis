@@ -12,7 +12,7 @@ type FooterNavigationProps = {
   location: Location
 }
 
-const NAV = `
+const NAVIGATION = `
   hidden
   items-center
   justify-around
@@ -58,10 +58,10 @@ const FooterNavigation = ({
     }
   `)
 
-  const formattedNav = formatClassList(NAV)
+  const formattedNavigation = formatClassList(NAVIGATION)
   const formattedClassList = className
-                              ? joinStrings(' ', formattedNav, className)
-                              : formattedNav
+                              ? joinStrings(' ', formattedNavigation, className)
+                              : formattedNavigation
   const formattedLink = formatClassList(LINK)
 
   return (
