@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react'
+import * as React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 
 import Button from '../button'
@@ -6,7 +6,7 @@ import Button from '../button'
 
 type NextButtonProps = {
   action: 'primary' | 'secondary',
-  children: ReactNode,
+  children: React.ReactNode,
   path: string,
   className?: string
 }
@@ -14,8 +14,8 @@ type NextButtonProps = {
 const NextButton = ({
   action,
   children,
-  path,
-  className
+  className,
+  path
 }: NextButtonProps) => {
   const postData = useStaticQuery(graphql`
     query NextQuery {

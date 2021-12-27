@@ -1,10 +1,10 @@
-import React, { Fragment, ReactNode } from 'react'
+import * as React from 'react'
 import { Link } from 'gatsby'
 
 import { formatClassList } from '../../utils/utils'
 
 export type TextLinkProps = {
-  children: ReactNode,
+  children: React.ReactNode,
   external: boolean,
   title: string,
   to: string
@@ -38,7 +38,7 @@ const TextLink = ({
   const CustomTag = `${type}` as keyof JSX.IntrinsicElements
 
   return (
-    <Fragment>
+    <React.Fragment>
       {
         external
           ?
@@ -77,7 +77,7 @@ const TextLink = ({
               }
             </Link>
       }
-    </Fragment>
+    </React.Fragment>
   )
 }
 

@@ -1,4 +1,4 @@
-import React, { Fragment, ReactNode } from 'react'
+import * as React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 
 import Button from '../button'
@@ -6,7 +6,7 @@ import Button from '../button'
 
 type PreviousButtonProps = {
   action: 'primary' | 'secondary',
-  children: ReactNode,
+  children: React.ReactNode,
   path: string,
   className?: string
 }
@@ -34,7 +34,7 @@ const PreviousButton = ({
   `)
 
   return (
-    <>
+    <React.Fragment>
       {
         postData.allPostsJson.edges.map((edge, index) => {
           let previousPath
@@ -54,10 +54,10 @@ const PreviousButton = ({
               </Button>
             )
           }
-          return(<Fragment key={`next-prev-${index}`}></Fragment>)
+          return(<React.Fragment key={`next-prev-${index}`}></React.Fragment>)
         })
       }
-    </>
+    </React.Fragment>
   )
 }
 

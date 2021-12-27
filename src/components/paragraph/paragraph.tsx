@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react'
+import * as React from 'react'
 
 import {
   formatClassList,
@@ -7,7 +7,7 @@ import {
 
 
 type ParagraphProps = {
-  children: ReactNode,
+  children: React.ReactNode,
   className?: string
 }
 

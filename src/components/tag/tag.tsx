@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react'
+import * as React from 'react'
 
 import { formatClassList, joinStrings } from '../../utils/utils'
 
@@ -75,7 +75,7 @@ const tagColors = {
 type TagProps = {
   card: boolean,
   tagColor: string,
-  children: ReactNode
+  children: React.ReactNode
 }
 
 const Tag = ({

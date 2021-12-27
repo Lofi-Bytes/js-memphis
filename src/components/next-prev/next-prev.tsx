@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react'
+import * as React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 
 import Button from '../button'
@@ -10,7 +10,7 @@ import { joinStrings } from '../../utils/utils'
 
 type NextPrevProps = {
   path: string,
-  children?: ReactNode,
+  children?: React.ReactNode,
   className?: string
 }
 
@@ -42,7 +42,7 @@ const NextPrev = ({
   `)
 
   return (
-    <>
+    <React.Fragment>
       {
         postData.allPostsJson.edges.map((edge, index) => {
           if(
@@ -126,7 +126,7 @@ const NextPrev = ({
           }
         })
       }
-    </>
+    </React.Fragment>
   )
 }
 

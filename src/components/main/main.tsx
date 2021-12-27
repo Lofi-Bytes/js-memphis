@@ -5,6 +5,7 @@ import {
   joinStrings
 } from '../../utils/utils'
 
+
 type MainProps = {
   children: React.ReactNode,
   className?: string
