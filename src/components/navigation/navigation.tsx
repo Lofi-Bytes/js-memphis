@@ -1,5 +1,14 @@
-import React from 'react'
-import { useStaticQuery, graphql, Link } from 'gatsby'
+import * as React from 'react'
+import {
+  graphql,
+  Link,
+  useStaticQuery
+} from 'gatsby'
+
+import {
+  formatClassList,
+  joinStrings
+} from '../../utils/utils'
 
 
 type NavigationProps = {

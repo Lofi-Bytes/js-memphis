@@ -20,6 +20,14 @@ body {
   font-family: 'stay_classy_sldtregular';
 }
 
+.avatar img {
+  border-radius: 9999px;
+}
+
+.family img {
+  border-radius: 0.75rem;
+}
+
 /* .rainbow {
   background: -webkit-linear-gradient(left,red, orange, yellow, green, cyan, violet);
   background: -o-linear-gradient(right,red, orange, yellow, green, cyan, violet);

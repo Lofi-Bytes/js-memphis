@@ -54,12 +54,13 @@ const Avatar = ({
     <div className={formattedClassList}>
       <div className={formattedAvatarInner}>
         <StaticImage
-          src="../../images/bsfSBbsadfK.jpg"
-          placeholder="blurred"
-          layout="constrained"
-          width={300}
-          formats={["auto", "webp", "avif"]}
           alt="Jillian's avatar."
+          className="avatar"
+          formats={["auto", "webp", "avif"]}
+          layout="constrained"
+          placeholder="blurred"
+          src="../../images/bsfSBbsadfK.jpg"
+          width={300}
         />
         <div className={formattedAvatarRing}></div>
       </div>

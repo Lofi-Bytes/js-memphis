@@ -1,5 +1,7 @@
 import * as React from 'react'
 
+import { StaticImage } from 'gatsby-plugin-image'
+
 import Avatar from '../components/avatar'
 import Banner from '../components/banner/banner'
 import Button from '../components/button'
@@ -235,6 +237,16 @@ const AboutPage = ({
           </P>
 
           <h2 className="mt-10 text-xl tracking-wide text-stone-700">Extracurricular Interests</h2>
+
+          <StaticImage
+            alt="Jillian's family."
+            aspectRatio={16/9}
+            className="h-64 mt-3 family"
+            formats={["auto", "webp", "avif"]}
+            layout="fullWidth"
+            placeholder="blurred"
+            src="../images/IMG_7135.JPG"
+          />
 
           <P className="mt-3">
             In my free time I enjoy spending time with my beautiful family, adventuring in our van (<TextLink to="https://www.instagram.com/explore/tags/vanlife/?hl=en" title="" external={true}>#vanlife</TextLink>), practicing yoga, mountain biking, and I read a lot.
