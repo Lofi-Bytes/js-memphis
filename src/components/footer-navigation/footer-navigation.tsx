@@ -1,5 +1,9 @@
 import * as React from 'react'
-import { useStaticQuery, graphql, Link } from 'gatsby'
+import {
+  graphql,
+  Link,
+  useStaticQuery
+} from 'gatsby'
 
 import {
   formatClassList,

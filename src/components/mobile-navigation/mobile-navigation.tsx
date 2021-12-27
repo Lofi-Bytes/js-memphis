@@ -1,13 +1,83 @@
-import React from 'react'
-import { useStaticQuery, graphql, Link } from 'gatsby'
-import { joinStrings } from '../../utils/utils'
+import * as React from 'react'
+import {
+  graphql,
+  Link,
+  useStaticQuery
+} from 'gatsby'
 
+import {
+  formatClassList,
+  joinStrings
+} from '../../utils/utils'
 
 type MobileNavigationProps = {
+  className?: string,
   location: Location
 }
 
+const NAVIGATION = `
+  bg-indigo-700
+  border
+  border-indigo-700
+  bottom-0
+  fixed
+  flex
+  items-center
+  justify-around
+  left-0
+  mb-3
+  mx-auto
+  nav
+  overflow-hidden
+  right-0
+  rounded-xl
+  sm:hidden
+  text-stone-50
+  w-11/12
+  z-20
+`
+
+const LINK_GROUP = `
+  focus:outline-none
+  group
+`
+
+const LINK_INDICATOR_ACTIVE = `
+  -mt-1
+  border-b-8
+  border-pink-200
+  rounded-sm
+`
+
+const LINK_INDICATOR_INACTIVE = `
+  -mt-1
+  border-b-8
+  border-indigo-700
+  group-focus:border-pink-200
+  group-hover:border-pink-200
+  rounded-sm
+`
+
+const LINK_ICON_CONTAINER = `
+  duration-200
+  flex
+  flex-col
+  group-focus:text-pink-200
+  group-hover:text-pink-200
+  hover:cursor-pointer
+  items-center
+  justify-center
+  py-3
+  text-teal-100
+  tracking-wider
+`
+
+const LINK_ICON = `
+  text-xl
+`
+
 const MobileNavigation = ({
+  className,
   location
 }: MobileNavigationProps) => {
   const navigationData = useStaticQuery(graphql`
@@ -24,40 +94,49 @@ const MobileNavigation = ({
     }
   `)
 
+  const formattedNavigation = formatClassList(NAVIGATION)
+  const formattedClassList = className
+                              ? joinStrings(' ', formattedNavigation, className)
+                              : formattedNavigation
+  const formattedLinkGroup = formatClassList(LINK_GROUP)
+  const formattedLinkIndicatorActive = formatClassList(LINK_INDICATOR_ACTIVE)
+  const formattedLinkIndicatorInactive = formatClassList(LINK_INDICATOR_INACTIVE)
+  const formattedLinkIconContainer = formatClassList(LINK_ICON_CONTAINER)
+
+
   return (
-    <React.Fragment>
-      <nav className="fixed bottom-0 left-0 right-0 z-20 flex items-center justify-around w-11/12 mx-auto mb-3 overflow-hidden bg-indigo-700 border border-indigo-700 rounded-xl nav sm:hidden text-stone-50">
-        {
-          navigationData.allNavigationJson.edges.map((edge, index) => {
-            const path = edge.node.path
-            const title = edge.node.title
-            const iconClass = edge.node.iconClass
+    <nav className={formattedClassList}>
+      {
+        navigationData.allNavigationJson.edges.map((edge, index) => {
+          const path = edge.node.path
+          const title = edge.node.title
+          const iconClass = edge.node.iconClass
+          const formattedLinkIcon = iconClass
+                                    ? joinStrings(' ', iconClass, formatClassList(LINK_ICON))
+                                    : ""
 
-            const regex = new RegExp(path, 'g')
+          const regex = new RegExp(path, 'g')
 
-            return(
-              <React.Fragment key={`item-${index}`}>
-                <Link to={path} className="focus:outline-none group">
-                  {
-                    location.pathname.match(regex)
-                    ? <div className="-mt-1 border-b-8 border-pink-200 rounded-sm" />
-                    : <div className="-mt-1 border-b-8 border-indigo-700 rounded-sm group-hover:border-pink-200 group-focus:border-pink-200" />
-                  }
-                  <div className="flex flex-col items-center justify-center py-3 tracking-wider text-teal-100 duration-200 group-hover:text-pink-200 group-focus:text-pink-200 hover:cursor-pointer">
-                    <i className={
-                      iconClass
-                        ? joinStrings(' ', iconClass, "text-xl")
-                        : ""
-                    } />
-                    <span className="mt-2 text-xs">{title}</span>
-                  </div>
-                </Link>
-              </React.Fragment>
-            )
-          })
-        }
-      </nav>
-    </React.Fragment>
+          return(
+            <Link
+              className={formattedLinkGroup}
+              key={`item-${index}`}
+              to={path}
+            >
+              {
+                location.pathname.match(regex)
+                ? <div className={formattedLinkIndicatorActive} />
+                : <div className={formattedLinkIndicatorInactive} />
+              }
+              <div className={formattedLinkIconContainer}>
+                <i className={formattedLinkIcon} />
+                <span className="mt-2 text-xs">{title}</span>
+              </div>
+            </Link>
+          )
+        })
+      }
+    </nav>
   )
 }
 
