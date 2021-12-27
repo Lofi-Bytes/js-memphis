@@ -43,6 +43,7 @@ const LINK = `
 
 const LINK_BORDER = `
   border-b-2
+  border-transparent
   rounded
 `
 
