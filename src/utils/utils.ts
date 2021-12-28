@@ -51,13 +51,19 @@ export const getWindowInnerWidth = (): number => {
 /*
   Utilities for making tailwind classes cleaner to work with
 */
+// export const formatClassList = (
+//   classList: string
+// ): string => {
+//   return classList
+//         .replace(/\n/g, '')
+//         .replace(/[\s]+/g, ' ')
+//         .trim()
+// }
+
 export const formatClassList = (
-  classList: string
+  classList: string[]
 ): string => {
-  return classList
-        .replace(/\n/g, '')
-        .replace(/[\s]+/g, ' ')
-        .trim()
+  return classList.join(' ')
 }
 
 export const joinStrings = (

@@ -11,48 +11,47 @@ type AvatarProps = {
   className?: string
 }
 
-const AVATAR_OUTER = `
-  -top-16
-  absolute
-  left-1/2
-`
+const AVATAR_OUTER = formatClassList([
+  '-top-16',
+  'absolute',
+  'left-1/2'
+])
 
-const AVATAR_INNER = `
-  -left-1/2
-  h-28
-  overflow-hidden
-  relative
-  rounded-full
-  shadow-xl
-  w-28
-`
+const AVATAR_INNER = formatClassList([
+  '-left-1/2',
+  'h-28',
+  'overflow-hidden',
+  'relative',
+  'rounded-full',
+  'shadow-xl',
+  'w-28'
+])
 
-const AVATAR_RING = `
-  absolute
-  h-full
-  left-0
-  ring-4
-  ring-inset
-  ring-opacity-30
-  ring-purple-300
-  rounded-full
-  top-0
-  w-full
-`
+const AVATAR_RING = formatClassList([
+  'absolute',
+  'h-full',
+  'left-0',
+  'ring-4',
+  'ring-inset',
+  'ring-opacity-30',
+  'ring-purple-300',
+  'rounded-full',
+  'top-0',
+  'w-full'
+])
 
 const Avatar = ({
   className
 }: AvatarProps) => {
-  const formattedAvatarOuter = formatClassList(AVATAR_OUTER)
-  const formattedClassList = className
-                              ? joinStrings(' ', formattedAvatarOuter, className)
-                              : formattedAvatarOuter
-  const formattedAvatarInner = formatClassList(AVATAR_INNER)
-  const formattedAvatarRing = formatClassList(AVATAR_RING)
-
   return (
-    <div className={formattedClassList}>
-      <div className={formattedAvatarInner}>
+    <div
+      className={
+        className
+          ? joinStrings(' ', AVATAR_OUTER, className)
+          : AVATAR_OUTER
+      }
+    >
+      <div className={AVATAR_INNER}>
         <StaticImage
           alt="Jillian's avatar."
           className="avatar"
@@ -62,7 +61,7 @@ const Avatar = ({
           src="../../images/bsfSBbsadfK.jpg"
           width={300}
         />
-        <div className={formattedAvatarRing}></div>
+        <div className={AVATAR_RING}></div>
       </div>
     </div>
   )

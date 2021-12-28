@@ -11,19 +11,19 @@ export type TextLinkProps = {
   type?: string,
 }
 
-const LINK: string = `
-  focus:outline-none
-  focus:ring-2
-  focus:ring-sky-500
-  rounded-sm
-`
+const LINK = formatClassList([
+  'focus:outline-none',
+  'focus:ring-2',
+  'focus:ring-sky-500',
+  'rounded-sm'
+])
 
-const CONTENT: string = `
-  border-b-2
-  border-sky-500
-  inline
-  w-max
-`
+const CONTENT = formatClassList([
+  'border-b-2',
+  'border-sky-500',
+  'inline',
+  'w-max'
+])
 
 const TextLink = ({
   children,
@@ -32,9 +32,6 @@ const TextLink = ({
   to,
   type
 }: TextLinkProps) => {
-  let formattedLink = formatClassList(LINK)
-  let formattedContent = formatClassList(CONTENT)
-
   const CustomTag = `${type}` as keyof JSX.IntrinsicElements
 
   return (
@@ -45,16 +42,16 @@ const TextLink = ({
             <a
               href={to}
               title={title}
-              className={formattedLink}
+              className={LINK}
             >
               {
                 type
                   ?
-                    <CustomTag className={formattedContent}>
+                    <CustomTag className={CONTENT}>
                       {children}
                     </CustomTag>
                   :
-                    <span className={formattedContent}>
+                    <span className={CONTENT}>
                       {children}
                     </span>
               }
@@ -62,16 +59,16 @@ const TextLink = ({
           :
             <Link
               to={to}
-              className={formattedLink}
+              className={LINK}
             >
               {
                 type
                   ?
-                    <CustomTag className={formattedContent}>
+                    <CustomTag className={CONTENT}>
                       {children}
                     </CustomTag>
                   :
-                    <span className={formattedContent}>
+                    <span className={CONTENT}>
                       {children}
                     </span>
               }

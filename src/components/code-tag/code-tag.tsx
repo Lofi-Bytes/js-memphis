@@ -12,25 +12,25 @@ type CodeTagProps = {
   tagColor: string
 }
 
-const CODE_TAG: string = `
-  font-mono
-  font-thin
-  mb-4
-  ml-3
-  px-4
-  rounded-bl-xl
-  rounded-tr-xl
-  shadow-md
-  text-lg
-  w-max
-`
+const CODE_TAG = formatClassList([
+  'font-mono',
+  'font-thin',
+  'mb-4',
+  'ml-3',
+  'px-4',
+  'rounded-bl-xl',
+  'rounded-tr-xl',
+  'shadow-md',
+  'text-lg',
+  'w-max'
+])
 
 const CodeTag = ({
   tag,
   tagBgColor,
   tagColor
 }: CodeTagProps) => {
-  let formattedCodeTag: string = formatClassList(CODE_TAG)
+  let formattedCodeTag: string
 
   let style: React.CSSProperties = {
     color: tagColor,
@@ -39,12 +39,12 @@ const CodeTag = ({
 
   if (!tagColor.startsWith("#")) {
     delete style.color
-    formattedCodeTag = joinStrings(' ', formattedCodeTag, tagColor)
+    formattedCodeTag = joinStrings(' ', CODE_TAG, tagColor)
   }
 
   if (!tagBgColor.startsWith("#")) {
     delete style.backgroundColor
-    formattedCodeTag = joinStrings(' ', formattedCodeTag, tagBgColor)
+    formattedCodeTag = joinStrings(' ', CODE_TAG, tagBgColor)
   }
 
   return (

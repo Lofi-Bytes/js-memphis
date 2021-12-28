@@ -11,27 +11,25 @@ type UnorderedListProps = {
   className?: string
 }
 
-const STYLES = `
-  leading-relaxed
-  list-inside
-  pb-4
-  sm:px-8
-  text-stone-600
-  tracking-wider
-`
+const UNORDERED_LIST = formatClassList([
+  'leading-relaxed',
+  'list-inside',
+  'pb-4',
+  'sm:px-8',
+  'text-stone-600',
+  'tracking-wider'
+])
 
 const UnorderedList = ({
   children,
   className
 }: UnorderedListProps) => {
-  let styles = formatClassList(STYLES)
-
   return (
     <ul
       className={
         className
-          ? joinStrings(' ', styles, className)
-          : styles
+          ? joinStrings(' ', UNORDERED_LIST, className)
+          : UNORDERED_LIST
       }
     >
       {children}

@@ -15,7 +15,6 @@ import Section from '../../components/section'
 import SEO from '../../components/seo'
 import Tag from '../../components/tag'
 import TextLink from '../../components/text-link'
-import UL from '../../components/unordered-list'
 
 import Prism from 'prismjs'
 

@@ -20,56 +20,56 @@ export type TextInputProps = {
   register: RegisterOptions
 }
 
-const FIELD_BASE: string = `
-  bg-stone-200
-  block
-  border-0
-  border-l-4
-  focus:ring-0
-  mt-1
-  pl-3
-  pr-10
-  rounded-lg
-  shadow-md
-  text-stone-600
-  text-lg
-  w-full
-`
+const FIELD_BASE = formatClassList([
+  'bg-stone-200',
+  'block',
+  'border-0',
+  'border-l-4',
+  'focus:ring-0',
+  'mt-1',
+  'pl-3',
+  'pr-10',
+  'rounded-lg',
+  'shadow-md',
+  'text-stone-600',
+  'text-lg',
+  'w-full'
+])
 
-const FIELD: string = `
-  ${FIELD_BASE}
-  border-purple-300
-  focus:border-fuchsia-500
-`
+const FIELD = formatClassList([
+  FIELD_BASE,
+  'border-purple-300',
+  'focus:border-fuchsia-500'
+])
 
-const FIELD_ERROR: string = `
-  ${FIELD_BASE}
-  border-red-300
-  focus:border-red-500
-`
+const FIELD_ERROR = formatClassList([
+  FIELD_BASE,
+  'border-red-300',
+  'focus:border-red-500'
+])
 
-const FIELD_VALID: string = `
-  ${FIELD_BASE}
-  border-green-300
-  focus:border-green-500
-`
+const FIELD_VALID = formatClassList([
+  FIELD_BASE,
+  'border-green-300',
+  'focus:border-green-500'
+])
 
-const ERROR_HELP_TEXT: string = `
-  delay-75
-  duration-200
-  error
-  mt-1
-  opacity-100
-  text-red-600
-  text-sm
-  transition-opacity
-`
+const ERROR_HELP_TEXT = formatClassList([
+  'delay-75',
+  'duration-200',
+  'error',
+  'mt-1',
+  'opacity-100',
+  'text-red-600',
+  'text-sm',
+  'transition-opacity'
+])
 
-const LABEL: string = `
-  text-stone-600
-  text-sm
-  tracking-wider
-`
+const LABEL = formatClassList([
+  'text-stone-600',
+  'text-sm',
+  'tracking-wider'
+])
 
 const TextInput = ({
   label,
@@ -81,23 +81,17 @@ const TextInput = ({
 }: TextInputProps) => {
   label = label.toLowerCase()
 
-  const formattedErrorHelpText: string = formatClassList(ERROR_HELP_TEXT)
-  const formattedField: string = formatClassList(FIELD)
-  const formattedFieldError: string = formatClassList(FIELD_ERROR)
-  const formattedFieldValid: string = formatClassList(FIELD_VALID)
-  const formattedLabel: string = formatClassList(LABEL)
-
   return (
     <label className="block">
-      <span className={formattedLabel}>{label.charAt(0).toUpperCase() + label.slice(1)}</span>
+      <span className={LABEL}>{label.charAt(0).toUpperCase() + label.slice(1)}</span>
       <div className="relative">
         <input
           className={
             !JSON.stringify(formState.touched[label]) // field is pristine
-              ? formattedField
+              ? FIELD
               : errors[label]
-                ? formattedFieldError
-                : formattedFieldValid
+                ? FIELD_ERROR
+                : FIELD_VALID
           }
           aria-required="true"
           placeholder=""
@@ -117,8 +111,8 @@ const TextInput = ({
       <p
         className={
           errors[label]
-            ? joinStrings(' ', formattedErrorHelpText, 'opacity-100')
-            : joinStrings(' ', formattedErrorHelpText, 'opacity-0')
+            ? joinStrings(' ', ERROR_HELP_TEXT, 'opacity-100')
+            : joinStrings(' ', ERROR_HELP_TEXT, 'opacity-0')
         }
         aria-hidden={
           errors[label]

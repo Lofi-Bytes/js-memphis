@@ -11,24 +11,22 @@ type ContentHeadingProps = {
   className?: string
 }
 
-const STYLES = `
-  text-stone-700
-  text-xl
-  tracking-wide
-`
+const CONTENT_HEADING = formatClassList([
+  'text-stone-700',
+  'text-xl',
+  'tracking-wide'
+])
 
 const ContentHeading = ({
   children,
   className
 }: ContentHeadingProps) => {
-  let styles = formatClassList(STYLES)
-
   return (
     <h3
       className={
         className
-          ? joinStrings(' ', styles, className)
-          : styles
+          ? joinStrings(' ', CONTENT_HEADING, className)
+          : CONTENT_HEADING
       }
     >
       {children}

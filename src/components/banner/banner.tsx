@@ -17,64 +17,64 @@ export type ClassListTypes = {
   formattedHeading: string
 }
 
-const BANNER: string = `
-  -ml-10
-  max-w-xs
-  px-10
-  py-2
-  rounded
-  shadow-lg
-  sm:-ml-24
-  sm:max-w-none
-  sm:px-24
-  w-max
-`
+const BANNER = formatClassList([
+  '-ml-10',
+  'max-w-xs',
+  'px-10',
+  'py-2',
+  'rounded',
+  'shadow-lg',
+  'sm:-ml-24',
+  'sm:max-w-none',
+  'sm:px-24',
+  'w-max'
+])
 
-const HEADING: string = `
-  sm:text-2xl
-  text-xl
-  tracking-wide
-`
+const HEADING = formatClassList([
+  'sm:text-2xl',
+  'text-xl',
+  'tracking-wide'
+])
 
-const BANNER_CYAN: string = `
-  bg-cyan-300
-  shadow-cyan-600/50
-`
+const BANNER_CYAN = formatClassList([
+  'bg-cyan-300',
+  'shadow-cyan-600/50'
+])
 
-const HEADING_CYAN: string = `
-  text-cyan-900
-`
+const HEADING_CYAN = formatClassList([
+  'text-cyan-900'
+])
 
-const BANNER_ROSE: string = `
-  bg-rose-300
-  shadow-rose-600/50
-`
+const BANNER_ROSE = formatClassList([
+  'bg-rose-300',
+  'shadow-rose-600/50'
+])
 
-const HEADING_ROSE: string = `
-  text-rose-900
-`
+const HEADING_ROSE = formatClassList([
+  'text-rose-900'
+])
 
-const BANNER_PURPLE: string = `
-  bg-purple-300
-  shadow-purple-600/50
-`
+const BANNER_PURPLE = formatClassList([
+  'bg-purple-300',
+  'shadow-purple-600/50'
+])
 
-const HEADING_PURPLE: string = `
-  text-purple-900
-`
+const HEADING_PURPLE = formatClassList([
+  'text-purple-900'
+])
 
-const BANNER_YELLOW: string = `
-  bg-yellow-300
-  shadow-yellow-600/50
-`
+const BANNER_YELLOW = formatClassList([
+  'bg-yellow-300',
+  'shadow-yellow-600/50'
+])
 
-const HEADING_YELLOW: string = `
-  text-yellow-900
-`
+const HEADING_YELLOW = formatClassList([
+  'text-yellow-900'
+])
 
-const LIST_PAGE_STYLE: string = `
-  mb-10
-`
+const LIST_PAGE_STYLE = formatClassList([
+  'mb-10'
+])
 
 const Banner = ({
   children,
@@ -90,14 +90,14 @@ const Banner = ({
 
     formattedBanner = joinStrings(
       ' ',
-      formatClassList(BANNER),
-      formatClassList(bannerColor),
+      BANNER,
+      bannerColor,
       pageType === 'listPage' ? LIST_PAGE_STYLE : ''
     )
     formattedHeading = joinStrings(
       ' ',
-      formatClassList(HEADING),
-      formatClassList(headingColor)
+      HEADING,
+      headingColor
     )
 
     return {formattedBanner, formattedHeading}

@@ -29,273 +29,273 @@ export type ClassListTypes = {
   formattedComingSoonButtonText: string
 }
 
-const CARD: string = `
-  block
-  border-0
-  border-l-8
-  duration-200
-  ease-in-out
-  group
-  overflow-hidden
-  px-4
-  py-6
-  rounded-lg
-  shadow-lg
-  sm:px-8
-  transform
-  transition
-`
+const CARD = formatClassList([
+  'block',
+  'border-0',
+  'border-l-8',
+  'duration-200',
+  'ease-in-out',
+  'group',
+  'overflow-hidden',
+  'px-4',
+  'py-6',
+  'rounded-lg',
+  'shadow-lg',
+  'sm:px-8',
+  'transform',
+  'transition'
+])
 
-const CARD_PUBLISHED: string = `
-  active:shadow-sm
-  active:translate-y-0.5
-  focus:-translate-y-0.5
-  focus:outline-none
-  focus:ring-4
-  focus:ring-opacity-50
-  focus:shadow-xl
-  hover:-translate-y-0.5
-  hover:shadow-xl
-`
+const CARD_PUBLISHED = formatClassList([
+  'active:shadow-sm',
+  'active:translate-y-0.5',
+  'focus:-translate-y-0.5',
+  'focus:outline-none',
+  'focus:ring-4',
+  'focus:ring-opacity-50',
+  'focus:shadow-xl',
+  'hover:-translate-y-0.5',
+  'hover:shadow-xl'
+])
 
-const TITLE: string = `
-  text-xl
-  tracking-wider
-  w-11/12
-`
+const TITLE = formatClassList([
+  'text-xl',
+  'tracking-wider',
+  'w-11/12'
+])
 
-const DATE: string = `
-  font-serif
-  italic
-  text-sm
-  tracking-wider
-`
+const DATE = formatClassList([
+  'font-serif',
+  'italic',
+  'text-sm',
+  'tracking-wider'
+])
 
-const TAGS: string = `
-  flex
-  flex-wrap
-  mt-2
-`
+const TAGS = formatClassList([
+  'flex',
+  'flex-wrap',
+  'mt-2'
+])
 
-const EXCERPT: string = `
-  mt-4
-  text-base
-  tracking-wider
-`
+const EXCERPT = formatClassList([
+  'mt-4',
+  'text-base',
+  'tracking-wider'
+])
 
-const ICON_ROW: string = `
-  flex
-  flex-row-reverse
-`
+const ICON_ROW = formatClassList([
+  'flex',
+  'flex-row-reverse'
+])
 
-const ICON: string = `
-  mt-2
-  text-xl
-  transition
-  duration-150
-  ease-in-out
-  border-b-4
-  rounded-sm
-  fas
-  fa-arrow-right
-  pb-0.5
-`
+const ICON = formatClassList([
+  'mt-2',
+  'text-xl',
+  'transition',
+  'duration-150',
+  'ease-in-out',
+  'border-b-4',
+  'rounded-sm',
+  'fas',
+  'fa-arrow-right',
+  'pb-0.5'
+])
 
-const COMING_SOON_BUTTON: string = `
-  mt-2
-  px-3
-  py-0.5
-  rounded-lg
-  shadow
-  w-max
-`
+const COMING_SOON_BUTTON = formatClassList([
+  'mt-2',
+  'px-3',
+  'py-0.5',
+  'rounded-lg',
+  'shadow',
+  'w-max'
+])
 
-const COMING_SOON_BUTTON_TEXT: string = `
-  text-lg
-  tracking-wider
-  w-11/12
-`
+const COMING_SOON_BUTTON_TEXT = formatClassList([
+  'text-lg',
+  'tracking-wider',
+  'w-11/12'
+])
 
-const CARD_ROSE: string = `
-  bg-rose-100
-  border-rose-400
-  shadow-rose-600/50
-`
+const CARD_ROSE = formatClassList([
+  'bg-rose-100',
+  'border-rose-400',
+  'shadow-rose-600/50'
+])
 
-const CARD_ROSE_PUBLISHED: string = `
-  focus:bg-rose-50
-  focus:border-rose-600
-  focus:ring-rose-200
-  hover:border-rose-500
-`
+const CARD_ROSE_PUBLISHED = formatClassList([
+  'focus:bg-rose-50',
+  'focus:border-rose-600',
+  'focus:ring-rose-200',
+  'hover:border-rose-500'
+])
 
-const TITLE_ROSE: string = `
-  text-rose-900
-`
+const TITLE_ROSE = formatClassList([
+  'text-rose-900'
+])
 
-const DATE_ROSE: string = `
-  text-rose-700
-`
+const DATE_ROSE = formatClassList([
+  'text-rose-700'
+])
 
-const EXCERPT_ROSE: string = `
-  text-rose-700
-`
+const EXCERPT_ROSE = formatClassList([
+  'text-rose-700'
+])
 
-const ICON_ROSE: string = `
-  border-rose-100
-  text-rose-400
-`
+const ICON_ROSE = formatClassList([
+  'border-rose-100',
+  'text-rose-400'
+])
 
-const ICON_ROSE_PUBLISHED: string = `
-  group-focus:border-rose-600
-  group-focus:text-rose-600
-  group-hover:border-rose-500
-  group-hover:text-rose-500
-`
+const ICON_ROSE_PUBLISHED = formatClassList([
+  'group-focus:border-rose-600',
+  'group-focus:text-rose-600',
+  'group-hover:border-rose-500',
+  'group-hover:text-rose-500'
+])
 
-const COMING_SOOON_BUTTON_ROSE: string = `
-  bg-rose-50
-`
+const COMING_SOON_BUTTON_ROSE = formatClassList([
+  'bg-rose-50'
+])
 
-const COMING_SOON_BUTTON_TEXT_ROSE: string = `
-  text-rose-600
-`
+const COMING_SOON_BUTTON_TEXT_ROSE = formatClassList([
+  'text-rose-600'
+])
 
-const CARD_SKY: string = `
-  bg-sky-100
-  border-sky-400
-  shadow-sky-600/50
-`
+const CARD_SKY = formatClassList([
+  'bg-sky-100',
+  'border-sky-400',
+  'shadow-sky-600/50'
+])
 
-const CARD_SKY_PUBLISHED: string = `
-  focus:bg-sky-50
-  focus:border-sky-600
-  focus:ring-sky-200
-  hover:border-sky-500
-`
+const CARD_SKY_PUBLISHED = formatClassList([
+  'focus:bg-sky-50',
+  'focus:border-sky-600',
+  'focus:ring-sky-200',
+  'hover:border-sky-500'
+])
 
-const TITLE_SKY: string = `
-  text-sky-900
-`
+const TITLE_SKY = formatClassList([
+  'text-sky-900'
+])
 
-const DATE_SKY: string = `
-  text-sky-700
-`
+const DATE_SKY = formatClassList([
+  'text-sky-700'
+])
 
-const EXCERPT_SKY: string = `
-  text-sky-700
-`
+const EXCERPT_SKY = formatClassList([
+  'text-sky-700'
+])
 
-const ICON_SKY: string = `
-  border-sky-100
-  text-sky-400
-`
+const ICON_SKY = formatClassList([
+  'border-sky-100',
+  'text-sky-400'
+])
 
-const ICON_SKY_PUBLISHED: string = `
-  group-focus:border-sky-600
-  group-focus:text-sky-600
-  group-hover:border-sky-500
-  group-hover:text-sky-500
-`
+const ICON_SKY_PUBLISHED = formatClassList([
+  'group-focus:border-sky-600',
+  'group-focus:text-sky-600',
+  'group-hover:border-sky-500',
+  'group-hover:text-sky-500'
+])
 
-const COMING_SOOON_BUTTON_SKY: string = `
-  bg-sky-50
-`
+const COMING_SOON_BUTTON_SKY = formatClassList([
+  'bg-sky-50'
+])
 
-const COMING_SOON_BUTTON_TEXT_SKY: string = `
-  text-sky-600
-`
+const COMING_SOON_BUTTON_TEXT_SKY = formatClassList([
+  'text-sky-600'
+])
 
-const CARD_VIOLET: string = `
-  bg-violet-100
-  border-violet-400
-  shadow-violet-600/50
-`
+const CARD_VIOLET = formatClassList([
+  'bg-violet-100',
+  'border-violet-400',
+  'shadow-violet-600/50'
+])
 
-const CARD_VIOLET_PUBLISHED: string = `
-  focus:bg-violet-50
-  focus:border-violet-600
-  focus:ring-violet-200
-  hover:border-violet-500
-`
+const CARD_VIOLET_PUBLISHED = formatClassList([
+  'focus:bg-violet-50',
+  'focus:border-violet-600',
+  'focus:ring-violet-200',
+  'hover:border-violet-500'
+])
 
-const TITLE_VIOLET: string = `
-  text-violet-900
-`
+const TITLE_VIOLET = formatClassList([
+  'text-violet-900'
+])
 
-const DATE_VIOLET: string = `
-  text-violet-700
-`
+const DATE_VIOLET = formatClassList([
+  'text-violet-700'
+])
 
-const EXCERPT_VIOLET: string = `
-  text-violet-700
-`
+const EXCERPT_VIOLET = formatClassList([
+  'text-violet-700'
+])
 
-const ICON_VIOLET: string = `
-  border-violet-100
-  text-violet-400
-`
+const ICON_VIOLET = formatClassList([
+  'border-violet-100',
+  'text-violet-400'
+])
 
-const ICON_VIOLET_PUBLISHED: string = `
-  group-focus:border-violet-600
-  group-focus:text-violet-600
-  group-hover:border-violet-500
-  group-hover:text-violet-500
-`
+const ICON_VIOLET_PUBLISHED = formatClassList([
+  'group-focus:border-violet-600',
+  'group-focus:text-violet-600',
+  'group-hover:border-violet-500',
+  'group-hover:text-violet-500'
+])
 
-const COMING_SOOON_BUTTON_VIOLET: string = `
-  bg-violet-50
-`
+const COMING_SOON_BUTTON_VIOLET = formatClassList([
+  'bg-violet-50'
+])
 
 
-const COMING_SOON_BUTTON_TEXT_VIOLET: string = `
-  text-violet-600
-`
+const COMING_SOON_BUTTON_TEXT_VIOLET = formatClassList([
+  'text-violet-600'
+])
 
-const CARD_YELLOW: string = `
-  bg-yellow-100
-  border-yellow-500
-  shadow-yellow-600/50
-`
+const CARD_YELLOW = formatClassList([
+  'bg-yellow-100',
+  'border-yellow-500',
+  'shadow-yellow-600/50'
+])
 
-const CARD_YELLOW_PUBLISHED: string = `
-  focus:bg-yellow-50
-  focus:border-yellow-600
-  focus:ring-yellow-200
-  hover:border-yellow-600
-`
+const CARD_YELLOW_PUBLISHED = formatClassList([
+  'focus:bg-yellow-50',
+  'focus:border-yellow-600',
+  'focus:ring-yellow-200',
+  'hover:border-yellow-600'
+])
 
-const TITLE_YELLOW: string = `
-  text-yellow-900
-`
+const TITLE_YELLOW = formatClassList([
+  'text-yellow-900'
+])
 
-const DATE_YELLOW: string = `
-  text-yellow-700
-`
+const DATE_YELLOW = formatClassList([
+  'text-yellow-700'
+])
 
-const EXCERPT_YELLOW: string = `
-  text-yellow-700
-`
+const EXCERPT_YELLOW = formatClassList([
+  'text-yellow-700'
+])
 
-const ICON_YELLOW: string = `
-  border-yellow-100
-  text-yellow-500
-`
+const ICON_YELLOW = formatClassList([
+  'border-yellow-100',
+  'text-yellow-500'
+])
 
-const ICON_YELLOW_PUBLISHED: string = `
-  group-focus:border-yellow-600
-  group-focus:text-yellow-600
-  group-hover:border-yellow-600
-  group-hover:text-yellow-600
-`
+const ICON_YELLOW_PUBLISHED = formatClassList([
+  'group-focus:border-yellow-600',
+  'group-focus:text-yellow-600',
+  'group-hover:border-yellow-600',
+  'group-hover:text-yellow-600'
+])
 
-const COMING_SOOON_BUTTON_YELLOW: string = `
-  bg-yellow-50
-`
+const COMING_SOON_BUTTON_YELLOW = formatClassList([
+  'bg-yellow-50',
+])
 
-const COMING_SOON_BUTTON_TEXT_YELLOW: string = `
-  text-yellow-700
-`
+const COMING_SOON_BUTTON_TEXT_YELLOW = formatClassList([
+  'text-yellow-700'
+])
 
 const Card = ({
   color,
@@ -330,50 +330,50 @@ const Card = ({
     if (published) {
       formattedCard = joinStrings(
         ' ',
-        formatClassList(CARD),
-        formatClassList(cardStyles),
-        formatClassList(cardPublishedStyles),
-        formatClassList(CARD_PUBLISHED)
+        CARD,
+        cardStyles,
+        cardPublishedStyles,
+        CARD_PUBLISHED
       )
       formattedIcon = joinStrings(
         ' ',
-        formatClassList(ICON),
-        formatClassList(iconStyles),
-        formatClassList(iconPublishedStyles)
+        ICON,
+        iconStyles,
+        iconPublishedStyles
       )
     }
 
     if (!published) {
       formattedCard = joinStrings(
         ' ',
-        formatClassList(CARD),
-        formatClassList(cardStyles),
+        CARD,
+        cardStyles,
       )
       formattedComingSoonButton = joinStrings(
         ' ',
-        formatClassList(COMING_SOON_BUTTON),
-        formatClassList(comingSoonButtonStyles)
+        COMING_SOON_BUTTON,
+        comingSoonButtonStyles
       )
       formattedComingSoonButtonText = joinStrings(
         ' ',
-        formatClassList(COMING_SOON_BUTTON_TEXT),
-        formatClassList(comingSoonButtonTextStyles)
+        COMING_SOON_BUTTON_TEXT,
+        comingSoonButtonTextStyles
       )
     }
     formattedTitle = joinStrings(
       ' ',
-      formatClassList(TITLE),
-      formatClassList(titleStyles)
+      TITLE,
+      titleStyles
     )
     formattedDate = joinStrings(
       ' ',
-      formatClassList(DATE),
-      formatClassList(dateStyles)
+      DATE,
+      dateStyles
     )
     formattedExcerpt = joinStrings(
       ' ',
-      formatClassList(EXCERPT),
-      formatClassList(excerptStyles)
+      EXCERPT,
+      excerptStyles
     )
 
     return {
@@ -398,7 +398,7 @@ const Card = ({
       EXCERPT_ROSE,
       ICON_ROSE,
       ICON_ROSE_PUBLISHED,
-      COMING_SOOON_BUTTON_ROSE,
+      COMING_SOON_BUTTON_ROSE,
       COMING_SOON_BUTTON_TEXT_ROSE
     )
   }
@@ -412,7 +412,7 @@ const Card = ({
       EXCERPT_SKY,
       ICON_SKY,
       ICON_SKY_PUBLISHED,
-      COMING_SOOON_BUTTON_SKY,
+      COMING_SOON_BUTTON_SKY,
       COMING_SOON_BUTTON_TEXT_SKY
     )
   }
@@ -426,7 +426,7 @@ const Card = ({
       EXCERPT_VIOLET,
       ICON_VIOLET,
       ICON_VIOLET_PUBLISHED,
-      COMING_SOOON_BUTTON_VIOLET,
+      COMING_SOON_BUTTON_VIOLET,
       COMING_SOON_BUTTON_TEXT_VIOLET
     )
   }
@@ -440,13 +440,10 @@ const Card = ({
       EXCERPT_YELLOW,
       ICON_YELLOW,
       ICON_YELLOW_PUBLISHED,
-      COMING_SOOON_BUTTON_YELLOW,
+      COMING_SOON_BUTTON_YELLOW,
       COMING_SOON_BUTTON_TEXT_YELLOW
     )
   }
-
-  const formattedTags: string = formatClassList(TAGS)
-  const formattedIconRow: string = formatClassList(ICON_ROW)
 
   const formattedDate = formatDate(date)
 
@@ -467,13 +464,13 @@ const Card = ({
                   <p className={classList.formattedDate}>
                     {formattedDate}
                   </p>
-                  <div className={formattedTags}>
+                  <div className={TAGS}>
                     {tags}
                   </div>
                   <p className={classList.formattedExcerpt}>
                     {excerpt}
                   </p>
-                  <div className={formattedIconRow}>
+                  <div className={ICON_ROW}>
                     <i className={classList.formattedIcon} />
                   </div>
                 </a>
@@ -487,13 +484,13 @@ const Card = ({
                   <p className={classList.formattedDate}>
                     {formattedDate}
                   </p>
-                  <div className={formattedTags}>
+                  <div className={TAGS}>
                     {tags}
                   </div>
                   <p className={classList.formattedExcerpt}>
                     {excerpt}
                   </p>
-                  <div className={formattedIconRow}>
+                  <div className={ICON_ROW}>
                     <div className={classList.formattedComingSoonButton}>
                       <span className={classList.formattedComingSoonButtonText}>
                         Coming soon
@@ -514,13 +511,13 @@ const Card = ({
                   <p className={classList.formattedDate}>
                     {formattedDate}
                   </p>
-                  <div className={formattedTags}>
+                  <div className={TAGS}>
                     {tags}
                   </div>
                   <p className={classList.formattedExcerpt}>
                     {excerpt}
                   </p>
-                  <div className={formattedIconRow}>
+                  <div className={ICON_ROW}>
                     <i className={classList.formattedIcon} />
                   </div>
                 </Link>
@@ -534,13 +531,13 @@ const Card = ({
                   <p className={classList.formattedDate}>
                     {formattedDate}
                   </p>
-                  <div className={formattedTags}>
+                  <div className={TAGS}>
                     {tags}
                   </div>
                   <p className={classList.formattedExcerpt}>
                     {excerpt}
                   </p>
-                  <div className={formattedIconRow}>
+                  <div className={ICON_ROW}>
                     <i className={classList.formattedIcon} />
                   </div>
                 </div>

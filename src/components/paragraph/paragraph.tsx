@@ -11,24 +11,22 @@ type ParagraphProps = {
   className?: string
 }
 
-const STYLES = `
-  leading-relaxed
-  text-stone-600
-  tracking-wider
-`
+const STYLES = formatClassList([
+  'leading-relaxed',
+  'text-stone-600',
+  'tracking-wider'
+])
 
 const Paragraph = ({
   children,
   className
 }: ParagraphProps) => {
-  let styles = formatClassList(STYLES)
-
   return (
     <p
       className={
         className
-          ? joinStrings(' ', styles, className)
-          : styles
+          ? joinStrings(' ', STYLES, className)
+          : STYLES
       }
     >
       {children}

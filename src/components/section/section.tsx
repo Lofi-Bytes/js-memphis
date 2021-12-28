@@ -12,38 +12,38 @@ type SectionProps = {
   className?: string
 }
 
-const STYLES = `
-  mx-auto
-  py-8
-  relative
-  rounded-xl
-  sm:mb-10
-  sm:px-14
-  sm:w-9/12
-  w-11/12
-`
+const SECTION = formatClassList([
+  'mx-auto',
+  'py-8',
+  'relative',
+  'rounded-xl',
+  'sm:mb-10',
+  'sm:px-14',
+  'sm:w-9/12',
+  'w-11/12'
+])
 
 const Section = ({
   background,
   children,
   className
 }: SectionProps) => {
-  let styles = formatClassList(STYLES)
+  let section: string
 
   if (background === 'opaque') {
-    styles = joinStrings(' ', styles, 'bg-stone-100 shadow-xl px-4 sm:px-8')
+    section = joinStrings(' ', SECTION, 'bg-stone-100 shadow-xl px-4 sm:px-8')
   }
 
   if (background === 'transparent') {
-    styles = joinStrings(' ', styles, 'bg-transparent')
+    section = joinStrings(' ', SECTION, 'bg-transparent')
   }
 
   return (
     <article
       className={
         className
-          ? joinStrings(' ', styles, className)
-          : styles
+          ? joinStrings(' ', section, className)
+          : section
       }
     >
       {children}

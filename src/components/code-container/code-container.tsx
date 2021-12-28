@@ -18,22 +18,22 @@ type CodeContainerProps = {
   tagColor: string
 }
 
-const CODE_CONTAINER = `
-  bg-stone-50
-  border-blue-500
-  border-l-8
-  code-container
-  mt-4
-  p-1
-  pt-3
-  rounded
-  shadow
-`
+const CODE_CONTAINER = formatClassList([
+  'bg-stone-50',
+  'border-blue-500',
+  'border-l-8',
+  'code-container',
+  'mt-4',
+  'p-1',
+  'pt-3',
+  'rounded',
+  'shadow'
+])
 
-const PATH_CONTAINER = `
-  mb-4
-  ml-3
-`
+const PATH_CONTAINER = formatClassList([
+  'mb-4',
+  'ml-3'
+])
 
 const CodeContainer = ({
   children,
@@ -45,18 +45,18 @@ const CodeContainer = ({
   tagBgColor,
   tagColor
 }: CodeContainerProps) => {
-  const formattedCodeContainer = formatClassList(CODE_CONTAINER)
-  const formattedClassList = className
-                            ? joinStrings(' ', formattedCodeContainer, className)
-                            : formattedCodeContainer
-  const formattedPathContainer = formatClassList(PATH_CONTAINER)
-
   return (
-    <div className={formattedClassList}>
+    <div
+      className={
+        className
+          ? joinStrings(' ', CODE_CONTAINER, className)
+          : CODE_CONTAINER
+      }
+    >
       {
         path
           ?
-            <div className={formattedPathContainer}>
+            <div className={PATH_CONTAINER}>
               <code className="language-bash">{path}</code>
             </div>
           :

@@ -3,28 +3,28 @@ import * as React from 'react'
 import { formatClassList, joinStrings } from '../../utils/utils'
 
 
-const TAG_BASE: string = `
-  mr-3
-  mt-3
-  px-3
-  py-0.5
-  rounded-lg
-  shadow
-  w-max
-`
+const TAG_BASE = formatClassList([
+  'mr-3',
+  'mt-3',
+  'px-3',
+  'py-0.5',
+  'rounded-lg',
+  'shadow',
+  'w-max'
+])
 
-const TAG_CARD: string = `
-  ${TAG_BASE}
-  ease-in-out
-  transition
-`
+const TAG_CARD = formatClassList([
+  TAG_BASE,
+  'ease-in-out',
+  'transition'
+])
 
-const CHILDREN: string = `
-  align-middle
-  inline-block
-  text-xs
-  tracking-widest
-`
+const TAG = formatClassList([
+  'align-middle',
+  'inline-block',
+  'text-xs',
+  'tracking-widest'
+])
 
 const tagColorsCard = {
   violet: {
@@ -83,15 +83,15 @@ const Tag = ({
   tagColor,
   children
 }: TagProps) => {
-  let formattedTagBase: string = formatClassList(TAG_BASE)
-  let formattedTagCard: string = formatClassList(TAG_CARD)
-  let formattedChildren: string = formatClassList(CHILDREN)
+  let formattedTagBase: string
+  let formattedTagCard: string
+  let formattedChildren: string
 
   if (card) {
     for (const [key, value] of Object.entries(tagColorsCard)) {
       if (key === tagColor) {
-        formattedTagCard = joinStrings(' ', formattedTagCard, value.tag)
-        formattedChildren = joinStrings(' ', formattedChildren, value.children)
+        formattedTagCard = joinStrings(' ', TAG_CARD, value.tag)
+        formattedChildren = joinStrings(' ', TAG, value.children)
       }
 
     }
@@ -100,8 +100,8 @@ const Tag = ({
   if (!card) {
     for (const [key, value] of Object.entries(tagColors)) {
       if (key === tagColor) {
-        formattedTagBase = joinStrings(' ', formattedTagBase, value.tag)
-        formattedChildren = joinStrings(' ', formattedChildren, value.children)
+        formattedTagBase = joinStrings(' ', TAG_BASE, value.tag)
+        formattedChildren = joinStrings(' ', TAG, value.children)
       }
     }
   }
@@ -109,14 +109,14 @@ const Tag = ({
   return (
     card
       ?
-        <div className={formattedTagCard}>
-          <p className={formattedChildren}>
+        <div className={TAG_CARD}>
+          <p className={TAG}>
             {children}
           </p>
         </div>
       :
-        <div className={formattedTagBase}>
-          <p className={formattedChildren}>
+        <div className={TAG_BASE}>
+          <p className={TAG}>
             {children}
           </p>
         </div>

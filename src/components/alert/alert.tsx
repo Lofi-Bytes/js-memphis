@@ -10,59 +10,55 @@ type AlertProps = {
   className?: string
 }
 
-const ALERT_BOX = `
-  bg-blue-100
-  border-blue-500
-  border-l-8
-  flex
-  mt-8
-  px-4
-  py-4
-  rounded
-  shadow
-  sm:px-8
-`
+const ALERT_BOX = formatClassList([
+  'bg-blue-100',
+  'border-blue-500',
+  'border-l-8',
+  'flex',
+  'mt-8',
+  'px-4',
+  'py-4',
+  'rounded',
+  'shadow',
+  'sm:px-8'
+])
 
-const ICON_CONTAINER = `
-  hidden
-  sm:inline-block
-`
+const ICON_CONTAINER = formatClassList([
+  'hidden',
+  'sm:inline-block'
+])
 
-const ICON = `
-  fa-info-circle
-  far
-  mt-0.5
-  text-blue-900
-  text-xl
-`
+const ICON = formatClassList([
+  'fa-info-circle',
+  'far',
+  'mt-0.5',
+  'text-blue-900',
+  'text-xl'
+])
 
-const ALERT_MESSAGE = `
-  leading-relaxed
-  sm:ml-4
-  text-blue-900
-  tracking-wider
-`
+const ALERT_MESSAGE = formatClassList([
+  'leading-relaxed',
+  'sm:ml-4',
+  'text-blue-900',
+  'tracking-wider'
+])
 
 const Alert = ({
   children,
   className
 }: AlertProps) => {
-  const formattedAlertBox = formatClassList(ALERT_BOX)
-  const formattedClassList = className
-                              ? joinStrings(' ', formattedAlertBox, className)
-                              : formattedAlertBox
-  const formattedIconContainer = formatClassList(ICON_CONTAINER)
-  const formattedIcon = formatClassList(ICON)
-  const formattedAlertMessage = formatClassList(ALERT_MESSAGE)
-
   return (
     <div
-      className={formattedClassList}
+      className={
+        className
+          ? joinStrings(' ', ALERT_BOX, className)
+          : ALERT_BOX
+      }
     >
-      <div className={formattedIconContainer}>
-        <i className={formattedIcon}></i>
+      <div className={ICON_CONTAINER}>
+        <i className={ICON}></i>
       </div>
-      <p className={formattedAlertMessage}>{children}</p>
+      <p className={ALERT_MESSAGE}>{children}</p>
     </div>
   )
 }

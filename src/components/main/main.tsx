@@ -11,24 +11,26 @@ type MainProps = {
   className?: string
 }
 
-const MAIN = `
-  m-auto
-  max-w-screen-lg
-  mb-20
-  min-h-screen
-`
+const MAIN = formatClassList([
+  'm-auto',
+  'max-w-screen-lg',
+  'mb-20',
+  'min-h-screen'
+])
 
 const Main = ({
   children,
   className
 }: MainProps) => {
-  const formattedJumbotronWrapper = formatClassList(MAIN)
-  const formattedClassList = className
-                              ? joinStrings(' ', formattedJumbotronWrapper, className)
-                              : formattedJumbotronWrapper
 
   return (
-    <main className={formattedClassList}>
+    <main
+      className={
+        className
+          ? joinStrings(' ', MAIN, className)
+          : MAIN
+      }
+    >
       {children}
     </main>
   )

@@ -23,12 +23,12 @@ type LayoutProps = {
   location: Location
 }
 
-const LAYOUT = `
-  flex
-  flex-col
-  justify-between
-  relative
-`
+const LAYOUT = formatClassList([
+  'flex',
+  'flex-col',
+  'justify-between',
+  'relative'
+])
 
 const Layout = ({
   children,
@@ -41,15 +41,14 @@ const Layout = ({
   usePopulateElements(setHeight, setWidth)
   useRepopulateElements(height, width)
 
-  const formattedLayout = formatClassList(LAYOUT)
-  const formattedClassList = className
-                              ? joinStrings(' ', formattedLayout, className)
-                              : formattedLayout
-
   return (
     <div
       id="canvas"
-      className={formattedClassList}
+      className={
+        className
+          ? joinStrings(' ', LAYOUT, className)
+          : LAYOUT
+      }
     >
       <div className="z-10">
         <Header location={location} />
