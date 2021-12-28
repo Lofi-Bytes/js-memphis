@@ -7,6 +7,7 @@ export const randomIntFromInterval = (
 ): number => { // min and max included
   return Math.floor(Math.random() * (max - min + 1) + min)
 }
+
 /*
   Invoke to remove all elements of a given className from the DOM
 */
@@ -22,6 +23,7 @@ export const removeElementsByClass = (
     elements[0].parentNode.removeChild(elements[0])
   }
 }
+
 /*
   Window object doesn't exist outside of the window!
 */
@@ -40,6 +42,7 @@ export const getDocumentHeight = (): number | null => {
     ? Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight)
     : null
 }
+
 /*
   Window object doesn't exist outside of the window!
 */
@@ -48,18 +51,10 @@ export const getWindowInnerWidth = (): number => {
     ? window.innerWidth
     : 0
 }
+
 /*
   Utilities for making tailwind classes cleaner to work with
 */
-// export const formatClassList = (
-//   classList: string
-// ): string => {
-//   return classList
-//         .replace(/\n/g, '')
-//         .replace(/[\s]+/g, ' ')
-//         .trim()
-// }
-
 export const formatClassList = (
   classList: string[]
 ): string => {
@@ -72,6 +67,7 @@ export const joinStrings = (
 ): string => {
   return strings.join(join)
 }
+
 /*
   React Hook Form
 */

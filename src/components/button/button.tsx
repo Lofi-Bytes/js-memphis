@@ -108,6 +108,12 @@ const TERTIARY = formatClassList([
   'active:border-purple-700',
 ])
 
+const BUTTON_VARIANTS: Record<string, string> = {
+  'primary': PRIMARY,
+  'secondary': SECONDARY,
+  'tertiary': TERTIARY
+}
+
 const Button = ({
   action,
   children,
@@ -121,16 +127,9 @@ const Button = ({
 }: ButtonProps) => {
 
   let formattedClassName
-  if (action === 'primary') {
-    formattedClassName = joinStrings(' ', PRIMARY, className)
-  }
 
-  if (action === 'secondary') {
-    formattedClassName = joinStrings(' ', SECONDARY, className)
-  }
-
-  if (action === 'tertiary') {
-    formattedClassName = joinStrings(' ', TERTIARY, className)
+  if (BUTTON_VARIANTS.hasOwnProperty(action)) {
+    formattedClassName = joinStrings(' ', BUTTON_VARIANTS[action], className)
   }
 
   if (to) {
