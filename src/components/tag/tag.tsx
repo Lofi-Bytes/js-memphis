@@ -3,6 +3,12 @@ import * as React from 'react'
 import { formatClassList, joinStrings } from '../../utils/utils'
 
 
+type TagProps = {
+  card: boolean,
+  tagColor: string,
+  children: React.ReactNode
+}
+
 const TAG_BASE = formatClassList([
   'mr-3',
   'mt-3',
@@ -19,7 +25,7 @@ const TAG_CARD = formatClassList([
   'transition'
 ])
 
-const TAG = formatClassList([
+const CHILDREN = formatClassList([
   'align-middle',
   'inline-block',
   'text-xs',
@@ -72,12 +78,6 @@ const tagColors = {
   }
 }
 
-type TagProps = {
-  card: boolean,
-  tagColor: string,
-  children: React.ReactNode
-}
-
 const Tag = ({
   card,
   tagColor,
@@ -91,9 +91,8 @@ const Tag = ({
     for (const [key, value] of Object.entries(tagColorsCard)) {
       if (key === tagColor) {
         formattedTagCard = joinStrings(' ', TAG_CARD, value.tag)
-        formattedChildren = joinStrings(' ', TAG, value.children)
+        formattedChildren = joinStrings(' ', CHILDREN, value.children)
       }
-
     }
   }
 
@@ -101,7 +100,7 @@ const Tag = ({
     for (const [key, value] of Object.entries(tagColors)) {
       if (key === tagColor) {
         formattedTagBase = joinStrings(' ', TAG_BASE, value.tag)
-        formattedChildren = joinStrings(' ', TAG, value.children)
+        formattedChildren = joinStrings(' ', CHILDREN, value.children)
       }
     }
   }
@@ -109,14 +108,14 @@ const Tag = ({
   return (
     card
       ?
-        <div className={TAG_CARD}>
-          <p className={TAG}>
+        <div className={formattedTagCard}>
+          <p className={formattedChildren}>
             {children}
           </p>
         </div>
       :
-        <div className={TAG_BASE}>
-          <p className={TAG}>
+        <div className={formattedTagBase}>
+          <p className={formattedChildren}>
             {children}
           </p>
         </div>

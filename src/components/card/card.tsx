@@ -119,7 +119,9 @@ const COMING_SOON_BUTTON_TEXT = formatClassList([
 const CARD_ROSE = formatClassList([
   'bg-rose-100',
   'border-rose-400',
-  'shadow-rose-600/50'
+  'shadow-rose-600/50',
+  'hover:shadow-rose-600/50',
+  'focus:shadow-rose-600/50'
 ])
 
 const CARD_ROSE_PUBLISHED = formatClassList([
@@ -164,7 +166,9 @@ const COMING_SOON_BUTTON_TEXT_ROSE = formatClassList([
 const CARD_SKY = formatClassList([
   'bg-sky-100',
   'border-sky-400',
-  'shadow-sky-600/50'
+  'shadow-sky-600/50',
+  'hover:shadow-sky-600/50',
+  'focus:shadow-sky-600/50'
 ])
 
 const CARD_SKY_PUBLISHED = formatClassList([
@@ -209,7 +213,9 @@ const COMING_SOON_BUTTON_TEXT_SKY = formatClassList([
 const CARD_VIOLET = formatClassList([
   'bg-violet-100',
   'border-violet-400',
-  'shadow-violet-600/50'
+  'shadow-violet-600/50',
+  'hover:shadow-violet-600/50',
+  'focus:shadow-violet-600/50'
 ])
 
 const CARD_VIOLET_PUBLISHED = formatClassList([
@@ -255,7 +261,9 @@ const COMING_SOON_BUTTON_TEXT_VIOLET = formatClassList([
 const CARD_YELLOW = formatClassList([
   'bg-yellow-100',
   'border-yellow-500',
-  'shadow-yellow-600/50'
+  'shadow-yellow-600/50',
+  'hover:shadow-yellow-600/50',
+  'focus:shadow-yellow-600/50'
 ])
 
 const CARD_YELLOW_PUBLISHED = formatClassList([
