@@ -12,7 +12,9 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
     "@fontsource/lora": "^4.5.1",
@@ -40,8 +42,14 @@
     "react-hook-form": "^6.15.4"
   },
   "devDependencies": {
+    "@babel/core": "^7.16.5",
+    "@storybook/addon-actions": "^6.4.9",
+    "@storybook/addon-essentials": "^6.4.9",
+    "@storybook/addon-links": "^6.4.9",
+    "@storybook/react": "^6.4.9",
     "@tailwindcss/forms": "^0.4.0",
     "autoprefixer": "^10.4.0",
+    "babel-loader": "^8.2.3",
     "postcss": "^8.4.5",
     "prettier": "2.5.1",
     "tailwindcss": "^3.0.7"
