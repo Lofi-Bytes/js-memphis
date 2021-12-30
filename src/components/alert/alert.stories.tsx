@@ -9,9 +9,9 @@ export default {
 
 const Template = (args) => <Alert {...args} />
 
-export const Primary = Template.bind({})
+export const Info = Template.bind({})
 
-Primary.args = {
+Info.args = {
   children: `This series assumes the reader has an intermediate understanding of React JS and Tailwind CSS.`,
   className: ''
 }

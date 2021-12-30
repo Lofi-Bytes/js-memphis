@@ -1,6 +1,10 @@
 import * as React from 'react'
 
-import { StaticImage } from 'gatsby-plugin-image'
+import { graphql } from 'gatsby'
+import {
+  getImage,
+  StaticImage
+} from 'gatsby-plugin-image'
 
 import Avatar from '../components/avatar'
 import Banner from '../components/banner/banner'
@@ -16,12 +20,15 @@ import SocialIconRow from '../components/social-icon-row'
 import TextLink from '../components/text-link'
 
 type PageProps = {
+  data: any,
   location: Location
 }
 
 const AboutPage = ({
+  data,
   location
 }: PageProps) => {
+  const image = getImage(data.avatar)
 
   return (
     <Layout location={location}>
@@ -36,7 +43,10 @@ const AboutPage = ({
       />
       <Main>
         <Section background="opaque" className="pb-12 mb-8 -mt-10">
-          <Avatar />
+          <Avatar
+            alt="Jillian's avatar"
+            src={image}
+          />
           <i className="absolute text-6xl text-yellow-300 -rotate-90 fal fa-triangle -left-4 -top-8 sm:-left-8 sm:-top-10 sm:text-7xl lg:-left-8 lg:-top-14 lg:text-8xl transofrm transform-gpu" />
           <i className="absolute text-6xl fal fa-bolt text-emerald-300 -right-2 bottom-64 sm:-right-4 sm:bottom-48 sm:text-7xl lg:-right-4 lg:bottom-48 lg:text-8xl transofrm rotate-12 transform-gpu" />
 
@@ -293,3 +303,18 @@ const AboutPage = ({
 }
 
 export default AboutPage
+
+export const pageQuery = graphql`
+  query {
+  avatar: file(relativePath: {eq: "bsfSBbsadfK.jpg"}) {
+    childImageSharp {
+      gatsbyImageData(
+        width: 300
+        quality: 100
+        placeholder: BLURRED
+        formats: [AUTO, WEBP, AVIF]
+      )
+    }
+  }
+}
+`

@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { StaticImage } from 'gatsby-plugin-image'
+import { GatsbyImage } from 'gatsby-plugin-image'
 
 import {
   formatClassList,
@@ -7,8 +7,9 @@ import {
 } from '../../utils/utils'
 
 type AvatarProps = {
-  children: React.ReactNode,
-  className?: string
+  alt: string,
+  className?: string,
+  src: any
 }
 
 const AVATAR_OUTER = formatClassList([
@@ -41,8 +42,12 @@ const AVATAR_RING = formatClassList([
 ])
 
 const Avatar = ({
-  className
+  alt,
+  className,
+  src
 }: AvatarProps) => {
+  console.log(src);
+
   return (
     <div
       className={
@@ -52,14 +57,10 @@ const Avatar = ({
       }
     >
       <div className={AVATAR_INNER}>
-        <StaticImage
-          alt="Jillian's avatar."
+        <GatsbyImage
+          alt={alt}
           className="avatar"
-          formats={["auto", "webp", "avif"]}
-          layout="constrained"
-          placeholder="blurred"
-          src="../../images/bsfSBbsadfK.jpg"
-          width={300}
+          image={src}
         />
         <div className={AVATAR_RING}></div>
       </div>
