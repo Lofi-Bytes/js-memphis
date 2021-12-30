@@ -1,17 +1,19 @@
 import * as React from 'react'
 
-import Avatar from './avatar'
+import AvatarComponent from './avatar'
 
 export default {
   title: 'Avatar',
-  component: Avatar,
+  component: AvatarComponent,
 }
 
-const Template = (args) => <Avatar {...args} />
+export const Template = (args) => <AvatarComponent {...args} />
 
-export const Info = Template.bind({})
 
-Info.args = {
+export const Avatar = Template.bind({})
+
+Avatar.args = {
+  alt: `Jillian's avatar`,
   className: 'mt-28',
-  src: '../../images/bsfSBbsadfK.jpg'
+  src: `'gatsby-plugin-image' not currently supported in Storybook`
 }
