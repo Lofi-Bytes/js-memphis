@@ -7,11 +7,9 @@ export default {
   component: AvatarComponent,
 }
 
-export const Template = (args) => <AvatarComponent {...args} />
-
+const Template = (args) => <AvatarComponent {...args} />
 
 export const Avatar = Template.bind({})
-
 Avatar.args = {
   alt: `Jillian's avatar`,
   className: 'mt-28',

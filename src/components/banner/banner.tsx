@@ -1,7 +1,6 @@
 import * as React from 'react'
 
 import {
-  appendVariantClasses,
   formatClassList,
   joinStrings
 } from '../../utils/utils'
@@ -9,6 +8,7 @@ import {
 
 export type BannerProps = {
   children: React.ReactNode,
+  className?: string,
   color: 'cyan' | 'rose' | 'purple' | 'yellow'
   pageType?: 'listPage' | 'page'
 }
@@ -100,6 +100,7 @@ const HEADING_COLORS: Record<string, string> = {
 }
 
 const Banner = ({
+  className,
   children,
   color,
   pageType='page'
@@ -121,7 +122,13 @@ const Banner = ({
   }
 
   return (
-    <div className={formattedBanner}>
+    <div
+      className={
+        className
+          ? joinStrings(' ', formattedBanner, className)
+          : formattedBanner
+        }
+    >
       <h2 className={formattedHeading}>
         {children}
       </h2>

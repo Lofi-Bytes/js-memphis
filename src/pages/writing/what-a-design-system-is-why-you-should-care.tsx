@@ -99,7 +99,7 @@ const WhatADesignSystemIsWhyYouShouldCare = ({
             Have you ever wondered how some designers, developers, or companies get their digital products to look so “designed” and professional? They seem to captivate and earn a user's trust instantaneously. Have you had trouble getting your own digital products to reach the same level of presentational nirvana? Have you asked yourself what could possibly be their secret? If only you, too, could get your hands on some of that magic sauce.
           </P>
           <P className="mt-4">
-            So, what is this design Qi that only the most elite and practiced of developers and designers can tap into? Are you ready for it? I’m about to tell you the answer to life, the universe, and everything. No, the answer is not 42. The answer is <em>systems</em>. Specifically <em>design systems</em>.
+            So, what is this design Qi that only the most elite and practiced of developers and designers can tap into? Are you ready for it? I'm about to tell you the answer to life, the universe, and everything. No, the answer is not 42. The answer is <em>systems</em>. Specifically <em>design systems</em>.
           </P>
           <H3 className="mt-10">What is a design system?</H3>
           <P className="mt-4">
@@ -137,14 +137,14 @@ const WhatADesignSystemIsWhyYouShouldCare = ({
               to="https://www.figma.com"
               title="Figma"
               external={true}
-            >Figma</TextLink> give us thousands of options regarding space, color, type, depth, and much more. This affords us incredible latitude for creativity. However, this much flexibility can also be a curse. Building a digital product without constraints is like trying to build a straw house from individual strands of hay, or trying to build a brick house from individual grains of sand. You wouldn’t do it because it would be torture. You would instead start by compressing the hay into bales, or the sand into bricks. Perhaps you would have a handful of sizes of bales or bricks to choose from for different parts of the house. These constraints, defined in advance, make the process of assembling the house considerably less complicated.
+            >Figma</TextLink> give us thousands of options regarding space, color, type, depth, and much more. This affords us incredible latitude for creativity. However, this much flexibility can also be a curse. Building a digital product without constraints is like trying to build a straw house from individual strands of hay, or trying to build a brick house from individual grains of sand. You wouldn't do it because it would be torture. You would instead start by compressing the hay into bales, or the sand into bricks. Perhaps you would have a handful of sizes of bales or bricks to choose from for different parts of the house. These constraints, defined in advance, make the process of assembling the house considerably less complicated.
           </P>
           <P className="mt-4">
             Likewise, by placing constraints on your design choices in advance, a design system eliminates decision fatigue, enforces consistency, and speeds up the design and engineering process. By reducing your cognitive load, a design system will leave you with more time and energy to spend on other aspects of your digital product, such as creating better user interactions.
           </P>
           <H3 className="mt-10">Working with systems</H3>
           <P className="mt-4">
-            Digital companies invest a ton of resources to build and maintain their design systems. They do this because their design system (usually) defines their brand. Their design system will inform their brand guidelines and visual identity such as how the company relates to its customers through color, voice, tone, and product interactions. However, you don’t have to be a multi-billion dollar company, or a design firm, with large teams of specialists to apply design system sensibilities to your projects.
+            Digital companies invest a ton of resources to build and maintain their design systems. They do this because their design system (usually) defines their brand. Their design system will inform their brand guidelines and visual identity such as how the company relates to its customers through color, voice, tone, and product interactions. However, you don't have to be a multi-billion dollar company, or a design firm, with large teams of specialists to apply design system sensibilities to your projects.
           </P>
           <P className="mt-4">
             There are many open-source options available. Some are a better choice than others. For example, <em>Material Design</em>, a <em>design language</em> (synonymous with design system) created and open sourced by Google, is a popular choice among the uninitiated. This design language, published at <TextLink
@@ -159,18 +159,18 @@ const WhatADesignSystemIsWhyYouShouldCare = ({
           </P>
           <H3 className="mt-10">Begin with solid foundations</H3>
           <P className="mt-4">
-            As mentioned previously, a design system will consist of both <em>foundations</em> and <em>guidelines</em>. Many of a design system’s guidelines; such as patterns, best practices, and components; are built from the system's foundations. Foundations are the fundamental building blocks of a design system. Defining these foundations can require painstaking effort with a strong attention to detail. Some open-source libraries aim to provide these foundations for you out of the box, while being careful not to inflict any guideline-related patterns.
+            As mentioned previously, a design system will consist of both <em>foundations</em> and <em>guidelines</em>. Many of a design system's guidelines; such as patterns, best practices, and components; are built from the system's foundations. Foundations are the fundamental building blocks of a design system. Defining these foundations can require painstaking effort with a strong attention to detail. Some open-source libraries aim to provide these foundations for you out of the box, while being careful not to inflict any guideline-related patterns.
           </P>
           <P className="mt-4">
             <TextLink
               to="https://tailwindcss.com"
               title="Tailwind CSS"
               external={true}
-            >Tailwind CSS</TextLink> is one such system. Often referred to as a “utility only” CSS library<sup>1</sup>, Tailwind CSS is one of the most elegant open-source systems. It provides a complete suite of foundations out of the box. As an additional bonus, Tailwind’s class names double perfectly as (<TextLink
+            >Tailwind CSS</TextLink> is one such system. Often referred to as a “utility only” CSS library<sup>1</sup>, Tailwind CSS is one of the most elegant open-source systems. It provides a complete suite of foundations out of the box. As an additional bonus, Tailwind's class names double perfectly as (<TextLink
               to="https://spectrum.adobe.com/page/design-tokens/#Global-tokens"
               title="Global tokens"
               external={true}
-            >global</TextLink>) design tokens. Tailwind’s docs are a joy to use, and non-tech people such as designers pick up the class names (tokens) with ease. Once you set up Tailwind with your customizations, such as your brand's color pallets, one can readily jump right into building brand guidelines. There are other utility class libraries available, but my experience is that none are as polished as Tailwind.
+            >global</TextLink>) design tokens. Tailwind's docs are a joy to use, and non-tech people such as designers pick up the class names (tokens) with ease. Once you set up Tailwind with your customizations, such as your brand's color pallets, one can readily jump right into building brand guidelines. There are other utility class libraries available, but my experience is that none are as polished as Tailwind.
           </P>
           <P className="mt-4">
             <TextLink
@@ -192,7 +192,7 @@ const WhatADesignSystemIsWhyYouShouldCare = ({
               to="https://spectrum.adobe.com/page/design-tokens/#Component-specific-tokens"
               title="Component-specific tokens"
               external={true}
-            >component-specific tokens</TextLink>. I don’t use this approach in my personal projects whenever possible. If you need an HTML/CSS-only component library, you will use this pattern. Otherwise, component-based architecture allows you to circumvent the additional effort. <TextLink
+            >component-specific tokens</TextLink>. I don't use this approach in my personal projects whenever possible. If you need an HTML/CSS-only component library, you will use this pattern. Otherwise, component-based architecture allows you to circumvent the additional effort. <TextLink
               to="https://jillian.dev"
               title=""
               external={true}
@@ -223,7 +223,7 @@ const WhatADesignSystemIsWhyYouShouldCare = ({
             </li>
           </UL>
           <P className="mt-4">
-            In this article we’ve explored what a design system is, and how it can improve one’s process. But one still needs good design sensibilities in order to build a system and then put it to good use. Check back soon for both; a series on practical and easy to implement design best practices and a series on design system implementation.
+            In this article we've explored what a design system is, and how it can improve one's process. But one still needs good design sensibilities in order to build a system and then put it to good use. Check back soon for both; a series on practical and easy to implement design best practices and a series on design system implementation.
           </P>
           <P className="mt-8 text-xs">
             <sup>1</sup>Referring to Tailwind CSS as a “utility only CSS framework” is a travesty. Once one looks at it in the context of systems, its elegance cannot be overstated.
