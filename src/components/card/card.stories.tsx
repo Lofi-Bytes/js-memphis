@@ -6,7 +6,7 @@ import Tag from '../tag'
 import data from '../../data/talks.json'
 
 export default {
-  title: 'Card',
+  title: 'Compound Components/Card',
   component: Card,
 }
 

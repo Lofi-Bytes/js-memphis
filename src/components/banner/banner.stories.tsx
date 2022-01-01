@@ -3,7 +3,7 @@ import * as React from 'react'
 import Banner from './banner'
 
 export default {
-  title: 'Banner',
+  title: 'Pure Components/Banner',
   component: Banner,
 }
 

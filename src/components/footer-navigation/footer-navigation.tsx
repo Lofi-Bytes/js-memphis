@@ -75,14 +75,13 @@ const FooterNavigation = ({
           const path = edge.node.path
           const title = edge.node.title
           return(
-            <React.Fragment key={`item-${index}`}>
-              <Link
-                to={path}
-                className={LINK}
-              >
-                {title}
-              </Link>
-            </React.Fragment>
+            <Link
+              className={LINK}
+              key={`item-${index}`}
+              to={path}
+            >
+              {title}
+            </Link>
           )
         })
       }

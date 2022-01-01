@@ -3,7 +3,7 @@ import * as React from 'react'
 import AvatarComponent from './avatar'
 
 export default {
-  title: 'Avatar',
+  title: 'Pure Components/Avatar',
   component: AvatarComponent,
 }
 

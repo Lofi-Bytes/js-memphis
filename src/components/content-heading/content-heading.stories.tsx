@@ -3,7 +3,7 @@ import * as React from 'react'
 import ContentHeadingComponent from './content-heading'
 
 export default {
-  title: 'Content Heading',
+  title: 'Pure Components/Content Heading',
   component: ContentHeadingComponent,
 }
 

@@ -3,7 +3,7 @@ import * as React from 'react'
 import FooterComponent from './footer'
 
 export default {
-  title: 'Footer',
+  title: 'Compound Components/Footer',
   component: FooterComponent,
 }
 

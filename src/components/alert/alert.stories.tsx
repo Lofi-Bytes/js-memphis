@@ -3,7 +3,7 @@ import * as React from 'react'
 import Alert from './alert'
 
 export default {
-  title: 'Alert',
+  title: 'Pure Components/Alert',
   component: Alert,
 }
 
