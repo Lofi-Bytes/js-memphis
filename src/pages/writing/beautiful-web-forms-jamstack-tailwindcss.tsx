@@ -504,7 +504,7 @@ const BeautifulWebFormsJamstackTailwindCSSPage = ({
             lineNumbers={true}
             tag="zsh"
             tagBgColor="bg-stone-900"
-            tagColor="text-white"
+            tagColor="text-stone-50"
           >
             {install}
           </CodeContainer>

@@ -37,13 +37,15 @@ const CodeTag = ({
     backgroundColor: tagBgColor
   }
 
-  if (!tagColor.startsWith("#")) {
-    delete style.color
+  if (!tagColor.startsWith("#") && !tagBgColor.startsWith("#")) {
+    formattedCodeTag = joinStrings(' ', CODE_TAG, tagColor, tagBgColor)
+  }
+
+  if (!tagColor.startsWith("#") && tagBgColor.startsWith("#")) {
     formattedCodeTag = joinStrings(' ', CODE_TAG, tagColor)
   }
 
-  if (!tagBgColor.startsWith("#")) {
-    delete style.backgroundColor
+  if (tagColor.startsWith("#") && !tagBgColor.startsWith("#")) {
     formattedCodeTag = joinStrings(' ', CODE_TAG, tagBgColor)
   }
 
