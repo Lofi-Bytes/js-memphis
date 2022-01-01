@@ -257,7 +257,7 @@ const BeautifulWebFormsJamstackReactHookFormPage = ({
           >
             {setUp}
           </CodeContainer>
-          <Alert>
+          <Alert className="mt-8">
             <p>
               Netlify sets up the form feature during your websites <strong><em>build time</em></strong>. Netlify's bots <em>must</em> be able to detect your form in your site's prerendered HTML. A common frustration that I have seen folx run into is when the form is "hidden" from Netlify's bots due to some abstraction, usually because it is rendered at <strong><em>run time</em></strong> using JavaScript, such as building the form as a React component like we are doing here! The work-around is to be sure you have this form rendered out as HTML somewhere oh your site.
             </p>

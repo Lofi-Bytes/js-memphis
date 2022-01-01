@@ -15,7 +15,6 @@ const ALERT_BOX = formatClassList([
   'border-blue-500',
   'border-l-8',
   'flex',
-  'mt-8',
   'px-4',
   'py-4',
   'rounded',

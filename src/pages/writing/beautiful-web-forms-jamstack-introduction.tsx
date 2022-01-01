@@ -95,7 +95,7 @@ const BeautifulFormsJamstackIntroductionPage = ({
             <i className="fas fa-arrow-left" />&nbsp;&nbsp;Back to article list
           </Button>
 
-          <Alert>
+          <Alert className="mt-8">
             This series assumes the reader has an intermediate understanding of React JS and Tailwind CSS.
           </Alert>
 

@@ -630,7 +630,7 @@ const BeautifulWebFormsJamstackTailwindCSSPage = ({
           <P className="mt-8">
             Above I have also abstracted the button into its own component, which keeps things DRY and further cleans up the TSX in the contact form component.
           </P>
-          <Alert>
+          <Alert className="mt-8">
             Note the Button import. As a standard practice, I keep an <code className="language-bash">index.ts</code> file inside of all component subdirectories (including <code className="language-bash">contact-form</code>) which cleans up imports throughout the app.
           </Alert>
           <CodeContainer
