@@ -296,6 +296,7 @@ const DATE_YELLOW = formatClassList([
 ])
 
 const EXCERPT_YELLOW = formatClassList([
+  EXCERPT,
   'text-yellow-700'
 ])
 
@@ -540,7 +541,11 @@ const Card = ({
                     {excerpt}
                   </p>
                   <div className={ICON_ROW}>
-                    <i className={formattedIcon} />
+                    <div className={formattedComingSoonButton}>
+                      <span className={formattedComingSoonButtonText}>
+                        Coming soon
+                      </span>
+                    </div>
                   </div>
                 </div>
       }

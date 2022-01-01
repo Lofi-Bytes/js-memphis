@@ -1,50 +1,105 @@
-// import * as React from 'react'
+import * as React from 'react'
 
-// import Card from './card'
+import Card from './card'
+import Tag from '../tag'
 
-// export default {
-//   title: 'Card',
-//   component: Card,
-// }
+import data from '../../data/talks.json'
 
-// const Template = (args) => (
-//   <div className='mt-8 ml-28'>
-//     <Card {...args} />
-//   </div>
-// )
+export default {
+  title: 'Card',
+  component: Card,
+}
 
-// const data = [
-//   {
-//     "title": "Imagining a Better Way to Web Part 01",
-//     "path": "https://betterwaytoweb-01.jillian.dev/",
-//     "published": true,
-//     "excerpt": "This talk covers the first of three intersectional topics; The Jamstack, Component-based architecture, and Design systems. These tools and techniques will improve the quality and consistency of your products. They will improve the working experience and quality of collaboration across your team(s). And they will improve your audience experience.",
-//     "date": "2020/10/21",
-//     "tags": [
-//       "Jamstack"
-//     ]
-//   }
-// ]
+const Template = (args) => <Card {...args} />
 
-// className?: string,
-// color: 'rose' | 'sky' | 'violet' | 'yellow',
-// date: string,
-// excerpt: string,
-// external: boolean,
-// published: boolean,
-// tags: React.ReactNode,
-// title: string,
-// to: string
+export const Rose = Template.bind({})
+Rose.args = {
+  className: '',
+  color: 'rose',
+  date: data[0].date,
+  excerpt: data[0].excerpt,
+  external: true,
+  published: data[0].published,
+  tags: data[0].tags.map((tag, index) => {
+    return (
+      <Tag
+        card={true}
+        key={`item-${index}`}
+        tagColor="rose"
+      >
+        {tag}
+      </Tag>
+    )
+  }),
+  title: data[0].title,
+  to: data[0].path
+}
 
-// export const Rose = Template.bind({})
-// Rose.args = {
-//   className: '',
-//   color: 'rose',
-//   date: "2020/10/21",
-//   excerpt: "This talk covers the first of three intersectional topics; The Jamstack, Component-based architecture, and Design systems. These tools and techniques will improve the quality and consistency of your products. They will improve the working experience and quality of collaboration across your team(s). And they will improve your audience experience.",
-//   external: false,
-//   published: true,
-//   tags: ["Jamstack"],
-//   title: "Imagining a Better Way to Web Part 01",
-//   to: "https://betterwaytoweb-01.jillian.dev/"
-// }
+export const Sky = Template.bind({})
+Sky.args = {
+  className: '',
+  color: 'sky',
+  date: data[0].date,
+  excerpt: data[0].excerpt,
+  external: false,
+  published: data[0].published,
+  tags: data[0].tags.map((tag, index) => {
+    return (
+      <Tag
+        card={true}
+        key={`item-${index}`}
+        tagColor="sky"
+      >
+        {tag}
+      </Tag>
+    )
+  }),
+  title: data[0].title,
+  to: data[0].path
+}
+
+export const Violet = Template.bind({})
+Violet.args = {
+  className: '',
+  color: 'violet',
+  date: data[0].date,
+  excerpt: data[0].excerpt,
+  external: false,
+  published: data[0].published,
+  tags: data[0].tags.map((tag, index) => {
+    return (
+      <Tag
+        card={true}
+        key={`item-${index}`}
+        tagColor="violet"
+      >
+        {tag}
+      </Tag>
+    )
+  }),
+  title: data[0].title,
+  to: data[0].path
+}
+
+export const Yellow = Template.bind({})
+Yellow.args = {
+  className: '',
+  color: 'yellow',
+  date: data[0].date,
+  excerpt: data[0].excerpt,
+  external: false,
+  published: data[0].published,
+  tags: data[0].tags.map((tag, index) => {
+    return (
+      <Tag
+        card={true}
+        key={`item-${index}`}
+        tagColor="yellow"
+      >
+        {tag}
+      </Tag>
+    )
+  }),
+  title: data[0].title,
+  to: data[0].path
+}

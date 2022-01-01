@@ -2,7 +2,7 @@
   {
     "title": "Imagining a Better Way to Web Part 01",
     "path": "https://betterwaytoweb-01.jillian.dev/",
-    "published": true,
+    "published": false,
     "excerpt": "This talk covers the first of three intersectional topics; The Jamstack, Component-based architecture, and Design systems. These tools and techniques will improve the quality and consistency of your products. They will improve the working experience and quality of collaboration across your team(s). And they will improve your audience experience.",
     "date": "2020/10/21",
     "tags": [
