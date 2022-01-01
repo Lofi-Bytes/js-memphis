@@ -1,18 +1,18 @@
-import * as React from 'react'
+// import * as React from 'react'
 
-import FooterComponent from './footer'
+// import FooterComponent from './footer'
 
-export default {
-  title: 'Compound Components/Footer',
-  component: FooterComponent,
-}
+// export default {
+//   title: 'Compound Components/Footer',
+//   component: FooterComponent,
+// }
 
-const Template = (args) => (
-  <FooterComponent {...args} />
-)
+// const Template = (args) => (
+//   <FooterComponent {...args} />
+// )
 
-export const Footer = Template.bind({})
-Footer.args = {
-  className: 'mt-8',
-  location: '/'
-}
+// export const Footer = Template.bind({})
+// Footer.args = {
+//   className: 'mt-8',
+//   location: '/'
+// }
