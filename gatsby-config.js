@@ -3,7 +3,7 @@ module.exports = {
     title: `Jillian S. Estrella`,
     description: `Design systems engineer`,
     author: `Jillian S. Estrella`,
-    siteUrl: `https://jillian.dev/`,
+    siteUrl: `https://jillian.dev/`
   },
   plugins: [
     `gatsby-plugin-postcss`,
@@ -100,4 +100,5 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     `gatsby-plugin-offline`,
   ],
+  trailingSlash: `always`
 }
