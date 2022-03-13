@@ -71,3 +71,6 @@ yarn.lock
 
 # Ulysses
 .Ulysses-Group.plist
+
+# Storybook
+storybook-static
