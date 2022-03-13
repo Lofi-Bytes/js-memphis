@@ -78,17 +78,16 @@
     "active": true
   },
   {
-    "title": "Developing Skills in Health Literacy",
-    "path": "https://healthliteracy.bscs.org/",
+    "title": "jillian.dev Storybook",
+    "path": "https://storybook.jillian.dev/",
     "published": true,
-    "excerpt": "In this project, we are developing curriculum materials for middle and high school students that will help them learn to evaluate information and claims about health issues. The project is being supported by the National Institutes of Health (NIH).",
-    "date": "2017 - 2021",
-    "section": "bscs",
+    "excerpt": "",
+    "date": "03/13/2022",
+    "section": "design-systems",
     "tags": [
-      "NIH",
-      "Gatsby",
+      "Storybook",
+      "CSS",
       "React",
-      "GraphQL",
       "TypeScript"
     ],
     "active": true
@@ -103,6 +102,36 @@
     "tags": [
       "CSS",
       "React",
+      "TypeScript"
+    ],
+    "active": true
+  },
+  {
+    "title": "Date() Challenge",
+    "path": "https://codepen.io/LofiBytes/pen/popopbz",
+    "published": true,
+    "excerpt": "Sorts a given date range into monthly bins. Counts how many dates, from a date list, that fall into each range. Plots the bins on a histogram.",
+    "date": "03/13/2022",
+    "section": "codepen",
+    "tags": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "active": true
+  },
+  {
+    "title": "Developing Skills in Health Literacy",
+    "path": "https://healthliteracy.bscs.org/",
+    "published": true,
+    "excerpt": "In this project, we are developing curriculum materials for middle and high school students that will help them learn to evaluate information and claims about health issues. The project is being supported by the National Institutes of Health (NIH).",
+    "date": "2017 - 2021",
+    "section": "bscs",
+    "tags": [
+      "NIH",
+      "Gatsby",
+      "React",
+      "GraphQL",
       "TypeScript"
     ],
     "active": true
