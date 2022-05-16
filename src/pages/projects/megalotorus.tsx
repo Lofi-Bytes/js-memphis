@@ -60,8 +60,8 @@ const MegaloTorusPage = ({
   return (
     <Layout location={location}>
       <SEO
-        metaTitle="Beautiful web forms on the Jamstack | Series introduction"
-        metaDescription="Web forms are arguably one of the most important tools in web development and design."
+        metaTitle="MegaloTorus LED art installation"
+        metaDescription="MegaloTorus leverages light - mapped over its translucent, diffusive membrane - to explore the dynamic flow of energy, as well as the infinite nature of the torus."
         canonicalUrl="https://jillian.dev/projects/megalotorus/"
       />
       <Jumbotron
