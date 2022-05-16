@@ -81,7 +81,7 @@ const MegaloTorusPage = ({
             role="link"
             title="Back to article list"
             className="mt-10 w-max"
-            to="/writing"
+            to="/projects"
           >
             <i className="fas fa-arrow-left" />&nbsp;&nbsp;Back to project list
           </Button>

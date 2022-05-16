@@ -222,7 +222,7 @@ const ProjectsListPage = ({
             color="purple"
             pageType="listPage"
           >
-            CodePen
+            Art Installations
           </Banner>
           <div className="grid grid-flow-row-dense gap-8">
           {
