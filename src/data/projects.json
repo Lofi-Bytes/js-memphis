@@ -1,5 +1,20 @@
 [
   {
+    "title": "☆*:.¨. MegaloTorus .*・｡ﾟ.*･｡ﾟ҉̛☆",
+    "path": "/projects/megalotorus/",
+    "published": true,
+    "excerpt": "MegaloTorus leverages light - mapped over its translucent, diffusive membrane - to explore the dynamic flow of energy, as well as the infinite nature of the torus.",
+    "date": "06/09/2022",
+    "section": "art-installations",
+    "tags": [
+      "Art",
+      "LED",
+      "Toroid",
+      "Cosmometry"
+    ],
+    "active": true
+  },
+  {
     "title": "reveal.js + Tailwind CSS Starter",
     "path": "https://github.com/Lofi-Bytes/reveal-tailwind-starter",
     "published": true,

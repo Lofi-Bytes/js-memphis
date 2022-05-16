@@ -20,6 +20,13 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images/projects/megalotorus`,
+      },
+    },
     // JSON
     {
       resolve: `gatsby-source-filesystem`,

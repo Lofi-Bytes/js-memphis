@@ -219,6 +219,58 @@ const ProjectsListPage = ({
         </Section>
         <Section background="transparent" className="mb-8">
           <Banner
+            color="purple"
+            pageType="listPage"
+          >
+            CodePen
+          </Banner>
+          <div className="grid grid-flow-row-dense gap-8">
+          {
+            projectsListData.allProjectsJson.edges.map((edge, index) => {
+              const path = edge.node.path
+              const title = edge.node.title
+              const excerpt = edge.node.excerpt
+              const date = edge.node.date
+              const tags = edge.node.tags
+              const section = edge.node.section
+              const active = edge.node.active
+
+              return(
+                <React.Fragment key={`item-${index}`}>
+                  {section === 'art-installations'
+                    ?
+                      <Card
+                        color="violet"
+                        date={date}
+                        excerpt={excerpt}
+                        external={true}
+                        published={active ? true : false}
+                        title={title}
+                        to={path}
+                        tags={
+                          tags.map((tag, index) => {
+                            return (
+                              <Tag
+                                card={true}
+                                key={`item-${index}`}
+                                tagColor="violet"
+                              >
+                                {tag}
+                              </Tag>
+                            )
+                          })
+                        }
+                      />
+                    : null
+                  }
+                </React.Fragment>
+              )
+            })
+          }
+          </div>
+        </Section>
+        <Section background="transparent" className="mb-8">
+          <Banner
             color="yellow"
             pageType="listPage"
           >

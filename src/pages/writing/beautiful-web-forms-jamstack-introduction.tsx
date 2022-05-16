@@ -115,7 +115,7 @@ const BeautifulFormsJamstackIntroductionPage = ({
             <li>
               We will start by ensuring our form is accessible and pleasant to look at using <TextLink
                 to="https://github.com/tailwindlabs/tailwindcss-forms"
-                 title=""
+                title=""
                 external={true}
               >
                 @tailwindcss/forms
