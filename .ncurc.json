@@ -1,6 +1,7 @@
 {
   "reject": [
     "@fortawesome/fontawesome-pro",
-    "gatsby-image"
+    "gatsby-image",
+    "react-hook-form"
   ]
 }
