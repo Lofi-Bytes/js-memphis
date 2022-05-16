@@ -115,7 +115,7 @@ const MegaloTorusPage = ({
             src="../images/IMG_7135.JPG"
           /> */}
 
-          <StaticImage
+          {/* <StaticImage
             alt="MegaloTorus Logo"
             aspectRatio={16/9}
             className="h-64 mt-3 family"
@@ -153,7 +153,7 @@ const MegaloTorusPage = ({
             layout="fullWidth"
             placeholder="blurred"
             src="../images/projects/megalotorus/megalotorus-03.png"
-          />
+          /> */}
         </Section>
         <Section background="opaque" className="mb-8">
           <H3>Tags</H3>
