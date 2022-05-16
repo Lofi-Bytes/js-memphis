@@ -104,7 +104,7 @@ const MegaloTorusPage = ({
           <P className="mt-4">
             MegaloTorus leverages light - mapped over its translucent, diffusive membrane - to explore the dynamic flow of energy, as well as the infinite nature of the torus.
           </P>
-{/*
+
           <StaticImage
             alt="MegaloTorus Logo"
             aspectRatio={16/9}
@@ -112,17 +112,7 @@ const MegaloTorusPage = ({
             formats={["auto", "webp", "avif"]}
             layout="fullWidth"
             placeholder="blurred"
-            src="../images/IMG_7135.JPG"
-          /> */}
-
-          {/* <StaticImage
-            alt="MegaloTorus Logo"
-            aspectRatio={16/9}
-            className="h-64 mt-3 family"
-            formats={["auto", "webp", "avif"]}
-            layout="fullWidth"
-            placeholder="blurred"
-            src="../images/projects/megalotorus/megalotorus-logo.jpeg"
+            src="../../images/projects/megalotorus/megalotorus-logo.jpeg"
           />
 
           <StaticImage
@@ -132,7 +122,7 @@ const MegaloTorusPage = ({
             formats={["auto", "webp", "avif"]}
             layout="fullWidth"
             placeholder="blurred"
-            src="../images/projects/megalotorus/megalotorus-01.png"
+            src="../../images/projects/megalotorus/megalotorus-01.png"
           />
 
           <StaticImage
@@ -142,7 +132,7 @@ const MegaloTorusPage = ({
             formats={["auto", "webp", "avif"]}
             layout="fullWidth"
             placeholder="blurred"
-            src="../images/projects/megalotorus/megalotorus-02.png"
+            src="../../images/projects/megalotorus/megalotorus-02.png"
           />
 
           <StaticImage
@@ -152,8 +142,12 @@ const MegaloTorusPage = ({
             formats={["auto", "webp", "avif"]}
             layout="fullWidth"
             placeholder="blurred"
-            src="../images/projects/megalotorus/megalotorus-03.png"
-          /> */}
+            src="../../images/projects/megalotorus/megalotorus-03.png"
+          />
+
+          {/* <video>
+            <source src="" />
+          </video> */}
         </Section>
         <Section background="opaque" className="mb-8">
           <H3>Tags</H3>
