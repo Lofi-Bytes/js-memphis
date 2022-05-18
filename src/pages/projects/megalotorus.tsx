@@ -267,7 +267,7 @@ const MegaloTorusPage = ({
             Dara Rockwell
           </P>
           <P className="text-sm">
-            Cinematography
+            Cover design and cinematography
           </P>
 
           <P className="text-lg mt-4">
