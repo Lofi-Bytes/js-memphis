@@ -299,7 +299,7 @@ const MegaloTorusPage = ({
           </P>
 
           <P className="mt-8 mb-10">
-            And a special shout-out to the incrtedibly talented folks in the <TextLink
+            And a special shout-out to the incredibly talented folks in the <TextLink
                 to="https://xlights.org/resources/"
                 title="xLights resources"
                 external={true}

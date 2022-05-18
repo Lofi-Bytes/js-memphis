@@ -81,8 +81,19 @@ const AboutPage = ({
             </P>
           </div>
           <P className="mt-3">
-            I’m soooo excited‼️ to share that starting in July I will be joining the design system team at Northwestern Mutual, where I will be leading the contributions and integrations branch for their design system, Luna.
+            I'm soooo excited‼️ to share that starting in July I will be joining the design system team at Northwestern Mutual, where I will be leading the contributions and integrations branch for their design system, Luna.
           </P>
+          {/* <P className="mt-3">
+            I am the core engineering lead for <TextLink to="https://www.northwesternmutual.com/" title="" external={true}>Northwestern Mutual's</TextLink> design system, Luna. The luna team consists of talented
+          </P> */}
+            {/* - Partner with a creative director to build a ground-up redesign of the design system powering the financial planning tools experience
+            - Work with product teams to migrate their applications from the legacy system to new
+            - Manage a team of engineers to build and maintain engineering tools for implementing the design system (Node scripts, Scss framework, React lib, etc)
+            - Work with product teams to determine & fulfill new functionality
+            - Oversee development and content creation for the design system style guide (eng usage, design usage, product guidelines) */}
+          {/* <P className="mt-3">
+            I work with a team of talented people -
+          </P> */}
           <h2 className="mt-10 text-xl tracking-wide text-stone-700">Previous Work</h2>
           <div className="items-center justify-between mt-3 uppercase border-b border-pink-400 border-dotted d-block sm:flex">
             <TextLink
