@@ -61,58 +61,6 @@ const ProjectsListPage = ({
         }
       />
       <Main>
-        <Section background="transparent" className="mb-8 -mt-12">
-          <Banner
-            color="cyan"
-            pageType="listPage"
-          >
-            GitHub
-          </Banner>
-          <div className="grid grid-flow-row-dense gap-8">
-          {
-            projectsListData.allProjectsJson.edges.map((edge, index) => {
-              const path = edge.node.path
-              const title = edge.node.title
-              const excerpt = edge.node.excerpt
-              const date = edge.node.date
-              const tags = edge.node.tags
-              const section = edge.node.section
-              const active = edge.node.active
-
-              return(
-                <React.Fragment key={`item-${index}`}>
-                  {section === 'github'
-                    ?
-                      <Card
-                        color="sky"
-                        date={date}
-                        excerpt={excerpt}
-                        external={true}
-                        published={active ? true : false}
-                        title={title}
-                        to={path}
-                        tags={
-                          tags.map((tag, index) => {
-                            return (
-                              <Tag
-                                card={true}
-                                key={`item-${index}`}
-                                tagColor="sky"
-                              >
-                                {tag}
-                              </Tag>
-                            )
-                          })
-                        }
-                      />
-                    : null
-                  }
-                </React.Fragment>
-              )
-            })
-          }
-          </div>
-        </Section>
         <Section background="transparent" className="mb-8">
           <Banner
             color="purple"
@@ -167,58 +115,6 @@ const ProjectsListPage = ({
         </Section>
         <Section background="transparent" className="mb-8">
           <Banner
-            color="rose"
-            pageType="listPage"
-          >
-            CodePen
-          </Banner>
-          <div className="grid grid-flow-row-dense gap-8">
-          {
-            projectsListData.allProjectsJson.edges.map((edge, index) => {
-              const path = edge.node.path
-              const title = edge.node.title
-              const excerpt = edge.node.excerpt
-              const date = edge.node.date
-              const tags = edge.node.tags
-              const section = edge.node.section
-              const active = edge.node.active
-
-              return(
-                <React.Fragment key={`item-${index}`}>
-                  {section === 'codepen'
-                    ?
-                      <Card
-                        color="rose"
-                        date={date}
-                        excerpt={excerpt}
-                        external={true}
-                        published={active ? true : false}
-                        title={title}
-                        to={path}
-                        tags={
-                          tags.map((tag, index) => {
-                            return (
-                              <Tag
-                                card={true}
-                                key={`item-${index}`}
-                                tagColor="rose"
-                              >
-                                {tag}
-                              </Tag>
-                            )
-                          })
-                        }
-                      />
-                    : null
-                  }
-                </React.Fragment>
-              )
-            })
-          }
-          </div>
-        </Section>
-        <Section background="transparent" className="mb-8">
-          <Banner
             color="purple"
             pageType="listPage"
           >
@@ -254,6 +150,110 @@ const ProjectsListPage = ({
                                 card={true}
                                 key={`item-${index}`}
                                 tagColor="violet"
+                              >
+                                {tag}
+                              </Tag>
+                            )
+                          })
+                        }
+                      />
+                    : null
+                  }
+                </React.Fragment>
+              )
+            })
+          }
+          </div>
+        </Section>
+        <Section background="transparent" className="mb-8 -mt-12">
+          <Banner
+            color="cyan"
+            pageType="listPage"
+          >
+            GitHub
+          </Banner>
+          <div className="grid grid-flow-row-dense gap-8">
+          {
+            projectsListData.allProjectsJson.edges.map((edge, index) => {
+              const path = edge.node.path
+              const title = edge.node.title
+              const excerpt = edge.node.excerpt
+              const date = edge.node.date
+              const tags = edge.node.tags
+              const section = edge.node.section
+              const active = edge.node.active
+
+              return(
+                <React.Fragment key={`item-${index}`}>
+                  {section === 'github'
+                    ?
+                      <Card
+                        color="sky"
+                        date={date}
+                        excerpt={excerpt}
+                        external={true}
+                        published={active ? true : false}
+                        title={title}
+                        to={path}
+                        tags={
+                          tags.map((tag, index) => {
+                            return (
+                              <Tag
+                                card={true}
+                                key={`item-${index}`}
+                                tagColor="sky"
+                              >
+                                {tag}
+                              </Tag>
+                            )
+                          })
+                        }
+                      />
+                    : null
+                  }
+                </React.Fragment>
+              )
+            })
+          }
+          </div>
+        </Section>
+        <Section background="transparent" className="mb-8">
+          <Banner
+            color="rose"
+            pageType="listPage"
+          >
+            CodePen
+          </Banner>
+          <div className="grid grid-flow-row-dense gap-8">
+          {
+            projectsListData.allProjectsJson.edges.map((edge, index) => {
+              const path = edge.node.path
+              const title = edge.node.title
+              const excerpt = edge.node.excerpt
+              const date = edge.node.date
+              const tags = edge.node.tags
+              const section = edge.node.section
+              const active = edge.node.active
+
+              return(
+                <React.Fragment key={`item-${index}`}>
+                  {section === 'codepen'
+                    ?
+                      <Card
+                        color="rose"
+                        date={date}
+                        excerpt={excerpt}
+                        external={true}
+                        published={active ? true : false}
+                        title={title}
+                        to={path}
+                        tags={
+                          tags.map((tag, index) => {
+                            return (
+                              <Tag
+                                card={true}
+                                key={`item-${index}`}
+                                tagColor="rose"
                               >
                                 {tag}
                               </Tag>
