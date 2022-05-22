@@ -93,6 +93,7 @@ const ResistanceBatPage = ({
             placeholder="blurred"
             src="../../images/projects/resistance-flow-bats/resistance-flow-bats-logo.png"
           />
+          <P className="text-sm">Logo design by Sierra Estrella</P>
 
           <H3 className="mt-10">Debut</H3>
 

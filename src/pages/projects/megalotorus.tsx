@@ -93,6 +93,7 @@ const MegaloTorusPage = ({
             placeholder="blurred"
             src="../../images/projects/megalotorus/megalotorus-logo.jpeg"
           />
+          <P className="text-sm">MegaloTorus logo / concept art by Sierra Estrella.</P>
 
           <H3 className="mt-10">Debut</H3>
 
@@ -144,6 +145,7 @@ const MegaloTorusPage = ({
             placeholder="blurred"
             src="../../images/projects/megalotorus/megalotorus-02.png"
           />
+          <P className="text-sm">MegaloTorus model side view; modeled by Jillian Estrella.</P>
 
           <StaticImage
             alt="MegaloTorus model top"
@@ -154,6 +156,7 @@ const MegaloTorusPage = ({
             placeholder="blurred"
             src="../../images/projects/megalotorus/megalotorus-03.png"
           />
+          <P className="text-sm">MegaloTorus model top view; modeled by Jillian Estrella.</P>
 
           <H3 className="mt-10 mb-10">
             Cover (membrane)
@@ -172,6 +175,8 @@ const MegaloTorusPage = ({
             placeholder="blurred"
             src="../../images/projects/megalotorus/cover-concept.jpg"
           />
+          <P className="text-sm">MegaloTorus cover (membrane) miniature model; modeled by George O'Donnell.</P>
+
 
           <H3 className="mt-10">
             LEDs
@@ -190,6 +195,7 @@ const MegaloTorusPage = ({
             placeholder="blurred"
             src="../../images/projects/megalotorus/led-model-side.png"
           />
+          <P className="text-sm">MegaloTorus LED model side view; modeled by Jillian Estrella</P>
 
           <StaticImage
             alt="MegaloTorus LED model top"
@@ -200,6 +206,7 @@ const MegaloTorusPage = ({
             placeholder="blurred"
             src="../../images/projects/megalotorus/led-model-top.png"
           />
+          <P className="text-sm">MegaloTorus LED model top view; modeled by Jillian Estrella</P>
 {/*
           <StaticImage
             alt="Screenshot of MegaloTorus light sequence"

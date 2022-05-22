@@ -280,7 +280,7 @@ const AboutPage = ({
           <h2 className="mt-10 text-xl tracking-wide text-stone-700">Extracurricular Interests</h2>
 
           <StaticImage
-            alt="Jillian's family."
+            alt="Jillian and her family."
             aspectRatio={16/9}
             className="h-64 mt-3 family"
             formats={["auto", "webp", "avif"]}
@@ -288,9 +288,10 @@ const AboutPage = ({
             placeholder="blurred"
             src="../images/IMG_7135.JPG"
           />
+          <P className="text-sm">Jillian and her family.</P>
 
           <P className="mt-3">
-            In my free time I enjoy spending time with my beautiful family, adventuring in our van (<TextLink to="https://www.instagram.com/explore/tags/vanlife/?hl=en" title="" external={true}>#vanlife</TextLink>), practicing yoga, mountain biking, and I read a lot.
+            In my free time I enjoy spending time with my beautiful family, creating visual and immersive art, adventuring in our van (<TextLink to="https://www.instagram.com/explore/tags/vanlife/?hl=en" title="" external={true}>#vanlife</TextLink>), practicing yoga, mountain biking, and I read a lot.
           </P>
           {/* <div
             className="w-full mx-auto mt-12 md:w-3/4"
