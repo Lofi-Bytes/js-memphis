@@ -10,7 +10,24 @@
       "Art",
       "LED",
       "Toroid",
-      "Cosmometry"
+      "Cosmometry",
+      "Burning Man"
+    ],
+    "active": true
+  },
+  {
+    "title": "Resistance Bat",
+    "path": "/projects/resistance-bat/",
+    "published": true,
+    "excerpt": "LED logo-art signage for Resistance and the Flow Bats theme camp.",
+    "date": "06/09/2022",
+    "section": "art-installations",
+    "tags": [
+      "Art",
+      "LED",
+      "Signage",
+      "Bruning Man",
+      "Theme camps"
     ],
     "active": true
   },

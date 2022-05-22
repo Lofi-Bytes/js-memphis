@@ -115,7 +115,7 @@ const ProjectsListPage = ({
         </Section>
         <Section background="transparent" className="mb-8">
           <Banner
-            color="purple"
+            color="rose"
             pageType="listPage"
           >
             Art Installations
@@ -136,7 +136,7 @@ const ProjectsListPage = ({
                   {section === 'art-installations'
                     ?
                       <Card
-                        color="violet"
+                        color="rose"
                         date={date}
                         excerpt={excerpt}
                         external={true}
@@ -149,7 +149,7 @@ const ProjectsListPage = ({
                               <Tag
                                 card={true}
                                 key={`item-${index}`}
-                                tagColor="violet"
+                                tagColor="rose"
                               >
                                 {tag}
                               </Tag>
@@ -219,7 +219,7 @@ const ProjectsListPage = ({
         </Section>
         <Section background="transparent" className="mb-8">
           <Banner
-            color="rose"
+            color="purple"
             pageType="listPage"
           >
             CodePen
@@ -240,7 +240,7 @@ const ProjectsListPage = ({
                   {section === 'codepen'
                     ?
                       <Card
-                        color="rose"
+                        color="violet"
                         date={date}
                         excerpt={excerpt}
                         external={true}
@@ -253,7 +253,7 @@ const ProjectsListPage = ({
                               <Tag
                                 card={true}
                                 key={`item-${index}`}
-                                tagColor="rose"
+                                tagColor="violet"
                               >
                                 {tag}
                               </Tag>

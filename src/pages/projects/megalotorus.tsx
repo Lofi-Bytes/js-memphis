@@ -36,10 +36,11 @@ const MegaloTorusPage = ({
       ) {
         edges {
           node {
-            title
             date
-            tags
+            excerpt
             path
+            tags
+            title
           }
         }
       }
@@ -48,6 +49,7 @@ const MegaloTorusPage = ({
 
   const title = projectData.allProjectsJson.edges[0].node.title
   const date = projectData.allProjectsJson.edges[0].node.date
+  const excerpt = projectData.allProjectsJson.edges[0].node.excerpt
   // const path = projectData.allProjectsJson.edges[0].node.path
   const tags = projectData.allProjectsJson.edges[0].node.tags
 
@@ -57,7 +59,7 @@ const MegaloTorusPage = ({
     <Layout location={location}>
       <SEO
         metaTitle="MegaloTorus LED art installation"
-        metaDescription="MegaloTorus leverages light - mapped over its translucent, diffusive membrane - to explore the dynamic flow of energy, as well as the infinite nature of the torus."
+        metaDescription={excerpt}
         canonicalUrl="https://jillian.dev/projects/megalotorus/"
       />
       <Jumbotron
@@ -92,6 +94,19 @@ const MegaloTorusPage = ({
             src="../../images/projects/megalotorus/megalotorus-logo.jpeg"
           />
 
+          <H3 className="mt-10">Debut</H3>
+
+          <P className="mt-0.5">Event:&nbsp;
+            <TextLink
+              to='https://apogaea.com/'
+              title="Colorado Burning Man regional event"
+              external={true}
+            >
+              Apogaea
+            </TextLink>
+          </P>
+          <P className="mt-0.5">Date: June 9-11, 2022</P>
+
           <H3 className="mt-10">Physical Description</H3>
 
           <P className="mt-4">
@@ -105,7 +120,7 @@ const MegaloTorusPage = ({
           </P>
 
           <P className="mt-4">
-            Within the torus exists two different types of portals. Many portals in nature - such as a connected channel between one universe and another - are formed from the vortex of a torus. Yet other portals are formed directly from the torus’ membrane.
+            Within the torus exists two different types of portals. Many portals in nature - such as a connected channel between one universe and another - are formed from the vortex of a torus. Yet other portals are formed directly from the torus' membrane.
           </P>
 
           <P className="mt-4">
@@ -141,7 +156,7 @@ const MegaloTorusPage = ({
           />
 
           <H3 className="mt-10 mb-10">
-            Cover
+            Cover (membrane)
           </H3>
 
           {/* <P className="mt-4">

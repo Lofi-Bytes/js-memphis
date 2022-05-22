@@ -83,9 +83,29 @@ const AboutPage = ({
           <P className="mt-3">
             I'm soooo excited‼️ to share that starting in July I will be joining the design system team at Northwestern Mutual, where I will be leading the contributions and integrations branch for their design system, Luna.
           </P>
-          {/* <P className="mt-3">
-            I am the core engineering lead for <TextLink to="https://www.northwesternmutual.com/" title="" external={true}>Northwestern Mutual's</TextLink> design system, Luna. The luna team consists of talented
-          </P> */}
+          {/* Oversee the planning, design and implementation of the design system.
+          Provide technical direction in-line with business goals.
+          Train, mentor, and support engineers on the team.
+          Maintian continuous integration pipeline.
+          monorepo
+          contributions and integrations */}
+
+
+          {/*
+
+          <P className="mt-3">
+            As the core engineering lead for <TextLink to="https://www.northwesternmutual.com/" title="" external={true}>Northwestern Mutual's</TextLink> design system, Luna, I work with a talented team of engineers, designers, content strategists, product managers, and project managers. I spend a lot of my time planing, roadmapping and prioritizing to provide technical direction in-line with business goals.
+          </P>
+
+          <P className="mt-3">
+            At any give time I also oversee the implementation of multiple engineering projects - including mentoring engineers and performing code-reviews. I think of myself as a talent multiplier - I aim to remove blockers so that the rest of the team can perform at thier best and focus on their respective projects.
+          </P>
+
+          <P className="mt-3">
+            I also spend time planing for and cuting releases. I help to maintain our continuous integration pipeline. I have contributed heavily to our contributions and integrations strategy.
+          </P>
+
+          */}
             {/* - Partner with a creative director to build a ground-up redesign of the design system powering the financial planning tools experience
             - Work with product teams to migrate their applications from the legacy system to new
             - Manage a team of engineers to build and maintain engineering tools for implementing the design system (Node scripts, Scss framework, React lib, etc)
