@@ -242,6 +242,14 @@ const MegaloTorusPage = ({
             <source src="" />
           </video> */}
 
+          <H3 className="mt-10">
+            Interior design
+          </H3>
+
+          <P className="mt-4">
+            Coming soon!
+          </P>
+
           <Banner color="purple" className="mt-16">
             Credits
           </Banner>
@@ -254,42 +262,49 @@ const MegaloTorusPage = ({
             Jillian Estrella
           </P>
           <P className="text-sm">
-            Project artist; LED and structure design
+            Project lead; LED, structure, and interior design
           </P>
 
           <P className="text-lg mt-4">
             Sierra Estrella
           </P>
           <P className="text-sm">
-            Project artist; visual design
+            Visual and interior design
           </P>
 
           <P className="text-lg mt-4">
             George O'Donnell
           </P>
           <P className="text-sm">
-            Cover design
+            Cover/membrane design
           </P>
 
           <P className="text-lg mt-4">
             Nathan Klein
           </P>
           <P className="text-sm">
-            Cover design
+            Cover/membrane design
           </P>
 
           <P className="text-lg mt-4">
             Martin Newmark
           </P>
           <P className="text-sm">
-            Structure design
+            Structure and interior design
           </P>
 
           <P className="text-lg mt-4">
             Dara Rockwell
           </P>
           <P className="text-sm">
-            Cover design and cinematography
+            Cinematography and interior design
+          </P>
+
+          <P className="text-lg mt-4">
+            Nici Brown
+          </P>
+          <P className="text-sm">
+            Interior design
           </P>
 
           <P className="text-lg mt-4">
