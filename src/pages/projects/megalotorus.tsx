@@ -311,6 +311,13 @@ const MegaloTorusPage = ({
           </P>
 
           <P className="text-lg mt-4">
+            Sally Dunn
+          </P>
+          <P className="text-sm">
+            Interior design
+          </P>
+
+          <P className="text-lg mt-4">
             Nici Brown
           </P>
           <P className="text-sm">
