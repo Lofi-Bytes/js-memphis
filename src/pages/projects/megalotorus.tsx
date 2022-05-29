@@ -145,7 +145,7 @@ const MegaloTorusPage = ({
             placeholder="blurred"
             src="../../images/projects/megalotorus/megalotorus-02.png"
           />
-          <P className="text-sm">MegaloTorus model side view; modeled by Jillian Estrella.</P>
+          <P className="text-sm">MegaloTorus structure model side view; modeled by Jillian Estrella.</P>
 
           <StaticImage
             alt="MegaloTorus model top"
@@ -156,7 +156,7 @@ const MegaloTorusPage = ({
             placeholder="blurred"
             src="../../images/projects/megalotorus/megalotorus-03.png"
           />
-          <P className="text-sm">MegaloTorus model top view; modeled by Jillian Estrella.</P>
+          <P className="text-sm">MegaloTorus structure model top view; modeled by Jillian Estrella.</P>
 
           <H3 className="mt-10 mb-10">
             Cover (membrane)
@@ -177,13 +177,23 @@ const MegaloTorusPage = ({
           />
           <P className="text-sm">MegaloTorus cover (membrane) miniature model; modeled by George O'Donnell.</P>
 
+          <StaticImage
+            alt="MegaloTorus cover concept"
+            aspectRatio={4/3}
+            className="h-96 mt-3 family"
+            formats={["auto", "webp", "avif"]}
+            layout="fullWidth"
+            placeholder="blurred"
+            src="../../images/projects/megalotorus/cover-membrane-schematics.png"
+          />
+          <P className="text-sm">MegaloTorus cover (membrane) schematics; modeled by George O'Donnell.</P>
 
           <H3 className="mt-10">
             LEDs
           </H3>
 
           {/* <P className="mt-4">
-            MegaloTorus uses 1600 ws2811 LEDs spaced approximately 3" apart along the entire length of each of the structures "spines". The LEDs are controlled by an AlphaPix Flex controller and are powered by two 350 watt power supplies. The LEDs were modeled and sequenced in xLights.
+            MegaloTorus uses 1600 ws2811 LEDs spaced approximately 3" apart along the entire length of each of the structure's "spines". The LEDs are controlled by an AlphaPix Flex controller and are powered by two 350 watt power supplies. The LEDs were modeled and sequenced in xLights.
           </P> */}
 
           <StaticImage
