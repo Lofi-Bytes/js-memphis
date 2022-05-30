@@ -346,7 +346,7 @@ const MegaloTorusPage = ({
           </P>
 
           <P className="text-lg mt-4">
-            Zach
+            Zach Herman
           </P>
           <P className="text-sm">
             Certified get shit done'r
