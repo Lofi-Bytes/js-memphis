@@ -371,6 +371,13 @@ const MegaloTorusPage = ({
           </P>
 
           <P className="text-lg mt-4">
+            Daniel Tenenbaum
+          </P>
+          <P className="text-sm">
+            Cover/membrane design
+          </P>
+
+          <P className="text-lg mt-4">
             Nathan Klein
           </P>
           <P className="text-sm">
