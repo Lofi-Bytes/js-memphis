@@ -136,10 +136,13 @@ const MegaloTorusPage = ({
             Structure
           </H3>
 
+          <P className="mt-4">
+            The structure was modelled using SketchUp. Three jigs were created to precicely place the ground anchors in the correct location and at the correct angles. The spines were made from rigid schedule 40 polyvinylchloride.
+          </P>
+
           <StaticImage
-            alt="MegaloTorus model side"
-            aspectRatio={16/9}
-            className="h-64 mt-3 family"
+            alt="MegaloTorus structure model side view; modeled by Jillian Estrella."
+            className="mt-3 family"
             formats={["auto", "webp", "avif"]}
             layout="fullWidth"
             placeholder="blurred"
@@ -148,9 +151,8 @@ const MegaloTorusPage = ({
           <P className="text-sm">MegaloTorus structure model side view; modeled by Jillian Estrella.</P>
 
           <StaticImage
-            alt="MegaloTorus model top"
-            aspectRatio={16/9}
-            className="h-80 mt-3 family"
+            alt="MegaloTorus structure model top view; modeled by Jillian Estrella."
+            className="mt-3 family"
             formats={["auto", "webp", "avif"]}
             layout="fullWidth"
             placeholder="blurred"
@@ -158,18 +160,27 @@ const MegaloTorusPage = ({
           />
           <P className="text-sm">MegaloTorus structure model top view; modeled by Jillian Estrella.</P>
 
+          <StaticImage
+            alt="Completed structure without the cover."
+            className="mt-3 family"
+            formats={["auto", "webp", "avif"]}
+            layout="fullWidth"
+            placeholder="blurred"
+            src="../../images/projects/megalotorus/IMG_1258.jpeg"
+          />
+          <P className="text-sm">Completed structure without the cover.</P>
+
           <H3 className="mt-10 mb-10">
             Cover (membrane)
           </H3>
 
-          {/* <P className="mt-4">
-            Coming soon!
-          </P> */}
+          <P className="mt-4">
+            The cover (membrane) design was modelled with CAD software. A templating and coordinate system were used to translate the designs onto six oz., 12 mil poly fabric. Twenty individual pieces were then joined together with flat felled stitching.
+          </P>
 
           <StaticImage
-            alt="MegaloTorus cover concept"
-            aspectRatio={4/3}
-            className="h-96 mt-3 family"
+            alt="MegaloTorus cover (membrane) miniature model; modeled by George O'Donnell."
+            className="mt-3 family"
             formats={["auto", "webp", "avif"]}
             layout="fullWidth"
             placeholder="blurred"
@@ -178,9 +189,8 @@ const MegaloTorusPage = ({
           <P className="text-sm">MegaloTorus cover (membrane) miniature model; modeled by George O'Donnell.</P>
 
           <StaticImage
-            alt="MegaloTorus cover concept"
-            aspectRatio={4/3}
-            className="h-96 mt-3 family"
+            alt="MegaloTorus cover (membrane) schematics; modeled by George O'Donnell."
+            className="mt-3 family"
             formats={["auto", "webp", "avif"]}
             layout="fullWidth"
             placeholder="blurred"
@@ -188,18 +198,57 @@ const MegaloTorusPage = ({
           />
           <P className="text-sm">MegaloTorus cover (membrane) schematics; modeled by George O'Donnell.</P>
 
+          <StaticImage
+            alt="Sewing the cover (membrane) together."
+            className="mt-3 family"
+            formats={["auto", "webp", "avif"]}
+            layout="fullWidth"
+            placeholder="blurred"
+            src="../../images/projects/megalotorus/IMG_0230.JPG"
+          />
+          <P className="text-sm">Sewing the cover (membrane) together.</P>
+
+          <StaticImage
+            alt="Sewing the cover (membrane) together."
+            className="mt-3 family"
+            formats={["auto", "webp", "avif"]}
+            layout="fullWidth"
+            placeholder="blurred"
+            src="../../images/projects/megalotorus/IMG_1414.JPG"
+          />
+          <P className="text-sm">Sewing the cover (membrane) together.</P>
+
+          <StaticImage
+            alt="Completed structure with the cover."
+            className="mt-3 family"
+            formats={["auto", "webp", "avif"]}
+            layout="fullWidth"
+            placeholder="blurred"
+            src="../../images/projects/megalotorus/IMG_1415.JPG"
+          />
+          <P className="text-sm">Completed structure with the cover interior.</P>
+
+          <StaticImage
+            alt="Completed structure with the cover."
+            className="mt-3 family"
+            formats={["auto", "webp", "avif"]}
+            layout="fullWidth"
+            placeholder="blurred"
+            src="../../images/projects/megalotorus/IMG_0397.jpg"
+          />
+          <P className="text-sm">Completed structure with the cover exterior.</P>
+
           <H3 className="mt-10">
             LEDs
           </H3>
 
-          {/* <P className="mt-4">
-            MegaloTorus uses 1600 ws2811 LEDs spaced approximately 3" apart along the entire length of each of the structure's "spines". The LEDs are controlled by an AlphaPix Flex controller and are powered by two 350 watt power supplies. The LEDs were modeled and sequenced in xLights.
-          </P> */}
+          <P className="mt-4">
+            MegaloTorus uses 1600 ws2811 LEDs spaced approximately 3" apart along the entire length of each of the structure's "spines". The LEDs are controlled by an AlphaPix Flex controller. The LEDs were modeled and sequenced with xLights.
+          </P>
 
           <StaticImage
             alt="MegaloTorus LED model side"
-            aspectRatio={16/9}
-            className="h-80 mt-3 family"
+            className="mt-3 family"
             formats={["auto", "webp", "avif"]}
             layout="fullWidth"
             placeholder="blurred"
@@ -209,56 +258,88 @@ const MegaloTorusPage = ({
 
           <StaticImage
             alt="MegaloTorus LED model top"
-            aspectRatio={16/9}
-            className="h-80 mt-3 family"
+            className="mt-3 family"
             formats={["auto", "webp", "avif"]}
             layout="fullWidth"
             placeholder="blurred"
             src="../../images/projects/megalotorus/led-model-top.png"
           />
           <P className="text-sm">MegaloTorus LED model top view; modeled by Jillian Estrella</P>
-{/*
-          <StaticImage
+
+          <div
+            style={{
+              padding: "85.11% 0 0 0",
+              position: "relative"
+            }}
+          >
+            <iframe
+              src="https://player.vimeo.com/video/717322211?h=2e6d16055a&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+              frameBorder="0"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowFullScreen
+              className="rounded-xl"
+              style={{
+                position: "absolute",
+                top: "0",
+                left: "0",
+                width: "100%",
+                height: "100%"
+              }}
+              title="Screen Recording 2022-06-05 at 2.33.36 PM.mov"
+            >
+            </iframe>
+          </div>
+          <P className="text-sm">MegaloTorus LED sequence example.</P>
+          <script src="https://player.vimeo.com/api/player.js"></script>
+
+          {/* <StaticImage
             alt="Screenshot of MegaloTorus light sequence"
-            aspectRatio={16/9}
-            className="h-80 mt-3 family"
+            className="mt-3 family"
             formats={["auto", "webp", "avif"]}
             layout="fullWidth"
             placeholder="blurred"
             src="../../images/projects/megalotorus/light-sequence-01.png"
           />
+          <P className="text-sm">Screenshot of MegaloTorus light sequence</P>
 
           <StaticImage
             alt="Screenshot of MegaloTorus light sequence"
-            aspectRatio={16/9}
-            className="h-80 mt-3 family"
+            className="mt-3 family"
             formats={["auto", "webp", "avif"]}
             layout="fullWidth"
             placeholder="blurred"
             src="../../images/projects/megalotorus/light-sequence-02.png"
           />
+          <P className="text-sm">Screenshot of MegaloTorus light sequence</P>
 
           <StaticImage
             alt="Screenshot of MegaloTorus light sequence"
-            aspectRatio={16/9}
-            className="h-80 mt-3 family"
+            className="mt-3 family"
             formats={["auto", "webp", "avif"]}
             layout="fullWidth"
             placeholder="blurred"
             src="../../images/projects/megalotorus/light-sequence-03.png"
-          /> */}
-
-          {/* <video>
-            <source src="" />
-          </video> */}
+          />
+          <P className="text-sm">Screenshot of MegaloTorus light sequence</P> */}
 
           <H3 className="mt-10">
             Interior design
           </H3>
 
           <P className="mt-4">
-            Coming soon!
+            The interior is designed to foster community. Featured art is hung from the ceiling and there is a confortable place for people to gather. There is also space for dancing and doing flow arts such as Poi and other activities. At night, people can relax, visit, and enjoy the art and the LED sequences. Depending on the time of night, the LEDs are sequenced to either electronic dance music or quiet and relaxing music. There is also a DJ booth for live performances. During the day, the space is used to host a variety of workshops and yoga.
           </P>
+
+          <StaticImage
+            alt="Example of featured art that hangs from the ceiling. Featured artists: Sally Dunn and Kenton Remus."
+            className="mt-3 family"
+            formats={["auto", "webp", "avif"]}
+            layout="fullWidth"
+            placeholder="blurred"
+            src="../../images/projects/megalotorus/IMG_1373.jpeg"
+          />
+          <P className="text-sm">Example of featured art that hangs from the ceiling.</P>
+          <P className="text-sm">Featured artists: Sally Dunn and Kenton Remus.</P>
 
           <Banner color="purple" className="mt-16">
             Credits
@@ -307,21 +388,7 @@ const MegaloTorusPage = ({
             Dara Rockwell
           </P>
           <P className="text-sm">
-            Cinematography and interior design
-          </P>
-
-          <P className="text-lg mt-4">
-            Sally Dunn
-          </P>
-          <P className="text-sm">
-            Interior design
-          </P>
-
-          <P className="text-lg mt-4">
-            Nici Brown
-          </P>
-          <P className="text-sm">
-            Interior design
+            Cinematography
           </P>
 
           <P className="text-lg mt-4">
@@ -346,6 +413,34 @@ const MegaloTorusPage = ({
           </P>
 
           <P className="text-lg mt-4">
+            Becca Elliott
+          </P>
+          <P className="text-sm">
+            Certified get shit done'r
+          </P>
+
+          <P className="text-lg mt-4">
+            Sean Sidelko
+          </P>
+          <P className="text-sm">
+            Certified get shit done'r
+          </P>
+
+          <P className="text-lg mt-4">
+            Brooke Sparling
+          </P>
+          <P className="text-sm">
+            Certified get shit done'r
+          </P>
+
+          <P className="text-lg mt-4">
+            Taylor Link
+          </P>
+          <P className="text-sm">
+            Certified get shit done'r
+          </P>
+
+          <P className="text-lg mt-4">
             Zach Herman
           </P>
           <P className="text-sm">
@@ -354,6 +449,13 @@ const MegaloTorusPage = ({
 
           <P className="text-lg mt-4">
             Bryan Lastrella
+          </P>
+          <P className="text-sm">
+            Certified get shit done'r
+          </P>
+
+          <P className="text-lg mt-4">
+            Abby Black
           </P>
           <P className="text-sm">
             Certified get shit done'r

@@ -114,6 +114,66 @@ const ResistanceBatPage = ({
             {excerpt}
           </P>
 
+          <StaticImage
+            alt="Resistance and the FLow Bats logo"
+            aspectRatio={16/9}
+            className="h-80 mt-10 family"
+            formats={["auto", "webp", "avif"]}
+            layout="fullWidth"
+            placeholder="blurred"
+            src="../../images/projects/resistance-flow-bats/IMG_1365.jpeg"
+          />
+          <P className="text-sm">LED and jigsaw work by Jillian Estrella</P>
+
+          <StaticImage
+            alt="Resistance and the FLow Bats logo"
+            aspectRatio={16/9}
+            className="h-80 mt-10 family"
+            formats={["auto", "webp", "avif"]}
+            layout="fullWidth"
+            placeholder="blurred"
+            src="../../images/projects/resistance-flow-bats/IMG_1364.jpeg"
+          />
+          <P className="text-sm">LED and jigsaw work by Jillian Estrella</P>
+
+          <StaticImage
+            alt="Resistance and the FLow Bats logo"
+            aspectRatio={16/9}
+            className="h-80 mt-10 family"
+            formats={["auto", "webp", "avif"]}
+            layout="fullWidth"
+            placeholder="blurred"
+            src="../../images/projects/resistance-flow-bats/IMG_1363.jpeg"
+          />
+          <P className="text-sm">LED and jigsaw work by Jillian Estrella</P>
+
+          <div
+            className="rounded-xl"
+            style={{
+              padding: "55% 0 0 0",
+              position: "relative"
+            }}
+          >
+            <iframe
+              src="https://player.vimeo.com/video/715898512?h=a8da632fc0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+              frameBorder="0"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowFullScreen
+              className="rounded-xl"
+              style={{
+                position: "absolute",
+                top: "0",
+                left: "0",
+                width: "100%",
+                height: "100%"
+              }}
+              title="resistance-bat.mov"
+            >
+            </iframe>
+          </div>
+          <P className="text-sm">Video of the completed art piece.</P>
+          <script src="https://player.vimeo.com/api/player.js"></script>
+
           <Banner color="rose" className="mt-16">
             Process
           </Banner>
@@ -123,7 +183,7 @@ const ResistanceBatPage = ({
           </H3>
 
           <P className="mt-4">
-            Coming soon!
+            Initial proof of concept was sketched using an iPad and an Apple Pencil in Pixelmator. The final vector-based Illustration was also done on an iPad in Vectornator.
           </P>
 
           <H3 className="mt-10 mb-10">
@@ -131,7 +191,7 @@ const ResistanceBatPage = ({
           </H3>
 
           <P className="mt-4">
-            Coming soon!
+            The sign was built from 3/4 inch ACX plywood. The design was transferred from computer onto the plywood with a projector. It was then meticulously cut by hand with a jigsaw.
           </P>
 
           <H3 className="mt-10">
@@ -139,7 +199,19 @@ const ResistanceBatPage = ({
           </H3>
 
           <P className="mt-4">
-            Coming soon!
+            Two separate strips of SK6812 LEDs light this piece. Each strip consists of about 85 LEDs. The LEDs are controlled by a Seeed XIAO RP2040 microcontroller and they were sequenced in <TextLink
+                to="https://circuitpython.org/"
+                title="CircuitPython - the easiest way to program microcontrollers."
+                external={true}
+              >CircuitPython</TextLink>. <TextLink
+                to="https://docs.python.org/3/library/asyncio.html"
+                title="asyncio — Asynchronous I/O — Python 3.10.4 documentation"
+                external={true}
+              >Asynchronous I/O</TextLink> was required to sequence both strips of lights simultaneously from the same microcontroller.
+          </P>
+
+          <P className="mt-4">
+            The outer strip uses a standard rainbow fade. The inner strip uses recursion to mimic fire/candle light. The recursion is used to make a fractal of the brightness over time - which is what gives it the simulated flickering effect of fire.
           </P>
 
           <Banner color="rose" className="mt-16">
@@ -150,7 +222,7 @@ const ResistanceBatPage = ({
             Sierra Estrella
           </P>
           <P className="text-sm">
-            Project artist; illustration and physical design
+            Project artist; illustration
           </P>
 
           <P className="text-lg mt-6">
