@@ -86,7 +86,6 @@ const ResistanceBatPage = ({
 
           <StaticImage
             alt="Resistance and the FLow Bats logo"
-            aspectRatio={16/9}
             className="h-80 mt-10 family"
             formats={["auto", "webp", "avif"]}
             layout="fullWidth"
@@ -116,7 +115,6 @@ const ResistanceBatPage = ({
 
           <StaticImage
             alt="Resistance and the FLow Bats logo"
-            aspectRatio={16/9}
             className="h-80 mt-10 family"
             formats={["auto", "webp", "avif"]}
             layout="fullWidth"
@@ -127,7 +125,6 @@ const ResistanceBatPage = ({
 
           <StaticImage
             alt="Resistance and the FLow Bats logo"
-            aspectRatio={16/9}
             className="h-80 mt-10 family"
             formats={["auto", "webp", "avif"]}
             layout="fullWidth"
@@ -138,7 +135,6 @@ const ResistanceBatPage = ({
 
           <StaticImage
             alt="Resistance and the FLow Bats logo"
-            aspectRatio={16/9}
             className="h-80 mt-10 family"
             formats={["auto", "webp", "avif"]}
             layout="fullWidth"

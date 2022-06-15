@@ -5,8 +5,7 @@ import { StaticImage } from 'gatsby-plugin-image'
 
 import {
   formatClassList,
-  formatDate,
-  joinStrings
+  formatDate
 } from '../../utils/utils'
 
 import Banner from '../../components/banner/banner'
@@ -432,6 +431,7 @@ const MegaloTorusPage = ({
               frameBorder="0"
               allow="autoplay; fullscreen; picture-in-picture"
               allowFullScreen
+              className="rounded-xl"
               style={{
                 position: "absolute",
                 top: 0,
@@ -458,6 +458,7 @@ const MegaloTorusPage = ({
               frameBorder="0"
               allow="autoplay; fullscreen; picture-in-picture"
               allowFullScreen
+              className="rounded-xl"
               style={{
                 position: "absolute",
                 top: 0,
@@ -484,6 +485,7 @@ const MegaloTorusPage = ({
               frameBorder="0"
               allow="autoplay; fullscreen; picture-in-picture"
               allowFullScreen
+              className="rounded-xl"
               style={{
                 position: "absolute",
                 top: 0,
