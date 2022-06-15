@@ -3,7 +3,11 @@ import { useStaticQuery, graphql } from 'gatsby'
 
 import { StaticImage } from 'gatsby-plugin-image'
 
-import { formatDate } from '../../utils/utils'
+import {
+  formatClassList,
+  formatDate,
+  joinStrings
+} from '../../utils/utils'
 
 import Banner from '../../components/banner/banner'
 import Button from '../../components/button'
@@ -16,6 +20,31 @@ import Section from '../../components/section'
 import SEO from '../../components/seo'
 import Tag from '../../components/tag'
 import TextLink from '../../components/text-link'
+
+
+const ROW = formatClassList([
+  'flex',
+  'items-start',
+  'justify-start',
+  'relative',
+  'mt-3'
+])
+
+const ICONANCHOR = formatClassList([
+  'px-2',
+  'py-1',
+  'text-2xl',
+  'text-stone-500',
+  'duration-200',
+  'rounded',
+  'hover:text-sky-700',
+  'focus:text-sky-700',
+  'active:text-sky-700',
+  'hover:cursor-pointer',
+  'focus:outline-none',
+  'focus:ring',
+  'focus:ring-sky-700'
+])
 
 
 type PageProps = {
@@ -95,6 +124,22 @@ const MegaloTorusPage = ({
           />
           <P className="text-sm">MegaloTorus logo / concept art by Sierra Estrella.</P>
 
+          <H3 className="mt-10">Follow us:</H3>
+          <div
+            className={ROW}
+          >
+            <div>
+              <a
+                href="https://www.facebook.com/MegaloTorus"
+                aria-label="MegaloTorus Facebook page"
+                title="MegaloTorus Facebook page"
+                className={ICONANCHOR}
+              >
+                <i className="fab fa-facebook"></i>
+              </a>
+            </div>
+          </div>
+
           <H3 className="mt-10">Debut</H3>
 
           <P className="mt-0.5">Event:&nbsp;
@@ -120,12 +165,12 @@ const MegaloTorusPage = ({
             In many ancient cultures, the torus has been associated with the concept of infinity. These cultures often used the torus to symbolize the universe. Through science, we now understand that toroidal structures show up everywhere in nature - from the micro-atomic to the macro-galactic. In the study of cosmometry, it is believed that in its most balanced dynamic flow process, energy moves like a torus. From galaxies to ecosystems to the subatomic, there is a seamless exchange of energy and information (a.k.a consciousness) moving cyclically throughout the entire cosmic experience via the torus.
           </P>
 
-          <P className="mt-4">
+          {/* <P className="mt-4">
             Within the torus exists two different types of portals. Many portals in nature - such as a connected channel between one universe and another - are formed from the vortex of a torus. Yet other portals are formed directly from the torus' membrane.
-          </P>
+          </P> */}
 
           <P className="mt-4">
-            MegaloTorus leverages light - mapped over its translucent, diffusive membrane - to explore the dynamic flow of energy, as well as the infinite nature of the torus.
+            MegaloTorus uses light and sound to explore the dynamic flow of energy, as well as the infinite nature of the torus.
           </P>
 
           <Banner color="purple" className="mt-16">
@@ -341,6 +386,118 @@ const MegaloTorusPage = ({
           <P className="text-sm">Example of featured art that hangs from the ceiling.</P>
           <P className="text-sm">Featured artists: Sally Dunn and Kenton Remus.</P>
 
+          <H3 className="mt-10">
+            Photo gallery
+          </H3>
+
+          <StaticImage
+            alt="MegaloTorus lit up at night exterior."
+            className="mt-3 family"
+            formats={["auto", "webp", "avif"]}
+            layout="fullWidth"
+            placeholder="blurred"
+            src="../../images/projects/megalotorus/20220609_210413.jpg"
+          />
+          <P className="text-sm">MegaloTorus lit up at night exterior.</P>
+
+          <StaticImage
+            alt="MegaloTorus lit up at night interior."
+            className="mt-3 family"
+            formats={["auto", "webp", "avif"]}
+            layout="fullWidth"
+            placeholder="blurred"
+            src="../../images/projects/megalotorus/284841326_1451763151931410_5305151865316733963_n.jpg"
+          />
+          <P className="text-sm">MegaloTorus lit up at night interior.</P>
+
+          <StaticImage
+            alt="MegaloTorus lit up at night interior."
+            className="mt-3 family"
+            formats={["auto", "webp", "avif"]}
+            layout="fullWidth"
+            placeholder="blurred"
+            src="../../images/projects/megalotorus/20220611_041942.jpg"
+          />
+          <P className="text-sm">MegaloTorus lit up at night interior.</P>
+
+          <div
+            className="mt-4"
+            style={{
+              padding: "100% 0 0 0",
+              position: "relative"
+            }}
+          >
+            <iframe
+              src="https://player.vimeo.com/video/720533464?h=34f50d8a14&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+              frameBorder="0"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowFullScreen
+              style={{
+                position: "absolute",
+                top: 0,
+                left:0,
+                width: "100%",
+                height:"100%"
+
+              }}
+              title="video-1655236611.mp4"
+            >
+            </iframe>
+          </div>
+          <script src="https://player.vimeo.com/api/player.js"></script>
+
+          <div
+            className="mt-4"
+            style={{
+              padding: "56.25% 0 0 0",
+              position: "relative"
+            }}
+          >
+            <iframe
+              src="https://player.vimeo.com/video/720532924?h=34c4674c3e&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+              frameBorder="0"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowFullScreen
+              style={{
+                position: "absolute",
+                top: 0,
+                left:0,
+                width: "100%",
+                height:"100%"
+
+              }}
+              title="video-1655236611.mp4"
+            >
+            </iframe>
+          </div>
+          <script src="https://player.vimeo.com/api/player.js"></script>
+
+          <div
+            className="mt-4"
+            style={{
+              padding: "56.25% 0 0 0",
+              position: "relative"
+            }}
+          >
+            <iframe
+              src="https://player.vimeo.com/video/720532206?h=4ae80ac5ca&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+              frameBorder="0"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowFullScreen
+              style={{
+                position: "absolute",
+                top: 0,
+                left:0,
+                width: "100%",
+                height:"100%"
+
+              }}
+              title="video-1655236611.mp4"
+            >
+            </iframe>
+          </div>
+          <script src="https://player.vimeo.com/api/player.js"></script>
+
           <Banner color="purple" className="mt-16">
             Credits
           </Banner>
@@ -360,7 +517,7 @@ const MegaloTorusPage = ({
             Sierra Estrella
           </P>
           <P className="text-sm">
-            Visual and interior design
+            Visual, LED, and interior design
           </P>
 
           <P className="text-lg mt-4">
@@ -389,13 +546,6 @@ const MegaloTorusPage = ({
           </P>
           <P className="text-sm">
             Structure and interior design
-          </P>
-
-          <P className="text-lg mt-4">
-            Dara Rockwell
-          </P>
-          <P className="text-sm">
-            Cinematography
           </P>
 
           <P className="text-lg mt-4">
@@ -428,6 +578,13 @@ const MegaloTorusPage = ({
 
           <P className="text-lg mt-4">
             Sean Sidelko
+          </P>
+          <P className="text-sm">
+            Certified get shit done'r
+          </P>
+
+          <P className="text-lg mt-4">
+            Dara Rockwell
           </P>
           <P className="text-sm">
             Certified get shit done'r

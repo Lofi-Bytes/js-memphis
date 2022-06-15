@@ -2,6 +2,16 @@
   "reject": [
     "@fortawesome/fontawesome-pro",
     "gatsby-image",
-    "react-hook-form"
+    "react-hook-form",
+    "react",
+    "react-dom",
+    "@testing-library/jest-dom",
+    "@testing-library/react",
+    "@types/jest",
+    "@types/react-test-renderer",
+    "babel-jest",
+    "jest",
+    "loki",
+    "react-test-renderer"
   ]
 }
