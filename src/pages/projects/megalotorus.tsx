@@ -561,12 +561,6 @@ const MegaloTorusPage = ({
           </P> */}
 
           <P className="text-lg mt-4">
-            Preston Lancaster
-          </P>
-          {/* <P className="text-sm">
-            Certified get shit done'r
-          </P> */}
-          <P className="text-lg mt-4">
             Daniel Tenenbaum
           </P>
           {/* <P className="text-sm">
@@ -588,7 +582,21 @@ const MegaloTorusPage = ({
           </P> */}
 
           <P className="text-lg mt-4">
-            Dara Rockwell
+            Zach Herman
+          </P>
+          {/* <P className="text-sm">
+            Certified get shit done'r
+          </P> */}
+
+          <P className="text-lg mt-4">
+            Bryan Lastrella
+          </P>
+          {/* <P className="text-sm">
+            Certified get shit done'r
+          </P> */}
+
+          <P className="text-lg mt-4">
+            Preston Lancaster
           </P>
           {/* <P className="text-sm">
             Certified get shit done'r
@@ -602,21 +610,14 @@ const MegaloTorusPage = ({
           </P> */}
 
           <P className="text-lg mt-4">
+            Dara Rockwell
+          </P>
+          {/* <P className="text-sm">
+            Certified get shit done'r
+          </P> */}
+
+          <P className="text-lg mt-4">
             Taylor Link
-          </P>
-          {/* <P className="text-sm">
-            Certified get shit done'r
-          </P> */}
-
-          <P className="text-lg mt-4">
-            Zach Herman
-          </P>
-          {/* <P className="text-sm">
-            Certified get shit done'r
-          </P> */}
-
-          <P className="text-lg mt-4">
-            Bryan Lastrella
           </P>
           {/* <P className="text-sm">
             Certified get shit done'r
