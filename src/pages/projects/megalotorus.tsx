@@ -582,6 +582,13 @@ const MegaloTorusPage = ({
           </P> */}
 
           <P className="text-lg mt-4">
+            Presley Peach
+          </P>
+          {/* <P className="text-sm">
+            Certified get shit done'r
+          </P> */}
+
+          <P className="text-lg mt-4">
             Zach Herman
           </P>
           {/* <P className="text-sm">
