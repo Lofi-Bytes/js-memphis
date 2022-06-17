@@ -511,128 +511,130 @@ const MegaloTorusPage = ({
           <P className="text-lg mt-6">
             Jillian Estrella
           </P>
-          <P className="text-sm">
+          {/* <P className="text-sm">
             Project lead; LED, structure, and interior design
-          </P>
+          </P> */}
+          {/* <P className="text-sm">
+            Project lead; LED, structure, and interior design
+          </P> */}
 
           <P className="text-lg mt-4">
             Sierra Estrella
           </P>
-          <P className="text-sm">
+          {/* <P className="text-sm">
             Visual, LED, and interior design
-          </P>
+          </P> */}
 
           <P className="text-lg mt-4">
             George O'Donnell
           </P>
-          <P className="text-sm">
+          {/* <P className="text-sm">
             Cover/membrane design
-          </P>
-
-          <P className="text-lg mt-4">
-            Daniel Tenenbaum
-          </P>
-          <P className="text-sm">
-            Cover/membrane design
-          </P>
+          </P> */}
 
           <P className="text-lg mt-4">
             Nathan Klein
           </P>
-          <P className="text-sm">
+          {/* <P className="text-sm">
             Cover/membrane design
-          </P>
-
-          <P className="text-lg mt-4">
-            Martin Newmark
-          </P>
-          <P className="text-sm">
-            Structure and interior design
-          </P>
-
-          <P className="text-lg mt-4">
-            Joseph Martinez
-          </P>
-          <P className="text-sm">
-            Certified get shit done'r
-          </P>
+          </P> */}
 
           <P className="text-lg mt-4">
             Sean Shirley
           </P>
-          <P className="text-sm">
+          {/* <P className="text-sm">
             Certified get shit done'r
+          </P> */}
+
+          <P className="text-lg mt-4">
+            Martin Newmark
           </P>
+          {/* <P className="text-sm">
+            Structure and interior design
+          </P> */}
+
+          <P className="text-lg mt-4">
+            Joseph Martinez
+          </P>
+          {/* <P className="text-sm">
+            Certified get shit done'r
+          </P> */}
 
           <P className="text-lg mt-4">
             Preston Lancaster
           </P>
-          <P className="text-sm">
+          {/* <P className="text-sm">
             Certified get shit done'r
+          </P> */}
+          <P className="text-lg mt-4">
+            Daniel Tenenbaum
           </P>
+          {/* <P className="text-sm">
+            Cover/membrane design
+          </P> */}
 
           <P className="text-lg mt-4">
             Becca Elliott
           </P>
-          <P className="text-sm">
+          {/* <P className="text-sm">
             Certified get shit done'r
-          </P>
+          </P> */}
 
           <P className="text-lg mt-4">
             Sean Sidelko
           </P>
-          <P className="text-sm">
+          {/* <P className="text-sm">
             Certified get shit done'r
-          </P>
+          </P> */}
 
           <P className="text-lg mt-4">
             Dara Rockwell
           </P>
-          <P className="text-sm">
+          {/* <P className="text-sm">
             Certified get shit done'r
-          </P>
+          </P> */}
 
           <P className="text-lg mt-4">
             Brooke Sparling
           </P>
-          <P className="text-sm">
+          {/* <P className="text-sm">
             Certified get shit done'r
-          </P>
+          </P> */}
 
           <P className="text-lg mt-4">
             Taylor Link
           </P>
-          <P className="text-sm">
+          {/* <P className="text-sm">
             Certified get shit done'r
-          </P>
+          </P> */}
 
           <P className="text-lg mt-4">
             Zach Herman
           </P>
-          <P className="text-sm">
+          {/* <P className="text-sm">
             Certified get shit done'r
-          </P>
+          </P> */}
 
           <P className="text-lg mt-4">
             Bryan Lastrella
           </P>
-          <P className="text-sm">
+          {/* <P className="text-sm">
             Certified get shit done'r
-          </P>
+          </P> */}
 
           <P className="text-lg mt-4">
             Abby Black
           </P>
-          <P className="text-sm">
+          {/* <P className="text-sm">
             Certified get shit done'r
-          </P>
+          </P> */}
 
           <P className="text-lg mt-4">
             Lee Tal Hermon
           </P>
-          <P className="text-sm">
+          {/* <P className="text-sm">
             Certified get shit done'r
-          </P>
+          </P> */}
 
           <P className="mt-8 mb-10">
             And a special shout-out to the incredibly talented folks in the <TextLink
