@@ -542,9 +542,6 @@ const MegaloTorusPage = ({
           <P className="text-lg mt-4">
             Sean Shirley
           </P>
-          {/* <P className="text-sm">
-            Certified get shit done'r
-          </P> */}
 
           <P className="text-lg mt-4">
             Martin Newmark
@@ -556,9 +553,6 @@ const MegaloTorusPage = ({
           <P className="text-lg mt-4">
             Joseph Martinez
           </P>
-          {/* <P className="text-sm">
-            Certified get shit done'r
-          </P> */}
 
           <P className="text-lg mt-4">
             Daniel Tenenbaum
@@ -570,79 +564,54 @@ const MegaloTorusPage = ({
           <P className="text-lg mt-4">
             Becca Elliott
           </P>
-          {/* <P className="text-sm">
-            Certified get shit done'r
-          </P> */}
 
           <P className="text-lg mt-4">
             Sean Sidelko
           </P>
-          {/* <P className="text-sm">
-            Certified get shit done'r
-          </P> */}
 
           <P className="text-lg mt-4">
             Presley Peach
           </P>
-          {/* <P className="text-sm">
-            Certified get shit done'r
-          </P> */}
 
           <P className="text-lg mt-4">
             Zach Herman
           </P>
-          {/* <P className="text-sm">
-            Certified get shit done'r
-          </P> */}
 
           <P className="text-lg mt-4">
             Bryan Lastrella
           </P>
-          {/* <P className="text-sm">
-            Certified get shit done'r
-          </P> */}
 
           <P className="text-lg mt-4">
             Preston Lancaster
           </P>
-          {/* <P className="text-sm">
-            Certified get shit done'r
-          </P> */}
 
           <P className="text-lg mt-4">
-            Brooke Sparling
+            Jenny McManus
           </P>
-          {/* <P className="text-sm">
-            Certified get shit done'r
-          </P> */}
 
           <P className="text-lg mt-4">
-            Dara Rockwell
+            Andy Taylor
           </P>
-          {/* <P className="text-sm">
-            Certified get shit done'r
-          </P> */}
 
           <P className="text-lg mt-4">
             Taylor Link
           </P>
-          {/* <P className="text-sm">
-            Certified get shit done'r
-          </P> */}
+
+          <P className="text-lg mt-4">
+            Brooke Sparling
+          </P>
+
+          <P className="text-lg mt-4">
+            Dara Rockwell
+          </P>
 
           <P className="text-lg mt-4">
             Abby Black
           </P>
-          {/* <P className="text-sm">
-            Certified get shit done'r
-          </P> */}
 
           <P className="text-lg mt-4">
             Lee Tal Hermon
           </P>
-          {/* <P className="text-sm">
-            Certified get shit done'r
-          </P> */}
 
           <P className="mt-8 mb-10">
             And a special shout-out to the incredibly talented folks in the <TextLink
