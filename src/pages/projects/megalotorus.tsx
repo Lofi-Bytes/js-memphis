@@ -405,6 +405,36 @@ const MegaloTorusPage = ({
             formats={["auto", "webp", "avif"]}
             layout="fullWidth"
             placeholder="blurred"
+            src="../../images/projects/megalotorus/Zimba-Zaleski_Apogaea2022_DSC02794.jpg"
+          />
+          <P className="text-sm">MegaloTorus lit up at night interior. Credit: Zimba Zaleski.</P>
+
+          <StaticImage
+            alt="MegaloTorus lit up at night interior."
+            className="mt-3 family"
+            formats={["auto", "webp", "avif"]}
+            layout="fullWidth"
+            placeholder="blurred"
+            src="../../images/projects/megalotorus/Zimba-Zaleski_Apogaea2022_DSC02795.jpg"
+          />
+          <P className="text-sm">MegaloTorus lit up at night interior. Credit: Zimba Zaleski.</P>
+
+          <StaticImage
+            alt="MegaloTorus lit up at night interior."
+            className="mt-3 family"
+            formats={["auto", "webp", "avif"]}
+            layout="fullWidth"
+            placeholder="blurred"
+            src="../../images/projects/megalotorus/IMG_1469_cropped.JPG"
+          />
+          <P className="text-sm">MegaloTorus lit up at night interior.</P>
+
+          <StaticImage
+            alt="MegaloTorus lit up at night interior."
+            className="mt-3 family"
+            formats={["auto", "webp", "avif"]}
+            layout="fullWidth"
+            placeholder="blurred"
             src="../../images/projects/megalotorus/284841326_1451763151931410_5305151865316733963_n.jpg"
           />
           <P className="text-sm">MegaloTorus lit up at night interior.</P>
@@ -415,7 +445,7 @@ const MegaloTorusPage = ({
             formats={["auto", "webp", "avif"]}
             layout="fullWidth"
             placeholder="blurred"
-            src="../../images/projects/megalotorus/20220611_041942.jpg"
+            src="../../images/projects/megalotorus/20220611_041942_cropped.jpg"
           />
           <P className="text-sm">MegaloTorus lit up at night interior.</P>
 

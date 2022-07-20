@@ -116,7 +116,7 @@ const WhatADesignSystemIsWhyYouShouldCare = ({
               external={true}
             >Thinking in Systems</TextLink>, Donella H. Meadows explains that a system must consist of three kinds of things:
           </P>
-          <UL className="mt-4 list-disc">
+          <UL className="mt-4 pb-4 list-disc list-inside">
             <li>elements,</li>
             <li>interconnections, and</li>
             <li>a function or purpose</li>
@@ -202,7 +202,7 @@ const WhatADesignSystemIsWhyYouShouldCare = ({
           <P className="mt-4">
             Working with a proper system will make you a better designer/developer. Limiting your options in advance will reduce decision fatigue, enforce consistency — especially when working with a team, and reduce development time. If you have never worked with a system, starting from scratch can be daunting. If you are new to systems, I recommended that you start with an existing high-quality foundational system to familiarize yourself with systems thinking. Lastly, To get a feel for what makes a design system successful, take time to explore the design systems of some of the world's most successful brands:
           </P>
-          <UL className="mt-4">
+          <UL className="mt-4 pb-4 list-inside">
             <li>
               <TextLink
                 to="https://designsystemsrepo.com/design-systems"

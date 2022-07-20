@@ -13,8 +13,7 @@ type UnorderedListProps = {
 
 const UNORDERED_LIST = formatClassList([
   'leading-relaxed',
-  'list-inside',
-  'pb-4',
+  'list-disc',
   'sm:px-8',
   'text-stone-600',
   'tracking-wider'

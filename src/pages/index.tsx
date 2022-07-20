@@ -35,7 +35,7 @@ const HomePage = ({
         canonicalUrl="https://jillian.dev/"
       />
       <Jumbotron
-        title={<span className="text-5xl leading-relaxed js md:text-6xl md:leading-loose lg:text-7xl lg:leading-relaxed">Jillian Serenity</span>}
+        title={<span className="text-5xl leading-relaxed js md:text-6xl md:leading-loose lg:text-7xl lg:leading-relaxed">Jillian S. Estrella</span>}
         subtitle={
           <>
             <span className="hidden sm:inline-block">

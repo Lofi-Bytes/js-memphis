@@ -18,6 +18,7 @@ import Section from '../components/section'
 import SEO from '../components/seo'
 import SocialIconRow from '../components/social-icon-row'
 import TextLink from '../components/text-link'
+import UL from '../components/unordered-list'
 
 type PageProps = {
   data: any,
@@ -67,22 +68,84 @@ const AboutPage = ({
           </Button>
 
           <h2 className="mt-10 text-xl tracking-wide text-stone-700">Current Work</h2>
-          <div className="items-center justify-between mt-3 uppercase border-b border-pink-400 border-dotted d-block sm:flex">
+
+          <h3 className="mt-6 text-stone-600 text-lg">Senior Design Systems Engineer, Core Lead</h3>
+
+          <div className="items-center justify-between border-b border-pink-400 border-dotted d-block sm:flex text-stone-600">
             <TextLink
               to="https://www.northwesternmutual.com/"
-              title=""
+              title="Northwestern Mutual"
               external={true}
-              type="h3"
+              type="p"
             >
               Northwestern Mutual
             </TextLink>
             <P className="hidden sm:block">
-              2021 - Present
+              2022 - Present
             </P>
           </div>
+
           <P className="mt-3">
-            I'm soooo excited‼️ to share that starting in July I will be joining the design system team at Northwestern Mutual, where I will be leading the contributions and integrations branch for their design system, Luna.
+            In my current position I oversee multiple teams/projects on Northwestern Mutual's design system, Luna. Some of my responsibilities include:
           </P>
+
+          <UL className="mt-4 list-disc ml-8 sm:ml-0">
+            <li>
+              Working with leadership to roadmap, plan and delegate work
+            </li>
+            <li>
+              Work with designers to define and implement new functionality
+            </li>
+            <li>
+              Pair with and coach junior and mid-level engineers
+            </li>
+            <li>
+              Continually work with my team to improve upon and establish new team standards and best practices
+            </li>
+            <li>
+              Being active in recruiting and interviewing potential candidates
+            </li>
+            <li>
+              Advise on Contributions and Integrations as needed
+            </li>
+          </UL>
+
+          <P className="mt-3">
+            Some of my achievements so far have been
+          </P>
+
+          <UL className="mt-4 list-disc ml-8 sm:ml-0">
+            <li>
+              Migrating Luna to a monorepo
+            </li>
+            <li>
+              Shipping Luna as a monorepo
+            </li>
+            <li>
+              Improved continuous integration pipeline resulting in
+              <UL className="list-disc ml-8 sm:ml-0">
+                <li>
+                  a more reliable release cadence
+                </li>
+                <li>
+                  review applications
+                </li>
+                <li>
+                  canary releases for live testing pre-production
+                </li>
+              </UL>
+            </li>
+            <li>
+              Shipping Luna React Tables
+            </li>
+            <li>
+              Shipping Luna Responsive Optimizations
+            </li>
+          </UL>
+
+          {/* <P className="mt-3">
+            I'm soooo excited‼️ to share that starting in July I will be joining the design system team at Northwestern Mutual, where I will be leading the contributions and integrations branch for their design system, Luna.
+          </P> */}
           {/* Oversee the planning, design and implementation of the design system.
           Provide technical direction in-line with business goals.
           Train, mentor, and support engineers on the team.
@@ -115,7 +178,43 @@ const AboutPage = ({
             I work with a team of talented people -
           </P> */}
           <h2 className="mt-10 text-xl tracking-wide text-stone-700">Previous Work</h2>
-          <div className="items-center justify-between mt-3 uppercase border-b border-pink-400 border-dotted d-block sm:flex">
+
+          <h3 className="mt-6 text-stone-600 text-lg">Senior Design Systems Engineer, Contributions and Integrations Lead</h3>
+
+          <div className="items-center justify-between border-b border-pink-400 border-dotted d-block sm:flex text-stone-600">
+            <TextLink
+              to="https://www.northwesternmutual.com/"
+              title=""
+              external={true}
+              type="p"
+            >
+              Northwestern Mutual
+            </TextLink>
+            <P className="hidden sm:block">
+              2021 - 2022
+            </P>
+          </div>
+
+          <P className="mt-3">
+            In this role, my focus was on lowering barriers for other teams at the company to contribute to Luna. For a design system to be successful, it requires buy-in from everyone at the company. One way to get this investment is to ensure that anyone can contribute; thus providing everyone a sense of ownership.
+          </P>
+
+          <P className="mt-3">
+            Our solution was the creation of Community Contribution Libraries (CCLs). The Luna CCL development environment, which implements <TextLink to="https://storybook.js.org/" title="" external={true}>Storybook</TextLink>, is pleasant to work in. It increases developer velocity while reducing frustration. Luna CCLs also lower the collaboration barrier between designers and engineers.
+          </P>
+
+          <P className="mt-3">
+            The Luna CCLs were also used to improve and implement better testing standards/practices. CCLs were built from the start to lower the effort required for engineers to implement tests and increase test coverage and variety; including real-time and regression testing for accessibility, components, and screens.
+          </P>
+
+          <P className="mt-3">
+            To govern the use of CCLs, I launched our Community Contribution Model. This model offers guidelines for CCL candidacy, lifecycle, and core promotion.
+          </P>
+
+
+          <h3 className="mt-8 text-stone-600 text-lg">Lead Developer, Educational Technology and Web Applications</h3>
+
+          <div className="items-center justify-between border-b border-pink-400 border-dotted d-block sm:flex text-stone-600">
             <TextLink
               to="https://bscs.org/"
               title=""
@@ -128,22 +227,67 @@ const AboutPage = ({
               2015 - 2021
             </P>
           </div>
-          <P className="mt-3">
+          {/* <P className="mt-3">
             Previously, I worked for a nonprofit organization, <TextLink to="https://bscs.org/" title="" external={true}>BSCS Science Learning</TextLink>, whose mission is to transform science teaching and learning through research-driven innovation.
-          </P>
+          </P> */}
           {/* <P className="mt-4">
             At BSCS Science Learning, we operate on federal and private grants. The nature of this work requires our small team to build many websites and web apps every year. To keep up with demaind, we must ensure that our infrastructure is agile enough to meet the needs of a diverse range of projects while staying within budget, meeting strict deadlines, and reducing both the cost of ongoing maintenance and technical debt.
           </P> */}
+
           <P className="mt-4">
-            A critical part of my role within BSCS was to improve the experience for the developer, designer, and user. During my time with BSCS, I oversaw the adoption of innovative approaches to software and design such as <i className="text-pink-300 fas fa-heart" /> <TextLink to="https://www.invisionapp.com/inside-design/guide-to-design-systems/" title="" external={true}>design systems</TextLink>; <TextLink to="https://medium.com/omarelgabrys-blog/component-based-architecture-3c3c23c7e348" title="" external={true}>component based</TextLink>, <TextLink to="https://martinfowler.com/articles/serverless.html" title="" external={true}>serverless</TextLink>, <TextLink to="https://martinfowler.com/articles/microservices.html" title="" external={true}> and microservice</TextLink> architectures; and the beloved <i className="text-pink-300 fas fa-heart" /> <TextLink to="https://jamstack.org/" title="" external={true}>Jamstack</TextLink>.
+            During my time with BSCS, I established and grew an in-house software development team and modernized BSCS’s crumbling tech stack.
+          </P>
+          <P className="mt-4">
+            During my time with BSCS, I oversaw the adoption of innovative approaches to software and design such as <i className="text-pink-300 fas fa-heart" /> <TextLink to="https://www.invisionapp.com/inside-design/guide-to-design-systems/" title="" external={true}>design systems</TextLink>; <TextLink to="https://medium.com/omarelgabrys-blog/component-based-architecture-3c3c23c7e348" title="" external={true}>component based</TextLink>, <TextLink to="https://martinfowler.com/articles/serverless.html" title="" external={true}>serverless</TextLink>, <TextLink to="https://martinfowler.com/articles/microservices.html" title="" external={true}> and microservice</TextLink> architectures; and the beloved <i className="text-pink-300 fas fa-heart" /> <TextLink to="https://jamstack.org/" title="" external={true}>Jamstack</TextLink>.
           </P>
           <P className="mt-4">
             These innovations allowed my small team to keep pace with increasing demand. We were able to create BSCS's digital products with more efficiency and at a higher quality with lower product support costs.
           </P>
           <P className="mt-4">
-            A typical day for me involved architecting solutions to complex problems, overseeing BSCS's digital products throughout their lifecycle, guiding and mentoring my team, and designing/building UI's and UI components.
+            A typical day for me involved
           </P>
-          <div className="items-center justify-between mt-8 uppercase border-b border-pink-400 border-dotted d-block sm:flex">
+          <UL className="mt-4 list-disc ml-8 sm:ml-0">
+            <li>
+              Roadmapping, planning, and delegating work
+            </li>
+            <li>
+              Architecting solutions to complex problems
+            </li>
+            <li>
+              Overseeing BSCS's digital products throughout their lifecycle
+            </li>
+            <li>
+              Guiding and mentoring my team
+            </li>
+            <li>
+              Designing/building UI's and UI components
+            </li>
+          </UL>
+          <P className="mt-4">
+            Our stack consisted of
+          </P>
+          <UL className="mt-4 list-disc ml-8 sm:ml-0">
+            <li>
+              <TextLink to="https://beta.reactjs.org/" title="" external={true}>React</TextLink> + <TextLink to="https://www.typescriptlang.org/" title="" external={true}>TypeScript</TextLink> frontends (<TextLink to="https://www.gatsbyjs.com/" title="" external={true}>Gatsby</TextLink> / <TextLink to="https://nextjs.org/" title="" external={true}>Next.js</TextLink> / <TextLink to="https://tailwindcss.com/" title="" external={true}>Tailwind CSS</TextLink>)
+            </li>
+            <li>
+              <TextLink to="https://go.dev/" title="" external={true}>Golang</TextLink> microservices
+            </li>
+            <li>
+              <TextLink to="https://fauna.com/" title="" external={true}>Fauna DB</TextLink> for persisting data
+            </li>
+            <li>
+              <TextLink to="https://www.docker.com/" title="" external={true}>Docker</TextLink>
+            </li>
+            <li>
+              <TextLink to="https://www.nginx.com/" title="" external={true}>Nginx</TextLink>
+            </li>
+          </UL>
+          <P className="mt-4">
+            Our design system, Caribou, used Gatsby and our component library was built in <TextLink to="https://storybook.js.org/" title="" external={true}>Storybook</TextLink>; components were published to NPM to make them readily consumable.
+          </P>
+
+          <div className="items-center justify-between mt-8 border-b border-pink-400 border-dotted d-block sm:flex text-stone-600">
             {/* <TextLink
               to="https://umich.edu/"
               title=""
@@ -154,7 +298,7 @@ const AboutPage = ({
             </TextLink> */}
             Astronomy and Physics
             <P className="hidden sm:block">
-              2014 - 2015
+              2011 - 2015
             </P>
           </div>
           <P className="mt-3">
@@ -170,7 +314,7 @@ const AboutPage = ({
           </P> */}
 
           <h2 className="mt-10 text-xl tracking-wide text-stone-700">Education</h2>
-          <div className="items-center justify-between mt-3 uppercase border-b border-pink-400 border-dotted d-block sm:flex">
+          <div className="items-center justify-between mt-3 uppercase border-b border-pink-400 border-dotted d-block sm:flex text-stone-600">
             <TextLink
               to="https://umich.edu/"
               title=""
@@ -223,7 +367,7 @@ const AboutPage = ({
             Emphasis was placed on numerical analysis, algorithms, and computational techniques for solving and analyzing physics and engineering problems.
           </P>
 
-          <div className="items-center justify-between mt-8 uppercase border-b border-pink-400 border-dotted d-block sm:flex">
+          <div className="items-center justify-between mt-8 uppercase border-b border-pink-400 border-dotted d-block sm:flex text-stone-600">
             <TextLink
               to="https://www.colorado.edu/"
               title=""
