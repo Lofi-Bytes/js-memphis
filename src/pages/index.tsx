@@ -69,7 +69,7 @@ const HomePage = ({
           </h2>
           <SocialIconRow className="mt-3" />
           <P className="mt-8">
-            Hi there! Welcome to my creative space. I am a developer experience engineer and tech lead. I love building beautiful and accessible design systems. I am passionate about technology that advances social and environmental justice.
+            Hi there! Welcome to my creative space. I am a developer experience engineer (DXE) and tech lead. I love building beautiful and accessible design systems. I am passionate about technology that advances social and environmental justice.
           </P>
           {/* <P className="mt-4">
             Please take a look around and be sure to check back often. This is my brand new website as of December 2020, and I will be adding new content regularly.
