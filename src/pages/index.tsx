@@ -14,6 +14,7 @@ import P from '../components/paragraph'
 import Section from '../components/section'
 import SEO from '../components/seo'
 import SocialIconRow from '../components/social-icon-row'
+import TextLink from '../components/text-link'
 
 
 type PageProps = {
@@ -69,7 +70,13 @@ const HomePage = ({
           </h2>
           <SocialIconRow className="mt-3" />
           <P className="mt-8">
-            Hi there! Welcome to my creative space. I am a developer experience engineer (DXE) and tech lead. I love building beautiful and accessible design systems. I am passionate about technology that advances social and environmental justice.
+            Hi there! Welcome to my creative space. I am a <TextLink
+              to="https://www.helpnetsecurity.com/2021/07/16/developer-experience-engineer/"
+              title=""
+              external={true}
+            >
+              developer experience engineer (DXE)
+            </TextLink> and tech lead. I love building beautiful and accessible design systems. I am passionate about technology that advances social and environmental justice.
           </P>
           {/* <P className="mt-4">
             Please take a look around and be sure to check back often. This is my brand new website as of December 2020, and I will be adding new content regularly.
