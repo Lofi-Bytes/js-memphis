@@ -53,7 +53,7 @@ const AboutPage = ({
 
           <h2 className="mt-10 text-2xl tracking-wide text-stone-700">Jillian S. Estrella <br className="sm:hidden" /><span className="text-xl text-stone-600">🏳️‍🌈 she/her 🏳️‍⚧️</span></h2>
           <P className="mt-1 text-xl">
-            Design systems engineer
+            Developer experience engineer
           </P>
           <SocialIconRow className="mt-3" />
           <Button
@@ -69,7 +69,7 @@ const AboutPage = ({
 
           <h2 className="mt-10 text-xl tracking-wide text-stone-700">Current Work</h2>
 
-          <h3 className="mt-6 text-stone-600 text-lg">Senior Design Systems Engineer, Core Lead</h3>
+          <h3 className="mt-6 text-stone-600 text-lg">Senior Software Engineer, Design Systems Core Lead</h3>
 
           <div className="items-center justify-between border-b border-pink-400 border-dotted d-block sm:flex text-stone-600">
             <TextLink
@@ -179,7 +179,7 @@ const AboutPage = ({
           </P> */}
           <h2 className="mt-10 text-xl tracking-wide text-stone-700">Previous Work</h2>
 
-          <h3 className="mt-6 text-stone-600 text-lg">Senior Design Systems Engineer, Contributions and Integrations Lead</h3>
+          <h3 className="mt-6 text-stone-600 text-lg">Senior Software Engineer, Design Systems Contributions and Integrations Lead</h3>
 
           <div className="items-center justify-between border-b border-pink-400 border-dotted d-block sm:flex text-stone-600">
             <TextLink
@@ -210,7 +210,6 @@ const AboutPage = ({
           <P className="mt-3">
             To govern the use of CCLs, I launched our Community Contribution Model. This model offers guidelines for CCL candidacy, lifecycle, and core promotion.
           </P>
-
 
           <h3 className="mt-8 text-stone-600 text-lg">Lead Developer, Educational Technology and Web Applications</h3>
 
