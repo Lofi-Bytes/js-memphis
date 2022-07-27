@@ -81,7 +81,7 @@ const AboutPage = ({
               Northwestern Mutual
             </TextLink>
             <P className="hidden sm:block">
-              2022 - Present
+              Jan 2022 - Present
             </P>
           </div>
 
@@ -143,6 +143,49 @@ const AboutPage = ({
             </li>
           </UL>
 
+          {/* <h3 className="mt-6 text-stone-600 text-lg">Software Engineering Manager, Developer Experience Tooling</h3>
+
+          <div className="items-center justify-between border-b border-pink-400 border-dotted d-block sm:flex text-stone-600">
+            <TextLink
+              to="https://www.northwesternmutual.com/"
+              title="Northwestern Mutual"
+              external={true}
+              type="p"
+            >
+              Northwestern Mutual
+            </TextLink>
+            <P className="hidden sm:block">
+              Aug 2022 - Present
+            </P>
+          </div>
+
+          <P className="mt-3">
+            I manage the Tooling team for Northwestern Mutual's Developer Experience group. Some of my responsibilities include:
+          </P>
+
+          <UL className="mt-4 list-disc ml-8 sm:ml-0">
+            <li>
+              Plan and delegate work
+            </li>
+            <li>
+              Work with designers to define and implement new functionality
+            </li>
+            <li>
+              Pair with and coach junior and mid-level engineers
+            </li>
+            <li>
+              Continually work with my team to improve upon and establish new team standards and best practices
+            </li>
+            <li>
+              Being active in recruiting and interviewing potential candidates
+            </li>
+            <li>
+              Advise on Contributions and Integrations as needed
+            </li>
+          </UL> */}
+
+
+
           {/* <P className="mt-3">
             I'm soooo excited‼️ to share that starting in July I will be joining the design system team at Northwestern Mutual, where I will be leading the contributions and integrations branch for their design system, Luna.
           </P> */}
@@ -179,6 +222,80 @@ const AboutPage = ({
           </P> */}
           <h2 className="mt-10 text-xl tracking-wide text-stone-700">Previous Work</h2>
 
+          {/* <h3 className="mt-6 text-stone-600 text-lg">Senior Software Engineer, Design Systems Core Lead</h3>
+
+          <div className="items-center justify-between border-b border-pink-400 border-dotted d-block sm:flex text-stone-600">
+            <TextLink
+              to="https://www.northwesternmutual.com/"
+              title="Northwestern Mutual"
+              external={true}
+              type="p"
+            >
+              Northwestern Mutual
+            </TextLink>
+            <P className="hidden sm:block">
+              Jan 2022 - Aug 2022
+            </P>
+          </div>
+
+          <P className="mt-3">
+            In this position I oversaw multiple teams/projects on Northwestern Mutual's design system, Luna. Some of my responsibilities included:
+          </P>
+
+          <UL className="mt-4 list-disc ml-8 sm:ml-0">
+            <li>
+              Worked with leadership to roadmap, plan and delegate work
+            </li>
+            <li>
+              Worked with designers to define and implement new functionality
+            </li>
+            <li>
+              Paired with and coached junior and mid-level engineers
+            </li>
+            <li>
+              Continually worked with my team to improve upon and establish new team standards and best practices
+            </li>
+            <li>
+              Was active in recruiting and interviewing potential candidates
+            </li>
+            <li>
+              Advised on Contributions and Integrations as needed
+            </li>
+          </UL>
+
+          <P className="mt-3">
+            Some of my achievements in this role were
+          </P>
+
+          <UL className="mt-4 list-disc ml-8 sm:ml-0">
+            <li>
+              Migrated Luna to a monorepo
+            </li>
+            <li>
+              Shipped Luna as a monorepo
+            </li>
+            <li>
+              Improved continuous integration pipeline resulting in
+              <UL className="list-disc ml-8 sm:ml-0">
+                <li>
+                  a more reliable release cadence
+                </li>
+                <li>
+                  review applications
+                </li>
+                <li>
+                  canary releases for live testing pre-production
+                </li>
+              </UL>
+            </li>
+            <li>
+              Shipped Luna React Tables
+            </li>
+            <li>
+              Shipped Luna Responsive Optimizations
+            </li>
+          </UL> */}
+
           <h3 className="mt-6 text-stone-600 text-lg">Senior Software Engineer, Design Systems Contributions and Integrations Lead</h3>
 
           <div className="items-center justify-between border-b border-pink-400 border-dotted d-block sm:flex text-stone-600">
@@ -191,7 +308,7 @@ const AboutPage = ({
               Northwestern Mutual
             </TextLink>
             <P className="hidden sm:block">
-              2021 - 2022
+              Jul 2021 - Dec 2021
             </P>
           </div>
 
@@ -211,7 +328,7 @@ const AboutPage = ({
             To govern the use of CCLs, I launched our Community Contribution Model. This model offers guidelines for CCL candidacy, lifecycle, and core promotion.
           </P>
 
-          <h3 className="mt-8 text-stone-600 text-lg">Lead Developer, Educational Technology and Web Applications</h3>
+          <h3 className="mt-10 text-stone-600 text-lg">Lead Developer, Educational Technology and Web Applications</h3>
 
           <div className="items-center justify-between border-b border-pink-400 border-dotted d-block sm:flex text-stone-600">
             <TextLink
@@ -223,7 +340,7 @@ const AboutPage = ({
               BSCS Science Learning
             </TextLink>
             <P className="hidden sm:block">
-              2015 - 2021
+              Aug 2015 - July 2021
             </P>
           </div>
           {/* <P className="mt-3">
@@ -286,7 +403,7 @@ const AboutPage = ({
             Our design system, Caribou, used Gatsby and our component library was built in <TextLink to="https://storybook.js.org/" title="" external={true}>Storybook</TextLink>; components were published to NPM to make them readily consumable.
           </P>
 
-          <div className="items-center justify-between mt-8 border-b border-pink-400 border-dotted d-block sm:flex text-stone-600">
+          <div className="items-center justify-between mt-10 border-b border-pink-400 border-dotted d-block sm:flex text-stone-600">
             {/* <TextLink
               to="https://umich.edu/"
               title=""
@@ -297,7 +414,7 @@ const AboutPage = ({
             </TextLink> */}
             Astronomy and Physics
             <P className="hidden sm:block">
-              2011 - 2015
+              Aug 2011 - Aug 2015
             </P>
           </div>
           <P className="mt-3">
