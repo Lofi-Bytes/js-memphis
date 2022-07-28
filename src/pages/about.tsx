@@ -69,18 +69,22 @@ const AboutPage = ({
 
           <h2 className="mt-10 text-xl tracking-wide text-stone-700">Current Work</h2>
 
-          <h3 className="mt-6 text-stone-600 text-lg">Senior Software Engineer, Design Systems Core Lead</h3>
+          <h3 className="mt-6 mb-2 text-stone-600 text-lg">Senior Software Engineer, Design Systems Core Lead</h3>
 
           <div className="items-center justify-between border-b border-pink-400 border-dotted d-block sm:flex text-stone-600">
             <TextLink
-              to="https://www.northwesternmutual.com/"
-              title="Northwestern Mutual"
+              className="text-stone-600"
               external={true}
+              title="Northwestern Mutual"
+              to="https://www.northwesternmutual.com/"
               type="p"
             >
               Northwestern Mutual
             </TextLink>
-            <P className="hidden sm:block">
+            <P className="hidden sm:block text-stone-600">
+              Jan 2022 - Present
+            </P>
+            <P className="sm:hidden text-sm text-stone-600 mt-1">
               Jan 2022 - Present
             </P>
           </div>
@@ -143,18 +147,22 @@ const AboutPage = ({
             </li>
           </UL>
 
-          {/* <h3 className="mt-6 text-stone-600 text-lg">Software Engineering Manager, Developer Experience Tooling</h3>
+          {/* <h3 className="mt-6 mb-2 text-stone-600 text-lg">Software Engineering Manager, Developer Experience Tooling</h3>
 
           <div className="items-center justify-between border-b border-pink-400 border-dotted d-block sm:flex text-stone-600">
             <TextLink
-              to="https://www.northwesternmutual.com/"
-              title="Northwestern Mutual"
+              className="text-stone-600"
               external={true}
+              title="Northwestern Mutual"
+              to="https://www.northwesternmutual.com/"
               type="p"
             >
               Northwestern Mutual
             </TextLink>
-            <P className="hidden sm:block">
+            <P className="hidden sm:block text-stone-600">
+              Aug 2022 - Present
+            </P>
+            <P className="sm:hidden text-sm text-stone-600">
               Aug 2022 - Present
             </P>
           </div>
@@ -222,18 +230,22 @@ const AboutPage = ({
           </P> */}
           <h2 className="mt-10 text-xl tracking-wide text-stone-700">Previous Work</h2>
 
-          {/* <h3 className="mt-6 text-stone-600 text-lg">Senior Software Engineer, Design Systems Core Lead</h3>
+          {/* <h3 className="mt-6 mb-2 text-stone-600 text-lg">Senior Software Engineer, Design Systems Core Lead</h3>
 
           <div className="items-center justify-between border-b border-pink-400 border-dotted d-block sm:flex text-stone-600">
             <TextLink
-              to="https://www.northwesternmutual.com/"
-              title="Northwestern Mutual"
+              className="text-stone-600"
               external={true}
+              title="Northwestern Mutual"
+              to="https://www.northwesternmutual.com/"
               type="p"
             >
               Northwestern Mutual
             </TextLink>
-            <P className="hidden sm:block">
+            <P className="hidden sm:block text-stone-600">
+              Jan 2022 - Aug 2022
+            </P>
+            <P className="sm:hidden text-sm text-stone-600">
               Jan 2022 - Aug 2022
             </P>
           </div>
@@ -296,19 +308,23 @@ const AboutPage = ({
             </li>
           </UL> */}
 
-          <h3 className="mt-6 text-stone-600 text-lg">Senior Software Engineer, Design Systems Contributions and Integrations Lead</h3>
+          <h3 className="mt-6 mb-2 text-stone-600 text-lg">Senior Software Engineer, Design Systems Contributions and Integrations Lead</h3>
 
           <div className="items-center justify-between border-b border-pink-400 border-dotted d-block sm:flex text-stone-600">
             <TextLink
-              to="https://www.northwesternmutual.com/"
-              title=""
+              className="text-stone-600"
               external={true}
+              title=""
+              to="https://www.northwesternmutual.com/"
               type="p"
             >
               Northwestern Mutual
             </TextLink>
-            <P className="hidden sm:block">
+            <P className="hidden sm:block text-stone-600">
               Jul 2021 - Dec 2021
+            </P>
+            <P className="sm:hidden text-sm text-stone-600">
+              Jan 2021 - Dec 2021
             </P>
           </div>
 
@@ -328,18 +344,22 @@ const AboutPage = ({
             To govern the use of CCLs, I launched our Community Contribution Model. This model offers guidelines for CCL candidacy, lifecycle, and core promotion.
           </P>
 
-          <h3 className="mt-10 text-stone-600 text-lg">Lead Developer, Educational Technology and Web Applications</h3>
+          <h3 className="mt-10 mb-2 text-stone-600 text-lg">Lead Developer, Educational Technology and Web Applications</h3>
 
           <div className="items-center justify-between border-b border-pink-400 border-dotted d-block sm:flex text-stone-600">
             <TextLink
-              to="https://bscs.org/"
-              title=""
+              className="text-stone-600"
               external={true}
+              title=""
+              to="https://bscs.org/"
               type="h3"
             >
               BSCS Science Learning
             </TextLink>
-            <P className="hidden sm:block">
+            <P className="hidden sm:block text-stone-600">
+              Aug 2015 - July 2021
+            </P>
+            <P className="sm:hidden text-sm text-stone-600">
               Aug 2015 - July 2021
             </P>
           </div>
@@ -403,23 +423,50 @@ const AboutPage = ({
             Our design system, Caribou, used Gatsby and our component library was built in <TextLink to="https://storybook.js.org/" title="" external={true}>Storybook</TextLink>; components were published to NPM to make them readily consumable.
           </P>
 
-          <div className="items-center justify-between mt-10 border-b border-pink-400 border-dotted d-block sm:flex text-stone-600">
-            {/* <TextLink
-              to="https://umich.edu/"
-              title=""
+          <h3 className="mt-10 mb-2 text-stone-600 text-lg">Instructor; Astronomy and Physics</h3>
+
+          <div className="items-center justify-between border-b border-pink-400 border-dotted d-block sm:flex text-stone-600">
+            <TextLink
+              className="text-stone-600"
               external={true}
+              title=""
+              to="https://www.ppcc.edu/"
               type="h3"
             >
-              Physics and Astronomy
-            </TextLink> */}
-            Astronomy and Physics
-            <P className="hidden sm:block">
-              Aug 2011 - Aug 2015
+              Pikes Peak Community College
+            </TextLink>
+
+            <P className="hidden sm:block text-stone-600">
+              Aug 2014 - Aug 2015
+            </P>
+            <P className="sm:hidden text-stone-600">
+              Aug 2014 - Aug 2015
             </P>
           </div>
           <P className="mt-3">
             Prior to my career in software development, I was an astronomy and physics instructor. My courses introduced students to the skills required to think critically about the physical world and offered students experience in solving real-world problems.
           </P>
+
+          <h3 className="mt-10 mb-2 text-stone-600 text-lg">Research Assistant</h3>
+
+          <div className="items-center justify-between border-b border-pink-400 border-dotted d-block sm:flex text-stone-600">
+            <TextLink
+              className="text-stone-600"
+              external={true}
+              title=""
+              to="https://www.ppcc.edu/"
+              type="h3"
+            >
+              University of Michigan
+            </TextLink>
+
+            <P className="hidden sm:block text-stone-600">
+              Aug 2011 - Aug 2014
+            </P>
+            <P className="sm:hidden text-sm text-stone-600">
+              Aug 2011 - Aug 2014
+            </P>
+          </div>
           <P className="mt-4">
             In graduate school, I did research on the space environment of planets and comets. Colloquially known as “space weather,” my research investigated how the solar wind affects the magnetospheres, ionospheres, and upper atmospheres of these objects.
           </P>
@@ -432,14 +479,15 @@ const AboutPage = ({
           <h2 className="mt-10 text-xl tracking-wide text-stone-700">Education</h2>
           <div className="items-center justify-between mt-3 uppercase border-b border-pink-400 border-dotted d-block sm:flex text-stone-600">
             <TextLink
-              to="https://umich.edu/"
-              title=""
+              className="text-stone-600"
               external={true}
+              title=""
+              to="https://umich.edu/"
               type="h3"
             >
               University of Michigan
             </TextLink>
-            <P className="hidden sm:block">
+            <P className="hidden sm:block text-stone-600">
               Ann Arbor, MI
             </P>
           </div>
@@ -457,7 +505,7 @@ const AboutPage = ({
                 >Atmospheric and Space Science</TextLink>
               </P>
             </div>
-            <P className="hidden sm:block">05/2014</P>
+            <P className="hidden sm:block text-stone-600">05/2014</P>
           </div>
           <P className="mx-6 mt-3">
             My studies focused on the theory of plasma physics, electromagnetism, fluid dynamics, atmospheric radiative transfer and their applications to solar physics and planetary science.
@@ -477,7 +525,7 @@ const AboutPage = ({
                 >Computational Discovery and Engineering</TextLink>
               </P>
             </div>
-            <P className="hidden sm:block">07/2014</P>
+            <P className="hidden sm:block text-stone-600">07/2014</P>
           </div>
           <P className="mx-6 mt-3">
             Emphasis was placed on numerical analysis, algorithms, and computational techniques for solving and analyzing physics and engineering problems.
@@ -485,6 +533,7 @@ const AboutPage = ({
 
           <div className="items-center justify-between mt-8 uppercase border-b border-pink-400 border-dotted d-block sm:flex text-stone-600">
             <TextLink
+              className="text-stone-600"
               to="https://www.colorado.edu/"
               title=""
               external={true}
@@ -492,7 +541,7 @@ const AboutPage = ({
             >
               University of Colorado
             </TextLink>
-            <P className="hidden sm:block">
+            <P className="hidden sm:block text-stone-600">
               Boulder, CO
             </P>
           </div>
@@ -511,7 +560,7 @@ const AboutPage = ({
                 >Physics</TextLink>
               </P>
             </div>
-            <P className="hidden sm:block">08/2010</P>
+            <P className="hidden sm:block text-stone-600">08/2010</P>
           </div>
           <P className="mx-6 mt-3">
             I gained a strong foundation in classical mechanics, modern physics, electromagnetics, quantum mechanics, thermodynamics, condensed matter physics, nuclear & particle physics, plasma physics, circuit theory & design, and certified to design and machine custom parts for laboratory experiments in the physics department's state of the art machine shop.
@@ -531,7 +580,7 @@ const AboutPage = ({
                 >Astrophysical, Planetary, and Atmospheric Science</TextLink>
               </P>
             </div>
-            <P className="hidden sm:block">08/2010</P>
+            <P className="hidden sm:block text-stone-600">08/2010</P>
           </div>
           <P className="mx-6 mt-3">
             I studied, in-depth, the current understanding of most astrophysical phenomena such as geophysics, atmospheric & planetary science, stellar structure & evolution, galaxies, neutron stars, and black holes.

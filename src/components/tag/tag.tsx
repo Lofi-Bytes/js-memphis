@@ -1,12 +1,15 @@
 import * as React from 'react'
 
-import { formatClassList, joinStrings } from '../../utils/utils'
+import {
+  formatClassList,
+  joinStrings
+} from '../../utils/utils'
 
 
 type TagProps = {
   card: boolean,
-  tagColor: string,
-  children: React.ReactNode
+  children: React.ReactNode,
+  tagColor: string
 }
 
 const TAG_BASE = formatClassList([
@@ -80,8 +83,8 @@ const tagColors = {
 
 const Tag = ({
   card,
-  tagColor,
-  children
+  children,
+  tagColor
 }: TagProps) => {
   let formattedTagBase: string
   let formattedTagCard: string

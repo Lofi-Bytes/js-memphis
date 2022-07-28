@@ -1,14 +1,19 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
 
-import { formatClassList } from '../../utils/utils'
+import {
+  formatClassList,
+  joinStrings
+} from '../../utils/utils'
+
 
 export type TextLinkProps = {
   children: React.ReactNode,
+  className?: string,
   external: boolean,
   title: string,
   to: string
-  type?: string,
+  type?: string
 }
 
 const LINK = formatClassList([
@@ -27,12 +32,15 @@ const CONTENT = formatClassList([
 
 const TextLink = ({
   children,
+  className,
   external,
   title,
   to,
   type
 }: TextLinkProps) => {
   const CustomTag = `${type}` as keyof JSX.IntrinsicElements
+
+  const formattedClassname = joinStrings(' ', LINK, className)
 
   return (
     <React.Fragment>
@@ -42,7 +50,7 @@ const TextLink = ({
             <a
               href={to}
               title={title}
-              className={LINK}
+              className={formattedClassname}
             >
               {
                 type
@@ -59,7 +67,7 @@ const TextLink = ({
           :
             <Link
               to={to}
-              className={LINK}
+              className={formattedClassname}
             >
               {
                 type
