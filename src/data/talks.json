@@ -2,11 +2,29 @@
   {
     "title": "Imagining a Better Way to Web Part 01",
     "path": "https://betterwaytoweb-01.jillian.dev/",
-    "published": false,
+    "published": true,
     "excerpt": "This talk covers the first of three intersectional topics; The Jamstack, Component-based architecture, and Design systems. These tools and techniques will improve the quality and consistency of your products. They will improve the working experience and quality of collaboration across your team(s). And they will improve your audience experience.",
     "date": "2020/10/21",
+    "section": "invited-talks",
     "tags": [
       "Jamstack"
-    ]
+    ],
+    "active": true
+  },
+  {
+    "title": "Megalotorus Elsewhence Art Grant Proposal",
+    "path": "https://megalotorus-elsewhence-art-grant-proposal.jillian.dev",
+    "published": true,
+    "excerpt": "Request for funding structural and efficiency upgrades to MegaloTorus prior to Elsewhence.",
+    "date": "2022/07/06",
+    "section": "art-grant-proposals",
+    "tags": [
+      "Art",
+      "Cosmometry",
+      "Elsewhence",
+      "LED",
+      "Toroid"
+    ],
+    "active": true
   }
 ]

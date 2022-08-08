@@ -7,10 +7,10 @@
     "excerpt": "",
     "date": "2020/12/25",
     "tags": [
-      "Tailwind CSS",
+      "Jamstack",
       "React",
-      "TypeScript",
-      "Jamstack"
+      "Tailwind CSS",
+      "TypeScript"
     ]
   },
   {
@@ -21,10 +21,10 @@
     "excerpt": "",
     "date": "2020/12/26",
     "tags": [
-      "Tailwind CSS",
+      "Jamstack",
       "React",
-      "TypeScript",
-      "Jamstack"
+      "Tailwind CSS",
+      "TypeScript"
     ]
   },
   {
@@ -35,9 +35,9 @@
     "excerpt": "",
     "date": "2021/08/05",
     "tags": [
-      "Markdown",
-      "GitHub",
       "Git",
+      "GitHub",
+      "Markdown",
       "Writing"
     ]
   },
@@ -49,9 +49,9 @@
     "excerpt": "",
     "date": "2021/11/18",
     "tags": [
+      "Design systems",
       "Design",
       "Systems",
-      "Design systems",
       "Tailwind CSS"
     ]
   }

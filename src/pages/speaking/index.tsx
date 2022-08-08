@@ -23,11 +23,13 @@ const SpeakingListPage = ({
       allTalksJson {
         edges {
           node {
-            title
-            path
-            excerpt
+            active
             date
+            excerpt
+            path
+            section
             tags
+            title
           }
         }
       }
@@ -66,35 +68,95 @@ const SpeakingListPage = ({
           <div className="grid grid-flow-row-dense gap-8">
           {
             talkListData.allTalksJson.edges.map((edge, index) => {
+              const active = edge.node.active
+              const date = edge.node.date
+              const excerpt = edge.node.excerpt
+              const path = edge.node.path
+              const section = edge.node.section
+              const tags = edge.node.tags
+              const title = edge.node.title
+
+              return(
+                <React.Fragment key={`item-${index}`}>
+                  {section === 'invited-talks'
+                    ?
+                      <Card
+                        color="rose"
+                        date={date}
+                        excerpt={excerpt}
+                        external={true}
+                        published={active ? true : false}
+                        title={title}
+                        to={path}
+                        tags={
+                          tags.map((tag, index) => {
+                            return (
+                              <Tag
+                                card={true}
+                                key={`item-${index}`}
+                                tagColor="rose"
+                              >
+                                {tag}
+                              </Tag>
+                            )
+                          })
+                        }
+                      />
+                    : null
+                  }
+                </React.Fragment>
+              )
+            })
+          }
+          </div>
+        </Section>
+        <Section background="transparent" className="mb-8">
+          <Banner
+            color="purple"
+            pageType="listPage"
+          >
+            Art Grant Proposals
+          </Banner>
+          <div className="grid grid-flow-row-dense gap-8">
+          {
+            talkListData.allTalksJson.edges.map((edge, index) => {
               const path = edge.node.path
               const title = edge.node.title
               const excerpt = edge.node.excerpt
               const date = edge.node.date
               const tags = edge.node.tags
+              const section = edge.node.section
+              const active = edge.node.active
 
               return(
-                <Card
-                  color="rose"
-                  date={date}
-                  excerpt={excerpt}
-                  external={true}
-                  published={true}
-                  title={title}
-                  to={path}
-                  tags={
-                    tags.map((tag, index) => {
-                      return (
-                        <Tag
-                          card={true}
-                          key={`item-${index}`}
-                          tagColor="rose"
-                        >
-                          {tag}
-                        </Tag>
-                      )
-                    })
+                <React.Fragment key={`item-${index}`}>
+                  {section === 'art-grant-proposals'
+                    ?
+                      <Card
+                        color="violet"
+                        date={date}
+                        excerpt={excerpt}
+                        external={true}
+                        published={active ? true : false}
+                        title={title}
+                        to={path}
+                        tags={
+                          tags.map((tag, index) => {
+                            return (
+                              <Tag
+                                card={true}
+                                key={`item-${index}`}
+                                tagColor="violet"
+                              >
+                                {tag}
+                              </Tag>
+                            )
+                          })
+                        }
+                      />
+                    : null
                   }
-                />
+                </React.Fragment>
               )
             })
           }

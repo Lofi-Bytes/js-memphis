@@ -123,13 +123,13 @@ const ProjectsListPage = ({
           <div className="grid grid-flow-row-dense gap-8">
           {
             projectsListData.allProjectsJson.edges.map((edge, index) => {
-              const path = edge.node.path
-              const title = edge.node.title
-              const excerpt = edge.node.excerpt
-              const date = edge.node.date
-              const tags = edge.node.tags
-              const section = edge.node.section
               const active = edge.node.active
+              const date = edge.node.date
+              const excerpt = edge.node.excerpt
+              const path = edge.node.path
+              const section = edge.node.section
+              const tags = edge.node.tags
+              const title = edge.node.title
 
               return(
                 <React.Fragment key={`item-${index}`}>
