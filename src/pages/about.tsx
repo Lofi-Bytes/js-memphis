@@ -69,7 +69,7 @@ const AboutPage = ({
 
           <h2 className="mt-10 text-xl tracking-wide text-stone-700">Current Work</h2>
 
-          <h3 className="mt-6 mb-2 text-stone-600 text-lg">Senior Software Engineer, Design Systems Core Lead</h3>
+          {/* <h3 className="mt-6 mb-2 text-stone-600 text-lg">Senior Software Engineer, Design Systems Core Lead</h3>
 
           <div className="items-center justify-between border-b border-pink-400 border-dotted d-block sm:flex text-stone-600">
             <TextLink
@@ -145,9 +145,9 @@ const AboutPage = ({
             <li>
               Shipping Luna Responsive Optimizations
             </li>
-          </UL>
+          </UL> */}
 
-          {/* <h3 className="mt-6 mb-2 text-stone-600 text-lg">Software Engineering Manager, Developer Experience Tooling</h3>
+          <h3 className="mt-6 mb-2 text-stone-600 text-lg">Software Engineering Manager, Developer Experience Tooling</h3>
 
           <div className="items-center justify-between border-b border-pink-400 border-dotted d-block sm:flex text-stone-600">
             <TextLink
@@ -160,39 +160,53 @@ const AboutPage = ({
               Northwestern Mutual
             </TextLink>
             <P className="hidden sm:block text-stone-600">
-              Aug 2022 - Present
+              September 2022 - Present
             </P>
             <P className="sm:hidden text-sm text-stone-600">
-              Aug 2022 - Present
+              September 2022 - Present
             </P>
           </div>
 
           <P className="mt-3">
-            I manage the Tooling team for Northwestern Mutual's Developer Experience group. Some of my responsibilities include:
+            I manage the Tooling team for Northwestern Mutual's Developer Experience (DevX) group. The DevX tooling group oversees:
           </P>
 
           <UL className="mt-4 list-disc ml-8 sm:ml-0">
             <li>
-              Plan and delegate work
+              Design system core libraries
             </li>
             <li>
-              Work with designers to define and implement new functionality
+              Design system community contribution libraries
             </li>
             <li>
-              Pair with and coach junior and mid-level engineers
+              Server-side and client-side utilities
             </li>
             <li>
-              Continually work with my team to improve upon and establish new team standards and best practices
+              Platform integrations
             </li>
             <li>
-              Being active in recruiting and interviewing potential candidates
+              Platform developer tools
             </li>
-            <li>
-              Advise on Contributions and Integrations as needed
-            </li>
-          </UL> */}
+          </UL>
 
+          <P className="mt-3">
+            Some of my responsibilities include:
+          </P>
 
+          <UL className="mt-4 list-disc ml-8 sm:ml-0">
+            <li>
+              Collaborate with design, content, accessibility, and product leads to roadmap, plan and delegate work
+            </li>
+            <li>
+              Coach junior, mid-level, and senior engineers
+            </li>
+            <li>
+              Improve process and team standards
+            </li>
+            <li>
+              Recruit and interview candidates
+            </li>
+          </UL>
 
           {/* <P className="mt-3">
             I'm soooo excited‼️ to share that starting in July I will be joining the design system team at Northwestern Mutual, where I will be leading the contributions and integrations branch for their design system, Luna.
@@ -230,7 +244,7 @@ const AboutPage = ({
           </P> */}
           <h2 className="mt-10 text-xl tracking-wide text-stone-700">Previous Work</h2>
 
-          {/* <h3 className="mt-6 mb-2 text-stone-600 text-lg">Senior Software Engineer, Design Systems Core Lead</h3>
+          <h3 className="mt-6 mb-2 text-stone-600 text-lg">Senior Software Engineer, Design Systems Core Lead</h3>
 
           <div className="items-center justify-between border-b border-pink-400 border-dotted d-block sm:flex text-stone-600">
             <TextLink
@@ -306,7 +320,7 @@ const AboutPage = ({
             <li>
               Shipped Luna Responsive Optimizations
             </li>
-          </UL> */}
+          </UL>
 
           <h3 className="mt-6 mb-2 text-stone-600 text-lg">Senior Software Engineer, Design Systems Contributions and Integrations Lead</h3>
 
