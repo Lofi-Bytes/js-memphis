@@ -161,7 +161,7 @@ const MegaloTorusPage = ({
           <H3 className="mt-10">Philosophy</H3>
 
           <P className="mt-4">
-            In many ancient cultures, the torus has been associated with the concept of infinity. These cultures often used the torus to symbolize the universe. Through science, we now understand that toroidal structures show up everywhere in nature - from the micro-atomic to the macro-galactic. In the study of cosmometry, it is believed that in its most balanced dynamic flow process, energy moves like a torus. From galaxies to ecosystems to the subatomic, there is a seamless exchange of energy and information (a.k.a consciousness) moving cyclically throughout the entire cosmic experience via the torus.
+            In many ancient cultures, the torus has been associated with the concept of infinity. These cultures often used the torus to symbolize the universe. We now understand that toroidal structures show up everywhere in nature - from the micro-atomic to the macro-galactic. In the study of cosmometry, it is believed that in its most balanced dynamic flow process, energy moves like a torus. From galaxies to ecosystems to the subatomic, there is a seamless exchange of energy and information (a.k.a consciousness) moving cyclically throughout the entire cosmic experience via the torus.
           </P>
 
           {/* <P className="mt-4">
@@ -169,7 +169,7 @@ const MegaloTorusPage = ({
           </P> */}
 
           <P className="mt-4">
-            MegaloTorus uses light and sound to explore the dynamic flow of energy, as well as the infinite nature of the torus.
+            MegaloTorus uses light and sound to explore the dynamic flow of energy and the infinite nature of the torus.
           </P>
 
           <Banner color="purple" className="mt-16">
