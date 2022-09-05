@@ -310,7 +310,7 @@ const MegaloTorusPage = ({
           />
           <P className="text-sm">MegaloTorus LED model top view; modeled by Jillian Estrella</P>
 
-          <div
+          {/* <div
             style={{
               padding: "85.11% 0 0 0",
               position: "relative"
@@ -334,7 +334,7 @@ const MegaloTorusPage = ({
             </iframe>
           </div>
           <P className="text-sm">MegaloTorus LED sequence example.</P>
-          <script src="https://player.vimeo.com/api/player.js"></script>
+          <script src="https://player.vimeo.com/api/player.js"></script> */}
 
           {/* <StaticImage
             alt="Screenshot of MegaloTorus light sequence"
@@ -541,33 +541,18 @@ const MegaloTorusPage = ({
           <P className="text-lg mt-6">
             Jillian Estrella
           </P>
-          {/* <P className="text-sm">
-            Project lead; LED, structure, and interior design
-          </P> */}
-          {/* <P className="text-sm">
-            Project lead; LED, structure, and interior design
-          </P> */}
 
           <P className="text-lg mt-4">
             Sierra Estrella
           </P>
-          {/* <P className="text-sm">
-            Visual, LED, and interior design
-          </P> */}
-
-          <P className="text-lg mt-4">
-            George O'Donnell
-          </P>
-          {/* <P className="text-sm">
-            Cover/membrane design
-          </P> */}
 
           <P className="text-lg mt-4">
             Nathan Klein
           </P>
-          {/* <P className="text-sm">
-            Cover/membrane design
-          </P> */}
+
+          <P className="text-lg mt-4">
+            George O'Donnell
+          </P>
 
           <P className="text-lg mt-4">
             Sean Shirley
@@ -576,9 +561,6 @@ const MegaloTorusPage = ({
           <P className="text-lg mt-4">
             Martin Newmark
           </P>
-          {/* <P className="text-sm">
-            Structure and interior design
-          </P> */}
 
           <P className="text-lg mt-4">
             Joseph Martinez
@@ -587,9 +569,6 @@ const MegaloTorusPage = ({
           <P className="text-lg mt-4">
             Daniel Tenenbaum
           </P>
-          {/* <P className="text-sm">
-            Cover/membrane design
-          </P> */}
 
           <P className="text-lg mt-4">
             Becca Elliott
@@ -597,6 +576,10 @@ const MegaloTorusPage = ({
 
           <P className="text-lg mt-4">
             Sean Sidelko
+          </P>
+
+          <P className="text-lg mt-4">
+            Tiffany Chau
           </P>
 
           <P className="text-lg mt-4">
