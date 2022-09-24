@@ -65,18 +65,22 @@ const HomePage = ({
           />
           <i className="absolute text-6xl fal fa-stop text-cyan-300 -right-3 -top-10 sm:-right-6 sm:-top-10 sm:text-7xl lg:-right-14 lg:-top-8 lg:text-8xl transofrm rotate-12 transform-gpu"></i>
           <i className="absolute text-5xl rotate-45 fal fa-triangle text-emerald-300 -left-2 top-52 sm:-left-4 sm:top-48 sm:text-6xl lg:-left-6 lg:top-36 lg:text-7xl transofrm transform-gpu"></i>
-          <h2 className="mt-10 text-2xl tracking-wide text-stone-700">Developer experience engineer
+          <h2 className="mt-10 text-2xl tracking-wide text-stone-700">Design systems and developer experience engineer
           {/* <br /><span className="text-xl text-stone-600">🏳️‍🌈 she/her 🏳️‍⚧️</span> */}
           </h2>
           <SocialIconRow className="mt-3" />
           <P className="mt-8">
             Hi there! Welcome to my creative space. I am a <TextLink
+              to="https://uxdesign.cc/everything-you-need-to-know-about-design-systems-54b109851969"
+              title=""
+              external={true}
+            >design systems</TextLink> and <TextLink
               to="https://www.helpnetsecurity.com/2021/07/16/developer-experience-engineer/"
               title=""
               external={true}
             >
-              developer experience engineer (DXE)
-            </TextLink> and tech lead. I love building beautiful and accessible design systems. I am passionate about technology that advances social and environmental justice.
+              developer experience
+            </TextLink> engineer. I am also a tech lead. I love building beautiful and accessible digital experiences. I am passionate about technology that advances social and environmental justice.
           </P>
           {/* <P className="mt-4">
             Please take a look around and be sure to check back often. This is my brand new website as of December 2020, and I will be adding new content regularly.

@@ -53,7 +53,7 @@ const AboutPage = ({
 
           <h2 className="mt-10 text-2xl tracking-wide text-stone-700">Jillian S. Estrella <br className="sm:hidden" /><span className="text-xl text-stone-600">🏳️‍🌈 she/her 🏳️‍⚧️</span></h2>
           <P className="mt-1 text-xl">
-            Developer experience engineer
+            Design systems and developer experience engineer
           </P>
           <SocialIconRow className="mt-3" />
           <Button
@@ -147,7 +147,7 @@ const AboutPage = ({
             </li>
           </UL> */}
 
-          <h3 className="mt-6 mb-2 text-stone-600 text-lg">Software Engineering Manager, Developer Experience Tooling</h3>
+          <h3 className="mt-6 mb-2 text-stone-600 text-lg">Software Engineering Manager, Design Systems and Developer Experience</h3>
 
           <div className="items-center justify-between border-b border-pink-400 border-dotted d-block sm:flex text-stone-600">
             <TextLink
@@ -168,7 +168,7 @@ const AboutPage = ({
           </div>
 
           <P className="mt-3">
-            I manage the Tooling team for Northwestern Mutual's Developer Experience (DevX) group. The DevX tooling group oversees:
+            I manage the design system and developer experience tooling within Northwestern Mutual's Developer Experience (DevX) group. My team oversees:
           </P>
 
           <UL className="mt-4 list-disc ml-8 sm:ml-0">
