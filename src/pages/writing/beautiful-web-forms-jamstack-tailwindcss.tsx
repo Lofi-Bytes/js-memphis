@@ -483,16 +483,16 @@ const BeautifulWebFormsJamstackTailwindCSSPage = ({
             Form elements are not always the easiest to style. <TextLink
                 to="https://github.com/tailwindlabs/tailwindcss-forms"
                 title=""
-                external={true}
+                outbound={true}
               >
                 @tailwindcss/forms
               </TextLink> convieniently provides a basic reset for form styles that makes form elements easy to override with <TextLink
                 to="https://tailwindcss.com/"
                 title=""
-                external={true}
+                outbound={true}
               >
                 Tailwind CSS
-              </TextLink> utility classes. @tailwindcss/forms is designed for Tailwind CSS v2.0 and replaces <TextLink to="https://github.com/tailwindlabs/tailwindcss-custom-forms" title="" external={true}>tailwindcss-custom-forms</TextLink> which was designed to work with Tailwind CSS v1.0.
+              </TextLink> utility classes. @tailwindcss/forms is designed for Tailwind CSS v2.0 and replaces <TextLink to="https://github.com/tailwindlabs/tailwindcss-custom-forms" title="" outbound={true}>tailwindcss-custom-forms</TextLink> which was designed to work with Tailwind CSS v1.0.
           </P>
 
           <H3 className="mt-10">Getting Started</H3>
@@ -522,7 +522,7 @@ const BeautifulWebFormsJamstackTailwindCSSPage = ({
           </CodeContainer>
           <H3 className="mt-10">Usage</H3>
           <P className="mt-3">
-            I found that the easiest way to get started is to look at the provided <TextLink to="https://tailwindcss-forms.vercel.app/" title="" external={true}>live demo examples</TextLink>. For this post, we will recreate the contact form found on the homepage of <TextLink to="/" title="" external={false}>jillian.dev</TextLink>. We will start by using dev tools to copy the underline-style form example and modify the fields as needed (also adjusting the HTML to be valid JSX/TSX):
+            I found that the easiest way to get started is to look at the provided <TextLink to="https://tailwindcss-forms.vercel.app/" title="" outbound={true}>live demo examples</TextLink>. For this post, we will recreate the contact form found on the homepage of <TextLink to="/" title="" outbound={false}>jillian.dev</TextLink>. We will start by using dev tools to copy the underline-style form example and modify the fields as needed (also adjusting the HTML to be valid JSX/TSX):
           </P>
           <CodeContainer
             language="tsx"
@@ -625,7 +625,7 @@ const BeautifulWebFormsJamstackTailwindCSSPage = ({
             {refactoredForm}
           </CodeContainer>
           <P className="mt-8">
-            For further understanding and an in-depth look that my approach to keeping components tidy while working with Tailwind CSS please see <TextLink to="/" title="" external={false}>Tidy React-Typescript component design with Tailwind CSS</TextLink>.
+            For further understanding and an in-depth look that my approach to keeping components tidy while working with Tailwind CSS please see <TextLink to="/" title="" outbound={false}>Tidy React-Typescript component design with Tailwind CSS</TextLink>.
           </P>
           <P className="mt-8">
             Above I have also abstracted the button into its own component, which keeps things DRY and further cleans up the TSX in the contact form component.

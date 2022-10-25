@@ -74,7 +74,7 @@ const AboutPage = ({
           <div className="items-center justify-between border-b border-pink-400 border-dotted d-block sm:flex text-stone-600">
             <TextLink
               className="text-stone-600"
-              external={true}
+              outbound={true}
               title="Northwestern Mutual"
               to="https://www.northwesternmutual.com/"
               type="p"
@@ -152,7 +152,7 @@ const AboutPage = ({
           <div className="items-center justify-between border-b border-pink-400 border-dotted d-block sm:flex text-stone-600">
             <TextLink
               className="text-stone-600"
-              external={true}
+              outbound={true}
               title="Northwestern Mutual"
               to="https://www.northwesternmutual.com/"
               type="p"
@@ -222,7 +222,7 @@ const AboutPage = ({
           {/*
 
           <P className="mt-3">
-            As the core engineering lead for <TextLink to="https://www.northwesternmutual.com/" title="" external={true}>Northwestern Mutual's</TextLink> design system, Luna, I work with a talented team of engineers, designers, content strategists, product managers, and project managers. I spend a lot of my time planing, roadmapping and prioritizing to provide technical direction in-line with business goals.
+            As the core engineering lead for <TextLink to="https://www.northwesternmutual.com/" title="" outbound={true}>Northwestern Mutual's</TextLink> design system, Luna, I work with a talented team of engineers, designers, content strategists, product managers, and project managers. I spend a lot of my time planing, roadmapping and prioritizing to provide technical direction in-line with business goals.
           </P>
 
           <P className="mt-3">
@@ -249,7 +249,7 @@ const AboutPage = ({
           <div className="items-center justify-between border-b border-pink-400 border-dotted d-block sm:flex text-stone-600">
             <TextLink
               className="text-stone-600"
-              external={true}
+              outbound={true}
               title="Northwestern Mutual"
               to="https://www.northwesternmutual.com/"
               type="p"
@@ -327,7 +327,7 @@ const AboutPage = ({
           <div className="items-center justify-between border-b border-pink-400 border-dotted d-block sm:flex text-stone-600">
             <TextLink
               className="text-stone-600"
-              external={true}
+              outbound={true}
               title=""
               to="https://www.northwesternmutual.com/"
               type="p"
@@ -347,7 +347,7 @@ const AboutPage = ({
           </P>
 
           <P className="mt-3">
-            Our solution was the creation of Community Contribution Libraries (CCLs). The Luna CCL development environment, which implements <TextLink to="https://storybook.js.org/" title="" external={true}>Storybook</TextLink>, is pleasant to work in. It increases developer velocity while reducing frustration. Luna CCLs also lower the collaboration barrier between designers and engineers.
+            Our solution was the creation of Community Contribution Libraries (CCLs). The Luna CCL development environment, which implements <TextLink to="https://storybook.js.org/" title="" outbound={true}>Storybook</TextLink>, is pleasant to work in. It increases developer velocity while reducing frustration. Luna CCLs also lower the collaboration barrier between designers and engineers.
           </P>
 
           <P className="mt-3">
@@ -363,7 +363,7 @@ const AboutPage = ({
           <div className="items-center justify-between border-b border-pink-400 border-dotted d-block sm:flex text-stone-600">
             <TextLink
               className="text-stone-600"
-              external={true}
+              outbound={true}
               title=""
               to="https://bscs.org/"
               type="h3"
@@ -378,7 +378,7 @@ const AboutPage = ({
             </P>
           </div>
           {/* <P className="mt-3">
-            Previously, I worked for a nonprofit organization, <TextLink to="https://bscs.org/" title="" external={true}>BSCS Science Learning</TextLink>, whose mission is to transform science teaching and learning through research-driven innovation.
+            Previously, I worked for a nonprofit organization, <TextLink to="https://bscs.org/" title="" outbound={true}>BSCS Science Learning</TextLink>, whose mission is to transform science teaching and learning through research-driven innovation.
           </P> */}
           {/* <P className="mt-4">
             At BSCS Science Learning, we operate on federal and private grants. The nature of this work requires our small team to build many websites and web apps every year. To keep up with demaind, we must ensure that our infrastructure is agile enough to meet the needs of a diverse range of projects while staying within budget, meeting strict deadlines, and reducing both the cost of ongoing maintenance and technical debt.
@@ -388,7 +388,7 @@ const AboutPage = ({
             During my time with BSCS, I established and grew an in-house software development team and modernized BSCS’s crumbling tech stack.
           </P>
           <P className="mt-4">
-            During my time with BSCS, I oversaw the adoption of innovative approaches to software and design such as <i className="text-pink-300 fas fa-heart" /> <TextLink to="https://www.invisionapp.com/inside-design/guide-to-design-systems/" title="" external={true}>design systems</TextLink>; <TextLink to="https://medium.com/omarelgabrys-blog/component-based-architecture-3c3c23c7e348" title="" external={true}>component based</TextLink>, <TextLink to="https://martinfowler.com/articles/serverless.html" title="" external={true}>serverless</TextLink>, <TextLink to="https://martinfowler.com/articles/microservices.html" title="" external={true}> and microservice</TextLink> architectures; and the beloved <i className="text-pink-300 fas fa-heart" /> <TextLink to="https://jamstack.org/" title="" external={true}>Jamstack</TextLink>.
+            During my time with BSCS, I oversaw the adoption of innovative approaches to software and design such as <i className="text-pink-300 fas fa-heart" /> <TextLink to="https://www.invisionapp.com/inside-design/guide-to-design-systems/" title="" outbound={true}>design systems</TextLink>; <TextLink to="https://medium.com/omarelgabrys-blog/component-based-architecture-3c3c23c7e348" title="" outbound={true}>component based</TextLink>, <TextLink to="https://martinfowler.com/articles/serverless.html" title="" outbound={true}>serverless</TextLink>, <TextLink to="https://martinfowler.com/articles/microservices.html" title="" outbound={true}> and microservice</TextLink> architectures; and the beloved <i className="text-pink-300 fas fa-heart" /> <TextLink to="https://jamstack.org/" title="" outbound={true}>Jamstack</TextLink>.
           </P>
           <P className="mt-4">
             These innovations allowed my small team to keep pace with increasing demand. We were able to create BSCS's digital products with more efficiency and at a higher quality with lower product support costs.
@@ -418,23 +418,23 @@ const AboutPage = ({
           </P>
           <UL className="mt-4 list-disc ml-8 sm:ml-0">
             <li>
-              <TextLink to="https://beta.reactjs.org/" title="" external={true}>React</TextLink> + <TextLink to="https://www.typescriptlang.org/" title="" external={true}>TypeScript</TextLink> frontends (<TextLink to="https://www.gatsbyjs.com/" title="" external={true}>Gatsby</TextLink> / <TextLink to="https://nextjs.org/" title="" external={true}>Next.js</TextLink> / <TextLink to="https://tailwindcss.com/" title="" external={true}>Tailwind CSS</TextLink>)
+              <TextLink to="https://beta.reactjs.org/" title="" outbound={true}>React</TextLink> + <TextLink to="https://www.typescriptlang.org/" title="" outbound={true}>TypeScript</TextLink> frontends (<TextLink to="https://www.gatsbyjs.com/" title="" outbound={true}>Gatsby</TextLink> / <TextLink to="https://nextjs.org/" title="" outbound={true}>Next.js</TextLink> / <TextLink to="https://tailwindcss.com/" title="" outbound={true}>Tailwind CSS</TextLink>)
             </li>
             <li>
-              <TextLink to="https://go.dev/" title="" external={true}>Golang</TextLink> microservices
+              <TextLink to="https://go.dev/" title="" outbound={true}>Golang</TextLink> microservices
             </li>
             <li>
-              <TextLink to="https://fauna.com/" title="" external={true}>Fauna DB</TextLink> for persisting data
+              <TextLink to="https://fauna.com/" title="" outbound={true}>Fauna DB</TextLink> for persisting data
             </li>
             <li>
-              <TextLink to="https://www.docker.com/" title="" external={true}>Docker</TextLink>
+              <TextLink to="https://www.docker.com/" title="" outbound={true}>Docker</TextLink>
             </li>
             <li>
-              <TextLink to="https://www.nginx.com/" title="" external={true}>Nginx</TextLink>
+              <TextLink to="https://www.nginx.com/" title="" outbound={true}>Nginx</TextLink>
             </li>
           </UL>
           <P className="mt-4">
-            Our design system, Caribou, used Gatsby and our component library was built in <TextLink to="https://storybook.js.org/" title="" external={true}>Storybook</TextLink>; components were published to NPM to make them readily consumable.
+            Our design system, Caribou, used Gatsby and our component library was built in <TextLink to="https://storybook.js.org/" title="" outbound={true}>Storybook</TextLink>; components were published to NPM to make them readily consumable.
           </P>
 
           <h3 className="mt-10 mb-2 text-stone-600 text-lg">Instructor; Astronomy and Physics</h3>
@@ -442,7 +442,7 @@ const AboutPage = ({
           <div className="items-center justify-between border-b border-pink-400 border-dotted d-block sm:flex text-stone-600">
             <TextLink
               className="text-stone-600"
-              external={true}
+              outbound={true}
               title=""
               to="https://www.ppcc.edu/"
               type="h3"
@@ -466,7 +466,7 @@ const AboutPage = ({
           <div className="items-center justify-between border-b border-pink-400 border-dotted d-block sm:flex text-stone-600">
             <TextLink
               className="text-stone-600"
-              external={true}
+              outbound={true}
               title=""
               to="https://www.ppcc.edu/"
               type="h3"
@@ -487,14 +487,14 @@ const AboutPage = ({
 
           {/* <h2 className="mt-10 text-xl tracking-wide text-stone-700">Education</h2>
           <P className="mt-3">
-            I hold an <TextLink to="https://en.wikipedia.org/wiki/Master_of_Science#United_States" title="" external={true}>M.S.</TextLink> in <TextLink to="https://clasp.engin.umich.edu/" title="" external={true}>Atmospheric and Space Science</TextLink> and a <TextLink to="https://en.wikipedia.org/wiki/Graduate_certificate#United_States" title="" external={true}>GradCert</TextLink> in <TextLink to="https://micde.umich.edu/" title="" external={true}>Computer Science and Engineering</TextLink> from <TextLink to="https://umich.edu/" title="" external={true}>The University of Michigan, Ann Arbor</TextLink>. I did my undergraduate studies at <TextLink to="https://www.colorado.edu/" title="" external={true}>The University of Colorado, Boulder</TextLink> where I earned a <TextLink to="https://en.wikipedia.org/wiki/Bachelor%27s_degree" title="" external={true}>B.A.</TextLink> in <TextLink to="https://www.colorado.edu/aps/" title="" external={true}>Astrophysical, Planetary, and Atmospheric Science</TextLink> and a <TextLink to="https://en.wikipedia.org/wiki/Bachelor%27s_degree" title="" external={true}>B.A.</TextLink> in <TextLink to="https://www.colorado.edu/physics/" title="" external={true}>Physics</TextLink>.
+            I hold an <TextLink to="https://en.wikipedia.org/wiki/Master_of_Science#United_States" title="" outbound={true}>M.S.</TextLink> in <TextLink to="https://clasp.engin.umich.edu/" title="" outbound={true}>Atmospheric and Space Science</TextLink> and a <TextLink to="https://en.wikipedia.org/wiki/Graduate_certificate#United_States" title="" outbound={true}>GradCert</TextLink> in <TextLink to="https://micde.umich.edu/" title="" outbound={true}>Computer Science and Engineering</TextLink> from <TextLink to="https://umich.edu/" title="" outbound={true}>The University of Michigan, Ann Arbor</TextLink>. I did my undergraduate studies at <TextLink to="https://www.colorado.edu/" title="" outbound={true}>The University of Colorado, Boulder</TextLink> where I earned a <TextLink to="https://en.wikipedia.org/wiki/Bachelor%27s_degree" title="" outbound={true}>B.A.</TextLink> in <TextLink to="https://www.colorado.edu/aps/" title="" outbound={true}>Astrophysical, Planetary, and Atmospheric Science</TextLink> and a <TextLink to="https://en.wikipedia.org/wiki/Bachelor%27s_degree" title="" outbound={true}>B.A.</TextLink> in <TextLink to="https://www.colorado.edu/physics/" title="" outbound={true}>Physics</TextLink>.
           </P> */}
 
           <h2 className="mt-10 text-xl tracking-wide text-stone-700">Education</h2>
           <div className="items-center justify-between mt-3 uppercase border-b border-pink-400 border-dotted d-block sm:flex text-stone-600">
             <TextLink
               className="text-stone-600"
-              external={true}
+              outbound={true}
               title=""
               to="https://umich.edu/"
               type="h3"
@@ -511,11 +511,11 @@ const AboutPage = ({
                 <TextLink
                   to="https://en.wikipedia.org/wiki/Master_of_Science#United_States"
                   title=""
-                  external={true}
+                  outbound={true}
                 >M.S.</TextLink> <TextLink
                   to="https://clasp.engin.umich.edu/"
                   title=""
-                  external={true}
+                  outbound={true}
                 >Atmospheric and Space Science</TextLink>
               </P>
             </div>
@@ -531,11 +531,11 @@ const AboutPage = ({
                 <TextLink
                   to="https://en.wikipedia.org/wiki/Graduate_certificate#United_States"
                   title=""
-                  external={true}
+                  outbound={true}
                 >GradCert</TextLink> <TextLink
                   to="https://micde.umich.edu/"
                   title=""
-                  external={true}
+                  outbound={true}
                 >Computational Discovery and Engineering</TextLink>
               </P>
             </div>
@@ -550,7 +550,7 @@ const AboutPage = ({
               className="text-stone-600"
               to="https://www.colorado.edu/"
               title=""
-              external={true}
+              outbound={true}
               type="h3"
             >
               University of Colorado
@@ -566,11 +566,11 @@ const AboutPage = ({
                 <TextLink
                   to="https://en.wikipedia.org/wiki/Bachelor%27s_degree"
                   title=""
-                  external={true}
+                  outbound={true}
                 >B.A.</TextLink> <TextLink
                   to="https://www.colorado.edu/physics/"
                   title=""
-                  external={true}
+                  outbound={true}
                 >Physics</TextLink>
               </P>
             </div>
@@ -586,11 +586,11 @@ const AboutPage = ({
                 <TextLink
                   to="https://en.wikipedia.org/wiki/Bachelor%27s_degree"
                   title=""
-                  external={true}
+                  outbound={true}
                 >B.A.</TextLink> <TextLink
                   to="https://www.colorado.edu/aps/"
                   title=""
-                  external={true}
+                  outbound={true}
                 >Astrophysical, Planetary, and Atmospheric Science</TextLink>
               </P>
             </div>
@@ -614,7 +614,7 @@ const AboutPage = ({
           <P className="text-sm">Jillian and her family.</P>
 
           <P className="mt-3">
-            In my free time I enjoy spending time with my beautiful family, creating visual and immersive art, adventuring in our van (<TextLink to="https://www.instagram.com/explore/tags/vanlife/?hl=en" title="" external={true}>#vanlife</TextLink>), practicing yoga, mountain biking, and I read a lot.
+            In my free time I enjoy spending time with my beautiful family, creating visual and immersive art, adventuring in our van (<TextLink to="https://www.instagram.com/explore/tags/vanlife/?hl=en" title="" outbound={true}>#vanlife</TextLink>), practicing yoga, mountain biking, and I read a lot.
           </P>
           {/* <div
             className="w-full mx-auto mt-12 md:w-3/4"

@@ -145,7 +145,7 @@ const MegaloTorusPage = ({
             <TextLink
               to='https://apogaea.com/'
               title="Colorado Burning Man regional event"
-              external={true}
+              outbound={true}
             >
               Apogaea
             </TextLink>
@@ -630,7 +630,7 @@ const MegaloTorusPage = ({
             And a special shout-out to the incredibly talented folks in the <TextLink
                 to="https://xlights.org/resources/"
                 title="xLights resources"
-                external={true}
+                outbound={true}
               >xLights Zoom and Facebook support groups!</TextLink>
           </P>
         </Section>

@@ -201,7 +201,7 @@ const BeautifulWebFormsJamstackReactHookFormPage = ({
           </div>
           <h3 className="mt-10 text-xl tracking-wide text-stone-700">Introduction</h3>
           <p className="mt-3 leading-relaxed tracking-wider text-stone-600">
-            <TextLink to="https://react-hook-form.com/" title="" external={true}>React Hook Form</TextLink> is a lightweight and performant client side form field validation library for <TextLink to="https://reactjs.org/" title="" external={true}>React</TextLink>. In this post we will continue to build the contact form that we started previously.
+            <TextLink to="https://react-hook-form.com/" title="" outbound={true}>React Hook Form</TextLink> is a lightweight and performant client side form field validation library for <TextLink to="https://reactjs.org/" title="" outbound={true}>React</TextLink>. In this post we will continue to build the contact form that we started previously.
           </p>
           <h3 className="mt-10 text-xl tracking-wide text-stone-700">Getting Started</h3>
           <p className="mt-3 leading-relaxed tracking-wider text-stone-600">
@@ -246,7 +246,7 @@ const BeautifulWebFormsJamstackReactHookFormPage = ({
             {importUseForm}
           </CodeContainer>
           <p className="mt-8 leading-relaxed tracking-wider text-stone-600">
-            Now we are going to set up several React Hook Form methods that we will use. <code className="language-bash">useForm</code> takes <TextLink to="https://react-hook-form.com/api#useForm" title="" external={true}>optional arguments</TextLink> and we define it to be of type <code className="language-bash">ContactFormProps</code>. We will set React Hook Form's <code className="language-bash">mode</code> argument to fire validation on blur. In addition, we will be storing information about the forms state. Finally we set up our submit handler, which uses JavaScripts <TextLink to="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API" external={true}>Fetch API</TextLink> to submit our form to <TextLink to="https://www.netlify.com/products/forms/" title="" external={true}>Netlify Forms</TextLink>. Note that we use the <code className="language-bash">reset</code> method in our submit handler to clear the form when the form has been submitted successfully.
+            Now we are going to set up several React Hook Form methods that we will use. <code className="language-bash">useForm</code> takes <TextLink to="https://react-hook-form.com/api#useForm" title="" outbound={true}>optional arguments</TextLink> and we define it to be of type <code className="language-bash">ContactFormProps</code>. We will set React Hook Form's <code className="language-bash">mode</code> argument to fire validation on blur. In addition, we will be storing information about the forms state. Finally we set up our submit handler, which uses JavaScripts <TextLink to="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API" outbound={true}>Fetch API</TextLink> to submit our form to <TextLink to="https://www.netlify.com/products/forms/" title="" outbound={true}>Netlify Forms</TextLink>. Note that we use the <code className="language-bash">reset</code> method in our submit handler to clear the form when the form has been submitted successfully.
           </p>
           <CodeContainer
             language="ts"
@@ -262,7 +262,7 @@ const BeautifulWebFormsJamstackReactHookFormPage = ({
               Netlify sets up the form feature during your websites <strong><em>build time</em></strong>. Netlify's bots <em>must</em> be able to detect your form in your site's prerendered HTML. A common frustration that I have seen folx run into is when the form is "hidden" from Netlify's bots due to some abstraction, usually because it is rendered at <strong><em>run time</em></strong> using JavaScript, such as building the form as a React component like we are doing here! The work-around is to be sure you have this form rendered out as HTML somewhere oh your site.
             </p>
             <p className="mt-8">
-              I usually accomplish this by building this same form into its own <TextLink to="/contact" title="" external={false}>contact</TextLink> page/route. Yes, this does result in duplicated code which isn't terribly DRY, but in this case it is necessary. Since I use the contact component on many other pages, I don't find it necessary to directly link to a dedicated "contact" route anywhere, but it does exist.
+              I usually accomplish this by building this same form into its own <TextLink to="/contact" title="" outbound={false}>contact</TextLink> page/route. Yes, this does result in duplicated code which isn't terribly DRY, but in this case it is necessary. Since I use the contact component on many other pages, I don't find it necessary to directly link to a dedicated "contact" route anywhere, but it does exist.
             </p>
           </Alert>
           <NextPrev path={path} className="mt-10" >test</NextPrev>

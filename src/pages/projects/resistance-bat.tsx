@@ -100,7 +100,7 @@ const ResistanceBatPage = ({
             <TextLink
               to='https://apogaea.com/'
               title="Colorado Burning Man regional event"
-              external={true}
+              outbound={true}
             >
               Apogaea
             </TextLink>
@@ -198,11 +198,11 @@ const ResistanceBatPage = ({
             Two separate strips of SK6812 LEDs light this piece. Each strip consists of about 85 LEDs. The LEDs are controlled by a Seeed XIAO RP2040 microcontroller and they were sequenced in <TextLink
                 to="https://circuitpython.org/"
                 title="CircuitPython - the easiest way to program microcontrollers."
-                external={true}
+                outbound={true}
               >CircuitPython</TextLink>. <TextLink
                 to="https://docs.python.org/3/library/asyncio.html"
                 title="asyncio — Asynchronous I/O — Python 3.10.4 documentation"
-                external={true}
+                outbound={true}
               >Asynchronous I/O</TextLink> was required to sequence both strips of lights simultaneously from the same microcontroller.
           </P>
 

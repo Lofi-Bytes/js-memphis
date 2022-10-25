@@ -73,11 +73,11 @@ const HomePage = ({
             Hi there! Welcome to my creative space. I am a <TextLink
               to="https://uxdesign.cc/everything-you-need-to-know-about-design-systems-54b109851969"
               title=""
-              external={true}
+              outbound={true}
             >design systems</TextLink> and <TextLink
               to="https://www.helpnetsecurity.com/2021/07/16/developer-experience-engineer/"
               title=""
-              external={true}
+              outbound={true}
             >
               developer experience
             </TextLink> engineer. I am also a tech lead. I love building beautiful and accessible digital experiences. I am passionate about technology that advances social and environmental justice.

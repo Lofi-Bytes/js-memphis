@@ -1,5 +1,6 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 
 import {
   formatClassList,
@@ -10,7 +11,7 @@ import {
 export type TextLinkProps = {
   children: React.ReactNode,
   className?: string,
-  external: boolean,
+  outbound: boolean,
   title: string,
   to: string
   type?: string
@@ -33,7 +34,7 @@ const CONTENT = formatClassList([
 const TextLink = ({
   children,
   className,
-  external,
+  outbound,
   title,
   to,
   type
@@ -45,9 +46,9 @@ const TextLink = ({
   return (
     <React.Fragment>
       {
-        external
+        outbound
           ?
-            <a
+            <OutboundLink
               href={to}
               title={title}
               className={formattedClassname}
@@ -63,7 +64,7 @@ const TextLink = ({
                       {children}
                     </span>
               }
-            </a>
+            </OutboundLink>
           :
             <Link
               to={to}
