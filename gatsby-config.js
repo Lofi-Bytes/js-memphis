@@ -2,12 +2,14 @@ require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 
+const siteUrl = process.env.URL || `https://jillian.dev/`
+
 module.exports = {
   siteMetadata: {
     title: `Jillian S. Estrella`,
     description: `Design systems engineer`,
     author: `Jillian S. Estrella`,
-    siteUrl: `https://jillian.dev/`
+    siteUrl: siteUrl
   },
   plugins: [
     `gatsby-plugin-postcss`,
@@ -48,32 +50,32 @@ module.exports = {
     // },
     {
       resolve: 'gatsby-plugin-sitemap',
-    //   options: {
-    //     query: `
-    //       {
-    //         allSitePage {
-    //           nodes {
-    //             path
-    //           }
-    //         }
-    //       }
-    //     `,
-    //     resolveSiteUrl: () => siteUrl,
-    //     resolvePages: ({
-    //       allSitePage: { nodes: allPages },
-    //     }) => {
-    //       return allPages.map(page => {
-    //         return { ...page }
-    //       })
-    //     },
-    //     serialize: ({ path, modifiedGmt }) => {
-    //       return {
-    //         url: path,
-    //         lastmod: modifiedGmt,
-    //       }
-    //     },
-    //   },
-    // },
+      options: {
+        query: `
+          {
+            allSitePage {
+              nodes {
+                path
+              }
+            }
+          }
+        `,
+        resolveSiteUrl: () => siteUrl,
+        resolvePages: ({
+          allSitePage: { nodes: allPages },
+        }) => {
+          return allPages.map(page => {
+            return { ...page }
+          })
+        },
+        serialize: ({ path, modifiedGmt }) => {
+          return {
+            url: path,
+            lastmod: modifiedGmt,
+          }
+        },
+      },
+    },
     {
       resolve: `gatsby-plugin-robots-txt`,
       options: {
