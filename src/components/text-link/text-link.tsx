@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
-import { OutboundLink } from "gatsby-plugin-google-analytics"
+import { OutboundLink } from 'gatsby-plugin-google-gtag'
 
 import {
   formatClassList,
