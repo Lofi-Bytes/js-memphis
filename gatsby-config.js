@@ -78,7 +78,7 @@ module.exports = {
       resolve: `gatsby-plugin-robots-txt`,
       options: {
         host: `https://jillian.dev`,
-        sitemap: `https://jillian.dev/sitemap.xml`,
+        sitemap: `https://jillian.dev/sitemap/sitemap-index.xml`,
         policy: [{ userAgent: `*`, allow: `/` }]
       }
     },
