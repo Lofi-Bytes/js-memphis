@@ -47,43 +47,14 @@ module.exports = {
     //   },
     // },
     `gatsby-plugin-sitemap`,
-    // {
-    //   resolve: `gatsby-plugin-robots-txt`,
-    //   options: {
-    //     host: `https://jillian.dev`,
-    //     sitemap: `https://jillian.dev/sitemap.xml`,
-    //     policy: [{ userAgent: `*`, allow: `/` }]
-    //   }
-    // },
-    // {
-    //   resolve: `gatsby-plugin-google-analytics`,
-    //   options: {
-    //     // The property ID; the tracking code won't be generated without it
-    //     trackingId: process.env.GA_TRACKING_ID,
-    //     // Defines where to place the tracking script - `true` in the head and `false` in the body
-    //     head: false,
-    //     // Setting this parameter is optional
-    //     anonymize: true,
-    //     // Setting this parameter is also optional
-    //     respectDNT: true,
-    //     // Avoids sending pageview hits from custom paths
-    //     // exclude: [`/preview/**`, `/do-not-track/me/too/`],
-    //     // Enables Google Optimize using your container Id
-    //     // optimizeId: `YOUR_GOOGLE_OPTIMIZE_TRACKING_ID`,
-    //     // Enables Google Optimize Experiment ID
-    //     // experimentId: `YOUR_GOOGLE_EXPERIMENT_ID`,
-    //     // Set Variation ID. 0 for original 1,2,3....
-    //     // variationId: `YOUR_GOOGLE_OPTIMIZE_VARIATION_ID`,
-    //     // Defers execution of google analytics script after page load
-    //     defer: false,
-    //     // Any additional optional fields
-    //     // sampleRate: 5,
-    //     // siteSpeedSampleRate: 10,
-    //     cookieDomain: "jillian.dev",
-    //     // defaults to false
-    //     enableWebVitalsTracking: true
-    //   },
-    // },
+    {
+      resolve: `gatsby-plugin-robots-txt`,
+      options: {
+        host: `https://jillian.dev`,
+        sitemap: `https://jillian.dev/sitemap.xml`,
+        policy: [{ userAgent: `*`, allow: `/` }]
+      }
+    },
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
@@ -109,7 +80,7 @@ module.exports = {
           // Avoids sending pageview hits from custom paths
           // exclude: ["/preview/**", "/do-not-track/me/too/"],
           // Defaults to https://www.googletagmanager.com
-          origin: "jillian.dev",
+          // origin: "",
         },
       },
     },
