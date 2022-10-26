@@ -46,7 +46,7 @@ const Avatar = ({
   className,
   src
 }: AvatarProps) => {
-  console.log(src);
+  // console.log(src);
 
   return (
     <div
