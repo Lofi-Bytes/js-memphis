@@ -11,15 +11,6 @@ import {
 } from './icons'
 
 
-export type TextInputProps = {
-  label: string,
-  errors: FieldErrors,
-  errorMessage: object,
-  formState: FormStateProxy,
-  handleChange: Function,
-  register: RegisterOptions
-}
-
 const FIELD_BASE = formatClassList([
   'bg-stone-200',
   'block',
@@ -71,13 +62,21 @@ const LABEL = formatClassList([
   'tracking-wider'
 ])
 
+export type TextInputProps = {
+  errorMessage: object,
+  errors: FieldErrors,
+  handleChange: Function,
+  label: string,
+  touchedFields: object
+}
+
 const TextInput = ({
-  label,
-  errors,
   errorMessage,
-  formState,
+  errors,
   handleChange,
-  register
+  label,
+  touchedFields,
+  ...props
 }: TextInputProps) => {
   label = label.toLowerCase()
 
@@ -86,8 +85,9 @@ const TextInput = ({
       <span className={LABEL}>{label.charAt(0).toUpperCase() + label.slice(1)}</span>
       <div className="relative">
         <input
+          {...props}
           className={
-            !JSON.stringify(formState.touched[label]) // field is pristine
+            !JSON.stringify(touchedFields[label]) // field is pristine
               ? FIELD
               : errors[label]
                 ? FIELD_ERROR
@@ -98,10 +98,9 @@ const TextInput = ({
           type="text"
           name={label}
           onChange={() => handleChange}
-          ref={register}
         />
         {
-          !JSON.stringify(formState.touched[label]) // field is pristine
+          !JSON.stringify(touchedFields[label]) // field is pristine
             ? <FieldEmptyIcon className="top-1/4" />
             : errors[label]
               ? <FieldErrorIcon className="top-1/4" />

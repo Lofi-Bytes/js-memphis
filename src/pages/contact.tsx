@@ -23,11 +23,14 @@ const ContactPage = ({
   location
 }: PageProps) => {
   const {
-    register,
-    handleSubmit,
-    formState,
-    errors,
     clearErrors,
+    formState: {
+      errors,
+      isSubmitting,
+      touchedFields
+    },
+    handleSubmit,
+    register,
     reset
   } = useForm({
     mode: 'onBlur'
@@ -123,7 +126,7 @@ const ContactPage = ({
                         })}
                         aria-required="true"
                         className={
-                          !JSON.stringify(formState.touched.name) // field is pristine
+                          !JSON.stringify(touchedFields.name) // field is pristine
                           ?
                             "mt-1 block pl-3 pr-10 border-0 border-l-4 border-purple-300 focus:ring-0 focus:border-fuchsia-500 bg-stone-200 rounded-lg text-stone-600 text-lg w-full shadow-md"
                           :
@@ -146,7 +149,7 @@ const ContactPage = ({
                         type="text"
                       />
                       {
-                        !JSON.stringify(formState.touched.name) // field is pristine
+                        !JSON.stringify(touchedFields.name) // field is pristine
                           ?
                             <div className="absolute w-4 right-4 top-1/4"></div>
                           :
@@ -221,7 +224,7 @@ const ContactPage = ({
                         })}
                         aria-required="true"
                         className={
-                          !JSON.stringify(formState.touched.email) // field is pristine
+                          !JSON.stringify(touchedFields.email) // field is pristine
                           ?
                             "mt-1 block pl-3 pr-10 border-0 border-l-4 border-purple-300 focus:ring-0 focus:border-fuchsia-500 bg-stone-200 rounded-lg text-stone-600 text-lg w-full shadow-md"
                           :
@@ -239,7 +242,7 @@ const ContactPage = ({
                         type="email"
                       />
                       {
-                        !JSON.stringify(formState.touched.email) // field is pristine
+                        !JSON.stringify(touchedFields.email) // field is pristine
                           ?
                             <div className="w-4"></div>
                           :
@@ -304,7 +307,7 @@ const ContactPage = ({
                         })}
                         aria-required="true"
                         className={
-                          !JSON.stringify(formState.touched.message) // field is pristine
+                          !JSON.stringify(touchedFields.message) // field is pristine
                           ?
                             "mt-1 block flex-grow pl-3 pr-10 border-0 border-l-4 border-purple-300 focus:ring-0 focus:border-fuchsia-500 bg-stone-200 rounded-lg text-stone-600 text-lg w-full shadow-md"
                           :
@@ -326,7 +329,7 @@ const ContactPage = ({
                         rows={4}
                       />
                       {
-                        !JSON.stringify(formState.touched.message) // field is pristine
+                        !JSON.stringify(touchedFields.message) // field is pristine
                           ?
                             <div className="w-4"></div>
                           :
@@ -397,7 +400,7 @@ const ContactPage = ({
                     role="button"
                     title="Submit"
                     type="submit"
-                    disabled={formState.isSubmitting}
+                    disabled={isSubmitting}
                   >
                     Get in touch
                   </Button>
