@@ -116,6 +116,12 @@ const ContactPage = ({
                     <span className="text-sm tracking-wider text-stone-600">Name</span>
                     <div className="relative">
                       <input
+                        {...register('name', {
+                          required: true,
+                          minLength: 2,
+                          maxLength: 200
+                        })}
+                        aria-required="true"
                         className={
                           !JSON.stringify(formState.touched.name) // field is pristine
                           ?
@@ -135,20 +141,9 @@ const ContactPage = ({
                                       :
                                         "mt-1 block pl-3 pr-10 border-0 border-l-4 border-green-300 focus:ring-0 focus:border-green-500 bg-stone-200 rounded-lg text-stone-600 text-lg w-full shadow-md"
                         }
-                        aria-required="true"
+                        onChange={handleChange}
                         placeholder=""
                         type="text"
-                        name="name"
-                        onChange={handleChange}
-                        ref={
-                          register(
-                            {
-                              required: true,
-                              minLength: 2,
-                              maxLength: 200
-                            }
-                          )
-                        }
                       />
                       {
                         !JSON.stringify(formState.touched.name) // field is pristine
@@ -220,6 +215,11 @@ const ContactPage = ({
                     <span className="text-sm tracking-wider text-stone-600">Email</span>
                     <div className="relative">
                       <input
+                        {...register('email', {
+                          required: true,
+                          pattern: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+                        })}
+                        aria-required="true"
                         className={
                           !JSON.stringify(formState.touched.email) // field is pristine
                           ?
@@ -235,18 +235,8 @@ const ContactPage = ({
                                   :
                                     "mt-1 block pl-3 pr-10 border-0 border-l-4 border-green-300 focus:ring-0 focus:border-green-500 bg-stone-200 rounded-lg text-stone-600 text-lg w-full shadow-md"
                         }
-                        aria-required="true"
-                        type="email"
-                        name="email"
                         onChange={handleChange}
-                        ref={
-                          register(
-                            {
-                              required: true,
-                              pattern: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-                            }
-                          )
-                        }
+                        type="email"
                       />
                       {
                         !JSON.stringify(formState.touched.email) // field is pristine
@@ -307,6 +297,12 @@ const ContactPage = ({
                     <span className="text-sm tracking-wider text-stone-600">Message</span>
                     <div className="relative">
                       <textarea
+                        {...register('message', {
+                          required: true,
+                          minLength: 15,
+                          maxLength: 3000
+                        })}
+                        aria-required="true"
                         className={
                           !JSON.stringify(formState.touched.message) // field is pristine
                           ?
@@ -326,19 +322,8 @@ const ContactPage = ({
                                     :
                                       "mt-1 block flex-grow pl-3 pr-10 border-0 border-l-4 border-green-300 focus:ring-0 focus:border-green-500 bg-stone-200 rounded-lg text-stone-600 text-lg w-full shadow-md"
                         }
-                        aria-required="true"
-                        rows={4}
-                        name="message"
                         onChange={handleChange}
-                        ref={
-                          register(
-                            {
-                              required: true,
-                              minLength: 15,
-                              maxLength: 3000
-                            }
-                          )
-                        }
+                        rows={4}
                       />
                       {
                         !JSON.stringify(formState.touched.message) // field is pristine
@@ -423,7 +408,7 @@ const ContactPage = ({
         </Section>
       </Main>
     </Layout>
-  )
+  );
 }
 
 export default ContactPage

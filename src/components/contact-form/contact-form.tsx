@@ -152,7 +152,7 @@ const ContactForm = ({}: React.ReactNode) => {
         </form>
       }
     </React.Fragment>
-  )
+  );
 }
 
 export default ContactForm
