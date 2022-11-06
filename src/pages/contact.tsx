@@ -15,6 +15,11 @@ import SEO from '../components/seo'
 import SuccessMessage from '../components/contact-form/success-message'
 
 
+/**
+ * This component exists to render a pure HTML form during build time
+ * so that Netlify will recognize that the form exists.
+ */
+
 type PageProps = {
   location: Location
 }

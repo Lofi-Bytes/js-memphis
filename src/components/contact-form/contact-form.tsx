@@ -22,7 +22,6 @@ export type ContactFormProps = {
 
 const ContactForm = ({}: React.ReactNode) => {
   const {
-    clearErrors,
     formState: {
       errors,
       isSubmitting,
@@ -42,14 +41,12 @@ const ContactForm = ({}: React.ReactNode) => {
     [e.target.name]: e.target.value
   })}
   const onSubmit = (data, e) => {
-    // JSON.stringify(data)
     e.preventDefault()
-    // const form = e.target
+    console.log(data)
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({
-        // 'form-name': form.getAttribute('name'),
         'form-name': 'contact',
         ...state,
       }),

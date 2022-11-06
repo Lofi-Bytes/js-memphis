@@ -1,8 +1,14 @@
 import * as React from 'react'
 
-import { RegisterOptions, FieldErrors, FormStateProxy } from 'react-hook-form'
+import {
+  FieldErrors,
+  UseFormRegister
+} from 'react-hook-form'
 
-import { formatClassList, joinStrings } from '../../utils/utils'
+import {
+  formatClassList,
+  joinStrings
+} from '../../utils/utils'
 
 import {
   FieldEmptyIcon,
@@ -62,6 +68,10 @@ const LABEL = formatClassList([
   'tracking-wider'
 ])
 
+interface IFormValues {
+  "First Name": string;
+}
+
 export type TextInputProps = {
   errorMessage: object,
   errors: FieldErrors,
@@ -70,14 +80,14 @@ export type TextInputProps = {
   touchedFields: object
 }
 
-const TextInput = ({
+const TextInput = React.forwardRef<HTMLInputElement, TextInputProps>(({
   errorMessage,
   errors,
   handleChange,
   label,
   touchedFields,
   ...props
-}: TextInputProps) => {
+}, ref) => {
   label = label.toLowerCase()
 
   return (
@@ -95,6 +105,7 @@ const TextInput = ({
           }
           aria-required="true"
           placeholder=""
+          ref={ref}
           type="text"
           name={label}
           onChange={() => handleChange}
@@ -128,6 +139,6 @@ const TextInput = ({
       </p>
     </label>
   )
-}
+})
 
 export default TextInput

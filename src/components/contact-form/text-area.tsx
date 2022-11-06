@@ -1,9 +1,7 @@
 import React from 'react'
 
 import {
-  RegisterOptions,
-  FieldErrors,
-  FormStateProxy
+  FieldErrors
 } from 'react-hook-form'
 
 import {
@@ -77,14 +75,14 @@ export type TextAreaProps = {
   touchedFields: object
 }
 
-const TextArea = ({
+const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>(({
   errorMessage,
   errors,
   handleChange,
   label,
   touchedFields,
   ...props
-}: TextAreaProps) => {
+}, ref) => {
   label = label.toLowerCase()
 
   return (
@@ -93,6 +91,7 @@ const TextArea = ({
       <div className="relative">
         <textarea
           {...props}
+          aria-required="true"
           className={
             !JSON.stringify(touchedFields[label]) // field is pristine
               ? FIELD
@@ -100,10 +99,10 @@ const TextArea = ({
                 ? FIELD_ERROR
                 : FIELD_VALID
           }
-          aria-required="true"
-          rows={4}
           name={label}
           onChange={() => handleChange}
+          ref={ref}
+          rows={4}
         />
         {
           !JSON.stringify(touchedFields[label]) // field is pristine
@@ -134,6 +133,6 @@ const TextArea = ({
       </p>
     </label>
   )
-}
+})
 
 export default TextArea
