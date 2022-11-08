@@ -42,7 +42,7 @@ const ContactForm = ({}: React.ReactNode) => {
   })}
   const onSubmit = (data, e) => {
     e.preventDefault()
-    console.log(data)
+    // console.log(data)
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
