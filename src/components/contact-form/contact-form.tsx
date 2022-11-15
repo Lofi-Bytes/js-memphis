@@ -36,20 +36,20 @@ const ContactForm = ({}: React.ReactNode) => {
   const [state, setState] = React.useState<object>({})
   const [successMsg, setSuccessMsg] = React.useState<boolean>(false)
   const [errorMsg, setErrorMsg] = React.useState<boolean>(false)
-  const handleChange = e => {setState({
+  const handleChange = event => {setState({
     ...state,
-    [e.target.name]: e.target.value
+    [event.target.name]: event.target.value
   })}
-  const onSubmit = (data, e) => {
-    e.preventDefault()
-    // console.log(data)
+  const onSubmit = (data, event) => {
+    event.preventDefault()
+    data = JSON.stringify(data)
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({
         'form-name': 'contact',
-        ...state,
-      }),
+        ...state
+      })
     })
       .then(response => {
         setSuccessMsg(true)

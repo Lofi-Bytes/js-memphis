@@ -43,15 +43,15 @@ const ContactPage = ({
   const [state, setState] = React.useState({})
   const [successMsg, setSuccessMsg] = React.useState(false)
   const [errorMsg, setErrorMsg] = React.useState(false)
-  const handleChange = e => {setState({
+  const handleChange = event => {setState({
     ...state,
-    [e.target.name]: e.target.value
+    [event.target.name]: event.target.value
 
   })}
-  const onSubmit = (data, e) => {
-    // JSON.stringify(data)
-    e.preventDefault()
-    // const form = e.target
+  const onSubmit = (data, event) => {
+    event.preventDefault()
+    data = JSON.stringify(data)
+    const form = event.target
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -179,9 +179,9 @@ const ContactPage = ({
                         (errors.name && errors.name.type === "minLength") ||
                         (errors.name && errors.name.type === "maxLength")
                         ?
-                          "error text-red-600 mt-1 opacity-100 transition-opacity duration-200 delay-75"
+                          "text-sm error text-red-600 mt-1 opacity-100 transition-opacity duration-200 delay-75"
                         :
-                          "error text-red-600 mt-1 opacity-0 transition-opacity duration-200 delay-75"
+                          "text-sm error text-red-600 mt-1 opacity-0 transition-opacity duration-200 delay-75"
                       }
                       aria-hidden={
                         (errors.name && errors.name.type === "required") ||
@@ -205,17 +205,17 @@ const ContactPage = ({
                       {
                         errors.name && errors.name.type === "required"
                           ?
-                            <p className="text-sm">Please enter your name.</p>
+                            <>Please enter your name.</>
                           :
                             errors.name && errors.name.type === "minLength"
                               ?
-                                <p className="text-sm">Your name must be at least 2 characters.</p>
+                                <>Your name must be at least 2 characters.</>
                               :
                                 errors.name && errors.name.type === "maxLength"
                                   ?
-                                    <p className="text-sm">Your name must be less than 100 characters.</p>
+                                    <>Your name must be less than 100 characters.</>
                                   :
-                                    <p className="text-sm">&nbsp;</p>
+                                    <>&nbsp;</>
                       }
                     </p>
                   </label>
@@ -267,9 +267,9 @@ const ContactPage = ({
                         (errors.email && errors.email.type === "required") ||
                         (errors.email && errors.email.type === "minLength")
                         ?
-                          "error text-red-600 mt-1 opacity-100 transition-opacity duration-200 delay-75"
+                          "text-sm error text-red-600 mt-1 opacity-100 transition-opacity duration-200 delay-75"
                         :
-                          "error text-red-600 mt-1 opacity-0 transition-opacity duration-200 delay-75"
+                          "text-sm error text-red-600 mt-1 opacity-0 transition-opacity duration-200 delay-75"
                       }
                       aria-hidden={
                         (errors.email && errors.email.type === "required") ||
@@ -291,13 +291,13 @@ const ContactPage = ({
                       {
                         errors.email && errors.email.type === "required"
                           ?
-                            <p className="text-sm">Please enter your email.</p>
+                            <>Please enter your email.</>
                           :
                             errors.email && errors.email.type === "pattern"
                               ?
-                                <p className="text-sm">Please enter a valid email address.</p>
+                                <>Please enter a valid email address.</>
                               :
-                                <p className="text-sm">&nbsp;</p>
+                                <>&nbsp;</>
                       }
                     </p>
                   </label>
@@ -359,9 +359,9 @@ const ContactPage = ({
                         (errors.message && errors.message.type === "minLength") ||
                         (errors.message && errors.message.type === "maxLength")
                         ?
-                          "error text-red-600 mt-1 opacity-100 transition-opacity duration-200 delay-75"
+                          "text-sm error text-red-600 mt-1 opacity-100 transition-opacity duration-200 delay-75"
                         :
-                          "error text-red-600 mt-1 opacity-0 transition-opacity duration-200 delay-75"
+                          "text-sm error text-red-600 mt-1 opacity-0 transition-opacity duration-200 delay-75"
                       }
                       aria-hidden={
                         (errors.message && errors.message.type === "required") ||
@@ -385,17 +385,17 @@ const ContactPage = ({
                       {
                         errors.message && errors.message.type === "required"
                           ?
-                            <p className="text-sm">Please enter a message.</p>
+                            <>Please enter a message.</>
                           :
                             errors.message && errors.message.type === "minLength"
                               ?
-                                <p className="text-sm">Your message must be at least 15 characters.</p>
+                                <>Your message must be at least 15 characters.</>
                               :
                                 errors.message && errors.message.type === "maxLength"
                                   ?
-                                    <p className="text-sm">Your message must be less than 3000 characters.</p>
+                                    <>Your message must be less than 3000 characters.</>
                                   :
-                                    <p className="text-sm">&nbsp;</p>
+                                    <>&nbsp;</>
                       }
                     </p>
                   </label>
