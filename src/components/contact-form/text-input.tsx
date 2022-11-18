@@ -1,8 +1,14 @@
 import * as React from 'react'
 
-import { RegisterOptions, FieldErrors, FormStateProxy } from 'react-hook-form'
+import {
+  FieldErrors,
+  UseFormRegister
+} from 'react-hook-form'
 
-import { formatClassList, joinStrings } from '../../utils/utils'
+import {
+  formatClassList,
+  joinStrings
+} from '../../utils/utils'
 
 import {
   FieldEmptyIcon,
@@ -10,15 +16,6 @@ import {
   FieldValidIcon
 } from './icons'
 
-
-export type TextInputProps = {
-  label: string,
-  errors: FieldErrors,
-  errorMessage: object,
-  formState: FormStateProxy,
-  handleChange: Function,
-  register: RegisterOptions
-}
 
 const FIELD_BASE = formatClassList([
   'bg-stone-200',
@@ -71,14 +68,26 @@ const LABEL = formatClassList([
   'tracking-wider'
 ])
 
-const TextInput = ({
-  label,
-  errors,
+interface IFormValues {
+  "First Name": string;
+}
+
+export type TextInputProps = {
+  errorMessage: object,
+  errors: FieldErrors,
+  handleChange: Function,
+  label: string,
+  touchedFields: object
+}
+
+const TextInput = React.forwardRef<HTMLInputElement, TextInputProps>(({
   errorMessage,
-  formState,
+  errors,
   handleChange,
-  register
-}: TextInputProps) => {
+  label,
+  touchedFields,
+  ...props
+}, ref) => {
   label = label.toLowerCase()
 
   return (
@@ -86,8 +95,9 @@ const TextInput = ({
       <span className={LABEL}>{label.charAt(0).toUpperCase() + label.slice(1)}</span>
       <div className="relative">
         <input
+          {...props}
           className={
-            !JSON.stringify(formState.touched[label]) // field is pristine
+            !JSON.stringify(touchedFields[label]) // field is pristine
               ? FIELD
               : errors[label]
                 ? FIELD_ERROR
@@ -95,13 +105,13 @@ const TextInput = ({
           }
           aria-required="true"
           placeholder=""
+          ref={ref}
           type="text"
           name={label}
           onChange={() => handleChange}
-          ref={register}
         />
         {
-          !JSON.stringify(formState.touched[label]) // field is pristine
+          !JSON.stringify(touchedFields[label]) // field is pristine
             ? <FieldEmptyIcon className="top-1/4" />
             : errors[label]
               ? <FieldErrorIcon className="top-1/4" />
@@ -129,6 +139,6 @@ const TextInput = ({
       </p>
     </label>
   )
-}
+})
 
 export default TextInput

@@ -22,9 +22,11 @@ export type ContactFormProps = {
 
 const ContactForm = ({}: React.ReactNode) => {
   const {
-    clearErrors,
-    errors,
-    formState,
+    formState: {
+      errors,
+      isSubmitting,
+      touchedFields
+    },
     handleSubmit,
     register,
     reset
@@ -34,22 +36,20 @@ const ContactForm = ({}: React.ReactNode) => {
   const [state, setState] = React.useState<object>({})
   const [successMsg, setSuccessMsg] = React.useState<boolean>(false)
   const [errorMsg, setErrorMsg] = React.useState<boolean>(false)
-  const handleChange = e => {setState({
+  const handleChange = event => {setState({
     ...state,
-    [e.target.name]: e.target.value
+    [event.target.name]: event.target.value
   })}
-  const onSubmit = (data, e) => {
-    // JSON.stringify(data)
-    e.preventDefault()
-    // const form = e.target
+  const onSubmit = (data, event) => {
+    event.preventDefault()
+    data = JSON.stringify(data)
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({
-        // 'form-name': form.getAttribute('name'),
         'form-name': 'contact',
-        ...state,
-      }),
+        ...state
+      })
     })
       .then(response => {
         setSuccessMsg(true)
@@ -82,15 +82,12 @@ const ContactForm = ({}: React.ReactNode) => {
               value="contact"
             />
             <TextInput
-              label="name"
-              errors={errors}
-              formState={formState}
-              handleChange={handleChange}
-              register={register({
+              {...register('name', {
                 required: true,
                 minLength: 2,
                 maxLength: 200
               })}
+              errors={errors}
               errorMessage={
                 errors.name && errors.name.type === "required"
                   ? <>Please enter your name.</>
@@ -100,16 +97,16 @@ const ContactForm = ({}: React.ReactNode) => {
                       ? <>Your name must be less than 100 characters.</>
                       : <>&nbsp;</>
               }
+              handleChange={handleChange}
+              label="name"
+              touchedFields={touchedFields}
             />
             <TextInput
-              label="email"
-              errors={errors}
-              formState={formState}
-              handleChange={handleChange}
-              register={register({
+              {...register('email', {
                 required: true,
                 pattern: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
               })}
+              errors={errors}
               errorMessage={
                 errors.email && errors.email.type === "required"
                   ? <>Please enter your email.</>
@@ -117,17 +114,17 @@ const ContactForm = ({}: React.ReactNode) => {
                       ? <>Please enter a valid email address.</>
                         :<>&nbsp;</>
               }
+              handleChange={handleChange}
+              label="email"
+              touchedFields={touchedFields}
             />
             <TextArea
-              label="message"
-              errors={errors}
-              formState={formState}
-              handleChange={handleChange}
-              register={register({
+              {...register('message', {
                 required: true,
                 minLength: 15,
                 maxLength: 3000
               })}
+              errors={errors}
               errorMessage={
                 errors.message && errors.message.type === "required"
                   ? <>Please enter a message.</>
@@ -137,6 +134,9 @@ const ContactForm = ({}: React.ReactNode) => {
                       ? <>Your message must be less than 3000 characters.</>
                       : <>&nbsp;</>
               }
+              handleChange={handleChange}
+              label="message"
+              touchedFields={touchedFields}
             />
             <Button
               action="primary"
@@ -144,7 +144,7 @@ const ContactForm = ({}: React.ReactNode) => {
               title="Submit"
               type="submit"
               role="button"
-              disabled={formState.isSubmitting}
+              disabled={isSubmitting}
             >
               Get in touch
             </Button>
@@ -152,7 +152,7 @@ const ContactForm = ({}: React.ReactNode) => {
         </form>
       }
     </React.Fragment>
-  )
+  );
 }
 
 export default ContactForm

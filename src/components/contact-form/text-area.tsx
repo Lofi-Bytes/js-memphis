@@ -1,8 +1,13 @@
 import React from 'react'
 
-import { RegisterOptions, FieldErrors, FormStateProxy } from 'react-hook-form'
+import {
+  FieldErrors
+} from 'react-hook-form'
 
-import { formatClassList, joinStrings } from '../../utils/utils'
+import {
+  formatClassList,
+  joinStrings
+} from '../../utils/utils'
 
 import {
   FieldEmptyIcon,
@@ -10,15 +15,6 @@ import {
   FieldValidIcon
 } from './icons'
 
-
-export type TextAreaProps = {
-  label: string,
-  errors: FieldErrors,
-  errorMessage: object,
-  formState: FormStateProxy,
-  handleChange: Function,
-  register: RegisterOptions
-}
 
 const FIELD_BASE = formatClassList([
   'bg-stone-200',
@@ -71,14 +67,22 @@ const LABEL = formatClassList([
   'tracking-wider'
 ])
 
-const TextArea = ({
-  label,
-  errors,
+export type TextAreaProps = {
+  errorMessage: object,
+  errors: FieldErrors,
+  handleChange: Function,
+  label: string,
+  touchedFields: object
+}
+
+const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>(({
   errorMessage,
-  formState,
+  errors,
   handleChange,
-  register
-}: TextAreaProps) => {
+  label,
+  touchedFields,
+  ...props
+}, ref) => {
   label = label.toLowerCase()
 
   return (
@@ -86,22 +90,22 @@ const TextArea = ({
       <span className={LABEL}>{label.charAt(0).toUpperCase() + label.slice(1)}</span>
       <div className="relative">
         <textarea
+          {...props}
+          aria-required="true"
           className={
-            !JSON.stringify(formState.touched[label]) // field is pristine
+            !JSON.stringify(touchedFields[label]) // field is pristine
               ? FIELD
               : errors[label]
                 ? FIELD_ERROR
                 : FIELD_VALID
-
           }
-          aria-required="true"
-          rows={4}
           name={label}
           onChange={() => handleChange}
-          ref={register}
+          ref={ref}
+          rows={4}
         />
         {
-          !JSON.stringify(formState.touched[label]) // field is pristine
+          !JSON.stringify(touchedFields[label]) // field is pristine
             ? <FieldEmptyIcon className="top-2" />
             : errors[label]
               ? <FieldErrorIcon className="top-2" />
@@ -129,6 +133,6 @@ const TextArea = ({
       </p>
     </label>
   )
-}
+})
 
 export default TextArea

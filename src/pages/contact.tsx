@@ -15,6 +15,11 @@ import SEO from '../components/seo'
 import SuccessMessage from '../components/contact-form/success-message'
 
 
+/**
+ * This component exists to render a pure HTML form during build time
+ * so that Netlify will recognize that the form exists.
+ */
+
 type PageProps = {
   location: Location
 }
@@ -23,11 +28,14 @@ const ContactPage = ({
   location
 }: PageProps) => {
   const {
-    register,
-    handleSubmit,
-    formState,
-    errors,
     clearErrors,
+    formState: {
+      errors,
+      isSubmitting,
+      touchedFields
+    },
+    handleSubmit,
+    register,
     reset
   } = useForm({
     mode: 'onBlur'
@@ -35,15 +43,15 @@ const ContactPage = ({
   const [state, setState] = React.useState({})
   const [successMsg, setSuccessMsg] = React.useState(false)
   const [errorMsg, setErrorMsg] = React.useState(false)
-  const handleChange = e => {setState({
+  const handleChange = event => {setState({
     ...state,
-    [e.target.name]: e.target.value
+    [event.target.name]: event.target.value
 
   })}
-  const onSubmit = (data, e) => {
-    // JSON.stringify(data)
-    e.preventDefault()
-    // const form = e.target
+  const onSubmit = (data, event) => {
+    event.preventDefault()
+    data = JSON.stringify(data)
+    const form = event.target
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -116,8 +124,14 @@ const ContactPage = ({
                     <span className="text-sm tracking-wider text-stone-600">Name</span>
                     <div className="relative">
                       <input
+                        {...register('name', {
+                          required: true,
+                          minLength: 2,
+                          maxLength: 200
+                        })}
+                        aria-required="true"
                         className={
-                          !JSON.stringify(formState.touched.name) // field is pristine
+                          !JSON.stringify(touchedFields.name) // field is pristine
                           ?
                             "mt-1 block pl-3 pr-10 border-0 border-l-4 border-purple-300 focus:ring-0 focus:border-fuchsia-500 bg-stone-200 rounded-lg text-stone-600 text-lg w-full shadow-md"
                           :
@@ -135,23 +149,12 @@ const ContactPage = ({
                                       :
                                         "mt-1 block pl-3 pr-10 border-0 border-l-4 border-green-300 focus:ring-0 focus:border-green-500 bg-stone-200 rounded-lg text-stone-600 text-lg w-full shadow-md"
                         }
-                        aria-required="true"
+                        onChange={handleChange}
                         placeholder=""
                         type="text"
-                        name="name"
-                        onChange={handleChange}
-                        ref={
-                          register(
-                            {
-                              required: true,
-                              minLength: 2,
-                              maxLength: 200
-                            }
-                          )
-                        }
                       />
                       {
-                        !JSON.stringify(formState.touched.name) // field is pristine
+                        !JSON.stringify(touchedFields.name) // field is pristine
                           ?
                             <div className="absolute w-4 right-4 top-1/4"></div>
                           :
@@ -176,9 +179,9 @@ const ContactPage = ({
                         (errors.name && errors.name.type === "minLength") ||
                         (errors.name && errors.name.type === "maxLength")
                         ?
-                          "error text-red-600 mt-1 opacity-100 transition-opacity duration-200 delay-75"
+                          "text-sm error text-red-600 mt-1 opacity-100 transition-opacity duration-200 delay-75"
                         :
-                          "error text-red-600 mt-1 opacity-0 transition-opacity duration-200 delay-75"
+                          "text-sm error text-red-600 mt-1 opacity-0 transition-opacity duration-200 delay-75"
                       }
                       aria-hidden={
                         (errors.name && errors.name.type === "required") ||
@@ -202,17 +205,17 @@ const ContactPage = ({
                       {
                         errors.name && errors.name.type === "required"
                           ?
-                            <p className="text-sm">Please enter your name.</p>
+                            <>Please enter your name.</>
                           :
                             errors.name && errors.name.type === "minLength"
                               ?
-                                <p className="text-sm">Your name must be at least 2 characters.</p>
+                                <>Your name must be at least 2 characters.</>
                               :
                                 errors.name && errors.name.type === "maxLength"
                                   ?
-                                    <p className="text-sm">Your name must be less than 100 characters.</p>
+                                    <>Your name must be less than 100 characters.</>
                                   :
-                                    <p className="text-sm">&nbsp;</p>
+                                    <>&nbsp;</>
                       }
                     </p>
                   </label>
@@ -220,8 +223,13 @@ const ContactPage = ({
                     <span className="text-sm tracking-wider text-stone-600">Email</span>
                     <div className="relative">
                       <input
+                        {...register('email', {
+                          required: true,
+                          pattern: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+                        })}
+                        aria-required="true"
                         className={
-                          !JSON.stringify(formState.touched.email) // field is pristine
+                          !JSON.stringify(touchedFields.email) // field is pristine
                           ?
                             "mt-1 block pl-3 pr-10 border-0 border-l-4 border-purple-300 focus:ring-0 focus:border-fuchsia-500 bg-stone-200 rounded-lg text-stone-600 text-lg w-full shadow-md"
                           :
@@ -235,21 +243,11 @@ const ContactPage = ({
                                   :
                                     "mt-1 block pl-3 pr-10 border-0 border-l-4 border-green-300 focus:ring-0 focus:border-green-500 bg-stone-200 rounded-lg text-stone-600 text-lg w-full shadow-md"
                         }
-                        aria-required="true"
-                        type="email"
-                        name="email"
                         onChange={handleChange}
-                        ref={
-                          register(
-                            {
-                              required: true,
-                              pattern: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-                            }
-                          )
-                        }
+                        type="email"
                       />
                       {
-                        !JSON.stringify(formState.touched.email) // field is pristine
+                        !JSON.stringify(touchedFields.email) // field is pristine
                           ?
                             <div className="w-4"></div>
                           :
@@ -269,9 +267,9 @@ const ContactPage = ({
                         (errors.email && errors.email.type === "required") ||
                         (errors.email && errors.email.type === "minLength")
                         ?
-                          "error text-red-600 mt-1 opacity-100 transition-opacity duration-200 delay-75"
+                          "text-sm error text-red-600 mt-1 opacity-100 transition-opacity duration-200 delay-75"
                         :
-                          "error text-red-600 mt-1 opacity-0 transition-opacity duration-200 delay-75"
+                          "text-sm error text-red-600 mt-1 opacity-0 transition-opacity duration-200 delay-75"
                       }
                       aria-hidden={
                         (errors.email && errors.email.type === "required") ||
@@ -293,13 +291,13 @@ const ContactPage = ({
                       {
                         errors.email && errors.email.type === "required"
                           ?
-                            <p className="text-sm">Please enter your email.</p>
+                            <>Please enter your email.</>
                           :
                             errors.email && errors.email.type === "pattern"
                               ?
-                                <p className="text-sm">Please enter a valid email address.</p>
+                                <>Please enter a valid email address.</>
                               :
-                                <p className="text-sm">&nbsp;</p>
+                                <>&nbsp;</>
                       }
                     </p>
                   </label>
@@ -307,8 +305,14 @@ const ContactPage = ({
                     <span className="text-sm tracking-wider text-stone-600">Message</span>
                     <div className="relative">
                       <textarea
+                        {...register('message', {
+                          required: true,
+                          minLength: 15,
+                          maxLength: 3000
+                        })}
+                        aria-required="true"
                         className={
-                          !JSON.stringify(formState.touched.message) // field is pristine
+                          !JSON.stringify(touchedFields.message) // field is pristine
                           ?
                             "mt-1 block flex-grow pl-3 pr-10 border-0 border-l-4 border-purple-300 focus:ring-0 focus:border-fuchsia-500 bg-stone-200 rounded-lg text-stone-600 text-lg w-full shadow-md"
                           :
@@ -326,22 +330,11 @@ const ContactPage = ({
                                     :
                                       "mt-1 block flex-grow pl-3 pr-10 border-0 border-l-4 border-green-300 focus:ring-0 focus:border-green-500 bg-stone-200 rounded-lg text-stone-600 text-lg w-full shadow-md"
                         }
-                        aria-required="true"
-                        rows={4}
-                        name="message"
                         onChange={handleChange}
-                        ref={
-                          register(
-                            {
-                              required: true,
-                              minLength: 15,
-                              maxLength: 3000
-                            }
-                          )
-                        }
+                        rows={4}
                       />
                       {
-                        !JSON.stringify(formState.touched.message) // field is pristine
+                        !JSON.stringify(touchedFields.message) // field is pristine
                           ?
                             <div className="w-4"></div>
                           :
@@ -366,9 +359,9 @@ const ContactPage = ({
                         (errors.message && errors.message.type === "minLength") ||
                         (errors.message && errors.message.type === "maxLength")
                         ?
-                          "error text-red-600 mt-1 opacity-100 transition-opacity duration-200 delay-75"
+                          "text-sm error text-red-600 mt-1 opacity-100 transition-opacity duration-200 delay-75"
                         :
-                          "error text-red-600 mt-1 opacity-0 transition-opacity duration-200 delay-75"
+                          "text-sm error text-red-600 mt-1 opacity-0 transition-opacity duration-200 delay-75"
                       }
                       aria-hidden={
                         (errors.message && errors.message.type === "required") ||
@@ -392,17 +385,17 @@ const ContactPage = ({
                       {
                         errors.message && errors.message.type === "required"
                           ?
-                            <p className="text-sm">Please enter a message.</p>
+                            <>Please enter a message.</>
                           :
                             errors.message && errors.message.type === "minLength"
                               ?
-                                <p className="text-sm">Your message must be at least 15 characters.</p>
+                                <>Your message must be at least 15 characters.</>
                               :
                                 errors.message && errors.message.type === "maxLength"
                                   ?
-                                    <p className="text-sm">Your message must be less than 3000 characters.</p>
+                                    <>Your message must be less than 3000 characters.</>
                                   :
-                                    <p className="text-sm">&nbsp;</p>
+                                    <>&nbsp;</>
                       }
                     </p>
                   </label>
@@ -412,7 +405,7 @@ const ContactPage = ({
                     role="button"
                     title="Submit"
                     type="submit"
-                    disabled={formState.isSubmitting}
+                    disabled={isSubmitting}
                   >
                     Get in touch
                   </Button>
@@ -423,7 +416,7 @@ const ContactPage = ({
         </Section>
       </Main>
     </Layout>
-  )
+  );
 }
 
 export default ContactPage
