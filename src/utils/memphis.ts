@@ -34,16 +34,16 @@ export const squareOutline = {
 }
 
 export const heart = {
-  bordered: true,
+  bordered: false,
   colors: [
     '#FB7185', // rose 400
     '#F472B6', // pink 400
   ],
   icon: true,
-  innerClassArray: ['inner-heart', `far`, `fa-heart`],
+  innerClassArray: ['inner-heart', `icon-heart-empty`],
   innerElementType: 'i',
-  max: 60,
-  min: 20,
+  max: 60*1.25,
+  min: 20*1.25,
   outerClassArray: ['outer-heart'],
   outerElementType: 'div'
 }
@@ -55,10 +55,10 @@ export const triangle = {
     '#38BDF8', // sky 400
   ],
   icon: true,
-  innerClassArray: ['inner-triangle', `fal`, `fa-triangle`],
+  innerClassArray: ['inner-triangle', `icon-triangle`],
   innerElementType: 'i',
-  max: 100,
-  min: 40,
+  max: 100*1.5,
+  min: 40*1.5,
   outerClassArray: ['outer-triangle'],
   outerElementType: 'div'
 }
@@ -70,10 +70,10 @@ export const bolt = {
     '#67E8F9', // cyan 300
   ],
   icon: true,
-  innerClassArray: ['inner-bolt', `fal`, `fa-bolt`],
+  innerClassArray: ['inner-bolt', `icon-bolt`],
   innerElementType: 'i',
-  max: 80,
-  min: 40,
+  max: 80*1.75,
+  min: 40*1.75,
   outerClassArray: ['outer-bolt'],
   outerElementType: 'div'
 }
@@ -81,13 +81,14 @@ export const bolt = {
 export const wave = {
   bordered: true,
   colors: [
+    '#FEF08A', // yellow 200
     '#1C1917' // warm stone 900
   ],
   icon: true,
-  innerClassArray: ['inner-wave', `fal`, `fa-water`],
+  innerClassArray: ['inner-wave', `icon-wave`],
   innerElementType: 'i',
-  max: 60,
-  min: 20,
+  max: 60*1.75,
+  min: 20*1.75,
   outerClassArray: ['outer-wave'],
   outerElementType: 'div'
 }
@@ -127,7 +128,10 @@ export const createShapeElement = ({
   const outerElement: HTMLElement = document.createElement(outerElementType)
   outerElement.classList.add(...outerClassArray)
   icon
-    ? outerElement.style.fontSize = size + 'px'
+    ? (
+      outerElement.style.width = size + 'px',
+      outerElement.style.height = size + 'px'
+    )
     : (
       outerElement.style.width = size + 'px',
       outerElement.style.height = size + 'px'

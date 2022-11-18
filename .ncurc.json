@@ -1,6 +1,5 @@
 {
   "reject": [
-    "@fortawesome/fontawesome-pro",
     "gatsby-image",
     "react",
     "react-dom",
