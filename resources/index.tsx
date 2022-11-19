@@ -1,5 +1,9 @@
 import React from 'react'
-import { useStaticQuery, graphql, Link } from 'gatsby'
+import {
+  useStaticQuery,
+  graphql
+} from 'gatsby'
+import { OutboundLink } from 'gatsby-plugin-google-gtag'
 
 import Jumbotron from '../../components/jumbotron'
 import Layout from '../../components/layout'
@@ -65,7 +69,7 @@ const ProjectsListPage = ({
                 const tags = edge.node.tags
                 return(
                   <React.Fragment key={`item-${index}`}>
-                    <a
+                    <OutboundLink
                       href={href}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -93,7 +97,7 @@ const ProjectsListPage = ({
                           })
                         }
                       </div>
-                    </a>
+                    </OutboundLink>
                   </React.Fragment>
                 )
               })

@@ -1,5 +1,9 @@
 import * as React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
+import {
+  useStaticQuery,
+  graphql
+} from 'gatsby'
+import { OutboundLink } from 'gatsby-plugin-google-gtag'
 
 import { StaticImage } from 'gatsby-plugin-image'
 
@@ -128,14 +132,14 @@ const MegaloTorusPage = ({
             className={ROW}
           >
             <div>
-              <a
+              <OutboundLink
                 href="https://www.facebook.com/MegaloTorus"
                 aria-label="MegaloTorus Facebook page"
                 title="MegaloTorus Facebook page"
                 className={ICONANCHOR}
               >
                 <i className="fa-brands fa-facebook"></i>
-              </a>
+              </OutboundLink>
             </div>
           </div>
 
