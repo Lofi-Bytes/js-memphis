@@ -222,7 +222,7 @@ const AboutPage = ({
           {/*
 
           <P className="mt-3">
-            As the core engineering lead for <TextLink to="https://www.northwesternmutual.com/" title="" outbound={true}>Northwestern Mutual's</TextLink> design system, Luna, I work with a talented team of engineers, designers, content strategists, product managers, and project managers. I spend a lot of my time planing, roadmapping and prioritizing to provide technical direction in-line with business goals.
+            As the core engineering lead for <TextLink to="https://www.northwesternmutual.com/" title="Northwestern Mutual" outbound={true}>Northwestern Mutual's</TextLink> design system, Luna, I work with a talented team of engineers, designers, content strategists, product managers, and project managers. I spend a lot of my time planing, roadmapping and prioritizing to provide technical direction in-line with business goals.
           </P>
 
           <P className="mt-3">
@@ -328,7 +328,7 @@ const AboutPage = ({
             <TextLink
               className="text-stone-600"
               outbound={true}
-              title=""
+              title="Northwestern Mutual"
               to="https://www.northwesternmutual.com/"
               type="p"
             >
@@ -347,11 +347,11 @@ const AboutPage = ({
           </P>
 
           <P className="mt-3">
-            Our solution was the creation of Community Contribution Libraries (CCLs). The Luna CCL development environment, which implements <TextLink to="https://storybook.js.org/" title="" outbound={true}>Storybook</TextLink>, is pleasant to work in. It increases developer velocity while reducing frustration. Luna CCLs also lower the collaboration barrier between designers and engineers.
+            One solution to this problem was the creation of Community Contribution Libraries (CCLs). The Luna CCL development environment, which implements <TextLink to="https://storybook.js.org/" title="Storybook" outbound={true}>Storybook</TextLink>, is pleasant to work in. It increases developer velocity while reducing frustration. Luna CCLs also lower the collaboration barrier between designers and engineers.
           </P>
 
           <P className="mt-3">
-            The Luna CCLs were also used to improve and implement better testing standards/practices. CCLs were built from the start to lower the effort required for engineers to implement tests and increase test coverage and variety; including real-time and regression testing for accessibility, components, and screens.
+            The Luna CCLs were also used to improve and implement better testing standards/practices. CCLs were built from the start to lower the effort required for engineers to implement tests and improve test coverage and variety; including real-time and regression testing for accessibility, components, and screens. Thereby increasing the confidence in the quality of the products we ship.
           </P>
 
           <P className="mt-3">
@@ -364,7 +364,7 @@ const AboutPage = ({
             <TextLink
               className="text-stone-600"
               outbound={true}
-              title=""
+              title="BSCS"
               to="https://bscs.org/"
               type="h3"
             >
@@ -378,7 +378,7 @@ const AboutPage = ({
             </P>
           </div>
           {/* <P className="mt-3">
-            Previously, I worked for a nonprofit organization, <TextLink to="https://bscs.org/" title="" outbound={true}>BSCS Science Learning</TextLink>, whose mission is to transform science teaching and learning through research-driven innovation.
+            Previously, I worked for a nonprofit organization, <TextLink to="https://bscs.org/" title="BSCS" outbound={true}>BSCS Science Learning</TextLink>, whose mission is to transform science teaching and learning through research-driven innovation.
           </P> */}
           {/* <P className="mt-4">
             At BSCS Science Learning, we operate on federal and private grants. The nature of this work requires our small team to build many websites and web apps every year. To keep up with demaind, we must ensure that our infrastructure is agile enough to meet the needs of a diverse range of projects while staying within budget, meeting strict deadlines, and reducing both the cost of ongoing maintenance and technical debt.
@@ -388,7 +388,7 @@ const AboutPage = ({
             During my time with BSCS, I established and grew an in-house software development team and modernized BSCS’s crumbling tech stack.
           </P>
           <P className="mt-4">
-            During my time with BSCS, I oversaw the adoption of innovative approaches to software and design such as <i className="text-pink-300 fas fa-heart" /> <TextLink to="https://www.invisionapp.com/inside-design/guide-to-design-systems/" title="" outbound={true}>design systems</TextLink>; <TextLink to="https://medium.com/omarelgabrys-blog/component-based-architecture-3c3c23c7e348" title="" outbound={true}>component based</TextLink>, <TextLink to="https://martinfowler.com/articles/serverless.html" title="" outbound={true}>serverless</TextLink>, <TextLink to="https://martinfowler.com/articles/microservices.html" title="" outbound={true}> and microservice</TextLink> architectures; and the beloved <i className="text-pink-300 fas fa-heart" /> <TextLink to="https://jamstack.org/" title="" outbound={true}>Jamstack</TextLink>.
+            During my time with BSCS, I oversaw the adoption of innovative approaches to software and design such as <i className="text-pink-300 fas fa-heart" /> <TextLink to="https://uxdesign.cc/everything-you-need-to-know-about-design-systems-54b109851969" title="Everything you need to know about design systems" outbound={true}>design systems</TextLink>; <TextLink to="https://medium.com/omarelgabrys-blog/component-based-architecture-3c3c23c7e348" title="component based architecture" outbound={true}>component based</TextLink>, <TextLink to="https://martinfowler.com/articles/serverless.html" title="serverless architecture" outbound={true}>serverless</TextLink>, <TextLink to="https://martinfowler.com/articles/microservices.html" title="microservices" outbound={true}> and microservice</TextLink> architectures; and the beloved <i className="text-pink-300 fas fa-heart" /> <TextLink to="https://jamstack.org/" title="Jamstack" outbound={true}>Jamstack</TextLink>.
           </P>
           <P className="mt-4">
             These innovations allowed my small team to keep pace with increasing demand. We were able to create BSCS's digital products with more efficiency and at a higher quality with lower product support costs.
@@ -418,23 +418,23 @@ const AboutPage = ({
           </P>
           <UL className="mt-4 list-disc ml-8 sm:ml-0">
             <li>
-              <TextLink to="https://beta.reactjs.org/" title="" outbound={true}>React</TextLink> + <TextLink to="https://www.typescriptlang.org/" title="" outbound={true}>TypeScript</TextLink> frontends (<TextLink to="https://www.gatsbyjs.com/" title="" outbound={true}>Gatsby</TextLink> / <TextLink to="https://nextjs.org/" title="" outbound={true}>Next.js</TextLink> / <TextLink to="https://tailwindcss.com/" title="" outbound={true}>Tailwind CSS</TextLink>)
+              <TextLink to="https://beta.reactjs.org/" title="ReactJS" outbound={true}>React</TextLink> + <TextLink to="https://www.typescriptlang.org/" title="TypeScript" outbound={true}>TypeScript</TextLink> frontends (<TextLink to="https://www.gatsbyjs.com/" title="GatsbyJS" outbound={true}>Gatsby</TextLink> / <TextLink to="https://nextjs.org/" title="NextJS" outbound={true}>Next.js</TextLink> / <TextLink to="https://tailwindcss.com/" title="Tailwind CSS" outbound={true}>Tailwind CSS</TextLink>)
             </li>
             <li>
-              <TextLink to="https://go.dev/" title="" outbound={true}>Golang</TextLink> microservices
+              <TextLink to="https://go.dev/" title="Golang" outbound={true}>Golang</TextLink> microservices
             </li>
             <li>
-              <TextLink to="https://fauna.com/" title="" outbound={true}>Fauna DB</TextLink> for persisting data
+              <TextLink to="https://fauna.com/" title="Fauna DB" outbound={true}>Fauna DB</TextLink> for persisting data
             </li>
             <li>
-              <TextLink to="https://www.docker.com/" title="" outbound={true}>Docker</TextLink>
+              <TextLink to="https://www.docker.com/" title="Docker" outbound={true}>Docker</TextLink>
             </li>
             <li>
-              <TextLink to="https://www.nginx.com/" title="" outbound={true}>Nginx</TextLink>
+              <TextLink to="https://www.nginx.com/" title="Nginx" outbound={true}>Nginx</TextLink>
             </li>
           </UL>
           <P className="mt-4">
-            Our design system, Caribou, used Gatsby and our component library was built in <TextLink to="https://storybook.js.org/" title="" outbound={true}>Storybook</TextLink>; components were published to NPM to make them readily consumable.
+            Our design system, Caribou, used Gatsby and our component library was built in <TextLink to="https://storybook.js.org/" title="Storybook" outbound={true}>Storybook</TextLink>; components were published to NPM to make them readily consumable.
           </P>
 
           <h3 className="mt-10 mb-2 text-stone-600 text-lg">Instructor; Astronomy and Physics</h3>
@@ -443,7 +443,7 @@ const AboutPage = ({
             <TextLink
               className="text-stone-600"
               outbound={true}
-              title=""
+              title="Pikes Peak Community College"
               to="https://www.ppcc.edu/"
               type="h3"
             >
@@ -467,8 +467,8 @@ const AboutPage = ({
             <TextLink
               className="text-stone-600"
               outbound={true}
-              title=""
-              to="https://www.ppcc.edu/"
+              title="University of Michigan"
+              to="https://www.umich.edu/"
               type="h3"
             >
               University of Michigan
@@ -495,7 +495,7 @@ const AboutPage = ({
             <TextLink
               className="text-stone-600"
               outbound={true}
-              title=""
+              title="University of Michigan"
               to="https://umich.edu/"
               type="h3"
             >
@@ -510,11 +510,11 @@ const AboutPage = ({
               <P className="font-serif italic">
                 <TextLink
                   to="https://en.wikipedia.org/wiki/Master_of_Science#United_States"
-                  title=""
+                  title="Master of Science"
                   outbound={true}
                 >M.S.</TextLink> <TextLink
                   to="https://clasp.engin.umich.edu/"
-                  title=""
+                  title="University of Michigan department of Climate and Space Sciences and Engineering"
                   outbound={true}
                 >Atmospheric and Space Science</TextLink>
               </P>
@@ -530,11 +530,11 @@ const AboutPage = ({
               <P className="font-serif italic">
                 <TextLink
                   to="https://en.wikipedia.org/wiki/Graduate_certificate#United_States"
-                  title=""
+                  title="Graduate Certificate"
                   outbound={true}
                 >GradCert</TextLink> <TextLink
                   to="https://micde.umich.edu/"
-                  title=""
+                  title="Michigan Institute for Computational Discovery and Engineering"
                   outbound={true}
                 >Computational Discovery and Engineering</TextLink>
               </P>
@@ -549,7 +549,7 @@ const AboutPage = ({
             <TextLink
               className="text-stone-600"
               to="https://www.colorado.edu/"
-              title=""
+              title="University of Colorado"
               outbound={true}
               type="h3"
             >
@@ -565,11 +565,11 @@ const AboutPage = ({
               <P className="font-serif italic">
                 <TextLink
                   to="https://en.wikipedia.org/wiki/Bachelor%27s_degree"
-                  title=""
+                  title="Bachelor of Arts"
                   outbound={true}
                 >B.A.</TextLink> <TextLink
                   to="https://www.colorado.edu/physics/"
-                  title=""
+                  title="University of Colorado department of Physics"
                   outbound={true}
                 >Physics</TextLink>
               </P>
@@ -585,11 +585,11 @@ const AboutPage = ({
               <P className="font-serif italic">
                 <TextLink
                   to="https://en.wikipedia.org/wiki/Bachelor%27s_degree"
-                  title=""
+                  title="Bachelor of Arts"
                   outbound={true}
                 >B.A.</TextLink> <TextLink
                   to="https://www.colorado.edu/aps/"
-                  title=""
+                  title="Univeresity of Colorado department of Astrophysical, Planetary, and Atmospheric Science"
                   outbound={true}
                 >Astrophysical, Planetary, and Atmospheric Science</TextLink>
               </P>
@@ -614,7 +614,7 @@ const AboutPage = ({
           <P className="text-sm">Jillian and her family.</P>
 
           <P className="mt-3">
-            In my free time I enjoy spending time with my beautiful family, creating visual and immersive art, adventuring in our van (<TextLink to="https://www.instagram.com/explore/tags/vanlife/?hl=en" title="" outbound={true}>#vanlife</TextLink>), practicing yoga, mountain biking, and I read a lot.
+            In my free time I enjoy spending time with my beautiful family, creating visual and immersive art, adventuring in our van (<TextLink to="https://www.instagram.com/explore/tags/vanlife/?hl=en" title="#vanlife" outbound={true}>#vanlife</TextLink>), practicing yoga, mountain biking, and I read a lot.
           </P>
           {/* <div
             className="w-full mx-auto mt-12 md:w-3/4"
