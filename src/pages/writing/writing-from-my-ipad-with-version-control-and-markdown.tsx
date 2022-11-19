@@ -94,7 +94,7 @@ const WritingFromMyIpadWithVersionControlAndMarkdown = ({
           </Button>
 
           <H3 className="mt-10">Motivation</H3>
-          <P className="mt-8">
+          <P className="mt-4">
             As a software developer, and someone who voice codes, I prefer to work in a command line / simple text editor environment when possible. <TextLink
               to="https://en.wikipedia.org/wiki/Graphical_user_interface"
               title=""
