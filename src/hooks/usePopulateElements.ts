@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import * as React from 'react'
 
 import {
   getDocumentHeight,
@@ -17,7 +17,7 @@ import {
 
 
 export default function usePopulateElements(setHeight, setWidth) {
-  useEffect(() => {
+  React.useEffect(() => {
     setTimeout(() => {
       // Initialize the solid squares
       for (let i = 0; i < 5; i++) {

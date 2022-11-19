@@ -1,0 +1,12 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>Copyright (C) 2022 by original authors @ fontello.com</metadata>
+<defs>
+<font id="fontello" horiz-adv-x="1000" >
+<font-face font-family="fontello" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<missing-glyph horiz-adv-x="1000" />
+<glyph glyph-name="wave" unicode="&#xe800;" d="M805 386c-42 0-63 29-79 50-16 20-24 30-41 30s-26-10-41-30c-16-21-37-50-79-50-42 0-63 29-79 50-16 20-24 30-41 30s-26-10-41-30c-16-21-37-50-79-50-42 0-63 29-79 50-16 20-24 30-41 30v48c41 0 63-29 79-50 15-20 23-30 41-30 17 0 25 10 41 30 16 21 36 50 79 50s63-29 79-50c15-20 23-30 41-30 17 0 25 10 41 30 16 21 36 50 79 50 41 0 63-29 79-50 15-20 23-30 41-30z" horiz-adv-x="1000" />
+</font>
+</defs>
+</svg>

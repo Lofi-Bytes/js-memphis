@@ -1,5 +1,7 @@
 import * as React from 'react'
 
+import { OutboundLink } from 'gatsby-plugin-google-gtag'
+
 import MobileNavigation from '../mobile-navigation'
 import FooterNavigation from '../footer-navigation'
 
@@ -33,7 +35,7 @@ const SOCIAL_ROW = formatClassList([
   'relative'
 ])
 
-const LINK = formatClassList([
+const ICONANCHOR = formatClassList([
   'active:text-pink-300',
   'duration-200',
   'focus:outline-none',
@@ -56,6 +58,11 @@ const ICON = formatClassList([
 const GITHUB = formatClassList([
   ICON,
   'fa-github'
+])
+
+const MASTODON = formatClassList([
+  ICON,
+  'fa-mastodon'
 ])
 
 const TWITTER = formatClassList([
@@ -118,54 +125,64 @@ const Footer = ({
       >
         <div className={SOCIAL_ROW}>
           <div>
-            <a
+            <OutboundLink
               href="https://github.com/lofi-bytes"
-              aria-label="Jillian's Github"
-              title="Jillian's Github"
-              className={LINK}
+              aria-label="Connect with me on Github"
+              title="Connect with me on Github"
+              className={ICONANCHOR}
             >
               <i className={GITHUB}></i>
-            </a>
+            </OutboundLink>
           </div>
           <div className="ml-6">
-            <a
+            <OutboundLink
+              href="https://hachyderm.io/web/@LofiBytes"
+              aria-label="Connect with me on Mastodon"
+              title="Connect with me on Mastodon"
+              className={ICONANCHOR}
+            >
+              <i className={MASTODON}></i>
+            </OutboundLink>
+          </div>
+          <div className="ml-6">
+            <OutboundLink
               href="https://twitter.com/LofiBytes/"
-              aria-label="Jillian's Twitter"
-              title="Jillian's Twitter"
-              className={LINK}
+              aria-label="Connect with me on Twitter"
+              title="Connect with me on Twitter"
+              className={ICONANCHOR}
             >
               <i className={TWITTER}></i>
-            </a>
+            </OutboundLink>
           </div>
           <div className="ml-6">
-            <a
+            <OutboundLink
               href="https://codepen.io/LofiBytes"
-              aria-label="Jillian's CodePen"
-              title="Jillian's CodePen"
-              className={LINK}
+              aria-label="Connect with me on CodePen"
+              title="Connect with me on CodePen"
+              className={ICONANCHOR}
             >
               <i className={CODE_PEN}></i>
-            </a>
+            </OutboundLink>
           </div>
           <div className="ml-6">
-            <a
+            <OutboundLink
               href="https://dev.to/lofibytes"
-              aria-label="Jillian's DEV Profile"
-              title="Jillian's DEV Profile"
-              className={LINK}
+              aria-label="Connect with me on DEV Profile"
+              title="Connect with me on DEV Profile"
+              className={ICONANCHOR}
             >
               <i className={DEV}></i>
-            </a>
+            </OutboundLink>
           </div>
           <div className="ml-6">
-            <a
+            <OutboundLink
               href="https://www.linkedin.com/in/jillianserenity/"
-              aria-label="Jillian's LinkedIn Profile"
-              title="Jillian's LinkedIn Profile"
-              className={LINK}
+              aria-label="Connect with me on LinkedIn Profile"
+              title="Connect with me on LinkedIn Profile"
+              className={ICONANCHOR}
             >
               <i className={LINKEDIN}></i>
-            </a>
+            </OutboundLink>
           </div>
         </div>
         <p className={COPYRIGHT}>

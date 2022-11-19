@@ -1,5 +1,7 @@
 import * as React from 'react'
 
+import { OutboundLink } from 'gatsby-plugin-google-gtag'
+
 import { formatClassList, joinStrings } from '../../utils/utils'
 
 
@@ -30,6 +32,40 @@ const ICONANCHOR = formatClassList([
   'focus:ring-sky-700'
 ])
 
+const ICON = formatClassList([
+  'fa-brands'
+])
+
+const GITHUB = formatClassList([
+  ICON,
+  'fa-github'
+])
+
+const MASTODON = formatClassList([
+  ICON,
+  'fa-mastodon'
+])
+
+const TWITTER = formatClassList([
+  ICON,
+  'fa-twitter'
+])
+
+const CODE_PEN = formatClassList([
+  ICON,
+  'fa-codepen'
+])
+
+const DEV = formatClassList([
+  ICON,
+  'fa-dev'
+])
+
+const LINKEDIN = formatClassList([
+  ICON,
+  'fa-linkedin'
+])
+
 const SocialIconRow = ({
   className
 }: SocialIconRowProps) => {
@@ -42,54 +78,64 @@ const SocialIconRow = ({
       }
     >
       <div>
-        <a
+        <OutboundLink
           href="https://github.com/lofi-bytes"
-          aria-label="Jillian's Github"
-          title="Jillian's Github"
+          aria-label="Connect with me on Github"
+          title="Connect with me on Github"
           className={ICONANCHOR}
         >
-          <i className="fa-brands fa-github"></i>
-        </a>
+          <i className={GITHUB}></i>
+        </OutboundLink>
       </div>
       <div className="ml-2">
-        <a
+        <OutboundLink
           href="https://twitter.com/LofiBytes/"
-          aria-label="Jillian's Twitter"
-          title="Jillian's Twitter"
+          aria-label="Connect with me on Mastodon"
+          title="Connect with me on Mastodon"
           className={ICONANCHOR}
         >
-          <i className="fa-brands fa-twitter"></i>
-        </a>
+          <i className={MASTODON}></i>
+        </OutboundLink>
       </div>
       <div className="ml-2">
-        <a
+        <OutboundLink
+          href="https://twitter.com/LofiBytes/"
+          aria-label="Connect with me on Twitter"
+          title="Connect with me on Twitter"
+          className={ICONANCHOR}
+        >
+          <i className={TWITTER}></i>
+        </OutboundLink>
+      </div>
+      <div className="ml-2">
+        <OutboundLink
           href="https://codepen.io/LofiBytes"
-          aria-label="Jillian's CodePen"
-          title="Jillian's CodePen"
+          aria-label="Connect with me on CodePen"
+          title="Connect with me on CodePen"
           className={ICONANCHOR}
         >
-          <i className="fa-brands fa-codepen"></i>
-        </a>
+          <i className={CODE_PEN}></i>
+        </OutboundLink>
       </div>
       <div className="ml-2">
-        <a
+        <OutboundLink
           href="https://dev.to/lofibytes"
-          aria-label="Jillian's DEV Profile"
-          title="Jillian's DEV Profile"
+          aria-label="Connect with me on DEV Profile"
+          title="Connect with me on DEV Profile"
           className={ICONANCHOR}
         >
-          <i className="fa-brands fa-dev"></i>
-        </a>
+          <i className={DEV}></i>
+        </OutboundLink>
       </div>
       <div className="ml-2">
-        <a
+        <OutboundLink
           href="https://www.linkedin.com/in/jillianserenity/"
-          aria-label="Jillian's LinkedIn Profile"
-          title="Jillian's LinkedIn Profile"
+          aria-label="Connect with me on LinkedIn Profile"
+          title="Connect with me on LinkedIn Profile"
           className={ICONANCHOR}
         >
-          <i className="fa-brands fa-linkedin"></i>
-        </a>
+          <i className={LINKEDIN}></i>
+        </OutboundLink>
       </div>
     </div>
   )

@@ -40,7 +40,7 @@ export const heart = {
     '#F472B6', // pink 400
   ],
   icon: true,
-  innerClassArray: ['inner-heart', `icon-heart-empty`],
+  innerClassArray: ['inner-heart', `fa-regular`, `fa-heart`],
   innerElementType: 'i',
   max: 60*1.25,
   min: 20*1.25,
@@ -55,7 +55,7 @@ export const triangle = {
     '#38BDF8', // sky 400
   ],
   icon: true,
-  innerClassArray: ['inner-triangle', `icon-triangle`],
+  innerClassArray: ['inner-triangle',`fa-light`, `fa-triangle`],
   innerElementType: 'i',
   max: 100*1.5,
   min: 40*1.5,
@@ -70,10 +70,10 @@ export const bolt = {
     '#67E8F9', // cyan 300
   ],
   icon: true,
-  innerClassArray: ['inner-bolt', `icon-bolt`],
+  innerClassArray: ['inner-bolt', `fa-light`, `fa-bolt-lightning`],
   innerElementType: 'i',
-  max: 80*1.75,
-  min: 40*1.75,
+  max: 80*1.25,
+  min: 40*1.25,
   outerClassArray: ['outer-bolt'],
   outerElementType: 'div'
 }

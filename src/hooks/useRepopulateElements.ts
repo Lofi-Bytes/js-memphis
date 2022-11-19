@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import * as React from 'react'
 
 import { removeElementsByClass } from '../utils/utils'
 
@@ -14,7 +14,7 @@ import {
 
 
 export default function usePopulateElements(height, width) {
-  useEffect(() => {
+  React.useEffect(() => {
     const removeElements = (populateElements) => {
       removeElementsByClass('outer-square-solid')
       removeElementsByClass('outer-square-outline')

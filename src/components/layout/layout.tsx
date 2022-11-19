@@ -13,7 +13,8 @@ import {
 import usePopulateElements from '../../hooks/usePopulateElements'
 import useRepopulateElements from '../../hooks/useRepopulateElements'
 
-import '../../fonts/fontello-a91bd58e/css/fontello.css'
+import '../../fonts/fontello-ffbd198d/css/fontello.css'
+import '@fortawesome/fontawesome-pro/css/all.min.css'
 import '@fontsource/lora/400-italic.css'
 
 
