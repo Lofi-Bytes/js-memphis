@@ -19,7 +19,7 @@ const NextButton = ({
 }: NextButtonProps) => {
   const postData = useStaticQuery(graphql`
     query NextQuery {
-      allPostsJson(sort: {fields: date, order: ASC}) {
+      allPostsJson(sort: {date: ASC}) {
         edges {
           node {
             path

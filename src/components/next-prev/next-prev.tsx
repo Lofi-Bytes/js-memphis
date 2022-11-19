@@ -21,7 +21,7 @@ const NextPrev = ({
 }: NextPrevProps) => {
   const postData = useStaticQuery(graphql`
     query NextPrevQuery {
-      allPostsJson(sort: {fields: date, order: ASC}) {
+      allPostsJson(sort: {date: ASC}) {
         edges {
           node {
             path

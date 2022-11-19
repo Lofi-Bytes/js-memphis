@@ -1,15 +1,5 @@
 {
   "reject": [
-    "gatsby-image",
-    "react",
-    "react-dom",
-    "@testing-library/jest-dom",
-    "@testing-library/react",
-    "@types/jest",
-    "@types/react-test-renderer",
-    "babel-jest",
-    "jest",
-    "loki",
-    "react-test-renderer"
+    "gatsby-image"
   ]
 }

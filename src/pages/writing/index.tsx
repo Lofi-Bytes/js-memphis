@@ -20,7 +20,7 @@ const WritingPostListPage = ({
 }: PageProps) => {
   const postListData = useStaticQuery(graphql`
     query WritingPostListNavigationQuery {
-      allPostsJson(sort: {fields: date, order: DESC}) {
+      allPostsJson(sort: {date: DESC}) {
         edges {
           node {
             title
