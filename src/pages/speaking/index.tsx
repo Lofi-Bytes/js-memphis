@@ -49,10 +49,10 @@ const SpeakingListPage = ({
             Speaking Engagements
             </span>
             <span className="hidden sm:inline-block">
-              &nbsp;&nbsp;<i className="text-4xl leading-relaxed fal fa-podium-star text-rose-300 md:text-5xl md:leading-loose lg:text-5xl lg:leading-relaxed" />
+              &nbsp;&nbsp;<i className="text-4xl leading-relaxed fa-light fa-podium-star text-rose-300 md:text-5xl md:leading-loose lg:text-5xl lg:leading-relaxed" />
             </span>
             <span className="block mt-3 sm:hidden">
-              <i className="text-4xl fal fa-podium-star text-rose-300" />
+              <i className="text-4xl fa-light fa-podium-star text-rose-300" />
             </span>
           </>
         }

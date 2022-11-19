@@ -27,7 +27,7 @@ describe('Button', () => {
           title="Learn more about me"
           to="/about"
         >
-          Learn more about me&nbsp;&nbsp;<i className="far fa-chevron-right" />
+          Learn more about me&nbsp;&nbsp;<i className="fa-regular fa-chevron-right" />
         </Button>
       )
       .toJSON()
@@ -45,7 +45,7 @@ describe('Button', () => {
           title="Learn more about me"
           to="/about"
         >
-          Learn more about me&nbsp;&nbsp;<i className="far fa-chevron-right" />
+          Learn more about me&nbsp;&nbsp;<i className="fa-regular fa-chevron-right" />
         </Button>
       )
       .toJSON()
@@ -104,7 +104,7 @@ describe('Button', () => {
         title="Learn more about me"
         to="/about"
       >
-        Learn more about me&nbsp;&nbsp;<i className="far fa-chevron-right" />
+        Learn more about me&nbsp;&nbsp;<i className="fa-regular fa-chevron-right" />
       </Button>
     )
     const results = await axe(container)

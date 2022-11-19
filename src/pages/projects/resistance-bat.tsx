@@ -81,7 +81,7 @@ const ResistanceBatPage = ({
             className="mt-10 w-max"
             to="/projects"
           >
-            <i className="fas fa-arrow-left" />&nbsp;&nbsp;Back to project list
+            <i className="fa-solid fa-arrow-left" />&nbsp;&nbsp;Back to project list
           </Button>
 
           <StaticImage

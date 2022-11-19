@@ -50,7 +50,7 @@ const LINK = formatClassList([
 ])
 
 const ICON = formatClassList([
-  'fab'
+  'fa-brands'
 ])
 
 const GITHUB = formatClassList([

@@ -15,7 +15,7 @@ Jumbotron.args = {
   subtitle:
     <>
       <span className="hidden sm:inline-block">
-        <i className="text-pink-200 fal fa-narwhal" />&nbsp;&nbsp;
+        <i className="text-pink-200 fa-light fa-narwhal" />&nbsp;&nbsp;
       </span>
       <span
         className="text-transparent bg-gradient-to-r bg-clip-text from-pink-200 via-fuchsia-200 to-blue-200"
@@ -24,10 +24,10 @@ Jumbotron.args = {
         Bit-Casting Technomancer
       </span>
       <span className="hidden sm:inline-block">
-        &nbsp;&nbsp;<i className="text-blue-200 fal fa-alien-monster" />
+        &nbsp;&nbsp;<i className="text-blue-200 fa-light fa-alien-monster" />
       </span>
       <span className="block sm:hidden">
-        <i className="fal fa-narwhal text-rose-300" />&nbsp;&nbsp;<i className="text-teal-300 fal fa-alien-monster" />
+        <i className="fa-light fa-narwhal text-rose-300" />&nbsp;&nbsp;<i className="text-teal-300 fa-light fa-alien-monster" />
       </span>
     </>
 }

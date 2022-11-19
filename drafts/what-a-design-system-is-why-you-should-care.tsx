@@ -92,7 +92,7 @@ const WhatADesignSystemIsWhyYouShouldCare = ({
             title="Back to article list"
             to="/writing"
           >
-            <i className="fas fa-arrow-left" />&nbsp;&nbsp;Back to article list
+            <i className="fa-solid fa-arrow-left" />&nbsp;&nbsp;Back to article list
           </Button>
 
           <P className="mt-8">

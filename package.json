@@ -20,7 +20,7 @@
   },
   "dependencies": {
     "@fontsource/lora": "^4.5.12",
-    "@fortawesome/fontawesome-free": "^6.2.0",
+    "@fortawesome/fontawesome-pro": "^6.2.1",
     "babel-plugin-prismjs": "^2.1.0",
     "babel-preset-gatsby": "^2.24.0",
     "gatsby": "^4.24.7",

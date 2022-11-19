@@ -90,7 +90,7 @@ const WritingFromMyIpadWithVersionControlAndMarkdown = ({
             title="Back to article list"
             to="/writing"
           >
-            <i className="fas fa-arrow-left" />&nbsp;&nbsp;Back to article list
+            <i className="fa-solid fa-arrow-left" />&nbsp;&nbsp;Back to article list
           </Button>
 
           <H3 className="mt-10">Motivation</H3>
@@ -184,7 +184,7 @@ const WritingFromMyIpadWithVersionControlAndMarkdown = ({
               outbound={true}
             >
               markup language
-            </TextLink> to learn. Once you understand the basics of Markdown, it becomes faster to format your document inline as you write, rather than fiddling with the myriad of formatting buttons like one would find in MS Word or Google Docs.
+            </TextLink> to learn. Once you understand the basics of Markdown, it becomes fa-solidter to format your document inline as you write, rather than fiddling with the myriad of formatting buttons like one would find in MS Word or Google Docs.
           </P>
           <H3 className="mt-10">Markdown editors</H3>
           <P className="mt-4">

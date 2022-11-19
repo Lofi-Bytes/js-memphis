@@ -92,7 +92,7 @@ const BeautifulFormsJamstackIntroductionPage = ({
             className="mt-10 w-max"
             to="/writing"
           >
-            <i className="fas fa-arrow-left" />&nbsp;&nbsp;Back to article list
+            <i className="fa-solid fa-arrow-left" />&nbsp;&nbsp;Back to article list
           </Button>
 
           <Alert className="mt-8">

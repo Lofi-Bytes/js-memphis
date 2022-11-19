@@ -50,7 +50,7 @@ const NextButton = ({
                 to={nextPath}
                 key={`next-${index}`}
               >
-                {children}&nbsp;&nbsp;<i className="far fa-chevron-right" />
+                {children}&nbsp;&nbsp;<i className="fa-regular fa-chevron-right" />
               </Button>
             )
           }

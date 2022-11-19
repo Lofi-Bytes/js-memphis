@@ -48,7 +48,7 @@ const SocialIconRow = ({
           title="Jillian's Github"
           className={ICONANCHOR}
         >
-          <i className="fab fa-github"></i>
+          <i className="fa-brands fa-github"></i>
         </a>
       </div>
       <div className="ml-2">
@@ -58,7 +58,7 @@ const SocialIconRow = ({
           title="Jillian's Twitter"
           className={ICONANCHOR}
         >
-          <i className="fab fa-twitter"></i>
+          <i className="fa-brands fa-twitter"></i>
         </a>
       </div>
       <div className="ml-2">
@@ -68,7 +68,7 @@ const SocialIconRow = ({
           title="Jillian's CodePen"
           className={ICONANCHOR}
         >
-          <i className="fab fa-codepen"></i>
+          <i className="fa-brands fa-codepen"></i>
         </a>
       </div>
       <div className="ml-2">
@@ -78,7 +78,7 @@ const SocialIconRow = ({
           title="Jillian's DEV Profile"
           className={ICONANCHOR}
         >
-          <i className="fab fa-dev"></i>
+          <i className="fa-brands fa-dev"></i>
         </a>
       </div>
       <div className="ml-2">
@@ -88,7 +88,7 @@ const SocialIconRow = ({
           title="Jillian's LinkedIn Profile"
           className={ICONANCHOR}
         >
-          <i className="fab fa-linkedin"></i>
+          <i className="fa-brands fa-linkedin"></i>
         </a>
       </div>
     </div>

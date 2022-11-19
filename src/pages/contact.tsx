@@ -82,16 +82,16 @@ const ContactPage = ({
         title={
           <>
             <span className="hidden sm:inline-block">
-              <i className="text-4xl leading-relaxed fal fa-paper-plane text-stone-50 md:text-5xl md:leading-loose lg:text-5xl lg:leading-relaxed" />&nbsp;&nbsp;
+              <i className="text-4xl leading-relaxed fa-light fa-paper-plane text-stone-50 md:text-5xl md:leading-loose lg:text-5xl lg:leading-relaxed" />&nbsp;&nbsp;
             </span>
             <span className="text-5xl leading-relaxed js md:text-6xl md:leading-loose lg:text-7xl lg:leading-relaxed">
               Send Me a Message
             </span>
             <span className="hidden sm:inline-block">
-              &nbsp;&nbsp;<i className="text-4xl leading-relaxed fal fa-mailbox text-stone-50 md:text-5xl md:leading-loose lg:text-5xl lg:leading-relaxed" />
+              &nbsp;&nbsp;<i className="text-4xl leading-relaxed fa-light fa-mailbox text-stone-50 md:text-5xl md:leading-loose lg:text-5xl lg:leading-relaxed" />
             </span>
             <span className="block sm:hidden">
-              <i className="text-4xl fal fa-paper-plane text-stone-50" />&nbsp;&nbsp;<i className="text-4xl fal fa-mailbox text-stone-50" />
+              <i className="text-4xl fa-light fa-paper-plane text-stone-50" />&nbsp;&nbsp;<i className="text-4xl fa-light fa-mailbox text-stone-50" />
             </span>
           </>
         }
@@ -160,17 +160,17 @@ const ContactPage = ({
                           :
                             errors.name && errors.name.type === "required"
                               ?
-                                <i className="absolute w-4 text-2xl text-red-600 far fa-times right-4 top-1/4"></i>
+                                <i className="absolute w-4 text-2xl text-red-600 fa-regular fa-times right-4 top-1/4"></i>
                               :
                                 errors.name && errors.name.type === "minLength"
                                   ?
-                                    <i className="absolute w-4 text-2xl text-red-600 far fa-times right-4 top-1/4"></i>
+                                    <i className="absolute w-4 text-2xl text-red-600 fa-regular fa-times right-4 top-1/4"></i>
                                   :
                                     errors.name && errors.name.type === "maxLength"
                                     ?
-                                      <i className="absolute w-4 text-2xl text-red-600 far fa-times right-4 top-1/4"></i>
+                                      <i className="absolute w-4 text-2xl text-red-600 fa-regular fa-times right-4 top-1/4"></i>
                                     :
-                                      <i className="absolute w-4 text-2xl text-green-600 far fa-check right-4 top-1/4"></i>
+                                      <i className="absolute w-4 text-2xl text-green-600 fa-regular fa-check right-4 top-1/4"></i>
                       }
                     </div>
                     <p
@@ -253,13 +253,13 @@ const ContactPage = ({
                           :
                             errors.email && errors.email.type === "required"
                               ?
-                                <i className="absolute w-4 text-2xl text-red-600 far fa-times right-4 top-1/4"></i>
+                                <i className="absolute w-4 text-2xl text-red-600 fa-regular fa-times right-4 top-1/4"></i>
                               :
                                 errors.email && errors.email.type === "pattern"
                                   ?
-                                    <i className="absolute w-4 text-2xl text-red-600 far fa-times right-4 top-1/4"></i>
+                                    <i className="absolute w-4 text-2xl text-red-600 fa-regular fa-times right-4 top-1/4"></i>
                                   :
-                                    <i className="absolute w-4 text-2xl text-green-600 far fa-check right-4 top-1/4"></i>
+                                    <i className="absolute w-4 text-2xl text-green-600 fa-regular fa-check right-4 top-1/4"></i>
                       }
                     </div>
                     <p
@@ -340,17 +340,17 @@ const ContactPage = ({
                           :
                             errors.message && errors.message.type === "required"
                               ?
-                                <i className="absolute w-4 text-2xl text-red-600 far fa-times right-4 top-2"></i>
+                                <i className="absolute w-4 text-2xl text-red-600 fa-regular fa-times right-4 top-2"></i>
                               :
                                 errors.message && errors.message.type === "minLength"
                                   ?
-                                    <i className="absolute w-4 text-2xl text-red-600 far fa-times right-4 top-2"></i>
+                                    <i className="absolute w-4 text-2xl text-red-600 fa-regular fa-times right-4 top-2"></i>
                                   :
                                     errors.message && errors.message.type === "maxLength"
                                     ?
-                                      <i className="absolute w-4 text-2xl text-red-600 far fa-times right-4 top-2"></i>
+                                      <i className="absolute w-4 text-2xl text-red-600 fa-regular fa-times right-4 top-2"></i>
                                     :
-                                      <i className="absolute w-4 text-2xl text-green-600 far fa-check right-4 top-2"></i>
+                                      <i className="absolute w-4 text-2xl text-green-600 fa-regular fa-check right-4 top-2"></i>
                       }
                     </div>
                     <p

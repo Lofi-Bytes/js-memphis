@@ -24,7 +24,7 @@ const FIELD_EMPTY_ICON = formatClassList([
 const FIELD_ERROR_ICON = formatClassList([
   FIELD_ICON_BASE,
   'fa-times',
-  'far',
+  'fa-regular',
   'text-2xl',
   'text-red-600'
 ])
@@ -32,7 +32,7 @@ const FIELD_ERROR_ICON = formatClassList([
 const FIELD_VALID_ICON = formatClassList([
   FIELD_ICON_BASE,
   'fa-check',
-  'far',
+  'fa-regular',
   'text-2xl',
   'text-green-600'
 ])

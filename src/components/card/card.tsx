@@ -1,5 +1,6 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
+import { OutboundLink } from 'gatsby-plugin-google-gtag'
 
 import {
   formatClassList,
@@ -13,7 +14,7 @@ export type CardProps = {
   color: 'rose' | 'sky' | 'violet' | 'yellow',
   date: string,
   excerpt: string,
-  external: boolean,
+  outbound: boolean,
   published: boolean,
   tags: React.ReactNode,
   title: string,
@@ -87,7 +88,7 @@ const ICON = formatClassList([
   'ease-in-out',
   'border-b-4',
   'rounded-sm',
-  'fas',
+  'fa-solid',
   'fa-arrow-right',
   'pb-0.5'
 ])
@@ -380,9 +381,9 @@ const Card = ({
   className,
   color,
   date,
-  published,
   excerpt,
-  external,
+  outbound,
+  published,
   tags,
   title,
   to
@@ -437,11 +438,11 @@ const Card = ({
   return (
     <React.Fragment>
       {
-        external
+        outbound
           ?
             published
               ?
-                <a
+                <OutboundLink
                   className={
                     className
                       ? joinStrings(' ', formattedCard, className)
@@ -464,7 +465,7 @@ const Card = ({
                   <div className={ICON_ROW}>
                     <i className={formattedIcon} />
                   </div>
-                </a>
+                </OutboundLink>
               :
                 <div
                   className={

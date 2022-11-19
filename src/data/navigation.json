@@ -2,16 +2,16 @@
   {
     "title": "Writing",
     "path": "/writing/",
-    "iconClass": "fal fa-comment-edit"
+    "iconClass": "fa-light fa-comment-edit"
   },
   {
     "title": "Speaking",
     "path": "/speaking/",
-    "iconClass": "fal fa-podium-star"
+    "iconClass": "fa-light fa-podium-star"
   },
   {
     "title": "Projects",
     "path": "/projects/",
-    "iconClass": "fal fa-code-branch"
+    "iconClass": "fa-light fa-code-branch"
   }
 ]

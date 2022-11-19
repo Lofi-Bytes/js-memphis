@@ -29,7 +29,7 @@ const ICON_CONTAINER = formatClassList([
 
 const ICON = formatClassList([
   'fa-info-circle',
-  'far',
+  'fa-regular',
   'mt-0.5',
   'text-blue-900',
   'text-xl'
