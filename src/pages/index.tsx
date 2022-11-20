@@ -10,7 +10,7 @@ import { encode } from '../utils/utils'
 import Avatar from '../components/avatar'
 import Banner from '../components/banner/banner'
 import Button from '../components/button'
-import ContactForm from '../components/contact-form'
+// import ContactForm from '../components/contact-form'
 import ErrorMessage from '../components/contact-form/error-message'
 import Jumbotron from '../components/jumbotron'
 import Layout from '../components/layout'
@@ -185,21 +185,21 @@ const HomePage = ({
                           className={
                             !JSON.stringify(touchedFields.name) // field is pristine
                             ?
-                              "mt-1 block pl-3 pr-10 border-0 border-l-4 border-purple-300 focus:ring-0 focus:border-fuchsia-500 bg-stone-200 rounded-lg text-stone-600 text-lg w-full shadow-md"
+                              "mt-1 block pl-3 pr-10 border-0 border-l-4 border-purple-300 focus:ring-0 focus:border-fuchsia-500 caret-fuchsia-500 bg-stone-200 rounded-lg text-stone-600 text-lg w-full shadow-md"
                             :
                               errors.name && errors.name.type === "required"
                                 ?
-                                  "mt-1 block pl-3 pr-10 border-0 border-l-4 border-red-300 focus:ring-0 focus:border-red-500 bg-stone-200 rounded-lg text-stone-600 text-lg w-full shadow-md"
+                                  "mt-1 block pl-3 pr-10 border-0 border-l-4 border-red-300 focus:ring-0 focus:border-red-500 caret-red-500 bg-stone-200 rounded-lg text-stone-600 text-lg w-full shadow-md"
                                 :
                                   errors.name && errors.name.type === "minLength"
                                     ?
-                                      "mt-1 block pl-3 pr-10 border-0 border-l-4 border-red-300 focus:ring-0 focus:border-red-500 bg-stone-200 rounded-lg text-stone-600 text-lg w-full shadow-md"
+                                      "mt-1 block pl-3 pr-10 border-0 border-l-4 border-red-300 focus:ring-0 focus:border-red-500 caret-red-500 bg-stone-200 rounded-lg text-stone-600 text-lg w-full shadow-md"
                                     :
                                       errors.name && errors.name.type === "maxLength"
                                         ?
                                           "mt-1 block pl-3 pr-10 border-0 border-l-4 border-red-300 focus:ring-0 focus:border-red-500 bg-stone-200 rounded-lg text-stone-600 text-lg w-full shadow-md"
                                         :
-                                          "mt-1 block pl-3 pr-10 border-0 border-l-4 border-green-300 focus:ring-0 focus:border-green-500 bg-stone-200 rounded-lg text-stone-600 text-lg w-full shadow-md"
+                                          "mt-1 block pl-3 pr-10 border-0 border-l-4 border-green-300 focus:ring-0 focus:border-green-500 caret-green-500 bg-stone-200 rounded-lg text-stone-600 text-lg w-full shadow-md"
                           }
                           onChange={handleChange}
                           placeholder=""
@@ -283,17 +283,17 @@ const HomePage = ({
                           className={
                             !JSON.stringify(touchedFields.email) // field is pristine
                             ?
-                              "mt-1 block pl-3 pr-10 border-0 border-l-4 border-purple-300 focus:ring-0 focus:border-fuchsia-500 bg-stone-200 rounded-lg text-stone-600 text-lg w-full shadow-md"
+                              "mt-1 block pl-3 pr-10 border-0 border-l-4 border-purple-300 focus:ring-0 focus:border-fuchsia-500 caret-fuchsia-500 bg-stone-200 rounded-lg text-stone-600 text-lg w-full shadow-md"
                             :
                               errors.email && errors.email.type === "required"
                                 ?
-                                  "mt-1 block pl-3 pr-10 border-0 border-l-4 border-red-300 focus:ring-0 focus:border-red-500 bg-stone-200 rounded-lg text-stone-600 text-lg w-full shadow-md"
+                                  "mt-1 block pl-3 pr-10 border-0 border-l-4 border-red-300 focus:ring-0 focus:border-red-500 caret-red-500 bg-stone-200 rounded-lg text-stone-600 text-lg w-full shadow-md"
                                 :
                                   errors.email && errors.email.type === "pattern"
                                     ?
-                                      "mt-1 block pl-3 pr-10 border-0 border-l-4 border-red-300 focus:ring-0 focus:border-red-500 bg-stone-200 rounded-lg text-stone-600 text-lg w-full shadow-md"
+                                      "mt-1 block pl-3 pr-10 border-0 border-l-4 border-red-300 focus:ring-0 focus:border-red-500 caret-red-500 bg-stone-200 rounded-lg text-stone-600 text-lg w-full shadow-md"
                                     :
-                                      "mt-1 block pl-3 pr-10 border-0 border-l-4 border-green-300 focus:ring-0 focus:border-green-500 bg-stone-200 rounded-lg text-stone-600 text-lg w-full shadow-md"
+                                      "mt-1 block pl-3 pr-10 border-0 border-l-4 border-green-300 focus:ring-0 focus:border-green-500 caret-green-500 bg-stone-200 rounded-lg text-stone-600 text-lg w-full shadow-md"
                           }
                           onChange={handleChange}
                           type="email"
@@ -366,21 +366,21 @@ const HomePage = ({
                           className={
                             !JSON.stringify(touchedFields.message) // field is pristine
                             ?
-                              "mt-1 block flex-grow pl-3 pr-10 border-0 border-l-4 border-purple-300 focus:ring-0 focus:border-fuchsia-500 bg-stone-200 rounded-lg text-stone-600 text-lg w-full shadow-md"
+                              "mt-1 block flex-grow pl-3 pr-10 border-0 border-l-4 border-purple-300 focus:ring-0 focus:border-fuchsia-500 caret-fuchsia-500 bg-stone-200 rounded-lg text-stone-600 text-lg w-full shadow-md"
                             :
                               errors.message && errors.message.type === "required"
                                 ?
-                                  "mt-1 block flex-grow pl-3 pr-10 border-0 border-l-4 border-red-300 focus:ring-0 focus:border-red-500 bg-stone-200 rounded-lg text-stone-600 text-lg w-full shadow-md"
+                                  "mt-1 block flex-grow pl-3 pr-10 border-0 border-l-4 border-red-300 focus:ring-0 focus:border-red-500 caret-red-500 bg-stone-200 rounded-lg text-stone-600 text-lg w-full shadow-md"
                                 :
                                   errors.message && errors.message.type === "minLength"
                                     ?
-                                      "mt-1 block flex-grow pl-3 pr-10 border-0 border-l-4 border-red-300 focus:ring-0 focus:border-red-500 bg-stone-200 rounded-lg text-stone-600 text-lg w-full shadow-md"
+                                      "mt-1 block flex-grow pl-3 pr-10 border-0 border-l-4 border-red-300 focus:ring-0 focus:border-red-500 caret-red-500 bg-stone-200 rounded-lg text-stone-600 text-lg w-full shadow-md"
                                     :
                                       errors.message && errors.message.type === "maxLength"
                                       ?
-                                        "mt-1 block flex-grow pl-3 pr-10 border-0 border-l-4 border-red-300 focus:ring-0 focus:border-red-500 bg-stone-200 rounded-lg text-stone-600 text-lg w-full shadow-md"
+                                        "mt-1 block flex-grow pl-3 pr-10 border-0 border-l-4 border-red-300 focus:ring-0 focus:border-red-500 caret-red-500 bg-stone-200 rounded-lg text-stone-600 text-lg w-full shadow-md"
                                       :
-                                        "mt-1 block flex-grow pl-3 pr-10 border-0 border-l-4 border-green-300 focus:ring-0 focus:border-green-500 bg-stone-200 rounded-lg text-stone-600 text-lg w-full shadow-md"
+                                        "mt-1 block flex-grow pl-3 pr-10 border-0 border-l-4 border-green-300 focus:ring-0 focus:border-green-500 caret-green-500 bg-stone-200 rounded-lg text-stone-600 text-lg w-full shadow-md"
                           }
                           onChange={handleChange}
                           rows={4}

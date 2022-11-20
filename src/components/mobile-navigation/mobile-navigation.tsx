@@ -76,6 +76,10 @@ const LINK_ICON = formatClassList([
   'text-xl'
 ])
 
+const RAINBOWSHADOW = formatClassList([
+  'rainbow-shadow-mobile'
+])
+
 const MobileNavigation = ({
   className,
   location
@@ -114,21 +118,44 @@ const MobileNavigation = ({
           const regex = new RegExp(path, 'g')
 
           return(
-            <Link
-              className={LINK_GROUP}
-              key={`item-${index}`}
-              to={path}
-            >
-              {
-                location.pathname.match(regex)
-                ? <div className={LINK_INDICATOR_ACTIVE} />
-                : <div className={LINK_INDICATOR_INACTIVE} />
-              }
-              <div className={LINK_ICON_CONTAINER}>
-                <i className={formattedLinkIcon} />
-                <span className="mt-2 text-xs">{title}</span>
+          <>
+          {path === '/donate/'
+            ?
+              <div className={RAINBOWSHADOW} style={{ height: '95%' }}>
+                <Link
+                  className={LINK_GROUP}
+                  key={`item-${index}`}
+                  to={path}
+                >
+                  {
+                    location.pathname.match(regex)
+                    ? <div className={LINK_INDICATOR_ACTIVE} />
+                    : <div className={LINK_INDICATOR_INACTIVE} />
+                  }
+                  <div className={LINK_ICON_CONTAINER}>
+                    <i className={formattedLinkIcon} />
+                    <span className="mt-2 text-xs">{title}</span>
+                  </div>
+                </Link>
               </div>
-            </Link>
+            :
+              <Link
+                className={LINK_GROUP}
+                key={`item-${index}`}
+                to={path}
+              >
+                {
+                  location.pathname.match(regex)
+                  ? <div className={LINK_INDICATOR_ACTIVE} />
+                  : <div className={LINK_INDICATOR_INACTIVE} />
+                }
+                <div className={LINK_ICON_CONTAINER}>
+                  <i className={formattedLinkIcon} />
+                  <span className="mt-2 text-xs">{title}</span>
+                </div>
+              </Link>
+          }
+          </>
           )
         })
       }
