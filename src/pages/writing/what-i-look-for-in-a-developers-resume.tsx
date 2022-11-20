@@ -93,16 +93,14 @@ const WhatILookForADevelopersResumePage = ({
             <i className="fa-solid fa-arrow-left" />&nbsp;&nbsp;Back to article list
           </Button>
 
-          <H3 className="mt-10">?</H3>
-          <P className="mt-8">
+          <H3 className="mt-10">Introduction</H3>
+          <P className="mt-4">
+            I regularly see questions about how to write a good developer's resume pop up on social media. As a hiring manager at a large fintech company, I review <strong>a lot</strong> of resumes. Here, I aim to provide folks with some insight into what I look for in a candidate's resume and what I find makes a candidate stand out from the crowd.
             {/* <TextLink
               to=""
               title=""
               outbound={true}
             ></TextLink> */}
-          </P>
-          <P className="mt-4">
-
           </P>
 
           <H3 className="mt-10">?</H3>
