@@ -75,3 +75,6 @@ yarn.lock
 
 # Storybook
 storybook-static
+
+# Netlify functions
+.netlify

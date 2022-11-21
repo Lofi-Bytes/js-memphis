@@ -46,6 +46,10 @@ const LINK = formatClassList([
   'tracking-wider'
 ])
 
+const RAINBOWSHADOW = formatClassList([
+  'rainbow-shadow'
+])
+
 const FooterNavigation = ({
   className
 }: FooterNavigationProps) => {
@@ -75,13 +79,28 @@ const FooterNavigation = ({
           const path = edge.node.path
           const title = edge.node.title
           return(
-            <Link
-              className={LINK}
-              key={`item-${index}`}
-              to={path}
-            >
-              {title}
-            </Link>
+            <>
+              {path === '/donate/'
+                ?
+                  <div className={RAINBOWSHADOW}>
+                    <Link
+                      className={LINK}
+                      key={`item-${index}`}
+                      to={path}
+                    >
+                      {title}
+                    </Link>
+                  </div>
+                :
+                  <Link
+                    className={LINK}
+                    key={`item-${index}`}
+                    to={path}
+                  >
+                    {title}
+                  </Link>
+              }
+            </>
           )
         })
       }

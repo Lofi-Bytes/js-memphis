@@ -44,8 +44,8 @@ const NotFoundPage = ({
             alt="Jillian's avatar"
             src={image}
           />
-          <i className="absolute text-6xl fa-light fa-stop text-cyan-300 -right-3 -top-10 sm:-right-6 sm:-top-10 sm:text-7xl lg:-right-14 lg:-top-8 lg:text-8xl transofrm rotate-12 transform-gpu"></i>
-          <i className="absolute text-5xl rotate-45 fa-light fa-triangle text-emerald-300 -left-2 top-52 sm:-left-4 sm:top-48 sm:text-6xl lg:-left-6 lg:top-36 lg:text-7xl transofrm transform-gpu"></i>
+          <i className="absolute text-6xl fa-light fa-stop text-cyan-300 -right-3 -top-10 sm:-right-6 sm:-top-10 sm:text-7xl lg:-right-14 lg:-top-8 lg:text-8xl transofrm rotate-12 transform-gpu" />
+          <i className="absolute text-5xl rotate-45 fa-light fa-triangle text-emerald-300 -left-2 top-52 sm:-left-4 sm:top-48 sm:text-6xl lg:-left-6 lg:top-36 lg:text-7xl transofrm transform-gpu" />
           <h2 className="mt-10 text-2xl tracking-wide text-stone-700">Oops! The page you were looking for doesn't exist.
           </h2>
           <SocialIconRow className="mt-3" />

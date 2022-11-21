@@ -43,16 +43,16 @@ const ProjectsListPage = ({
         title={
           <>
             <span className="hidden sm:inline-block">
-              <i className="fa-light fa-gem text-fuchsia-300"></i>&nbsp;&nbsp;
+              <i className="fa-light fa-gem text-fuchsia-300" />&nbsp;&nbsp;
             </span>
             <span className="text-5xl leading-relaxed js md:text-6xl md:leading-loose lg:text-7xl lg:leading-relaxed">
             My Resources
             </span>
             <span className="hidden sm:inline-block">
-              &nbsp;&nbsp;<i className="fa-light fa-gem text-lime-300"></i>
+              &nbsp;&nbsp;<i className="fa-light fa-gem text-lime-300" />
             </span>
             <span className="block mt-3 sm:hidden">
-              <i className="fa-light fa-gem text-fuchsia-300"></i>&nbsp;&nbsp;<i className="fa-light fa-gem text-lime-300"></i>
+              <i className="fa-light fa-gem text-fuchsia-300" />&nbsp;&nbsp;<i className="fa-light fa-gem text-lime-300" />
             </span>
           </>
         }

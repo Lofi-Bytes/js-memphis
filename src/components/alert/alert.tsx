@@ -55,7 +55,7 @@ const Alert = ({
       }
     >
       <div className={ICON_CONTAINER}>
-        <i className={ICON}></i>
+        <i className={ICON} />
       </div>
       <p className={ALERT_MESSAGE}>{children}</p>
     </div>

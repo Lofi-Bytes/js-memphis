@@ -138,7 +138,7 @@ const MegaloTorusPage = ({
                 title="MegaloTorus Facebook page"
                 className={ICONANCHOR}
               >
-                <i className="fa-brands fa-facebook"></i>
+                <i className="fa-brands fa-facebook" />
               </OutboundLink>
             </div>
           </div>

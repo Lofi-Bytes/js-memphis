@@ -93,23 +93,21 @@ const Navigation = ({
             <div className="ml-6" key={`item-${index}`}>
             {path === '/donate/'
               ?
-                <>
-                  <div className={RAINBOWSHADOW}>
-                    <Link
-                      to={path}
-                      className={LINK}
-                    >
-                      {title}
-                    </Link>
-                    <div
-                      className={
-                        location.pathname.match(regex)
-                          ? LINK_BORDER_ACTIVE
-                          : LINK_BORDER
-                      }
-                    />
-                  </div>
-                </>
+                <div className={RAINBOWSHADOW}>
+                  <Link
+                    to={path}
+                    className={LINK}
+                  >
+                    {title}
+                  </Link>
+                  <div
+                    className={
+                      location.pathname.match(regex)
+                        ? LINK_BORDER_ACTIVE
+                        : LINK_BORDER
+                    }
+                  />
+                </div>
               :
                 <>
                   <Link
