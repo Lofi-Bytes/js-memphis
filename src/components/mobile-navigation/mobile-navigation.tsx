@@ -118,13 +118,28 @@ const MobileNavigation = ({
           const regex = new RegExp(path, 'g')
 
           return(
-          <>
-          {path === '/donate/'
-            ?
-              <div className={RAINBOWSHADOW} style={{ height: '95%' }}>
+          <React.Fragment key={`item-${index}`}>
+            {path === '/donate/'
+              ?
+                <div className={RAINBOWSHADOW} style={{ height: '95%' }}>
+                  <Link
+                    className={LINK_GROUP}
+                    to={path}
+                  >
+                    {
+                      location.pathname.match(regex)
+                      ? <div className={LINK_INDICATOR_ACTIVE} />
+                      : <div className={LINK_INDICATOR_INACTIVE} />
+                    }
+                    <div className={LINK_ICON_CONTAINER}>
+                      <i className={formattedLinkIcon} />
+                      <span className="mt-2 text-xs">{title}</span>
+                    </div>
+                  </Link>
+                </div>
+              :
                 <Link
                   className={LINK_GROUP}
-                  key={`item-${index}`}
                   to={path}
                 >
                   {
@@ -137,25 +152,8 @@ const MobileNavigation = ({
                     <span className="mt-2 text-xs">{title}</span>
                   </div>
                 </Link>
-              </div>
-            :
-              <Link
-                className={LINK_GROUP}
-                key={`item-${index}`}
-                to={path}
-              >
-                {
-                  location.pathname.match(regex)
-                  ? <div className={LINK_INDICATOR_ACTIVE} />
-                  : <div className={LINK_INDICATOR_INACTIVE} />
-                }
-                <div className={LINK_ICON_CONTAINER}>
-                  <i className={formattedLinkIcon} />
-                  <span className="mt-2 text-xs">{title}</span>
-                </div>
-              </Link>
-          }
-          </>
+            }
+          </React.Fragment>
           )
         })
       }
