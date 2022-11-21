@@ -61,10 +61,9 @@ const DonatePage = ({
               outbound={true}
             >exceeding $100,000</TextLink> - and is not covered by my health insurance.
           </P>
-          <P className="mt-4">
-            Please. For just the price of a Starbucks coffee, you can make a difference.
-          </P>
-          <Donate />
+          <Elements stripe={stripePromise}>
+            <Donate />
+          </Elements>
         </Section>
       </Main>
     </Layout>

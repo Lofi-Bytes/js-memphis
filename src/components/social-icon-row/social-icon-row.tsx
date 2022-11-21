@@ -84,7 +84,7 @@ const SocialIconRow = ({
           title="Connect with me on Github"
           className={ICONANCHOR}
         >
-          <i className={GITHUB}></i>
+          <i className={GITHUB} />
         </OutboundLink>
       </div>
       <div className="ml-2">
@@ -94,7 +94,7 @@ const SocialIconRow = ({
           title="Connect with me on Mastodon"
           className={ICONANCHOR}
         >
-          <i className={MASTODON}></i>
+          <i className={MASTODON} />
         </OutboundLink>
       </div>
       <div className="ml-2">
@@ -104,7 +104,7 @@ const SocialIconRow = ({
           title="Connect with me on Twitter"
           className={ICONANCHOR}
         >
-          <i className={TWITTER}></i>
+          <i className={TWITTER} />
         </OutboundLink>
       </div>
       <div className="ml-2">
@@ -114,7 +114,7 @@ const SocialIconRow = ({
           title="Connect with me on CodePen"
           className={ICONANCHOR}
         >
-          <i className={CODE_PEN}></i>
+          <i className={CODE_PEN} />
         </OutboundLink>
       </div>
       <div className="ml-2">
@@ -124,17 +124,17 @@ const SocialIconRow = ({
           title="Connect with me on DEV Profile"
           className={ICONANCHOR}
         >
-          <i className={DEV}></i>
+          <i className={DEV} />
         </OutboundLink>
       </div>
       <div className="ml-2">
         <OutboundLink
-          href="https://www.linkedin.com/in/jillianserenity/"
+          href="https://www.linkedin.com/in/lofibytes/"
           aria-label="Connect with me on LinkedIn Profile"
           title="Connect with me on LinkedIn Profile"
           className={ICONANCHOR}
         >
-          <i className={LINKEDIN}></i>
+          <i className={LINKEDIN} />
         </OutboundLink>
       </div>
     </div>
