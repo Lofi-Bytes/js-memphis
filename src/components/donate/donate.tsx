@@ -56,12 +56,18 @@ const Donate = ({
     })
 
     // send the request
-    const intent = await fetch("http://localhost:9999/.netlify/functions/payment-intent", {
-      method: "POST",
-      body: JSON.stringify({
-        amount: 500
-      })
-    })
+    const intent = await fetch(
+      `${process.env.ENV === "development"
+          ? "http://localhost:9999"
+          : ""
+        }/.netlify/functions/payment-intent`,
+      {
+        method: "POST",
+        body: JSON.stringify({
+          amount: 500
+        })
+      }
+    )
 
     {await intent.status !== 200
       ? setErrorMsg(true)
