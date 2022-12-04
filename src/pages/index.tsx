@@ -92,7 +92,7 @@ const HomePage = ({
           subtitle={
             <>
               <span className="hidden sm:inline-block">
-                <i className="text-pink-200 fa-light fa-narwhal" />&nbsp;&nbsp;
+                <i className="text-pink-200 fa-light fa-narwhal" aria-hidden="true" />&nbsp;&nbsp;
               </span>
               <span
                 className="text-transparent bg-gradient-to-r bg-clip-text from-pink-200 via-fuchsia-200 to-blue-200"
@@ -101,10 +101,10 @@ const HomePage = ({
                 Bit-Casting Technomancer
               </span>
               <span className="hidden sm:inline-block">
-                &nbsp;&nbsp;<i className="text-blue-200 fa-light fa-alien-monster" />
+                &nbsp;&nbsp;<i className="text-blue-200 fa-light fa-alien-monster" aria-hidden="true" />
               </span>
               <span className="block sm:hidden">
-                <i className="fa-light fa-narwhal text-rose-300" />&nbsp;&nbsp;<i className="text-teal-300 fa-light fa-alien-monster" />
+                <i className="fa-light fa-narwhal text-rose-300" aria-hidden="true" />&nbsp;&nbsp;<i className="text-teal-300 fa-light fa-alien-monster" aria-hidden="true" />
               </span>
             </>
           }
@@ -115,8 +115,8 @@ const HomePage = ({
               alt="Jillian's avatar"
               src={image}
             />
-            <i className="absolute text-6xl fa-light fa-stop text-cyan-300 -right-3 -top-10 sm:-right-6 sm:-top-10 sm:text-7xl lg:-right-14 lg:-top-8 lg:text-8xl transofrm rotate-12 transform-gpu" />
-            <i className="absolute text-5xl rotate-45 fa-light fa-triangle text-emerald-300 -left-2 top-52 sm:-left-4 sm:top-48 sm:text-6xl lg:-left-6 lg:top-36 lg:text-7xl transofrm transform-gpu" />
+            <i className="absolute text-6xl fa-light fa-stop text-cyan-300 -right-3 -top-10 sm:-right-6 sm:-top-10 sm:text-7xl lg:-right-14 lg:-top-8 lg:text-8xl transofrm rotate-12 transform-gpu" aria-hidden="true" />
+            <i className="absolute text-5xl rotate-45 fa-light fa-triangle text-emerald-300 -left-2 top-52 sm:-left-4 sm:top-48 sm:text-6xl lg:-left-6 lg:top-36 lg:text-7xl transofrm transform-gpu" aria-hidden="true" />
             <h2 className="mt-10 text-2xl tracking-wide text-stone-700">Design systems and developer experience engineer
             {/* <br /><span className="text-xl text-stone-600">🏳️‍🌈 she/her 🏳️‍⚧️</span> */}
             </h2>
@@ -148,7 +148,7 @@ const HomePage = ({
                 title="Learn more about me"
                 to="/about"
               >
-                Learn more about me&nbsp;&nbsp;<i className="fa-regular fa-chevron-right" />
+                Learn more about me&nbsp;&nbsp;<i className="fa-regular fa-chevron-right" aria-hidden="true" />
               </Button>
             </div>
           </Section>
@@ -212,17 +212,17 @@ const HomePage = ({
                             :
                               errors.name && errors.name.type === "required"
                                 ?
-                                  <i className="absolute w-4 text-2xl text-red-600 fa-regular fa-times right-4 top-1/4" />
+                                  <i className="absolute w-4 text-2xl text-red-600 fa-regular fa-times right-4 top-1/4" aria-hidden="true" />
                                 :
                                   errors.name && errors.name.type === "minLength"
                                     ?
-                                      <i className="absolute w-4 text-2xl text-red-600 fa-regular fa-times right-4 top-1/4" />
+                                      <i className="absolute w-4 text-2xl text-red-600 fa-regular fa-times right-4 top-1/4" aria-hidden="true" />
                                     :
                                       errors.name && errors.name.type === "maxLength"
                                       ?
-                                        <i className="absolute w-4 text-2xl text-red-600 fa-regular fa-times right-4 top-1/4" />
+                                        <i className="absolute w-4 text-2xl text-red-600 fa-regular fa-times right-4 top-1/4" aria-hidden="true" />
                                       :
-                                        <i className="absolute w-4 text-2xl text-green-600 fa-regular fa-check right-4 top-1/4" />
+                                        <i className="absolute w-4 text-2xl text-green-600 fa-regular fa-check right-4 top-1/4" aria-hidden="true" />
                         }
                       </div>
                       <p
@@ -305,13 +305,13 @@ const HomePage = ({
                             :
                               errors.email && errors.email.type === "required"
                                 ?
-                                  <i className="absolute w-4 text-2xl text-red-600 fa-regular fa-times right-4 top-1/4" />
+                                  <i className="absolute w-4 text-2xl text-red-600 fa-regular fa-times right-4 top-1/4" aria-hidden="true" />
                                 :
                                   errors.email && errors.email.type === "pattern"
                                     ?
-                                      <i className="absolute w-4 text-2xl text-red-600 fa-regular fa-times right-4 top-1/4" />
+                                      <i className="absolute w-4 text-2xl text-red-600 fa-regular fa-times right-4 top-1/4" aria-hidden="true" />
                                     :
-                                      <i className="absolute w-4 text-2xl text-green-600 fa-regular fa-check right-4 top-1/4" />
+                                      <i className="absolute w-4 text-2xl text-green-600 fa-regular fa-check right-4 top-1/4" aria-hidden="true" />
                         }
                       </div>
                       <p
@@ -392,17 +392,17 @@ const HomePage = ({
                             :
                               errors.message && errors.message.type === "required"
                                 ?
-                                  <i className="absolute w-4 text-2xl text-red-600 fa-regular fa-times right-4 top-2" />
+                                  <i className="absolute w-4 text-2xl text-red-600 fa-regular fa-times right-4 top-2" aria-hidden="true" />
                                 :
                                   errors.message && errors.message.type === "minLength"
                                     ?
-                                      <i className="absolute w-4 text-2xl text-red-600 fa-regular fa-times right-4 top-2" />
+                                      <i className="absolute w-4 text-2xl text-red-600 fa-regular fa-times right-4 top-2" aria-hidden="true" />
                                     :
                                       errors.message && errors.message.type === "maxLength"
                                       ?
-                                        <i className="absolute w-4 text-2xl text-red-600 fa-regular fa-times right-4 top-2" />
+                                        <i className="absolute w-4 text-2xl text-red-600 fa-regular fa-times right-4 top-2" aria-hidden="true" />
                                       :
-                                        <i className="absolute w-4 text-2xl text-green-600 fa-regular fa-check right-4 top-2" />
+                                        <i className="absolute w-4 text-2xl text-green-600 fa-regular fa-check right-4 top-2" aria-hidden="true" />
                         }
                       </div>
                       <p

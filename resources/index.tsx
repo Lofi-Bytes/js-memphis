@@ -43,16 +43,16 @@ const ProjectsListPage = ({
         title={
           <>
             <span className="hidden sm:inline-block">
-              <i className="fa-light fa-gem text-fuchsia-300" />&nbsp;&nbsp;
+              <i className="fa-light fa-gem text-fuchsia-300" aria-hidden="true" />&nbsp;&nbsp;
             </span>
             <span className="text-5xl leading-relaxed js md:text-6xl md:leading-loose lg:text-7xl lg:leading-relaxed">
             My Resources
             </span>
             <span className="hidden sm:inline-block">
-              &nbsp;&nbsp;<i className="fa-light fa-gem text-lime-300" />
+              &nbsp;&nbsp;<i className="fa-light fa-gem text-lime-300" aria-hidden="true" />
             </span>
             <span className="block mt-3 sm:hidden">
-              <i className="fa-light fa-gem text-fuchsia-300" />&nbsp;&nbsp;<i className="fa-light fa-gem text-lime-300" />
+              <i className="fa-light fa-gem text-fuchsia-300" aria-hidden="true" />&nbsp;&nbsp;<i className="fa-light fa-gem text-lime-300" aria-hidden="true" />
             </span>
           </>
         }
@@ -79,7 +79,7 @@ const ProjectsListPage = ({
                         <h2 className="text-lg tracking-wider text-stone-800">
                           {title}
                         </h2>
-                        <i className="text-xs fas fa-external-link-alt external-link-icon text-amber-700" />
+                        <i className="text-xs fas fa-external-link-alt external-link-icon text-amber-700" aria-hidden="true" />
                       </div>
                       <p className="mt-2 text-sm tracking-wider text-stone-600">
                         By {author}

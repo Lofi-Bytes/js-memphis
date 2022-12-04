@@ -113,7 +113,7 @@ const MegaloTorusPage = ({
             className="mt-10 w-max"
             to="/projects"
           >
-            <i className="fa-solid fa-arrow-left" />&nbsp;&nbsp;Back to project list
+            <i className="fa-solid fa-arrow-left" aria-hidden="true" />&nbsp;&nbsp;Back to project list
           </Button>
 
           <StaticImage
@@ -138,7 +138,7 @@ const MegaloTorusPage = ({
                 title="MegaloTorus Facebook page"
                 className={ICONANCHOR}
               >
-                <i className="fa-brands fa-facebook" />
+                <i className="fa-brands fa-facebook" aria-hidden="true" />
               </OutboundLink>
             </div>
           </div>

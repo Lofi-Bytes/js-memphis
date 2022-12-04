@@ -463,7 +463,7 @@ const Card = ({
                     {excerpt}
                   </p>
                   <div className={ICON_ROW}>
-                    <i className={formattedIcon} />
+                    <i className={formattedIcon} aria-hidden="true" />
                   </div>
                 </OutboundLink>
               :
@@ -518,7 +518,7 @@ const Card = ({
                     {excerpt}
                   </p>
                   <div className={ICON_ROW}>
-                    <i className={formattedIcon} />
+                    <i className={formattedIcon} aria-hidden="true" />
                   </div>
                 </Link>
               :

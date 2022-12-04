@@ -119,7 +119,7 @@ const NextPrev = ({
                   title="Back to article list"
                   to="/writing"
                 >
-                  List&nbsp;&nbsp;<i className="fa-regular fa-chevron-right" />
+                  List&nbsp;&nbsp;<i className="fa-regular fa-chevron-right" aria-hidden="true" />
                 </Button>
               </div>
             )
