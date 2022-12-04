@@ -132,7 +132,7 @@ const MobileNavigation = ({
                       : <div className={LINK_INDICATOR_INACTIVE} />
                     }
                     <div className={LINK_ICON_CONTAINER}>
-                      <i className={formattedLinkIcon} />
+                      <i className={formattedLinkIcon} aria-hidden="true" />
                       <span className="mt-2 text-xs">{title}</span>
                     </div>
                   </Link>
@@ -148,7 +148,7 @@ const MobileNavigation = ({
                     : <div className={LINK_INDICATOR_INACTIVE} />
                   }
                   <div className={LINK_ICON_CONTAINER}>
-                    <i className={formattedLinkIcon} />
+                    <i className={formattedLinkIcon} aria-hidden="true" />
                     <span className="mt-2 text-xs">{title}</span>
                   </div>
                 </Link>

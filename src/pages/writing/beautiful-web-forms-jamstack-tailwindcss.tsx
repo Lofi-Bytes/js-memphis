@@ -475,7 +475,7 @@ const BeautifulWebFormsJamstackTailwindCSSPage = ({
             className="mt-10 w-max"
             to="/writing"
           >
-            <i className="fa-solid fa-arrow-left" />&nbsp;&nbsp;Back to article list
+            <i className="fa-solid fa-arrow-left" aria-hidden="true" />&nbsp;&nbsp;Back to article list
           </Button>
 
           <H3 className="mt-10">Introduction</H3>

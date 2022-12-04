@@ -50,7 +50,7 @@ const PreviousButton = ({
                 to={previousPath}
                 key={`prev-${index}`}
               >
-                <i className="fa-regular fa-chevron-left" />&nbsp;&nbsp;{children}
+                <i className="fa-regular fa-chevron-left" aria-hidden="true" />&nbsp;&nbsp;{children}
               </Button>
             )
           }

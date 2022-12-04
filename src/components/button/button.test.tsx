@@ -27,7 +27,7 @@ describe('Button', () => {
           title="Learn more about me"
           to="/about"
         >
-          Learn more about me&nbsp;&nbsp;<i className="fa-regular fa-chevron-right" />
+          Learn more about me&nbsp;&nbsp;<i className="fa-regular fa-chevron-right" aria-hidden="true" />
         </Button>
       )
       .toJSON()
@@ -45,7 +45,7 @@ describe('Button', () => {
           title="Learn more about me"
           to="/about"
         >
-          Learn more about me&nbsp;&nbsp;<i className="fa-regular fa-chevron-right" />
+          Learn more about me&nbsp;&nbsp;<i className="fa-regular fa-chevron-right" aria-hidden="true" />
         </Button>
       )
       .toJSON()
@@ -63,7 +63,7 @@ describe('Button', () => {
           className="mt-6 w-max"
           to="/"
         >
-          <i className="fas fa-arrow-left" />&nbsp;&nbsp;Return to homepage
+          <i className="fas fa-arrow-left" aria-hidden="true" />&nbsp;&nbsp;Return to homepage
         </Button>
       )
       .toJSON()
@@ -104,7 +104,7 @@ describe('Button', () => {
         title="Learn more about me"
         to="/about"
       >
-        Learn more about me&nbsp;&nbsp;<i className="fa-regular fa-chevron-right" />
+        Learn more about me&nbsp;&nbsp;<i className="fa-regular fa-chevron-right" aria-hidden="true" />
       </Button>
     )
     const results = await axe(container)
@@ -122,7 +122,7 @@ describe('Button', () => {
         className="mt-6 w-max"
         to="/"
       >
-        <i className="fas fa-arrow-left" />&nbsp;&nbsp;Return to homepage
+        <i className="fas fa-arrow-left" aria-hidden="true" />&nbsp;&nbsp;Return to homepage
       </Button>
     )
     const results = await axe(container)

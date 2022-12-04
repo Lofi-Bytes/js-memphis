@@ -55,7 +55,7 @@ const Alert = ({
       }
     >
       <div className={ICON_CONTAINER}>
-        <i className={ICON} />
+        <i className={ICON} aria-hidden="true" />
       </div>
       <p className={ALERT_MESSAGE}>{children}</p>
     </div>

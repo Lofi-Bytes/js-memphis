@@ -131,7 +131,7 @@ const Footer = ({
               title="Connect with me on Github"
               className={ICONANCHOR}
             >
-              <i className={GITHUB} />
+              <i className={GITHUB} aria-hidden="true" />
             </OutboundLink>
           </div>
           <div className="ml-6">
@@ -141,7 +141,7 @@ const Footer = ({
               title="Connect with me on Mastodon"
               className={ICONANCHOR}
             >
-              <i className={MASTODON} />
+              <i className={MASTODON} aria-hidden="true" />
             </OutboundLink>
           </div>
           <div className="ml-6">
@@ -151,7 +151,7 @@ const Footer = ({
               title="Connect with me on Twitter"
               className={ICONANCHOR}
             >
-              <i className={TWITTER} />
+              <i className={TWITTER} aria-hidden="true" />
             </OutboundLink>
           </div>
           <div className="ml-6">
@@ -161,7 +161,7 @@ const Footer = ({
               title="Connect with me on CodePen"
               className={ICONANCHOR}
             >
-              <i className={CODE_PEN} />
+              <i className={CODE_PEN} aria-hidden="true" />
             </OutboundLink>
           </div>
           <div className="ml-6">
@@ -171,7 +171,7 @@ const Footer = ({
               title="Connect with me on DEV Profile"
               className={ICONANCHOR}
             >
-              <i className={DEV} />
+              <i className={DEV} aria-hidden="true" />
             </OutboundLink>
           </div>
           <div className="ml-6">
@@ -181,7 +181,7 @@ const Footer = ({
               title="Connect with me on LinkedIn Profile"
               className={ICONANCHOR}
             >
-              <i className={LINKEDIN} />
+              <i className={LINKEDIN} aria-hidden="true" />
             </OutboundLink>
           </div>
         </div>

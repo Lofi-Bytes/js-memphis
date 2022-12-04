@@ -53,7 +53,7 @@ export const FieldErrorIcon = ({
   const formattedFieldErrorIcon = joinStrings(' ', FIELD_ERROR_ICON, className)
 
   return (
-    <i className={formattedFieldErrorIcon} />
+    <i className={formattedFieldErrorIcon} aria-hidden="true" />
   )
 }
 
@@ -63,6 +63,6 @@ export const FieldValidIcon = ({
   const formattedFieldValidIcon = joinStrings(' ', FIELD_VALID_ICON, className)
 
   return (
-    <i className={formattedFieldValidIcon} />
+    <i className={formattedFieldValidIcon} aria-hidden="true" />
   )
 }

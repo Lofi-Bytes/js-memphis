@@ -48,8 +48,8 @@ const AboutPage = ({
             alt="Jillian's avatar"
             src={image}
           />
-          <i className="absolute text-6xl text-yellow-300 -rotate-90 fa-light fa-triangle -left-4 -top-8 sm:-left-8 sm:-top-10 sm:text-7xl lg:-left-8 lg:-top-14 lg:text-8xl transofrm transform-gpu" />
-          <i className="absolute text-6xl fa-light fa-bolt-lightning text-emerald-300 -right-2 bottom-64 sm:-right-4 sm:bottom-48 sm:text-7xl lg:-right-4 lg:bottom-48 lg:text-8xl transofrm rotate-12 transform-gpu" />
+          <i className="absolute text-6xl text-yellow-300 -rotate-90 fa-light fa-triangle -left-4 -top-8 sm:-left-8 sm:-top-10 sm:text-7xl lg:-left-8 lg:-top-14 lg:text-8xl transofrm transform-gpu" aria-hidden="true" />
+          <i className="absolute text-6xl fa-light fa-bolt-lightning text-emerald-300 -right-2 bottom-64 sm:-right-4 sm:bottom-48 sm:text-7xl lg:-right-4 lg:bottom-48 lg:text-8xl transofrm rotate-12 transform-gpu" aria-hidden="true" />
 
           <h2 className="mt-10 text-2xl tracking-wide text-stone-700">Jillian S. Estrella <br className="sm:hidden" /><span className="text-xl text-stone-600">🏳️‍🌈 she/her 🏳️‍⚧️</span></h2>
           <P className="mt-1 text-xl">
@@ -64,7 +64,7 @@ const AboutPage = ({
             className="mt-6 w-max"
             to="/"
           >
-            <i className="fas fa-arrow-left" />&nbsp;&nbsp;Return to homepage
+            <i className="fas fa-arrow-left" aria-hidden="true" />&nbsp;&nbsp;Return to homepage
           </Button>
 
           <h2 className="mt-10 text-xl tracking-wide text-stone-700">Current Work</h2>
@@ -388,7 +388,7 @@ const AboutPage = ({
             During my time with BSCS, I established and grew an in-house software development team and modernized BSCS’s crumbling tech stack.
           </P>
           <P className="mt-4">
-            During my time with BSCS, I oversaw the adoption of innovative approaches to software and design such as <i className="text-pink-300 fas fa-heart" /> <TextLink to="https://uxdesign.cc/everything-you-need-to-know-about-design-systems-54b109851969" title="Everything you need to know about design systems" outbound={true}>design systems</TextLink>; <TextLink to="https://medium.com/omarelgabrys-blog/component-based-architecture-3c3c23c7e348" title="component based architecture" outbound={true}>component based</TextLink>, <TextLink to="https://martinfowler.com/articles/serverless.html" title="serverless architecture" outbound={true}>serverless</TextLink>, <TextLink to="https://martinfowler.com/articles/microservices.html" title="microservices" outbound={true}> and microservice</TextLink> architectures; and the beloved <i className="text-pink-300 fas fa-heart" /> <TextLink to="https://jamstack.org/" title="Jamstack" outbound={true}>Jamstack</TextLink>.
+            During my time with BSCS, I oversaw the adoption of innovative approaches to software and design such as <i className="text-pink-300 fas fa-heart" aria-hidden="true" /> <TextLink to="https://uxdesign.cc/everything-you-need-to-know-about-design-systems-54b109851969" title="Everything you need to know about design systems" outbound={true}>design systems</TextLink>; <TextLink to="https://medium.com/omarelgabrys-blog/component-based-architecture-3c3c23c7e348" title="component based architecture" outbound={true}>component based</TextLink>, <TextLink to="https://martinfowler.com/articles/serverless.html" title="serverless architecture" outbound={true}>serverless</TextLink>, <TextLink to="https://martinfowler.com/articles/microservices.html" title="microservices" outbound={true}> and microservice</TextLink> architectures; and the beloved <i className="text-pink-300 fas fa-heart" aria-hidden="true" /> <TextLink to="https://jamstack.org/" title="Jamstack" outbound={true}>Jamstack</TextLink>.
           </P>
           <P className="mt-4">
             These innovations allowed my small team to keep pace with increasing demand. We were able to create BSCS's digital products with more efficiency and at a higher quality with lower product support costs.
@@ -640,7 +640,7 @@ const AboutPage = ({
             className="mt-16 w-max"
             to="/"
           >
-            <i className="fas fa-chevron-left" />&nbsp;&nbsp;Return to homepage
+            <i className="fas fa-chevron-left" aria-hidden="true" />&nbsp;&nbsp;Return to homepage
           </Button>
         </Section>
 
