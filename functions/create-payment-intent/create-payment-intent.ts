@@ -5,35 +5,37 @@ const handler: Handler = async (event, context) => {
 
   const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY)
 
-  const { amount, currency = "usd" } = JSON.parse(event.body)
-
   try {
     const paymentIntent = await stripe.paymentIntents.create({
-      amount,
-      currency
+      amount: 500,
+      currency: "usd",
+      automatic_payment_methods: {
+        enabled: true
+      }
     })
+
     return {
       statusCode: 200,
       body: JSON.stringify({
-        paymentIntent
+        clientSecret: paymentIntent.client_secret
       })
     }
-  } catch (e) {
-    switch (e.type) {
+  } catch (error) {
+    switch (error.type) {
       case 'StripeCardError':
         return {
-          statusCode: e.type,
-          body: `A payment error occurred: ${e.message}`
+          statusCode: error.statusCode,
+          body: `A payment error occurred: ${error.message}`
         }
       case 'StripeInvalidRequestError':
         return {
-          statusCode: e.type,
-          body: 'An invalid request occurred.'
+          statusCode: error.statusCode,
+          body: `An invalid request occurred: ${error.message}`
         }
       default:
         return {
-          statusCode: e.type,
-          body: 'A problem occurred.'
+          statusCode: error.statusCode,
+          body: `A problem occurred: ${error.message}`
         }
     }
   }
