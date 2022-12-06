@@ -1,0 +1,8 @@
+{
+  "version": 3,
+  "sources": ["../../../../../../Users/lofibytes/Desktop/projects/js-memphis/functions/hello-world/hello-world.ts"],
+  "sourceRoot": "/var/folders/ny/z6d6m6v51k1fn5y1bpb93xyw0000gn/T/tmp-29532-WjgSl6i7v4C9",
+  "sourcesContent": ["import { Handler } from '@netlify/functions'\n\n\nconst handler: Handler = async (event, context) => {\n  const { name = 'stranger' } = event.queryStringParameters\n\n  return {\n    statusCode: 200,\n    body: JSON.stringify({\n      message: `Hello, ${name}!`,\n    })\n  }\n}\n\nexport { handler }\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAGA,IAAM,UAAmB,OAAO,OAAO,YAAY;AACjD,QAAM,EAAE,OAAO,eAAe,MAAM;AAEpC,SAAO;AAAA,IACL,YAAY;AAAA,IACZ,MAAM,KAAK,UAAU;AAAA,MACnB,SAAS,UAAU;AAAA,IACrB,CAAC;AAAA,EACH;AACF;",
+  "names": []
+}
