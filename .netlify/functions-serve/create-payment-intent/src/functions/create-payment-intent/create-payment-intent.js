@@ -3386,6 +3386,34 @@ var require_ExchangeRates = __commonJS({
   }
 });
 
+// node_modules/stripe/lib/resources/FileLinks.js
+var require_FileLinks = __commonJS({
+  "node_modules/stripe/lib/resources/FileLinks.js"(exports, module2) {
+    "use strict";
+    var StripeResource = require_StripeResource();
+    var stripeMethod = StripeResource.method;
+    module2.exports = StripeResource.extend({
+      create: stripeMethod({
+        method: "POST",
+        fullPath: "/v1/file_links"
+      }),
+      retrieve: stripeMethod({
+        method: "GET",
+        fullPath: "/v1/file_links/{link}"
+      }),
+      update: stripeMethod({
+        method: "POST",
+        fullPath: "/v1/file_links/{link}"
+      }),
+      list: stripeMethod({
+        method: "GET",
+        fullPath: "/v1/file_links",
+        methodType: "list"
+      })
+    });
+  }
+});
+
 // node_modules/stripe/lib/multipart.js
 var require_multipart = __commonJS({
   "node_modules/stripe/lib/multipart.js"(exports, module2) {
@@ -3493,29 +3521,33 @@ var require_Files = __commonJS({
   }
 });
 
-// node_modules/stripe/lib/resources/FileLinks.js
-var require_FileLinks = __commonJS({
-  "node_modules/stripe/lib/resources/FileLinks.js"(exports, module2) {
+// node_modules/stripe/lib/resources/InvoiceItems.js
+var require_InvoiceItems = __commonJS({
+  "node_modules/stripe/lib/resources/InvoiceItems.js"(exports, module2) {
     "use strict";
     var StripeResource = require_StripeResource();
     var stripeMethod = StripeResource.method;
     module2.exports = StripeResource.extend({
       create: stripeMethod({
         method: "POST",
-        fullPath: "/v1/file_links"
+        fullPath: "/v1/invoiceitems"
       }),
       retrieve: stripeMethod({
         method: "GET",
-        fullPath: "/v1/file_links/{link}"
+        fullPath: "/v1/invoiceitems/{invoiceitem}"
       }),
       update: stripeMethod({
         method: "POST",
-        fullPath: "/v1/file_links/{link}"
+        fullPath: "/v1/invoiceitems/{invoiceitem}"
       }),
       list: stripeMethod({
         method: "GET",
-        fullPath: "/v1/file_links",
+        fullPath: "/v1/invoiceitems",
         methodType: "list"
+      }),
+      del: stripeMethod({
+        method: "DELETE",
+        fullPath: "/v1/invoiceitems/{invoiceitem}"
       })
     });
   }
@@ -3587,38 +3619,6 @@ var require_Invoices = __commonJS({
         method: "GET",
         fullPath: "/v1/invoices/{invoice}/lines",
         methodType: "list"
-      })
-    });
-  }
-});
-
-// node_modules/stripe/lib/resources/InvoiceItems.js
-var require_InvoiceItems = __commonJS({
-  "node_modules/stripe/lib/resources/InvoiceItems.js"(exports, module2) {
-    "use strict";
-    var StripeResource = require_StripeResource();
-    var stripeMethod = StripeResource.method;
-    module2.exports = StripeResource.extend({
-      create: stripeMethod({
-        method: "POST",
-        fullPath: "/v1/invoiceitems"
-      }),
-      retrieve: stripeMethod({
-        method: "GET",
-        fullPath: "/v1/invoiceitems/{invoiceitem}"
-      }),
-      update: stripeMethod({
-        method: "POST",
-        fullPath: "/v1/invoiceitems/{invoiceitem}"
-      }),
-      list: stripeMethod({
-        method: "GET",
-        fullPath: "/v1/invoiceitems",
-        methodType: "list"
-      }),
-      del: stripeMethod({
-        method: "DELETE",
-        fullPath: "/v1/invoiceitems/{invoiceitem}"
       })
     });
   }
@@ -4206,6 +4206,47 @@ var require_Sources = __commonJS({
   }
 });
 
+// node_modules/stripe/lib/resources/SubscriptionItems.js
+var require_SubscriptionItems = __commonJS({
+  "node_modules/stripe/lib/resources/SubscriptionItems.js"(exports, module2) {
+    "use strict";
+    var StripeResource = require_StripeResource();
+    var stripeMethod = StripeResource.method;
+    module2.exports = StripeResource.extend({
+      create: stripeMethod({
+        method: "POST",
+        fullPath: "/v1/subscription_items"
+      }),
+      retrieve: stripeMethod({
+        method: "GET",
+        fullPath: "/v1/subscription_items/{item}"
+      }),
+      update: stripeMethod({
+        method: "POST",
+        fullPath: "/v1/subscription_items/{item}"
+      }),
+      list: stripeMethod({
+        method: "GET",
+        fullPath: "/v1/subscription_items",
+        methodType: "list"
+      }),
+      del: stripeMethod({
+        method: "DELETE",
+        fullPath: "/v1/subscription_items/{item}"
+      }),
+      createUsageRecord: stripeMethod({
+        method: "POST",
+        fullPath: "/v1/subscription_items/{subscription_item}/usage_records"
+      }),
+      listUsageRecordSummaries: stripeMethod({
+        method: "GET",
+        fullPath: "/v1/subscription_items/{subscription_item}/usage_record_summaries",
+        methodType: "list"
+      })
+    });
+  }
+});
+
 // node_modules/stripe/lib/resources/Subscriptions.js
 var require_Subscriptions = __commonJS({
   "node_modules/stripe/lib/resources/Subscriptions.js"(exports, module2) {
@@ -4246,47 +4287,6 @@ var require_Subscriptions = __commonJS({
         method: "GET",
         fullPath: "/v1/subscriptions/search",
         methodType: "search"
-      })
-    });
-  }
-});
-
-// node_modules/stripe/lib/resources/SubscriptionItems.js
-var require_SubscriptionItems = __commonJS({
-  "node_modules/stripe/lib/resources/SubscriptionItems.js"(exports, module2) {
-    "use strict";
-    var StripeResource = require_StripeResource();
-    var stripeMethod = StripeResource.method;
-    module2.exports = StripeResource.extend({
-      create: stripeMethod({
-        method: "POST",
-        fullPath: "/v1/subscription_items"
-      }),
-      retrieve: stripeMethod({
-        method: "GET",
-        fullPath: "/v1/subscription_items/{item}"
-      }),
-      update: stripeMethod({
-        method: "POST",
-        fullPath: "/v1/subscription_items/{item}"
-      }),
-      list: stripeMethod({
-        method: "GET",
-        fullPath: "/v1/subscription_items",
-        methodType: "list"
-      }),
-      del: stripeMethod({
-        method: "DELETE",
-        fullPath: "/v1/subscription_items/{item}"
-      }),
-      createUsageRecord: stripeMethod({
-        method: "POST",
-        fullPath: "/v1/subscription_items/{subscription_item}/usage_records"
-      }),
-      listUsageRecordSummaries: stripeMethod({
-        method: "GET",
-        fullPath: "/v1/subscription_items/{subscription_item}/usage_record_summaries",
-        methodType: "list"
       })
     });
   }
@@ -4748,34 +4748,6 @@ var require_Authorizations = __commonJS({
   }
 });
 
-// node_modules/stripe/lib/resources/Issuing/Cards.js
-var require_Cards = __commonJS({
-  "node_modules/stripe/lib/resources/Issuing/Cards.js"(exports, module2) {
-    "use strict";
-    var StripeResource = require_StripeResource();
-    var stripeMethod = StripeResource.method;
-    module2.exports = StripeResource.extend({
-      create: stripeMethod({
-        method: "POST",
-        fullPath: "/v1/issuing/cards"
-      }),
-      retrieve: stripeMethod({
-        method: "GET",
-        fullPath: "/v1/issuing/cards/{card}"
-      }),
-      update: stripeMethod({
-        method: "POST",
-        fullPath: "/v1/issuing/cards/{card}"
-      }),
-      list: stripeMethod({
-        method: "GET",
-        fullPath: "/v1/issuing/cards",
-        methodType: "list"
-      })
-    });
-  }
-});
-
 // node_modules/stripe/lib/resources/Issuing/Cardholders.js
 var require_Cardholders = __commonJS({
   "node_modules/stripe/lib/resources/Issuing/Cardholders.js"(exports, module2) {
@@ -4798,6 +4770,34 @@ var require_Cardholders = __commonJS({
       list: stripeMethod({
         method: "GET",
         fullPath: "/v1/issuing/cardholders",
+        methodType: "list"
+      })
+    });
+  }
+});
+
+// node_modules/stripe/lib/resources/Issuing/Cards.js
+var require_Cards = __commonJS({
+  "node_modules/stripe/lib/resources/Issuing/Cards.js"(exports, module2) {
+    "use strict";
+    var StripeResource = require_StripeResource();
+    var stripeMethod = StripeResource.method;
+    module2.exports = StripeResource.extend({
+      create: stripeMethod({
+        method: "POST",
+        fullPath: "/v1/issuing/cards"
+      }),
+      retrieve: stripeMethod({
+        method: "GET",
+        fullPath: "/v1/issuing/cards/{card}"
+      }),
+      update: stripeMethod({
+        method: "POST",
+        fullPath: "/v1/issuing/cards/{card}"
+      }),
+      list: stripeMethod({
+        method: "GET",
+        fullPath: "/v1/issuing/cards",
         methodType: "list"
       })
     });
@@ -4880,6 +4880,34 @@ var require_EarlyFraudWarnings = __commonJS({
   }
 });
 
+// node_modules/stripe/lib/resources/Radar/ValueListItems.js
+var require_ValueListItems = __commonJS({
+  "node_modules/stripe/lib/resources/Radar/ValueListItems.js"(exports, module2) {
+    "use strict";
+    var StripeResource = require_StripeResource();
+    var stripeMethod = StripeResource.method;
+    module2.exports = StripeResource.extend({
+      create: stripeMethod({
+        method: "POST",
+        fullPath: "/v1/radar/value_list_items"
+      }),
+      retrieve: stripeMethod({
+        method: "GET",
+        fullPath: "/v1/radar/value_list_items/{item}"
+      }),
+      list: stripeMethod({
+        method: "GET",
+        fullPath: "/v1/radar/value_list_items",
+        methodType: "list"
+      }),
+      del: stripeMethod({
+        method: "DELETE",
+        fullPath: "/v1/radar/value_list_items/{item}"
+      })
+    });
+  }
+});
+
 // node_modules/stripe/lib/resources/Radar/ValueLists.js
 var require_ValueLists = __commonJS({
   "node_modules/stripe/lib/resources/Radar/ValueLists.js"(exports, module2) {
@@ -4907,34 +4935,6 @@ var require_ValueLists = __commonJS({
       del: stripeMethod({
         method: "DELETE",
         fullPath: "/v1/radar/value_lists/{value_list}"
-      })
-    });
-  }
-});
-
-// node_modules/stripe/lib/resources/Radar/ValueListItems.js
-var require_ValueListItems = __commonJS({
-  "node_modules/stripe/lib/resources/Radar/ValueListItems.js"(exports, module2) {
-    "use strict";
-    var StripeResource = require_StripeResource();
-    var stripeMethod = StripeResource.method;
-    module2.exports = StripeResource.extend({
-      create: stripeMethod({
-        method: "POST",
-        fullPath: "/v1/radar/value_list_items"
-      }),
-      retrieve: stripeMethod({
-        method: "GET",
-        fullPath: "/v1/radar/value_list_items/{item}"
-      }),
-      list: stripeMethod({
-        method: "GET",
-        fullPath: "/v1/radar/value_list_items",
-        methodType: "list"
-      }),
-      del: stripeMethod({
-        method: "DELETE",
-        fullPath: "/v1/radar/value_list_items/{item}"
       })
     });
   }
@@ -5542,26 +5542,6 @@ var require_ReceivedDebits2 = __commonJS({
   }
 });
 
-// node_modules/stripe/lib/resources/Treasury/Transactions.js
-var require_Transactions2 = __commonJS({
-  "node_modules/stripe/lib/resources/Treasury/Transactions.js"(exports, module2) {
-    "use strict";
-    var StripeResource = require_StripeResource();
-    var stripeMethod = StripeResource.method;
-    module2.exports = StripeResource.extend({
-      retrieve: stripeMethod({
-        method: "GET",
-        fullPath: "/v1/treasury/transactions/{id}"
-      }),
-      list: stripeMethod({
-        method: "GET",
-        fullPath: "/v1/treasury/transactions",
-        methodType: "list"
-      })
-    });
-  }
-});
-
 // node_modules/stripe/lib/resources/Treasury/TransactionEntries.js
 var require_TransactionEntries = __commonJS({
   "node_modules/stripe/lib/resources/Treasury/TransactionEntries.js"(exports, module2) {
@@ -5582,15 +5562,35 @@ var require_TransactionEntries = __commonJS({
   }
 });
 
+// node_modules/stripe/lib/resources/Treasury/Transactions.js
+var require_Transactions2 = __commonJS({
+  "node_modules/stripe/lib/resources/Treasury/Transactions.js"(exports, module2) {
+    "use strict";
+    var StripeResource = require_StripeResource();
+    var stripeMethod = StripeResource.method;
+    module2.exports = StripeResource.extend({
+      retrieve: stripeMethod({
+        method: "GET",
+        fullPath: "/v1/treasury/transactions/{id}"
+      }),
+      list: stripeMethod({
+        method: "GET",
+        fullPath: "/v1/treasury/transactions",
+        methodType: "list"
+      })
+    });
+  }
+});
+
 // node_modules/stripe/lib/resources.js
 var require_resources = __commonJS({
   "node_modules/stripe/lib/resources.js"(exports, module2) {
     "use strict";
     var resourceNamespace = require_ResourceNamespace();
     module2.exports = {
-      Accounts: require_Accounts(),
       Account: require_Accounts(),
       AccountLinks: require_AccountLinks(),
+      Accounts: require_Accounts(),
       ApplePayDomains: require_ApplePayDomains(),
       ApplicationFees: require_ApplicationFees(),
       Balance: require_Balance(),
@@ -5604,10 +5604,10 @@ var require_resources = __commonJS({
       EphemeralKeys: require_EphemeralKeys(),
       Events: require_Events(),
       ExchangeRates: require_ExchangeRates(),
-      Files: require_Files(),
       FileLinks: require_FileLinks(),
-      Invoices: require_Invoices(),
+      Files: require_Files(),
       InvoiceItems: require_InvoiceItems(),
+      Invoices: require_Invoices(),
       Mandates: require_Mandates(),
       OAuth: require_OAuth(),
       PaymentIntents: require_PaymentIntents(),
@@ -5625,8 +5625,8 @@ var require_resources = __commonJS({
       SetupIntents: require_SetupIntents(),
       ShippingRates: require_ShippingRates(),
       Sources: require_Sources(),
-      Subscriptions: require_Subscriptions(),
       SubscriptionItems: require_SubscriptionItems(),
+      Subscriptions: require_Subscriptions(),
       SubscriptionSchedules: require_SubscriptionSchedules(),
       TaxCodes: require_TaxCodes(),
       TaxRates: require_TaxRates(),
@@ -5654,15 +5654,15 @@ var require_resources = __commonJS({
       }),
       Issuing: resourceNamespace("issuing", {
         Authorizations: require_Authorizations(),
-        Cards: require_Cards(),
         Cardholders: require_Cardholders(),
+        Cards: require_Cards(),
         Disputes: require_Disputes2(),
         Transactions: require_Transactions()
       }),
       Radar: resourceNamespace("radar", {
         EarlyFraudWarnings: require_EarlyFraudWarnings(),
-        ValueLists: require_ValueLists(),
-        ValueListItems: require_ValueListItems()
+        ValueListItems: require_ValueListItems(),
+        ValueLists: require_ValueLists()
       }),
       Reporting: resourceNamespace("reporting", {
         ReportRuns: require_ReportRuns(),
@@ -5704,8 +5704,8 @@ var require_resources = __commonJS({
         OutboundTransfers: require_OutboundTransfers2(),
         ReceivedCredits: require_ReceivedCredits2(),
         ReceivedDebits: require_ReceivedDebits2(),
-        Transactions: require_Transactions2(),
-        TransactionEntries: require_TransactionEntries()
+        TransactionEntries: require_TransactionEntries(),
+        Transactions: require_Transactions2()
       })
     };
   }
@@ -5716,7 +5716,7 @@ var require_package = __commonJS({
   "node_modules/stripe/package.json"(exports, module2) {
     module2.exports = {
       name: "stripe",
-      version: "11.1.0",
+      version: "11.2.0",
       description: "Stripe API wrapper",
       keywords: [
         "stripe",
@@ -5741,7 +5741,7 @@ var require_package = __commonJS({
         node: ">=12.*"
       },
       main: "lib/stripe.js",
-      types: "types/2022-11-15/index.d.ts",
+      types: "types/index.d.ts",
       devDependencies: {
         "@typescript-eslint/eslint-plugin": "^4.33.0",
         "@typescript-eslint/parser": "^4.33.0",
