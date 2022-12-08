@@ -8,7 +8,7 @@
 module.exports = () => ({
   plugins: [
     require('tailwindcss'),
-    require('autoprefixer'),
+    require('autoprefixer')
   ],
   log: console.log("PostCSS Watch")
 })

@@ -84,7 +84,12 @@ const DonatePage = ({
           // boxShadow: '0px 1px 1px rgba(0, 0, 0, 0.03), 0px 3px 6px rgba(0, 0, 0, 0.02), 0 0 0 1px var(--colorPrimary)'
         // },
         ".Tab": {
-          borderWidth: "2px"
+          borderWidth: "2px",
+          boxShadow: '0 4px 6px -1px rgb(215, 215, 215), 0 2px 4px -2px rgb(215, 215, 215)',
+        },
+        ".Tab--selected": {
+          borderWidth: "2px",
+          boxShadow: '0 4px 6px -1px rgb(215, 215, 215), 0 2px 4px -2px rgb(215, 215, 215)',
         },
         '.Block': {
           backgroundColor: '#f5f5f4',

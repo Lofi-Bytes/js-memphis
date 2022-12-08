@@ -19,21 +19,26 @@ const AmountPickerButtonStyles = formatClassList([
   'first-of-type:ml-0',
   'flex',
   'focus-within:border-purple-400',
-  'focus-within:outline-none',
   'focus-within:ring-4',
-  'ml-4',
-  'p-4',
+  'focus-within:border-3',
+  'focus-within:-m-px',
+  'px-3',
+  'py-2',
+  'outline-none',
   'relative',
   'ring-purple-200',
   'rounded-md',
+  'shadow-md',
   'text-2xl',
   'text-stone-600',
   'w-full'
 ])
 
 const AmountPickerButtonStylesSelected = formatClassList([
+  'focus-within:border-purple-700',
   'border-purple-700',
-  'outline-none'
+  'outline-none',
+  'text-purple-700',
 ])
 
 export type AmountPickerButtonProps = {
@@ -123,7 +128,7 @@ const AmountPicker = ({
       <div
         aria-label="Select donation amount"
         aria-orientation="horizontal"
-        className="flex"
+        className="grid grid-cols-4 gap-4"
         role="radiogroup"
       >
         {amount.map((value, i) => (
