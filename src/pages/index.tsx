@@ -51,7 +51,6 @@ const HomePage = ({
   const handleChange = event => {setState({
     ...state,
     [event.target.name]: event.target.value
-
   })}
   const onSubmit = (data, event) => {
     event.preventDefault()

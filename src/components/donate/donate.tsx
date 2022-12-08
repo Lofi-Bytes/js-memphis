@@ -6,30 +6,76 @@ import {
   PaymentElement
 } from '@stripe/react-stripe-js'
 
+import { useForm } from 'react-hook-form'
+
+import { encode } from '../../utils/utils'
+
+import AmountPicker from './amount-picker'
 import Button from '../button'
 import ErrorMessage from './error-message'
 import Grid from '../contact-form/grid'
 import SuccessMessage from './success-message'
+import TextInput from '../contact-form/text-input'
 
 
 export type DonateProps = {
   className?: string,
   location: Location,
-  [other:string]: unknown
+  [other: string]: unknown
 }
 
 const Donate = ({
   className,
-  location
+  location,
+  ...other
 }: DonateProps) => {
 
-  const [successMsg, setSuccessMsg] = React.useState(false)
-  const [errorMsg, setErrorMsg] = React.useState(false)
   const [isProcessing, setIsProcessing] = React.useState(false)
   const [message, setMessage] = React.useState("")
 
   const stripe = useStripe()
   const elements = useElements()
+
+  const {
+    formState: {
+      errors,
+      isSubmitting,
+      touchedFields
+    },
+    // handleSubmit,
+    register,
+    reset
+  } = useForm<DonateProps>({
+    mode: 'onBlur'
+  })
+  const [state, setState] = React.useState<object>({})
+  const [successMsg, setSuccessMsg] = React.useState<boolean>(false)
+  const [errorMsg, setErrorMsg] = React.useState<boolean>(false)
+  const handleChange = event => {setState({
+    ...state,
+    [event.target.name]: event.target.value
+  })}
+  const onSubmit = (data, event) => {
+    event.preventDefault()
+    data = JSON.stringify(data)
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode({
+        'form-name': 'contact',
+        ...state
+      })
+    })
+      .then(response => {
+        setSuccessMsg(true)
+        reset()
+        // console.log(response)
+      })
+      .catch(error => {
+        setErrorMsg(true)
+        // console.log(error)
+      })
+  }
 
   // const handleSubmit = async (event) => {
 
@@ -189,7 +235,9 @@ const Donate = ({
           {!successMsg && !errorMsg
             ?
               <>
-                {/* <CardElement className="bg-stone-200 block border-0 border-l-4 focus:ring-0 mt-1 pl-3 pr-10 rounded-lg shadow-md text-stone-600 text-lg w-full p-4" /> */}
+                <AmountPicker
+                  amount={[10, 30, 55]}
+                />
                 <PaymentElement />
                 <div
                   className="w-full mx-auto mt-8 rainbow-shadow-button"

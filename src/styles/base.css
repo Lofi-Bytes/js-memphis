@@ -8,6 +8,15 @@
   font-style: normal;
 }
 
+@import url('../../node_modules/@fortawesome/fontawesome-pro/css/fontawesome.min.css');
+
+[type='radio']:checked {
+  content: "\f335";
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 300;
+}
+
+
 html {
   font-size: 18px;
 }
