@@ -55,7 +55,7 @@ const defaultMaskOptions = {
   allowDecimal: true,
   decimalSymbol: '.',
   decimalLimit: 2, // how many digits allowed after the decimal
-  integerLimit: 7, // limit length of integer numbers
+  integerLimit: 6, // limit length of integer numbers
   allowNegative: false,
   allowLeadingZeroes: false,
 }
@@ -74,7 +74,7 @@ const CustomAmountInput = ({
   const handleChange = (event) => {
     setTimeout(() => {
       const value = event.target.value
-      const dollarsToCents = parseInt(value.substr(0, value.indexOf('.')).replace(/[$,.]+/g,""))*100
+      let dollarsToCents = parseInt(value.substr(0, value.indexOf('.')).replace(/[$,.]+/g,""))*100
       const cents = parseInt(value.substr(value.indexOf('.'), value.length).replace(/[$,.]+/g,""))
       const amount = dollarsToCents + cents
       setCustomAmount(amount)
