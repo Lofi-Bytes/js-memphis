@@ -56,17 +56,13 @@ const DonatePage = ({
   }, [selected])
 
   React.useEffect(() => {
-    // let value = false
-    // if (!value) {
-    // setTimeout(() => {
+    setTimeout(() => {
       if (selected === 'option4' && customAmount !== null) {
         return setPaymentAmount(customAmount)
       } else if (selected !== 'option4') {
         setPaymentAmount(amount)
       }
-    // }, 500)
-    // }
-    // return () => {value = true}
+    }, 500)
   }, [selected, amount, customAmount])
 
   React.useEffect(() => {
@@ -101,6 +97,7 @@ const DonatePage = ({
   }, [])
 
   React.useEffect(() => {
+    let activeFetch = true
     fetch(
       `${process.env.ENV === "development"
           ? "http://localhost:9999"
@@ -114,8 +111,11 @@ const DonatePage = ({
         })
       }
     ).then(async (response) => {
-      console.log(response)
+      if (activeFetch) {
+        console.log(response)
+      }
     })
+    return () => {activeFetch = false}
   }, [paymentAmount])
 
   const options = {

@@ -5,6 +5,9 @@ import {
   joinStrings
 } from '../../utils/utils'
 
+import MaskedInput from 'react-text-mask'
+import createNumberMask from 'text-mask-addons/dist/createNumberMask'
+
 import './custom-amount-input.css'
 
 
@@ -44,6 +47,19 @@ export type CustomAmountInputProps = {
   tabIndex: number
 }
 
+const defaultMaskOptions = {
+  prefix: '$',
+  suffix: '',
+  includeThousandsSeparator: true,
+  thousandsSeparatorSymbol: ',',
+  allowDecimal: true,
+  decimalSymbol: '.',
+  decimalLimit: 2, // how many digits allowed after the decimal
+  integerLimit: 7, // limit length of integer numbers
+  allowNegative: false,
+  allowLeadingZeroes: false,
+}
+
 const CustomAmountInput = ({
   className,
   label,
@@ -56,15 +72,13 @@ const CustomAmountInput = ({
   label = label.toLowerCase()
 
   const handleChange = (event) => {
-    // setTimeout(() => {
-      if (event.target.value !== '' && event.target.value < '0') {
-        event.target.value = '1'
-      }
-      if (event.target.value !== '' && event.target.value < '1') {
-        event.target.value = '1'
-      }
-      setCustomAmount(event.target.value*100)
-    // }, 500)
+    setTimeout(() => {
+      const value = event.target.value
+      const dollarsToCents = parseInt(value.substr(0, value.indexOf('.')).replace(/[$,.]+/g,""))*100
+      const cents = parseInt(value.substr(value.indexOf('.'), value.length).replace(/[$,.]+/g,""))
+      const amount = dollarsToCents + cents
+      setCustomAmount(amount)
+    }, 500)
   }
 
   React.useEffect(() => {
@@ -74,22 +88,31 @@ const CustomAmountInput = ({
     }
   }, [selected])
 
+  const currencyMask = createNumberMask({
+    ...defaultMaskOptions
+  })
+
   return (
     <label className={
       joinStrings(' ', 'block', className)
     }>
       <span className={LABEL}>{label.charAt(0).toUpperCase() + label.slice(1)}</span>
       <div className="relative">
-        <input
+        <MaskedInput
           {...props}
-          aria-required="true"
+          aria-required={
+            selected === "option4"
+              ? true
+              : false
+          }
           className={FIELD}
+          mask={currencyMask}
           name={label}
           onChange={handleChange}
-          placeholder=""
           ref={ref}
+          placeholder="$75.00"
           tabIndex={tabIndex}
-          type="number"
+          type="text"
         />
       </div>
     </label>

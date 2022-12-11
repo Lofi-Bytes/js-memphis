@@ -145,8 +145,7 @@ const Donate = ({
                   </Button>
                 </div>
               </div>
-            :
-              null
+            : null
           }
         </Grid>
       </form>
