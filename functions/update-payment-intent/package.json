@@ -1,8 +1,8 @@
 {
-  "name": "create-payment-intent",
+  "name": "update-payment-intent",
   "version": "1.0.0",
-  "description": "netlify functions:create-payment-intent",
-  "main": "create-payment-intent.ts",
+  "description": "netlify functions:update-payment-intent",
+  "main": "update-payment-intent.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

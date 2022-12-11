@@ -8,46 +8,6 @@
   font-style: normal;
 }
 
-@import url('/node_modules/@fortawesome/fontawesome-pro/css/fontawesome.min.css');
-
-/* [type='radio']:checked {
-  content: "\f335";
-  font-family: "Font Awesome 5 Pro";
-  font-weight: 300;
-} */
-
-input[type=radio] {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-}
-
-input[type=radio] + label:before {
-  font-family: "Font Awesome 5 Pro";
-  display: inline-block;
-  content: "\f335";
-  letter-spacing: 10px;
-  font-size: 1.2em;
-  color: #535353;
-}
-input[type=radio]:checked + label:before {
-  content: "\f335";
-  font-size: 1.2em;
-  color: darkgreen;
-  letter-spacing: 5px;
-  width: 35px;
-}
-input[type=radio]:focus + label:before {
-  font-weight: bold;
-  color:orange;
-}
-
-
 html {
   font-size: 18px;
 }

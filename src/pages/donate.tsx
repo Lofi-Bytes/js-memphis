@@ -25,7 +25,49 @@ const DonatePage = ({
 }: PageProps) => {
 
   const [stripePromise, setStripePromise] = React.useState(null)
+  const [paymentIntentId, setPaymentIntentId] = React.useState("")
   const [clientSecret, setClientSecret] = React.useState("")
+  const [selected, setSelected] = React.useState("option1")
+  const [customAmount, setCustomAmount] = React.useState(null)
+  const [amount, setAmount] = React.useState(null)
+  const [paymentAmount, setPaymentAmount] = React.useState(null)
+
+  const amountOptions:[number, number, number] = [10, 30, 55]
+
+  const handleOptionChange = (event) => {
+    setSelected(event.target.name)
+  }
+
+  React.useEffect(() => {
+    console.log(`paymentAmount: ${paymentAmount}`)
+    console.log(`customAmount: ${customAmount}`)
+    console.log(`amount: ${amount}`)
+  }, [paymentAmount])
+
+  React.useEffect(() => {
+    if (selected != 'option4') {
+      const amountOptions = {
+        option1: 1000,
+        option2: 3000,
+        option3: 5500
+      }
+      setAmount(amountOptions[selected])
+    }
+  }, [selected])
+
+  React.useEffect(() => {
+    // let value = false
+    // if (!value) {
+    // setTimeout(() => {
+      if (selected === 'option4' && customAmount !== null) {
+        return setPaymentAmount(customAmount)
+      } else if (selected !== 'option4') {
+        setPaymentAmount(amount)
+      }
+    // }, 500)
+    // }
+    // return () => {value = true}
+  }, [selected, amount, customAmount])
 
   React.useEffect(() => {
     fetch(
@@ -51,11 +93,30 @@ const DonatePage = ({
         body: JSON.stringify({})
       }
     ).then(async (response) => {
-      const { clientSecret } = await response.json()
+      const { paymentIntentId, clientSecret } = await response.json()
 
       setClientSecret(clientSecret)
+      setPaymentIntentId(paymentIntentId)
     })
   }, [])
+
+  React.useEffect(() => {
+    fetch(
+      `${process.env.ENV === "development"
+          ? "http://localhost:9999"
+          : ""
+        }/.netlify/functions/update-payment-intent`,
+      {
+        method: "POST",
+        body: JSON.stringify({
+          paymentAmount,
+          paymentIntentId
+        })
+      }
+    ).then(async (response) => {
+      console.log(response)
+    })
+  }, [paymentAmount])
 
   const options = {
     // passing the client secret obtained in step 3
@@ -75,14 +136,6 @@ const DonatePage = ({
         spacingUnit: '4.75px'
       },
       rules: {
-        // '.Tab': {
-        //   border: '1px solid #d6d3d1'
-        // },
-        // '.Tab--selected': {
-          // borderColor: 'var(--p-colorPrimary)',
-          // color: 'var(--colorPrimary)',
-          // boxShadow: '0px 1px 1px rgba(0, 0, 0, 0.03), 0px 3px 6px rgba(0, 0, 0, 0.02), 0 0 0 1px var(--colorPrimary)'
-        // },
         ".Tab": {
           borderWidth: "2px",
           boxShadow: '0 4px 6px -1px rgb(215, 215, 215), 0 2px 4px -2px rgb(215, 215, 215)',
@@ -96,7 +149,8 @@ const DonatePage = ({
           border: '2px solid #e7e5e4'
         },
         '.Label': {
-          marginBottom: '.54rem'
+          marginBottom: '.54rem',
+          // marginTop: '1rem'
         },
         '.Input': {
           border: 'none',
@@ -104,6 +158,7 @@ const DonatePage = ({
           boxShadow: '0 4px 6px -1px rgb(215, 215, 215), 0 2px 4px -2px rgb(215, 215, 215)',
           fontSize: '1.125rem',
           letterSpacing: '',
+          marginBottom: '1rem',
           outline: 'none'
         },
         '.Input:focus': {
@@ -141,7 +196,7 @@ const DonatePage = ({
         subtitle="Every dollar donated makes a difference"
       />
       <Main>
-        <Section background="opaque" className="mb-8 -mt-10">
+        <Section background="opaque" className="mb-8 -mt-10 pb-14">
           <Avatar
             alt="Jillian's avatar"
             icon="fa-duotone fa-hands-holding-heart"
@@ -160,7 +215,13 @@ const DonatePage = ({
                 stripe={stripePromise}
                 options={options}
               >
-                <Donate location={location} />
+                <Donate
+                  amountOptions={amountOptions}
+                  location={location}
+                  onChange={handleOptionChange}
+                  selected={selected}
+                  setCustomAmount={setCustomAmount}
+                />
               </Elements>
             : null
           }

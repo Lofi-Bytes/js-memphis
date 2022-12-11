@@ -14,6 +14,9 @@ module.exports = {
       borderWidth: {
         '1': '1px',
         '3': '3px'
+      },
+      transitionProperty: {
+        'height': 'height'
       }
     }
   },

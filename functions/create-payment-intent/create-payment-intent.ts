@@ -7,7 +7,7 @@ const handler: Handler = async (event, context) => {
 
   try {
     const paymentIntent = await stripe.paymentIntents.create({
-      amount: 500,
+      amount: 1000,
       currency: "usd",
       automatic_payment_methods: {
         enabled: true
@@ -17,6 +17,7 @@ const handler: Handler = async (event, context) => {
     return {
       statusCode: 200,
       body: JSON.stringify({
+        paymentIntentId: paymentIntent.id,
         clientSecret: paymentIntent.client_secret
       })
     }
