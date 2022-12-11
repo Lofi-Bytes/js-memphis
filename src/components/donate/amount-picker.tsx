@@ -86,12 +86,12 @@ export const AmountPickerButton = ({
       {selected === name
         ?
           <i
-            className="fa-solid fa-badge-check text-lg absolute top-2 right-2"
+            className="fa-solid fa-heart text-lg absolute top-2 right-2 text-rose-600"
             aria-hidden="true"
           />
         :
           <i
-            className="fa-regular fa-badge text-lg absolute top-2 right-2"
+            className="fa-regular fa-heart text-lg absolute top-2 right-2"
             aria-hidden="true"
           />
       }
