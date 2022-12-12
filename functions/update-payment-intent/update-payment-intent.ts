@@ -19,29 +19,28 @@ const handler: Handler = async (event, context) => {
       body: JSON.stringify({
         amount: paymentIntent.amount
       }),
-      log: console.log(paymentIntent.amount)
+      // log: console.log(paymentIntent.amount)
     }
   }
   catch (error) {
-    console.log(error)
-
-    // switch (error.type) {
-    //   case 'StripeCardError':
-    //     return {
-    //       statusCode: error.statusCode,
-    //       body: `A payment error occurred: ${error.message}`
-    //     }
-    //   case 'StripeInvalidRequestError':
-    //     return {
-    //       statusCode: error.statusCode,
-    //       body: `An invalid request occurred: ${error.message}`
-    //     }
-    //   default:
-    //     return {
-    //       statusCode: error.statusCode,
-    //       body: `A problem occurred: ${error.message}`
-    //     }
-    // }
+    // console.log(error)
+    switch (error.type) {
+      case 'StripeCardError':
+        return {
+          statusCode: error.statusCode,
+          body: `A payment error occurred: ${error.message}`
+        }
+      case 'StripeInvalidRequestError':
+        return {
+          statusCode: error.statusCode,
+          body: `An invalid request occurred: ${error.message}`
+        }
+      default:
+        return {
+          statusCode: error.statusCode,
+          body: `A problem occurred: ${error.message}`
+        }
+    }
   }
 }
 

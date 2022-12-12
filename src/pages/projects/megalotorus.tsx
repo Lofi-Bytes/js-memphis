@@ -607,7 +607,13 @@ const MegaloTorusPage = ({
           </P>
 
           <P className="text-lg mt-4">
-            Andy Taylor
+            <TextLink
+              to='https://teachbuildplay.org/portfolio/'
+              title="Teach Build Play: Andy Taylor Parkour Design"
+              outbound={true}
+            >
+              Andy Taylor
+            </TextLink>
           </P>
 
           <P className="text-lg mt-4">
