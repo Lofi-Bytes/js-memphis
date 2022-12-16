@@ -8,7 +8,6 @@ import './amount-picker.css'
 
 export type AmountPickerProps = {
   amountOptions: [number, number, number],
-  checked: boolean,
   className?: string,
   onChange: React.ChangeEventHandler<HTMLInputElement>,
   selected: string,
