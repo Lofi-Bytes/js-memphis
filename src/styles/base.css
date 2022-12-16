@@ -431,6 +431,11 @@ pre[class*="language-"] > code {
   border-left: none !important;
 }
 
+pre[class*="language-"]:before,
+pre[class*="language-"]:after {
+  box-shadow: none !important;
+}
+
 @tailwind utilities;
 
 @layer base {
