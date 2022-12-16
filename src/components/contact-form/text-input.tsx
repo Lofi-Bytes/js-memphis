@@ -73,25 +73,31 @@ interface IFormValues {
 }
 
 export type TextInputProps = {
+  className?: string,
   errorMessage: object,
   errors: FieldErrors,
   handleChange: Function,
   label: string,
+  tabIndex: number,
   touchedFields: object
 }
 
 const TextInput = React.forwardRef<HTMLInputElement, TextInputProps>(({
+  className,
   errorMessage,
   errors,
   handleChange,
   label,
+  tabIndex,
   touchedFields,
   ...props
 }, ref) => {
   label = label.toLowerCase()
 
   return (
-    <label className="block">
+    <label className={
+      joinStrings(' ', 'block', className)
+    }>
       <span className={LABEL}>{label.charAt(0).toUpperCase() + label.slice(1)}</span>
       <div className="relative">
         <input
@@ -103,6 +109,7 @@ const TextInput = React.forwardRef<HTMLInputElement, TextInputProps>(({
                 ? FIELD_ERROR
                 : FIELD_VALID
           }
+          tabIndex={tabIndex}
           aria-required="true"
           placeholder=""
           ref={ref}
@@ -135,7 +142,7 @@ const TextInput = React.forwardRef<HTMLInputElement, TextInputProps>(({
             : "off"
         }
       >
-        {errorMessage}
+        {<>errorMessage</>}
       </p>
     </label>
   )

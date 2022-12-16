@@ -50,10 +50,10 @@ const WritingPostListPage = ({
             Writing
             </span>
             <span className="hidden sm:inline-block">
-              &nbsp;&nbsp;<i className="text-4xl leading-relaxed text-orange-300 fa-light fa-comment-edit md:text-5xl md:leading-loose lg:text-5xl lg:leading-relaxed" />
+              &nbsp;&nbsp;<i className="text-4xl leading-relaxed text-orange-300 fa-light fa-comment-edit md:text-5xl md:leading-loose lg:text-5xl lg:leading-relaxed" aria-hidden="true" />
             </span>
             <span className="block mt-3 sm:hidden">
-              <i className="text-4xl text-orange-300 fa-light fa-comment-edit" />
+              <i className="text-4xl text-orange-300 fa-light fa-comment-edit" aria-hidden="true" />
             </span>
           </>
         }

@@ -9,7 +9,8 @@ import {
 type AvatarProps = {
   alt: string,
   className?: string,
-  src: any
+  icon?: string,
+  src?: unknown
 }
 
 const AVATAR_OUTER = formatClassList([
@@ -41,12 +42,19 @@ const AVATAR_RING = formatClassList([
   'w-full'
 ])
 
+const ICON = formatClassList([
+  'absolute',
+  'text-rose-600',
+  'text-6xl',
+  'top-1/4'
+])
+
 const Avatar = ({
   alt,
   className,
+  icon,
   src
 }: AvatarProps) => {
-  // console.log(src);
 
   return (
     <div
@@ -56,14 +64,22 @@ const Avatar = ({
           : AVATAR_OUTER
       }
     >
-      <div className={AVATAR_INNER}>
-        <GatsbyImage
-          alt={alt}
-          className="avatar"
-          image={src}
-        />
-        <div className={AVATAR_RING}></div>
-      </div>
+    {icon
+      ?
+        <div className={joinStrings(' ', AVATAR_INNER, 'bg-purple-200', className)}>
+          <i className={joinStrings(' ', icon, ICON)} style={{ left: '17%' }} />
+          <div className={AVATAR_RING}></div>
+        </div>
+      :
+        <div className={AVATAR_INNER}>
+          <GatsbyImage
+            alt={alt}
+            className="avatar"
+            image={src}
+          />
+          <div className={AVATAR_RING}></div>
+        </div>
+    }
     </div>
   )
 }

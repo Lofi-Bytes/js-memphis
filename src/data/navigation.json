@@ -13,5 +13,10 @@
     "title": "Projects",
     "path": "/projects/",
     "iconClass": "fa-light fa-code-branch"
+  },
+  {
+    "title": "Donate",
+    "path": "/donate/",
+    "iconClass": "fa-light fa-hands-holding-heart"
   }
 ]

@@ -1,0 +1,9 @@
+.custom-amount-field::-webkit-outer-spin-button,
+.custom-amount-field::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.custom-amount-fieldinput[type=number] {
+  -moz-appearance: textfield;
+}

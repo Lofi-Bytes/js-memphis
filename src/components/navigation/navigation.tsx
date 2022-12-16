@@ -53,6 +53,10 @@ const LINK_BORDER_ACTIVE = formatClassList([
   'border-pink-200'
 ])
 
+const RAINBOWSHADOW = formatClassList([
+  'rainbow-shadow'
+])
+
 const Navigation = ({
   className,
   location
@@ -87,19 +91,40 @@ const Navigation = ({
 
           return(
             <div className="ml-6" key={`item-${index}`}>
-              <Link
-                to={path}
-                className={LINK}
-              >
-                {title}
-              </Link>
-              <div
-                className={
-                  location.pathname.match(regex)
-                    ? LINK_BORDER_ACTIVE
-                    : LINK_BORDER
-                }
-              />
+            {path === '/donate/'
+              ?
+                <div className={RAINBOWSHADOW}>
+                  <Link
+                    to={path}
+                    className={LINK}
+                  >
+                    {title}
+                  </Link>
+                  <div
+                    className={
+                      location.pathname.match(regex)
+                        ? LINK_BORDER_ACTIVE
+                        : LINK_BORDER
+                    }
+                  />
+                </div>
+              :
+                <>
+                  <Link
+                    to={path}
+                    className={LINK}
+                  >
+                    {title}
+                  </Link>
+                  <div
+                    className={
+                      location.pathname.match(regex)
+                        ? LINK_BORDER_ACTIVE
+                        : LINK_BORDER
+                    }
+                  />
+                </>
+            }
             </div>
           )
         })

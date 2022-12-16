@@ -1,0 +1,10 @@
+.amountPicker > input[type=radio] {
+  border: 0;
+  clip: rect(0 0 0 0);
+  display: relative;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  width: 1px;
+}
