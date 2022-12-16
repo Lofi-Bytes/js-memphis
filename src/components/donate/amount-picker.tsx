@@ -1,7 +1,7 @@
 import * as React from 'react'
 
 import AmountPickerButton from './amount-picker-button'
-import TextInput from './custom-amount-input'
+import CustomAmountInput from './custom-amount-input'
 
 import './amount-picker.css'
 
@@ -49,7 +49,7 @@ const AmountPicker = ({
           selected={selected}
         />
       </div>
-      <TextInput
+      <CustomAmountInput
         aria-hidden={
           selected === "option4"
             ? false

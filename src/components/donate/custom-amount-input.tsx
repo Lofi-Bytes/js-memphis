@@ -82,6 +82,10 @@ const CustomAmountInput = ({
       ref.current.value = null
       setCustomAmount(null)
     }
+
+    if (selected === "option4") {
+      ref.current?.inputElement.focus()
+    }
   }, [selected])
 
   const currencyMask = createNumberMask({
@@ -109,6 +113,7 @@ const CustomAmountInput = ({
           placeholder="$75.00"
           tabIndex={tabIndex}
           type="text"
+          autoFocus
         />
       </div>
     </label>
