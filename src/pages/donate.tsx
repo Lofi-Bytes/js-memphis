@@ -15,7 +15,7 @@ import SEO from '../components/seo'
 import TextLink from '../components/text-link'
 import Donate from '../components/donate'
 
-import {appearance} from './stripe-appearance'
+import { appearance } from '../components/donate/stripe-appearance'
 
 
 type PageProps = {
