@@ -52,6 +52,8 @@ export const AmountPickerButton = ({
   onChange,
   selected
 }: AmountPickerButtonProps) => {
+  // console.log(selected === name ? true : false)
+
   return (
     <label
       className={
@@ -65,6 +67,7 @@ export const AmountPickerButton = ({
       }
     >
       <input
+        autoComplete="off"
         className="absolute top-1 right-1 radio-custom"
         name={name}
         type="radio"
