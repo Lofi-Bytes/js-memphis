@@ -6,13 +6,10 @@ import {
   PaymentElement
 } from '@stripe/react-stripe-js'
 
-import { useForm } from 'react-hook-form'
-
 import AmountPicker from './amount-picker'
 import Button from '../button'
-import ErrorMessage from './error-message'
 import Grid from '../contact-form/grid'
-import SuccessMessage from './success-message'
+import Alert from '../alert'
 
 
 export type DonateProps = {
@@ -21,7 +18,8 @@ export type DonateProps = {
   location: Location,
   onChange: React.ChangeEventHandler<HTMLInputElement>,
   selected: string,
-  setCustomAmount: unknown,
+  setCustomAmount: React.Dispatch<React.SetStateAction<string>>,
+  setSelected: React.Dispatch<React.SetStateAction<string>>,
   [other: string]: unknown
 }
 
@@ -32,55 +30,18 @@ const Donate = ({
   onChange,
   selected,
   setCustomAmount,
+  setSelected,
   ...other
 }: DonateProps) => {
 
-  const [isProcessing, setIsProcessing] = React.useState(false)
-  const [message, setMessage] = React.useState("")
+  const [isProcessing, setIsProcessing] = React.useState<boolean>(false)
+  const [message, setMessage] = React.useState<string>("")
+  const [successMsg, setSuccessMsg] = React.useState<boolean>(false)
+  const [errorMsg, setErrorMsg] = React.useState<boolean>(false)
+  const [elementRef, setElementRef] = React.useState(null)
 
   const stripe = useStripe()
   const elements = useElements()
-
-  const {
-    formState: {
-      errors,
-      isSubmitting,
-      touchedFields
-    },
-    // handleSubmit,
-    register,
-    reset
-  } = useForm<DonateProps>({
-    mode: 'onBlur'
-  })
-  const [state, setState] = React.useState<object>({})
-  const [successMsg, setSuccessMsg] = React.useState<boolean>(false)
-  const [errorMsg, setErrorMsg] = React.useState<boolean>(false)
-  // const handleChange = event => {setState({
-  //   ...state,
-  //   [event.target.name]: event.target.value
-  // })}
-  // const onSubmit = (data, event) => {
-  //   event.preventDefault()
-  //   data = JSON.stringify(data)
-  //   fetch('/', {
-  //     method: 'POST',
-  //     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-  //     body: encode({
-  //       'form-name': 'contact',
-  //       ...state
-  //     })
-  //   })
-  //     .then(response => {
-  //       setSuccessMsg(true)
-  //       reset()
-  //       // console.log(response)
-  //     })
-  //     .catch(error => {
-  //       setErrorMsg(true)
-  //       // console.log(error)
-  //     })
-  // }
 
   const handleSubmit = async (event) => {
     event.preventDefault()
@@ -91,7 +52,7 @@ const Donate = ({
 
     setIsProcessing(true)
 
-    const { error } = await stripe.confirmPayment({
+    const result = await stripe.confirmPayment({
       elements,
       confirmParams: {
         return_url: location.href
@@ -99,54 +60,92 @@ const Donate = ({
       redirect: "if_required"
     })
 
-    if (error) {
-      setMessage(error.message)
+    if (
+      await result.paymentIntent &&
+      result.paymentIntent.status === "succeeded"
+    ) {
+      setSuccessMsg(true)
+      setErrorMsg(false)
+      elementRef.clear()
+      setSelected("option1")
+    }
+
+    if (await result.error) {
+      setMessage(result.error.message)
+      setErrorMsg(true)
+      setSuccessMsg(false)
     }
 
     setIsProcessing(false)
   }
 
   return (
-    <div className="mx-auto md:w-10/12">
-      {successMsg ? <SuccessMessage /> : null}
-      {errorMsg ? <ErrorMessage /> : null}
-      <form onSubmit={handleSubmit}>
-        {/* {message
-          ? message : null
-        } */}
+    <div className="mx-auto md:w-10/12 flex flex-col">
+      <form onSubmit={handleSubmit} id="donateForm">
         <Grid>
-          {!successMsg && !errorMsg
-            ?
-              <div className="flex flex-col">
-                <AmountPicker
-                  amountOptions={amountOptions}
-                  onChange={onChange}
-                  selected={selected}
-                  setCustomAmount={setCustomAmount}
-                />
-                <div className="mt-8">
-                  <PaymentElement />
-                </div>
-                <div
-                  className="w-full mx-auto mt-6 rainbow-shadow-button"
+          <div className="flex flex-col">
+            <AmountPicker
+              amountOptions={amountOptions}
+              onChange={onChange}
+              selected={selected}
+              setCustomAmount={setCustomAmount}
+            />
+            <div className="mt-8 mb-4">
+              <PaymentElement
+                onReady={e => setElementRef(e)}
+              />
+            </div>
+            {successMsg
+              ? <Alert
+                  className={
+                    successMsg
+                      ? "transition-all ease-in-out duration-500 h-full opacity-100 overflow-hidden"
+                      : "transition-all ease-in-out duration-500 h-0 opacity-0 overflow-hidden"
+                  }
+                  color="green"
                 >
-                  <Button
-                    action="primary"
-                    className="w-full"
-                    disabled={isProcessing}
-                    role="button"
-                    title="Donate"
-                    type="submit"
-                  >
-                    {isProcessing
-                      ? <>"Processing..."</>
-                      : <>Donate</>
-                    }
-                  </Button>
-                </div>
-              </div>
-            : null
-          }
+                  <span className="text-2xl">
+                    Thank you for your donation &nbsp;
+                    <i className="fa-regular fa-heart-circle-check"/>
+                  </span>
+                </Alert>
+              : null
+            }
+            {errorMsg
+              ?
+                <Alert
+                  className={
+                    errorMsg
+                      ? "transition-all ease-in-out duration-500 h-full opacity-100 overflow-hidden"
+                      : "transition-all ease-in-out duration-500 h-0 opacity-0 overflow-hidden"
+                  }
+                  color="red"
+                >
+                  <span className="text-2xl">
+                    <i className="fa-regular fa-circle-xmark"/> &nbsp;
+                    {message}
+                  </span>
+                </Alert>
+              : null
+            }
+            <div
+              className="w-full mx-auto mt-6 rainbow-shadow-button"
+            >
+              <Button
+                action="primary"
+                className="w-full"
+                disabled={isProcessing}
+                role="button"
+                title="Donate"
+                type="submit"
+              >
+                {isProcessing
+                  ? <>"Processing..."</>
+                  : <>Donate</>
+                }
+              </Button>
+            </div>
+          </div>
         </Grid>
       </form>
     </div>

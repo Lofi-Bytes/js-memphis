@@ -15,6 +15,8 @@ import SEO from '../components/seo'
 import TextLink from '../components/text-link'
 import Donate from '../components/donate'
 
+import {appearance} from './stripe-appearance'
+
 
 type PageProps = {
   location: Location
@@ -24,13 +26,13 @@ const DonatePage = ({
   location
 }: PageProps) => {
 
-  const [stripePromise, setStripePromise] = React.useState(null)
-  const [paymentIntentId, setPaymentIntentId] = React.useState("")
-  const [clientSecret, setClientSecret] = React.useState("")
-  const [selected, setSelected] = React.useState("option1")
-  const [customAmount, setCustomAmount] = React.useState(null)
   const [amount, setAmount] = React.useState(null)
+  const [clientSecret, setClientSecret] = React.useState("")
+  const [customAmount, setCustomAmount] = React.useState(null)
   const [paymentAmount, setPaymentAmount] = React.useState(null)
+  const [paymentIntentId, setPaymentIntentId] = React.useState("")
+  const [selected, setSelected] = React.useState("option1")
+  const [stripePromise, setStripePromise] = React.useState(null)
 
   const amountOptions:[number, number, number] = [10, 30, 55]
 
@@ -38,11 +40,15 @@ const DonatePage = ({
     setSelected(event.target.name)
   }
 
-  React.useEffect(() => {
-    console.log(`paymentAmount: ${paymentAmount}`)
-    console.log(`customAmount: ${customAmount}`)
-    console.log(`amount: ${amount}`)
-  }, [paymentAmount])
+  // React.useEffect(() => {
+  //   console.log(selected)
+  // }, [selected])
+
+  // React.useEffect(() => {
+  //   console.log(`paymentAmount: ${paymentAmount}`)
+  //   console.log(`customAmount: ${customAmount}`)
+  //   console.log(`amount: ${amount}`)
+  // }, [paymentAmount])
 
   React.useEffect(() => {
     if (selected != 'option4') {
@@ -56,13 +62,11 @@ const DonatePage = ({
   }, [selected])
 
   React.useEffect(() => {
-    setTimeout(() => {
-      if (selected === 'option4' && customAmount !== null) {
-        return setPaymentAmount(customAmount)
-      } else if (selected !== 'option4') {
-        setPaymentAmount(amount)
-      }
-    }, 500)
+    if (selected === 'option4' && customAmount !== null) {
+      return setPaymentAmount(customAmount)
+    } else if (selected !== 'option4') {
+      setPaymentAmount(amount)
+    }
   }, [selected, amount, customAmount])
 
   React.useEffect(() => {
@@ -96,7 +100,23 @@ const DonatePage = ({
     })
   }, [])
 
+  const firstUpdate = React.useRef(true)
+  const secondUpdate = React.useRef(true)
   React.useEffect(() => {
+    if (firstUpdate.current) {
+      firstUpdate.current = false
+      // console.log("First Update!")
+      return
+    }
+
+    if (secondUpdate.current) {
+      secondUpdate.current = false
+      // console.log("Second Update!")
+      return
+    }
+
+    // console.log("subsequent Update!")
+
     let activeFetch = true
     fetch(
       `${process.env.ENV === "development"
@@ -112,75 +132,15 @@ const DonatePage = ({
       }
     ).then(async (response) => {
       if (activeFetch) {
-        console.log(response)
+        // console.log(response)
       }
     })
     return () => {activeFetch = false}
   }, [paymentAmount])
 
   const options = {
-    // passing the client secret obtained in step 3
     clientSecret: clientSecret,
-    // Fully customizable with appearance API.
-    appearance: {
-      // theme: 'none',
-      variables: {
-        borderRadius: '0.5rem',
-        colorBackground: 'rgb(231, 229, 228)',
-        colorDanger: 'rgb(239, 68, 68)',
-        // colorPrimary: 'rgb(88, 28, 135)',
-        colorPrimary: '#7e22ce',
-        colorText: 'rgb(87, 83, 78)',
-        fontFamily: 'proxima-nova, sans-serif',
-        fontSizeBase: '1rem',
-        spacingUnit: '4.75px'
-      },
-      rules: {
-        ".Tab": {
-          borderWidth: "2px",
-          boxShadow: '0 4px 6px -1px rgb(215, 215, 215), 0 2px 4px -2px rgb(215, 215, 215)',
-        },
-        ".Tab--selected": {
-          borderWidth: "2px",
-          boxShadow: '0 4px 6px -1px rgb(215, 215, 215), 0 2px 4px -2px rgb(215, 215, 215)',
-        },
-        '.Block': {
-          backgroundColor: '#f5f5f4',
-          border: '2px solid #e7e5e4'
-        },
-        '.Label': {
-          marginBottom: '.54rem',
-          // marginTop: '1rem'
-        },
-        '.Input': {
-          border: 'none',
-          borderLeft: '4px solid #d8b4fe',
-          boxShadow: '0 4px 6px -1px rgb(215, 215, 215), 0 2px 4px -2px rgb(215, 215, 215)',
-          fontSize: '1.125rem',
-          letterSpacing: '',
-          marginBottom: '1rem',
-          outline: 'none'
-        },
-        '.Input:focus': {
-          border: 'none',
-          borderLeft: '4px solid #d946ef',
-          boxShadow: '0 4px 6px -1px rgb(215, 215, 215), 0 2px 4px -2px rgb(215, 215, 215)',
-          outline: 'none'
-        },
-        '.Input--invalid': {
-          border: 'none',
-          borderLeft: '4px solid #fca5a5',
-          boxShadow: '0 4px 6px -1px rgb(215, 215, 215), 0 2px 4px -2px rgb(215, 215, 215)',
-          outline: 'none'
-        },
-        '.Input--invalid:focus': {
-          border: 'none',
-          borderLeft: '4px solid #ef4444',
-          boxShadow: '0 4px 6px -1px rgb(215, 215, 215), 0 2px 4px -2px rgb(215, 215, 215)',
-          outline: 'none'
-        }
-      }
-    },
+    appearance: appearance
   }
 
   return (
@@ -221,6 +181,7 @@ const DonatePage = ({
                   onChange={handleOptionChange}
                   selected={selected}
                   setCustomAmount={setCustomAmount}
+                  setSelected={setSelected}
                 />
               </Elements>
             : null

@@ -7,6 +7,7 @@ import {
 
 import MaskedInput from 'react-text-mask'
 import createNumberMask from 'text-mask-addons/dist/createNumberMask'
+import currency from "currency.js"
 
 import './custom-amount-input.css'
 
@@ -44,7 +45,8 @@ export type CustomAmountInputProps = {
   className?: string,
   handleChange: Function,
   label: string,
-  tabIndex: number
+  setCustomAmount: React.Dispatch<React.SetStateAction<string>>,
+  tabIndex: number,
 }
 
 const defaultMaskOptions = {
@@ -72,13 +74,7 @@ const CustomAmountInput = ({
   label = label.toLowerCase()
 
   const handleChange = (event) => {
-    setTimeout(() => {
-      const value = event.target.value
-      let dollarsToCents = parseInt(value.substr(0, value.indexOf('.')).replace(/[$,.]+/g,""))*100
-      const cents = parseInt(value.substr(value.indexOf('.'), value.length).replace(/[$,.]+/g,""))
-      const amount = dollarsToCents + cents
-      setCustomAmount(amount)
-    }, 500)
+    setCustomAmount(currency(event.target.value).intValue)
   }
 
   React.useEffect(() => {

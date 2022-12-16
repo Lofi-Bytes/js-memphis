@@ -390,8 +390,80 @@ const MegaloTorusPage = ({
           <P className="text-sm">Featured artists: Sally Dunn and Kenton Remus.</P>
 
           <H3 className="mt-10">
-            Photo gallery
+            Gallery
           </H3>
+
+          <div
+            className="mt-4"
+            style={{
+              padding: "56.25% 0 0 0",
+              position: "relative"
+            }}
+          >
+            <iframe
+              src="https://player.vimeo.com/video/772588179?h=abc4f7dd1a&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+              frameBorder="0"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowFullScreen
+              className="rounded-xl absolute top-0 left-0 w-full h-full"
+              title="MegaloTorus@Elsewhence2022.mp4"
+            />
+          </div>
+          <script src="https://player.vimeo.com/api/player.js" />
+
+          <div
+            className="mt-4"
+            style={{
+              padding: "100% 0 0 0",
+              position: "relative"
+            }}
+          >
+            <iframe
+              src="https://player.vimeo.com/video/720533464?h=34f50d8a14&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+              frameBorder="0"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowFullScreen
+              className="rounded-xl absolute top-0 left-0 w-full h-full"
+              title="video-1655236611.mp4"
+            />
+          </div>
+          <script src="https://player.vimeo.com/api/player.js" />
+
+          <div
+            className="mt-4"
+            style={{
+              padding: "56.25% 0 0 0",
+              position: "relative"
+            }}
+          >
+            <iframe
+              src="https://player.vimeo.com/video/720532924?h=34c4674c3e&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+              frameBorder="0"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowFullScreen
+              className="rounded-xl absolute top-0 left-0 w-full h-full"
+              title="video-1655236611.mp4"
+            />
+          </div>
+          <script src="https://player.vimeo.com/api/player.js" />
+
+          <div
+            className="mt-4"
+            style={{
+              padding: "56.25% 0 0 0",
+              position: "relative"
+            }}
+          >
+            <iframe
+              src="https://player.vimeo.com/video/720532206?h=4ae80ac5ca&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+              frameBorder="0"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowFullScreen
+              className="rounded-xl absolute top-0 left-0 w-full h-full"
+              title="video-1655236611.mp4"
+            />
+          </div>
+          <script src="https://player.vimeo.com/api/player.js" />
 
           <StaticImage
             alt="MegaloTorus lit up at night exterior."
@@ -453,87 +525,6 @@ const MegaloTorusPage = ({
           />
           <P className="text-sm">MegaloTorus lit up at night interior.</P>
 
-          <div
-            className="mt-4"
-            style={{
-              padding: "100% 0 0 0",
-              position: "relative"
-            }}
-          >
-            <iframe
-              src="https://player.vimeo.com/video/720533464?h=34f50d8a14&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-              frameBorder="0"
-              allow="autoplay; fullscreen; picture-in-picture"
-              allowFullScreen
-              className="rounded-xl"
-              style={{
-                position: "absolute",
-                top: 0,
-                left:0,
-                width: "100%",
-                height:"100%"
-
-              }}
-              title="video-1655236611.mp4"
-            >
-            </iframe>
-          </div>
-          <script src="https://player.vimeo.com/api/player.js"></script>
-
-          <div
-            className="mt-4"
-            style={{
-              padding: "56.25% 0 0 0",
-              position: "relative"
-            }}
-          >
-            <iframe
-              src="https://player.vimeo.com/video/720532924?h=34c4674c3e&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-              frameBorder="0"
-              allow="autoplay; fullscreen; picture-in-picture"
-              allowFullScreen
-              className="rounded-xl"
-              style={{
-                position: "absolute",
-                top: 0,
-                left:0,
-                width: "100%",
-                height:"100%"
-
-              }}
-              title="video-1655236611.mp4"
-            >
-            </iframe>
-          </div>
-          <script src="https://player.vimeo.com/api/player.js"></script>
-
-          <div
-            className="mt-4"
-            style={{
-              padding: "56.25% 0 0 0",
-              position: "relative"
-            }}
-          >
-            <iframe
-              src="https://player.vimeo.com/video/720532206?h=4ae80ac5ca&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-              frameBorder="0"
-              allow="autoplay; fullscreen; picture-in-picture"
-              allowFullScreen
-              className="rounded-xl"
-              style={{
-                position: "absolute",
-                top: 0,
-                left:0,
-                width: "100%",
-                height:"100%"
-
-              }}
-              title="video-1655236611.mp4"
-            >
-            </iframe>
-          </div>
-          <script src="https://player.vimeo.com/api/player.js"></script>
-
           <Banner color="purple" className="mt-16">
             Credits
           </Banner>
@@ -559,54 +550,6 @@ const MegaloTorusPage = ({
           </P>
 
           <P className="text-lg mt-4">
-            Sean Shirley
-          </P>
-
-          <P className="text-lg mt-4">
-            Martin Newmark
-          </P>
-
-          <P className="text-lg mt-4">
-            Joseph Martinez
-          </P>
-
-          <P className="text-lg mt-4">
-            Daniel Tenenbaum
-          </P>
-
-          <P className="text-lg mt-4">
-            Becca Elliott
-          </P>
-
-          <P className="text-lg mt-4">
-            Sean Sidelko
-          </P>
-
-          <P className="text-lg mt-4">
-            Tiffany Chau
-          </P>
-
-          <P className="text-lg mt-4">
-            Presley Peach
-          </P>
-
-          <P className="text-lg mt-4">
-            Zach Herman
-          </P>
-
-          <P className="text-lg mt-4">
-            Bryan Lastrella
-          </P>
-
-          <P className="text-lg mt-4">
-            Preston Lancaster
-          </P>
-
-          <P className="text-lg mt-4">
-            Jenny McManus
-          </P>
-
-          <P className="text-lg mt-4">
             <TextLink
               to='https://teachbuildplay.org/portfolio/'
               title="Teach Build Play: Andy Taylor Parkour Design"
@@ -617,11 +560,47 @@ const MegaloTorusPage = ({
           </P>
 
           <P className="text-lg mt-4">
+            Abby Black
+          </P>
+
+          <P className="text-lg mt-4">
+            Tiffany Chau
+          </P>
+
+          <P className="text-lg mt-4">
+            Becca Elliott
+          </P>
+
+          <P className="text-lg mt-4">
+            Zach Herman
+          </P>
+
+          <P className="text-lg mt-4">
+            Preston Lancaster
+          </P>
+
+          <P className="text-lg mt-4">
+            Bryan Lastrella
+          </P>
+
+          <P className="text-lg mt-4">
             Taylor Link
           </P>
 
           <P className="text-lg mt-4">
-            Brooke Sparling
+            Joseph Martinez
+          </P>
+
+          <P className="text-lg mt-4">
+            Jenny McManus
+          </P>
+
+          <P className="text-lg mt-4">
+            Martin Newmark
+          </P>
+
+          <P className="text-lg mt-4">
+            Presley Peach
           </P>
 
           <P className="text-lg mt-4">
@@ -629,11 +608,23 @@ const MegaloTorusPage = ({
           </P>
 
           <P className="text-lg mt-4">
-            Abby Black
+            Sean Shirley
+          </P>
+
+          <P className="text-lg mt-4">
+            Sean Sidelko
+          </P>
+
+          <P className="text-lg mt-4">
+            Brooke Sparling
           </P>
 
           <P className="text-lg mt-4">
             Lee Tal Hermon
+          </P>
+
+          <P className="text-lg mt-4">
+            Daniel Tenenbaum
           </P>
 
           <P className="mt-8 mb-10">
