@@ -89,7 +89,7 @@ const SocialIconRow = ({
       </div>
       <div className="ml-2">
         <OutboundLink
-          href="https://twitter.com/LofiBytes/"
+          href="https://hachyderm.io/web/@LofiBytes"
           aria-label="Connect with me on Mastodon"
           title="Connect with me on Mastodon"
           className={ICONANCHOR}
