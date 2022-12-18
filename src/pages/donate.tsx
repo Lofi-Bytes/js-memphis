@@ -162,7 +162,7 @@ const DonatePage = ({
             icon="fa-duotone fa-hands-holding-heart"
           />
           <P className="mt-10">
-            If you find value in my blog and the projects that I share, or just enjoy seeing the work that I do, please consider donating. The cost of medical transition in the U.S.A. is exorbitant - <TextLink
+            The cost of medical transition in the U.S.A. is exorbitant - <TextLink
               to="https://www.businessinsider.com/transgender-medical-care-surgery-expensive-2019-6"
               title="The staggering costs of being transgender in the US, where even patients with health insurance can face six-figure bills"
               outbound={true}
