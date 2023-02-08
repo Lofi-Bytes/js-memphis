@@ -97,6 +97,13 @@ const MegaloTorusPage = ({
       <Jumbotron
         align="left"
         title={title}
+        subtitle={
+          <>
+            <p className="font-serif italic mt-6 text-base">
+              Jillian S. Estrella • Sierra B. Estrella
+            </p>
+          </>
+        }
         date={formattedDate}
       />
       <Main>
@@ -185,28 +192,28 @@ const MegaloTorusPage = ({
           </H3>
 
           <P className="mt-4">
-            The structure was modelled using SketchUp. Three jigs were created to precicely place the ground anchors in the correct location and at the correct angles. The spines were made from rigid schedule 40 polyvinylchloride.
+            The initial concept of the structure was modelled by Jillian Estrella using SketchUp and later revised in Rhinoceros 3D by Andy Taylor. Three jigs were created to precicely place the ground anchors in the correct location and at the correct angles. The spines were made from rigid schedule 40 polyvinylchloride.
           </P>
 
           <StaticImage
-            alt="MegaloTorus structure model side view; modeled by Jillian Estrella."
+            alt="MegaloTorus structure model side view; modeled by Andy Taylor."
             className="mt-3 family"
             formats={["auto", "webp", "avif"]}
             layout="fullWidth"
             placeholder="blurred"
-            src="../../images/projects/megalotorus/megalotorus-02.png"
+            src="../../images/projects/megalotorus/megalotorus1.png"
           />
-          <P className="text-sm">MegaloTorus structure model side view; modeled by Jillian Estrella.</P>
+          <P className="text-sm">MegaloTorus structure model side view; modeled by Andy Taylor.</P>
 
           <StaticImage
-            alt="MegaloTorus structure model top view; modeled by Jillian Estrella."
+            alt="MegaloTorus structure model top view; modeled by Andy Taylor."
             className="mt-3 family"
             formats={["auto", "webp", "avif"]}
             layout="fullWidth"
             placeholder="blurred"
-            src="../../images/projects/megalotorus/megalotorus-03.png"
+            src="../../images/projects/megalotorus/megalotorus2.png"
           />
-          <P className="text-sm">MegaloTorus structure model top view; modeled by Jillian Estrella.</P>
+          <P className="text-sm">MegaloTorus structure model top view; modeled by Andy Taylor.</P>
 
           <StaticImage
             alt="Completed structure without the cover."

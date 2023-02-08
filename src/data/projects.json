@@ -1,15 +1,36 @@
 [
   {
+    "title": "Harmony",
+    "path": "/projects/harmony/",
+    "published": true,
+    "excerpt": "Harmony is a playful, immersive, interactive audio/visual experience and is designed for participants of all ages and abilities.",
+    "date": "02/07/2023",
+    "section": "art-installations",
+    "tags": [
+      "Apopgaea",
+      "Audio/Visual",
+      "Interactive Art",
+      "Immersive Art",
+      "Large-Scale Art",
+      "LED",
+      "Synthesizers"
+    ],
+    "active": true
+  },
+  {
     "title": "☆*:.¨. MegaloTorus .*・｡ﾟ.*･｡ﾟ҉̛☆",
     "path": "/projects/megalotorus/",
     "published": true,
-    "excerpt": "MegaloTorus uses light and sound to explore the dynamic flow of energy, as well as the infinite nature of the torus.",
+    "excerpt": "MegaloTorus uses light and sound to explore the dynamic flow of energy and the infinite nature of the torus.",
     "date": "06/09/2022",
     "section": "art-installations",
     "tags": [
       "Apopgaea",
-      "Art",
+      "Audio/Visual",
       "Cosmometry",
+      "Elsewhence",
+      "Immersive Art",
+      "Large-Scale Art",
       "LED",
       "Toroid"
     ],
