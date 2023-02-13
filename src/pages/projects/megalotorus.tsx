@@ -377,7 +377,7 @@ const MegaloTorusPage = ({
           />
           <P className="text-sm">Screenshot of MegaloTorus light sequence</P> */}
 
-          <H3 className="mt-10">
+          {/* <H3 className="mt-10">
             Interior design
           </H3>
 
@@ -394,7 +394,7 @@ const MegaloTorusPage = ({
             src="../../images/projects/megalotorus/IMG_1373.jpeg"
           />
           <P className="text-sm">Example of featured art that hangs from the ceiling.</P>
-          <P className="text-sm">Featured artists: Sally Dunn and Kenton Remus.</P>
+          <P className="text-sm">Featured artists: Sally Dunn and Kenton Remus.</P> */}
 
           <H3 className="mt-10">
             Gallery
