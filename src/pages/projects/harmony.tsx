@@ -192,7 +192,7 @@ const HarmonyPage = ({
           </P>
 
           <P className="mt-4">
-            Each Harmony Tube is tuned to a specific note. Together, the tubes are tuned to a given scale. These will be rotated at a given interval so that participants can experience a diversity of sounds. Individual notes and the scale will be displayed.
+            Each Harmony Tube is tuned to a specific note. Together, the tubes are tuned to a given scale. These will be rotated at a given interval so that participants can experience a diversity of sounds. Individual notes and the scale will be displayed on small LCD screens, adding educational value.
           </P>
 
           <P className="mt-4">

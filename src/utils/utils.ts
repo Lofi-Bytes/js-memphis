@@ -13,14 +13,14 @@ export const randomIntFromInterval = (
 */
 export const removeElementsByClass = (
   className: string
-): any => {
-  let elements
-  typeof document !== `undefined`
-    ? elements = document.getElementsByClassName(className)
-    : null
+): void => {
+  if (typeof document === `undefined`) return
 
-  while(elements.length > 0) {
-    elements[0].parentNode.removeChild(elements[0])
+  const elements = document.getElementsByClassName(className)
+
+  while (elements.length > 0) {
+    const element = elements[0]
+    element.parentNode.removeChild(element)
   }
 }
 
@@ -28,19 +28,18 @@ export const removeElementsByClass = (
   Window object doesn't exist outside of the window!
 */
 export const getDocumentHeight = (): number | null => {
-  let body
-  typeof document !== `undefined`
-    ? body = document.body
-    : null
+  if (typeof document === `undefined`) return null
 
-  let html
-  typeof document !== `undefined`
-    ? html = document.documentElement
-    : null
+  const body = document.body
+  const html = document.documentElement
 
-  return typeof document !== `undefined`
-    ? Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight)
-    : null
+  return Math.max(
+    body.scrollHeight,
+    body.offsetHeight,
+    html.clientHeight,
+    html.scrollHeight,
+    html.offsetHeight
+  )
 }
 
 /*
@@ -51,6 +50,7 @@ export const getWindowInnerWidth = (): number => {
     ? window.innerWidth
     : 0
 }
+
 
 /*
   Utilities for making tailwind classes cleaner to work with
