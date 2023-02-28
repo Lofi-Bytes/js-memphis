@@ -161,15 +161,15 @@ const HarmonyPage = ({
           <H3 className="mt-10">Debut</H3>
 
           <P className="mt-0.5">Event:&nbsp;
-            <TextLink
+            {/* <TextLink
               to='https://apogaea.com/'
               title="Colorado Burning Man regional event"
               outbound={true}
             >
               Apogaea
-            </TextLink>
+            </TextLink> */}TBD
           </P>
-          <P className="mt-0.5">Date: June 9-11, 2023</P>
+          <P className="mt-0.5">Date: TBD</P>
 
           <H3 className="mt-10">Philosophy</H3>
 
