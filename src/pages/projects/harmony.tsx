@@ -184,7 +184,7 @@ const HarmonyPage = ({
           </P>
 
           <P className="mt-4">
-            For gorgeous visual effect, the Harmony Tubes are loaded with 360o high density individually addressable RGB LEDs. Participant's motions give rise to beautiful colors, patterns, and pulsating gradients.
+            For gorgeous visual effect, the Harmony Tubes are loaded with 360<sup>o</sup> high density individually addressable RGB LEDs. Participant's motions give rise to beautiful colors, patterns, and pulsating gradients.
           </P>
 
           <P className="mt-4">

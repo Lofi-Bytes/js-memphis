@@ -175,6 +175,12 @@ const MegaloTorusPage = ({
             In many ancient cultures, the torus has been associated with the concept of infinity. These cultures often used the torus to symbolize the universe. We now understand that toroidal structures show up everywhere in nature - from the micro-atomic to the macro-galactic. In the study of cosmometry, it is believed that in its most balanced dynamic flow process, energy moves like a torus. From galaxies to ecosystems to the subatomic, there is a seamless exchange of energy and information (a.k.a consciousness) moving cyclically throughout the entire cosmic experience via the torus.
           </P>
 
+          <H3 className="mt-10">Art as a place</H3>
+
+          <P className="mt-4">
+            A common thread with our art is the concept of “art as a place”. Our art is intended to be a destination. A place for people to gather. To nurture or find community. Or to find a quiet alcove alone or with a loved one to get grounded and ponder life's more challenging questions. MegaloTorus embodies this philosophy - it offers a gorgeous audio-visual experience while acting as a gathering place that nurturs community.
+          </P>
+
           {/* <P className="mt-4">
             Within the torus exists two different types of portals. Many portals in nature - such as a connected channel between one universe and another - are formed from the vortex of a torus. Yet other portals are formed directly from the torus' membrane.
           </P> */}
@@ -187,12 +193,28 @@ const MegaloTorusPage = ({
             Build Process
           </Banner>
 
-          <H3 className="mt-10 mb-10">
+          <H3 className="mt-10">
             Structure
           </H3>
 
           <P className="mt-4">
-            The initial concept of the structure was modelled by Jillian Estrella using SketchUp and later revised in Rhinoceros 3D by Andy Taylor. Three jigs were created to precicely place the ground anchors in the correct location and at the correct angles. The spines were made from rigid schedule 40 polyvinylchloride.
+            MegaloTorus is a toroidal-shaped structure made up of sixteen 30'-long arches.
+          </P>
+
+          <P className="mt-4">
+            The center of the MegaloTorus is a hexadecagon with a radius of two feet. One end of each arch sits at one of the vertices of this hexadecagon.
+          </P>
+
+          <P className="mt-4">
+            The outer is a hexadecagon of radius fourteen feet where the opposite end of each pole sits at a one of the vertices. However, the outer is rotated counter-clockwise (if above the structure looking down) by 3 vertices relative to the inner. Combined, this gives rise to the illusion of a spiral - or “twisting” of the center column.
+          </P>
+
+          <P className="mt-4">
+            Three jigs were created to precicely place the ground anchors in the correct location and at the correct angles. The spines are made from rigid schedule 40 polyvinylchloride.
+          </P>
+
+          <P className="mt-4">
+            The initial concept of the structure was modelled by Jillian Estrella using SketchUp and later revised in Rhinoceros 3D by Andy Taylor.
           </P>
 
           <StaticImage
@@ -225,7 +247,7 @@ const MegaloTorusPage = ({
           />
           <P className="text-sm">Completed structure without the cover.</P>
 
-          <H3 className="mt-10 mb-10">
+          <H3 className="mt-10">
             Cover (membrane)
           </H3>
 
@@ -294,7 +316,7 @@ const MegaloTorusPage = ({
           <P className="text-sm">Completed structure with the cover exterior.</P>
 
           <H3 className="mt-10">
-            LEDs
+            Pixels
           </H3>
 
           <P className="mt-4">
