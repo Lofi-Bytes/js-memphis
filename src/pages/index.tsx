@@ -131,7 +131,7 @@ const HomePage = ({
                 outbound={true}
               >
                 developer experience
-              </TextLink> engineer. I am also a tech lead. I love building beautiful and accessible digital experiences. I am passionate about technology that advances social and environmental justice.
+              </TextLink> engineer. I am also a tech lead. I love building beautiful and accessible digital experiences. I am passionate about advancing social and environmental justice.
             </P>
             {/* <P className="mt-4">
               Please take a look around and be sure to check back often. This is my brand new website as of December 2020, and I will be adding new content regularly.
