@@ -245,16 +245,22 @@ const AboutPage = ({
 
           <UL className="mt-4 list-disc ml-8 sm:ml-0">
             <li>
+              Providing technical leadership to my team
+            </li>
+            <li>
+              Ensuring production stability, monitoring, and root cause analysis for our products
+            </li>
+            <li>
+              Establishing, aggregating, improving and sharing team standards and best practices across the department
+            </li>
+            <li>
               Collaborate with design, content, accessibility, and product leads to roadmap, plan and delegate work
             </li>
             <li>
-              Coach junior, mid-level, and senior engineers
+              Mentor, guide, and coach engineers for technical and leadership growth
             </li>
             <li>
-              Improve process and team standards
-            </li>
-            <li>
-              Recruit and interview candidates
+              Recruiting, hiring and onboarding talent and ensuring we have the right mix of talent within the team
             </li>
           </UL>
 
