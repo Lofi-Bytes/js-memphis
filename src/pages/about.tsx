@@ -218,7 +218,7 @@ const AboutPage = ({
           </div>
 
           <P className="mt-3">
-            I manage the design system and developer experience tooling within Northwestern Mutual's Developer Experience (DevX) group. My team oversees:
+            I manage the design system and developer experience (DevX) tooling within Northwestern Mutual's Experience Platform group. My team oversees:
           </P>
 
           <UL className="mt-4 list-disc ml-8 sm:ml-0">
