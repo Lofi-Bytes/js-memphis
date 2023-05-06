@@ -32,7 +32,7 @@ const NotFoundPage = ({
     <Layout location={location}>
       <SEO
         metaTitle="Jillian S. Estrella"
-        metaDescription="Design systems engineer"
+        metaDescription="As a design systems and developer experience engineer and an experienced engineering manager, I am dedicated to creating beautiful and accessible digital experiences. Additionally, I am driven to advance social and environmental justice causes and integrate those values into my work."
         canonicalUrl="https://jillian.dev/"
       />
       <Jumbotron

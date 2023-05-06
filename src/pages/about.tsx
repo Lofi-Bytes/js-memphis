@@ -85,7 +85,7 @@ const AboutPage = ({
     <Layout location={location}>
       <SEO
         metaTitle="About Jillian"
-        metaDescription="I love building beautiful digital experiences and I am passionate about technology that advances social and environmental justice."
+        metaDescription="As a design systems and developer experience engineer and an experienced engineering manager, I am dedicated to creating beautiful and accessible digital experiences. Additionally, I am driven to advance social and environmental justice causes and integrate those values into my work."
         canonicalUrl="https://jillian.dev/about"
       />
       <Jumbotron
@@ -103,7 +103,7 @@ const AboutPage = ({
 
           <h2 className="mt-10 text-2xl tracking-wide text-stone-700">Jillian S. Estrella <br className="sm:hidden" /><span className="text-xl text-stone-600">🏳️‍🌈 she/her 🏳️‍⚧️</span></h2>
           <P className="mt-1 text-xl">
-            Design systems and developer experience engineer
+            Software Engineering Manager, Design Systems and Developer Experience
           </P>
           <SocialIconRow className="mt-3" />
           <Button
@@ -218,86 +218,47 @@ const AboutPage = ({
           </div>
 
           <P className="mt-3">
-            I manage the design system and developer experience (DevX) tooling within Northwestern Mutual's Experience Platform group. My team oversees:
+            As the manager of the design systems and developer experience tooling within Northwestern Mutual's Experience Platform group, I lead a team responsible for overseeing the System Guide, core libraries, client-side utilities, and community contribution libraries.
+          </P>
+
+          <P className="mt-3">
+            My key responsibilities in this role include providing technical leadership, ensuring production stability for products, standardizing and sharing best practices across the department, collaborating with cross-functional teams to plan and delegate work, mentoring and coaching engineers for technical and leadership growth, and recruiting, hiring, and onboarding talent for team development.
+          </P>
+
+          <P className="mt-3">
+            Some of my significant accomplishments include:
           </P>
 
           <UL className="mt-4 list-disc ml-8 sm:ml-0">
             <li>
-              Design system core libraries
+              Boosting team productivity and morale through team-building and improved communication
             </li>
             <li>
-              Design system community contribution libraries
+              Implementing a ticket refinement process to set more explicit expectations and outcomes
             </li>
             <li>
-              Server-side and client-side utilities
+              Instituting a refined backlog grooming process to triage issues and feature requests, resulting in reduced backlog volume
             </li>
             <li>
-              Platform integrations
+              Pioneering and refining a “swarming sprint” process that allowed my team to quickly complete a large volume of highly-parallelizable work
             </li>
             <li>
-              Platform developer tools
+              Improving the pull request review process and implementing more precise guidelines for contributing to the design system
+            </li>
+            <li>
+              Enhancing the efficiency of program increment (PI) planning through a pre-planning process, resulting in less expensive planning sessions
+            </li>
+            <li>
+              Guiding a working group that developed ways to strengthen design system support while reducing the support burden for the team
+            </li>
+            <li>
+              Increasing product resiliency by implementing comprehensive testing standards
+            </li>
+            <li>
+              Identifying opportunities to gather, define, and visualize data to drive better decision-making and realize positive outcomes
             </li>
           </UL>
 
-          <P className="mt-3">
-            Some of my responsibilities include:
-          </P>
-
-          <UL className="mt-4 list-disc ml-8 sm:ml-0">
-            <li>
-              Providing technical leadership to my team
-            </li>
-            <li>
-              Ensuring production stability, monitoring, and root cause analysis for our products
-            </li>
-            <li>
-              Establishing, aggregating, improving and sharing team standards and best practices across the department
-            </li>
-            <li>
-              Collaborate with design, content, accessibility, and product leads to roadmap, plan and delegate work
-            </li>
-            <li>
-              Mentor, guide, and coach engineers for technical and leadership growth
-            </li>
-            <li>
-              Recruiting, hiring and onboarding talent and ensuring we have the right mix of talent within the team
-            </li>
-          </UL>
-
-          {/* <P className="mt-3">
-            I'm soooo excited‼️ to share that starting in July I will be joining the design system team at Northwestern Mutual, where I will be leading the contributions and integrations branch for their design system, Luna.
-          </P> */}
-          {/* Oversee the planning, design and implementation of the design system.
-          Provide technical direction in-line with business goals.
-          Train, mentor, and support engineers on the team.
-          Maintian continuous integration pipeline.
-          monorepo
-          contributions and integrations */}
-
-
-          {/*
-
-          <P className="mt-3">
-            As the core engineering lead for <TextLink to="https://www.northwesternmutual.com/" title="Northwestern Mutual" outbound={true}>Northwestern Mutual's</TextLink> design system, Luna, I work with a talented team of engineers, designers, content strategists, product managers, and project managers. I spend a lot of my time planing, roadmapping and prioritizing to provide technical direction in-line with business goals.
-          </P>
-
-          <P className="mt-3">
-            At any give time I also oversee the implementation of multiple engineering projects - including mentoring engineers and performing code-reviews. I think of myself as a talent multiplier - I aim to remove blockers so that the rest of the team can perform at thier best and focus on their respective projects.
-          </P>
-
-          <P className="mt-3">
-            I also spend time planing for and cuting releases. I help to maintain our continuous integration pipeline. I have contributed heavily to our contributions and integrations strategy.
-          </P>
-
-          */}
-            {/* - Partner with a creative director to build a ground-up redesign of the design system powering the financial planning tools experience
-            - Work with product teams to migrate their applications from the legacy system to new
-            - Manage a team of engineers to build and maintain engineering tools for implementing the design system (Node scripts, Scss framework, React lib, etc)
-            - Work with product teams to determine & fulfill new functionality
-            - Oversee development and content creation for the design system style guide (eng usage, design usage, product guidelines) */}
-          {/* <P className="mt-3">
-            I work with a team of talented people -
-          </P> */}
           <h2 className="mt-10 text-xl tracking-wide text-stone-700">Previous Work</h2>
 
           <h3 className="mt-6 mb-2 text-stone-600 text-lg">Senior Software Engineer, Design Systems Core Lead</h3>
@@ -321,62 +282,31 @@ const AboutPage = ({
           </div>
 
           <P className="mt-3">
-            In this position I oversaw multiple teams/projects on Northwestern Mutual's design system, Luna. Some of my responsibilities included:
+            As a leader overseeing multiple teams and projects on Northwestern Mutual’s design system, Luna, I was responsible for defining roadmaps, delegating work, and collaborating with designers on implementing new functionality. I also mentored and coached engineers, established team standards and best practices, and participated in recruiting and interviewing potential candidates. Additionally, I advised on contributions and integrations as needed.
+          </P>
+
+          <P className="mt-3">
+            During my tenure, I achieved the following:
           </P>
 
           <UL className="mt-4 list-disc ml-8 sm:ml-0">
             <li>
-              Worked with leadership to roadmap, plan and delegate work
+              Successfully migrated Luna to a monorepo and shipped it as such
             </li>
             <li>
-              Worked with designers to define and implement new functionality
+              Improved our continuous integration pipeline, resulting in a more reliable release cadence, better review applications, and the ability to conduct canary releases for live testing pre-production
             </li>
             <li>
-              Paired with and coached junior and mid-level engineers
+              Led the team that shipped Luna React Tables
             </li>
             <li>
-              Continually worked with my team to improve upon and establish new team standards and best practices
-            </li>
-            <li>
-              Was active in recruiting and interviewing potential candidates
-            </li>
-            <li>
-              Advised on Contributions and Integrations as needed
+              Oversaw the successful release of Luna Responsive Optimizations
             </li>
           </UL>
 
           <P className="mt-3">
-            Some of my achievements in this role were
+            Overall, my leadership and technical skills enabled me to guide the team toward successfully delivering key features and improvements to the Luna design system.
           </P>
-
-          <UL className="mt-4 list-disc ml-8 sm:ml-0">
-            <li>
-              Migrated Luna to a monorepo
-            </li>
-            <li>
-              Shipped Luna as a monorepo
-            </li>
-            <li>
-              Improved continuous integration pipeline resulting in
-              <UL className="list-disc ml-8 sm:ml-0">
-                <li>
-                  a more reliable release cadence
-                </li>
-                <li>
-                  review applications
-                </li>
-                <li>
-                  canary releases for live testing pre-production
-                </li>
-              </UL>
-            </li>
-            <li>
-              Shipped Luna React Tables
-            </li>
-            <li>
-              Shipped Luna Responsive Optimizations
-            </li>
-          </UL>
 
           <h3 className="mt-6 mb-2 text-stone-600 text-lg">Senior Software Engineer, Design Systems Contributions and Integrations Lead</h3>
 
@@ -399,11 +329,11 @@ const AboutPage = ({
           </div>
 
           <P className="mt-3">
-            In this role, my focus was on lowering barriers for other teams at the company to contribute to Luna. For a design system to be successful, it requires buy-in from everyone at the company. One way to get this investment is to ensure that anyone can contribute; thus providing everyone a sense of ownership.
+            In this role, my focus was on lowering barriers for other teams at the company to contribute to Luna. For a design system to be successful, it requires buy-in from everyone at the company. One way to get this investment is to ensure that anyone can contribute, thus giving everyone a sense of ownership.
           </P>
 
           <P className="mt-3">
-            One solution to this problem was the creation of Community Contribution Libraries (CCLs). The Luna CCL development environment, which implements <TextLink to="https://storybook.js.org/" title="Storybook" outbound={true}>Storybook</TextLink>, is pleasant to work in. It increases developer velocity while reducing frustration. Luna CCLs also lower the collaboration barrier between designers and engineers.
+            Our solution was the creation of Community Contribution Libraries (CCLs). The Luna CCL development environment, which implements Storybook, is pleasant to work in. It increases developer velocity while reducing frustration. Luna CCLs also lower the collaboration barrier between designers and engineers.
           </P>
 
           <P className="mt-3">
@@ -412,6 +342,10 @@ const AboutPage = ({
 
           <P className="mt-3">
             To govern the use of CCLs, I launched our Community Contribution Model. This model offers guidelines for CCL candidacy, lifecycle, and core promotion.
+          </P>
+
+          <P className="mt-3">
+            The CCL program has gained traction with several teams currently piloting it, and we continue to see interest from others. Our CCL platform has been instrumental in developing and deploying multiple Luna projects, and we have successfully adopted it as a baseline for Luna Core development.
           </P>
 
           <h3 className="mt-10 mb-2 text-stone-600 text-lg">Lead Developer, Educational Technology and Web Applications</h3>
@@ -433,64 +367,15 @@ const AboutPage = ({
               Aug 2015 - July 2021
             </P>
           </div>
-          {/* <P className="mt-3">
-            Previously, I worked for a nonprofit organization, <TextLink to="https://bscs.org/" title="BSCS" outbound={true}>BSCS Science Learning</TextLink>, whose mission is to transform science teaching and learning through research-driven innovation.
-          </P> */}
-          {/* <P className="mt-4">
-            At BSCS Science Learning, we operate on federal and private grants. The nature of this work requires our small team to build many websites and web apps every year. To keep up with demaind, we must ensure that our infrastructure is agile enough to meet the needs of a diverse range of projects while staying within budget, meeting strict deadlines, and reducing both the cost of ongoing maintenance and technical debt.
-          </P> */}
 
           <P className="mt-4">
-            During my time with BSCS, I established and grew an in-house software development team and modernized BSCS’s crumbling tech stack.
+            At BSCS, I built and led an in-house software development team, modernized their tech stack, and adopted innovative approaches to software and design. We implemented a design system, component-based, serverless, microservice architectures, and the Jamstack, resulting in more efficient and higher quality digital products with lower support costs.
           </P>
           <P className="mt-4">
-            I oversaw the adoption of innovative approaches to software and design such as <i className="text-pink-300 fas fa-heart" aria-hidden="true" /> <TextLink to="https://uxdesign.cc/everything-you-need-to-know-about-design-systems-54b109851969" title="Everything you need to know about design systems" outbound={true}>design systems</TextLink>; <TextLink to="https://medium.com/omarelgabrys-blog/component-based-architecture-3c3c23c7e348" title="component based architecture" outbound={true}>component based</TextLink>, <TextLink to="https://martinfowler.com/articles/serverless.html" title="serverless architecture" outbound={true}>serverless</TextLink>, <TextLink to="https://martinfowler.com/articles/microservices.html" title="microservices" outbound={true}> and microservice</TextLink> architectures; and the beloved <i className="text-pink-300 fas fa-heart" aria-hidden="true" /> <TextLink to="https://jamstack.org/" title="Jamstack" outbound={true}>Jamstack</TextLink>.
+            My responsibilities included roadmapping, planning, delegating work, architecting solutions, overseeing product lifecycles, guiding and mentoring the team, and designing/building UIs and components.
           </P>
           <P className="mt-4">
-            These innovations allowed my small team to keep pace with increasing demand. We were able to create BSCS's digital products with more efficiency and at a higher quality with lower product support costs.
-          </P>
-          <P className="mt-4">
-            A typical day for me involved
-          </P>
-          <UL className="mt-4 list-disc ml-8 sm:ml-0">
-            <li>
-              Roadmapping, planning, and delegating work
-            </li>
-            <li>
-              Architecting solutions to complex problems
-            </li>
-            <li>
-              Overseeing BSCS's digital products throughout their lifecycle
-            </li>
-            <li>
-              Guiding and mentoring my team
-            </li>
-            <li>
-              Designing/building UI's and UI components
-            </li>
-          </UL>
-          <P className="mt-4">
-            Our stack consisted of
-          </P>
-          <UL className="mt-4 list-disc ml-8 sm:ml-0">
-            <li>
-              <TextLink to="https://beta.reactjs.org/" title="ReactJS" outbound={true}>React</TextLink> + <TextLink to="https://www.typescriptlang.org/" title="TypeScript" outbound={true}>TypeScript</TextLink> frontends (<TextLink to="https://www.gatsbyjs.com/" title="GatsbyJS" outbound={true}>Gatsby</TextLink> / <TextLink to="https://nextjs.org/" title="NextJS" outbound={true}>Next.js</TextLink> / <TextLink to="https://tailwindcss.com/" title="Tailwind CSS" outbound={true}>Tailwind CSS</TextLink>)
-            </li>
-            <li>
-              <TextLink to="https://go.dev/" title="Golang" outbound={true}>Golang</TextLink> microservices
-            </li>
-            <li>
-              <TextLink to="https://fauna.com/" title="Fauna DB" outbound={true}>Fauna DB</TextLink> for persisting data
-            </li>
-            <li>
-              <TextLink to="https://www.docker.com/" title="Docker" outbound={true}>Docker</TextLink>
-            </li>
-            <li>
-              <TextLink to="https://www.nginx.com/" title="Nginx" outbound={true}>Nginx</TextLink>
-            </li>
-          </UL>
-          <P className="mt-4">
-            Our design system, Caribou, used Gatsby and our component library was built in <TextLink to="https://storybook.js.org/" title="Storybook" outbound={true}>Storybook</TextLink>; components were published to NPM to make them readily consumable.
+            Our stack included React + TypeScript frontends (Gatsby / Next.js / Tailwind CSS), Golang microservices, Fauna DB for data persistence, Docker, and Nginx. Our design system, Caribou, used Gatsby for the system guide, Storybook for the development environment, and published components to NPM for easy consumption.
           </P>
 
           <h3 className="mt-10 mb-2 text-stone-600 text-lg">Instructor; Astronomy and Physics</h3>
@@ -514,8 +399,20 @@ const AboutPage = ({
             </P>
           </div>
           <P className="mt-3">
-            Prior to my career in software development, I was an astronomy and physics instructor. My courses introduced students to the skills required to think critically about the physical world and offered students experience in solving real-world problems.
+            Before my career in software development, I was an astronomy and physics instructor. My courses introduced students to the skills required to think critically about the physical world. They offered students experience in solving real-world problems.
           </P>
+
+          <UL className="mt-4 list-disc ml-8 sm:ml-0">
+            <li>
+              Prepared and delivered lecture presentations focusing on physics and astronomy education
+            </li>
+            <li>
+              Performed classroom demonstrations and experiments to help students solidify new concepts
+            </li>
+            <li>
+              Integrated leading multimedia technologies in self-prepared lectures
+            </li>
+          </UL>
 
           <h3 className="mt-10 mb-2 text-stone-600 text-lg">Research Assistant</h3>
 
@@ -541,10 +438,17 @@ const AboutPage = ({
             In graduate school, I did research on the space environment of planets and comets. Colloquially known as “space weather,” my research investigated how the solar wind affects the magnetospheres, ionospheres, and upper atmospheres of these objects.
           </P>
 
-          {/* <h2 className="mt-10 text-xl tracking-wide text-stone-700">Education</h2>
-          <P className="mt-3">
-            I hold an <TextLink to="https://en.wikipedia.org/wiki/Master_of_Science#United_States" title="" outbound={true}>M.S.</TextLink> in <TextLink to="https://clasp.engin.umich.edu/" title="" outbound={true}>Atmospheric and Space Science</TextLink> and a <TextLink to="https://en.wikipedia.org/wiki/Graduate_certificate#United_States" title="" outbound={true}>GradCert</TextLink> in <TextLink to="https://micde.umich.edu/" title="" outbound={true}>Computer Science and Engineering</TextLink> from <TextLink to="https://umich.edu/" title="" outbound={true}>The University of Michigan, Ann Arbor</TextLink>. I did my undergraduate studies at <TextLink to="https://www.colorado.edu/" title="" outbound={true}>The University of Colorado, Boulder</TextLink> where I earned a <TextLink to="https://en.wikipedia.org/wiki/Bachelor%27s_degree" title="" outbound={true}>B.A.</TextLink> in <TextLink to="https://www.colorado.edu/aps/" title="" outbound={true}>Astrophysical, Planetary, and Atmospheric Science</TextLink> and a <TextLink to="https://en.wikipedia.org/wiki/Bachelor%27s_degree" title="" outbound={true}>B.A.</TextLink> in <TextLink to="https://www.colorado.edu/physics/" title="" outbound={true}>Physics</TextLink>.
-          </P> */}
+          <UL className="mt-4 list-disc ml-8 sm:ml-0">
+            <li>
+              Programmed and validated physics & chemistry based simulations and empirical simulations
+            </li>
+            <li>
+              Analyzed and interpreted output data
+            </li>
+            <li>
+              Plotted and visualized pertinent results
+            </li>
+          </UL>
 
           <h2 className="mt-10 text-xl tracking-wide text-stone-700">Education</h2>
           <div className="items-center justify-between mt-3 uppercase border-b border-pink-400 border-dotted d-block sm:flex text-stone-600">
