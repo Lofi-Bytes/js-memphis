@@ -384,11 +384,11 @@ const AboutPage = ({
             <TextLink
               className="text-stone-600"
               outbound={true}
-              title="Pikes Peak Community College"
-              to="https://www.ppcc.edu/"
+              title="Pikes Peak State College"
+              to="https://www.pikespeak.edu/"
               type="h3"
             >
-              Pikes Peak Community College
+              Pikes Peak State College
             </TextLink>
 
             <P className="hidden sm:block text-stone-600">
@@ -451,6 +451,43 @@ const AboutPage = ({
           </UL>
 
           <h2 className="mt-10 text-xl tracking-wide text-stone-700">Education</h2>
+
+          <div className="items-center justify-between mt-8 uppercase border-b border-pink-400 border-dotted d-block sm:flex text-stone-600">
+            <TextLink
+              className="text-stone-600"
+              to="https://www.colorado.edu/"
+              title="University of Colorado"
+              outbound={true}
+              type="h3"
+            >
+              University of Colorado
+            </TextLink>
+            <P className="hidden sm:block text-stone-600">
+              Boulder, CO
+            </P>
+          </div>
+
+          <div className="flex items-start justify-between mt-4">
+            <div>
+              <P className="font-serif italic">
+                <TextLink
+                  to="https://en.wikipedia.org/wiki/Master_of_Engineering"
+                  title="Master of Engineering"
+                  outbound={true}
+                >M.Eng.</TextLink> <TextLink
+                  to="https://www.colorado.edu/engineering/academics/degree-programs/engineering-management"
+                  title="University of Colorado Engineering Management Program (EMP)"
+                  outbound={true}
+                >Engineering Management</TextLink>
+              </P>
+            </div>
+            <P className="hidden sm:block text-stone-600">in progress</P>
+          </div>
+          <P className="mx-6 mt-3">
+            In this program, I am building foundational skills in authentic leadership, effective communication, organizational management, quantitative analysis, finance, systems engineering, product development, business law, ethical decision-making, and DEI in the workplace.
+          </P>
+
+
           <div className="items-center justify-between mt-3 uppercase border-b border-pink-400 border-dotted d-block sm:flex text-stone-600">
             <TextLink
               className="text-stone-600"
@@ -576,21 +613,6 @@ const AboutPage = ({
           <P className="mt-3">
             In my free time I enjoy spending time with my beautiful family, creating visual and immersive art, adventuring in our van (<TextLink to="https://www.instagram.com/explore/tags/vanlife/?hl=en" title="#vanlife" outbound={true}>#vanlife</TextLink>), practicing yoga, mountain biking, and I read a lot.
           </P>
-          {/* <div
-            className="w-full mx-auto mt-12 md:w-3/4"
-          >
-            <Button
-              action="primary"
-              className="w-full"
-              disabled={false}
-              role="link"
-              title="See my resumé"
-              to="/resume"
-              type="button"
-            >
-              See my resumé
-            </Button>
-          </div> */}
 
           <Button
             action="secondary"
