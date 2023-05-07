@@ -218,14 +218,23 @@ const AboutPage = ({
           </div>
 
           <P className="mt-3">
-            As the manager of the design systems and developer experience tooling within Northwestern Mutual's Experience Platform group, I lead a team responsible for overseeing the System Guide, core libraries, client-side utilities, and community contribution libraries.
+            As the manager of the design systems and developer experience tooling within Northwestern Mutual's Experience Platform group, I lead a team responsible for overseeing the system guide, core libraries, client-side utilities, and community contribution libraries.
           </P>
 
           <P className="mt-3">
-            My key responsibilities in this role include providing technical leadership, ensuring production stability for products, standardizing and sharing best practices across the department, collaborating with cross-functional teams to plan and delegate work, mentoring and coaching engineers for technical and leadership growth, and recruiting, hiring, and onboarding talent for team development.
+            My key responsibilities in this role include:
           </P>
 
-          <P className="mt-3">
+          <UL className="mt-4 list-disc ml-8 sm:ml-0">
+            <li>providing technical leadership</li>
+            <li>ensuring production stability for products</li>
+            <li>standardizing and sharing best practices across the department</li>
+            <li>collaborating with cross-functional teams to plan and delegate work</li>
+            <li>mentoring and coaching engineers for technical and leadership growth</li>
+            <li>recruiting, hiring, and onboarding talent for team development</li>
+          </UL>
+
+          {/* <P className="mt-3">
             Some of my significant accomplishments include:
           </P>
 
@@ -257,7 +266,7 @@ const AboutPage = ({
             <li>
               Identifying opportunities to gather, define, and visualize data to drive better decision-making and realize positive outcomes
             </li>
-          </UL>
+          </UL> */}
 
           <h2 className="mt-10 text-xl tracking-wide text-stone-700">Previous Work</h2>
 
@@ -282,10 +291,10 @@ const AboutPage = ({
           </div>
 
           <P className="mt-3">
-            As a leader overseeing multiple teams and projects on Northwestern Mutual’s design system, Luna, I was responsible for defining roadmaps, delegating work, and collaborating with designers on implementing new functionality. I also mentored and coached engineers, established team standards and best practices, and participated in recruiting and interviewing potential candidates. Additionally, I advised on contributions and integrations as needed.
+            As a leader overseeing multiple teams and projects on Northwestern Mutual's design system, Luna, I was responsible for defining roadmaps, delegating work, and collaborating with designers on implementing new functionality. I also mentored and coached engineers, established team standards and best practices, and participated in recruiting and interviewing potential candidates. Additionally, I advised on contributions and integrations as needed.
           </P>
 
-          <P className="mt-3">
+          {/* <P className="mt-3">
             During my tenure, I achieved the following:
           </P>
 
@@ -302,11 +311,11 @@ const AboutPage = ({
             <li>
               Oversaw the successful release of Luna Responsive Optimizations
             </li>
-          </UL>
+          </UL> */}
 
-          <P className="mt-3">
+          {/* <P className="mt-3">
             Overall, my leadership and technical skills enabled me to guide the team toward successfully delivering key features and improvements to the Luna design system.
-          </P>
+          </P> */}
 
           <h3 className="mt-6 mb-2 text-stone-600 text-lg">Senior Software Engineer, Design Systems Contributions and Integrations Lead</h3>
 
@@ -402,7 +411,7 @@ const AboutPage = ({
             Before my career in software development, I was an astronomy and physics instructor. My courses introduced students to the skills required to think critically about the physical world. They offered students experience in solving real-world problems.
           </P>
 
-          <UL className="mt-4 list-disc ml-8 sm:ml-0">
+          {/* <UL className="mt-4 list-disc ml-8 sm:ml-0">
             <li>
               Prepared and delivered lecture presentations focusing on physics and astronomy education
             </li>
@@ -412,7 +421,7 @@ const AboutPage = ({
             <li>
               Integrated leading multimedia technologies in self-prepared lectures
             </li>
-          </UL>
+          </UL> */}
 
           <h3 className="mt-10 mb-2 text-stone-600 text-lg">Research Assistant</h3>
 
@@ -438,7 +447,7 @@ const AboutPage = ({
             In graduate school, I did research on the space environment of planets and comets. Colloquially known as “space weather,” my research investigated how the solar wind affects the magnetospheres, ionospheres, and upper atmospheres of these objects.
           </P>
 
-          <UL className="mt-4 list-disc ml-8 sm:ml-0">
+          {/* <UL className="mt-4 list-disc ml-8 sm:ml-0">
             <li>
               Programmed and validated physics & chemistry based simulations and empirical simulations
             </li>
@@ -448,7 +457,7 @@ const AboutPage = ({
             <li>
               Plotted and visualized pertinent results
             </li>
-          </UL>
+          </UL> */}
 
           <h2 className="mt-10 text-xl tracking-wide text-stone-700">Education</h2>
 
