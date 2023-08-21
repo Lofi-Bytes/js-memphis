@@ -85,7 +85,7 @@ export default NotFoundPage
 
 export const pageQuery = graphql`
   query {
-  avatar: file(relativePath: {eq: "IMG_3482.JPG"}) {
+  avatar: file(relativePath: {eq: "IMG_4148.JPG"}) {
     childImageSharp {
       gatsbyImageData(
         width: 300
