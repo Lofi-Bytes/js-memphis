@@ -31,11 +31,11 @@ const Section = ({
   let section: string
 
   if (background === 'opaque') {
-    section = joinStrings(' ', SECTION, 'bg-stone-100 shadow-xl px-4 sm:px-8')
-  }
-
-  if (background === 'transparent') {
-    section = joinStrings(' ', SECTION, 'bg-transparent')
+    section = joinStrings(' ', SECTION, 'bg-stone-100 shadow-xl px-4 sm:px-8');
+  } else if (background === 'transparent') {
+    section = joinStrings(' ', SECTION, 'bg-transparent');
+  } else {
+    section = SECTION;
   }
 
   return (

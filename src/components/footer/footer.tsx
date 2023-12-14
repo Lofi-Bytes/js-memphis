@@ -144,7 +144,7 @@ const Footer = ({
               <i className={MASTODON} aria-hidden="true" />
             </OutboundLink>
           </div>
-          <div className="ml-6">
+          {/* <div className="ml-6">
             <OutboundLink
               href="https://twitter.com/LofiBytes/"
               aria-label="Connect with me on Twitter"
@@ -153,7 +153,7 @@ const Footer = ({
             >
               <i className={TWITTER} aria-hidden="true" />
             </OutboundLink>
-          </div>
+          </div> */}
           <div className="ml-6">
             <OutboundLink
               href="https://codepen.io/LofiBytes"

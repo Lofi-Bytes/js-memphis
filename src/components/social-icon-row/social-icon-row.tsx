@@ -97,7 +97,7 @@ const SocialIconRow = ({
           <i className={MASTODON} aria-hidden="true" />
         </OutboundLink>
       </div>
-      <div className="ml-2">
+      {/* <div className="ml-2">
         <OutboundLink
           href="https://twitter.com/LofiBytes/"
           aria-label="Connect with me on Twitter"
@@ -106,7 +106,7 @@ const SocialIconRow = ({
         >
           <i className={TWITTER} aria-hidden="true" />
         </OutboundLink>
-      </div>
+      </div> */}
       <div className="ml-2">
         <OutboundLink
           href="https://codepen.io/LofiBytes"
