@@ -6,12 +6,7 @@
     "path": "/writing/beautiful-web-forms-jamstack-introduction",
     "excerpt": "",
     "date": "2020/12/25",
-    "tags": [
-      "Jamstack",
-      "React",
-      "Tailwind CSS",
-      "TypeScript"
-    ]
+    "tags": ["Jamstack", "React", "Tailwind CSS", "TypeScript"]
   },
   {
     "title": "Beautiful web forms on the Jamstack",
@@ -20,12 +15,7 @@
     "path": "/writing/beautiful-web-forms-jamstack-tailwindcss",
     "excerpt": "",
     "date": "2020/12/26",
-    "tags": [
-      "Jamstack",
-      "React",
-      "Tailwind CSS",
-      "TypeScript"
-    ]
+    "tags": ["Jamstack", "React", "Tailwind CSS", "TypeScript"]
   },
   {
     "title": "Writing from my iPad with version control and Markdown",
@@ -34,12 +24,7 @@
     "path": "/writing/writing-from-my-ipad-with-version-control-and-markdown",
     "excerpt": "",
     "date": "2021/08/05",
-    "tags": [
-      "Git",
-      "GitHub",
-      "Markdown",
-      "Writing"
-    ]
+    "tags": ["Git", "GitHub", "Markdown", "Writing"]
   },
   {
     "title": "What a design system is, and why you should care",
@@ -48,24 +33,15 @@
     "path": "/writing/what-a-design-system-is-why-you-should-care",
     "excerpt": "",
     "date": "2021/11/18",
-    "tags": [
-      "Design systems",
-      "Design",
-      "Systems",
-      "Tailwind CSS"
-    ]
+    "tags": ["Design systems", "Design", "Systems", "Tailwind CSS"]
   },
   {
     "title": "What I Look for in a Developer's Resume",
     "subtitle": "",
-    "published": true,
+    "published": false,
     "path": "/writing/what-i-look-for-in-a-developers-resume",
     "excerpt": "",
     "date": "2022/11/18",
-    "tags": [
-      "Hiring",
-      "Tech Resume",
-      "Tech Interviews"
-    ]
+    "tags": ["Hiring", "Tech Resume", "Tech Interviews"]
   }
 ]
