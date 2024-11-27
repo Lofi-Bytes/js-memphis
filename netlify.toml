@@ -1,7 +1,8 @@
 [build.environment]
 # NODE_OPTIONS = "--max_old_space_size=4096"
-NODE_VERSION = "18.12.1"
-NPM_VERSION = "9.1.1"
+NODE_VERSION = "22.11.0"
+NPM_VERSION = "10.9.1"
+YARN_VERSION = "3.2.4"
 
 [functions]
   directory = "functions"

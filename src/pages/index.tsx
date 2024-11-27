@@ -146,7 +146,19 @@ const HomePage = ({ data, location }: PageProps) => {
             </h2>
             <SocialIconRow className="mt-3" />
             <P className="mt-8">
-              Hi there! Welcome to my creative space. As a{' '}
+              {/* Empathetic and results-driven Software Engineering Manager
+              experienced in leading DevEx tooling teams and design
+              systems. I'm passionate about empowering teams through
+              personalized development plans, open communication, and
+              collaborative problem-solving to drive individual growth and
+              collective success. I'm committed to promoting a culture of
+              continuous improvement and delivering impactful solutions.
+              Outside of work, I'm a creator of immersive and interactive
+              LED art, a physicist, a devoted dog mom 🐶, and a
+              conservationist 🌿. As a queer, trans woman, I'm also an
+              advocate for equity and inclusion in tech and beyond. ✊🏾🏳️‍⚧️🌈 */}
+              Hi there! Welcome to my creative space.
+              {/* As a{' '}
               <TextLink
                 to="https://uxdesign.cc/everything-you-need-to-know-about-design-systems-54b109851969"
                 title=""
@@ -173,7 +185,7 @@ const HomePage = ({ data, location }: PageProps) => {
               , I am dedicated to creating beautiful and accessible digital
               experiences. Additionally, I am driven to advance social and
               environmental justice causes and integrate those values into
-              my work.
+              my work. */}
             </P>
             <div className="mx-auto mt-8 w-full md:w-3/4">
               <Button
@@ -230,15 +242,15 @@ const HomePage = ({ data, location }: PageProps) => {
                             !JSON.stringify(touchedFields.name) // field is pristine
                               ? 'mt-1 block w-full rounded-lg border-0 border-l-4 border-purple-300 bg-stone-200 pl-3 pr-10 text-lg text-stone-600 caret-fuchsia-500 shadow-md focus:border-fuchsia-500 focus:ring-0'
                               : errors.name &&
-                                errors.name.type === 'required'
-                              ? 'mt-1 block w-full rounded-lg border-0 border-l-4 border-red-300 bg-stone-200 pl-3 pr-10 text-lg text-stone-600 caret-red-500 shadow-md focus:border-red-500 focus:ring-0'
-                              : errors.name &&
-                                errors.name.type === 'minLength'
-                              ? 'mt-1 block w-full rounded-lg border-0 border-l-4 border-red-300 bg-stone-200 pl-3 pr-10 text-lg text-stone-600 caret-red-500 shadow-md focus:border-red-500 focus:ring-0'
-                              : errors.name &&
-                                errors.name.type === 'maxLength'
-                              ? 'mt-1 block w-full rounded-lg border-0 border-l-4 border-red-300 bg-stone-200 pl-3 pr-10 text-lg text-stone-600 shadow-md focus:border-red-500 focus:ring-0'
-                              : 'mt-1 block w-full rounded-lg border-0 border-l-4 border-green-300 bg-stone-200 pl-3 pr-10 text-lg text-stone-600 caret-green-500 shadow-md focus:border-green-500 focus:ring-0'
+                                  errors.name.type === 'required'
+                                ? 'mt-1 block w-full rounded-lg border-0 border-l-4 border-red-300 bg-stone-200 pl-3 pr-10 text-lg text-stone-600 caret-red-500 shadow-md focus:border-red-500 focus:ring-0'
+                                : errors.name &&
+                                    errors.name.type === 'minLength'
+                                  ? 'mt-1 block w-full rounded-lg border-0 border-l-4 border-red-300 bg-stone-200 pl-3 pr-10 text-lg text-stone-600 caret-red-500 shadow-md focus:border-red-500 focus:ring-0'
+                                  : errors.name &&
+                                      errors.name.type === 'maxLength'
+                                    ? 'mt-1 block w-full rounded-lg border-0 border-l-4 border-red-300 bg-stone-200 pl-3 pr-10 text-lg text-stone-600 shadow-md focus:border-red-500 focus:ring-0'
+                                    : 'mt-1 block w-full rounded-lg border-0 border-l-4 border-green-300 bg-stone-200 pl-3 pr-10 text-lg text-stone-600 caret-green-500 shadow-md focus:border-green-500 focus:ring-0'
                           }
                           onChange={handleChange}
                           placeholder=""
@@ -329,12 +341,12 @@ const HomePage = ({ data, location }: PageProps) => {
                             !JSON.stringify(touchedFields.email) // field is pristine
                               ? 'mt-1 block w-full rounded-lg border-0 border-l-4 border-purple-300 bg-stone-200 pl-3 pr-10 text-lg text-stone-600 caret-fuchsia-500 shadow-md focus:border-fuchsia-500 focus:ring-0'
                               : errors.email &&
-                                errors.email.type === 'required'
-                              ? 'mt-1 block w-full rounded-lg border-0 border-l-4 border-red-300 bg-stone-200 pl-3 pr-10 text-lg text-stone-600 caret-red-500 shadow-md focus:border-red-500 focus:ring-0'
-                              : errors.email &&
-                                errors.email.type === 'pattern'
-                              ? 'mt-1 block w-full rounded-lg border-0 border-l-4 border-red-300 bg-stone-200 pl-3 pr-10 text-lg text-stone-600 caret-red-500 shadow-md focus:border-red-500 focus:ring-0'
-                              : 'mt-1 block w-full rounded-lg border-0 border-l-4 border-green-300 bg-stone-200 pl-3 pr-10 text-lg text-stone-600 caret-green-500 shadow-md focus:border-green-500 focus:ring-0'
+                                  errors.email.type === 'required'
+                                ? 'mt-1 block w-full rounded-lg border-0 border-l-4 border-red-300 bg-stone-200 pl-3 pr-10 text-lg text-stone-600 caret-red-500 shadow-md focus:border-red-500 focus:ring-0'
+                                : errors.email &&
+                                    errors.email.type === 'pattern'
+                                  ? 'mt-1 block w-full rounded-lg border-0 border-l-4 border-red-300 bg-stone-200 pl-3 pr-10 text-lg text-stone-600 caret-red-500 shadow-md focus:border-red-500 focus:ring-0'
+                                  : 'mt-1 block w-full rounded-lg border-0 border-l-4 border-green-300 bg-stone-200 pl-3 pr-10 text-lg text-stone-600 caret-green-500 shadow-md focus:border-green-500 focus:ring-0'
                           }
                           onChange={handleChange}
                           type="email"
@@ -411,15 +423,15 @@ const HomePage = ({ data, location }: PageProps) => {
                             !JSON.stringify(touchedFields.message) // field is pristine
                               ? 'mt-1 block w-full flex-grow rounded-lg border-0 border-l-4 border-purple-300 bg-stone-200 pl-3 pr-10 text-lg text-stone-600 caret-fuchsia-500 shadow-md focus:border-fuchsia-500 focus:ring-0'
                               : errors.message &&
-                                errors.message.type === 'required'
-                              ? 'mt-1 block w-full flex-grow rounded-lg border-0 border-l-4 border-red-300 bg-stone-200 pl-3 pr-10 text-lg text-stone-600 caret-red-500 shadow-md focus:border-red-500 focus:ring-0'
-                              : errors.message &&
-                                errors.message.type === 'minLength'
-                              ? 'mt-1 block w-full flex-grow rounded-lg border-0 border-l-4 border-red-300 bg-stone-200 pl-3 pr-10 text-lg text-stone-600 caret-red-500 shadow-md focus:border-red-500 focus:ring-0'
-                              : errors.message &&
-                                errors.message.type === 'maxLength'
-                              ? 'mt-1 block w-full flex-grow rounded-lg border-0 border-l-4 border-red-300 bg-stone-200 pl-3 pr-10 text-lg text-stone-600 caret-red-500 shadow-md focus:border-red-500 focus:ring-0'
-                              : 'mt-1 block w-full flex-grow rounded-lg border-0 border-l-4 border-green-300 bg-stone-200 pl-3 pr-10 text-lg text-stone-600 caret-green-500 shadow-md focus:border-green-500 focus:ring-0'
+                                  errors.message.type === 'required'
+                                ? 'mt-1 block w-full flex-grow rounded-lg border-0 border-l-4 border-red-300 bg-stone-200 pl-3 pr-10 text-lg text-stone-600 caret-red-500 shadow-md focus:border-red-500 focus:ring-0'
+                                : errors.message &&
+                                    errors.message.type === 'minLength'
+                                  ? 'mt-1 block w-full flex-grow rounded-lg border-0 border-l-4 border-red-300 bg-stone-200 pl-3 pr-10 text-lg text-stone-600 caret-red-500 shadow-md focus:border-red-500 focus:ring-0'
+                                  : errors.message &&
+                                      errors.message.type === 'maxLength'
+                                    ? 'mt-1 block w-full flex-grow rounded-lg border-0 border-l-4 border-red-300 bg-stone-200 pl-3 pr-10 text-lg text-stone-600 caret-red-500 shadow-md focus:border-red-500 focus:ring-0'
+                                    : 'mt-1 block w-full flex-grow rounded-lg border-0 border-l-4 border-green-300 bg-stone-200 pl-3 pr-10 text-lg text-stone-600 caret-green-500 shadow-md focus:border-green-500 focus:ring-0'
                           }
                           onChange={handleChange}
                           rows={4}
