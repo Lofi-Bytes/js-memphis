@@ -5,14 +5,10 @@ import { OutboundLink } from 'gatsby-plugin-google-gtag'
 import MobileNavigation from '../mobile-navigation'
 import FooterNavigation from '../footer-navigation'
 
-import {
-  formatClassList,
-  joinStrings
-} from '../../utils/utils'
-
+import { formatClassList, joinStrings } from '../../utils/utils'
 
 type FooterProps = {
-  className?: string,
+  className?: string
   location: Location
 }
 
@@ -51,39 +47,30 @@ const ICONANCHOR = formatClassList([
   'text-teal-100'
 ])
 
-const ICON = formatClassList([
-  'fa-brands'
-])
+const ICON = formatClassList(['fa-brands'])
 
-const GITHUB = formatClassList([
-  ICON,
-  'fa-github'
-])
+const GITHUB = formatClassList([ICON, 'fa-github'])
 
-const MASTODON = formatClassList([
-  ICON,
-  'fa-mastodon'
-])
+const LINKEDIN = formatClassList([ICON, 'fa-linkedin'])
 
-const TWITTER = formatClassList([
-  ICON,
-  'fa-twitter'
-])
+const BLUESKY = formatClassList([ICON, 'fa-bluesky'])
 
-const CODE_PEN = formatClassList([
-  ICON,
-  'fa-codepen'
-])
+const MASTODON = formatClassList([ICON, 'fa-mastodon'])
 
-const DEV = formatClassList([
-  ICON,
-  'fa-dev'
-])
+// const TWITTER = formatClassList([
+//   ICON,
+//   'fa-twitter'
+// ])
 
-const LINKEDIN = formatClassList([
-  ICON,
-  'fa-linkedin'
-])
+// const CODE_PEN = formatClassList([
+//   ICON,
+//   'fa-codepen'
+// ])
+
+// const DEV = formatClassList([
+//   ICON,
+//   'fa-dev'
+// ])
 
 const COPYRIGHT = formatClassList([
   'pb-6',
@@ -110,17 +97,12 @@ const COPYRIGHT_MOBILE_TEXT = formatClassList([
   'text-teal-100'
 ])
 
-const Footer = ({
-  className,
-  location
-}: FooterProps) => {
+const Footer = ({ className, location }: FooterProps) => {
   return (
     <React.Fragment>
       <footer
         className={
-          className
-            ? joinStrings(' ', FOOTER, className)
-            : FOOTER
+          className ? joinStrings(' ', FOOTER, className) : FOOTER
         }
       >
         <div className={SOCIAL_ROW}>
@@ -131,7 +113,36 @@ const Footer = ({
               title="Connect with me on Github"
               className={ICONANCHOR}
             >
-              <i className={GITHUB} aria-hidden="true" />
+              <i
+                className={GITHUB}
+                aria-hidden="true"
+              />
+            </OutboundLink>
+          </div>
+          <div className="ml-6">
+            <OutboundLink
+              href="https://www.linkedin.com/in/lofibytes/"
+              aria-label="Connect with me on LinkedIn Profile"
+              title="Connect with me on LinkedIn Profile"
+              className={ICONANCHOR}
+            >
+              <i
+                className={LINKEDIN}
+                aria-hidden="true"
+              />
+            </OutboundLink>
+          </div>
+          <div className="ml-6">
+            <OutboundLink
+              href="https://bsky.app/profile/lofibytes.bsky.social"
+              aria-label="Connect with me on Bluesky"
+              title="Connect with me on Bluesky"
+              className={ICONANCHOR}
+            >
+              <i
+                className={BLUESKY}
+                aria-hidden="true"
+              />
             </OutboundLink>
           </div>
           <div className="ml-6">
@@ -141,7 +152,10 @@ const Footer = ({
               title="Connect with me on Mastodon"
               className={ICONANCHOR}
             >
-              <i className={MASTODON} aria-hidden="true" />
+              <i
+                className={MASTODON}
+                aria-hidden="true"
+              />
             </OutboundLink>
           </div>
           {/* <div className="ml-6">
@@ -154,45 +168,45 @@ const Footer = ({
               <i className={TWITTER} aria-hidden="true" />
             </OutboundLink>
           </div> */}
-          <div className="ml-6">
+          {/* <div className="ml-6">
             <OutboundLink
               href="https://codepen.io/LofiBytes"
               aria-label="Connect with me on CodePen"
               title="Connect with me on CodePen"
               className={ICONANCHOR}
             >
-              <i className={CODE_PEN} aria-hidden="true" />
+              <i
+                className={CODE_PEN}
+                aria-hidden="true"
+              />
             </OutboundLink>
-          </div>
-          <div className="ml-6">
+          </div> */}
+          {/* <div className="ml-6">
             <OutboundLink
               href="https://dev.to/lofibytes"
               aria-label="Connect with me on DEV Profile"
               title="Connect with me on DEV Profile"
               className={ICONANCHOR}
             >
-              <i className={DEV} aria-hidden="true" />
+              <i
+                className={DEV}
+                aria-hidden="true"
+              />
             </OutboundLink>
-          </div>
-          <div className="ml-6">
-            <OutboundLink
-              href="https://www.linkedin.com/in/lofibytes/"
-              aria-label="Connect with me on LinkedIn Profile"
-              title="Connect with me on LinkedIn Profile"
-              className={ICONANCHOR}
-            >
-              <i className={LINKEDIN} aria-hidden="true" />
-            </OutboundLink>
-          </div>
+          </div> */}
         </div>
         <p className={COPYRIGHT}>
-          Material &amp; content copyright &copy; {new Date().getFullYear()} Jillian S. Estrella. All rights reserved.
+          Material &amp; content copyright &copy;{' '}
+          {new Date().getFullYear()} Jillian S. Estrella. All rights
+          reserved.
         </p>
         <FooterNavigation location={location} />
       </footer>
       <div className={COPYRIGHT_MOBILE}>
         <p className={COPYRIGHT_MOBILE_TEXT}>
-          Material &amp; content copyright &copy; {new Date().getFullYear()} Jillian S. Estrella. All rights reserved.
+          Material &amp; content copyright &copy;{' '}
+          {new Date().getFullYear()} Jillian S. Estrella. All rights
+          reserved.
         </p>
       </div>
       <MobileNavigation location={location} />

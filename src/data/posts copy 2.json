@@ -2,7 +2,7 @@
   {
     "title": "Beautiful web forms on the Jamstack",
     "subtitle": "Series introduction",
-    "published": false,
+    "published": true,
     "path": "/writing/beautiful-web-forms-jamstack-introduction",
     "excerpt": "",
     "date": "2020/12/25",
@@ -11,7 +11,7 @@
   {
     "title": "Beautiful web forms on the Jamstack",
     "subtitle": "With Tailwind CSS",
-    "published": false,
+    "published": true,
     "path": "/writing/beautiful-web-forms-jamstack-tailwindcss",
     "excerpt": "",
     "date": "2020/12/26",
@@ -20,7 +20,7 @@
   {
     "title": "Writing from my iPad with version control and Markdown",
     "subtitle": "",
-    "published": false,
+    "published": true,
     "path": "/writing/writing-from-my-ipad-with-version-control-and-markdown",
     "excerpt": "",
     "date": "2021/08/05",

@@ -4,7 +4,6 @@ import { OutboundLink } from 'gatsby-plugin-google-gtag'
 
 import { formatClassList, joinStrings } from '../../utils/utils'
 
-
 type SocialIconRowProps = {
   className?: string
 }
@@ -32,51 +31,25 @@ const ICONANCHOR = formatClassList([
   'focus:ring-sky-700'
 ])
 
-const ICON = formatClassList([
-  'fa-brands'
-])
+const ICON = formatClassList(['fa-brands'])
 
-const GITHUB = formatClassList([
-  ICON,
-  'fa-github'
-])
+const GITHUB = formatClassList([ICON, 'fa-github'])
 
-const MASTODON = formatClassList([
-  ICON,
-  'fa-mastodon'
-])
+const LINKEDIN = formatClassList([ICON, 'fa-linkedin'])
 
-const TWITTER = formatClassList([
-  ICON,
-  'fa-twitter'
-])
+const BLUESKY = formatClassList([ICON, 'fa-bluesky'])
 
-const CODE_PEN = formatClassList([
-  ICON,
-  'fa-codepen'
-])
+const MASTODON = formatClassList([ICON, 'fa-mastodon'])
 
-const DEV = formatClassList([
-  ICON,
-  'fa-dev'
-])
+// const TWITTER = formatClassList([ICON, 'fa-twitter'])
 
-const LINKEDIN = formatClassList([
-  ICON,
-  'fa-linkedin'
-])
+// const CODE_PEN = formatClassList([ICON, 'fa-codepen'])
 
-const SocialIconRow = ({
-  className
-}: SocialIconRowProps) => {
-  return(
-    <div
-      className={
-        className
-          ? joinStrings(' ', ROW, className)
-          : ROW
-      }
-    >
+// const DEV = formatClassList([ICON, 'fa-dev'])
+
+const SocialIconRow = ({ className }: SocialIconRowProps) => {
+  return (
+    <div className={className ? joinStrings(' ', ROW, className) : ROW}>
       <div>
         <OutboundLink
           href="https://github.com/lofi-bytes"
@@ -84,7 +57,36 @@ const SocialIconRow = ({
           title="Connect with me on Github"
           className={ICONANCHOR}
         >
-          <i className={GITHUB} aria-hidden="true" />
+          <i
+            className={GITHUB}
+            aria-hidden="true"
+          />
+        </OutboundLink>
+      </div>
+      <div className="ml-2">
+        <OutboundLink
+          href="https://www.linkedin.com/in/lofibytes/"
+          aria-label="Connect with me on LinkedIn Profile"
+          title="Connect with me on LinkedIn Profile"
+          className={ICONANCHOR}
+        >
+          <i
+            className={LINKEDIN}
+            aria-hidden="true"
+          />
+        </OutboundLink>
+      </div>
+      <div className="ml-2">
+        <OutboundLink
+          href="https://bsky.app/profile/lofibytes.bsky.social"
+          aria-label="Connect with me on Bluesky"
+          title="Connect with me on Bluesky"
+          className={ICONANCHOR}
+        >
+          <i
+            className={BLUESKY}
+            aria-hidden="true"
+          />
         </OutboundLink>
       </div>
       <div className="ml-2">
@@ -94,7 +96,10 @@ const SocialIconRow = ({
           title="Connect with me on Mastodon"
           className={ICONANCHOR}
         >
-          <i className={MASTODON} aria-hidden="true" />
+          <i
+            className={MASTODON}
+            aria-hidden="true"
+          />
         </OutboundLink>
       </div>
       {/* <div className="ml-2">
@@ -107,36 +112,32 @@ const SocialIconRow = ({
           <i className={TWITTER} aria-hidden="true" />
         </OutboundLink>
       </div> */}
-      <div className="ml-2">
+      {/* <div className="ml-2">
         <OutboundLink
           href="https://codepen.io/LofiBytes"
           aria-label="Connect with me on CodePen"
           title="Connect with me on CodePen"
           className={ICONANCHOR}
         >
-          <i className={CODE_PEN} aria-hidden="true" />
+          <i
+            className={CODE_PEN}
+            aria-hidden="true"
+          />
         </OutboundLink>
-      </div>
-      <div className="ml-2">
+      </div> */}
+      {/* <div className="ml-2">
         <OutboundLink
           href="https://dev.to/lofibytes"
           aria-label="Connect with me on DEV Profile"
           title="Connect with me on DEV Profile"
           className={ICONANCHOR}
         >
-          <i className={DEV} aria-hidden="true" />
+          <i
+            className={DEV}
+            aria-hidden="true"
+          />
         </OutboundLink>
-      </div>
-      <div className="ml-2">
-        <OutboundLink
-          href="https://www.linkedin.com/in/lofibytes/"
-          aria-label="Connect with me on LinkedIn Profile"
-          title="Connect with me on LinkedIn Profile"
-          className={ICONANCHOR}
-        >
-          <i className={LINKEDIN} aria-hidden="true" />
-        </OutboundLink>
-      </div>
+      </div> */}
     </div>
   )
 }
