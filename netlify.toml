@@ -4,6 +4,9 @@ NODE_VERSION = "22.11.0"
 NPM_VERSION = "10.9.1"
 YARN_VERSION = "3.2.4"
 
+[build]
+  command = "yarn install --immutable && gatsby build"
+
 [functions]
   directory = "functions"
 
