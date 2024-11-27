@@ -10,14 +10,11 @@ import Section from '../../components/section'
 import SEO from '../../components/seo'
 import Tag from '../../components/tag'
 
-
 type PageProps = {
   location: Location
 }
 
-const SpeakingListPage = ({
-  location
-}: PageProps) => {
+const SpeakingListPage = ({ location }: PageProps) => {
   const talkListData = useStaticQuery(graphql`
     query SpeakingTalkListNavigationQuery {
       allTalksJson {
@@ -46,19 +43,29 @@ const SpeakingListPage = ({
         title={
           <>
             <span className="text-5xl leading-relaxed js md:text-6xl md:leading-loose lg:text-7xl lg:leading-relaxed">
-            Speaking Engagements
+              Speaking Engagements
             </span>
             <span className="hidden sm:inline-block">
-              &nbsp;&nbsp;<i className="text-4xl leading-relaxed fa-light fa-podium-star text-rose-300 md:text-5xl md:leading-loose lg:text-5xl lg:leading-relaxed" aria-hidden="true" />
+              &nbsp;&nbsp;
+              <i
+                className="text-4xl leading-relaxed fa-light fa-podium-star text-rose-300 md:text-5xl md:leading-loose lg:text-5xl lg:leading-relaxed"
+                aria-hidden="true"
+              />
             </span>
             <span className="block mt-3 sm:hidden">
-              <i className="text-4xl fa-light fa-podium-star text-rose-300" aria-hidden="true" />
+              <i
+                className="text-4xl fa-light fa-podium-star text-rose-300"
+                aria-hidden="true"
+              />
             </span>
           </>
         }
       />
       <Main>
-        <Section background="transparent" className="mb-8 -mt-12">
+        <Section
+          background="transparent"
+          className="mb-8 -mt-12"
+        >
           <Banner
             color="rose"
             pageType="listPage"
@@ -66,51 +73,49 @@ const SpeakingListPage = ({
             Invited talks
           </Banner>
           <div className="grid grid-flow-row-dense gap-8">
-          {
-            talkListData.allTalksJson.edges.map((edge, index) => {
+            {talkListData.allTalksJson.edges.map((edge, index) => {
               const active = edge.node.active
               const date = edge.node.date
               const excerpt = edge.node.excerpt
               const path = edge.node.path
+              const published = edge.node.published
               const section = edge.node.section
               const tags = edge.node.tags
               const title = edge.node.title
 
-              return(
+              return (
                 <React.Fragment key={`item-${index}`}>
-                  {section === 'invited-talks'
-                    ?
-                      <Card
-                        color="rose"
-                        date={date}
-                        excerpt={excerpt}
-                        outbound={true}
-                        published={active ? true : false}
-                        title={title}
-                        to={path}
-                        tags={
-                          tags.map((tag, index) => {
-                            return (
-                              <Tag
-                                card={true}
-                                key={`item-${index}`}
-                                tagColor="rose"
-                              >
-                                {tag}
-                              </Tag>
-                            )
-                          })
-                        }
-                      />
-                    : null
-                  }
+                  {published && section === 'invited-talks' ? (
+                    <Card
+                      color="rose"
+                      date={date}
+                      excerpt={excerpt}
+                      outbound={true}
+                      published={active ? true : false}
+                      title={title}
+                      to={path}
+                      tags={tags.map((tag, index) => {
+                        return (
+                          <Tag
+                            card={true}
+                            key={`item-${index}`}
+                            tagColor="rose"
+                          >
+                            {tag}
+                          </Tag>
+                        )
+                      })}
+                    />
+                  ) : null}
                 </React.Fragment>
               )
-            })
-          }
+            })}
           </div>
         </Section>
-        <Section background="transparent" className="mb-8">
+        <Section
+          background="transparent"
+          className="mb-8"
+        >
           <Banner
             color="purple"
             pageType="listPage"
@@ -118,48 +123,43 @@ const SpeakingListPage = ({
             Art Grant Proposals
           </Banner>
           <div className="grid grid-flow-row-dense gap-8">
-          {
-            talkListData.allTalksJson.edges.map((edge, index) => {
-              const path = edge.node.path
-              const title = edge.node.title
-              const excerpt = edge.node.excerpt
-              const date = edge.node.date
-              const tags = edge.node.tags
-              const section = edge.node.section
+            {talkListData.allTalksJson.edges.map((edge, index) => {
               const active = edge.node.active
+              const date = edge.node.date
+              const excerpt = edge.node.excerpt
+              const path = edge.node.path
+              const published = edge.node.published
+              const section = edge.node.section
+              const tags = edge.node.tags
+              const title = edge.node.title
 
-              return(
+              return (
                 <React.Fragment key={`item-${index}`}>
-                  {section === 'art-grant-proposals'
-                    ?
-                      <Card
-                        color="violet"
-                        date={date}
-                        excerpt={excerpt}
-                        outbound={true}
-                        published={active ? true : false}
-                        title={title}
-                        to={path}
-                        tags={
-                          tags.map((tag, index) => {
-                            return (
-                              <Tag
-                                card={true}
-                                key={`item-${index}`}
-                                tagColor="violet"
-                              >
-                                {tag}
-                              </Tag>
-                            )
-                          })
-                        }
-                      />
-                    : null
-                  }
+                  {published && section === 'art-grant-proposals' ? (
+                    <Card
+                      color="violet"
+                      date={date}
+                      excerpt={excerpt}
+                      outbound={true}
+                      published={active ? true : false}
+                      title={title}
+                      to={path}
+                      tags={tags.map((tag, index) => {
+                        return (
+                          <Tag
+                            card={true}
+                            key={`item-${index}`}
+                            tagColor="violet"
+                          >
+                            {tag}
+                          </Tag>
+                        )
+                      })}
+                    />
+                  ) : null}
                 </React.Fragment>
               )
-            })
-          }
+            })}
           </div>
         </Section>
       </Main>

@@ -10,14 +10,11 @@ import Section from '../../components/section'
 import SEO from '../../components/seo'
 import Tag from '../../components/tag'
 
-
 type PageProps = {
   location: Location
 }
 
-const ProjectsListPage = ({
-  location
-}: PageProps) => {
+const ProjectsListPage = ({ location }: PageProps) => {
   const projectsListData = useStaticQuery(graphql`
     query ProjectsListNavigationQuery {
       allProjectsJson {
@@ -46,22 +43,41 @@ const ProjectsListPage = ({
         title={
           <>
             <span className="hidden sm:inline-block">
-              <i className="text-4xl leading-relaxed fa-light fa-code-branch text-amber-300 md:text-5xl md:leading-loose lg:text-5xl lg:leading-relaxed" aria-hidden="true" />&nbsp;&nbsp;
+              <i
+                className="text-4xl leading-relaxed fa-light fa-code-branch text-amber-300 md:text-5xl md:leading-loose lg:text-5xl lg:leading-relaxed"
+                aria-hidden="true"
+              />
+              &nbsp;&nbsp;
             </span>
             <span className="text-5xl leading-relaxed js md:text-6xl md:leading-loose lg:text-7xl lg:leading-relaxed">
-            Selected Projects
+              Selected Projects
             </span>
             <span className="hidden sm:inline-block">
-              &nbsp;&nbsp;<i className="text-4xl leading-relaxed text-teal-300 fa-light fa-code-merge md:text-5xl md:leading-loose lg:text-5xl lg:leading-relaxed" aria-hidden="true" />
+              &nbsp;&nbsp;
+              <i
+                className="text-4xl leading-relaxed text-teal-300 fa-light fa-code-merge md:text-5xl md:leading-loose lg:text-5xl lg:leading-relaxed"
+                aria-hidden="true"
+              />
             </span>
             <span className="block mt-3 sm:hidden">
-              <i className="text-4xl fa-light fa-code-branch text-amber-300" aria-hidden="true" />&nbsp;&nbsp;<i className="text-4xl text-teal-300 fa-light fa-code-merge" aria-hidden="true" />
+              <i
+                className="text-4xl fa-light fa-code-branch text-amber-300"
+                aria-hidden="true"
+              />
+              &nbsp;&nbsp;
+              <i
+                className="text-4xl text-teal-300 fa-light fa-code-merge"
+                aria-hidden="true"
+              />
             </span>
           </>
         }
       />
       <Main>
-        <Section background="transparent" className="mb-8">
+        <Section
+          background="transparent"
+          className="mb-8"
+        >
           <Banner
             color="purple"
             pageType="listPage"
@@ -69,51 +85,49 @@ const ProjectsListPage = ({
             Design Systems
           </Banner>
           <div className="grid grid-flow-row-dense gap-8">
-          {
-            projectsListData.allProjectsJson.edges.map((edge, index) => {
-              const path = edge.node.path
-              const title = edge.node.title
-              const excerpt = edge.node.excerpt
-              const date = edge.node.date
-              const tags = edge.node.tags
-              const section = edge.node.section
+            {projectsListData.allProjectsJson.edges.map((edge, index) => {
               const active = edge.node.active
+              const date = edge.node.date
+              const excerpt = edge.node.excerpt
+              const path = edge.node.path
+              const published = edge.node.published
+              const section = edge.node.section
+              const tags = edge.node.tags
+              const title = edge.node.title
 
-              return(
+              return (
                 <React.Fragment key={`item-${index}`}>
-                  {section === 'design-systems'
-                    ?
-                      <Card
-                        color="violet"
-                        date={date}
-                        excerpt={excerpt}
-                        outbound={true}
-                        published={active ? true : false}
-                        title={title}
-                        to={path}
-                        tags={
-                          tags.map((tag, index) => {
-                            return (
-                              <Tag
-                                card={true}
-                                key={`item-${index}`}
-                                tagColor="violet"
-                              >
-                                {tag}
-                              </Tag>
-                            )
-                          })
-                        }
-                      />
-                    : null
-                  }
+                  {published && section === 'design-systems' ? (
+                    <Card
+                      color="violet"
+                      date={date}
+                      excerpt={excerpt}
+                      outbound={true}
+                      published={active ? true : false}
+                      title={title}
+                      to={path}
+                      tags={tags.map((tag, index) => {
+                        return (
+                          <Tag
+                            card={true}
+                            key={`item-${index}`}
+                            tagColor="violet"
+                          >
+                            {tag}
+                          </Tag>
+                        )
+                      })}
+                    />
+                  ) : null}
                 </React.Fragment>
               )
-            })
-          }
+            })}
           </div>
         </Section>
-        <Section background="transparent" className="mb-8">
+        <Section
+          background="transparent"
+          className="mb-8"
+        >
           <Banner
             color="rose"
             pageType="listPage"
@@ -121,51 +135,49 @@ const ProjectsListPage = ({
             Art Installations
           </Banner>
           <div className="grid grid-flow-row-dense gap-8">
-          {
-            projectsListData.allProjectsJson.edges.map((edge, index) => {
+            {projectsListData.allProjectsJson.edges.map((edge, index) => {
               const active = edge.node.active
               const date = edge.node.date
               const excerpt = edge.node.excerpt
               const path = edge.node.path
+              const published = edge.node.published
               const section = edge.node.section
               const tags = edge.node.tags
               const title = edge.node.title
 
-              return(
+              return (
                 <React.Fragment key={`item-${index}`}>
-                  {section === 'art-installations'
-                    ?
-                      <Card
-                        color="rose"
-                        date={date}
-                        excerpt={excerpt}
-                        outbound={true}
-                        published={active ? true : false}
-                        title={title}
-                        to={path}
-                        tags={
-                          tags.map((tag, index) => {
-                            return (
-                              <Tag
-                                card={true}
-                                key={`item-${index}`}
-                                tagColor="rose"
-                              >
-                                {tag}
-                              </Tag>
-                            )
-                          })
-                        }
-                      />
-                    : null
-                  }
+                  {published && section === 'art-installations' ? (
+                    <Card
+                      color="rose"
+                      date={date}
+                      excerpt={excerpt}
+                      outbound={true}
+                      published={active ? true : false}
+                      title={title}
+                      to={path}
+                      tags={tags.map((tag, index) => {
+                        return (
+                          <Tag
+                            card={true}
+                            key={`item-${index}`}
+                            tagColor="rose"
+                          >
+                            {tag}
+                          </Tag>
+                        )
+                      })}
+                    />
+                  ) : null}
                 </React.Fragment>
               )
-            })
-          }
+            })}
           </div>
         </Section>
-        <Section background="transparent" className="mb-8 -mt-12">
+        <Section
+          background="transparent"
+          className="mb-8 -mt-12"
+        >
           <Banner
             color="cyan"
             pageType="listPage"
@@ -173,51 +185,49 @@ const ProjectsListPage = ({
             GitHub
           </Banner>
           <div className="grid grid-flow-row-dense gap-8">
-          {
-            projectsListData.allProjectsJson.edges.map((edge, index) => {
-              const path = edge.node.path
-              const title = edge.node.title
-              const excerpt = edge.node.excerpt
-              const date = edge.node.date
-              const tags = edge.node.tags
-              const section = edge.node.section
+            {projectsListData.allProjectsJson.edges.map((edge, index) => {
               const active = edge.node.active
+              const date = edge.node.date
+              const excerpt = edge.node.excerpt
+              const path = edge.node.path
+              const published = edge.node.published
+              const section = edge.node.section
+              const tags = edge.node.tags
+              const title = edge.node.title
 
-              return(
+              return (
                 <React.Fragment key={`item-${index}`}>
-                  {section === 'github'
-                    ?
-                      <Card
-                        color="sky"
-                        date={date}
-                        excerpt={excerpt}
-                        outbound={true}
-                        published={active ? true : false}
-                        title={title}
-                        to={path}
-                        tags={
-                          tags.map((tag, index) => {
-                            return (
-                              <Tag
-                                card={true}
-                                key={`item-${index}`}
-                                tagColor="sky"
-                              >
-                                {tag}
-                              </Tag>
-                            )
-                          })
-                        }
-                      />
-                    : null
-                  }
+                  {published && section === 'github' ? (
+                    <Card
+                      color="sky"
+                      date={date}
+                      excerpt={excerpt}
+                      outbound={true}
+                      published={active ? true : false}
+                      title={title}
+                      to={path}
+                      tags={tags.map((tag, index) => {
+                        return (
+                          <Tag
+                            card={true}
+                            key={`item-${index}`}
+                            tagColor="sky"
+                          >
+                            {tag}
+                          </Tag>
+                        )
+                      })}
+                    />
+                  ) : null}
                 </React.Fragment>
               )
-            })
-          }
+            })}
           </div>
         </Section>
-        <Section background="transparent" className="mb-8">
+        <Section
+          background="transparent"
+          className="mb-8"
+        >
           <Banner
             color="purple"
             pageType="listPage"
@@ -225,51 +235,49 @@ const ProjectsListPage = ({
             CodePen
           </Banner>
           <div className="grid grid-flow-row-dense gap-8">
-          {
-            projectsListData.allProjectsJson.edges.map((edge, index) => {
-              const path = edge.node.path
-              const title = edge.node.title
-              const excerpt = edge.node.excerpt
-              const date = edge.node.date
-              const tags = edge.node.tags
-              const section = edge.node.section
+            {projectsListData.allProjectsJson.edges.map((edge, index) => {
               const active = edge.node.active
+              const date = edge.node.date
+              const excerpt = edge.node.excerpt
+              const path = edge.node.path
+              const published = edge.node.published
+              const section = edge.node.section
+              const tags = edge.node.tags
+              const title = edge.node.title
 
-              return(
+              return (
                 <React.Fragment key={`item-${index}`}>
-                  {section === 'codepen'
-                    ?
-                      <Card
-                        color="violet"
-                        date={date}
-                        excerpt={excerpt}
-                        outbound={true}
-                        published={active ? true : false}
-                        title={title}
-                        to={path}
-                        tags={
-                          tags.map((tag, index) => {
-                            return (
-                              <Tag
-                                card={true}
-                                key={`item-${index}`}
-                                tagColor="violet"
-                              >
-                                {tag}
-                              </Tag>
-                            )
-                          })
-                        }
-                      />
-                    : null
-                  }
+                  {published && section === 'codepen' ? (
+                    <Card
+                      color="violet"
+                      date={date}
+                      excerpt={excerpt}
+                      outbound={true}
+                      published={active ? true : false}
+                      title={title}
+                      to={path}
+                      tags={tags.map((tag, index) => {
+                        return (
+                          <Tag
+                            card={true}
+                            key={`item-${index}`}
+                            tagColor="violet"
+                          >
+                            {tag}
+                          </Tag>
+                        )
+                      })}
+                    />
+                  ) : null}
                 </React.Fragment>
               )
-            })
-          }
+            })}
           </div>
         </Section>
-        <Section background="transparent" className="mb-8">
+        <Section
+          background="transparent"
+          className="mb-8"
+        >
           <Banner
             color="yellow"
             pageType="listPage"
@@ -277,48 +285,43 @@ const ProjectsListPage = ({
             BSCS Science Learning
           </Banner>
           <div className="grid grid-flow-row-dense gap-8">
-          {
-            projectsListData.allProjectsJson.edges.map((edge, index) => {
-              const path = edge.node.path
-              const title = edge.node.title
-              const excerpt = edge.node.excerpt
+            {projectsListData.allProjectsJson.edges.map((edge, index) => {
+              const active = edge.node.active
               const date = edge.node.date
+              const excerpt = edge.node.excerpt
+              const path = edge.node.path
+              const published = edge.node.published
               const section = edge.node.section
               const tags = edge.node.tags
-              const active = edge.node.active
+              const title = edge.node.title
 
-              return(
+              return (
                 <React.Fragment key={`item-${index}`}>
-                  {section === 'bscs'
-                    ?
-                      <Card
-                        color="yellow"
-                        date={date}
-                        excerpt={excerpt}
-                        outbound={true}
-                        published={active ? true : false}
-                        title={title}
-                        to={path}
-                        tags={
-                          tags.map((tag, index) => {
-                            return (
-                              <Tag
-                                card={true}
-                                key={`item-${index}`}
-                                tagColor="yellow"
-                              >
-                                {tag}
-                              </Tag>
-                            )
-                          })
-                        }
-                      />
-                    : null
-                  }
+                  {published && section === 'bscs' ? (
+                    <Card
+                      color="yellow"
+                      date={date}
+                      excerpt={excerpt}
+                      outbound={true}
+                      published={active ? true : false}
+                      title={title}
+                      to={path}
+                      tags={tags.map((tag, index) => {
+                        return (
+                          <Tag
+                            card={true}
+                            key={`item-${index}`}
+                            tagColor="yellow"
+                          >
+                            {tag}
+                          </Tag>
+                        )
+                      })}
+                    />
+                  ) : null}
                 </React.Fragment>
               )
-            })
-          }
+            })}
           </div>
         </Section>
       </Main>

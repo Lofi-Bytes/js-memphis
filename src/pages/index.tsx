@@ -77,7 +77,7 @@ const HomePage = ({ data, location }: PageProps) => {
       <Layout location={location}>
         <SEO
           metaTitle="Jillian S. Estrella"
-          metaDescription="Software Engineering Manager, Design Systems and Developer Experience"
+          metaDescription="Software Engineering Manager, Design Systems, Developer Experience, and Accessibility"
           canonicalUrl="https://jillian.dev/"
         />
         <Jumbotron
@@ -140,55 +140,40 @@ const HomePage = ({ data, location }: PageProps) => {
               aria-hidden="true"
             />
             <h2 className="mt-10 text-2xl tracking-wide text-stone-700">
-              Software Engineering Manager, Design Systems and Developer
-              Experience
-              {/* <br /><span className="text-xl text-stone-600">🏳️‍🌈 she/her 🏳️‍⚧️</span> */}
+              Software Engineering Manager
+              <br />
+              <span className="text-xl text-stone-600">
+                Design Systems, Developer Experience, and Accessibility
+              </span>
             </h2>
             <SocialIconRow className="mt-3" />
             <P className="mt-8">
-              {/* Empathetic and results-driven Software Engineering Manager
-              experienced in leading DevEx tooling teams and design
-              systems. I'm passionate about empowering teams through
-              personalized development plans, open communication, and
-              collaborative problem-solving to drive individual growth and
-              collective success. I'm committed to promoting a culture of
-              continuous improvement and delivering impactful solutions.
+              Hi, I'm Jillian—a Software Engineering Manager specializing
+              in design systems, developer experience, and accessibility. I
+              lead teams that create beautiful, scalable, and inclusive
+              solutions, empowering developers and driving meaningful
+              impact across organizations.
+            </P>
+            <P className="mt-8">
+              With over 14 years of experience in software engineering and
+              scientific computing, including over seven years managing
+              teams, I've overseen tools and systems used by hundreds of
+              projects. I also lead accessibility engineering efforts,
+              ensuring inclusivity is at the heart of everything we build.
+            </P>
+            <P className="mt-8">
               Outside of work, I'm a creator of immersive and interactive
               LED art, a physicist, a devoted dog mom 🐶, and a
-              conservationist 🌿. As a queer, trans woman, I'm also an
-              advocate for equity and inclusion in tech and beyond. ✊🏾🏳️‍⚧️🌈 */}
-              Hi there! Welcome to my creative space.
-              {/* As a{' '}
-              <TextLink
-                to="https://uxdesign.cc/everything-you-need-to-know-about-design-systems-54b109851969"
-                title=""
-                outbound={true}
-              >
-                design systems
-              </TextLink>{' '}
-              and{' '}
-              <TextLink
-                to="https://www.helpnetsecurity.com/2021/07/16/developer-experience-engineer/"
-                title=""
-                outbound={true}
-              >
-                developer experience
-              </TextLink>{' '}
-              engineer and an experienced{' '}
-              <TextLink
-                to="https://en.wikipedia.org/wiki/Engineering_management"
-                title=""
-                outbound={true}
-              >
-                engineering manager
-              </TextLink>
-              , I am dedicated to creating beautiful and accessible digital
-              experiences. Additionally, I am driven to advance social and
-              environmental justice causes and integrate those values into
-              my work. */}
+              conservationist 🌿. As a queer, trans woman, I'm passionate
+              about advocating for equity and inclusion in tech and beyond.
+              ✊🏾🏳️‍⚧️🌈
+            </P>
+            <P className="mt-8">
+              Feel free to connect—I'm always happy to collaborate or chat
+              about developer experience, leadership, or creative projects!
             </P>
             <div className="mx-auto mt-8 w-full md:w-3/4">
-              <Button
+              {/* <Button
                 action="secondary"
                 className="w-full"
                 disabled={false}
@@ -196,12 +181,12 @@ const HomePage = ({ data, location }: PageProps) => {
                 title="Learn more about me"
                 to="/about"
               >
-                Learn more about me&nbsp;&nbsp;
+                Learn more about my work&nbsp;&nbsp;
                 <i
                   className="fa-regular fa-chevron-right"
                   aria-hidden="true"
                 />
-              </Button>
+              </Button> */}
             </div>
           </Section>
 

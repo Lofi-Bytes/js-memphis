@@ -77,13 +77,13 @@ const AboutPage = ({ data, location }: PageProps) => {
     <Layout location={location}>
       <SEO
         metaTitle="About Jillian"
-        metaDescription="As a design systems and developer experience engineer and an experienced engineering manager, I am dedicated to creating beautiful and accessible digital experiences. Additionally, I am driven to advance social and environmental justice causes and integrate those values into my work."
+        metaDescription="Hi, I'm Jillian—a Software Engineering Manager specializing in design systems, developer experience, and accessibility. I lead teams that create beautiful, scalable, and inclusive solutions, empowering developers and driving meaningful impact across organizations."
         canonicalUrl="https://jillian.dev/about"
       />
       <Jumbotron
         title={
           <span className="js text-5xl leading-relaxed md:text-6xl md:leading-loose lg:text-7xl lg:leading-relaxed">
-            About Me
+            My Work
           </span>
         }
         // subtitle={}
@@ -107,13 +107,12 @@ const AboutPage = ({ data, location }: PageProps) => {
           />
 
           <h2 className="mt-10 text-2xl tracking-wide text-stone-700">
-            Jillian S. Estrella <br className="sm:hidden" />
-            <span className="text-xl text-stone-600">🏳️‍🌈 she/her 🏳️‍⚧️</span>
+            Software Engineering Manager
+            <br />
+            <span className="text-xl text-stone-600">
+              Design Systems, Developer Experience, and Accessibility
+            </span>
           </h2>
-          <P className="mt-1 text-xl">
-            Software Engineering Manager, Design Systems and Developer
-            Experience
-          </P>
           <SocialIconRow className="mt-3" />
           <Button
             action="tertiary"
@@ -130,98 +129,16 @@ const AboutPage = ({ data, location }: PageProps) => {
             &nbsp;&nbsp;Return to homepage
           </Button>
 
-          <P className="mt-10">
-            Jillian Estrella is an accomplished creator of immersive and
-            interactive LED art, a physicist, and a Software Engineering
-            Manager specializing in Design Systems and Developer Experience
-            (DevX) 👩🏼‍💻. She's a devoted dog mom 🐶 and staunch
-            conservationist 🌿. As a queer trans woman, she stands as a
-            dedicated ally, promoting equity and inclusion. ✊🏾🏳️‍⚧️🌈
-          </P>
-
           <h2 className="mt-10 text-xl tracking-wide text-stone-700">
             Current Work
           </h2>
-          {/* <h3 className="mt-6 mb-2 text-stone-600 text-lg">Senior Software Engineer, Design Systems Core Lead</h3>
 
-          <div className="items-center justify-between border-b border-pink-400 border-dotted d-block sm:flex text-stone-600">
-            <TextLink
-              className="text-stone-600"
-              outbound={true}
-              title="Northwestern Mutual"
-              to="https://www.northwesternmutual.com/"
-              type="p"
-            >
-              Northwestern Mutual
-            </TextLink>
-            <P className="hidden sm:block text-stone-600">
-              Jan 2022 - Present
-            </P>
-            <P className="sm:hidden text-sm text-stone-600 mt-1">
-              Jan 2022 - Present
-            </P>
-          </div>
-
-          <P className="mt-3">
-            In my current position I oversee multiple teams/projects on Northwestern Mutual's design system, Luna. Some of my responsibilities include:
-          </P>
-
-          <UL className="mt-4 list-disc ml-8 sm:ml-0">
-            <li>
-              Working with leadership to roadmap, plan and delegate work
-            </li>
-            <li>
-              Work with designers to define and implement new functionality
-            </li>
-            <li>
-              Pair with and coach junior and mid-level engineers
-            </li>
-            <li>
-              Continually work with my team to improve upon and establish new team standards and best practices
-            </li>
-            <li>
-              Being active in recruiting and interviewing potential candidates
-            </li>
-            <li>
-              Advise on Contributions and Integrations as needed
-            </li>
-          </UL>
-
-          <P className="mt-3">
-            Some of my achievements so far have been
-          </P>
-
-          <UL className="mt-4 list-disc ml-8 sm:ml-0">
-            <li>
-              Migrating Luna to a monorepo
-            </li>
-            <li>
-              Shipping Luna as a monorepo
-            </li>
-            <li>
-              Improved continuous integration pipeline resulting in
-              <UL className="list-disc ml-8 sm:ml-0">
-                <li>
-                  a more reliable release cadence
-                </li>
-                <li>
-                  review applications
-                </li>
-                <li>
-                  canary releases for live testing pre-production
-                </li>
-              </UL>
-            </li>
-            <li>
-              Shipping Luna React Tables
-            </li>
-            <li>
-              Shipping Luna Responsive Optimizations
-            </li>
-          </UL> */}
           <h3 className="mb-2 mt-6 text-lg text-stone-600">
-            Software Engineering Manager, Design Systems and Developer
-            Experience
+            Software Engineering Manager
+            <br />
+            <span className="text-base text-stone-600">
+              Design Systems, Developer Experience, and Accessibility
+            </span>
           </h3>
           <div className="d-block items-center justify-between border-b border-dotted border-pink-400 text-stone-600 sm:flex">
             <TextLink
@@ -786,15 +703,15 @@ const AboutPage = ({ data, location }: PageProps) => {
                           !JSON.stringify(touchedFields.name) // field is pristine
                             ? 'mt-1 block w-full rounded-lg border-0 border-l-4 border-purple-300 bg-stone-200 pl-3 pr-10 text-lg text-stone-600 caret-fuchsia-500 shadow-md focus:border-fuchsia-500 focus:ring-0'
                             : errors.name &&
-                              errors.name.type === 'required'
-                            ? 'mt-1 block w-full rounded-lg border-0 border-l-4 border-red-300 bg-stone-200 pl-3 pr-10 text-lg text-stone-600 caret-red-500 shadow-md focus:border-red-500 focus:ring-0'
-                            : errors.name &&
-                              errors.name.type === 'minLength'
-                            ? 'mt-1 block w-full rounded-lg border-0 border-l-4 border-red-300 bg-stone-200 pl-3 pr-10 text-lg text-stone-600 caret-red-500 shadow-md focus:border-red-500 focus:ring-0'
-                            : errors.name &&
-                              errors.name.type === 'maxLength'
-                            ? 'mt-1 block w-full rounded-lg border-0 border-l-4 border-red-300 bg-stone-200 pl-3 pr-10 text-lg text-stone-600 shadow-md focus:border-red-500 focus:ring-0'
-                            : 'mt-1 block w-full rounded-lg border-0 border-l-4 border-green-300 bg-stone-200 pl-3 pr-10 text-lg text-stone-600 caret-green-500 shadow-md focus:border-green-500 focus:ring-0'
+                                errors.name.type === 'required'
+                              ? 'mt-1 block w-full rounded-lg border-0 border-l-4 border-red-300 bg-stone-200 pl-3 pr-10 text-lg text-stone-600 caret-red-500 shadow-md focus:border-red-500 focus:ring-0'
+                              : errors.name &&
+                                  errors.name.type === 'minLength'
+                                ? 'mt-1 block w-full rounded-lg border-0 border-l-4 border-red-300 bg-stone-200 pl-3 pr-10 text-lg text-stone-600 caret-red-500 shadow-md focus:border-red-500 focus:ring-0'
+                                : errors.name &&
+                                    errors.name.type === 'maxLength'
+                                  ? 'mt-1 block w-full rounded-lg border-0 border-l-4 border-red-300 bg-stone-200 pl-3 pr-10 text-lg text-stone-600 shadow-md focus:border-red-500 focus:ring-0'
+                                  : 'mt-1 block w-full rounded-lg border-0 border-l-4 border-green-300 bg-stone-200 pl-3 pr-10 text-lg text-stone-600 caret-green-500 shadow-md focus:border-green-500 focus:ring-0'
                         }
                         onChange={handleChange}
                         placeholder=""
@@ -882,12 +799,12 @@ const AboutPage = ({ data, location }: PageProps) => {
                           !JSON.stringify(touchedFields.email) // field is pristine
                             ? 'mt-1 block w-full rounded-lg border-0 border-l-4 border-purple-300 bg-stone-200 pl-3 pr-10 text-lg text-stone-600 caret-fuchsia-500 shadow-md focus:border-fuchsia-500 focus:ring-0'
                             : errors.email &&
-                              errors.email.type === 'required'
-                            ? 'mt-1 block w-full rounded-lg border-0 border-l-4 border-red-300 bg-stone-200 pl-3 pr-10 text-lg text-stone-600 caret-red-500 shadow-md focus:border-red-500 focus:ring-0'
-                            : errors.email &&
-                              errors.email.type === 'pattern'
-                            ? 'mt-1 block w-full rounded-lg border-0 border-l-4 border-red-300 bg-stone-200 pl-3 pr-10 text-lg text-stone-600 caret-red-500 shadow-md focus:border-red-500 focus:ring-0'
-                            : 'mt-1 block w-full rounded-lg border-0 border-l-4 border-green-300 bg-stone-200 pl-3 pr-10 text-lg text-stone-600 caret-green-500 shadow-md focus:border-green-500 focus:ring-0'
+                                errors.email.type === 'required'
+                              ? 'mt-1 block w-full rounded-lg border-0 border-l-4 border-red-300 bg-stone-200 pl-3 pr-10 text-lg text-stone-600 caret-red-500 shadow-md focus:border-red-500 focus:ring-0'
+                              : errors.email &&
+                                  errors.email.type === 'pattern'
+                                ? 'mt-1 block w-full rounded-lg border-0 border-l-4 border-red-300 bg-stone-200 pl-3 pr-10 text-lg text-stone-600 caret-red-500 shadow-md focus:border-red-500 focus:ring-0'
+                                : 'mt-1 block w-full rounded-lg border-0 border-l-4 border-green-300 bg-stone-200 pl-3 pr-10 text-lg text-stone-600 caret-green-500 shadow-md focus:border-green-500 focus:ring-0'
                         }
                         onChange={handleChange}
                         type="email"
@@ -962,15 +879,15 @@ const AboutPage = ({ data, location }: PageProps) => {
                           !JSON.stringify(touchedFields.message) // field is pristine
                             ? 'mt-1 block w-full flex-grow rounded-lg border-0 border-l-4 border-purple-300 bg-stone-200 pl-3 pr-10 text-lg text-stone-600 caret-fuchsia-500 shadow-md focus:border-fuchsia-500 focus:ring-0'
                             : errors.message &&
-                              errors.message.type === 'required'
-                            ? 'mt-1 block w-full flex-grow rounded-lg border-0 border-l-4 border-red-300 bg-stone-200 pl-3 pr-10 text-lg text-stone-600 caret-red-500 shadow-md focus:border-red-500 focus:ring-0'
-                            : errors.message &&
-                              errors.message.type === 'minLength'
-                            ? 'mt-1 block w-full flex-grow rounded-lg border-0 border-l-4 border-red-300 bg-stone-200 pl-3 pr-10 text-lg text-stone-600 caret-red-500 shadow-md focus:border-red-500 focus:ring-0'
-                            : errors.message &&
-                              errors.message.type === 'maxLength'
-                            ? 'mt-1 block w-full flex-grow rounded-lg border-0 border-l-4 border-red-300 bg-stone-200 pl-3 pr-10 text-lg text-stone-600 caret-red-500 shadow-md focus:border-red-500 focus:ring-0'
-                            : 'mt-1 block w-full flex-grow rounded-lg border-0 border-l-4 border-green-300 bg-stone-200 pl-3 pr-10 text-lg text-stone-600 caret-green-500 shadow-md focus:border-green-500 focus:ring-0'
+                                errors.message.type === 'required'
+                              ? 'mt-1 block w-full flex-grow rounded-lg border-0 border-l-4 border-red-300 bg-stone-200 pl-3 pr-10 text-lg text-stone-600 caret-red-500 shadow-md focus:border-red-500 focus:ring-0'
+                              : errors.message &&
+                                  errors.message.type === 'minLength'
+                                ? 'mt-1 block w-full flex-grow rounded-lg border-0 border-l-4 border-red-300 bg-stone-200 pl-3 pr-10 text-lg text-stone-600 caret-red-500 shadow-md focus:border-red-500 focus:ring-0'
+                                : errors.message &&
+                                    errors.message.type === 'maxLength'
+                                  ? 'mt-1 block w-full flex-grow rounded-lg border-0 border-l-4 border-red-300 bg-stone-200 pl-3 pr-10 text-lg text-stone-600 caret-red-500 shadow-md focus:border-red-500 focus:ring-0'
+                                  : 'mt-1 block w-full flex-grow rounded-lg border-0 border-l-4 border-green-300 bg-stone-200 pl-3 pr-10 text-lg text-stone-600 caret-green-500 shadow-md focus:border-green-500 focus:ring-0'
                         }
                         onChange={handleChange}
                         rows={4}

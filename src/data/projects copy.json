@@ -2,7 +2,7 @@
   {
     "title": "Harmony",
     "path": "/projects/harmony/",
-    "published": false,
+    "published": true,
     "excerpt": "Harmony is a playful, immersive, interactive audio/visual experience and is designed for participants of all ages and abilities.",
     "date": "02/07/2023",
     "section": "art-installations",
@@ -15,12 +15,12 @@
       "LED",
       "Synthesizers"
     ],
-    "active": false
+    "active": true
   },
   {
     "title": "☆*:.¨. MegaloTorus .*・｡ﾟ.*･｡ﾟ҉̛☆",
     "path": "/projects/megalotorus/",
-    "published": false,
+    "published": true,
     "excerpt": "MegaloTorus uses light and sound to explore the dynamic flow of energy and the infinite nature of the torus.",
     "date": "06/09/2022",
     "section": "art-installations",
@@ -34,23 +34,29 @@
       "LED",
       "Toroid"
     ],
-    "active": false
+    "active": true
   },
   {
     "title": "Resistance Bat",
     "path": "/projects/resistance-bat/",
-    "published": false,
+    "published": true,
     "excerpt": "LED logo-art signage for Resistance and the Flow Bats theme camp.",
     "date": "06/09/2022",
     "section": "art-installations",
-    "tags": ["Apogaea", "Art", "LED", "Signage", "Theme camps"],
-    "active": false
+    "tags": [
+      "Apogaea",
+      "Art",
+      "LED",
+      "Signage",
+      "Theme camps"
+    ],
+    "active": true
   },
   {
     "title": "reveal.js + Tailwind CSS Starter",
     "path": "https://github.com/Lofi-Bytes/reveal-tailwind-starter",
-    "published": false,
-    "excerpt": "Hate making presentations in PowerPoint? Love HTML + Tailwind CSS? Try out this reveal.js + Tailwind starter. Host it as a static site, accessible from anywhere. It will make all your wildest dreams come false.",
+    "published": true,
+    "excerpt": "Hate making presentations in PowerPoint? Love HTML + Tailwind CSS? Try out this reveal.js + Tailwind starter. Host it as a static site, accessible from anywhere. It will make all your wildest dreams come true.",
     "date": "08/07/2021",
     "section": "github",
     "tags": [
@@ -61,22 +67,27 @@
       "reveal.js",
       "Tailwind CSS"
     ],
-    "active": false
+    "active": true
   },
   {
     "title": "Chemical Kinetics in the Enceladus Plume",
     "path": "https://github.com/Lofi-Bytes/chemical-kinetics-in-the-enceladus-plume",
-    "published": false,
+    "published": true,
     "excerpt": "A Description of Enceladus’ Plume Sources and Chemical Reactions Significant to the Plume-Magnetosphere Interaction.",
     "date": "05/04/2014",
     "section": "github",
-    "tags": ["Chemical kinetics", "Computation", "Enceladus", "Python"],
-    "active": false
+    "tags": [
+      "Chemical kinetics",
+      "Computation",
+      "Enceladus",
+      "Python"
+    ],
+    "active": true
   },
   {
     "title": "Upper Atmosphere and Ionosphere",
     "path": "https://github.com/Lofi-Bytes/upper-atmosphere-and-ionosphere",
-    "published": false,
+    "published": true,
     "excerpt": "Simulation of Earth's upper atmosphere and ionosphere AOSS 495 winter semester 2012.",
     "date": "04/27/2012",
     "section": "github",
@@ -87,12 +98,12 @@
       "numerical modeling",
       "Python"
     ],
-    "active": false
+    "active": true
   },
   {
     "title": "Magnetopause Standoff Distance",
     "path": "https://github.com/Lofi-Bytes/magnetopause-standoff-distance",
-    "published": false,
+    "published": true,
     "excerpt": "Data-model comparison and sensitivity study of the magnetopause standoff distance using the empirical model proposed by Shue et. al. [1998].",
     "date": "03/23/2014",
     "section": "github",
@@ -102,17 +113,22 @@
       "magnetosphere",
       "Python"
     ],
-    "active": false
+    "active": true
   },
   {
     "title": "Ebola Virus Disease",
     "path": "https://github.com/Lofi-Bytes/ebola-virus-disease",
-    "published": false,
+    "published": true,
     "excerpt": "Modeling the spread of Ebola Virus Disease through a population.",
     "date": "01/23/2016",
     "section": "github",
-    "tags": ["computation", "evd", "numerical modeling", "Python"],
-    "active": false
+    "tags": [
+      "computation",
+      "evd",
+      "numerical modeling",
+      "Python"
+    ],
+    "active": true
   },
   {
     "title": "jillian.dev Storybook",
@@ -121,77 +137,120 @@
     "excerpt": "",
     "date": "03/13/2022",
     "section": "design-systems",
-    "tags": ["CSS", "React", "Storybook", "TypeScript"],
+    "tags": [
+      "CSS",
+      "React",
+      "Storybook",
+      "TypeScript"
+    ],
     "active": false
   },
   {
     "title": "Modern Memphis",
     "path": "https://codepen.io/LofiBytes/pen/YzGZxWX",
-    "published": false,
+    "published": true,
     "excerpt": "An approximate reproduction of jillian.dev's animated Memphis design background.",
     "date": "12/18/2020",
     "section": "codepen",
-    "tags": ["CSS", "React", "TypeScript"],
-    "active": false
+    "tags": [
+      "CSS",
+      "React",
+      "TypeScript"
+    ],
+    "active": true
   },
   {
     "title": "Date() Challenge",
     "path": "https://codepen.io/LofiBytes/pen/popopbz",
-    "published": false,
+    "published": true,
     "excerpt": "Sorts a given date range into monthly bins. Counts how many dates, from a date list, that fall into each range. Plots the bins on a histogram.",
     "date": "03/13/2022",
     "section": "codepen",
-    "tags": ["CSS", "HTML", "JavaScript"],
-    "active": false
+    "tags": [
+      "CSS",
+      "HTML",
+      "JavaScript"
+    ],
+    "active": true
   },
   {
     "title": "Developing Skills in Health Literacy",
     "path": "https://healthliteracy.bscs.org/",
-    "published": false,
+    "published": true,
     "excerpt": "In this project, we are developing curriculum materials for middle and high school students that will help them learn to evaluate information and claims about health issues. The project is being supported by the National Institutes of Health (NIH).",
     "date": "2017 - 2021",
     "section": "bscs",
-    "tags": ["Gatsby", "GraphQL", "NIH", "React", "TypeScript"],
-    "active": false
+    "tags": [
+      "Gatsby",
+      "GraphQL",
+      "NIH",
+      "React",
+      "TypeScript"
+    ],
+    "active": true
   },
   {
     "title": "3D Middle School Life Science Curriculum Program: A Medical Mystery",
     "path": "https://3dmss.bscs.org/",
-    "published": false,
+    "published": true,
     "excerpt": "A Medical Mystery is a new 3D curriculum program to support middle school educators who are navigating next generation science. The program was developed in a partnership between BSCS Science Learning and Oregon Public Broadcasting (OPB) and includes a free Next Generation Science Standards (NGSS)-aligned body systems curriculum unit and teacher’s guide, along with an online professional learning course. A Medical Mystery was funded by the National Science Foundation under Grant No. DRL-1502571.",
     "date": "2015 - 2019",
     "section": "bscs",
-    "tags": ["Gatsby", "GraphQL", "JavaScript", "NGSS", "React"],
-    "active": false
+    "tags": [
+      "Gatsby",
+      "GraphQL",
+      "JavaScript",
+      "NGSS",
+      "React"
+    ],
+    "active": true
   },
   {
     "title": "Student Allergy Clinic",
     "path": "https://allergies.bscs.org/",
-    "published": false,
+    "published": true,
     "excerpt": "This project was supported by the National Institute of Allergy and Infectious Diseases and was a collaboration between BSCS Science Learning, Dawson Media Group, and Oxbow Labs.",
     "date": "2012 - 2017",
     "section": "bscs",
-    "tags": ["CSS", "Drupal", "HTML", "JavaScript", "PHP"],
-    "active": false
+    "tags": [
+      "CSS",
+      "Drupal",
+      "HTML",
+      "JavaScript",
+      "PHP"
+    ],
+    "active": true
   },
   {
     "title": "FieldScope Landing Site",
     "path": "http://www.fieldscope.org/",
-    "published": false,
+    "published": true,
     "excerpt": "FieldScope is an interactive citizen science platform. Organizers of field studies can leverage sophisticated graphing and mapping visualization tools and resources to enhance their existing and future citizen science projects. Participants of all ages and backgrounds can then conveniently upload measurements, observations, and media to a shared project database.",
     "date": "2016",
     "section": "bscs",
-    "tags": ["CSS", "Django", "HTML", "JavaScript", "Python"],
-    "active": false
+    "tags": [
+      "CSS",
+      "Django",
+      "HTML",
+      "JavaScript",
+      "Python"
+    ],
+    "active": true
   },
   {
     "title": "Understanding Ebola Virus Disease",
     "path": "https://ebola.bscs.org/",
-    "published": false,
+    "published": true,
     "excerpt": "This project was an NSF-supported collaboration between BSCS Science Learning and Oregon Public Broadcasting (OPB). This interactive learning experience was designed to help people better understand important factors that contribute to the infection and spread of Ebola virus disease and how these factors interact with each other.",
     "date": "2015",
     "section": "bscs",
-    "tags": ["CSS", "HTML", "JavaScript", "MatLab", "Python"],
-    "active": false
+    "tags": [
+      "CSS",
+      "HTML",
+      "JavaScript",
+      "MatLab",
+      "Python"
+    ],
+    "active": true
   }
 ]
