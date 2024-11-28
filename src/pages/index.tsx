@@ -163,7 +163,7 @@ const HomePage = ({ data, location }: PageProps) => {
             </P>
             <P className="mt-8">
               Outside of work, I'm a creator of immersive and interactive
-              LED art, a physicist, a devoted dog mom 🐶, and a
+              LED art 🔥)'(🔥, a physicist, a devoted dog mom 🐶, and a
               conservationist 🌿. As a queer, trans woman, I'm passionate
               about advocating for equity and inclusion in tech and beyond.
               ✊🏾🏳️‍⚧️🌈
